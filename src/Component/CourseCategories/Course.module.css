@@ -1,0 +1,40 @@
+.courseContainer {
+    padding: 20px;
+    background-color: #0e141b; /* Adjust the background to match the screenshot */
+    color: white;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+    gap: 20px; /* Spacing between the cards */
+  }
+  
+  .card {
+    background-color: #1c1f24;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .courseTitle {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
