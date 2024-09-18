@@ -1,0 +1,62 @@
+/* SuccessPartners.module.css */
+.successPartnersSection {
+ background-image: url("../../assets/Rectangle1.png");
+    color: #fff;      
+    text-align: center;
+ height: 100vh;
+ min-height: 1200px;
+    padding: 0px 20px;
+    /* background-image: linear-gradient( background-image : url ("../../assets/Rectangle1.png"), rgb(41, 37, 37)); */
+  }
+  
+  .successPartnersTitle {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    padding-top: 230px;
+    padding-bottom: 150px;
+    margin-bottom: 0px;
+  }
+
+  .successPartnersSection h2{
+  
+    color: #FFF;
+    
+    text-align: center;
+    font-family: "Noto Kufi Arabic";
+ 
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; 
+  }
+
+  
+  .partnersLogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: -200px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .partnerLogo img {
+  width: 222.783px;
+height: 222.783px;
+flex-shrink: 0;
+  }
+
+  .partnerLogo{
+    margin: -60px;
+  
+  }
+  
+  
+  @media (max-width: 600px) {
+    .partnersLogos {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+  
+    .partnerLogo img {
+      max-width: 100px;
+    }
+  }
+  

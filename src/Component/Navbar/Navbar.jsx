@@ -1,37 +1,30 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import logo from "../../assets/logo.svg";
+import navbarBackground from "../../assets/NavbarBackground.png";
 
 const Navbar = () => {
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.leftSide}>
-        <button className={styles.createAccountBtn}>Create an Account</button>
-        <button className={styles.loginBtn}>Log In</button>
+    <nav
+      className={styles.navbar}
+      style={{ backgroundImage: `url(${navbarBackground})` }}
+    >
+      <img src={logo} alt="Logo" className={styles.logo} />
+      <div className={styles.leftLinks}>
+        <a href="#pricing">Courses</a>
+        <a href="#pricing">About Maflam</a>
+        <a href="#about">Packages</a>
+        <a href="#training">Resources</a>
+        <a href="#resources">Contact Us</a>
       </div>
-      <div className={styles.centerSide}>
-        <input
-          type="text"
-          className={styles.searchBar}
-          placeholder="Search for courses..."
-        />
+      <div className={styles.searchContainer}>
+        <input type="text" placeholder="Search for courses...!" />
       </div>
-      <div className={styles.rightSide}>
-        <a href="#" className={styles.navLink}>
-          Contact Us
+      <div className={styles.rightLinks}>
+        <a href="#" target="_blank" className={styles.signupButton}>
+          Create an Account
         </a>
-        <a href="#" className={styles.navLink}>
-          Resources
-        </a>
-        <a href="#" className={styles.navLink}>
-          Packages
-        </a>
-        <a href="#" className={styles.navLink}>
-          About Mafam
-        </a>
-        <a href="#" className={styles.navLink}>
-          Courses
-        </a>
-        <div className={styles.logo}>Logo</div>
+        <a href="#login">log in</a>
       </div>
     </nav>
   );

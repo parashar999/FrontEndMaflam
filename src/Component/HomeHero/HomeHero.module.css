@@ -1,0 +1,84 @@
+.heroContainer {
+    position: relative;
+    color: white;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: start;
+    max-width: 950px;
+    }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .menuItem {
+    background: #2f3c4f;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .title {
+  	position: relative;
+  	font-size: 30px;
+    line-height: 1.5;
+  	font-weight: 700;
+  	text-align: start;
+  	display: inline-block;
+}
+  
+  .description {
+  	width: 540px;
+  	position: relative;
+  	font-size: 16px;
+  	line-height: 1.5;
+  	color: #fff;
+  	text-align: start;
+  	display: inline-block;
+    margin-top: 10px;
+}
+.primaryButton {
+  	position: relative;
+  	border-radius: 50px;
+    border: none;
+    outline: none;
+  	background-color: #39fffb;
+  	padding: 15px 25px;
+  	font-size: 17px;
+  	color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+  
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
