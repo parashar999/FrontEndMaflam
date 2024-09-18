@@ -1,0 +1,84 @@
+.courseContainer {
+    padding: 10px 100px; /* Increased padding for left and right sides */
+    background-color: #0e141b;
+    color: white;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+    gap: 0px; /* No gap between cards */
+    justify-items: center;
+  }
+  
+  .card {
+    position: relative; 
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    max-width: 414px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .courseTitle {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Noto Kufi Arabic';
+    color: #fff;
+    background: linear-gradient(179.97deg, rgba(3, 11, 17, 0), #030b11);
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
+      gap: 0px; /* Maintain 0px gap */
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .courseTitle {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column on small devices */
+      gap: 0px; /* Maintain 0px gap */
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .courseTitle {
+      font-size: 16px;
+    }
+  }
+  
