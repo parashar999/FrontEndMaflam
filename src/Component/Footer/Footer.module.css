@@ -29,7 +29,9 @@
 .footerColumn h4 {
     color: #00ffc4;
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 700;
+    font: Noto Kufi Arabic;
 }
 
 .footerColumn ul {
