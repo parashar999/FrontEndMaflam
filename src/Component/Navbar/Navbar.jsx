@@ -18,7 +18,7 @@ const Navbar = () => {
         <a href="#resources">Contact Us</a>
       </div>
       <div className={styles.searchContainer}>
-        <input type="text" placeholder="Search for courses..." />
+        <input type="text" placeholder="Search for courses...!" />
       </div>
       <div className={styles.rightLinks}>
         <a href="#" target="_blank" className={styles.signupButton}>
