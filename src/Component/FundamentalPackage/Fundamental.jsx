@@ -19,30 +19,42 @@ function Fundamental() {
             <p>Over 30 hours of content in Arabic</p>
             <p>Access to over 70 educational resources</p>
             <p>Includes all specialized courses plus two exclusive ones</p> */}
-       
-      <div className={styles.item}>
-        <CiCircleCheck className={styles.checkico} />
-        <p className={styles.description}>Lifetime access to over 600 lessons</p>
-      </div>
-      <div className={styles.item}>
+
+            <div className={styles.item}>
+              <CiCircleCheck className={styles.checkico} />
+              <p className={styles.description}>
+                Lifetime access to over 600 lessons
+              </p>
+            </div>
+            {/* <div className={styles.item}>
         <CiCircleCheck className={styles.checkico} />
         <p className={styles.description}>Over 30 hours of content in Arabic</p>
-      </div>
-      <div className={styles.item}>
-        <CiCircleCheck className={styles.checkico} />
-        <p className={styles.description}>Access to over 70 educational resources</p>
-      </div>
-      <div className={styles.item}>
-        <CiCircleCheck className={styles.checkico} />
-        <p className={styles.description}>Includes all specialized courses plus two exclusive ones</p>
-      </div>
+      </div> */}
+            <div className={styles.item}>
+              <CiCircleCheck className={styles.checkico} />
+              <p className={styles.description}>
+                Over 30 hours of content in Arabic
+              </p>
+            </div>
+            <div className={styles.item}>
+              <CiCircleCheck className={styles.checkico} />
+              <p className={styles.description}>
+                Access to over 70 educational resources
+              </p>
+            </div>
+            <div className={styles.item}>
+              <CiCircleCheck className={styles.checkico} />
+              <p className={styles.description}>
+                Includes all specialized courses plus two exclusive ones
+              </p>
+            </div>
 
-      <div className={styles.item}>
-         <buton  className={styles.checkic} >subscribe</buton>
-        <p className={styles.description}><b>2.200</b>SAR</p>
-      </div>
-      
-   
+            <div className={styles.item}>
+              <buton className={styles.checkic}>subscribe</buton>
+              <p className={styles.description}>
+                <b>2.200</b>SAR
+              </p>
+            </div>
 
             {/* <span>
               <button>Subscribe </button>
