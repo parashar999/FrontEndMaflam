@@ -1,10 +1,11 @@
 import React from "react";
+import Navbar from "../../Component/Navbar/Navbar";
 import CourseGrid from "../../Component/CourseCategories/Course";
 
 const Home = () => {
   return (
     <div>
-      <p>Home Page</p>
+      <Navbar></Navbar>
       <CourseGrid></CourseGrid>
     </div>
   );
