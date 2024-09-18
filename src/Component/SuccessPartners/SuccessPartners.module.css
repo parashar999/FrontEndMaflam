@@ -4,8 +4,9 @@
     color: #fff;      
     text-align: center;
  height: 100vh;
- min-height: 1300px;
+ min-height: 1200px;
     padding: 0px 20px;
+    /* background-image: linear-gradient( background-image : url ("../../assets/Rectangle1.png"), rgb(41, 37, 37)); */
   }
   
   .successPartnersTitle {
@@ -22,34 +23,33 @@
     
     text-align: center;
     font-family: "Noto Kufi Arabic";
-    /* font-size: 36px; */
+ 
     font-style: normal;
     font-weight: 700;
-    line-height: 160%; /* 57.6px */
+    line-height: 160%; 
   }
-  .partnersLogo{
-    padding: 0px;
-    
-  }
+
   
   .partnersLogos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* gap:-100px; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: -200px;
     justify-items: center;
     align-items: center;
   }
   
   .partnerLogo img {
-    /* max-width: 150px;
-    height: auto;
-    object-fit: contain; */
-    width: 222.783px;
+  width: 222.783px;
 height: 222.783px;
 flex-shrink: 0;
   }
+
+  .partnerLogo{
+    margin: -60px;
   
-  /* For responsiveness */
+  }
+  
+  
   @media (max-width: 600px) {
     .partnersLogos {
       grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
