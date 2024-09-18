@@ -1,3 +1,6 @@
+import React from "react";
+import Footer from "../../Component/Footer/Footer";
+import Faqs from "../../Component/Faqs/Faqs";
 
 import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
 import Navbar from "../../Component/Navbar/Navbar";
@@ -10,8 +13,18 @@ const Home = () => {
   return (
     <div>
      
+      
+      <Navbar></Navbar>
+  
+      <HomeHero></HomeHero>
+      <CourseGrid></CourseGrid>
       <Fundamental />
-     
+      <SuccessPartners></SuccessPartners>
+      <MaflamInstructors></MaflamInstructors>
+      <Faqs />
+      <Footer />
+
+    
     </div>
   );
 };
