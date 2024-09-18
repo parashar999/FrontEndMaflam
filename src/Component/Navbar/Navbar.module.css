@@ -1,0 +1,106 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 34, 40, 0.60);
+    backdrop-filter: blur(30px);
+    padding: 10px 50px;
+    width: 100%;
+  }
+  
+  .leftSide, .rightSide {
+    display: flex;
+    align-items: center;
+  }
+  
+  .createAccountBtn {
+    background-color: #2C97E8; /* Button color */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .loginBtn {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .centerSide {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .searchBar {
+    width: 300px;
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .rightSide .navLink {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+  
+  .rightSide .logo {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .centerSide {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .searchBar {
+      width: 100%;
+    }
+  
+    .rightSide {
+      flex-wrap: wrap;
+    }
+  
+    .navLink {
+      margin: 5px 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .createAccountBtn, .loginBtn {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .searchBar {
+      font-size: 12px;
+    }
+  
+    .navLink {
+      font-size: 12px;
+    }
+  
+    .logo {
+      font-size: 16px;
+    }
+  }
+  
