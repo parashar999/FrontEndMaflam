@@ -27,16 +27,25 @@
 }
 
 .footerColumn h4 {
-    color: #00ffc4;
+    /* color: #39FFFb;
     margin-bottom: 15px;
     font-size: 17px;
     font-weight: 700;
-    font: Noto Kufi Arabic;
+    font: Noto Kufi Arabic; */
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+/* text-align: right; */
+font-family: "Noto Kufi Arabic";
+font-size: 17px;
+font-style: normal;
+font-weight: 700;
+line-height: 94.1%; /* 15.997px */
+margin-bottom: 15px;
 }
 
 .footerColumn ul {
     list-style: none;
     padding: 0;
+    
 }
 
 .footerColumn ul li {
@@ -49,7 +58,7 @@
 }
 
 .footerColumn ul li a:hover {
-    color: #00ffc4;
+    color: #39FFFb;
 }
 
 .footerBottom {
@@ -81,7 +90,7 @@
 }
 
 .footerLinks li a {
-    color: #00d3a9;
+    color: #39FFFb;
     font-size: 14px;
     text-decoration: underline;
 }
@@ -105,7 +114,7 @@
 }
 
 .socialIcons a:hover {
-    color: #00ffc4;
+    color: #39FFFb;
 }
 
 .footerColumn img {
