@@ -1,84 +1,71 @@
-.courseContainer {
-    padding: 10px 100px; /* Increased padding for left and right sides */
-    background-color: #0e141b;
-    color: white;
+.coursesContainer {
+  
+   
+    padding: 20px;
+    min-height: 750px;
+    border-radius: 8px;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 20px !important;
+
     text-align: center;
-    max-width: 100%;
+  }
+  .courseContainer{
+    
+    border: 1px solid #000;
+    background: #030B11;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   
-  .title {
-    font-size: 24px;
-    margin-bottom: 20px;
+  .coursesContainer h2 {
+   margin-top: 30px;
+    color: #FFF;
+
+text-align: center;
+font-family: "Noto Kufi Arabic";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
   }
   
-  .grid {
+  .coursesGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
-    gap: 0px; /* No gap between cards */
-    justify-items: center;
+    margin-top: 80px;
+    
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
   }
   
-  .card {
-    position: relative; 
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
-    width: 100%;
-    max-width: 414px;
+  .coursesCard {
+
+    padding: 0px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
   }
   
-  .card:hover {
+  .coursesCard:hover {
     transform: scale(1.05);
   }
   
-  .image {
+  .coursesImage {
     width: 100%;
+    padding: 0px;
     height: auto;
-    object-fit: cover;
+    /* border-radius: 8px; */
   }
   
-  .courseTitle {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    font-size: 20px;
-    line-height: 1.5;
-    font-family: 'Noto Kufi Arabic';
-    color: #fff;
-    background: linear-gradient(179.97deg, rgba(3, 11, 17, 0), #030b11);
-    padding: 10px;
-    text-align: center;
-    z-index: 1;
-  }
-  
-  /* Media Queries for responsiveness */
-  @media (max-width: 1024px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium-sized screens */
-      gap: 0px; /* Maintain 0px gap */
-    }
-  
-    .title {
-      font-size: 22px;
-    }
-  
-    .courseTitle {
-      font-size: 18px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(1, 1fr); /* 1 column on small devices */
-      gap: 0px; /* Maintain 0px gap */
-    }
-  
-    .title {
-      font-size: 20px;
-    }
-  
-    .courseTitle {
-      font-size: 16px;
-    }
+  .coursesCard p {
+   
+    color: #FFF;
+    margin-top: -50px;
+text-align: center;
+font-family: "Noto Kufi Arabic";
+font-size: 18px;
+width: 100%;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
+background: linear-gradient(179.97deg, rgba(3, 11, 17, 0), #030b11);
   }
   
