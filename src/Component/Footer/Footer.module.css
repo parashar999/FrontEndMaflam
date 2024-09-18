@@ -1,0 +1,123 @@
+.footer {
+    background-color: #030b11;
+    background-image: url("../../assets/footerimg.png");
+    height: auto;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footerColumns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footerColumn {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footerColumn h4 {
+    /* color: #39FFFb;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    font: Noto Kufi Arabic; */
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+/* text-align: right; */
+font-family: "Noto Kufi Arabic";
+font-size: 17px;
+font-style: normal;
+font-weight: 700;
+line-height: 94.1%; /* 15.997px */
+margin-bottom: 15px;
+}
+
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.footerColumn ul li {
+    margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.footerColumn ul li a:hover {
+    color: #39FFFb;
+}
+
+.footerBottom {
+    padding: 20px 0;
+    display: flex;               
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;                    
+}
+
+.footerBottom p {
+    margin: 0;
+    font-size: 14px;
+    align-items: center;
+    flex-grow: 1;                  
+    text-align: center;            
+}
+
+.footerLinks {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.footerLinks li {
+    margin: 0;
+}
+
+.footerLinks li a {
+    color: #39FFFb;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.footerLinks li a:hover {
+    text-decoration: underline;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.socialIcons a {
+    color: #b0b0b0;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.socialIcons a:hover {
+    color: #39FFFb;
+}
+
+.footerColumn img {
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
