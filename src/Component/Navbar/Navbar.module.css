@@ -1,72 +1,129 @@
+/* Navbar container */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 60px;
-    background: rgba(26, 34, 40, 0.60);
-    backdrop-filter: blur(30px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    direction: rtl;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed to space-between */
+  padding: 10px 40px;
+  background: rgba(26, 34, 40, 0.60);
+  backdrop-filter: blur(30px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  height: 40px;
+}
+
+/* Left Links */
+.leftLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.leftLinks a {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.leftLinks a:hover {
+  color: #0ccac4;
+  font-weight: 500;
+}
+
+/* Search Container */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 20px;
+  border-color: #0ccac4;
+}
+
+.searchContainer input {
+  border: none;
+  background: transparent;
+  color: rgba(246, 255, 254, 0.40);
+  font-size: 14px;
+  outline: none;
+  margin-left: 5px;
+}
+
+.searchButton {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Right Links */
+.rightLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.rightLinks a {
+  color: #0ccac4;
+  text-decoration: none;
+}
+
+/* Signup Button */
+.signupButton {
+  border-radius: 64px;
+  background: var(--Primary-Primary-300, #1A374B);
+  padding: 8px 24px;
+  color: #39FFFB;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .leftLinks, .rightLinks, .searchContainer {
+      display: none;
   }
-  
-  .leftLinks a {
-    color: #FFF;
-    margin-left: 20px;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
+
+  .hamburger {
+      display: flex;
   }
-  .leftLinks a:hover{
-    color: #0ccac4;
-    font-weight: 500;
+  .navbar.active .leftLinks,
+  .navbar.active .rightLinks {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: rgba(26, 34, 40, 0.9);
+      width: 100%;
+      padding: 20px;
   }
-  
-  .searchContainer {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px;
-    border-radius: 20px;
-    border-color: #0ccac4;
+
+  .leftLinks a, .rightLinks a {
+      margin: 10px 0;
   }
-  
-  .searchContainer input {
-    border: none;
-    background: transparent;
-    color: rgba(246, 255, 254, 0.40);
-    font-size: 14px;
-    outline: none;
-    margin-left: 5px;
-  }
-  
-  .searchButton {
-    background: none;
-    border: none;
-    color: #ccc;
-    cursor: pointer;
-  }
-  
-  .rightLinks a {
-    color: #0ccac4;
-    margin-left: 20px;
-    text-decoration: none;
-  }
-  
-  .signupButton {
-    border-radius: 64px;
-    background: var(--Primary-Primary-300, #1A374B);
-    padding: 8px 24px;
-    color: #39FFFB;
-    font-size: 16px;
-    font-weight: 700;
-  }
-  
-  .logo {
-    height: 40px;
-  }
-  
+}
