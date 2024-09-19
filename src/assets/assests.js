@@ -20,6 +20,20 @@ import ignity from "./ignity.png"
 import growCreative from "./growCreative.png"
 import studio from "./studio.png"
 import redsea from "./redsea.png"
+import Frame259 from "./Frame259.png"
+import Frame63 from "./Frame63.png"
+import pricing from "./pricing1.png"
+import Rectangle13 from "./Rectangle13.png"
+import Rectangl13 from "./Rectangl13.png"
+import Rectangl14 from "./Rectangl14.png"
+import Rectangl15 from "./Rectangl15.png"
+import Rectangle83 from "./Rectangle83.png"
+import Rectangle84 from "./Rectangle84.png"
+import Rectangle85 from "./Rectangle85.png"
+import Rectangle87 from "./Rectangle87.png"
+import  mafamvisual from "./mafamvisual.png"
+
+import filmaker from "./filmaker.png"
 
 export const assests = {
 
@@ -43,6 +57,20 @@ export const assests = {
     growCreative,
     redsea,
     studio,
+    Frame259,
+    Frame63,
+    pricing,
+    Rectangle13,
+    Rectangl13,
+    Rectangl14,
+    Rectangl15,
+    Rectangle83,
+    Rectangle84,
+    Rectangle85,
+    Rectangle87,
+    mafamvisual,
+    filmaker,
+
 
 
 }
@@ -57,6 +85,36 @@ export const assests = {
     { name: 'Khalid Yaslam', image: Rectangle43, },
   ];
 
+   export const featuresData = [
+    { title: "Get certified", description: "Earn a certificate on completing the courses." },
+    { title: "Lifetime Access to Material", description: "Access all the learning material anytime." },
+    { title: "Ask your instructors", description: "Get support from experts." },
+    { title: "Learn Anytime, Anywhere", description: "Access from any device at your convenience." }
+  ];
+
+
+   export const offersData = [
+    {
+      title: 'Training Programs',
+      image:Frame63 , 
+    },
+    {
+      title: 'Networking Opportunities',
+      image:Rectangle13,
+    },
+    {
+      title: 'Mentorship and Training',
+      image: Rectangl13,
+    },
+    {
+      title: 'Courses and Workshops',
+      image: Rectangl14,
+    },
+    {
+      title: 'Artistic Consultations',
+      image: Rectangl15,
+    },
+  ];
   // SuccessPartnersData.js
 export const successPartnerss = [
     { name: "UNESCO", logo: unisco },
@@ -72,6 +130,22 @@ export const successPartnerss = [
     { name: "NEOM", logo: neom},
     { name: "Netflix", logo: netflix },
   ];
+
+
+  export const MaflamCards =[
+    {
+      title: 'Osama Rubihan',
+      image: Rectangle83 , 
+    },
+    {
+      title: 'Zakaria Bashir',
+      image:Rectangle84,
+    },
+    {
+      title: 'Shahad Almudawi',
+      image: Rectangle85,
+    },
+  ]
 import course1 from "./course1.png";
 import course2 from "./course2.png";
 import course3 from "./course3.png";
@@ -81,6 +155,7 @@ import course6 from "./course6.png";
 import course7 from "./course7.png";
 import course8 from "./course8.png";
 import course9 from "./course9.png";
+import Filmmaker from "../Component/Filmmaker/Filmmaker"
 
 export const Assests = {
     course1,
