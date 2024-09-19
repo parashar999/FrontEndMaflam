@@ -1,6 +1,6 @@
-.coursesContainer {
+.instructorsContainer {
   
-   
+    background-image: url("../../assets/instructiobg.png");
     padding: 20px;
     min-height: 750px;
     border-radius: 8px;
@@ -10,14 +10,14 @@
 
     text-align: center;
   }
-  .courseContainer{
+  .instructorsContainerss{
     
     border: 1px solid #000;
     background: #030B11;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
   
-  .coursesContainer h2 {
+  .instructorsContainer h2 {
    margin-top: 30px;
     color: #FFF;
 
@@ -29,7 +29,7 @@ font-weight: 700;
 line-height: 160%;
   }
   
-  .coursesGrid {
+  .instructorsGrid {
     display: grid;
     margin-top: 80px;
     
@@ -37,35 +37,33 @@ line-height: 160%;
     gap: 20px;
   }
   
-  .coursesCard {
+  .instructorCard {
 
     padding: 0px;
     border-radius: 8px;
     transition: transform 0.3s ease;
   }
   
-  .coursesCard:hover {
+  .instructorCard:hover {
     transform: scale(1.05);
   }
   
-  .coursesImage {
+  .instructorImage {
     width: 100%;
     padding: 0px;
     height: auto;
-    /* border-radius: 8px; */
+    border-radius: 8px;
   }
   
-  .coursesCard p {
+  .instructorCard p {
    
     color: #FFF;
-    margin-top: -50px;
+    margin-top: -60px;
 text-align: center;
 font-family: "Noto Kufi Arabic";
-font-size: 18px;
-width: 100%;
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
 line-height: 160%;
-background: linear-gradient(179.97deg, rgba(3, 11, 17, 0), #030b11);
   }
   
