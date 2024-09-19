@@ -7,6 +7,7 @@ import Navbar from "../../Component/Navbar/Navbar";
 import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
 import HomeHero from "../../Component/HomeHero/HomeHero";
 import CourseGrid from "../../Component/CourseCategories/Course";
+import ViewCourses from "../../Component/ViewCourses/ViewCourses";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
   
       <HomeHero></HomeHero>
       <CourseGrid></CourseGrid>
+      <ViewCourses />
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
       <Faqs />

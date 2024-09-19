@@ -176,3 +176,13 @@ export const courses = [
       },
   ];
   
+  export const CoursesData = [
+    { name: 'Editing' },
+    { name: 'Acting' },
+    { name: 'Sound Recording' },
+    { name: 'Directing' },
+    { name: 'Cinematography' },
+    { name: 'Scriptwriting' },
+    { name: 'Scriptwriting' },
+  ];
+  
