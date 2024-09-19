@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url('/path/to/your/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .newsletterBox {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heading {
+    color: white;
+    margin-right: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .inputBox {
+    display: flex;
+    align-items: center;
+    border: 1px solid #00e0ff;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .inputField {
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    width: 250px;
+    color: #fff;
+    background-color: transparent;
+  }
+  
+  .button {
+    background-color: #00e0ff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+  }
+  
+  .button:hover {
+    background-color: #008fb3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .newsletterBox {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .inputField {
+      width: 100%;
+    }
+  }
+  
