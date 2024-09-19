@@ -146,6 +146,17 @@ export const successPartnerss = [
       image: Rectangle85,
     },
   ]
+
+   export const contentData = [
+    {
+      title: 'Our Vision',
+      description: 'Our vision is to become the leading solution that meets the needs of ambitious Arab students striving for excellence in the art of filmmaking.',
+    },
+    {
+      title: 'Our Mission',
+      description: 'Our mission is to nurture young talent, foster creativity, and provide filmmakers with the tools and expertise they need to succeed in the world of cinema.',
+    }
+  ];
 import course1 from "./course1.png";
 import course2 from "./course2.png";
 import course3 from "./course3.png";

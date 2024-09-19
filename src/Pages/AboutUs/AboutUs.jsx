@@ -7,6 +7,7 @@ import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructo
 
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Navbar from "../../Component/Navbar/Navbar";
+import OurVisionData from "../../Component/OurVisionData/OurVisionData";
 import styles from  "./AboutUs.module.css"
 
 
@@ -16,6 +17,7 @@ export default function AboutUs() {
         <Navbar></Navbar>
 
         <Filmmaker></Filmmaker>
+        <OurVisionData></OurVisionData>
         <MaflamImageOffer></MaflamImageOffer>
        
         <MaflamInstructors></MaflamInstructors>

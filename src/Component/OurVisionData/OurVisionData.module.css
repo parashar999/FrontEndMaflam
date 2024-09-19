@@ -1,0 +1,64 @@
+/* MissionVision.module.css */
+.container {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #101010; /* Adjust color to match background */
+  }
+  
+  .introSection h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .introSection p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contentSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #1ABC9C; /* Text color for titles */
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #ddd; /* Text color for descriptions */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .introSection h1 {
+      font-size: 1.5rem;
+    }
+  
+    .introSection p {
+      font-size: 1rem;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+  
