@@ -7,11 +7,13 @@ function Fundamental() {
   return (
     <div>
       <div className={styles.Fundamental}>
-        <div className={styles.content}>
-          <h1>Subscribe To The Full Filmmaking Fundamentals Package</h1>
-        </div>
-        <div className={styles.imgcontainer}>
-          <img src={Book} alt="Rectangle" />
+        <div className={styles.imgcontentcontainer}>
+          <div className={styles.content}>
+            <h1>Subscribe To The Full Filmmaking Fundamentals Package</h1>
+          </div>
+          <div className={styles.imgcontainer}>
+            <img src={Book} alt="Rectangle" />
+          </div>
         </div>
         <div className={styles.subscribe}>
           <div className={styles.ctn}>

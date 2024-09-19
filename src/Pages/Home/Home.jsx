@@ -12,19 +12,15 @@ import Fundamental from "../../Component/FundamentalPackage/Fundamental";
 const Home = () => {
   return (
     <div>
-     
-      
-      <Navbar></Navbar>
-  
-      <HomeHero></HomeHero>
-      <CourseGrid></CourseGrid>
-      <Fundamental />
-      <SuccessPartners></SuccessPartners>
-      <MaflamInstructors></MaflamInstructors>
-      <Faqs />
-      <Footer />
+      {/* <Navbar></Navbar> */}
 
-    
+      {/* <HomeHero></HomeHero> */}
+      {/* <CourseGrid></CourseGrid> */}
+      <Fundamental />
+      {/* <SuccessPartners></SuccessPartners>
+      <MaflamInstructors></MaflamInstructors>
+      <Faqs />  */}
+      {/* <Footer /> */}
     </div>
   );
 };
