@@ -1,0 +1,159 @@
+.Fundamental {
+  /* border: 1px solid #030b11; */
+  height: auto; /* Ensure it adapts to content */
+  background-color: #030b11; /* Apply background color */
+  height: 900px;
+  
+}
+.content {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  /* border: 1px solid aliceblue; */
+}
+.content h1 {
+  color: #ffff;
+  font-size: 25px;
+}
+.imgcontainer img {
+  height: 900px;
+  padding-left: 50px;
+  
+}
+.subscribe {
+  background-image: url("../../assets/pricing-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  border-radius: 10px;
+  margin: -500px 40px 300px 40px;
+  /* border: 1px solid #ddd; */
+  display: flex;
+}
+.subscribe .ctn {
+  /* border: 3px solid rgb(51, 153, 87); */
+  height: 240px;
+  float: right;
+  width: 60%;
+  margin: 5px 0px 5px 470px;
+  display: flex; /* Use flexbox layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 0px; /* Reduced space between items */
+}
+
+.item {
+  display: flex; /* Arrange icon and text in a row */
+  /* align-items: center; Vertically center items */
+  width: 100%; /* Make sure each item takes full width */
+  max-width: 600px; /* Optional: Set a max width for each item */
+  margin-left: 22px;
+}
+
+.checkico {
+  color: cyan; /* Icon color */
+  font-size: 20px; /* Icon size */
+  margin-right: 10px; /* Space between icon and text */
+  margin-top: 5px;
+}
+
+.description {
+  color: #fff; /* Text color */
+  font-size:15px; /* Font size */
+  margin: 0; /* Remove default margin */
+}
+
+/* .ctn button{
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    margin-top: 20px;
+} */
+.checkic {
+  background-color: #39fffb;
+  padding: 0px 15px 9px 15px;
+  border-radius: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.b {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 94.1%;
+}
+/* .ctn button {
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
+  border-radius: 64px;
+  background-color: #39fffb;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 17px;
+  color: #061c2b;
+  font-family: "Noto Kufi Arabic";
+  border: none;
+} */
+
+.ctn span {
+  color: #ffff;
+  margin: 20px 50px;
+  padding-top: 20px;
+}
+.ctn b {
+  color: cyan;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .Fundamental {
+    height: 750px;
+    width: 100%;
+  }
+  .content {
+    width: 350px;
+    height: 130px;
+    position: absolute;
+    top: 40px;
+    left: 5%;
+    right: 9%;
+    /* border: 1px solid aliceblue; */
+  }
+  .content h1 {
+    color: #ffff;
+    font-size: 20px;
+  }
+  .imgcontainer img {
+    height: 400px;
+    margin: 80px 90px 100px 0px;
+  }
+  .item {
+    margin-left: 0px;
+  }
+  .subscribe {
+    height: 150px;
+    border-radius: 10px;
+    margin: -360px 40px 300px 40px;
+  }
+  .subscribe .ctn {
+    /* border: 3px solid rgb(51, 153, 87); */
+    height: 200px;
+    float: right;
+    width: 100%;
+    margin: 210px 0px 2px 5px;
+  }
+  .checkic{
+    margin-top: 5px;
+  }
+} 

@@ -23,7 +23,6 @@ import Email from "./Email.png";
 import LinkenIn from "./Linkedin.png";
 import GoogleBackground from "./googleBackground.png";
 import contactFormBackground from "./contactFormBackground.png";
-import recapture from "./recapture.png";
 export const assests = {
   Rectangle1,
   Rectangle2,
@@ -50,7 +49,6 @@ export const assests = {
   LinkenIn,
   GoogleBackground,
   contactFormBackground,
-  recapture,
 };
 
 export const instructors = [
