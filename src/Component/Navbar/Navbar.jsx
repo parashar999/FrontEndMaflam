@@ -12,7 +12,7 @@ const Navbar = () => {
       <img src={logo} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
         <a href="#pricing">Courses</a>
-        <a href="#pricing">About Maflam</a>
+        <a href="/aboutus">About Maflam</a>
         <a href="#about">Packages</a>
         <a href="#training">Resources</a>
         <a href="#resources">Contact Us</a>
