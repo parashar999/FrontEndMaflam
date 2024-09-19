@@ -84,3 +84,68 @@ padding-left: 220px;
   display: block; 
    position: relative;
 }
+
+
+/* Responsive code */
+@media (max-width: 1200px) {
+  .faqItem {
+    max-width: 900px;
+  }
+  .question {
+    padding-left: 150px;
+  }
+  .answer {
+    width: 65%;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .faqItem {
+    max-width: 800px;
+  }
+  .question {
+    font-size: 22px;
+    padding-left: 100px;
+  }
+  .answer {
+    width: 75%;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqItem {
+    max-width: 100%;
+  }
+  .question {
+    font-size: 20px;
+    padding-left: 60px;
+  }
+  .answer {
+    width: 85%;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .question {
+    font-size: 18px;
+    padding-left: 30px;
+  }
+  .answer {
+    width: 95%;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .question {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+  .answer {
+    width: 100%;
+    padding: 15px 15px; /* More compact for small screens */
+  }
+}
