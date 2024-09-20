@@ -3,7 +3,7 @@
 
 
 import styles from './MaflamImageOffer.module.css';
-import { offersData } from '../../assets/Assests';
+import { offersData } from '../../assets/assests';
 
 const MaflamImageOffer = () => {
   return (
