@@ -20,6 +20,8 @@ import ignity from "./ignity.png"
 import growCreative from "./growCreative.png"
 import studio from "./studio.png"
 import redsea from "./redsea.png"
+import videocrc from "./videocrc.png"
+import videocrc1 from "./videocrc1.png"
 
 export const assests = {
 
@@ -43,6 +45,8 @@ export const assests = {
     growCreative,
     redsea,
     studio,
+    videocrc,
+    videocrc1,
 
 
 }
@@ -185,4 +189,67 @@ export const courses = [
     { name: 'Scriptwriting' },
     { name: 'Scriptwriting' },
   ];
+  
+    export const questionsData = [
+      {
+        question: "Scriptwriting Introduction",
+        answers: [
+          "The Importance of Filmmaking - 3:59",
+          "Stages of Film Production - 2:49",
+          "Film Crew Departments - 3:20 ",
+          "Understanding the Hierarchical",
+          "Structure of the Production Team - 2:39",
+          "About Maflam Platform - 1:39",
+        ]
+      },
+      {
+        question: "From Idea to Story",
+        answers: [
+          "It helps learners grasp essential skills to manage a film production efficiently.",
+          "Understanding the basics ensures better decision-making during filming."
+        ]
+      },
+      {
+        question: "From Story to Processing",
+        answers: [
+          "This knowledge can be applied by practicing with real-life film projects.",
+          "Directors can use these skills to enhance their communication with actors."
+        ]
+      },
+      {
+        question: "From Processing to Script",
+        answers: [
+          "Script Structure: Chapters and Scene Breakdowns (Part One) - 12:30 ",
+          " Script Structure: Chapters and Scene Breakdowns (Part Two) - 13:11",
+          "Workshop: Writing Scene Breakdowns - 3:36",
+          "Script Structure: Types of Scenes - 7:06",
+          "Script Structure: Moments - 6:27 ",
+          "Elements of Scene Building - 11:39 ",
+          "Technical Rules for Writing Scenes - 13:57 ",
+          "Types of Dialogue - 12:00 ",
+          "Foundations of Writing Dialogue - 11:08",
+          "Screenwriting Software - 3:16 ",
+          "Technique for Writing Descriptions and Annotations - 11:31 ",
+          "Dialogue Writing Technique - 11:24",
+          "Workshop: Writing Dialogue - 5:34",
+          "Technique for Writing Transitions - 6:40 ",
+          "Scene Outline - 11:47 ",
+          " Workshop: Scene Outline - 4:00",
+          "Editing for Production - 6:49 ",
+        ]
+      },
+      {
+        question: "Conclusion",
+        answers: [
+          "This knowledge can be applied by practicing with real-life film projects.",
+          "Directors can use these skills to enhance their communication with actors."
+        ]
+      },
+     
+      
+    ];
+    
+  
+  
+  export default questionsData;
   
