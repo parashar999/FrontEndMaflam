@@ -6,7 +6,8 @@
     text-align: center;
     min-height: 800px;
     background-image: url("../../assets/filmaker.png");         
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 2rem;
     
   }
@@ -15,7 +16,7 @@
   .container h1 {
 
     color: #EBF5F4;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
 
     text-align: center;
     /* Headlines/Headline 1 */
@@ -29,7 +30,7 @@
   .container p{
 
     color: #EBF5F4;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     /* Subheadline/Subheadline 1 */
     font-family: "Noto Kufi Arabic";

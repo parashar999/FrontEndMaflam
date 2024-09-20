@@ -1,89 +1,119 @@
-/* MissionVision.module.css */
 .container {
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    background-color: #10171D; 
-  }
-  
-  .introSection h1 {
-    color: #EBF5F4;
+  background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../assets/mafamvisual.png') no-repeat center center;
+  background-size: cover;
+  color: white;
+  min-height: 1100px;
+  padding: 40px;
+  text-align: center;
+}
 
-    /* Headlines/Headline 3 */
-    font-family: "Noto Kufi Arabic";
-    font-size: 36px;
-    font-style: normal;
-    align-items: start ;
-    font-weight: 700;
-    line-height: 160%; 
-  }
-  
-  .introSection p {
-    color: #FFF;
-    align-items: start;
+.headingSection h1 {
+  color: #EBF5F4;
 
-    font-family: "Noto Kufi Arabic";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-  }
-  
-  .contentSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
-  }
-  
-  .card {
-    background: #020B11;
-    border-radius: 10px;
-    padding: 40px;
-    width: 500px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card h2 {
-  
-    color: var(--Accent-Accent-400---Main, #39FFFB);
+  /* Headlines/Headline 3 */
+  font-family: "Noto Kufi Arabic";
+  font-size: 28px;
+  font-style: normal;
+  padding-left: 90px;
+
+  padding-top: 100px;
+  font-weight: 700;
+  line-height: 160%;
+  text-align: start;
+}
+
+.headingSection p {
+  color: #FFF;
+  padding-top: 20px;
+  padding-left: 90px;
+
+  font-family: "Noto Kufi Arabic";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: start;
+  margin: 0 auto;
+}
+
+.underline {
+  /* width: 30%;
+  height: 3px;
+  background-color: #00ffff;
+  margin-top: 40px ; */
+  stroke-width: 4px;
+  margin-top: 40px ;
+stroke: #5AFFFF;
+margin-left:90px;
+width: 380px;
+background-color: #5AFFFF;
+height: 1px;
+flex-shrink: 0;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 300px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.card h3 {
+  color: var(--Accent-Accent-400---Main, #39FFFB);
+  /* Headlines/HEadline 4 */
+  font-family: "Noto Kufi Arabic";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  text-align: start;
+}
+
+.card p {
+ 
+ 
+  text-align: start;
+  color: #FFF;
+
 font-family: "Noto Kufi Arabic";
-align-items: start;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%;
-  }
-  
-  .card p {
-    
-    color: #FFF;
-
-    text-align: start;
-font-family: "Noto Kufi Arabic";
-font-size: 24px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 160%;
+}
+
+@media (max-width: 768px) {
+  .headingSection h1 {
+      font-size: 2rem;
   }
   
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .introSection h1 {
-      font-size: 1.5rem;
-    }
-  
-    .introSection p {
+  .headingSection p {
       font-size: 1rem;
-    }
-  
-    .card {
-      width: 100%;
-      max-width: 90%;
-    }
   }
+  .underline {
   
+    stroke-width: 4px;
+    margin-top: 40px ;
+  stroke: #5AFFFF;
+  margin-left:90px;
+  width: 200px;
+  background-color: #5AFFFF;
+  height: 1px;
+  flex-shrink: 0;
+  }
+
+  .card {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}

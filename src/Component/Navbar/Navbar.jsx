@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo from "../../assets/logo.svg";
 import navbarBackground from "../../assets/NavbarBackground.png";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav
       className={styles.navbar}
@@ -21,10 +27,15 @@ const Navbar = () => {
         <input type="text" placeholder="Search for courses...!" />
       </div>
       <div className={styles.rightLinks}>
+        <a href="#login">log in</a>
         <a href="#" target="_blank" className={styles.signupButton}>
           Create an Account
         </a>
-        <a href="#login">log in</a>
+      </div>
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </nav>
   );

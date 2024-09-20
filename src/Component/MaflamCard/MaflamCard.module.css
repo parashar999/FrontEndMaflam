@@ -1,4 +1,4 @@
-/* MentorGrid.module.css */
+/* 
 .container {
     text-align: center;
     padding: 20px;
@@ -6,7 +6,7 @@
     min-width: 400px;
     margin-left: 100px;
     margin-right: 100px;
-    /* Adjust background as needed */
+ 
   }
   .container h2 {
     color: #FFF;
@@ -81,11 +81,12 @@ line-height: 160%;
   .card:hover .image {
     transform: scale(1.05);
   }
-  
-  /* Responsive styling */
+
   @media (max-width: 768px) {
     .grid {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ 
+      flex-direction: column;
       text-align: center;
     }
     
@@ -97,4 +98,126 @@ line-height: 160%;
       font-size: 14px;
     }
   }
-  
+   */
+
+   /* MaflamCard.module.css */
+.container {
+  text-align: center;
+  padding: 20px;
+  min-height: 500px;
+  min-width: 400px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.container h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image {
+  width: 80%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(112, 28, 146, 0.9));
+  color: #FFF;
+}
+
+.overlay p {
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.name {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .grid {
+      grid-template-columns: repeat(1, minmax(200px, 1fr)); /* Show one card per row */
+  }
+
+  .image {
+      width: 100%; /* Ensure the image takes up the full card width on mobile */
+  }
+
+  .title {
+      font-size: 20px;
+  }
+
+  .name {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+      grid-template-columns: repeat(1, 1fr); /* For very small screens */
+  }
+
+  .container {
+      margin-left: 20px;
+      margin-right: 70px;
+  }
+
+  .title {
+      font-size: 18px;
+  }
+
+  .image {
+      width: 90%;
+  }
+
+  .name {
+      font-size: 12px;
+  }
+}
