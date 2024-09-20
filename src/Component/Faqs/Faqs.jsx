@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Faqs.module.css'; // Import the CSS module
 // import { faqData } from '../../assets/assets'; // Import FAQ data
-import { faqData } from '../../assets/Assests';
+import { faqData } from '../../assets/assests';
 
 
 const Faqs = () => {

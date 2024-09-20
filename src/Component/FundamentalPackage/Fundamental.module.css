@@ -1,19 +1,18 @@
 .Fundamental {
   background-color: #030b11;
-  padding: 50px 20px 70px 20px;
+  padding: 50px 135px 70px 135px;
   height: auto;
   /* border: 2px solid rebeccapurple; */
 }
 
 .secondcontainer {
   /* border: 2px solid aqua; */
-  
- 
+  height: auto;
 }
 
 .content {
-  width: 300px;
-  margin-left: 280px;
+  width: 350px;
+  margin-left: 440px;
   margin-right: 0;
   margin-top: 50px;
   /* border: 2px solid aliceblue; */
@@ -21,9 +20,10 @@
 
 .content p {
   color: #fff;
-  line-height: 20px;
+  line-height: 25px;
   text-align: left;
-  font-size: 15px;
+  font-size: 20px;
+  /* border: 1px solid aquamarine; */
 }
 
 .subscribe {
@@ -31,39 +31,43 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 150px;
+  height: 230px;
   margin: 20px 0px 20px 0px;
   border-radius: 10px;
  
 }
 .imgcontainer img{
-  height: 500px;
-  margin-top: -200px;
-  margin-left: 20px;
+  height: 700px;
+  margin-top: -260px;
+  margin-left: 70px;
 }
 .ctn{
   /* border: 2px solid rgb(16, 17, 18); */
-  height: 150px;
+  height: auto;
   width: 55%;
-  margin-top: -310px;
-  margin-left: 280px;
+  margin-top: -448px;
+  margin-left: 440px;
   
 }
 .item{
   display: flex;
   align-items: center;
+ 
 }
 .checkico{
+ 
   margin-right: 10px;
   color: rgb(46, 202, 202);
+  font-size: 30px;
+  
 }
 .ctn p{
-  font-size: 12px;
+  font-size: 20px;
   color: #fff;
 }
 .checkicobuttun{
   background-color:cyan;
-  font-size: 8px;
+  font-size: 15px;
   padding: 2px 7px;
   border: none;
   border-radius: 10px;
@@ -73,40 +77,37 @@
 .item b{
   margin-right:2px;
 }
-@media screen and (max-width: 400px)
+@media screen and (max-width: 768px)
 {
 
   .Fundamental {
   
     padding: 30px 20px 30px 20px;
-    height: 450px;
+    height: 490px;
     
   }
   .content {
     width: 200px;
-    margin-left: 0px;
-    margin-right: 0;
-    margin-top: 0px;
+    margin: 10px 20px 10px 40px;
    
   }
   .content p{
-    font-size: 10px;
+    font-size: 15px;
   }
   .subscribe{
     height: 100px;
-    margin: 40px 0px 40px 0px;
+   margin: 40px auto;
   }
   .imgcontainer img{
     height: 230px;
     margin-top: -70px;
-    margin-left: 0px;
+    margin-left: 30px;
   }
   .ctn{
    
     height: 150px;
     width: 100%;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin: 0px auto;
     
   }
   .ctn p{
