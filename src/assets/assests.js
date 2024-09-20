@@ -41,7 +41,7 @@ import course6 from "./course6.png";
 import course7 from "./course7.png";
 import course8 from "./course8.png";
 import course9 from "./course9.png";
-import Filmmaker from "../Component/Filmmaker/Filmmaker";
+
 import filmaker from "./filmaker.png";
 import rectangle21 from "./rectangle21.png";
 import rectangle22 from "./rectangle22.png";
