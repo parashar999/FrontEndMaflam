@@ -32,8 +32,20 @@ import Rectangle84 from "./Rectangle84.png"
 import Rectangle85 from "./Rectangle85.png"
 import Rectangle87 from "./Rectangle87.png"
 import  mafamvisual from "./mafamvisual.png"
+import course1 from "./course1.png";
+import course2 from "./course2.png";
+import course3 from "./course3.png";
+import course4 from "./course4.png";
+import course5 from "./course5.png";
+import course6 from "./course6.png";
+import course7 from "./course7.png";
+import course8 from "./course8.png";
+import course9 from "./course9.png";
 
-import filmaker from "./filmaker.png"
+import filmaker from "./filmaker.png";
+import rectangle21 from "./rectangle21.png";
+import rectangle22 from "./rectangle22.png";
+
 
 export const assests = {
 
@@ -70,6 +82,17 @@ export const assests = {
     Rectangle87,
     mafamvisual,
     filmaker,
+    course1,
+    course2,
+    course3,
+    course4,
+    course5,
+    course6,
+    course7,
+    course8,
+    course9,
+    rectangle21,
+    rectangle22
 
 
 
@@ -84,6 +107,17 @@ export const assests = {
     { name: 'Odai Abed', image: Rectangle42, },
     { name: 'Khalid Yaslam', image: Rectangle43, },
   ];
+  
+  
+ export const BlogHeaderData = [
+  { title: "مع فريق العمل داخل الفيلم؟",
+    title2:"كيف يتعامل المخرج المحترف",
+    subTitle:"الصحفية والوصول إلى التنزيلات الإعلامية",
+    subTitle2:"احصل على تحديثات الشركة والتغطية",
+    name:"Afnan Linjawi",
+    date:"october 15,2023"}
+];
+
 
    export const featuresData = [
     { title: "Get certified", description: "Earn a certificate on completing the courses." },
@@ -157,29 +191,9 @@ export const successPartnerss = [
       description: 'Our mission is to nurture young talent, foster creativity, and provide filmmakers with the tools and expertise they need to succeed in the world of cinema.',
     }
   ];
-import course1 from "./course1.png";
-import course2 from "./course2.png";
-import course3 from "./course3.png";
-import course4 from "./course4.png";
-import course5 from "./course5.png";
-import course6 from "./course6.png";
-import course7 from "./course7.png";
-import course8 from "./course8.png";
-import course9 from "./course9.png";
 
 
-export const Assests = {
-    course1,
-    course2,
-    course3,
-    course4,
-    course5,
-    course6,
-    course7,
-    course8,
-    course9
 
-};
 
 export const courses = [
     { title: 'Fundamentals of Cinematography', img: course7 },
