@@ -46,6 +46,12 @@ import Google from "./Google.png";
 import Email from "./Email.png";
 import LinkedIn from "./LinkedIn.png";
 import recapture from "./recapture.png";
+import blogpage2 from "./blogpage2.png";
+import ebook1 from "./ebook1.png";
+import ebook2 from "./ebook2.png";
+import ebook3 from "./ebook3.png";
+import ebook4 from "./ebook4.png";
+import ebook5 from "./ebook5.png";
 
 export const assests = {
   recapture,
@@ -96,6 +102,12 @@ export const assests = {
   course9,
   rectangle21,
   rectangle22,
+  blogpage2,
+  ebook1,
+  ebook2,
+  ebook3,
+  ebook4,
+  ebook5
 };
 
 export const instructors = [
@@ -287,4 +299,65 @@ export const faqData = [
     answer:
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum nam eius quod deserunt quidem libero quo dignissimos esse nobis alias aliquam eaque sit assumenda distinctio excepturi iure minima nesciunt.",
   },
+];
+
+
+export const ebooks = [
+  {
+    id: 1,
+    title: "How to showcase your unique style in writing",
+    buttonText: "Download",
+    imgSrc: ebook1,
+    comingSoon: false,
+  },
+  {
+    id: 2,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook2,
+    comingSoon: false,
+  },
+  {
+    id: 3,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook3,
+    comingSoon: false,
+  },
+  {
+    id: 4,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook4,
+    comingSoon: true,
+  },
+  {
+    id: 5,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook5,
+    comingSoon: true,
+  },
+  {
+    id: 5,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook5,
+    comingSoon: true,
+  },
+  {
+    id: 5,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook5,
+    comingSoon: true,
+  },
+  {
+    id: 5,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook5,
+    comingSoon: true,
+  },
+  // Add more e-book data as needed
 ];
