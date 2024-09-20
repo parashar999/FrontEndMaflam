@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./VariousCourse.module.css";
 import { VariousCard } from "../../assets/assests";
 

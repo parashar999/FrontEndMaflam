@@ -1,0 +1,122 @@
+.insightsSection {
+    padding: 40px 20px;
+    background-color: #0f1624;
+  }
+  
+  .heading {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 80px;
+  }
+  
+  .insightsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .insightCard {
+    background-color: #1c2537;
+    flex: 1;
+    max-width: 25%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .insightCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .insightImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+  .category {
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+    font-size: 14px;
+  }
+  
+  .title {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .readMore {
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .loadMoreBtn {
+    background-color: #1c2537;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    font-size: 14px;
+  }
+  
+  .loadMoreBtn:hover {
+    background-color: var(--Accent-Accent-400---Main, #39FFFB);
+    color: #000;
+  }
+  
+  /* Responsive Design */
+  /* Medium and Small screens */
+  @media (max-width: 1024px) {
+    .insightsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .insightCard {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .insightImage {
+      height: 150px;
+    }
+  }
+  
+  /* Mobile screens */
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 20px;
+    }
+  
+    .insightImage {
+      height: 120px;
+    }
+  
+    .cardContent {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 14px;
+    }
+  
+    .readMore {
+      font-size: 12px;
+    }
+  
+    .loadMoreBtn {
+      font-size: 12px;
+    }
+  }
+  

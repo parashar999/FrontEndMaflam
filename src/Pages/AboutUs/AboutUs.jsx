@@ -9,7 +9,7 @@ import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructo
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Navbar from "../../Component/Navbar/Navbar";
 import OurVisionData from "../../Component/OurVisionData/OurVisionData";
-import VariousCourse from "../../Component/VariousCourse/VariousCourse";
+// import VariousCourse from "../../Component/VariousCourse/VariousCourse";
 import styles from  "./AboutUs.module.css"
 
 
@@ -20,7 +20,7 @@ export default function AboutUs() {
 
         <Filmmaker></Filmmaker>
         <OurVisionData></OurVisionData>
-        <VariousCourse></VariousCourse>
+        {/* <VariousCourse></VariousCourse> */}
         <MaflamInstructors></MaflamInstructors>
         <MaflamCard></MaflamCard>
         <MaflanContent></MaflanContent>
