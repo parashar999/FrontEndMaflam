@@ -1,14 +1,6 @@
-
-
-
-
-
-
-
-
-
-import videocrc from "./videocrc.png"
-import videocrc1 from "./videocrc1.png"
+import mafamvisual from "./mafamvisual.png";
+import videocrc from "./videocrc.png";
+import videocrc1 from "./videocrc1.png";
 import film from "./fiml.png";
 import netflix from "./netflix.png";
 import srmg from "./srmg.png";
@@ -40,7 +32,6 @@ import Rectangle83 from "./Rectangle83.png";
 import Rectangle84 from "./Rectangle84.png";
 import Rectangle85 from "./Rectangle85.png";
 import Rectangle87 from "./Rectangle87.png";
-import mafamvisual from "./mafamvisual.png";
 import course1 from "./course1.png";
 import course2 from "./course2.png";
 import course3 from "./course3.png";
@@ -75,37 +66,10 @@ import Popular1 from "./Popular1.png";
 import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
 import Popular4 from "./Popular4.png";
-
-// export const assests = {
-
-//     Rectangle1,
-//     Rectangle2,
-//     Rectangle39,
-//     Rectangle40,
-//     Rectangle41,
-//     Rectangle42,
-//     Rectangle43,
-//     instructiobg,
-//     film,
-//     netflix,
-//     srmg,
-//     unisco,
-//     ignity,
-//     jameel,
-//     jeddahs,
-//     majid,
-//     neom,
-//     growCreative,
-//     redsea,
-//     studio,
-//     videocrc,
-//     videocrc1,
-
-
-// }
-
+import caraImg from "./Carouselimg.png";
 
 export const assests = {
+  caraImg,
   Popular1,
   Popular2,
   Popular3,
@@ -170,7 +134,7 @@ export const assests = {
   ebook2,
   ebook3,
   ebook4,
-  ebook5
+  ebook5,
 };
 
 export const instructors = [
@@ -206,82 +170,6 @@ export const blogPosts = [
   },
 ];
 
-
-
-  
-  export const CoursesData = [
-    { name: 'Editing' },
-    { name: 'Acting' },
-    { name: 'Sound Recording' },
-    { name: 'Directing' },
-    { name: 'Cinematography' },
-    { name: 'Scriptwriting' },
-    { name: 'Scriptwriting' },
-  ];
-  
-    export const questionsData = [
-      {
-        question: "Scriptwriting Introduction",
-        answers: [
-          "The Importance of Filmmaking - 3:59",
-          "Stages of Film Production - 2:49",
-          "Film Crew Departments - 3:20 ",
-          "Understanding the Hierarchical",
-          "Structure of the Production Team - 2:39",
-          "About Maflam Platform - 1:39",
-        ]
-      },
-      {
-        question: "From Idea to Story",
-        answers: [
-          "It helps learners grasp essential skills to manage a film production efficiently.",
-          "Understanding the basics ensures better decision-making during filming."
-        ]
-      },
-      {
-        question: "From Story to Processing",
-        answers: [
-          "This knowledge can be applied by practicing with real-life film projects.",
-          "Directors can use these skills to enhance their communication with actors."
-        ]
-      },
-      {
-        question: "From Processing to Script",
-        answers: [
-          "Script Structure: Chapters and Scene Breakdowns (Part One) - 12:30 ",
-          " Script Structure: Chapters and Scene Breakdowns (Part Two) - 13:11",
-          "Workshop: Writing Scene Breakdowns - 3:36",
-          "Script Structure: Types of Scenes - 7:06",
-          "Script Structure: Moments - 6:27 ",
-          "Elements of Scene Building - 11:39 ",
-          "Technical Rules for Writing Scenes - 13:57 ",
-          "Types of Dialogue - 12:00 ",
-          "Foundations of Writing Dialogue - 11:08",
-          "Screenwriting Software - 3:16 ",
-          "Technique for Writing Descriptions and Annotations - 11:31 ",
-          "Dialogue Writing Technique - 11:24",
-          "Workshop: Writing Dialogue - 5:34",
-          "Technique for Writing Transitions - 6:40 ",
-          "Scene Outline - 11:47 ",
-          " Workshop: Scene Outline - 4:00",
-          "Editing for Production - 6:49 ",
-        ]
-      },
-      {
-        question: "Conclusion",
-        answers: [
-          "This knowledge can be applied by practicing with real-life film projects.",
-          "Directors can use these skills to enhance their communication with actors."
-        ]
-      },
-     
-      
-    ];
-    
-  
-  
-  export default questionsData;
-  
 export const BlogHeaderData = [
   {
     title: "مع فريق العمل داخل الفيلم؟",
@@ -292,6 +180,76 @@ export const BlogHeaderData = [
     date: "october 15,2023",
   },
 ];
+
+export const CoursesData = [
+  { name: "Editing" },
+  { name: "Acting" },
+  { name: "Sound Recording" },
+  { name: "Directing" },
+  { name: "Cinematography" },
+  { name: "Scriptwriting" },
+  { name: "Scriptwriting" },
+];
+
+export const questionsData = [
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking - 3:59",
+      "Stages of Film Production - 2:49",
+      "Film Crew Departments - 3:20 ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team - 2:39",
+      "About Maflam Platform - 1:39",
+    ],
+  },
+  {
+    question: "From Idea to Story",
+    answers: [
+      "It helps learners grasp essential skills to manage a film production efficiently.",
+      "Understanding the basics ensures better decision-making during filming.",
+    ],
+  },
+  {
+    question: "From Story to Processing",
+    answers: [
+      "This knowledge can be applied by practicing with real-life film projects.",
+      "Directors can use these skills to enhance their communication with actors.",
+    ],
+  },
+  {
+    question: "From Processing to Script",
+    answers: [
+      "Script Structure: Chapters and Scene Breakdowns (Part One) - 12:30 ",
+      " Script Structure: Chapters and Scene Breakdowns (Part Two) - 13:11",
+      "Workshop: Writing Scene Breakdowns - 3:36",
+      "Script Structure: Types of Scenes - 7:06",
+      "Script Structure: Moments - 6:27 ",
+      "Elements of Scene Building - 11:39 ",
+      "Technical Rules for Writing Scenes - 13:57 ",
+      "Types of Dialogue - 12:00 ",
+      "Foundations of Writing Dialogue - 11:08",
+      "Screenwriting Software - 3:16 ",
+      "Technique for Writing Descriptions and Annotations - 11:31 ",
+      "Dialogue Writing Technique - 11:24",
+      "Workshop: Writing Dialogue - 5:34",
+      "Technique for Writing Transitions - 6:40 ",
+      "Scene Outline - 11:47 ",
+      " Workshop: Scene Outline - 4:00",
+      "Editing for Production - 6:49 ",
+    ],
+  },
+  {
+    question: "Conclusion",
+    answers: [
+      "This knowledge can be applied by practicing with real-life film projects.",
+      "Directors can use these skills to enhance their communication with actors.",
+    ],
+  },
+];
+
+export default questionsData;
+
 //import latest insights
 export const insights = [
   {
@@ -511,7 +469,6 @@ export const faqData = [
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum nam eius quod deserunt quidem libero quo dignissimos esse nobis alias aliquam eaque sit assumenda distinctio excepturi iure minima nesciunt.",
   },
 ];
-
 
 export const ebooks = [
   {
