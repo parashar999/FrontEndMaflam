@@ -22,7 +22,7 @@ const HeroContact = () => {
           </div>
           <div className={styles.card}>
             <div className={styles.cardIcon}>
-              <img src={assests.LinkenIn} alt="" />
+              <img src={assests.LinkedIn} alt="" />
             </div>
             <div className={styles.cardText}>
               Application for the employment program at Maflam.

@@ -18,26 +18,40 @@ import ignity from "./ignity.png";
 import growCreative from "./growCreative.png";
 import studio from "./studio.png";
 import redsea from "./redsea.png";
-import Google from "./Google.png";
-import Email from "./Email.png";
-import LinkenIn from "./Linkedin.png";
-import GoogleBackground from "./googleBackground.png";
-import contactFormBackground from "./contactFormBackground.png";
+import Frame259 from "./Frame259.png";
+import Frame63 from "./Frame63.png";
+import pricing from "./pricing1.png";
+import Rectangle13 from "./Rectangle13.png";
+import Rectangl13 from "./Rectangl13.png";
+import Rectangl14 from "./Rectangl14.png";
+import Rectangl15 from "./Rectangl15.png";
 import Rectangle83 from "./Rectangle83.png";
 import Rectangle84 from "./Rectangle84.png";
 import Rectangle85 from "./Rectangle85.png";
 import Rectangle87 from "./Rectangle87.png";
 import mafamvisual from "./mafamvisual.png";
-import Frame63 from "./Frame63.png";
-import Rectangl13 from "./Rectangl13.png";
-import Rectangl14 from "./Rectangl14.png";
-import Rectangl15 from "./Rectangl15.png";
-
-import pricing from "./pricing1.png";
-import Rectangle13 from "./Rectangle13.png";
+import course1 from "./course1.png";
+import course2 from "./course2.png";
+import course3 from "./course3.png";
+import course4 from "./course4.png";
+import course5 from "./course5.png";
+import course6 from "./course6.png";
+import course7 from "./course7.png";
+import course8 from "./course8.png";
+import course9 from "./course9.png";
 import filmaker from "./filmaker.png";
+import rectangle21 from "./rectangle21.png";
+import rectangle22 from "./rectangle22.png";
+import Google from "./Google.png";
+import Email from "./Email.png";
+import LinkedIn from "./LinkedIn.png";
+import recapture from "./recapture.png";
 
 export const assests = {
+  recapture,
+  LinkedIn,
+  Email,
+  Google,
   Rectangle1,
   Rectangle2,
   Rectangle39,
@@ -58,11 +72,30 @@ export const assests = {
   growCreative,
   redsea,
   studio,
-  Google,
-  Email,
-  LinkenIn,
-  GoogleBackground,
-  contactFormBackground,
+  Frame259,
+  Frame63,
+  pricing,
+  Rectangle13,
+  Rectangl13,
+  Rectangl14,
+  Rectangl15,
+  Rectangle83,
+  Rectangle84,
+  Rectangle85,
+  Rectangle87,
+  mafamvisual,
+  filmaker,
+  course1,
+  course2,
+  course3,
+  course4,
+  course5,
+  course6,
+  course7,
+  course8,
+  course9,
+  rectangle21,
+  rectangle22,
 };
 
 export const instructors = [
@@ -74,36 +107,17 @@ export const instructors = [
   { name: "Khalid Yaslam", image: Rectangle43 },
 ];
 
-// SuccessPartnersData.js
-export const successPartnerss = [
-  { name: "UNESCO", logo: unisco },
-  { name: "GrowCreative", logo: growCreative },
-  { name: "SRMG", logo: srmg },
-  { name: "Saudi Film Confex", logo: film },
-  { name: "Jeddah X", logo: jeddahs },
-  { name: "Art Jameel", logo: jameel },
-  { name: "Ignite", logo: ignity },
-  { name: "Red Sea", logo: redsea },
-  { name: "Telfaz11 Studios", logo: studio },
-  { name: "Majid", logo: majid },
-  { name: "NEOM", logo: neom },
-  { name: "Netflix", logo: netflix },
+export const BlogHeaderData = [
+  {
+    title: "مع فريق العمل داخل الفيلم؟",
+    title2: "كيف يتعامل المخرج المحترف",
+    subTitle: "الصحفية والوصول إلى التنزيلات الإعلامية",
+    subTitle2: "احصل على تحديثات الشركة والتغطية",
+    name: "Afnan Linjawi",
+    date: "october 15,2023",
+  },
 ];
 
-export const MaflamCards = [
-  {
-    title: "Osama Rubihan",
-    image: Rectangle83,
-  },
-  {
-    title: "Zakaria Bashir",
-    image: Rectangle84,
-  },
-  {
-    title: "Shahad Almudawi",
-    image: Rectangle85,
-  },
-];
 export const featuresData = [
   {
     title: "Get certified",
@@ -142,6 +156,36 @@ export const offersData = [
     image: Rectangl15,
   },
 ];
+// SuccessPartnersData.js
+export const successPartnerss = [
+  { name: "UNESCO", logo: unisco },
+  { name: "GrowCreative", logo: growCreative },
+  { name: "SRMG", logo: srmg },
+  { name: "Saudi Film Confex", logo: film },
+  { name: "Jeddah X", logo: jeddahs },
+  { name: "Art Jameel", logo: jameel },
+  { name: "Ignite", logo: ignity },
+  { name: "Red Sea", logo: redsea },
+  { name: "Telfaz11 Studios", logo: studio },
+  { name: "Majid", logo: majid },
+  { name: "NEOM", logo: neom },
+  { name: "Netflix", logo: netflix },
+];
+
+export const MaflamCards = [
+  {
+    title: "Osama Rubihan",
+    image: Rectangle83,
+  },
+  {
+    title: "Zakaria Bashir",
+    image: Rectangle84,
+  },
+  {
+    title: "Shahad Almudawi",
+    image: Rectangle85,
+  },
+];
 
 export const contentData = [
   {
@@ -155,27 +199,6 @@ export const contentData = [
       "Our mission is to nurture young talent, foster creativity, and provide filmmakers with the tools and expertise they need to succeed in the world of cinema.",
   },
 ];
-import course1 from "./course1.png";
-import course2 from "./course2.png";
-import course3 from "./course3.png";
-import course4 from "./course4.png";
-import course5 from "./course5.png";
-import course6 from "./course6.png";
-import course7 from "./course7.png";
-import course8 from "./course8.png";
-import course9 from "./course9.png";
-
-export const Assests = {
-  course1,
-  course2,
-  course3,
-  course4,
-  course5,
-  course6,
-  course7,
-  course8,
-  course9,
-};
 
 export const courses = [
   { title: "Fundamentals of Cinematography", img: course7 },

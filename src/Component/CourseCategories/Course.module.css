@@ -1,6 +1,4 @@
 .coursesContainer {
-  
-   
     padding: 20px;
     min-height: 750px;
     border-radius: 8px;
@@ -61,7 +59,7 @@ line-height: 160%;
     margin-top: -50px;
 text-align: center;
 font-family: "Noto Kufi Arabic";
-font-size: 18px;
+font-size: 15px;
 width: 100%;
 font-style: normal;
 font-weight: 700;
