@@ -88,7 +88,7 @@ import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import FooterLogo from '../../assets/footerLogo.svg';
 import styles from './Footer.module.css';
-import { footerColumnData } from '../../assets/Assests';
+import { footerColumnData } from '../../assets/assests';
 
 
 const Footer = () => {
