@@ -12,9 +12,9 @@ import Fundamental from "../../Component/FundamentalPackage/Fundamental";
 const Home = () => {
   return (
     <div>
-      {/* <Navbar></Navbar>
+       {/* <Navbar></Navbar> */}
 
-      <HomeHero></HomeHero>
+       {/* <HomeHero></HomeHero>
       <CourseGrid></CourseGrid> */}
       <Fundamental />
       {/* <SuccessPartners></SuccessPartners>
