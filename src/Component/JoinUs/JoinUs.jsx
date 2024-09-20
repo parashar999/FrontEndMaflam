@@ -3,8 +3,9 @@ import styles from './JoinUs.module.css';
 
 const JoinUs = () => {
   return (
+
+    <div className={styles.maincontainer}>
     <div className={styles.container}>
-     
       <div className={styles.JoinUsBox}>
         <h2 className={styles.heading}>Join our newslatter now </h2>
         <div className={styles.serachoption}>
@@ -21,6 +22,7 @@ const JoinUs = () => {
         </div>
        
       </div></div>
+      </div>
     
   );
 };
