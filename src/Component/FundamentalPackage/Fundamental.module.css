@@ -39,7 +39,7 @@
 .imgcontainer img{
   height: 500px;
   margin-top: -200px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .ctn{
   /* border: 2px solid rgb(16, 17, 18); */
@@ -73,7 +73,7 @@
 .item b{
   margin-right:2px;
 }
-@media screen and (max-width: 480px)
+@media screen and (max-width: 400px)
 {
 
   .Fundamental {
@@ -87,7 +87,7 @@
     margin-left: 0px;
     margin-right: 0;
     margin-top: 0px;
-    /* border: 2px solid aliceblue; */
+   
   }
   .content p{
     font-size: 10px;
@@ -102,7 +102,7 @@
     margin-left: 0px;
   }
   .ctn{
-    border: 2px solid rgb(16, 17, 18);
+   
     height: 150px;
     width: 100%;
     margin-top: 0px;
