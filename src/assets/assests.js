@@ -78,6 +78,13 @@ import Popular1 from "./Popular1.png";
 import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
 import Popular4 from "./Popular4.png";
+import  Ellipse1 from "./Ellipse1.png";
+import  Ellipse2 from "./Ellipse2.png";
+import  Ellipse3 from "./Ellipse3.png";
+import  Ellipse4 from "./Ellipse4.png";
+import  Ellipse5 from "./Ellipse5.png";
+import  Ellipse6 from "./Ellipse6.png";
+import Groups from "./Group.png";
 export const assests = {
   Popular1,
   Popular2,
@@ -158,7 +165,15 @@ export const assests = {
   ebook2,
   ebook3,
   ebook4,
-  ebook5
+  ebook5,
+  Ellipse2,
+  Ellipse1,
+  Ellipse3,
+  Ellipse4,
+  Ellipse5,
+  Ellipse6,
+  Groups,
+
 };
 
 export const instructors = [
@@ -445,9 +460,14 @@ export const VisionData = [
       instructor: "Odai Abeed",
       title: "Fundamentals of Film Directing",
       description:
-        "This course will focus on explaining the role of the director and how he implements his vision in the film...",
-      price: "SAR 750",
+        "This course will focus on explaining the role of the director and how he implements his vision in the film. It will also cover how to prepare for the film, direct the actors, and deal with the work team, in addition to all the directing rules.",
+        para: "SAR ",
+      price: "750",
+      image:  Ellipse1,
+
+
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse1,
     },
     {
@@ -455,84 +475,115 @@ export const VisionData = [
       instructor: "Ayman Khoja",
       title: "Fundamentals of Film Production",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, you will learn all the production details, starting from conducting a feasibility study for the film and determining the budget, contracting the work team, managing the filming location, and even entering the film into the editing room.",
+      price: "750",
+      para: "SAR ",
+      image :  Ellipse2,
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse2,
     },
     {
       id: 3,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Fundamentals of Screenwriting",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, you will learn how to write a cinematic treatment for your story, build the scenario with all its elements, delve deeply into how to create exciting and deep characters, and understand the subject and message while writing the story.",
+      price: "750",
+      para: "SAR ",
+      image :  Ellipse3,
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: Checkout,
     },
     {
       id: 4,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Fundamentals of Acting",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "This course will focus on explaining the director's role and how to execute their vision in the film. It will also cover how to prepare for the film, direct actors, collaborate with the crew, and address all the directing principles.",
+      price: "750",
+      para: "SAR ",
+      image :  Ellipse4,
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse3,
     },
     {
       id: 5,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Fundamentals of Sound Recording",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
+      price: "750",
+      para: "SAR ",
+      image :  Ellipse5,
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse4,
     },
     {
       id: 6,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Fundamentals of Cinematography",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
+      price: "750",
+      para: "SAR ",
+      image :  Ellipse6,
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse5,
     },
     {
       id: 7,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Introduction to Vegas Pro",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
+      price: "750",
+      para: "SAR ",
+      
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse6,
     },
     {
       id: 8,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Introduction to DaVinci Resolve",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
+      price: "750",
+      para: "SAR ",
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse7,
     },
     {
       id: 9,
       instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
+      title: "Introduction to Premiere Pro",
       description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study...",
-      price: "SAR 750",
+        "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
+      price: "750",
+      para: "SAR ",
       duration: "5 hours of viewing",
+      icon: Groups,
       imageUrl: variousCourse8,
     },
 
-    // Add other courses here
+   
   ];
+
+
+
+   export const cardDetails = {
+    title: 'Fundamentals of acting',
+    price: '750.00 SAR',
+    imageSrc: Checkout,
+    
+  };
 export const ebooks = [
   {
     id: 1,

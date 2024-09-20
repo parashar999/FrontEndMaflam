@@ -1,4 +1,5 @@
 
+
 import Filmmaker from "../../Component/Filmmaker/Filmmaker";
 import Footer from "../../Component/Footer/Footer";
 import JoinUs from "../../Component/JoinUs/JoinUs";
@@ -20,6 +21,7 @@ export default function AboutUs() {
 
         <Filmmaker></Filmmaker>
         <OurVisionData></OurVisionData>
+       
         {/* <VariousCourse></VariousCourse> */}
         <MaflamInstructors></MaflamInstructors>
         <MaflamCard></MaflamCard>

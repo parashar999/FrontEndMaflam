@@ -3,7 +3,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Home from "./Pages/Home/Home";
 import BlogDetails from "./Pages/BlogDetails/BlogDetails";
 import ContactUs from "./Pages/ContactUs/ContactUS.jsx";
-import Checkout from "./Component/Checkout/Checkout.jsx";
+import Checkout from "./Component/PaymentForm/PaymentForm.jsx";
 import Ebooks from "./Pages/Ebooks/Ebooks.jsx";
 import Blogs from "./Pages/Blogs/Blogs.jsx";
 
