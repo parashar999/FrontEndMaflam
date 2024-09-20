@@ -166,7 +166,7 @@ import course6 from "./course6.png";
 import course7 from "./course7.png";
 import course8 from "./course8.png";
 import course9 from "./course9.png";
-import Filmmaker from "../Component/Filmmaker/Filmmaker"
+
 
 export const Assests = {
     course1,
