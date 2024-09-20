@@ -23,6 +23,20 @@ import Email from "./Email.png";
 import LinkenIn from "./Linkedin.png";
 import GoogleBackground from "./googleBackground.png";
 import contactFormBackground from "./contactFormBackground.png";
+import Rectangle83 from "./Rectangle83.png";
+import Rectangle84 from "./Rectangle84.png";
+import Rectangle85 from "./Rectangle85.png";
+import Rectangle87 from "./Rectangle87.png";
+import mafamvisual from "./mafamvisual.png";
+import Frame63 from "./Frame63.png";
+import Rectangl13 from "./Rectangl13.png";
+import Rectangl14 from "./Rectangl14.png";
+import Rectangl15 from "./Rectangl15.png";
+
+import pricing from "./pricing1.png";
+import Rectangle13 from "./Rectangle13.png";
+import filmaker from "./filmaker.png";
+
 export const assests = {
   Rectangle1,
   Rectangle2,
@@ -74,6 +88,72 @@ export const successPartnerss = [
   { name: "Majid", logo: majid },
   { name: "NEOM", logo: neom },
   { name: "Netflix", logo: netflix },
+];
+
+export const MaflamCards = [
+  {
+    title: "Osama Rubihan",
+    image: Rectangle83,
+  },
+  {
+    title: "Zakaria Bashir",
+    image: Rectangle84,
+  },
+  {
+    title: "Shahad Almudawi",
+    image: Rectangle85,
+  },
+];
+export const featuresData = [
+  {
+    title: "Get certified",
+    description: "Earn a certificate on completing the courses.",
+  },
+  {
+    title: "Lifetime Access to Material",
+    description: "Access all the learning material anytime.",
+  },
+  { title: "Ask your instructors", description: "Get support from experts." },
+  {
+    title: "Learn Anytime, Anywhere",
+    description: "Access from any device at your convenience.",
+  },
+];
+
+export const offersData = [
+  {
+    title: "Training Programs",
+    image: Frame63,
+  },
+  {
+    title: "Networking Opportunities",
+    image: Rectangle13,
+  },
+  {
+    title: "Mentorship and Training",
+    image: Rectangl13,
+  },
+  {
+    title: "Courses and Workshops",
+    image: Rectangl14,
+  },
+  {
+    title: "Artistic Consultations",
+    image: Rectangl15,
+  },
+];
+
+export const contentData = [
+  {
+    title: "Our Vision",
+    description:
+      "Our vision is to become the leading solution that meets the needs of ambitious Arab students striving for excellence in the art of filmmaking.",
+  },
+  {
+    title: "Our Mission",
+    description:
+      "Our mission is to nurture young talent, foster creativity, and provide filmmakers with the tools and expertise they need to succeed in the world of cinema.",
+  },
 ];
 import course1 from "./course1.png";
 import course2 from "./course2.png";
