@@ -1,0 +1,89 @@
+/* MissionVision.module.css */
+.container {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #10171D; 
+  }
+  
+  .introSection h1 {
+    color: #EBF5F4;
+
+    /* Headlines/Headline 3 */
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    align-items: start ;
+    font-weight: 700;
+    line-height: 160%; 
+  }
+  
+  .introSection p {
+    color: #FFF;
+    align-items: start;
+
+    font-family: "Noto Kufi Arabic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  
+  .contentSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #020B11;
+    border-radius: 10px;
+    padding: 40px;
+    width: 500px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card h2 {
+  
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+font-family: "Noto Kufi Arabic";
+align-items: start;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
+  }
+  
+  .card p {
+    
+    color: #FFF;
+
+    text-align: start;
+font-family: "Noto Kufi Arabic";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .introSection h1 {
+      font-size: 1.5rem;
+    }
+  
+    .introSection p {
+      font-size: 1rem;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+  

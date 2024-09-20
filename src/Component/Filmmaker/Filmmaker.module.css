@@ -1,0 +1,98 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 800px;
+    background-image: url("../../assets/filmaker.png");         
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    
+  }
+  .containers{
+    
+  }
+  
+  .container h1 {
+
+    color: #EBF5F4;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+    /* Headlines/Headline 1 */
+    margin-top: 90px;
+    font-family: "Noto Kufi Arabic";
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;  
+  }
+  .container p{
+
+    color: #EBF5F4;
+
+    text-align: center;
+    /* Subheadline/Subheadline 1 */
+    font-family: "Noto Kufi Arabic";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .featureItem {
+    padding: 1rem;
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    border-radius: 8px;
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    transition: transform 0.3s ease;
+  }
+  
+  .featureItem:hover {
+    transform: scale(1.05);
+    
+  }
+  .featureTitle  .hrrr{
+    background-color: aqua  ;
+    border: none;
+    height: 1px;
+    width: 130px;
+  }
+  
+  .featureTitle {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .featureDesc {
+    font-size: 1rem;
+    color: lightgray;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .features {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .features {
+      grid-template-columns: 1fr;
+    }
+  }
+  
