@@ -53,7 +53,29 @@ import ebook3 from "./ebook3.png";
 import ebook4 from "./ebook4.png";
 import ebook5 from "./ebook5.png";
 
+import Blog1 from "./Blog1.png";
+import Blog2 from "./Blog2.png";
+import Blog3 from "./Blog3.png";
+import mainBlog from "./mainBlog.png";
+import Insights1 from "./Insights1.png";
+import Insights2 from "./Insights2.png";
+import Insights3 from "./insighs3.png";
+import Popular1 from "./Popular1.png";
+import Popular2 from "./Popular2.png";
+import Popular3 from "./Popular3.png";
+import Popular4 from "./Popular4.png";
 export const assests = {
+  Popular1,
+  Popular2,
+  Popular3,
+  Popular4,
+  Insights1,
+  Insights2,
+  Insights3,
+  Blog1,
+  Blog2,
+  Blog3,
+  mainBlog,
   recapture,
   LinkedIn,
   Email,
@@ -118,6 +140,30 @@ export const instructors = [
   { name: "Odai Abed", image: Rectangle42 },
   { name: "Khalid Yaslam", image: Rectangle43 },
 ];
+//importing bloghero component content
+export const blogPosts = [
+  {
+    id: 1,
+    category: "Category",
+    title: "What does a film producer do?",
+    linkText: "→ Continue reading ",
+    image: Blog1,
+  },
+  {
+    id: 2,
+    category: "Category",
+    title: "How do you showcase your unique writing style?",
+    linkText: "→ Continue reading ",
+    image: Blog2,
+  },
+  {
+    id: 3,
+    category: "Category",
+    title: "The Significance of Storytelling",
+    linkText: "→ Continue reading",
+    image: Blog3,
+  },
+];
 
 export const BlogHeaderData = [
   {
@@ -127,6 +173,54 @@ export const BlogHeaderData = [
     subTitle2: "احصل على تحديثات الشركة والتغطية",
     name: "Afnan Linjawi",
     date: "october 15,2023",
+  },
+];
+//import latest insights
+export const insights = [
+  {
+    id: 1,
+    title: "Our mission is to deliver top-quality educational content.",
+    imageUrl: Insights1, // Replace with your image paths
+    category: "GL18",
+  },
+  {
+    id: 2,
+    title: "Our mission is to deliver top-quality educational content.",
+    imageUrl: Insights2, // Replace with your image paths
+    category: "GL18",
+  },
+  {
+    id: 3,
+    title: "Our mission is to deliver top-quality educational content.",
+    imageUrl: Insights3, // Replace with your image paths
+    category: "GL18",
+  },
+];
+//import popular resources content
+export const resources = [
+  {
+    id: 1,
+    description: "We partner with over 300 leading universities and companies.",
+    imageUrl: Popular1, // Replace with actual image paths
+    category: "Category",
+  },
+  {
+    id: 2,
+    description: "We partner with over 300 leading universities and companies.",
+    imageUrl: Popular2, // Replace with actual image paths
+    category: "Category",
+  },
+  {
+    id: 3,
+    description: "We partner with over 300 leading universities and companies.",
+    imageUrl: Popular3, // Replace with actual image paths
+    category: "Category",
+  },
+  {
+    id: 4,
+    description: "We partner with over 300 leading universities and companies.",
+    imageUrl: Popular4, // Replace with actual image paths
+    category: "Category",
   },
 ];
 
