@@ -20,6 +20,9 @@ import ignity from "./ignity.png"
 import growCreative from "./growCreative.png"
 import studio from "./studio.png"
 import redsea from "./redsea.png"
+import rectangle5 from "./rectangle5.png"
+import rectangle21 from "./rectangle21.png"
+import rectangle22 from "./rectangle22.png"
 
 export const assests = {
 
@@ -43,7 +46,9 @@ export const assests = {
     growCreative,
     redsea,
     studio,
-
+    rectangle5,
+    rectangle21,
+    rectangle22
 
 }
 
@@ -56,6 +61,17 @@ export const assests = {
     { name: 'Odai Abed', image: Rectangle42, },
     { name: 'Khalid Yaslam', image: Rectangle43, },
   ];
+  
+  
+ export const BlogHeaderData = [
+  { title: "مع فريق العمل داخل الفيلم؟",
+    title2:"كيف يتعامل المخرج المحترف",
+    subTitle:"الصحفية والوصول إلى التنزيلات الإعلامية",
+    subTitle2:"احصل على تحديثات الشركة والتغطية",
+    name:"Afnan Linjawi",
+    date:"october 15,2023"}
+];
+
 
   // SuccessPartnersData.js
 export const successPartnerss = [
