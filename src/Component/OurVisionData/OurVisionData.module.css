@@ -3,17 +3,30 @@
     padding: 20px;
     text-align: center;
     color: #fff;
-    background-color: #101010; /* Adjust color to match background */
+    background-color: #10171D; 
   }
   
   .introSection h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    color: #EBF5F4;
+
+    /* Headlines/Headline 3 */
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    align-items: start ;
+    font-weight: 700;
+    line-height: 160%; 
   }
   
   .introSection p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    color: #FFF;
+    align-items: start;
+
+    font-family: "Noto Kufi Arabic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
   }
   
   .contentSection {
@@ -24,22 +37,34 @@
   }
   
   .card {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    background: #020B11;
     border-radius: 10px;
-    padding: 20px;
-    width: 300px;
+    padding: 40px;
+    width: 500px;
     transition: transform 0.3s ease-in-out;
   }
   
   .card h2 {
-    font-size: 1.5rem;
-    color: #1ABC9C; /* Text color for titles */
-    margin-bottom: 10px;
+  
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+font-family: "Noto Kufi Arabic";
+align-items: start;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
   }
   
   .card p {
-    font-size: 1rem;
-    color: #ddd; /* Text color for descriptions */
+    
+    color: #FFF;
+
+    text-align: start;
+font-family: "Noto Kufi Arabic";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%;
   }
   
   .card:hover {

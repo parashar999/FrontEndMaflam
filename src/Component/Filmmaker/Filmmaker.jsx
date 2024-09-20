@@ -13,7 +13,7 @@ const Filmmaker = () => {
       <div className={styles.features}>
         {featuresData.map((feature, index) => (
           <div key={index} className={styles.featureItem}>
-            <h3 className={styles.featureTitle}>{feature.title}</h3>
+            <h3 className={styles.featureTitle}>{feature.title} <hr  className={styles.hrrr}/></h3>
            
           </div>
         ))}
