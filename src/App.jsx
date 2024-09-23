@@ -7,6 +7,7 @@ import ContactUs from "./Pages/ContactUs/ContactUS.jsx";
 import Ebooks from "./Pages/Ebooks/Ebooks.jsx";
 import Blogs from "./Pages/Blogs/Blogs.jsx";
 import Pricing from "./Pages/Pricing/pricing.jsx";
+import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
 const App = () => {
   return (
