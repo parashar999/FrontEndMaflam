@@ -17,22 +17,24 @@ const App = () => {
   return (
     <div>
      <Routes>
-        <Route path="/" element ={ <Home></Home>}/>
-        <Route path="/aboutus" element ={ <AboutUs></AboutUs>}/>
-        <Route path="/coursedetails" element ={ <CourseDetail />}/>
+ 
+        <Route path="/" element={<Home></Home>} />
+        <Route path="/aboutus" element={<AboutUs></AboutUs>} />
+        <Route path="/prc" element={<Pricing></Pricing>}></Route>
         <Route path="/blogDetails" element={<BlogDetails></BlogDetails>} />
+        <Route path="/coursedetails" element={<CourseDetail />} />
         <Route path="/contact" element={<ContactUs></ContactUs>} />
-        <Route path="/ebooks" element={<Ebooks></Ebooks>} />
-        <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
         <Route path="/adobe" element={<AdobePrimereProCourse />} />
         <Route path="/vegas" element={<VegasProCourse />} />
         <Route path="/rep" element={<RepresentationCourseDetail />} />
-        <Route path="/checkout" element={<Checkouts></Checkouts>}></Route>
-        <Route path="/pricing" element={<PricingDetails></PricingDetails>}></Route>
-        <Route path="/prc" element={<Pricing></Pricing>}></Route>
+        <Route path="/ebooks" element={<Ebooks></Ebooks>} />
+        <Route path="/blogs" element={<Blogs></Blogs>} />
+        <Route path="/checkout" element={<Checkouts></Checkouts>} />
+        <Route path="/pricing" element={<PricingDetails></PricingDetails>} />
+      </Routes> 
         
-     </Routes>
+ 
     
     </div>
   );
