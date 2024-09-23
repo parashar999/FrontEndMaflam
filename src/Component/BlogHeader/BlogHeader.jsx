@@ -5,6 +5,7 @@ import { assests,BlogHeaderData } from "../../assets/assests";
 const BlogHeader = () => {
     return (
         <>
+       
         <div className={styles.banner}>
             {BlogHeaderData.map((blog,index)=>(
            <>     
@@ -18,10 +19,11 @@ const BlogHeader = () => {
              <span className={styles.date}>{blog.date}</span>
              </div>
              </div>
+             
+          <div className={styles.topContainer}></div>
              </>
             ))}
           </div>
-        
         
           <div className={styles.articleContainer}>
           <div className={styles.textContainer}>

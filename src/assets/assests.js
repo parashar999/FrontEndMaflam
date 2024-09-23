@@ -529,3 +529,67 @@ export const ebooks = [
   },
   // Add more e-book data as needed
 ];
+
+
+export  const TermsData = [
+  {
+    "title": "Terms and Conditions",
+    "description": "Maflam is an Online Platform for Learning Filmmaking in Arabic",
+    "textColor": "#CFCFCF",
+    "backgroundColor": "#0F1923",
+    "sections": [
+      {
+        "title": "1. Definitions",
+        "items": [
+          "Maflam refers to an online platform for filmmaking education managed by Eggdancer Production, registered in Saudi Arabia.",
+          "User refers to anyone who accesses or uses Maflam's platform.",
+          "Content includes, but is not limited to, videos, text, images, quizzes, and any other materials available on Maflam's platform."
+        ]
+      },
+      {
+        "title": "2. Access and Use",
+        "items": [
+          "Maflam's platform is accessible and can be used by individuals who are at least 18 years old.",
+          "Users agree to provide accurate and up-to-date information during registration.",
+          "Users are responsible for keeping their account login details confidential."
+        ]
+      },
+      {
+        "title": "3. Content and Learning Materials",
+        "items": [
+          "The content provided on Maflam's platform is intended for educational purposes only.",
+          "Users may not reproduce, distribute, modify, or create derivative works from the content without explicit permission from the company managing Maflam's platform."
+        ]
+      }
+    ]
+  }
+];
+
+
+export const faqDataPage = [
+  {
+    "faq": [
+      {
+        "question": "What is Maflam's platform?",
+        "answer": "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic."
+      },
+      {
+        "question": "When does my course subscription end?",
+        "answer": "At Maflam, we are committed to providing lifetime access to our filmmaking content..."
+      },
+      {
+        "question": "How do you select instructors on Maflam’s platform?",
+        "answer": "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best."
+      },
+      {
+        "question": "Is there practical content on the platform?",
+        "answer": "Yes, the platform integrates both theoretical and practical content. It includes exercises..."
+      },
+      {
+        "question": "Will I receive a completion certificate after finishing a course?",
+        "answer": "Currently, all courses offer completion certificates..."
+      }
+    ]
+  }
+  
+]
