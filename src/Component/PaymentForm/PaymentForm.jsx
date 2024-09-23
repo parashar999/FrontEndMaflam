@@ -70,7 +70,7 @@ const PaymentForm = () => {
 
       </div>
       <div>   <p className={styles.termconditions}> {cardDetails.termcondition} </p></div>
-      <div>   <p className={styles.termconditions1}> {cardDetails.termcondition1} <Link to=""> Terms and Conditions  </Link>  {cardDetails.termcondition2} <Link To="">  Privacy Policy .</Link> </p></div>
+      <div>   <p className={styles.termconditions1}> {cardDetails.termcondition1} <Link to="/terms&condition"> Terms and Conditions  </Link>  {cardDetails.termcondition2} <Link To="">  Privacy Policy .</Link> </p></div>
       </div>
      
     </div>

@@ -4,6 +4,7 @@ import Navbar from '../../Component/Navbar/Navbar'
 import Footer from '../../Component/Footer/Footer'
 import CourseTopic from '../../Component/CourseTopic/CourseTopic'
 import KeyTopic from '../../Component/KeyTopic/KeyTopic'
+import KeyTopicCenter from '../../Component/KeyTopicCenter/KeyTopicCenter'
 
 function CourseDetail() {
   return (
@@ -11,7 +12,8 @@ function CourseDetail() {
         <Navbar />
         <CourseDetailsHeader />
         <CourseTopic />
-        <KeyTopic />
+        <KeyTopicCenter />
+        {/* <KeyTopic /> */}
         <Footer />
     </div>
   )

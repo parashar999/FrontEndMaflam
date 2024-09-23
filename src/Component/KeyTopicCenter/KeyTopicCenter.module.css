@@ -1,4 +1,4 @@
-   .maincontainer {
+.maincontainer {
     width: 100%;
     background-image: url("../../assets/keytopicbgg.jpg");
     background-size: cover;
@@ -13,9 +13,9 @@
     padding-right: 50px;
     display: inline-block;
     width: 500px;
-    /* margin-left: 35%; */
+    margin-left: 35%;
     border-radius: 10px;
-    margin-left: 10%;
+    /* margin-left: 10%; */
   }
   
   .header {
