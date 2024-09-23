@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Faqs.module.css'; 
-import { faqData } from '../../assets/assests';;
+import { faqData } from '../../assets/assests';
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 
