@@ -67,8 +67,14 @@ import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
 import Popular4 from "./Popular4.png";
 import caraImg from "./Carouselimg.png";
+import PricingHeroBackground from "./PricingHeroBackground.png";
+import PricingCard1Background from "./pricingCard1background.png";
+import youtubeImage from "./youtubeImage.png";
 
 export const assests = {
+  youtubeImage,
+  PricingHeroBackground,
+  PricingCard1Background,
   caraImg,
   Popular1,
   Popular2,
