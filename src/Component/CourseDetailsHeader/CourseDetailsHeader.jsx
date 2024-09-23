@@ -6,6 +6,9 @@ import { AiTwotoneEye } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaHeart,FaStar,FaStarHalfAlt } from "react-icons/fa";
 import { CiClock2 } from "react-icons/ci";
+import WhatWeLearn from '../WhatWeLearn/WhatWeLearn';
+import KeyTopic from '../KeyTopic/KeyTopic';
+import AboutInstructor from '../AboutInstructor/AboutInstructor';
 
 
 
@@ -63,6 +66,11 @@ function CourseDetailsHeader() {
 
       </div>
         </div>
+      </div>
+     <div className={styles.bgimage}>
+       {/* <WhatWeLearn />
+      <KeyTopic />
+      <AboutInstructor /> */}
       </div>
     </>
   );
