@@ -10,7 +10,6 @@
   text-align: center; 
   padding: 20px;
   margin: auto;
-  /* margin-bottom: 20px; */
   background-color: black;
 }
 
@@ -36,11 +35,7 @@
   border: none; 
   width: 100%; 
   max-width: 1000px; 
-  /* text-align: start; */
-
-
-
-  
+ 
 
 }
 
@@ -62,7 +57,7 @@ font-family: Inter;
 font-size: 24px;
 font-style: normal;
 font-weight: 300;
-line-height: 160%; /* 38.4px */
+line-height: 160%; 
 padding-left: 220px;
 }
 
@@ -84,6 +79,30 @@ padding-left: 220px;
   display: block; 
    position: relative;
 }
+
+.arrowButton {
+  background-color: transparent;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  margin-left: 60%;
+  background-color: gray;
+  border-radius: 20px;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.arrowButton:hover {
+  transform: translateY(5px);
+}
+
+.arrowButton:focus {
+  outline: none; 
+}
+
 
 
 /* Responsive code */
@@ -139,6 +158,8 @@ padding-left: 220px;
   }
 }
 
+
+
 @media (max-width: 400px) {
   .question {
     font-size: 16px;
@@ -146,6 +167,6 @@ padding-left: 220px;
   }
   .answer {
     width: 100%;
-    padding: 15px 15px; /* More compact for small screens */
-  }
+    padding: 15px 15px; 
+    }
 }

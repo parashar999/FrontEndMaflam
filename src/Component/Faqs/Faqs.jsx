@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import styles from './Faqs.module.css'; // Import the CSS module
-// import { faqData } from '../../assets/assets'; // Import FAQ data
-import { faqData } from '../../assets/Assests';
+import styles from './Faqs.module.css'; 
+import { faqData } from '../../assets/assests';;
+import { AiOutlineArrowDown } from "react-icons/ai";
+
 
 
 const Faqs = () => {
@@ -27,6 +28,11 @@ const Faqs = () => {
             )}
           </div>
         ))}
+
+              <button className={styles.arrowButton}>
+                  <AiOutlineArrowDown size={20}  />
+             </button>
+
       </div>
     </div>
   );
