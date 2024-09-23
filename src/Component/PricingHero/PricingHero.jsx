@@ -4,17 +4,6 @@ import styles from "./PricingHero.module.css";
 import PricingCard from "../PricingCard/PricingCard";
 
 const PricingHero = () => {
-  let students = [
-    {
-      name: "Harsh Sharma",
-      role: "frontend developer",
-    },
-    {
-      name: "Lokender Mathur",
-      role: "Frontend Team lead",
-    },
-  ];
-  console.table(students);
   return (
     <div className={styles.heroContainer}>
       <div className={styles.cardContainer}>
