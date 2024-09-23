@@ -133,6 +133,7 @@ export const instructors = [
   { name: "Odai Abed", image: Rectangle42 },
   { name: "Khalid Yaslam", image: Rectangle43 },
 ];
+console.table(instructors);
 //importing bloghero component content
 export const blogPosts = [
   {
