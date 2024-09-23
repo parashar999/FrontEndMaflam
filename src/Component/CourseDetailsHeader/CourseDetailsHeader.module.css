@@ -5,6 +5,9 @@
     background-position: center; 
     background-color: black;
 }
+/* .bgimage{
+    background-image: url("../../assets/aboutinstbg.png");
+} */
 
 .courseOption {
     display: flex;

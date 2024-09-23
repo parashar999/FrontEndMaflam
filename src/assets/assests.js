@@ -572,3 +572,19 @@ export const ebooks = [
   },
   // Add more e-book data as needed
 ];
+
+export const learnData = [
+  "In this course, you will learn how to become a director and manage a film set, as well as the key points to consider when choosing a script. You’ll also understand what to focus on during the preparation phase, how to select and work with actors, and how to interact with them effectively.",
+  " You will dive deep into camera techniques, understanding the meaning behind camera movements, how to establish a scene, manage production, and make the most of each shooting day until the film reaches the editing room. Together, we will explore essential directing rules you must follow to professionally direct your first film.",
+
+];
+
+export const aboutInstructorData = {
+ 
+  name: 'Afnan Linjawi',
+  details: ["A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017.",
+  "  Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments.",
+  " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses."
+  ]
+  
+};
