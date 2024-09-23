@@ -647,12 +647,21 @@ export const VisionData = [
 
 
 
-   export const cardDetails = {
+   export const cardDetails =  {
     title: 'Fundamentals of acting',
-    price: '750.00 SAR',
+    title2 : "Payment by credit or debit card ",
+    cardImg: Visa,
+    cardImg1: MasterCard,
+    cardImg2: Mada,
+    priceHead : "750.00  SAR",
+    price: 'SAR 750.00 إدفع ',
     imageSrc: Checkout,
-    
-  };
+    para : "Checkout تواصل معنا",
+
+    termcondition : "Your subscription will automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
+    termcondition1:"By clicking the 'Pay' button above, you agree to the  ",
+    termcondition2:" and acknowledge that you have read our ."
+   }
 export const ebooks = [
   {
     id: 1,
