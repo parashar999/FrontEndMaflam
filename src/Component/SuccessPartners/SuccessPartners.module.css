@@ -3,8 +3,8 @@
  background-image: url("../../assets/Rectangle1.png");
     color: #fff;      
     text-align: center;
- height: 100vh;
- min-height: 1200px;
+ height: 70vh;
+ min-height: 1100px;
     padding: 0px 20px;
     /* background-image: linear-gradient( background-image : url ("../../assets/Rectangle1.png"), rgb(41, 37, 37)); */
   }

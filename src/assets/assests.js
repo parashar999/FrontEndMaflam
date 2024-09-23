@@ -666,10 +666,10 @@ export const VisionData = [
     imageSrc: Checkout,
     para : "Checkout تواصل معنا",
 
-    termcondition : "Your subscription will automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
+    termcondition : "Your subscription wil  l automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
     termcondition1:"By clicking the 'Pay' button above, you agree to the  ",
     termcondition2:" and acknowledge that you have read our ."
-   }
+   } 
 export const ebooks = [
   {
     id: 1,
@@ -691,43 +691,42 @@ export const ebooks = [
     buttonText: "Download",
     imgSrc: ebook3,
     comingSoon: false,
-  },
+  }, 
   {
     id: 4,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook4,
     comingSoon: true,
-  },
+  }, 
   {
     id: 5,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
-  },
+  }, 
   {
-    id: 5,
+    id: 6,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook5,
+    comingSoon: true,
+  }, 
+  {
+    id: 7,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
   },
   {
-    id: 5,
+    id: 8,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
   },
-  {
-    id: 5,
-    title: "What makes a documentary film unique?",
-    buttonText: "Download",
-    imgSrc: ebook5,
-    comingSoon: true,
-  },
-  // Add more e-book data as needed
 ];
 
 
