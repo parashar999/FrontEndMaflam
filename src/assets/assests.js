@@ -88,6 +88,8 @@ import  Ellipse5 from "./Ellipse5.png";
 import  Ellipse6 from "./Ellipse6.png";
 import Groups from "./Group.png";
 import caraImg from "./Carouselimg.png";
+import maflamScreen from  "./Maflam-Screen.png";
+import Subscribee from "./Subscribee.png";
 
 export const assests = {
   caraImg,
@@ -164,15 +166,15 @@ export const assests = {
   Mada,
   Checkoutbg,
   Checkout,
-
-
   ebook1,
   ebook2,
   ebook3,
   ebook4,
   ebook5,
   videocrc,
-  videocrc1
+  videocrc1,
+  maflamScreen,
+  Subscribee,
 };
 
 export const instructors = [
