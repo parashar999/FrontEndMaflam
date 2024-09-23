@@ -90,8 +90,14 @@ import Groups from "./Group.png";
 import caraImg from "./Carouselimg.png";
 import maflamScreen from  "./Maflam-Screen.png";
 import Subscribee from "./Subscribee.png";
+import PricingHeroBackground from "./PricingHeroBackground.png";
+import PricingCard1Background from "./pricingCard1background.png";
+import youtubeImage from "./youtubeImage.png";
 
 export const assests = {
+  youtubeImage,
+  PricingHeroBackground,
+  PricingCard1Background,
   caraImg,
   Popular1,
   Popular2,

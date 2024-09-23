@@ -10,6 +10,7 @@ import Blogs from "./Pages/Blogs/Blogs.jsx";
 import Pricing from "./Pages/Pricing/pricing.jsx";
 import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 
+import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/ebooks" element={<Ebooks></Ebooks>} />
         <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path="/checkout" element={<Checkouts></Checkouts>} />
+        <Route path="/pricing" element={<PricingDetails></PricingDetails>} />
       </Routes>
     </div>
   );
