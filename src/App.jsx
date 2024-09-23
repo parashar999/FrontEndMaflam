@@ -4,9 +4,12 @@ import Home from "./Pages/Home/Home";
 import CourseDetail from "./Pages/CourseDetail/CourseDetail";
 import BlogDetails from "./Pages/BlogDetails/BlogDetails";
 import ContactUs from "./Pages/ContactUs/ContactUS.jsx";
+
 import Ebooks from "./Pages/Ebooks/Ebooks.jsx";
 import Blogs from "./Pages/Blogs/Blogs.jsx";
 import Pricing from "./Pages/Pricing/pricing.jsx";
+import Checkouts from "./Pages/Checkout/Checkouts.jsx";
+
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
 const App = () => {
@@ -19,8 +22,10 @@ const App = () => {
         <Route path="/blogDetails" element={<BlogDetails></BlogDetails>} />
         <Route path="/coursedetails" element={<CourseDetail />} />
         <Route path="/contact" element={<ContactUs></ContactUs>} />
+       
         <Route path="/ebooks" element={<Ebooks></Ebooks>} />
         <Route path="/blogs" element={<Blogs></Blogs>} />
+        <Route path="/checkout" element={<Checkouts></Checkouts>} />
         <Route path="/pricing" element={<PricingDetails></PricingDetails>} />
       </Routes>
     </div>

@@ -1,108 +1,103 @@
 .maincontainer{
-  background-color: black;
+  background-color: #10171D;
   /* height: ; */
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    /* margin-bottom: 30px; */
-    background-image: url("../../assets/Frame259.png");
-    background-size: cover;
-    background-position: center;
-    border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin-bottom: 30px;
+  background-image: url("../../assets/Frame259.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+  padding: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.JoinUsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.JoinUsBox h2 {
+  color: var(--Accent-Accent-50, #F6FFFF);
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: "Noto Kufi Arabic";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.serachoption {
+  display: flex;
+  gap: 8px;
+  background-color: #10171D;
+  padding: 10px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 504px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputBox {
+  border: 1px solid #00e0ff;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.inputField {
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+  color: #10171D;
+  background-color: transparent;
+}
+
+.button {
+  background-color: #10171D;
+  color: #39FFFB;
+  border: none;
+  font-size: 16px;
+  border: 1px solid #39FFFB;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .serachoption {
+    flex-direction: column;
+    width: 100%;
     padding: 10px;
-    padding-bottom: 10px;
-    /* min-width: 300px; */
-    margin-left: 350px;
-    max-width: 800px;
-
   }
-  
-  .JoinUsBox h2 {
 
-    /* padding-left: 100px; */
-    color: var(--Accent-Accent-50, #F6FFFF);
-text-align: right;
-
-padding-bottom: 10px;
-
-font-family: "Noto Kufi Arabic";
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%;
-  
-  }
-  .serachoption{
-    display: flex;
-    gap: 5px;
-    padding-left: 200px;
-    background-color: #10171D;
-    padding: 10px;
-    border-radius: 30px;
-    display: flex;
-width: 504px;
-padding: 8px;
-align-items: flex-start;
-gap: 8px;
-  }
-  
-  .heading {
-    color: white;
-    margin-right: 20px;
-    font-size: 1.5rem;
-  }
-  
-  .inputBox {
-    /* display: flex;
-    align-items: center; */
-    border: 1px solid #00e0ff;
-    border-radius: 30px;
-    overflow: hidden;
-
-  }
-  
   .inputField {
-    border: none;
-    padding: 15px 15px;
-    font-size: 1rem;
-    outline: none;
-    width: 400px;
-
-    color: #10171D;
-    background-color: transparent;
+    width: 100%;
+    margin-bottom: 10px;
   }
-  
+
   .button {
-    background-color: #10171D;
-    color:#39FFFB;
-    border: none;
-    font-size: 16px;
-    border: 1px solid #39FFFB ;
-    padding: 15px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    outline: none;
+    width: 100%;
   }
-  
-
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .JoinUsBox {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .inputField {
-      width: 100%;
-    }
-  }
-  
+}
