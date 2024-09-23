@@ -1,6 +1,6 @@
-   .maincontainer {
+.maincontainer {
     width: 100%;
-    background-image: url("../../assets/keytopicbgg.jpg");
+    background-image: url("../../assets/whatwelearnbg.png");
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -60,17 +60,22 @@
   
   .question {
     margin-left: 10px;
-    color: #39FFFb;
+    /* color: #39FFFb; */
+    color: white;
   }
   
+  /* .answer {
+    color: white;
+    text-align: justify;
+    font-size: 11px;
+    margin-left: 20px;
+  } */
   .answer {
     color: white;
     text-align: justify;
-    font-size: 14px;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    font-size: 14px; /* Slightly larger font for readability */
+    margin-bottom: 20px; /* Adds space between paragraphs */
   }
-  
 
 
 /* Responsive CSS */

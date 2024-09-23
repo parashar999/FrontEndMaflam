@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from './KeyTopic.module.css';
+import styles from './KeyTopicCenter.module.css';
 import { questionsData } from '../../assets/assests';;
 
-const KeyTopic = () => {
+const KeyTopicCenter = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleContent = () => {
@@ -63,4 +63,4 @@ const QuestionItem = ({ question, answers }) => {
   );
 };
 
-export default KeyTopic;
+export default KeyTopicCenter;

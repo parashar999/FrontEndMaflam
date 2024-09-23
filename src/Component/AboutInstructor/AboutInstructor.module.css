@@ -1,9 +1,9 @@
-   .maincontainer {
+.maincontainer {
     width: 100%;
     background-image: url("../../assets/keytopicbgg.jpg");
     background-size: cover;
     background-position: center;
-    background-color: black;
+    /* background-color: #061A28; */
   }
   
   .collapsible {
@@ -14,8 +14,14 @@
     display: inline-block;
     width: 500px;
     /* margin-left: 35%; */
-    border-radius: 10px;
     margin-left: 10%;
+    border-radius: 10px;
+    background-image: url("../../assets/aboutinstbg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* background-size: 90%; */
   }
   
   .header {
@@ -46,6 +52,7 @@
     text-align: justify;
     font-size: 11px;
     color: white;
+  
   }
   
   .questionItem {
@@ -60,19 +67,39 @@
   
   .question {
     margin-left: 10px;
-    color: #39FFFb;
+    /* color: #39FFFb; */
+    color: white;
   }
   
   .answer {
     color: white;
     text-align: justify;
-    font-size: 14px;
+    font-size: 11px;
     margin-left: 20px;
-    margin-bottom: 10px;
   }
   
+  .instructorName {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: left; /* Left-align the name */
+  }
 
+  .instructorDetails {
+    color: white;
+    text-align: justify;
+    font-size: 13px; /* Adjusted font size for readability */
+    margin-top: 15px;
+    line-height: 1.8; /* Added line-height for better paragraph spacing */
+    padding-bottom: 10px; /* Added padding for visual separation */
 
+}
+.paragraph {
+    text-align: justify;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 15px; /* Space between paragraphs */
+  }
 /* Responsive CSS */
 @media screen and (max-width: 1200px) {
     .collapsible {
