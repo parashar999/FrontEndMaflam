@@ -67,6 +67,22 @@ import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
 import Popular4 from "./Popular4.png";
 import caraImg from "./Carouselimg.png";
+import EbookCard1 from "./E-bookletsCard-1.png"
+import EbookCard2 from "./E-bookletsCard-2.png"
+import EbookCard3 from "./E-bookletsCard-3.png"
+import Reactangle48 from "./Rectangle 48.png";
+import Reactangle49 from "./Rectangle 49.png";
+import Reactangle50 from "./Rectangle 50.png";
+import Reactangle51 from "./Rectangle 51.png";
+import logo14 from "./logo14.png";
+import logo15 from "./logo15.png";
+import logo16 from "./logo16.png";
+import logo19 from "./logo19.png";
+import carouselcard1 from "./CarouselCard1.png";
+import carouselcard2 from "./CarouselCard2.png";
+import carouselcard3 from "./CarouselCard3.png";
+import quotes from "./quotes icon.png";
+
 
 export const assests = {
   caraImg,
@@ -135,6 +151,22 @@ export const assests = {
   ebook3,
   ebook4,
   ebook5,
+  EbookCard1,
+  EbookCard2,
+  EbookCard3,
+  Reactangle48,
+  Reactangle49,
+  Reactangle50,
+  Reactangle51,
+  logo14,
+  logo15,
+  logo16,
+  logo19,
+  carouselcard1,
+  carouselcard2,
+  carouselcard3,
+  quotes,
+
 };
 
 export const instructors = [

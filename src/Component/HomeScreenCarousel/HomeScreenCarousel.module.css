@@ -1,0 +1,106 @@
+.carouselcontainer {
+  background-color: #030b11;
+  background-image: url("../../assets/E-booklets-backround-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.carouselcontainer h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0px;
+}
+
+.sliderContainer {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.sliderContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card {
+  flex: 0 0 auto;
+  /* padding: 20px; */
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  height: 500px;
+  color: #fff;
+  width: 375px;
+}
+.card img{
+  height: 500px;
+  width: 100%;
+}
+
+.card h2 {
+  font-size: 17px;
+  text-align: right;
+}
+
+.contentimg p {
+  font-size: 11px;
+  width: 100px;
+}
+
+.contentimg {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px 20px 170px;
+}
+
+.arrowLeft, .arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.arrowLeft {
+  left: 10px;
+}
+
+.arrowRight {
+  right: 10px;
+}
+
+.arrowLeft:hover, .arrowRight:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%;
+    width: 275px;
+  }
+
+  .arrowLeft, .arrowRight {
+    font-size: 24px;
+  }
+}

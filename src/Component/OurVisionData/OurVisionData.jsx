@@ -1,5 +1,5 @@
 
-import { contentData } from '../../assets/Assests';
+import { contentData } from '../../assets/assests';
 import styles from './OurVisionData.module.css'; 
 
 

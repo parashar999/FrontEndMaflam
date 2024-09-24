@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MaflamCard.module.css';
-import { MaflamCards } from '../../assets/Assests';
+import { MaflamCards } from '../../assets/assests';
 
 
 

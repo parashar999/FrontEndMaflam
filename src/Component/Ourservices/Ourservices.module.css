@@ -1,0 +1,121 @@
+.OurservicesConatiner{
+  
+    height: 800px;
+    background-image: url('../../assets/Ourservicesbanner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 0px;
+    
+}
+.text{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+   
+    /* padding-top: 200px; */
+}
+.ourservicesvector{
+    background-image: url('../../assets/ourservicevector.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  
+    
+
+}
+
+.frane64{
+    background-image: url('../../assets/Frame 64.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    margin: 100px 140px 50px 140px;
+    border-radius: 10px;
+    display:flex;
+    
+}
+.frane64 .quotesIcon{
+height: 80px;
+padding-left: 110px;
+}
+.frane64 p{
+    padding: 60px 300px 50px 50px;
+    font-size: 30px;
+    line-height: 40px;
+}
+.text2{
+    display: flex;
+    justify-content: space-around;
+    line-height: 25px;
+    padding: 0px 100px;
+    /* border: 1px solid aliceblue; */
+    margin-top: 0px;
+}
+.text2 h1{
+    font-size: 25px;
+    color: #5Affff;
+    text-align: center;
+    padding-top: 90px;
+}
+.text2 p{
+    font-size: 15px;
+    text-align: center;
+  
+}
+
+@media (max-width: 768px) {
+    
+    .OurservicesConatiner{
+        /* margin-top: -100px; */
+        /* border: 1px solid rgb(192, 25, 25); */
+        height: 800px;
+        background-image: url('../../assets/Ourservicesbanner.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .ourservicesvector{
+        margin-top: 80px;
+    }
+
+    .text2{
+        padding: 0px 0px;  
+    }
+    .text2 h1{
+        font-size: 15px;
+        color: #5Affff;
+        text-align: center;
+        padding-top: 90px;
+    }
+    .text2 p{
+        font-size: 10px;
+        text-align: center;
+        padding-top: 0px;
+    }
+    .frane64{
+       
+        height: 200px;
+        margin: 50px 10px 50px 10px;
+        border-radius: 10px;
+        
+    }
+    .frane64 .quotesIcon{
+        height: 40px;
+        padding-left: 60px;
+         margin-top: 45px;
+        }
+    .frane64 p{
+ 
+        padding: 80px 50px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
+
