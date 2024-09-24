@@ -93,6 +93,15 @@ import Subscribee from "./Subscribee.png";
 import PricingHeroBackground from "./PricingHeroBackground.png";
 import PricingCard1Background from "./pricingCard1background.png";
 import youtubeImage from "./youtubeImage.png";
+import FrameDiv1 from "./FrameDiv1.png";
+import FrameDiv2 from "./FrameDiv2.png";
+import FrameDiv3 from "./FrameDiv3.png";
+import FrameDiv4 from "./FrameDiv4.png";
+import FrameDiv5 from "./FrameDiv5.png";
+import FrameDiv6 from "./FrameDiv6.png";
+import FrameDiv7 from "./FrameDiv7.png";
+import FrameDiv8 from "./FrameDiv8.png";
+
 
 export const assests = {
   youtubeImage,
@@ -181,6 +190,14 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
+  FrameDiv1,
+  FrameDiv2,
+  FrameDiv3,
+  FrameDiv4,
+  FrameDiv5,
+  FrameDiv6,
+  FrameDiv7,
+  FrameDiv8,
 };
 
 export const instructors = [
@@ -228,15 +245,14 @@ export const BlogHeaderData = [
 ];
 
 export const CoursesData = [
-  { name: "Editing" },
-  { name: "Acting" },
-  { name: "Sound Recording" },
-  { name: "Directing" },
-  { name: "Cinematography" },
-  { name: "Scriptwriting" },
-  { name: "Scriptwriting" },
+  { name: "Editing", backgroundImage: `url(${FrameDiv7})` },
+  { name: "Acting", backgroundImage: `url(${FrameDiv6})` },
+  { name: "Sound Recording", backgroundImage: `url(${FrameDiv5})` },
+  { name: "Directing", backgroundImage: `url(${FrameDiv4})` },
+  { name: "Cinematography", backgroundImage: `url(${FrameDiv3})` },
+  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv2})` },
+  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv1})` },
 ];
-
 export const questionsData = [
   {
     question: "Scriptwriting Introduction",
