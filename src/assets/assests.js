@@ -682,10 +682,10 @@ export const VisionData = [
     imageSrc: Checkout,
     para : "Checkout تواصل معنا",
 
-    termcondition : "Your subscription will automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
+    termcondition : "Your subscription wil  l automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
     termcondition1:"By clicking the 'Pay' button above, you agree to the  ",
     termcondition2:" and acknowledge that you have read our ."
-   }
+   } 
 export const ebooks = [
   {
     id: 1,
@@ -707,45 +707,107 @@ export const ebooks = [
     buttonText: "Download",
     imgSrc: ebook3,
     comingSoon: false,
-  },
+  }, 
   {
     id: 4,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook4,
     comingSoon: true,
-  },
+  }, 
   {
     id: 5,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
-  },
+  }, 
   {
-    id: 5,
+    id: 6,
+    title: "What makes a documentary film unique?",
+    buttonText: "Download",
+    imgSrc: ebook5,
+    comingSoon: true,
+  }, 
+  {
+    id: 7,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
   },
   {
-    id: 5,
+    id: 8,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
   },
-  {
-    id: 5,
-    title: "What makes a documentary film unique?",
-    buttonText: "Download",
-    imgSrc: ebook5,
-    comingSoon: true,
-  },
-  // Add more e-book data as needed
 ];
 
+
+export  const TermsData = [
+  {
+    "title": "Terms and Conditions",
+    "description": "Maflam is an Online Platform for Learning Filmmaking in Arabic",
+    "textColor": "#CFCFCF",
+    "backgroundColor": "#0F1923",
+    "sections": [
+      {
+        "title": "1. Definitions",
+        "items": [
+          "Maflam refers to an online platform for filmmaking education managed by Eggdancer Production, registered in Saudi Arabia.",
+          "User refers to anyone who accesses or uses Maflam's platform.",
+          "Content includes, but is not limited to, videos, text, images, quizzes, and any other materials available on Maflam's platform."
+        ]
+      },
+      {
+        "title": "2. Access and Use",
+        "items": [
+          "Maflam's platform is accessible and can be used by individuals who are at least 18 years old.",
+          "Users agree to provide accurate and up-to-date information during registration.",
+          "Users are responsible for keeping their account login details confidential."
+        ]
+      },
+      {
+        "title": "3. Content and Learning Materials",
+        "items": [
+          "The content provided on Maflam's platform is intended for educational purposes only.",
+          "Users may not reproduce, distribute, modify, or create derivative works from the content without explicit permission from the company managing Maflam's platform."
+        ]
+      }
+    ]
+  }
+];
+
+
+export const faqDataPage = [
+  {
+    "faq": [
+      {
+        "question": "What is Maflam's platform?",
+        "answer": "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic."
+      },
+      {
+        "question": "When does my course subscription end?",
+        "answer": "At Maflam, we are committed to providing lifetime access to our filmmaking content..."
+      },
+      {
+        "question": "How do you select instructors on Maflam’s platform?",
+        "answer": "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best."
+      },
+      {
+        "question": "Is there practical content on the platform?",
+        "answer": "Yes, the platform integrates both theoretical and practical content. It includes exercises..."
+      },
+      {
+        "question": "Will I receive a completion certificate after finishing a course?",
+        "answer": "Currently, all courses offer completion certificates..."
+      }
+    ]
+  }
+  
+]
 export const learnData = [
   "In this course, you will learn how to become a director and manage a film set, as well as the key points to consider when choosing a script. You’ll also understand what to focus on during the preparation phase, how to select and work with actors, and how to interact with them effectively.",
   " You will dive deep into camera techniques, understanding the meaning behind camera movements, how to establish a scene, manage production, and make the most of each shooting day until the film reaches the editing room. Together, we will explore essential directing rules you must follow to professionally direct your first film.",
