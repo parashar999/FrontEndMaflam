@@ -1,0 +1,41 @@
+.mainContainers{
+    background-color: black;
+    background-image: url('../../assets/faqback.png') ;
+    background-repeat: no-repeat; 
+    
+}
+
+.faqContainer {
+    padding: 35px 15px; /* Adjusts top/bottom and left/right padding */
+    width: 100%;
+    max-width: 1000px; /* Limits the max width so the content doesn’t stretch too wide */
+    margin: 0 auto; /* lefts the container horizontally */
+    padding-top: 200px;
+    z-index: -2;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #e0e0e0;
+  }
+  
+  .faqItem {
+    margin-bottom: 1.5rem;
+  }
+  
+  .question {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e0e0e0;
+  }
+  
+  .answer {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+  

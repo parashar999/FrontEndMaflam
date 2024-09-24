@@ -133,7 +133,7 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <p>All rights reserved © MAFALAM 2023</p>
           <ul className={styles.footerLinks}>
-            <li><a href="#">Terms and Condition</a></li>
+            <li><a href="/terms&condition">Terms and Condition</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Help Center</a></li>
           </ul>
