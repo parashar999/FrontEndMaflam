@@ -1,5 +1,5 @@
 
-import { featuresData } from '../../assets/Assests';
+import { featuresData } from '../../assets/assests';
 import styles from './Filmmaker.module.css';
 
 
@@ -16,8 +16,7 @@ const Filmmaker = () => {
         {featuresData.map((feature, index) => (
           <div key={index} className={styles.featureItem}>
             <h3 className={styles.featureTitle}>{feature.title} <hr  className={styles.hrrr}/></h3>
-           
-          </div>
+           </div>
         ))}
       </div>
     </div>

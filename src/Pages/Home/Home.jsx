@@ -8,6 +8,9 @@ import Fundamental from "../../Component/FundamentalPackage/Fundamental";
 import Faqs from "../../Component/Faqs/Faqs";
 import ViewCourses from "../../Component/ViewCourses/ViewCourses";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam.jsx";
+import Ourservices from "../../Component/Ourservices/Ourservices.jsx";
+import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
+import HomeCommunityCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
 import Styles from "./Home.module.css";
 const Home = () => {
   return (
@@ -17,9 +20,13 @@ const Home = () => {
       <LearnMaflam></LearnMaflam>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
+      <Ourservices></Ourservices>
       <ViewCourses></ViewCourses>
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
+      <HomeScreenCarousel />
+      <HomeCommunityCarousel></HomeCommunityCarousel>
+      {/* <CarouselCommunity /> */}
       <Faqs></Faqs>
       <Footer></Footer>
     </div>
