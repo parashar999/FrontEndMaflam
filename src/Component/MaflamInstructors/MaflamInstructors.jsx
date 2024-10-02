@@ -8,7 +8,7 @@ const MaflamInstructors = () => {
   return (
    <div className={styles.instructorsContainerss}>
      <div className={styles.instructorsContainer}>
-      <h2> Maflam's Instructors</h2>
+      <h2> Maflam Instructors</h2>
       <div className={styles.instructorsGrid}>
         {instructors.map((instructor, index) => (
           <div key={index} className={styles.instructorCard}>
