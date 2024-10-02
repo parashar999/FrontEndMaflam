@@ -10,7 +10,7 @@ import Faqs from "../../Component/Faqs/Faqs";
 import ViewCourses from "../../Component/ViewCourses/ViewCourses";
 import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
 import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel";
-import HomeCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
+// import HomeCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
 import CarouselCommunity from "../../Component/Community/CarouselCommunity";
 import Ourservices from "../../Component/Ourservices/Ourservices";
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
       <ViewCourses></ViewCourses>
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
-      <HomeScreenCarousel />
+      <HomeScreenCarousel/>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity />
       <Faqs></Faqs>

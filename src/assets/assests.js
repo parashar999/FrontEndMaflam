@@ -109,6 +109,8 @@ import Subscribee from "./Subscribee.png";
 import PricingHeroBackground from "./PricingHeroBackground.png";
 import PricingCard1Background from "./pricingCard1background.png";
 import youtubeImage from "./youtubeImage.png";
+import backgrounds from "./backgronds.png";
+import aboutHero from "./aboutHero.png";
 
 export const assests = {
   youtubeImage,
@@ -213,6 +215,8 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
+  backgrounds ,
+  aboutHero ,
 };
 
 export const instructors = [
@@ -417,18 +421,19 @@ export const offersData = [
 ];
 // SuccessPartnersData.js
 export const successPartnerss = [
-  { name: "UNESCO", logo: unisco },
-  { name: "GrowCreative", logo: growCreative },
-  { name: "SRMG", logo: srmg },
   { name: "Saudi Film Confex", logo: film },
-  { name: "Jeddah X", logo: jeddahs },
-  { name: "Art Jameel", logo: jameel },
-  { name: "Ignite", logo: ignity },
+  { name: "SRMG", logo: srmg },
+  { name: "GrowCreative", logo: growCreative },
+  { name: "UNESCO", logo: unisco },
   { name: "Red Sea", logo: redsea },
-  { name: "Telfaz11 Studios", logo: studio },
-  { name: "Majid", logo: majid },
-  { name: "NEOM", logo: neom },
+  { name: "Ignite", logo: ignity },
+  { name: "Art Jameel", logo: jameel },
+  { name: "Jeddah X", logo: jeddahs },
   { name: "Netflix", logo: netflix },
+  { name: "NEOM", logo: neom },
+  { name: "Majid", logo: majid },
+  { name: "Telfaz11 Studios", logo: studio },
+
 ];
 
 export const MaflamCards = [
