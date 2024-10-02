@@ -8,8 +8,17 @@
 }
 
 .carouselWrapper h2 {
-  color: #fff;
-  text-align: center;
+  /* color: #fff;
+  padding-top: 100px;
+  text-align: center; */
+  color: #FFF;
+
+text-align: center;
+font-family: "Noto Kufi Arabic";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
 }
 
 .carousel {
