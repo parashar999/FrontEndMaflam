@@ -13,32 +13,36 @@ import DevinciResolveCourseDetail from "./Pages/DevinciResolveCourseDetail/Devin
 import AdobePrimereProCourse from "./Pages/AdobePrimereProCourse/AdobePrimereProCourse.jsx";
 import VegasProCourse from "./Pages/VegasProCourse/VegasProCourse.jsx";
 import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/RepresentationCourseDetail.jsx";
-import Checkouts from "./Pages/Checkout/Checkouts.jsx"
+import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
 const App = () => {
   return (
     <div>
-     <Routes>
- 
+      <Routes>
         <Route path="/" element={<Home></Home>} />
         <Route path="/aboutus" element={<AboutUs></AboutUs>} />
         <Route path="/prc" element={<Pricing></Pricing>}></Route>
         <Route path="/blogDetails" element={<BlogDetails></BlogDetails>} />
         <Route path="/coursedetails" element={<CourseDetail />} />
         <Route path="/contact" element={<ContactUs></ContactUs>} />
-        <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
+        <Route
+          path="/devinciresolve"
+          element={<DevinciResolveCourseDetail />}
+        />
         <Route path="/adobe" element={<AdobePrimereProCourse />} />
         <Route path="/vegas" element={<VegasProCourse />} />
         <Route path="/rep" element={<RepresentationCourseDetail />} />
         <Route path="/ebooks" element={<Ebooks></Ebooks>} />
         <Route path="/blogs" element={<Blogs></Blogs>} />
-        <Route path="/terms&condition" element={<TermsAndConditionsPage></TermsAndConditionsPage>} />
+        <Route
+          path="/terms&condition"
+          element={<TermsAndConditionsPage></TermsAndConditionsPage>}
+        />
         <Route path="/faqs" element={<FaqPage></FaqPage>} />
         <Route path="/checkout" element={<Checkouts></Checkouts>} />
         <Route path="/pricing" element={<PricingDetails></PricingDetails>} />
-      </Routes> 
-    
+      </Routes>
     </div>
   );
 };

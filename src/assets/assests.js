@@ -80,15 +80,31 @@ import Popular1 from "./Popular1.png";
 import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
 import Popular4 from "./Popular4.png";
-import  Ellipse1 from "./Ellipse1.png";
-import  Ellipse2 from "./Ellipse2.png";
-import  Ellipse3 from "./Ellipse3.png";
-import  Ellipse4 from "./Ellipse4.png";
-import  Ellipse5 from "./Ellipse5.png";
-import  Ellipse6 from "./Ellipse6.png";
+import Ellipse1 from "./Ellipse1.png";
+import Ellipse2 from "./Ellipse2.png";
+import Ellipse3 from "./Ellipse3.png";
+import Ellipse4 from "./Ellipse4.png";
+import Ellipse5 from "./Ellipse5.png";
+import Ellipse6 from "./Ellipse6.png";
 import Groups from "./Group.png";
 import caraImg from "./Carouselimg.png";
-import maflamScreen from  "./Maflam-Screen.png";
+import EbookCard1 from "./E-bookletsCard-1.png";
+import EbookCard2 from "./E-bookletsCard-2.png";
+import EbookCard3 from "./E-bookletsCard-3.png";
+import Reactangle48 from "./Rectangle 48.png";
+import Reactangle49 from "./Rectangle 49.png";
+import Reactangle50 from "./Rectangle 50.png";
+import Reactangle51 from "./Rectangle 51.png";
+import logo14 from "./logo14.png";
+import logo15 from "./logo15.png";
+import logo16 from "./logo16.png";
+import logo19 from "./logo19.png";
+import carouselcard1 from "./CarouselCard1.png";
+import carouselcard2 from "./CarouselCard2.png";
+import carouselcard3 from "./CarouselCard3.png";
+import quotes from "./quotes icon.png";
+
+import maflamScreen from "./Maflam-Screen.png";
 import Subscribee from "./Subscribee.png";
 import PricingHeroBackground from "./PricingHeroBackground.png";
 import PricingCard1Background from "./pricingCard1background.png";
@@ -177,6 +193,22 @@ export const assests = {
   ebook3,
   ebook4,
   ebook5,
+  EbookCard1,
+  EbookCard2,
+  EbookCard3,
+  Reactangle48,
+  Reactangle49,
+  Reactangle50,
+  Reactangle51,
+  logo14,
+  logo15,
+  logo16,
+  logo19,
+  carouselcard1,
+  carouselcard2,
+  carouselcard3,
+  quotes,
+
   videocrc,
   videocrc1,
   maflamScreen,
@@ -516,160 +548,152 @@ export const faqData = [
   },
 ];
 
-
-  
 export const VisionData = [
-      {
-          title: 'Our Vision',
-          text: 'Our vision is to become the leading solution that meets the needs of ambitious Arab students striving for excellence in the art of filmmaking.'
-      },
-      {
-          title: 'Our Mission',
-          text: 'Our mission is to nurture young talent, foster creativity, and provide filmmakers with the tools and expertise they need to succeed in the world of cinema.'
-      }
-  ];
+  {
+    title: "Our Vision",
+    text: "Our vision is to become the leading solution that meets the needs of ambitious Arab students striving for excellence in the art of filmmaking.",
+  },
+  {
+    title: "Our Mission",
+    text: "Our mission is to nurture young talent, foster creativity, and provide filmmakers with the tools and expertise they need to succeed in the world of cinema.",
+  },
+];
 
+export const VariousCard = [
+  {
+    id: 1,
+    instructor: "Odai Abeed",
+    title: "Fundamentals of Film Directing",
+    description:
+      "This course will focus on explaining the role of the director and how he implements his vision in the film. It will also cover how to prepare for the film, direct the actors, and deal with the work team, in addition to all the directing rules.",
+    para: "SAR ",
+    price: "750",
+    image: Ellipse1,
 
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse1,
+  },
+  {
+    id: 2,
+    instructor: "Ayman Khoja",
+    title: "Fundamentals of Film Production",
+    description:
+      "In this course, you will learn all the production details, starting from conducting a feasibility study for the film and determining the budget, contracting the work team, managing the filming location, and even entering the film into the editing room.",
+    price: "750",
+    para: "SAR ",
+    image: Ellipse2,
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse2,
+  },
+  {
+    id: 3,
+    instructor: "Ayman Khoja",
+    title: "Fundamentals of Screenwriting",
+    description:
+      "In this course, you will learn how to write a cinematic treatment for your story, build the scenario with all its elements, delve deeply into how to create exciting and deep characters, and understand the subject and message while writing the story.",
+    price: "750",
+    para: "SAR ",
+    image: Ellipse3,
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: Checkout,
+  },
+  {
+    id: 4,
+    instructor: "Ayman Khoja",
+    title: "Fundamentals of Acting",
+    description:
+      "This course will focus on explaining the director's role and how to execute their vision in the film. It will also cover how to prepare for the film, direct actors, collaborate with the crew, and address all the directing principles.",
+    price: "750",
+    para: "SAR ",
+    image: Ellipse4,
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse3,
+  },
+  {
+    id: 5,
+    instructor: "Ayman Khoja",
+    title: "Fundamentals of Sound Recording",
+    description:
+      "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
+    price: "750",
+    para: "SAR ",
+    image: Ellipse5,
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse4,
+  },
+  {
+    id: 6,
+    instructor: "Ayman Khoja",
+    title: "Fundamentals of Cinematography",
+    description:
+      "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
+    price: "750",
+    para: "SAR ",
+    image: Ellipse6,
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse5,
+  },
+  {
+    id: 7,
+    instructor: "Ayman Khoja",
+    title: "Introduction to Vegas Pro",
+    description:
+      "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
+    price: "750",
+    para: "SAR ",
 
-  export const VariousCard = [
-    {
-      id: 1,
-      instructor: "Odai Abeed",
-      title: "Fundamentals of Film Directing",
-      description:
-        "This course will focus on explaining the role of the director and how he implements his vision in the film. It will also cover how to prepare for the film, direct the actors, and deal with the work team, in addition to all the directing rules.",
-        para: "SAR ",
-      price: "750",
-      image:  Ellipse1,
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse6,
+  },
+  {
+    id: 8,
+    instructor: "Ayman Khoja",
+    title: "Introduction to DaVinci Resolve",
+    description:
+      "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
+    price: "750",
+    para: "SAR ",
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse7,
+  },
+  {
+    id: 9,
+    instructor: "Ayman Khoja",
+    title: "Introduction to Premiere Pro",
+    description:
+      "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
+    price: "750",
+    para: "SAR ",
+    duration: "5 hours of viewing",
+    icon: Groups,
+    imageUrl: variousCourse8,
+  },
+];
 
+export const cardDetails = {
+  title: "Fundamentals of acting",
+  title2: "Payment by credit or debit card ",
+  cardImg: Visa,
+  cardImg1: MasterCard,
+  cardImg2: Mada,
+  priceHead: "750.00  SAR",
+  price: "SAR 750.00 إدفع ",
+  imageSrc: Checkout,
+  para: "Checkout تواصل معنا",
 
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse1,
-    },
-    {
-      id: 2,
-      instructor: "Ayman Khoja",
-      title: "Fundamentals of Film Production",
-      description:
-        "In this course, you will learn all the production details, starting from conducting a feasibility study for the film and determining the budget, contracting the work team, managing the filming location, and even entering the film into the editing room.",
-      price: "750",
-      para: "SAR ",
-      image :  Ellipse2,
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse2,
-    },
-    {
-      id: 3,
-      instructor: "Ayman Khoja",
-      title: "Fundamentals of Screenwriting",
-      description:
-        "In this course, you will learn how to write a cinematic treatment for your story, build the scenario with all its elements, delve deeply into how to create exciting and deep characters, and understand the subject and message while writing the story.",
-      price: "750",
-      para: "SAR ",
-      image :  Ellipse3,
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: Checkout,
-    },
-    {
-      id: 4,
-      instructor: "Ayman Khoja",
-      title: "Fundamentals of Acting",
-      description:
-        "This course will focus on explaining the director's role and how to execute their vision in the film. It will also cover how to prepare for the film, direct actors, collaborate with the crew, and address all the directing principles.",
-      price: "750",
-      para: "SAR ",
-      image :  Ellipse4,
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse3,
-    },
-    {
-      id: 5,
-      instructor: "Ayman Khoja",
-      title: "Fundamentals of Sound Recording",
-      description:
-        "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
-      price: "750",
-      para: "SAR ",
-      image :  Ellipse5,
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse4,
-    },
-    {
-      id: 6,
-      instructor: "Ayman Khoja",
-      title: "Fundamentals of Cinematography",
-      description:
-        "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
-      price: "750",
-      para: "SAR ",
-      image :  Ellipse6,
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse5,
-    },
-    {
-      id: 7,
-      instructor: "Ayman Khoja",
-      title: "Introduction to Vegas Pro",
-      description:
-        "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
-      price: "750",
-      para: "SAR ",
-      
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse6,
-    },
-    {
-      id: 8,
-      instructor: "Ayman Khoja",
-      title: "Introduction to DaVinci Resolve",
-      description:
-        "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
-      price: "750",
-      para: "SAR ",
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse7,
-    },
-    {
-      id: 9,
-      instructor: "Ayman Khoja",
-      title: "Introduction to Premiere Pro",
-      description:
-        "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
-      price: "750",
-      para: "SAR ",
-      duration: "5 hours of viewing",
-      icon: Groups,
-      imageUrl: variousCourse8,
-    },
-
-   
-  ];
-
-
-
-   export const cardDetails =  {
-    title: 'Fundamentals of acting',
-    title2 : "Payment by credit or debit card ",
-    cardImg: Visa,
-    cardImg1: MasterCard,
-    cardImg2: Mada,
-    priceHead : "750.00  SAR",
-    price: 'SAR 750.00 إدفع ',
-    imageSrc: Checkout,
-    para : "Checkout تواصل معنا",
-
-    termcondition : "Your subscription wil  l automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
-    termcondition1:"By clicking the 'Pay' button above, you agree to the  ",
-    termcondition2:" and acknowledge that you have read our ."
-   } 
+  termcondition:
+    "Your subscription wil  l automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
+  termcondition1: "By clicking the 'Pay' button above, you agree to the  ",
+  termcondition2: " and acknowledge that you have read our .",
+};
 export const ebooks = [
   {
     id: 1,
@@ -691,28 +715,28 @@ export const ebooks = [
     buttonText: "Download",
     imgSrc: ebook3,
     comingSoon: false,
-  }, 
+  },
   {
     id: 4,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook4,
     comingSoon: true,
-  }, 
+  },
   {
     id: 5,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
-  }, 
+  },
   {
     id: 6,
     title: "What makes a documentary film unique?",
     buttonText: "Download",
     imgSrc: ebook5,
     comingSoon: true,
-  }, 
+  },
   {
     id: 7,
     title: "What makes a documentary film unique?",
@@ -729,81 +753,82 @@ export const ebooks = [
   },
 ];
 
-
-export  const TermsData = [
+export const TermsData = [
   {
-    "title": "Terms and Conditions",
-    "description": "Maflam is an Online Platform for Learning Filmmaking in Arabic",
-    "textColor": "#CFCFCF",
-    "backgroundColor": "#0F1923",
-    "sections": [
+    title: "Terms and Conditions",
+    description:
+      "Maflam is an Online Platform for Learning Filmmaking in Arabic",
+    textColor: "#CFCFCF",
+    backgroundColor: "#0F1923",
+    sections: [
       {
-        "title": "1. Definitions",
-        "items": [
+        title: "1. Definitions",
+        items: [
           "Maflam refers to an online platform for filmmaking education managed by Eggdancer Production, registered in Saudi Arabia.",
           "User refers to anyone who accesses or uses Maflam's platform.",
-          "Content includes, but is not limited to, videos, text, images, quizzes, and any other materials available on Maflam's platform."
-        ]
+          "Content includes, but is not limited to, videos, text, images, quizzes, and any other materials available on Maflam's platform.",
+        ],
       },
       {
-        "title": "2. Access and Use",
-        "items": [
+        title: "2. Access and Use",
+        items: [
           "Maflam's platform is accessible and can be used by individuals who are at least 18 years old.",
           "Users agree to provide accurate and up-to-date information during registration.",
-          "Users are responsible for keeping their account login details confidential."
-        ]
+          "Users are responsible for keeping their account login details confidential.",
+        ],
       },
       {
-        "title": "3. Content and Learning Materials",
-        "items": [
+        title: "3. Content and Learning Materials",
+        items: [
           "The content provided on Maflam's platform is intended for educational purposes only.",
-          "Users may not reproduce, distribute, modify, or create derivative works from the content without explicit permission from the company managing Maflam's platform."
-        ]
-      }
-    ]
-  }
+          "Users may not reproduce, distribute, modify, or create derivative works from the content without explicit permission from the company managing Maflam's platform.",
+        ],
+      },
+    ],
+  },
 ];
-
 
 export const faqDataPage = [
   {
-    "faq": [
+    faq: [
       {
-        "question": "What is Maflam's platform?",
-        "answer": "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic."
+        question: "What is Maflam's platform?",
+        answer:
+          "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic.",
       },
       {
-        "question": "When does my course subscription end?",
-        "answer": "At Maflam, we are committed to providing lifetime access to our filmmaking content..."
+        question: "When does my course subscription end?",
+        answer:
+          "At Maflam, we are committed to providing lifetime access to our filmmaking content...",
       },
       {
-        "question": "How do you select instructors on Maflam’s platform?",
-        "answer": "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best."
+        question: "How do you select instructors on Maflam’s platform?",
+        answer:
+          "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best.",
       },
       {
-        "question": "Is there practical content on the platform?",
-        "answer": "Yes, the platform integrates both theoretical and practical content. It includes exercises..."
+        question: "Is there practical content on the platform?",
+        answer:
+          "Yes, the platform integrates both theoretical and practical content. It includes exercises...",
       },
       {
-        "question": "Will I receive a completion certificate after finishing a course?",
-        "answer": "Currently, all courses offer completion certificates..."
-      }
-    ]
-  }
-  
-]
+        question:
+          "Will I receive a completion certificate after finishing a course?",
+        answer: "Currently, all courses offer completion certificates...",
+      },
+    ],
+  },
+];
 export const learnData = [
   "In this course, you will learn how to become a director and manage a film set, as well as the key points to consider when choosing a script. You’ll also understand what to focus on during the preparation phase, how to select and work with actors, and how to interact with them effectively.",
   " You will dive deep into camera techniques, understanding the meaning behind camera movements, how to establish a scene, manage production, and make the most of each shooting day until the film reaches the editing room. Together, we will explore essential directing rules you must follow to professionally direct your first film.",
-
 ];
 
 export const aboutInstructorData = {
- 
-  name: 'Afnan Linjawi',
-  details: ["A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017.",
-  "  Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments.",
-  " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses."
-  ]
-  
+  name: "Afnan Linjawi",
+  details: [
+    "A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017.",
+    "  Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments.",
+    " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
+  ],
 };
