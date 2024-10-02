@@ -2,9 +2,8 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Changed to space-between */
-  padding: 10px 40px;
-  background: rgba(26, 34, 40, 0.60);
+  justify-content: space-around; /* Changed to space-between */
+  padding: 15px 100px;
   backdrop-filter: blur(30px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,21 +12,28 @@
   width: 100%;
   z-index: 1000;
 }
-
-/* Logo */
+.arrow{
+  font-size: 14px;
+  margin-bottom: 15px !important;
+  color: #fff;
+  font-weight: 900;
+  padding-bottom: 15px;
+}
 .logo {
   height: 40px;
 }
 
 /* Left Links */
 .leftLinks {
+  padding: 0 5px;
   display: flex;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 15px;
 }
 
 .leftLinks a {
   color: #FFF;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   text-decoration: none;
   transition: 0.3s ease;
@@ -40,18 +46,23 @@
 
 /* Search Container */
 .searchContainer {
+  height: 37px;
+  max-width: 250px;
+  font-size: 20px;
+  color: #f6fffe !important;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 5px;
   border-radius: 20px;
-  border-color: #0ccac4;
+  border-color: #0ccac4 ;
+  outline: #0ccac4;
 }
 
 .searchContainer input {
   border: none;
   background: transparent;
-  color: rgba(246, 255, 254, 0.40);
+  color: #f6fffe !important;
   font-size: 14px;
   outline: none;
   margin-left: 5px;
@@ -66,10 +77,11 @@
 
 /* Right Links */
 .rightLinks {
+  margin-left: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 15px;
 }
 
 .rightLinks a {
@@ -81,7 +93,7 @@
 .signupButton {
   border-radius: 64px;
   background: var(--Primary-Primary-300, #1A374B);
-  padding: 8px 24px;
+  padding: 5px 24px;
   color: #39FFFB;
   font-size: 16px;
   font-weight: 700;
