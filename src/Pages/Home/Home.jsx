@@ -11,6 +11,7 @@ import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam.jsx";
 import Ourservices from "../../Component/Ourservices/Ourservices.jsx";
 import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
 import HomeCommunityCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
+import CarouselCommunity from "../../Component/Community/CarouselCommunity.jsx"
 import Styles from "./Home.module.css";
 const Home = () => {
   return (
@@ -18,15 +19,15 @@ const Home = () => {
       <Navbar></Navbar>
       <HomeHero></HomeHero>
       <LearnMaflam></LearnMaflam>
+      <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
-      <ViewCourses></ViewCourses>
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
-      <HomeScreenCarousel />
+      {/* <HomeScreenCarousel /> */}
       <HomeCommunityCarousel></HomeCommunityCarousel>
-      {/* <CarouselCommunity /> */}
+      <CarouselCommunity></CarouselCommunity>
       <Faqs></Faqs>
       <Footer></Footer>
     </div>
