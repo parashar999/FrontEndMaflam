@@ -41,13 +41,12 @@
   .rating {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 15px;
     margin-left: auto;
   }
   
   .stars {
-    /* color: #fbc02d; */
     color: var(--Accent-Accent-400---Main, #39FFFB);
     margin-right: 5px;
   }
