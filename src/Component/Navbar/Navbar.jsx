@@ -17,19 +17,29 @@ const Navbar = () => {
     >
       <img src={logo} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
-        <a href="#pricing">Courses</a>
         <a href="/aboutus">About Maflam</a>
-        <a href="#about">Packages</a>
-        <a href="#training">Resources</a>
-        <a href="#resources">Contact Us</a>
+        <a href="#pricing">
+          Courses <span className={styles.arrow}>&#8595;</span>
+        </a>
+        <a href="#about">
+          Packages <span className={styles.arrow}>&#8595;</span>
+        </a>
+        <a href="#training">
+          Resources <span className={styles.arrow}>&#8595;</span>
+        </a>
+        <a href="#resources">
+          Contact Us <span className={styles.arrow}>&#8595;</span>
+        </a>
       </div>
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />
       </div>
       <div className={styles.rightLinks}>
-        <a href="#login">log in</a>
         <a href="#" target="_blank" className={styles.signupButton}>
           Create an Account
+        </a>
+        <a href="#login">
+          <span className={styles.arrow}>&#8592; </span> log in
         </a>
       </div>
       <div className={styles.hamburger} onClick={toggleMenu}>
