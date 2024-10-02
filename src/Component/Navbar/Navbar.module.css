@@ -2,8 +2,8 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* Changed to space-between */
-  padding: 15px 100px;
+  justify-content: space-between; /* Adjusted for better alignment */
+  padding: 15px 50px; /* Reduced padding for better mobile responsiveness */
   backdrop-filter: blur(30px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,13 +12,15 @@
   width: 100%;
   z-index: 1000;
 }
-.arrow{
+
+.arrow {
   font-size: 14px;
   margin-bottom: 15px !important;
   color: #fff;
   font-weight: 900;
   padding-bottom: 15px;
 }
+
 .logo {
   height: 40px;
 }
@@ -55,7 +57,7 @@
   background: rgba(255, 255, 255, 0.1);
   padding: 5px;
   border-radius: 20px;
-  border-color: #0ccac4 ;
+  border-color: #0ccac4;
   outline: #0ccac4;
 }
 
@@ -114,28 +116,86 @@
   transition: 0.3s ease;
 }
 
-/* Responsive styles */
+/* Responsive Styles */
+
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .leftLinks, .rightLinks, .searchContainer {
-      display: none;
+    display: none;
   }
 
   .hamburger {
-      display: flex;
+    display: flex;
   }
+
   .navbar.active .leftLinks,
   .navbar.active .rightLinks {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: rgba(26, 34, 40, 0.9);
-      width: 100%;
-      padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(26, 34, 40, 0.9);
+    width: 100%;
+    padding: 20px;
   }
 
   .leftLinks a, .rightLinks a {
-      margin: 10px 0;
+    margin: 10px 0;
+  }
+
+  .signupButton {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* Small devices (576px and below) */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 15px 30px; /* Reduced padding for smaller screens */
+  }
+
+  .logo {
+    height: 35px; /* Adjusted logo size */
+  }
+
+  .signupButton {
+    font-size: 14px; /* Reduced button text size */
+    padding: 8px 20px;
+  }
+}
+
+/* Extra small devices (425px and below) */
+@media (max-width: 425px) {
+  .navbar {
+    padding: 15px 20px; /* Further reduced padding */
+  }
+
+  .logo {
+    height: 30px; /* Further reduced logo size */
+  }
+
+  .hamburger div {
+    width: 20px;
+    height: 2px; /* Smaller hamburger icon */
+  }
+
+  .signupButton {
+    font-size: 12px; /* Further reduced button text size */
+    padding: 7px 16px;
+  }
+}
+
+/* Ultra small devices (375px and below) */
+@media (max-width: 375px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .signupButton {
+    font-size: 12px;
+    padding: 6px 14px;
   }
 }

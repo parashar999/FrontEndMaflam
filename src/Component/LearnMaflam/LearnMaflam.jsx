@@ -1,7 +1,7 @@
 import styles from "./LearnMaflam.module.css";
 import LearnMaflamImage from "../../assets/LearnMaflamImage.jpg";
 
-const CourseGrid = () => {
+const LearnMaflam = () => {
   return (
     <div className={styles.courseContainer}>
       <div className={styles.coursesContainer}>
@@ -18,4 +18,4 @@ const CourseGrid = () => {
   );
 };
 
-export default CourseGrid;
+export default LearnMaflam;
