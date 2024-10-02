@@ -19,10 +19,11 @@ const Home = () => {
      <Navbar></Navbar>
   
       <HomeHero></HomeHero>
+      <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
-      <ViewCourses></ViewCourses>
+    
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel/>
