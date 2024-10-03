@@ -384,20 +384,32 @@ export const resources = [
   },
 ];
 
+// export const featuresData = [
+//   {
+//     title: "Get certified",
+//     description: "Earn a certificate on completing the courses.",
+//   },
+//   {
+//     title: "Lifetime Access to Material",
+//     description: "Access all the learning material anytime.",
+//   },
+//   { title: "Ask your instructors", description: "Get support from experts." },
+//   {
+//     title: "Learn Anytime, Anywhere",
+//     description: "Access from any device at your convenience.",
+//   },
+// ];
 export const featuresData = [
   {
-    title: "Get certified",
+    title: "A Community of Aspiring Filmmakers",
     description: "Earn a certificate on completing the courses.",
   },
   {
-    title: "Lifetime Access to Material",
+    title: "A Passion for Empowering Cinematic Talents",
     description: "Access all the learning material anytime.",
   },
-  { title: "Ask your instructors", description: "Get support from experts." },
-  {
-    title: "Learn Anytime, Anywhere",
-    description: "Access from any device at your convenience.",
-  },
+  { title: "A Comprehensive Educational Experience in Arabic", description: "Get support from experts." },
+ 
 ];
 
 export const offersData = [

@@ -1,6 +1,7 @@
 .container {
-  background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../assets/mafamvisual.png') no-repeat center center;
+  /* background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../assets/mafamvisual.png') no-repeat center center; */
   background-size: cover;
+  background-color: #030B11;
   color: white;
   min-height: 900px;
   padding: 40px;
@@ -43,6 +44,8 @@
   margin-top: 40px ; */
   stroke-width: 4px;
   margin-top: 40px ;
+  stroke-width: 4px;
+stroke: #5AFFFF;
 stroke: #5AFFFF;
 margin-left:90px;
 width: 380px;

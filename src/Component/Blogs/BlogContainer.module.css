@@ -26,26 +26,26 @@
     background-position:center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: -350px;
+    margin-top: -360px;
     /* position: absolute; */
    
     
 }
 .Rectangle h2{
     color: #fff;
-    padding: 10px 580px 10px 310px;
+    padding: 60px 480px 10px 430px;
     font-size: 35px;
     line-height: 50px;
 }
 .Rectangle p{
     color: #fff;
-    padding: 10px 520px 10px 310px;
+    padding: 10px 420px 10px 430px;
     font-size: 20px;
     line-height: 30px;
 }
 .Rectangle a{
     color: #5affea;
-    padding: 10px 520px 10px 310px;
+    padding: 10px 520px 10px 430px;
     text-decoration: none;
 }
 @media screen and (max-width: 768px){
