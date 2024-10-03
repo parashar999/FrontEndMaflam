@@ -1,4 +1,3 @@
-
 import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
 import Navbar from "../../Component/Navbar/Navbar";
 import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
@@ -8,17 +7,27 @@ import Footer from "../../Component/Footer/Footer";
 import Fundamental from "../../Component/FundamentalPackage/Fundamental";
 import Faqs from "../../Component/Faqs/Faqs";
 import ViewCourses from "../../Component/ViewCourses/ViewCourses";
+import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam.jsx";
+import Ourservices from "../../Component/Ourservices/Ourservices.jsx";
+import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
+import HomeCommunityCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
+import CarouselCommunity from "../../Component/Community/CarouselCommunity.jsx"
+import Styles from "./Home.module.css";
 const Home = () => {
   return (
-    <div>
+    <div className={Styles.Home}>
       <Navbar></Navbar>
-  
       <HomeHero></HomeHero>
+      <LearnMaflam></LearnMaflam>
+      <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
-      <ViewCourses></ViewCourses>
+      <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
+      {/* <HomeScreenCarousel /> */}
+      <HomeCommunityCarousel></HomeCommunityCarousel>
+      <CarouselCommunity></CarouselCommunity>
       <Faqs></Faqs>
       <Footer></Footer>
     </div>

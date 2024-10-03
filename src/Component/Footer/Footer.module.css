@@ -10,6 +10,17 @@
     font-size: 14px;
     width: 100%;
 }
+.footerHr{
+  border: none;
+  height: 0.5px;
+  background: #F6FFFF;
+  /* color:#F6FFFF ; */
+  margin: 0 auto;
+  width: 90vw;
+  margin-bottom: 25px;
+  opacity: 1;
+  /* text-decoration: none; */
+}
 
 .container {
     max-width: 1200px;
@@ -30,7 +41,6 @@
 }
 
 .footerLogo {
-    margin-bottom: 20px;
     width: 39px;
     height: 58px;
 }
@@ -77,16 +87,21 @@
     gap: 20px;
     padding: 20px 0;
     justify-content: center;
-    border-top: 1px solid #333;
+    /* border-top: 1px solid #333; */
 }
+
+
 
 .footerLinks li {
     margin: 0;
 }
 
+
+
 .footerLinks li a {
     color: #39FFFb;
     font-size: 14px;
+    margin-left: 20px;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
@@ -97,9 +112,18 @@
 
 .footerBottom {
     padding: 20px 0;
-    text-align: center;
     font-size: 14px;
+    text-align: center;
+    margin: 0;
     margin-top: 20px;
+}
+
+.footerBottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px 0; */
+    /* flex-wrap: wrap; */
 }
 
 /* Social icons styling */
@@ -142,40 +166,12 @@
 
 
 /* New Flex Container to align footer links and bottom content */
-.footerBottomContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    flex-wrap: wrap;
-}
 
-.footerLinks {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-}
 
-.footerLinks li {
-    margin: 0;
-}
 
-.footerLinks li a {
-    color: #39FFFb;
-    font-size: 14px;
-    margin-left: 20px;
-    text-decoration: underline;
-    transition: color 0.3s ease;
-}
 
-.footerLinks li a:hover {
-    color: #fff;
-}
 
-/* Center the bottom text */
-.footerBottom {
-    font-size: 14px;
-    text-align: center;
-    margin: 0;
-}
+
+
+
+
