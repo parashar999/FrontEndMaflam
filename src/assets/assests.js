@@ -109,6 +109,7 @@ import Subscribee from "./Subscribee.png";
 import PricingHeroBackground from "./PricingHeroBackground.png";
 import PricingCard1Background from "./pricingCard1background.png";
 import youtubeImage from "./youtubeImage.png";
+import blogImg from "./Rectangle 5 (1).png";
 
 export const assests = {
   youtubeImage,
@@ -213,6 +214,7 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
+  blogImg,
 };
 
 export const instructors = [

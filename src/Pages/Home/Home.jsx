@@ -13,23 +13,30 @@ import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCom
 import HomeCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
 import CarouselCommunity from "../../Component/Community/CarouselCommunity";
 import Ourservices from "../../Component/Ourservices/Ourservices";
+import BlogContainer from "../../Component/Blogs/BlogContainer";
+import SuccessStories from "../../Component/SuccessStories/SuccessStories";
+import LearnAbout from "../../Component/LearnAbout/LearnAbout";
 const Home = () => {
   return (
     <div>
      <Navbar></Navbar>
-  
       <HomeHero></HomeHero>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
+      <SuccessStories></SuccessStories>
       <ViewCourses></ViewCourses>
+      
       <SuccessPartners></SuccessPartners>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
+      <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity />
-      <Faqs></Faqs>
-      <Footer></Footer> 
+      <LearnAbout></LearnAbout>
+      <Faqs></Faqs> 
+       <Footer></Footer> 
+      
       
            
 
