@@ -35,7 +35,7 @@ const HomeCommunityCarousel = () => {
 
   return (
     <div className={styles.carouselcontainer}>
-      <h2>Maflam Community</h2>
+      <h2>Maflam Shows</h2>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
