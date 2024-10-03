@@ -122,11 +122,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 20px 0; */
-    /* flex-wrap: wrap; */
+    
 }
 
-/* Social icons styling */
 .socialIcons {
     display: flex;
     justify-content: flex-start;
@@ -139,7 +137,9 @@
     color: #39FFFb;
 }
 
-/* Responsive adjustments */
+/* Media queries for responsiveness */
+
+/* Tablet and smaller devices (up to 768px) */
 @media (max-width: 768px) {
     .footerColumns {
         flex-direction: column;
@@ -147,30 +147,60 @@
     }
 
     .footerColumn {
+        min-width: 100%;
         text-align: center;
     }
 
-    .footerBottom {
+    .footerLinks {
         flex-direction: column;
-        text-align: center;
+        gap: 10px;
+    }
+
+    .footerLinks li a {
+        margin-left: 0;
+    }
+
+    .footerBottomContainer {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .socialIcons {
         justify-content: center;
     }
-
-    .footerLinks {
-        justify-content: center;
-    }
 }
 
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 0;
+    }
 
-/* New Flex Container to align footer links and bottom content */
+    .footerColumns {
+        gap: 15px;
+    }
 
+    .footerColumn h4 {
+        font-size: 16px;
+    }
 
+    .visionText {
+        font-size: 12px;
+    }
 
+    .footerLinks {
+        padding: 10px 0;
+        font-size: 12px;
+    }
 
+    .footerBottom {
+        font-size: 12px;
+    }
 
+    .socialIcons {
+        gap: 10px;
+    }
+}
 
 
 
