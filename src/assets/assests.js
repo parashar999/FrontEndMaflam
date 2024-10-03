@@ -457,39 +457,35 @@ export const courses = [
 
 export const footerColumnData = [
   {
-    title: "Why MaFlam?",
+    title: "Subscriptions",
     links: [
-      { text: "خدماتنا", href: "#" },
-      { text: "الدورات التدريبية", href: "#" },
-      { text: "الدورات", href: "#" },
-      { text: "الخبراء", href: "#" },
+      { text: "Subscription price", href: "#" },
+      { text: "Full courses", href: "#" },
+      { text: "Specialized courses", href: "#" },
     ],
   },
   {
-    title: "Experts",
+    title: "Free education matrials",
     links: [
-      { text: "الدورات التدريبية", href: "#" },
-      { text: "خدماتنا", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الدورات", href: "#" },
+      { text: "Blogs", href: "#" },
+      { text: "E-bokk", href: "#" },
+      { text: "Join the mailing list", href: "#" },
     ],
   },
   {
-    title: "Our Services",
+    title: "Get to know Maflam",
     links: [
-      { text: "الدورات التدريبية", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الدورات", href: "#" },
+      { text: "About Maflam", href: "#" },
+      { text: "Our program", href: "#" },
+      { text: "Our services", href: "#" },
     ],
   },
   {
-    title: "Courses",
+    title: "Contact Us",
     links: [
-      { text: "خدماتنا", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الدورات", href: "#" },
-      { text: "الخبراء", href: "#" },
+      { text: "Join the Maflam world", href: "#" },
+      { text: "FAQs", href: "#" },
+      { text: "Contct information", href: "#" },
     ],
   },
 ];
