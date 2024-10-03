@@ -489,7 +489,7 @@ export const footerColumnData = [
     ],
   },
   {
-    title: "Free education matrials",
+    title: "Free education materials",
     links: [
       { text: "Blogs", href: "#" },
       { text: "E-bokk", href: "#" },
