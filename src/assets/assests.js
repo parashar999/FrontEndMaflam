@@ -215,8 +215,6 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
-  backgrounds ,
-  aboutHero ,
 };
 
 export const instructors = [

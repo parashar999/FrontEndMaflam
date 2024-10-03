@@ -1,0 +1,93 @@
+.carouselWrapper {
+    background-color: #030b11;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    /* border: 2px solid bisque; */
+  }
+  
+  .carouselWrapper h2 {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0px;
+  }
+  
+  .carouselSliderContainer {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+  
+  .carouselSliderContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carouselSlider {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .carouselCard {
+    flex: 0 0 auto;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    height: auto;
+    color: #fff;
+    width: 385px;
+  }
+  
+  .carouselCard img {
+    height: 300px;
+    width: 100%;
+  }
+  
+  .carouselArrowLeft,
+  .carouselArrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .carouselArrowLeft {
+    left: 10px;
+  }
+  
+  .carouselArrowRight {
+    right: 10px;
+  }
+  
+  .carouselArrowLeft:hover,
+  .carouselArrowRight:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    .carouselCard {
+      flex: 0 0 100%;
+      width: 275px;
+    }
+  
+    .carouselArrowLeft,
+    .carouselArrowRight {
+      font-size: 24px;
+    }
+  }
+  
