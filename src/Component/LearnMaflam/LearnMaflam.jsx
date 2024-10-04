@@ -7,11 +7,9 @@ const LearnMaflam = () => {
       <div className={styles.coursesContainer}>
         <h2>Learn About Maflam World</h2>
         <div className={styles.LearnMaflam}>
-          <img
-            src={LearnMaflamImage}
-            alt=""
-            style={{ width: 650, height: 400 }}
-          />
+          {" "}
+          {/* Correctly applying the class */}
+          <img src={LearnMaflamImage} alt="Learn Maflam" />
         </div>
       </div>
     </div>
