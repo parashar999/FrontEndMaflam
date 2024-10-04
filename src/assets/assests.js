@@ -268,13 +268,13 @@ export const BlogHeaderData = [
 ];
 
 export const CoursesData = [
-  { name: "Editing", backgroundImage: `url(${FrameDiv7})` },
-  { name: "Acting", backgroundImage: `url(${FrameDiv6})` },
-  { name: "Sound Recording", backgroundImage: `url(${FrameDiv5})` },
-  { name: "Directing", backgroundImage: `url(${FrameDiv4})` },
+  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv7})` },
+  { name: "Production", backgroundImage: `url(${FrameDiv6})` },
   { name: "Cinematography", backgroundImage: `url(${FrameDiv3})` },
-  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv2})` },
-  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv1})` },
+  { name: "Directing", backgroundImage: `url(${FrameDiv4})` },
+  { name: "Sound Recording", backgroundImage: `url(${FrameDiv5})` },
+  { name: "Acting", backgroundImage: `url(${FrameDiv2})` },
+  { name: "Editing", backgroundImage: `url(${FrameDiv1})` },
 ];
 export const questionsData = [
   {
