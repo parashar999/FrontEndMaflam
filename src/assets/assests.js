@@ -221,6 +221,7 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
+  
 };
 
 export const instructors = [

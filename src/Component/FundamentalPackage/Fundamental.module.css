@@ -3,7 +3,6 @@
   padding: 50px 135px 70px 135px;
   height: auto;
   /* border: 2px solid rebeccapurple; */
-  
 }
 
 .secondcontainer {
@@ -13,7 +12,7 @@
 
 .content {
   width: 350px;
-  margin-left: 440px;
+  margin-left: 40px;
   margin-right: 0;
   margin-top: 50px;
   /* border: 2px solid aliceblue; */
@@ -28,46 +27,47 @@
 }
 
 .subscribe {
-  background-image: url('../../assets/pricing-3.png');
+  background-image: url("../../assets/pricing-3.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 230px;
   margin: 20px 0px 20px 0px;
   border-radius: 10px;
- 
 }
-.imgcontainer img{
+.imgcontainer img {
   height: 700px;
-  margin-top: -260px;
-  margin-left: 70px;
+  margin-top: -270px;
+  margin-left: 700px;
 }
-.ctn{
+.ctn {
   /* border: 2px solid rgb(16, 17, 18); */
   height: auto;
   width: 55%;
-  margin-top: -448px;
-  margin-left: 440px;
-  
+  margin-top: -430px;
+  margin-left: 40px;
 }
-.item{
+.item {
   display: flex;
   align-items: center;
- 
 }
-.checkico{
- 
+.checkico {
   margin-right: 10px;
   color: rgb(46, 202, 202);
-  font-size: 30px;
-  
-}
-.ctn p{
   font-size: 20px;
-  color: #fff;
 }
-.checkicobuttun{
-  background-color:cyan;
+.ctn p {
+  /* font-size: 20px;
+  color: #fff; */
+  color: var(--Accent-Accent-50, #f6ffff);
+  text-align: right;
+  font-family: "Noto Kufi Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+.checkicobuttun {
+  background-color: cyan;
   font-size: 15px;
   padding: 2px 7px;
   border: none;
@@ -75,46 +75,71 @@
   margin-top: 5px;
   margin-right: 5px;
 }
-.item b{
-  margin-right:2px;
+.item b {
+  margin-right: 2px;
+  color: aqua;
+  font-size: 25px;
 }
-@media screen and (max-width: 768px)
-{
 
+.item span {
+  font-size: 15px;
+  padding-left: 3px;
+}
+@media screen and (max-width: 768px) {
   .Fundamental {
-  
     padding: 30px 20px 30px 20px;
-    height: 490px;
-    
+    height: auto;
   }
   .content {
     width: 200px;
-    margin: 10px 20px 10px 40px;
-   
+    margin: 10px 20px 10px 20px;
   }
-  .content p{
+  .content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .subscribe {
+    height: 120px;
+    margin: 40px auto;
+  }
+  .imgcontainer img {
+    height: 300px;
+    margin-top: -100px;
+    margin-left: 220px;
+  }
+  .ctn {
+    height: 110px;
+    width: 50%;
+    margin: -200px 0px 0px 20px;
+    /* border: 1px solid rgb(223, 39, 39); */
+  }
+  .ctn p {
+    /* font-size: 8px;
+    color: #fff; */
+
+    font-size: 6px;
+  }
+  .checkicobuttun {
+    background-color: cyan;
+    font-size: 4px;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .item b {
+    margin-right: 2px;
+    color: aqua;
+    font-size: 9px;
+  }
+  .item span {
+    font-size: 7px;
+    padding-left: 3px;
+  }
+  .checkico {
+    margin-right: 10px;
+    color: rgb(46, 202, 202);
     font-size: 15px;
   }
-  .subscribe{
-    height: 100px;
-   margin: 40px auto;
-  }
-  .imgcontainer img{
-    height: 230px;
-    margin-top: -70px;
-    margin-left: 30px;
-  }
-  .ctn{
-   
-    height: 150px;
-    width: 100%;
-    margin: 0px auto;
-    
-  }
-  .ctn p{
-    font-size: 8px;
-    color: #fff;
-  }
-
 }
-
