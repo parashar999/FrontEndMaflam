@@ -101,6 +101,48 @@
   font-weight: 700;
 }
 
+
+.submenu a:hover {
+  background-color: #444; /* Adjust hover effect */
+}
+/* Dropdown container (for the Resources link) */
+.dropdown {
+  position: relative;
+}
+
+/* Submenu positioning */
+.submenu {
+  background-color: #333; /* Adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%; /* Position below the parent (Resources link) */
+  left: 0; /* Align with the Resources link */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Ensure it appears above other elements */
+  min-width: 150px; /* Adjust submenu width if needed */
+}
+
+.submenu a {
+  color: white;
+  padding: 8px 15px; /* Increase padding for better clickability */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background-color: #444; /* Adjust hover effect */
+}
+
+/* Ensure submenu doesn't get hidden behind other elements on smaller screens */
+.navbar {
+  z-index: 1000; /* Make sure the navbar and submenu stay on top */
+}
+
+
+
 /* Hamburger Menu Icon */
 .hamburger {
   display: none;

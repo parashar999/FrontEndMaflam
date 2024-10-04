@@ -25,7 +25,7 @@ const Home = () => {
       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
-      {/* <Fundamental></Fundamental> */}
+      <Fundamental></Fundamental>
       <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
       <LearnAbout></LearnAbout>

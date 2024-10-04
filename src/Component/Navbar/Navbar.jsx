@@ -5,9 +5,14 @@ import navbarBackground from "../../assets/NavbarBackground.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleSubMenu = () => {
+    setIsSubMenuOpen(!isSubMenuOpen);
   };
 
   return (
@@ -24,9 +29,18 @@ const Navbar = () => {
         <a href="#about">
           Packages <span className={styles.arrow}>&#8595;</span>
         </a>
-        <a href="#training">
-          Resources <span className={styles.arrow}>&#8595;</span>
-        </a>
+        <div className={styles.dropdown}>
+          <a href="#training" onClick={toggleSubMenu}>
+            Resources <span className={styles.arrow}>&#8595;</span>
+          </a>
+          {isSubMenuOpen && (
+            <div className={styles.submenu}>
+              <a href="#">Maflam Blog</a>
+              <a href="#">Social Media</a>
+              <a href="#">E-Booklet</a>
+            </div>
+          )}
+        </div>
         <a href="#resources">
           Contact Us <span className={styles.arrow}>&#8595;</span>
         </a>
