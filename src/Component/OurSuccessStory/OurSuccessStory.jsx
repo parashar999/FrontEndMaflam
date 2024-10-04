@@ -35,7 +35,7 @@ const OurSuccessStory = () => {
       <h2>Our Success Stories</h2>
       <div className={styles.carousel}>
         <button className={styles.carouselArrowLeft} onClick={scrollLeft}>
-          &#10094;
+        &larr;
         </button>
 
         <div className={styles.carouselSliderContainer} ref={sliderRef}>
@@ -49,7 +49,7 @@ const OurSuccessStory = () => {
         </div>
 
         <button className={styles.carouselArrowRight} onClick={scrollRight}>
-          &#10095;
+        &rarr;
         </button>
       </div>
     </div>

@@ -69,14 +69,31 @@
     border: none;
     font-size: 24px;
     cursor: pointer;
+    color: #fff;
   }
   
   .arrowLeft {
     left: 10px;
+    /* border: 1px solid aliceblue; */
+    border-radius: 50%;
+    width: 60px; /* Ensure width and height are equal */
+    height: 60px;
+    background-color: #4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .arrowRight {
     right: 10px;
+    /* border: 1px solid #7777; */
+    border-radius: 50%;
+    width: 60px; /* Ensure width and height are equal */
+    height: 60px;
+    background-color: #4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   @media (max-width: 768px) {

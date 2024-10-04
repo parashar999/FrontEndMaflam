@@ -84,15 +84,31 @@ line-height: 160%;
   
   .carouselArrowLeft {
     left: 10px;
+    /* border: 1px solid aliceblue; */
+    border-radius: 50%;
+    width: 60px; /* Ensure width and height are equal */
+    height: 60px;
+    background-color: #4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .carouselArrowRight {
     right: 10px;
+  /* border: 1px solid #7777; */
+  border-radius: 50%;
+  width: 60px; /* Ensure width and height are equal */
+  height: 60px;
+  background-color: #4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
   
   .carouselArrowLeft:hover,
   .carouselArrowRight:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #4444;
   }
   
   @media (max-width: 768px) {

@@ -25,18 +25,18 @@ const Home = () => {
       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
-      <Fundamental></Fundamental>
+      {/* <Fundamental></Fundamental> */}
       <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
       <BlogContainer></BlogContainer>
-      <HomeCommunityCarousel></HomeCommunityCarousel>
-      {/* <SuccessStories></SuccessStories> */}
+      <HomeCommunityCarousel></HomeCommunityCarousel> 
+     
 
       <CarouselCommunity></CarouselCommunity>
-      {/* <HomeScreenCarousel></HomeScreenCarousel> */}
+    
       <Faqs></Faqs>
       <Footer></Footer>
     </div>
