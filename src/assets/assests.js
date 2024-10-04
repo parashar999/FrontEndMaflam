@@ -521,7 +521,7 @@ export const footerColumnData = [
     links: [
       { text: "Join the Maflam world", href: "#" },
       { text: "FAQs", href: "#" },
-      { text: "Contct information", href: "#" },
+      { text: "Contact information", href: "#" },
     ],
   },
 ];
