@@ -119,9 +119,9 @@ const Footer = () => {
           <ul className={styles.footerLinks}>
           <li><a href="#">Purchase policy</a></li>
           <li><a href="#">Help Center</a></li>
-          <li><a href="#">Community Guidlines</a></li>
+          <li><a href="#">Community Guidelines</a></li>
           <li><a href="#">Privacy Policy</a></li>
-           <li><a href="/terms&condition">Terms and Condition</a></li>
+           <li><a href="/terms&condition">Terms and Conditions</a></li>
           </ul>
           <div className={styles.footerBottom}>
             <p>All rights reserved © MAFALAM 2023</p>

@@ -495,16 +495,16 @@ export const footerColumnData = [
   {
     title: "Subscriptions",
     links: [
-      { text: "Subscription price", href: "#" },
+      { text: "Subscription prices", href: "#" },
       { text: "Full courses", href: "#" },
       { text: "Specialized courses", href: "#" },
     ],
   },
   {
-    title: "Free education matrials",
+    title: "Free education materials",
     links: [
-      { text: "Blogs", href: "#" },
-      { text: "E-bokk", href: "#" },
+      { text: "Blog", href: "#" },
+      { text: "E-book", href: "#" },
       { text: "Join the mailing list", href: "#" },
     ],
   },
@@ -512,7 +512,7 @@ export const footerColumnData = [
     title: "Get to know Maflam",
     links: [
       { text: "About Maflam", href: "#" },
-      { text: "Our program", href: "#" },
+      { text: "Our programs", href: "#" },
       { text: "Our services", href: "#" },
     ],
   },
