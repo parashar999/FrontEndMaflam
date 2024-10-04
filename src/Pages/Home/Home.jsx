@@ -10,9 +10,13 @@ import ViewCourses from "../../Component/ViewCourses/ViewCourses";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam.jsx";
 import Ourservices from "../../Component/Ourservices/Ourservices.jsx";
 import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
-import HomeCommunityCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
-import CarouselCommunity from "../../Component/Community/CarouselCommunity.jsx"
+
+import CarouselCommunity from "../../Component/Community/CarouselCommunity.jsx";
 import Styles from "./Home.module.css";
+// import SuccessStories from "../../Component/SuccessStories/SuccessStories.jsx";
+import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel.jsx";
+import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
+import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 const Home = () => {
   return (
     <div className={Styles.Home}>
@@ -24,10 +28,15 @@ const Home = () => {
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
+      <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
-      {/* <HomeScreenCarousel /> */}
+      <HomeScreenCarousel />
+      <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
+      {/* <SuccessStories></SuccessStories> */}
+
       <CarouselCommunity></CarouselCommunity>
+      {/* <HomeScreenCarousel></HomeScreenCarousel> */}
       <Faqs></Faqs>
       <Footer></Footer>
     </div>

@@ -1,6 +1,4 @@
-
-
-
+/* 
    .container {
     display: flex;
     flex-direction: column;
@@ -21,14 +19,12 @@
     width: 100%;
     margin-bottom: 20px; 
     margin-top: 100px;
-    
   }
   
   .courseCard {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
@@ -53,10 +49,6 @@
       linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)); 
   }
   
-  .fullWidthButton:hover {
-    /* background-color: #0056b3;  */
-  }
-  
   .playButtonContainer {
     display: flex;
     justify-content: center;
@@ -65,16 +57,23 @@
   
   .playButton {
     background-color: gray; 
-    border: none;
-    border-radius: 100%;
+    border-radius: 50%; 
     height: 100px;
     width: 100px; 
-    padding: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white; 
     cursor: pointer;
     font-size: 24px;
     transition: transform 0.3s ease;
-    /* border: 1px solid red; */
+    border: none;
+  }
+  
+  .iconWithBorder {
+    color: rgba(0, 255, 255, 0.7); 
+    border-radius: 50%;
+    font-size: 40px;
   }
   
   .playButton:hover {
@@ -94,81 +93,223 @@
     max-width: 600px; 
     line-height: 57.6px;
   }
-  
-/* 
-  .courseCard1 {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  
-  .courseCard2 {
-    background: linear-gradient(179.92deg, rgba(255, 255, 255, 0.148) -33.5%, rgba(255, 255, 255, 0.2) 35.22%, rgba(105, 127, 127, 0.168) 99.93%),
-                linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07));
-  }
-  
-  .courseCard3 {
-    background-color: rgba(249, 245, 253, 0.2);
-  }
-  
-  .courseCard4 {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  
-  .courseCard5 {
-    background: linear-gradient(0deg, rgba(59, 46, 138, 0.2), rgba(59, 46, 138, 0.2)),
-                linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
-  }
-  
-  .courseCard6 {
-    background-color: rgba(188, 229, 229, 0.2);
-  }
-  
-  .courseCard7 {
-    background-color: rgba(249, 245, 253, 0.2);
-  }
    */
 
-
-   .courseCard {
-    /* Common styles for all course cards */
-    padding: 10px;
-    border-radius: 8px;
-    color: #000;
-    margin: 5px;
+   .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 150px;
+    width: 100%;
+    background-image: url("../../assets/viewCoursebg.png"); 
+    background-size: cover; 
+    background-position: center; 
+    background-color: black;
   }
   
-  /* Define CSS variables for each card's background */
-  .courseCard--1 {
-    --bg-color: rgba(255, 255, 255, 0.05);
+  /* Course Grid for Large Screens */
+  .courseGrid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(70px, 1fr)); 
+    justify-content: center; 
+    gap: 10px; 
+    width: 100%;
+    margin-bottom: 20px; 
+    margin-top: 100px;
   }
   
-  .courseCard--2 {
-    --bg-color: linear-gradient(179.92deg, rgba(255, 255, 255, 0.148) -33.5%, rgba(255, 255, 255, 0.2) 35.22%, rgba(105, 127, 127, 0.168) 99.93%),
-                linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07));
-  }
-  
-  .courseCard--3 {
-    --bg-color: rgba(249, 245, 253, 0.2);
-  }
-  
-  .courseCard--4 {
-    --bg-color: rgba(255, 255, 255, 0.05);
-  }
-  
-  .courseCard--5 {
-    --bg-color: linear-gradient(0deg, rgba(59, 46, 138, 0.2), rgba(59, 46, 138, 0.2)),
-                linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
-  }
-  
-  .courseCard--6 {
-    --bg-color: rgba(188, 229, 229, 0.2);
-  }
-  
-  .courseCard--7 {
-    --bg-color: rgba(249, 245, 253, 0.2);
-  }
-  
-  /* Apply the background color using the CSS variable */
+  /* Course Card */
   .courseCard {
-    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    height: 90px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Full-width Button */
+  .fullWidthButton {
+    width: 100%; 
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    background: 
+      linear-gradient(90deg, rgba(138, 29, 138, 0.128) 0%, rgba(90, 255, 234, 0.2) 32%, rgba(255, 0, 147, 0.158) 63.5%, rgba(54, 153, 140, 0.2) 100%),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)); 
+  }
+  
+  /* Play Button Container */
+  .playButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  /* Play Button */
+  .playButton {
+    background-color: gray; 
+    border-radius: 50%; 
+    height: 100px;
+    width: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+    border: none;
+  }
+  
+  /* Styling the play icon inside the button */
+  .iconWithBorder {
+    color: rgba(0, 255, 255, 0.7); /* Same blue color for the play icon */
+    border-radius: 50%;
+    font-size: 40px;
+  }
+  
+  /* Play Button Hover Effect */
+  .playButton:hover {
+    transform: scale(1.1); 
+  }
+  
+  /* Text Container */
+  .textContainer {
+    margin-top: 70px; 
+    text-align: center; 
+    margin-bottom: 250px;
+  }
+  
+  /* Info Text */
+  .infoText {
+    font-weight: 700;
+    color: white; 
+    font-size: 36px; 
+    max-width: 600px; 
+    line-height: 57.6px;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Medium Screen - Tablets */
+  @media (max-width: 1024px) {
+    .container {
+      padding: 20px 50px;
+    }
+  
+    .courseGrid {
+      grid-template-columns: repeat(4, minmax(100px, 1fr)); /* 4 columns on tablets */
+      gap: 15px;
+      margin-top: 50px;
+    }
+  
+    .courseCard {
+      height: 80px;
+      padding: 8px;
+    }
+  
+    .fullWidthButton {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .playButton {
+      height: 80px;
+      width: 80px;
+    }
+  
+    .iconWithBorder {
+      font-size: 30px;
+    }
+  
+    .infoText {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  
+  /* Small Screen - Mobile Devices */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 20px;
+    }
+  
+    .courseGrid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      gap: 10px;
+    }
+  
+    .courseCard {
+      height: 70px;
+      padding: 5px;
+      font-size: 12px;
+    }
+  
+    .fullWidthButton {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    .playButton {
+      height: 60px;
+      width: 60px;
+    }
+  
+    .iconWithBorder {
+      font-size: 24px;
+    }
+  
+    .infoText {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  
+    .textContainer {
+      margin-bottom: 150px;
+    }
+  }
+  
+  /* Extra Small Screen - Small Mobile Devices */
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .courseGrid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column on very small devices */
+    }
+  
+    .courseCard {
+      height: 60px;
+      font-size: 10px;
+    }
+  
+    .playButton {
+      height: 50px;
+      width: 50px;
+    }
+  
+    .iconWithBorder {
+      font-size: 20px;
+    }
+  
+    .infoText {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  
+    .textContainer {
+      margin-bottom: 100px;
+    }
   }
   

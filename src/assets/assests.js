@@ -111,7 +111,13 @@ import PricingCard1Background from "./pricingCard1background.png";
 import youtubeImage from "./youtubeImage.png";
 import backgrounds from "./backgronds.png";
 import aboutHero from "./aboutHero.png";
-
+import FrameDiv1 from "./FrameDiv1.png"
+import FrameDiv2 from "./FrameDiv2.png"
+import FrameDiv3 from "./FrameDiv3.png"
+import FrameDiv4 from "./FrameDiv4.png"
+import FrameDiv5 from "./FrameDiv5.png"
+import FrameDiv6 from "./FrameDiv6.png"
+import FrameDiv7 from "./FrameDiv7.png"
 export const assests = {
   youtubeImage,
   PricingHeroBackground,
@@ -215,8 +221,6 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
-  backgrounds ,
-  aboutHero ,
 };
 
 export const instructors = [
@@ -264,15 +268,14 @@ export const BlogHeaderData = [
 ];
 
 export const CoursesData = [
-  { name: "Editing" },
-  { name: "Acting" },
-  { name: "Sound Recording" },
-  { name: "Directing" },
-  { name: "Cinematography" },
-  { name: "Scriptwriting" },
-  { name: "Scriptwriting" },
+  { name: "Editing", backgroundImage: `url(${FrameDiv7})` },
+  { name: "Acting", backgroundImage: `url(${FrameDiv6})` },
+  { name: "Sound Recording", backgroundImage: `url(${FrameDiv5})` },
+  { name: "Directing", backgroundImage: `url(${FrameDiv4})` },
+  { name: "Cinematography", backgroundImage: `url(${FrameDiv3})` },
+  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv2})` },
+  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv1})` },
 ];
-
 export const questionsData = [
   {
     question: "Scriptwriting Introduction",
@@ -381,20 +384,32 @@ export const resources = [
   },
 ];
 
+// export const featuresData = [
+//   {
+//     title: "Get certified",
+//     description: "Earn a certificate on completing the courses.",
+//   },
+//   {
+//     title: "Lifetime Access to Material",
+//     description: "Access all the learning material anytime.",
+//   },
+//   { title: "Ask your instructors", description: "Get support from experts." },
+//   {
+//     title: "Learn Anytime, Anywhere",
+//     description: "Access from any device at your convenience.",
+//   },
+// ];
 export const featuresData = [
   {
-    title: "Get certified",
+    title: "A Community of Aspiring Filmmakers",
     description: "Earn a certificate on completing the courses.",
   },
   {
-    title: "Lifetime Access to Material",
+    title: "A Passion for Empowering Cinematic Talents",
     description: "Access all the learning material anytime.",
   },
-  { title: "Ask your instructors", description: "Get support from experts." },
-  {
-    title: "Learn Anytime, Anywhere",
-    description: "Access from any device at your convenience.",
-  },
+  { title: "A Comprehensive Educational Experience in Arabic", description: "Get support from experts." },
+ 
 ];
 
 export const offersData = [
@@ -478,39 +493,35 @@ export const courses = [
 
 export const footerColumnData = [
   {
-    title: "Why MaFlam?",
+    title: "Subscriptions",
     links: [
-      { text: "خدماتنا", href: "#" },
-      { text: "الدورات التدريبية", href: "#" },
-      { text: "الدورات", href: "#" },
-      { text: "الخبراء", href: "#" },
+      { text: "Subscription price", href: "#" },
+      { text: "Full courses", href: "#" },
+      { text: "Specialized courses", href: "#" },
     ],
   },
   {
-    title: "Experts",
+    title: "Free education matrials",
     links: [
-      { text: "الدورات التدريبية", href: "#" },
-      { text: "خدماتنا", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الدورات", href: "#" },
+      { text: "Blogs", href: "#" },
+      { text: "E-bokk", href: "#" },
+      { text: "Join the mailing list", href: "#" },
     ],
   },
   {
-    title: "Our Services",
+    title: "Get to know Maflam",
     links: [
-      { text: "الدورات التدريبية", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الدورات", href: "#" },
+      { text: "About Maflam", href: "#" },
+      { text: "Our program", href: "#" },
+      { text: "Our services", href: "#" },
     ],
   },
   {
-    title: "Courses",
+    title: "Contact Us",
     links: [
-      { text: "خدماتنا", href: "#" },
-      { text: "الخبراء", href: "#" },
-      { text: "الدورات", href: "#" },
-      { text: "الخبراء", href: "#" },
+      { text: "Join the Maflam world", href: "#" },
+      { text: "FAQs", href: "#" },
+      { text: "Contct information", href: "#" },
     ],
   },
 ];

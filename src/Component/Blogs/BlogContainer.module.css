@@ -1,0 +1,81 @@
+.MainContainer{
+    /* border: 1px solid rgb(165, 158, 158); */
+    height: auto;
+    background-color: #030b11;
+    height: auto;
+    padding: 30px 0px 50px 0px;
+   
+}
+.MainContainer h1{
+    color: #fff;
+    text-align: center;
+}
+
+.pricingimg{
+    background-image: url('../../assets/blogpricing.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 100px;
+}
+.Rectangle{
+    background-image: url('../../assets/Rectangle 5 (1).png');
+    height: 400px;
+    width: auto;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -360px;
+    /* position: absolute; */
+   
+    
+}
+.Rectangle h2{
+    color: #fff;
+    padding: 60px 480px 10px 430px;
+    font-size: 35px;
+    line-height: 50px;
+}
+.Rectangle p{
+    color: #fff;
+    padding: 10px 420px 10px 430px;
+    font-size: 20px;
+    line-height: 30px;
+}
+.Rectangle a{
+    color: #5affea;
+    padding: 10px 520px 10px 430px;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px){
+    .pricingimg{
+        margin-top: -30px;
+        height: 200px;
+        width: auto;
+        margin: 0px 20px;
+    }
+    .Rectangle{
+        margin-top: -190px;
+        height: 200px;
+        width: auto;
+    }
+    .Rectangle h2{
+        color: #fff;
+        padding: 10px 100px 10px 60px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .Rectangle p{
+        color: #fff;
+        padding: 10px 100px 10px 60px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .Rectangle a{
+       
+        padding: 10px 100px 10px 60px;
+       font-size: 15px;
+    }
+}
+
