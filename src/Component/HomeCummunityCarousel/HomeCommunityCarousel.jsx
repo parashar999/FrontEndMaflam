@@ -39,7 +39,7 @@ const HomeCommunityCarousel = () => {
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
-          &#10094;
+          &larr;
         </button>
 
         <div className={styles.sliderContainer} ref={sliderRef}>
@@ -57,7 +57,7 @@ const HomeCommunityCarousel = () => {
 
         {/* Right Arrow */}
         <button className={styles.arrowRight} onClick={scrollRight}>
-          &#10095;
+        &rarr;
         </button>
       </div>
     </div>

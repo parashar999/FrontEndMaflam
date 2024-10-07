@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Fundamental.module.css";
-import Book from "../../assets/Rectangle 88.png";
+import Book from "../../assets/Rectangle 88 (1).png";
 import { CiCircleCheck } from "react-icons/ci";
 
 function Fundamental() {
   return (
     <div>
-      <div className={styles.Fundamental}>
+       <div className={styles.Fundamental}>
         <div className={styles.secondcontainer}>
           <div className={styles.content}>
             <p>Subscribe To The Full Filmmaking Fundamentals Package</p>
@@ -37,7 +37,7 @@ function Fundamental() {
 
                 <div className={styles.item}>
                   <button className={styles.checkicobuttun}>Subscribe</button>
-                  <p><b>2.200</b>SR</p>
+                  <p><b>2.200</b><span>SR</span></p>
                 </div>
                 
               </div>
@@ -45,8 +45,8 @@ function Fundamental() {
             </div>
           </div>
         </div>
-      </div>
-   
+      </div> 
+      
     </div>
     
   );
