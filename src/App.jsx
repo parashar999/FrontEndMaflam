@@ -16,6 +16,7 @@ import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/Repre
 import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
+import "./App.css"
 
 const App = () => {
   return (
