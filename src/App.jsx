@@ -20,8 +20,7 @@ import "./App.css"
 
 const App = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -40,8 +39,7 @@ const App = () => {
           <Route path="/checkout" element={<Checkouts />} />
           <Route path="/pricing" element={<PricingDetails />} />
         </Routes>
-      </div>
-    </div>
+    
   );
 };
 
