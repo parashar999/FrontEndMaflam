@@ -93,122 +93,15 @@
     max-width: 600px; 
     line-height: 57.6px;
   }
-   */
-
-   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 150px;
-    width: 100%;
-    background-image: url("../../assets/viewCoursebg.png"); 
-    background-size: cover; 
-    background-position: center; 
-    background-color: black;
-  }
   
-  /* Course Grid for Large Screens */
-  .courseGrid {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(70px, 1fr)); 
-    justify-content: center; 
-    gap: 10px; 
-    width: 100%;
-    margin-bottom: 20px; 
-    margin-top: 100px;
-  }
   
-  /* Course Card */
-  .courseCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    height: 90px;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* Full-width Button */
-  .fullWidthButton {
-    width: 100%; 
-    padding: 15px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    background: 
-      linear-gradient(90deg, rgba(138, 29, 138, 0.128) 0%, rgba(90, 255, 234, 0.2) 32%, rgba(255, 0, 147, 0.158) 63.5%, rgba(54, 153, 140, 0.2) 100%),
-      linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14)); 
-  }
-  
-  /* Play Button Container */
-  .playButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-  }
-  
-  /* Play Button */
-  .playButton {
-    background-color: gray; 
-    border-radius: 50%; 
-    height: 100px;
-    width: 100px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; 
-    cursor: pointer;
-    font-size: 24px;
-    transition: transform 0.3s ease;
-    border: none;
-  }
-  
-  /* Styling the play icon inside the button */
-  .iconWithBorder {
-    color: rgba(0, 255, 255, 0.7); /* Same blue color for the play icon */
-    border-radius: 50%;
-    font-size: 40px;
-  }
-  
-  /* Play Button Hover Effect */
-  .playButton:hover {
-    transform: scale(1.1); 
-  }
-  
-  /* Text Container */
-  .textContainer {
-    margin-top: 70px; 
-    text-align: center; 
-    margin-bottom: 250px;
-  }
-  
-  /* Info Text */
-  .infoText {
-    font-weight: 700;
-    color: white; 
-    font-size: 36px; 
-    max-width: 600px; 
-    line-height: 57.6px;
-  }
-  
-  /* Responsive Styles */
-  
-  /* Medium Screen - Tablets */
   @media (max-width: 1024px) {
     .container {
       padding: 20px 50px;
     }
   
     .courseGrid {
-      grid-template-columns: repeat(4, minmax(100px, 1fr)); /* 4 columns on tablets */
+      grid-template-columns: repeat(4, minmax(100px, 1fr)); 
       gap: 15px;
       margin-top: 50px;
     }
@@ -238,14 +131,13 @@
     }
   }
   
-  /* Small Screen - Mobile Devices */
   @media (max-width: 768px) {
     .container {
       padding: 20px 20px;
     }
   
     .courseGrid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+      grid-template-columns: repeat(2, 1fr); 
       gap: 10px;
     }
   
@@ -279,14 +171,13 @@
     }
   }
   
-  /* Extra Small Screen - Small Mobile Devices */
   @media (max-width: 480px) {
     .container {
       padding: 10px;
     }
   
     .courseGrid {
-      grid-template-columns: repeat(1, 1fr); /* 1 column on very small devices */
+      grid-template-columns: repeat(1, 1fr); 
     }
   
     .courseCard {
@@ -312,4 +203,214 @@
       margin-bottom: 100px;
     }
   }
-  
+   */
+
+   /* ViewCourses.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding: 20px; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  background-image: url("../../assets/viewCoursebg.png");
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+
+/* Course Grid */
+.courseGrid {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  width: 100%; 
+  margin: 20px 0; 
+}
+
+/* Course Card */
+.courseCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  height: 90px; 
+  text-align: center;
+  padding: 10px;
+  color: white; 
+  flex: 0 0 156px; 
+}
+
+/* Full-width Button */
+.fullWidthButton {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  background: 
+    linear-gradient(90deg, rgba(138, 29, 138, 0.128) 0%, rgba(90, 255, 234, 0.2) 32%, rgba(255, 0, 147, 0.158) 63.5%, rgba(54, 153, 140, 0.2) 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14));
+}
+
+/* Play Button Container */
+.playButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; 
+}
+
+/* Play Button */
+.playButton {
+  background-color: gray;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+/* Styling the play icon inside the button */
+.iconWithBorder {
+  color: rgba(0, 255, 255, 0.7);
+  border-radius: 50%;
+  font-size: 40px;
+}
+
+/* Play Button Hover Effect */
+.playButton:hover {
+  transform: scale(1.1);
+}
+
+/* Text Container */
+.textContainer {
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 250px; 
+}
+
+/* Info Text */
+.infoText {
+  font-weight: 700;
+  color: white;
+  font-size: 36px;
+  max-width: 600px;
+  line-height: 57.6px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px; 
+  }
+
+  .courseCard {
+    height: 80px;
+    padding: 8px;
+    flex: 0 0 150px; 
+  }
+
+  .fullWidthButton {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .playButton {
+    height: 80px;
+    width: 80px;
+  }
+
+  .iconWithBorder {
+    font-size: 30px;
+  }
+
+  .infoText {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px; 
+  }
+
+  .courseCard {
+    height: 70px;
+    padding: 5px;
+    flex: 0 0 100px; 
+  }
+
+  .fullWidthButton {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .playButton {
+    height: 60px;
+    width: 60px;
+  }
+
+  .iconWithBorder {
+    font-size: 24px;
+  }
+
+  .infoText {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .textContainer {
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .courseCard {
+    height: 60px;
+    font-size: 10px;
+    flex: 0 0 90%; 
+  }
+
+  .playButton {
+    height: 50px;
+    width: 50px;
+  }
+
+  .iconWithBorder {
+    font-size: 20px;
+  }
+
+  .infoText {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .textContainer {
+    margin-bottom: 100px;
+  }
+}
