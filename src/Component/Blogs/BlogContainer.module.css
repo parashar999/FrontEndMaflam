@@ -1,5 +1,184 @@
-.MainContainer{
-    /* border: 1px solid rgb(165, 158, 158); */
+
+
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #030b11;
+    padding: 30px 0px 50px 0px;
+}
+
+.MainContainer h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.pricingimg {
+    background-image: url('../../assets/blogpricing.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.Rectangle {
+    background-image: url('../../assets/maflamhomeimg.png');
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: -360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Rectangle h2 {
+    color: #fff;
+    font-size: 35px;
+    line-height: 40px;
+    padding: 20px;
+}
+
+.Rectangle p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    padding: 20px;
+}
+
+.Rectangle a {
+    color: #5affea;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .pricingimg {
+        margin-top: 50px;
+        height: 200px;
+    }
+
+    .Rectangle {
+        margin-top: -300px;
+        height: 300px;
+    }
+
+    .Rectangle h2 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .Rectangle p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .Rectangle a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pricingimg {
+        margin-top: -30px;
+        height: 200px;
+        width: 90%;
+        margin: 0px 20px;
+    }
+
+    .Rectangle {
+        margin-top: -200px;
+        height: 200px;
+        width: 90%;
+    }
+
+    .Rectangle h2 {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 40px 0;
+    }
+
+    .Rectangle p {
+        font-size: 10px;
+        line-height: 20px;
+        padding: 5px 0;
+    }
+
+    .Rectangle a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .MainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Rectangle {
+        background-size: cover;
+        margin-top: -200px;
+        padding: 20px;
+    }
+
+    .Rectangle h2 {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+
+    .Rectangle p {
+        font-size: 8px;
+        padding: 5px 0;
+    }
+
+    .Rectangle a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .MainContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Rectangle {
+        text-align: center;
+        background-size: cover;
+        padding: 10px;
+    }
+
+    .Rectangle h2 {
+        font-size: 8px;
+    }
+
+    .Rectangle p {
+        font-size: 7px;
+    }
+
+    .Rectangle a {
+        font-size: 8px;
+    }
+}
+
+
+
+
+/* .MainContainer{
+
     height: auto;
     background-color: #030b11;
     height: auto;
@@ -27,7 +206,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -360px;
-    /* position: absolute; */
+  
    
     
 }
@@ -51,7 +230,7 @@
 }
 @media screen and (min-width: 768px) and (max-width:1024px){
     .MainContainer{
-        /* border: 1px solid rgb(165, 158, 158); */
+    
         height: auto;
         background-color: #030b11;
         height: auto;
@@ -85,7 +264,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         margin-top: -300px;
-        /* position: absolute; */
+       
        
         
     }
@@ -137,5 +316,5 @@
         padding: 0px 100px 10px 30px;
        font-size: 12px;
     }
-}
+} */
 
