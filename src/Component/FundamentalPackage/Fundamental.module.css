@@ -57,14 +57,9 @@
   font-size: 20px;
 }
 .ctn p {
-  /* font-size: 20px;
-  color: #fff; */
-  color: var(--Accent-Accent-50, #f6ffff);
-  text-align: right;
-  font-family: "Noto Kufi Arabic";
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
+  color: #fff;
+ 
 }
 .checkicobuttun {
   background-color: cyan;
@@ -105,19 +100,19 @@
   .imgcontainer img {
     height: 300px;
     margin-top: -100px;
-    margin-left: 220px;
+    margin-left: 200px;
   }
   .ctn {
     height: 110px;
-    width: 50%;
+    width: 45%;
     margin: -200px 0px 0px 20px;
     /* border: 1px solid rgb(223, 39, 39); */
   }
   .ctn p {
-    /* font-size: 8px;
-    color: #fff; */
-
     font-size: 6px;
+    color: #fff;
+
+  
   }
   .checkicobuttun {
     background-color: cyan;
