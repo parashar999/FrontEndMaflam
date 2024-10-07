@@ -321,7 +321,7 @@
 
 /* Responsive Styles */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .container {
     padding: 20px; 
   }
@@ -335,6 +335,8 @@
   .fullWidthButton {
     padding: 12px;
     font-size: 14px;
+    padding-left: 0px !important;
+    padding-right:0px !important;
   }
 
   .playButton {
