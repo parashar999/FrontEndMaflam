@@ -3,19 +3,20 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Home from "./Pages/Home/Home";
 import CourseDetail from "./Pages/CourseDetail/CourseDetail";
 import BlogDetails from "./Pages/BlogDetails/BlogDetails";
-import ContactUs from "./Pages/ContactUs/ContactUS";
-import Ebooks from "./Pages/Ebooks/Ebooks";
-import Blogs from "./Pages/Blogs/Blogs";
-import TermsAndConditionsPage from "./Pages/TermsAndConditionsPage/TermsAndConditionsPage";
-import Pricing from "./Pages/Pricing/Pricing";
-import FaqPage from "./Pages/FaqPage/FaqPage";
-import DevinciResolveCourseDetail from "./Pages/DevinciResolveCourseDetail/DevinciResolveCourseDetail";
-import AdobePrimereProCourse from "./Pages/AdobePrimereProCourse/AdobePrimereProCourse";
-import VegasProCourse from "./Pages/VegasProCourse/VegasProCourse";
-import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/RepresentationCourseDetail";
-import Checkouts from "./Pages/Checkout/Checkouts";
-import PricingDetails from "./Pages/PricingDetails/PricingDetails";
-import styles from './App.module.css';  
+import ContactUs from "./Pages/ContactUs/ContactUS.jsx";
+import Ebooks from "./Pages/Ebooks/Ebooks.jsx";
+import Blogs from "./Pages/Blogs/Blogs.jsx";
+import TermsAndConditionsPage from "./Pages/TermsAndConditionsPage/TermsAndConditionsPage.jsx";
+import Pricing from "./Pages/Pricing/pricing.jsx";
+import FaqPage from "./Pages/FaqPage/FaqPage.jsx";
+import DevinciResolveCourseDetail from "./Pages/DevinciResolveCourseDetail/DevinciResolveCourseDetail.jsx";
+import AdobePrimereProCourse from "./Pages/AdobePrimereProCourse/AdobePrimereProCourse.jsx";
+import VegasProCourse from "./Pages/VegasProCourse/VegasProCourse.jsx";
+import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/RepresentationCourseDetail.jsx";
+import Checkouts from "./Pages/Checkout/Checkouts.jsx";
+import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
+
+import "./App.css"
 
 const App = () => {
   return (
