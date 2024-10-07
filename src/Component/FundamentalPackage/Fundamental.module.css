@@ -2,11 +2,11 @@
   background-color: #030b11;
   padding: 50px 135px 70px 135px;
   height: auto;
-  /* border: 2px solid rebeccapurple; */
+
 }
 
 .secondcontainer {
-  /* border: 2px solid aqua; */
+ 
   height: auto;
 }
 
@@ -15,7 +15,7 @@
   margin-left: 40px;
   margin-right: 0;
   margin-top: 50px;
-  /* border: 2px solid aliceblue; */
+
 }
 
 .content p {
@@ -23,7 +23,7 @@
   line-height: 25px;
   text-align: left;
   font-size: 20px;
-  /* border: 1px solid aquamarine; */
+  
 }
 
 .subscribe {
@@ -39,13 +39,16 @@
   height: 700px;
   margin-top: -270px;
   margin-left: 700px;
+ 
 }
 .ctn {
-  /* border: 2px solid rgb(16, 17, 18); */
+ 
   height: auto;
   width: 55%;
   margin-top: -430px;
   margin-left: 40px;
+
+  
 }
 .item {
   display: flex;
@@ -57,14 +60,10 @@
   font-size: 20px;
 }
 .ctn p {
-  /* font-size: 20px;
-  color: #fff; */
-  color: var(--Accent-Accent-50, #f6ffff);
-  text-align: right;
-  font-family: "Noto Kufi Arabic";
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
+  color: #fff;
+
+ 
 }
 .checkicobuttun {
   background-color: cyan;
@@ -85,6 +84,67 @@
   font-size: 15px;
   padding-left: 3px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .Fundamental {
+    padding: 40px 50px 40px 50px;
+    height: auto;
+ 
+  }
+
+  .content {
+    width: 300px;
+    margin: 20px 30px;
+   
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .subscribe {
+    height: 180px;
+    margin: 30px auto;
+  }
+
+  .imgcontainer img {
+    height: 500px;
+    margin-top: -180px;
+    margin-left: 600px;
+  }
+
+  .ctn {
+    height: auto;
+    width: 50%;
+    margin-top: -320px;
+    margin-left: 30px;
+  
+  }
+
+  .ctn p {
+    font-size: 14px;
+  }
+
+  .checkicobuttun {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .item b {
+    font-size: 18px;
+  }
+
+  .item span {
+    font-size: 12px;
+  }
+
+  .checkico {
+    font-size: 18px;
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
   .Fundamental {
     padding: 30px 20px 30px 20px;
@@ -105,19 +165,19 @@
   .imgcontainer img {
     height: 300px;
     margin-top: -100px;
-    margin-left: 220px;
+    margin-left: 200px;
   }
   .ctn {
     height: 110px;
-    width: 50%;
+    width: 45%;
     margin: -200px 0px 0px 20px;
-    /* border: 1px solid rgb(223, 39, 39); */
+   
   }
   .ctn p {
-    /* font-size: 8px;
-    color: #fff; */
-
     font-size: 6px;
+    color: #fff;
+
+  
   }
   .checkicobuttun {
     background-color: cyan;
@@ -142,4 +202,7 @@
     color: rgb(46, 202, 202);
     font-size: 15px;
   }
-}
+}  
+  
+  
+
