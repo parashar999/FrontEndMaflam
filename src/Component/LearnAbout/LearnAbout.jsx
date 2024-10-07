@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import styles from "./LearnAbout.module.css";
 
@@ -19,53 +19,62 @@ function LearnAbout() {
 
         <div className={styles.contentConatiner}>
           <div className={styles.firstcard}>
-          
             <p>The full filmmaking fundamental Package</p>
             <div className={styles.breakline}></div>
             <h1>
               2,200 <span>SR</span>
             </h1>
-           
+
             <button className={styles.subscribebutton}>Subscribe</button>
             <br></br>
-            <button className={styles.rigthcheck}>
-              <FaRegCheckCircle className={styles.rigthclick} /> 30+ Hours
-            </button>
-             {/* <br></br> */}
-            
-            <button className={styles.rigthcheck}>
-              <FaRegCheckCircle className={styles.rigthclick} />  Flexible and Focused Learning
-            </button>
-  
-            <button className={styles.rigthcheck}>
-              <FaRegCheckCircle className={styles.rigthclick} /> Available for a Lifetime
-            </button>
+            <div className={styles.buttondiv}>
+              <button className={styles.rigthcheck}>
+                <FaRegCheckCircle className={styles.rigthclick} /> 30+ Hours
+              </button>
+              {/* <br></br> */}
 
-           
+              <button className={styles.rigthcheck}>
+                <FaRegCheckCircle className={styles.rigthclick} /> Flexible and
+                Focused Learning
+              </button>
+
+              <button className={styles.rigthcheck}>
+                <FaRegCheckCircle className={styles.rigthclick} /> Available for
+                a Lifetime
+              </button>
+            </div>
           </div>
           <div className={styles.secondcard}>
-             <p>Traditional Education</p>
-             <div className={styles.breakline}></div>
-             <h1>
+            <p>Traditional Education</p>
+            <div className={styles.breakline}></div>
+            <h1>
               +240,000 <span>SR</span>
             </h1>
+          
             <button className={styles.rigthcheck}>
+            
               <FaRegCheckCircle className={styles.rigthclick} /> At least a year
             </button>
 
             <button className={styles.rigthcheck}>
-              <FaRegCheckCircle className={styles.rigthclick} /> Interrupted and Mandatory Learning
+              <FaRegCheckCircle className={styles.rigthclick} /> Interrupted and
+              Mandatory Learning
             </button>
-  
+
             <button className={styles.rigthcheck}>
-              <FaRegCheckCircle className={styles.rigthclick} /> Limited-Time Access
+              <FaRegCheckCircle className={styles.rigthclick} /> Limited-Time
+              Access
             </button>
-
-
+          
           </div>
-         
         </div>
-        <p className={styles.para}>Prices may vary based on country, currency exchange rates, bank fees, and subscription plan <Link to={'/to'} className={styles.link}>Terms & Conditions</Link></p>
+        <p className={styles.para}>
+          Prices may vary based on country, currency exchange rates, bank fees,
+          and subscription plan{" "}
+          <Link to={"/to"} className={styles.link}>
+            Terms & Conditions
+          </Link>
+        </p>
       </div>
     </div>
   );

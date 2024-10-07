@@ -17,28 +17,28 @@ import Styles from "./Home.module.css";
 import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel.jsx";
 import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
 import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
+
 const Home = () => {
   return (
     <div className={Styles.Home}>
-      <Navbar></Navbar>
+     <Navbar></Navbar>
       <HomeHero></HomeHero>
       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
-      <CourseGrid></CourseGrid>
-      <Fundamental></Fundamental>
-      <Ourservices></Ourservices>
-      <SuccessPartners></SuccessPartners>
+      <CourseGrid></CourseGrid> 
+    
+      <Fundamental></Fundamental> 
+       <Ourservices></Ourservices>
+       <SuccessPartners></SuccessPartners>
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
-      <BlogContainer></BlogContainer>
-      <HomeCommunityCarousel></HomeCommunityCarousel>
-      {/* <SuccessStories></SuccessStories> */}
+       <BlogContainer></BlogContainer>
 
-      <CarouselCommunity></CarouselCommunity>
-      {/* <HomeScreenCarousel></HomeScreenCarousel> */}
+     <HomeCommunityCarousel></HomeCommunityCarousel>  
+       <CarouselCommunity></CarouselCommunity> 
       <Faqs></Faqs>
-      <Footer></Footer>
+      <Footer></Footer> 
     </div>
   );
 };

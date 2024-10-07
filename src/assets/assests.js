@@ -221,6 +221,7 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
+  
 };
 
 export const instructors = [
@@ -268,13 +269,13 @@ export const BlogHeaderData = [
 ];
 
 export const CoursesData = [
-  { name: "Editing", backgroundImage: `url(${FrameDiv7})` },
-  { name: "Acting", backgroundImage: `url(${FrameDiv6})` },
-  { name: "Sound Recording", backgroundImage: `url(${FrameDiv5})` },
-  { name: "Directing", backgroundImage: `url(${FrameDiv4})` },
+  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv7})` },
+  { name: "Production", backgroundImage: `url(${FrameDiv6})` },
   { name: "Cinematography", backgroundImage: `url(${FrameDiv3})` },
-  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv2})` },
-  { name: "Scriptwriting", backgroundImage: `url(${FrameDiv1})` },
+  { name: "Directing", backgroundImage: `url(${FrameDiv4})` },
+  { name: "Sound Recording", backgroundImage: `url(${FrameDiv5})` },
+  { name: "Acting", backgroundImage: `url(${FrameDiv2})` },
+  { name: "Editing", backgroundImage: `url(${FrameDiv1})` },
 ];
 export const questionsData = [
   {
@@ -495,16 +496,16 @@ export const footerColumnData = [
   {
     title: "Subscriptions",
     links: [
-      { text: "Subscription price", href: "#" },
+      { text: "Subscription prices", href: "#" },
       { text: "Full courses", href: "#" },
       { text: "Specialized courses", href: "#" },
     ],
   },
   {
-    title: "Free education matrials",
+    title: "Free education materials",
     links: [
-      { text: "Blogs", href: "#" },
-      { text: "E-bokk", href: "#" },
+      { text: "Blog", href: "#" },
+      { text: "E-book", href: "#" },
       { text: "Join the mailing list", href: "#" },
     ],
   },
@@ -512,7 +513,7 @@ export const footerColumnData = [
     title: "Get to know Maflam",
     links: [
       { text: "About Maflam", href: "#" },
-      { text: "Our program", href: "#" },
+      { text: "Our programs", href: "#" },
       { text: "Our services", href: "#" },
     ],
   },
@@ -521,7 +522,7 @@ export const footerColumnData = [
     links: [
       { text: "Join the Maflam world", href: "#" },
       { text: "FAQs", href: "#" },
-      { text: "Contct information", href: "#" },
+      { text: "Contact information", href: "#" },
     ],
   },
 ];

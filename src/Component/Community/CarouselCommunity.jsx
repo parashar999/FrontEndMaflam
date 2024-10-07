@@ -35,7 +35,7 @@ const CarouselCommunity = () => {
       <h2>maflam community</h2>
       <div className={styles.carousel}>
         <button className={styles.carouselArrowLeft} onClick={scrollLeft}>
-          &#10094;
+        &larr;
         </button>
 
         <div className={styles.carouselSliderContainer} ref={sliderRef}>
@@ -49,7 +49,7 @@ const CarouselCommunity = () => {
         </div>
 
         <button className={styles.carouselArrowRight} onClick={scrollRight}>
-          &#10095;
+        →
         </button>
       </div>
     </div>
