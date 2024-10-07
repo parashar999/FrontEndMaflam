@@ -46,9 +46,9 @@
 }
 .firstcard{
   height: 370px;
-  border: 1px solid #ffffff;
+  border: 1px solid #00FFFF;
   width: 330px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 40px 0px;
  
   
@@ -107,10 +107,10 @@ border-radius: 20px;
 
 .secondcard{
   height: 350px;
-  border: 1px solid #fff;
+  border: 1px solid #00FFFF;
   width: 300px;
   margin-top:60px;
-  border-radius: 10px;
+  border-radius: 20px;
  
 }
 .secondcard p{

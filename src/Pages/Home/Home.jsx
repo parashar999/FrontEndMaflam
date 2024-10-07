@@ -31,7 +31,7 @@ const Home = () => {
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
-      <BlogContainer></BlogContainer>
+      <BlogContainer></BlogContainer>xx
       <HomeCommunityCarousel></HomeCommunityCarousel>
       {/* <SuccessStories></SuccessStories> */}
 
