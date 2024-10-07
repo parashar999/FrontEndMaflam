@@ -27,7 +27,8 @@
 
 .Rectangle {
     background-image: url('../../assets/maflamhomeimg.png');
-    height: 400px;
+    
+    height: 380px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,15 +43,19 @@
 
 .Rectangle h2 {
     color: #fff;
-    font-size: 35px;
-    line-height: 40px;
-    padding: 20px;
+    font-size: 28px;
+    text-align: left;
+    line-height:35px;
+    padding: 10px;
 }
 
 .Rectangle p {
     color: #fff;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 16px;
+    text-align: left;
+    margin-left: -70px;
+    padding-left: -200px !important;
+    line-height: 25px;
     padding: 20px;
 }
 
@@ -58,6 +63,8 @@
     color: #5affea;
     text-decoration: none;
     font-size: 18px;
+    margin-left: -320px;
+    text-align: left !important;
     padding: 10px;
 }
 
@@ -102,13 +109,13 @@
     }
 
     .Rectangle h2 {
-        font-size: 12px;
+        font-size: 6px !important;
         line-height: 20px;
         padding: 40px 0;
     }
 
     .Rectangle p {
-        font-size: 10px;
+        font-size: 5px;
         line-height: 20px;
         padding: 5px 0;
     }
