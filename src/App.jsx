@@ -20,33 +20,26 @@ import "./App.css"
 
 const App = () => {
   return (
-    <div>
-      <Routes>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/prc" element={<Pricing />} />
+          <Route path="/blogDetails" element={<BlogDetails />} />
+          <Route path="/coursedetails" element={<CourseDetail />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
+          <Route path="/adobe" element={<AdobePrimereProCourse />} />
+          <Route path="/vegas" element={<VegasProCourse />} />
+          <Route path="/rep" element={<RepresentationCourseDetail />} />
+          <Route path="/ebooks" element={<Ebooks />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
+          <Route path="/faqs" element={<FaqPage />} />
+          <Route path="/checkout" element={<Checkouts />} />
+          <Route path="/pricing" element={<PricingDetails />} />
+        </Routes>
     
-        <Route path="/" element={<Home></Home>} />
-        <Route path="/aboutus" element={<AboutUs></AboutUs>} />
-        <Route path="/prc" element={<Pricing></Pricing>}></Route>
-        <Route path="/blogDetails" element={<BlogDetails></BlogDetails>} />
-        <Route path="/coursedetails" element={<CourseDetail />} />
-        <Route path="/contact" element={<ContactUs></ContactUs>} />
-        <Route
-          path="/devinciresolve"
-          element={<DevinciResolveCourseDetail />}
-        />
-        <Route path="/adobe" element={<AdobePrimereProCourse />} />
-        <Route path="/vegas" element={<VegasProCourse />} />
-        <Route path="/rep" element={<RepresentationCourseDetail />} />
-        <Route path="/ebooks" element={<Ebooks></Ebooks>} />
-        <Route path="/blogs" element={<Blogs></Blogs>} />
-        <Route
-          path="/terms&condition"
-          element={<TermsAndConditionsPage></TermsAndConditionsPage>}
-        />
-        <Route path="/faqs" element={<FaqPage></FaqPage>} />
-        <Route path="/checkout" element={<Checkouts></Checkouts>} />
-        <Route path="/pricing" element={<PricingDetails></PricingDetails>} />
-      </Routes>
-    </div>
   );
 };
 
