@@ -2,8 +2,9 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjusted for better alignment */
-  padding: 15px 50px; /* Reduced padding for better mobile responsiveness */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 50px;
   backdrop-filter: blur(30px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,14 +12,6 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-}
-
-.arrow {
-  font-size: 14px;
-  margin-bottom: 15px !important;
-  color: #fff;
-  font-weight: 900;
-  padding-bottom: 15px;
 }
 
 .logo {
@@ -29,12 +22,13 @@
 .leftLinks {
   padding: 0 5px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
 }
 
 .leftLinks a {
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
@@ -111,36 +105,19 @@
 }
 
 /* Submenu positioning */
-/* .submenu {
-  background-color: #333; 
-  padding: 10px;
-  border-radius: 5px;
-  position: absolute;
-  top: 100%; 
-  left: 0; 
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 999; 
-  min-width: 250px; 
-} */
-
 .submenu {
-  background-color: #333; 
+  background-color: #333; /* Adjust as needed */
   padding: 10px;
   border-radius: 5px;
   position: absolute;
-  top: 100%; 
-  left: 0; 
+  top: 100%; /* Position below the parent (Resources link) */
+  left: 0; /* Align with the Resources link */
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 999; 
-  min-width: auto; 
-  max-width: 400px; 
-  width: max-content; 
+  z-index: 999; /* Ensure it appears above other elements */
+  min-width: 150px; /* Adjust submenu width if needed */
 }
-
 
 .submenu a {
   color: white;
