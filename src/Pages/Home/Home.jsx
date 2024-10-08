@@ -35,9 +35,9 @@ const Home = () => {
       <HomeScreenCarousel />
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
-      <BlogContainer></BlogContainer>
-      <HomeCommunityCarousel></HomeCommunityCarousel>
-      <CarouselCommunity></CarouselCommunity>
+       <BlogContainer></BlogContainer>
+     <HomeCommunityCarousel></HomeCommunityCarousel>  
+       <CarouselCommunity></CarouselCommunity> 
       <Faqs></Faqs>
       <Footer></Footer> 
    
