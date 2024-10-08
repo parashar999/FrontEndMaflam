@@ -113,18 +113,18 @@
   }
   .Rectangle h2 {
     color: #fff;
-    padding: 0px 10px 0px 30px;
+    padding: 10px 10px 0px 30px;
     font-size: 15px;
     line-height: 20px;
   }
   .Rectangle p {
     color: #fff;
-    padding: 5px 100px 0px 30px;
+    padding: 15px 100px 0px 30px;
     font-size: 10px;
     line-height: 20px;
   }
   .Rectangle a {
-    padding: 0px 100px 10px 30px;
+    padding: 10px 100px 10px 30px;
     font-size: 12px;
   }
 }
