@@ -26,7 +26,6 @@ const Home = () => {
       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
-
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
