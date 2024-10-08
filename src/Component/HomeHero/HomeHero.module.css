@@ -2,6 +2,9 @@
   color: white;
   font-family: "Noto Kufi Arabic", sans-serif;
   height: 90vh !important;
+  max-width: 1550px;
+  width: 100%;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +54,8 @@
 .backgroundImage {
   background-image: url("../../assets/HomeHero.png");
   position: absolute;
+  background-size: cover;
+  
   top: 0;
   left: 0;
   width: 100%;

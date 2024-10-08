@@ -1,8 +1,9 @@
 .coursesContainer {
+  margin-top: 100px;
   padding: 20px;
   min-height: 700px;
   border-radius: 8px;
-  max-width: 90%; /* Changed from 1100px to a percentage for better responsiveness */
+  max-width: 90%;
   margin: auto;
   text-align: center;
 }
@@ -16,22 +17,23 @@
   color: #FFF;
   text-align: center;
   font-family: "Noto Kufi Arabic";
-  font-size: 2.5rem; /* Changed to rem for responsive font sizing */
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
 }
 
 .LearnMaflam img {
-  width: 100%; /* Set to 100% of the container width */
-  max-width: 650px; /* Max width to prevent stretching on larger screens */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; 
+  max-width: 650px; 
+  height: auto;
   margin-top: 40px;
 }
 
 /* Responsive adjustments for tablets */
 @media (max-width: 768px) {
   .coursesContainer {
+    margin-top: 100px;
     padding: 15px;
     min-height: 600px;
   }
@@ -49,6 +51,7 @@
 /* Responsive adjustments for mobile screens */
 @media (max-width: 480px) {
   .coursesContainer {
+    margin-top: 50px;
     padding: 10px;
     min-height: 500px;
   }
