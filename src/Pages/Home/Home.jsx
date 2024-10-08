@@ -21,23 +21,30 @@ import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 const Home = () => {
   return (
     <div className={Styles.Home}>
-     <Navbar></Navbar>
+      <Navbar></Navbar>
       <HomeHero></HomeHero>
       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
-      <CourseGrid></CourseGrid> 
-    
-      <Fundamental></Fundamental> 
-       <Ourservices></Ourservices>
-       <SuccessPartners></SuccessPartners>
+      <CourseGrid></CourseGrid>
+
+      {/* <Fundamental></Fundamental> */}
+      <Ourservices></Ourservices>
+      <SuccessPartners></SuccessPartners>
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
+<<<<<<< HEAD
+      <BlogContainer></BlogContainer>
+
+      <HomeCommunityCarousel></HomeCommunityCarousel>
+      <CarouselCommunity></CarouselCommunity>
+=======
        <BlogContainer></BlogContainer>
      <HomeCommunityCarousel></HomeCommunityCarousel>  
        <CarouselCommunity></CarouselCommunity> 
+>>>>>>> b48ea59c7ad324d86bea356507329c7ca9987cdb
       <Faqs></Faqs>
-      <Footer></Footer> 
+      <Footer></Footer>
     </div>
   );
 };
