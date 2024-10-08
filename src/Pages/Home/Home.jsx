@@ -36,9 +36,9 @@ const Home = () => {
 
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
-      <BlogContainer></BlogContainer>
-      <HomeCommunityCarousel></HomeCommunityCarousel>
-      <CarouselCommunity></CarouselCommunity>
+       <BlogContainer></BlogContainer>
+     <HomeCommunityCarousel></HomeCommunityCarousel>  
+       <CarouselCommunity></CarouselCommunity> 
       <Faqs></Faqs>
       <Footer></Footer>
     </div>
