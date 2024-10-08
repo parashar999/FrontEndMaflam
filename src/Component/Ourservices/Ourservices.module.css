@@ -256,7 +256,7 @@
     }
   
     .text2 {
-      flex-direction: column;
+    
       padding: 0;
       margin-top: 10px;
     }
@@ -282,7 +282,7 @@
     }
   
     .frane64 p {
-      font-size: 1rem;
+      font-size: 10px;
       line-height: 1.3;
     }
   }

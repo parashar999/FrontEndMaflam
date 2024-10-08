@@ -18,6 +18,7 @@ import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCom
 import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
 import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 
+
 const Home = () => {
   return (
     <div className={Styles.Home}>
@@ -32,18 +33,14 @@ const Home = () => {
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
-       <BlogContainer></BlogContainer>
-     <HomeCommunityCarousel></HomeCommunityCarousel>  
-       <CarouselCommunity></CarouselCommunity> 
-      <BlogContainer></BlogContainer>
-
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
        <BlogContainer></BlogContainer>
      <HomeCommunityCarousel></HomeCommunityCarousel>  
        <CarouselCommunity></CarouselCommunity> 
       <Faqs></Faqs>
-      <Footer></Footer>
+      <Footer></Footer> 
+   
     </div>
   );
 };
