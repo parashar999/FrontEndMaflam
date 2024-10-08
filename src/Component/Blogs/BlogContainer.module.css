@@ -1,4 +1,8 @@
-.MainContainer {
+
+
+
+ .MainContainer{
+
     height: auto;
     background-color: #030b11;
     padding: 30px 0px 50px 0px;
@@ -7,9 +11,8 @@
 .MainContainer h1 {
     color: #fff;
     text-align: center;
-    /* Responsive font size using viewport width */
-    font-size: clamp(1.5rem, 3vw, 3rem);
 }
+    /* Responsive font size using viewport width */
 
 .pricingimg {
     background-image: url('../../assets/blogpricing.png');
@@ -28,65 +31,114 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -360px;
-    
-    /* Flexbox for centering content */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
- 
-    /* Padding on left and right */
-    padding-left: 300px;
-    padding-right: 300px;
+   
 }
-
-.Rectangle h2 {
+.Rectangle h2{
     color: #fff;
-    /* Responsive font size */
-    font-size: clamp(1.5rem, 4vw, 3.5rem);
-    line-height: 1.2;
-    margin-bottom: 10px;
-    z-index: 1;
+    padding: 60px 510px 0px 350px;
     font-size: 30px;
+    line-height: 40px;
+  
 }
-
-.Rectangle p {
+.Rectangle p{
     color: #fff;
-    /* Responsive font size */
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    line-height: 1.5;
-    margin-bottom: 10px;
-    z-index: 1;
-    font-size: 25px;
+    padding: 0px 370px 0px 350px;
+    font-size: 18px;
+    line-height: 35px;
 }
-
-.Rectangle a {
+.Rectangle a{
     color: #5affea;
+    padding: 0px 520px 10px 350px;
     text-decoration: none;
-    /* Responsive font size */
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
-    z-index: 1;
-    font-size: 25px;
+    font-size: 18px;
 }
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .pricingimg {
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .MainContainer{
+        height: auto;
+        background-color: #030b11;
+        height: auto;
+        padding: 30px 0px 50px 0px;
+       
+    }
+    .pricingimg{
         margin-top: -30px;
         height: 200px;
         width: auto;
         margin: 0px 20px;
     }
-
-    .Rectangle {
+    .Rectangle{
         margin-top: -200px;
         height: 200px;
-
-        /* Reduced padding on smaller screens */
-        padding-left: 20px;
-        padding-right: 20px;
+        width: auto;
     }
-
-    /* Already responsive via clamp, no changes needed */
+    .pricingimg{
+        background-image: url('../../assets/blogpricing.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 300px;
+        margin-top: 50px;
+      
+    }
+    .Rectangle{
+        background-image: url('../../assets/maflamhomeimg.png');
+        height: 320px;
+        width: auto;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: -320px;
+     
+       
+        
+    }
+   
+    .Rectangle h2{
+        color: #fff;
+        padding: 50px 300px 0px 250px;
+        font-size: 30px;
+        line-height: 35px;
+      
+    }
+    .Rectangle p{
+        color: #fff;
+        padding: 10px 250px 0px 250px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .Rectangle a{
+       
+        padding: 20px 100px 10px 250px;
+       font-size: 20px;
+    }
 }
+@media screen and (max-width: 768px){
+    .pricingimg{
+        margin-top: -30px;
+        height: 200px;
+        width: auto;
+        margin: 0px 20px;
+    }
+    .Rectangle{
+        margin-top: -200px;
+        height: 200px;
+        width: auto;
+    }
+    .Rectangle h2{
+        color: #fff;
+        padding: 0px 10px 0px 0px;
+        font-size: 1px;
+        line-height: 20px;
+    }
+    .Rectangle p{
+        color: #fff;
+        padding: 5px 100px 0px 30px;
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .Rectangle a{
+        padding: 0px 100px 10px 30px;
+       font-size: 12px;
+    }
+} 
+
