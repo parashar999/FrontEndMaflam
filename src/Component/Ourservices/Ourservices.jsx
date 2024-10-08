@@ -19,7 +19,7 @@ function Ourservices() {
           <p>Specialized Courses</p></div>
             <div className={styles.flexx}> <h1>+600</h1>
             <p>Educational Video</p></div>
-           <div className={styles.flexx}>  <h1>+550</h1>
+           <div className={styles.flexx}  >  <h1>+550</h1>
            <p>Educational Materials</p></div>
           </div>
 
