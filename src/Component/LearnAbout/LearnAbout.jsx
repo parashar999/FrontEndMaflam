@@ -26,18 +26,19 @@ function LearnAbout() {
             </h1>
 
             <button className={styles.subscribebutton}>Subscribe</button>
-            <br></br>
+           
             <div className={styles.buttondiv}>
+            <br></br>
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> 30+ Hours
               </button>
-              {/* <br></br> */}
-
+           
+          
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Flexible and
                 Focused Learning
               </button>
-
+             
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Available for
                 a Lifetime
