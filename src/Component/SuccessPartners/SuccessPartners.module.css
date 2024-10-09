@@ -169,3 +169,16 @@ flex-shrink: 0;
     }
   }
   
+
+  @media (min-width: 375px) and (max-width: 667px) {
+    .partnersLogos {
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      max-width: 400px; 
+    }
+  
+    .partnerLogo img {
+      max-width: 120px;
+      height: auto;
+    }
+}
+

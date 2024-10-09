@@ -305,3 +305,36 @@
     padding: 6px 14px;
   }
 }
+
+
+@media (min-width: 820px) and (max-width: 1180px) {
+  .leftLinks, .rightLinks, .searchContainer {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar.active .leftLinks,
+  .navbar.active .rightLinks {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(26, 34, 40, 0.9);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .leftLinks a, .rightLinks a {
+    margin: 10px 0;
+  }
+
+  .signupButton {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}

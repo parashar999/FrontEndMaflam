@@ -186,3 +186,32 @@
     margin-top: 20px;
   }
 }
+
+@media (min-width: 820px) and (max-width: 1180px) {
+  .heroContainer {
+    padding: 0 5px;
+    /* margin: 0 10%; */
+    height: 200px;
+    text-align: center;
+    margin-bottom: 20%;
+  }
+
+  .content {
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .primaryButton {
+    font-size: 12px;
+    padding: 6px 14px;
+    margin-top: 20px;
+  }
+}
