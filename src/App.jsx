@@ -17,8 +17,10 @@ import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
 import "./App.css"
+import usePreventZoom from "./Component/UsePreventZoom/UsePreventZoom.jsx";
 
 const App = () => {
+  usePreventZoom()
   return (
 
         <Routes>
