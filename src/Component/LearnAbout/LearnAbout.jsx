@@ -26,7 +26,7 @@ function LearnAbout() {
             </h1>
 
             <button className={styles.subscribebutton}>Subscribe</button>
-           
+            <br></br>
             <div className={styles.buttondiv}>
             <br></br>
               <button className={styles.rigthcheck}>

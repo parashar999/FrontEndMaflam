@@ -14,43 +14,26 @@
  
 }
 .mainConatiner h1{
-  font-family: "Noto Kufi Arabic";
-  font-size: 65px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 150%; /* 97.5px */
-  background: linear-gradient(266deg, #0FF -33.31%, #7C2D98 114.78%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 50px;
+  background-image: linear-gradient(to right, #7C2D98, #00FFFF); 
+  /* color: white;  */
+  padding: 10px; 
+  /* display: inline-block;  */
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+
 
 }
 .mainConatiner h2{
-  color: var(--Accent-Accent-50, #F6FFFF);
-  text-align: center;
-  font-family: "Noto Kufi Arabic";
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 160%; /* 57.6px */
+  color: #fff;
 }
 .mainConatiner h3{
-  color: #EBF5F4;
-  text-align: center;
-  font-family: "Noto Kufi Arabic";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 180%; /* 43.2px */
-  
+  color: #fff;
 }
 .para1{
-  color: rgba(90, 255, 255, 0.70);
-  font-family: "Noto Kufi Arabic";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 180%;
+  color: #00FFFF;
 }
 .contentConatiner {
   height: auto;
@@ -63,21 +46,17 @@ background-clip: text;
 
 }
 .firstcard{
-  height: auto;
+  height: 370px;
   border: 0.2px solid #00FFFF;
-  width: 390px;
+  width: 330px;
   border-radius: 20px;
   margin: 40px 0px;
  
   
 }
 .firstcard p{
-  color: var(--Accent-Accent-50, #F6FFFF);
-  font-family: "Noto Kufi Arabic";
+  color: #fff;
   font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 160%; /* 57.6px */
   text-align: left;
   padding: 10px 25px;
 }
@@ -91,43 +70,22 @@ background-clip: text;
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
 .firstcard h1{
-  color: var(--Accent-Accent-400---Main, #39FFFB);
-text-align: left;
-
-/* Headlines/Headline 2 */
-font-family: "Noto Kufi Arabic";
-font-size: 42px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%; /* 67.2px */
-padding: 0px 25px;
+  font-size: 20px;
+  padding: 10px 25px;
+  color: #00FFFF;
+  text-align: left;
 }
 .firstcard span{
-  color: var(--Accent-Accent-50, #F6FFFF);
-text-align: right;
-
-/* Headlines/Headline 6 */
-font-family: "Noto Kufi Arabic";
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%; /* 38.4px */
-
+  color: #fff;
+  font-size: 15px;
 }
 .firstcard .subscribebutton{
-  border-radius: 64px;
-  background: var(--Accent-Accent-400---Main, #39FFFB);
-  box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
-  border: none;
-  display: flex;
-  width: 149px;
- height: 56px;
- padding: 16px 24px;
- justify-content: center;
- align-items: center;
- gap: 8px;
- flex-shrink: 0;
- margin:0px 25px;
+float: left;
+margin: 0px 25px;
+padding: 5px 20px;
+background-color: #00FFFF;
+border: none;
+border-radius: 20px;
 }
 .firstcard .rigthcheck{
   background: #030b11;
@@ -138,17 +96,10 @@ line-height: 160%; /* 38.4px */
   float: left;
   margin: 5px 25px 5px 25px;
   line-height: 20px;
-  font-family: "Noto Kufi Arabic";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 180%; /* 25.2px */
   
 }
 .firstcard .rigthclick{
   color: #00FFFF;
-  width: 20px;
-height: 20px;
   
 }
 .buttondiv{
@@ -156,31 +107,25 @@ height: 20px;
   height: 200px;
   line-height: 0px;
   margin-top: 30px;
-  margin-bottom: 0px;
 }
 
 
 
 
 .secondcard{
-  height: 440px;
+  height: 350px;
   border: 1px solid #00FFFF;
-  width: 350px;
+  width: 310px;
   margin-top:60px;
   border-radius: 20px;
  
 }
 .secondcard p{
-  color: var(--Accent-Accent-50, #F6FFFF);
-text-align: left;
-
-/* Headlines/Healdine 5 */
-font-family: "Noto Kufi Arabic";
-font-size: 25px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%; /* 44.8px */
-padding: 40px 25px 0px 25px;
+  color: #fff;
+  padding-top: 20px;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 20px;
 }
 .secondcard  .breakline{
   width: 85%;
@@ -192,31 +137,17 @@ padding: 40px 25px 0px 25px;
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
 .secondcard h1{
-  color:#39FFFB;
-
-/* Headlines/Headline 2 */
-font-family: "Noto Kufi Arabic";
-font-size: 42px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%; /* 67.2px */
-text-align: left;
-padding: 10px 25px;
+  font-size: 20px;
+  padding: 10px 28px;
+  color: #00FFFF;
+  text-align: left;
 }
 .secondcard span{
-  color: var(--Accent-Accent-50, #F6FFFF);
-text-align: right;
-
-/* Headlines/Headline 6 */
-font-family: "Noto Kufi Arabic";
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%; /* 38.4px */
+  color: #fff;
+  font-size: 15px;
 }
 .secondcard .rigthclick{
-  width: 20px;
-height: 20px;
+  color: #fff;
 }
 .secondcard .rigthcheck{
   background: #030b11;
@@ -228,36 +159,13 @@ height: 20px;
   margin: 5px 20px 5px 20px;
   line-height: 20px;
   font-size: 12px;
-  font-family: "Noto Kufi Arabic";
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 180%; /* 25.2px */
 }
 .para{
-  color: #FFF;
-  text-align: center;
-  font-family: "Noto Kufi Arabic";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 180%; /* 36px */
+  color: #fff;
 }
 .link{
-  color: #5AFFFF;
-font-family: "Noto Kufi Arabic";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 180%;
-text-decoration: none;
-}
-@media (max-width: 1066px)
-{
-  .mainConatiner{
-    /* border: 1px solid rgb(16, 114, 200); */
-    height: auto;
-  }
+  color: #00FFFF;
+  text-decoration: none;
 }
 @media (max-width: 768px){
   .mainConatiner h1{
@@ -280,16 +188,16 @@ text-decoration: none;
   
   }
   .firstcard{
-    height: auto;
-    width: 360px;
+    height: 370px;
+    width: 330px;
     border-radius: 10px;
     margin:10px auto 10px auto;
    
     
   }
   .secondcard{
-    height: 400px;
-    width: 360px;
+    height: 350px;
+    width: 330px;
     margin:20px auto 10px auto;
     border-radius: 10px;
    
