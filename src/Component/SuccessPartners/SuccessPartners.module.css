@@ -1,4 +1,5 @@
-/* 
+
+  /* 
 .successPartnersSection {
 
     color: #fff;      
@@ -92,6 +93,7 @@ flex-shrink: 0;
   }
    */
 
+   
    .successPartnersSection {
     max-width: 1550px; 
     margin: 0 auto; 
@@ -149,19 +151,34 @@ flex-shrink: 0;
   
     .partnerLogo img {
       width: 160px;
-      height: 130px;
+      height: 110px;
     }
   }
   
-  @media (max-width: 350px) {
+  @media (max-width: 360px) {
     .partnersLogos {
-      grid-template-columns: repeat(1, minmax(160px, 1fr));
+      grid-template-columns: repeat(1, minmax(260px, 1fr));
       max-width: 400px; 
+      height: 20px;
     }
   
     .partnerLogo img {
       max-width: 140px;
-      height: auto;
+      margin-top: -20px;
+      height: 70px;
     }
   }
   
+
+  @media (min-width: 375px) and (max-width: 667px) {
+    .partnersLogos {
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      max-width: 400px; 
+    }
+  
+    .partnerLogo img {
+      max-width: 120px;
+      height: auto;
+    }
+}
+
