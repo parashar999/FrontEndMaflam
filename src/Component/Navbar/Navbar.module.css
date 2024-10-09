@@ -294,8 +294,9 @@
 }
 
 /* Ultra small devices (375px and below) */
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .navbar {
+    width: 100%;
     padding: 10px 15px;
   }
 
