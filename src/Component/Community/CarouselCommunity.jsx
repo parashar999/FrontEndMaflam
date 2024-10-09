@@ -32,7 +32,7 @@ const CarouselCommunity = () => {
 
   return (
     <div className={styles.carouselWrapper}>
-      <h2>maflam community</h2>
+      <h2>Maflam Community</h2>
       <div className={styles.carousel}>
         <button className={styles.carouselArrowLeft} onClick={scrollLeft}>
         &larr;

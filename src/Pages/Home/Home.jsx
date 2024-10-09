@@ -33,11 +33,10 @@ const Home = () => {
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel />
+      <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
-       <BlogContainer></BlogContainer>
-     <HomeCommunityCarousel></HomeCommunityCarousel>  
-       <CarouselCommunity></CarouselCommunity> 
+
       <Faqs></Faqs>
       <Footer></Footer> 
    
