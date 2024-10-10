@@ -18,7 +18,7 @@
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 160%; /* 57.6px */
+  line-height: 160%; 
 }
 
 .carousel {
@@ -26,10 +26,11 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0px;
+  padding: 20px 90px;
 }
 
 .sliderContainer {
+  display: flex;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -47,16 +48,17 @@
 
 .card {
   flex: 0 0 auto;
-  /* padding: 20px; */
+  
   margin: 10px;
   box-sizing: border-box;
   text-align: center;
-  /* border: 1px solid #ccc; */
+  
   border-radius: 5px;
   height: 500px;
   color: #fff;
-  width: 375px;
+  width: 330px;
 }
+
 .card img{
   height: 500px;
   width: 100%;
@@ -92,7 +94,7 @@
 }
 
 .arrowLeft {
-  left: 10px;
+  left: 20px;
   border-radius: 50%;
   background-color: #4444;
   display: flex;
@@ -104,10 +106,10 @@ flex-shrink: 0;
 }
 
 .arrowRight {
-  right: 10px;
-  /* border: 1px solid #7777; */
+  right: 20px;
+
   border-radius: 50%;
-  width: 60px; /* Ensure width and height are equal */
+  width: 60px; 
   height: 60px;
   background-color: #4444;
   display: flex;
@@ -125,7 +127,7 @@ font-family: "Noto Kufi Arabic";
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
-line-height: 160%; /* 38.4px */
+line-height: 160%; 
 padding: 10px 200px;
 
 }
@@ -146,7 +148,7 @@ padding: 10px 200px;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%; /* 38.4px */
+    line-height: 160%; 
     padding: 10px 10px;
     
     }

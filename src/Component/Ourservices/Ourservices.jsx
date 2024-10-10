@@ -15,17 +15,17 @@ function Ourservices() {
           </div>
 
           <div className={styles.text2}>
-          <div className={styles.flexx}>  <h1>+9</h1>
+          <div className={styles.flexx}>  <h1>+550</h1>
           <p>Specialized Courses</p></div>
             <div className={styles.flexx}> <h1>+600</h1>
             <p>Educational Video</p></div>
-           <div className={styles.flexx}  >  <h1>+550</h1>
+           <div className={styles.flexx}  >  <h1>+9</h1>
            <p>Educational Materials</p></div>
           </div>
 
           <div className={styles.frane64}>
             <img src={assests.quotes} className={styles.quotesIcon} alt="Quotes"/>
-            <p>With Maflam, I learned more than I did in my four years at university.</p>
+            <p className={styles.para}>With Maflam, I learned more than I did in my four years at university.</p>
           </div>
         </div>
       </div>

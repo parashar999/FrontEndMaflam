@@ -8,13 +8,8 @@
   }
   
   .carouselcontainer h2 {
-    color: #FFF;
+    color: #fff;
     text-align: center;
-    font-family: "Noto Kufi Arabic";
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%; /* 57.6px */
   }
   
   .carousel {
