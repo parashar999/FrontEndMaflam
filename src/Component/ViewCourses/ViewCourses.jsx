@@ -28,7 +28,9 @@ function ViewCourses() {
           </div>
         ))}
       </div>
+      <div className={styles.btnpadding}>
       <button className={styles.fullWidthButton}>View All Courses</button>
+      </div>
       <div className={styles.playButtonContainer}>
       <svg width="120" height="150" viewBox="0 0 190 189" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="Arrow">

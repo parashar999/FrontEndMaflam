@@ -1,141 +1,150 @@
-.MainContainer{
-    /* border: 1px solid rgb(165, 158, 158); */
+.MainContainer {
     height: auto;
     background-color: #030b11;
-    height: auto;
     padding: 30px 0px 50px 0px;
-   
-}
-.MainContainer h1{
+    /* border: 1px solid rebeccapurple; */
+  }
+  
+  .MainContainer h1 {
     color: #fff;
     text-align: center;
-}
-
-.pricingimg{
-    background-image: url('../../assets/blogpricing.png');
+  }
+  /* Responsive font size using viewport width */
+  
+  .pricingimg {
+    background-image: url("../../assets/blogpricing.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
     margin-top: 100px;
-}
-.Rectangle{
-    background-image: url('../../assets/maflamhomeimg.png');
+  }
+  
+  .Rectangle {
+    background-image: url("../../assets/maflamhomeimg.png");
     height: 400px;
-    width: auto;
-    background-position:center;
+    width: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -360px;
-    /* position: absolute; */
-   
-    
-}
-.Rectangle h2{
+  }
+  .contentContainer{
+    margin: -330px auto 200px auto;
+    max-width: 650px;
+  }
+  .contentContainer h2 {
     color: #fff;
-    padding: 60px 480px 10px 350px;
-    font-size: 35px;
+    font-size: 40px;
     line-height: 40px;
   
-}
-.Rectangle p{
+  }
+  .contentContainer p {
     color: #fff;
-    padding: 10px 420px 10px 350px;
-    font-size: 20px;
-    line-height: 35px;
-}
-.Rectangle a{
-    color: #5affea;
-    padding: 10px 520px 10px 350px;
-    text-decoration: none;
-}
-@media screen and (min-width: 768px) and (max-width:1024px){
-    .MainContainer{
-        /* border: 1px solid rgb(165, 158, 158); */
-        height: auto;
-        background-color: #030b11;
-        height: auto;
-        padding: 30px 0px 50px 0px;
-       
-    }
-    .pricingimg{
-        margin-top: -30px;
-        height: 200px;
-        width: auto;
-        margin: 0px 20px;
-    }
-    .Rectangle{
-        margin-top: -200px;
-        height: 200px;
-        width: auto;
-    }
-    .pricingimg{
-        background-image: url('../../assets/blogpricing.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 300px;
-        margin-top: 50px;
-    }
-    .Rectangle{
-        background-image: url('../../assets/maflamhomeimg.png');
-        height: 300px;
-        width: auto;
-        background-position:center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-top: -300px;
-        /* position: absolute; */
-       
-        
-    }
    
-    .Rectangle h2{
-        color: #fff;
-        padding: 50px 470px 0px 250px;
-        font-size: 18px;
-        line-height: 25px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .contentContainer a {
+    color: #5affea;
+    
+    text-decoration: none;
+    font-size: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .MainContainer {
+      height: auto;
+      background-color: #030b11;
+      height: auto;
+      padding: 30px 0px 50px 0px;
     }
-    .Rectangle p{
-        color: #fff;
-        padding: 5px 430px 0px 250px;
-        font-size: 13px;
-        line-height: 20px;
+    .pricingimg {
+      margin-top: -30px;
+      height: 200px;
+      width: auto;
+      margin: 0px 20px;
     }
-    .Rectangle a{
-       
-        padding: 0px 100px 10px 250px;
-       font-size: 14px;
+    .Rectangle {
+      margin-top: -200px;
+      height: 200px;
+      width: auto;
     }
-}
-@media screen and (max-width: 768px){
-    .pricingimg{
-        margin-top: -30px;
-        height: 200px;
-        width: auto;
-        margin: 0px 20px;
+    .pricingimg {
+      background-image: url("../../assets/blogpricing.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 300px;
+      margin-top: 50px;
     }
-    .Rectangle{
-        margin-top: -200px;
-        height: 200px;
-        width: auto;
+    .Rectangle {
+      background-image: url("../../assets/maflamhomeimg.png");
+      height: 320px;
+      width: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: -320px;
     }
-    .Rectangle h2{
-        color: #fff;
-        padding: 40px 100px 0px 30px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-    .Rectangle p{
-        color: #fff;
-        padding: 5px 100px 0px 30px;
-        font-size: 10px;
-        line-height: 20px;
-    }
-    .Rectangle a{
-       
-        padding: 0px 100px 10px 30px;
-       font-size: 12px;
-    }
-}
 
+    .contentContainer{
+        margin: -270px auto 200px auto;
+        max-width: 570px;
+      }
+  
+    .contentContainer h2 {
+        color: #fff;
+        font-size: 30px;
+        line-height: 40px;
+      
+      }
+    .contentContainer p {
+      color: #fff;
+     padding-top: 10px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+    .contentContainer a {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pricingimg {
+      margin-top: -30px;
+      height: 200px;
+      width: auto;
+      margin: 0px 20px;
+    }
+    .Rectangle {
+        background-image: url("../../assets/maflamhomeimg.png");
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: -270px;
+      }
+    .contentContainer{
+        margin: -290px auto 200px auto;
+        max-width: 570px;
+      }
+  
+    .contentContainer h2 {
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0px 10px;
+      
+      }
+    .contentContainer p {
+      color: #fff;
+     padding-top: 10px;
+      font-size: 20px;
+      line-height: 25px;
+      padding: 10px 10px;
+    }
+    .contentContainer a {
+      font-size: 20px;
+      padding: 10px 10px;
+    }
+  } 

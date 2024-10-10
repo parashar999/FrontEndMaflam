@@ -1,6 +1,11 @@
+
+
+
+
+
 .Fundamental {
   background-color: #030b11;
-  padding: 50px 135px 70px 135px;
+  padding: 50px 135px 220px 135px;
   height: auto;
 
 }
@@ -205,4 +210,242 @@
 }  
   
   
+@media (min-width: 820px) and (max-width: 1180px) {
+  .Fundamental {
+    /* padding: 30px 20px 30px 20px; */
+    height: auto;
+  }
+  .content {
+    width: 200px;
+    margin: 10px 20px 10px 20px;
+  }
+  .content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .subscribe {
+    height: 120px;
+    margin: 40px auto;
+  }
+  .imgcontainer img {
+    height: 300px;
+    margin-top: -100px;
+    margin-left: 500px;
+  }
+  .ctn {
+    height: 110px;
+    width: 45%;
+    margin: -200px 0px 0px 20px;
+   
+  }
+  .ctn p {
+    font-size: 6px;
+    color: #fff;
 
+  
+  }
+  .checkicobuttun {
+    background-color: cyan;
+    font-size: 4px;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .item b {
+    margin-right: 2px;
+    color: aqua;
+    font-size: 9px;
+  }
+  .item span {
+    font-size: 7px;
+    padding-left: 3px;
+  }
+  .checkico {
+    margin-right: 10px;
+    color: rgb(46, 202, 202);
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+  .Fundamental {
+    /* padding: 30px 20px 30px 20px; */
+    height: auto;
+  }
+  .content {
+    width: 200px;
+    margin: 10px 20px 10px 20px;
+  }
+  .content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .subscribe {
+    height: 120px;
+    margin: 40px auto;
+  }
+  .imgcontainer img {
+    height: 300px;
+    margin-top: -100px;
+    margin-left: 180px;
+  }
+  .ctn {
+    height: 110px;
+    width: 45%;
+    margin: -200px 0px 0px 20px;
+   
+  }
+  .ctn p {
+    font-size: 6px;
+    color: #fff;
+
+  
+  }
+  .checkicobuttun {
+    background-color: cyan;
+    font-size: 4px;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .item b {
+    margin-right: 2px;
+    color: aqua;
+    font-size: 9px;
+  }
+  .item span {
+    font-size: 7px;
+    padding-left: 3px;
+  }
+  .checkico {
+    margin-right: 10px;
+    color: rgb(46, 202, 202);
+    font-size: 15px;
+  }
+}
+
+
+
+@media (min-width: 360px) and (max-width: 740px) {
+  .Fundamental {
+    /* padding: 30px 20px 30px 20px; */
+    height: auto;
+  }
+  .content {
+    width: 200px;
+    margin: 10px 20px 10px 20px;
+  }
+  .content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .subscribe {
+    height: 120px;
+    margin: 40px auto;
+  }
+  .imgcontainer img {
+    height: 300px;
+    margin-top: -100px;
+    margin-left: 170px;
+  }
+  .ctn {
+    height: 110px;
+    width: 45%;
+    margin: -200px 0px 0px 20px;
+   
+  }
+  .ctn p {
+    font-size: 6px;
+    color: #fff;
+
+  
+  }
+  .checkicobuttun {
+    background-color: cyan;
+    font-size: 4px;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .item b {
+    margin-right: 2px;
+    color: aqua;
+    font-size: 9px;
+  }
+  .item span {
+    font-size: 7px;
+    padding-left: 3px;
+  }
+  .checkico {
+    margin-right: 10px;
+    color: rgb(46, 202, 202);
+    font-size: 15px;
+  }
+}
+
+
+
+@media (min-width: 344px) and (max-width: 882px) {
+  .Fundamental {
+    /* padding: 30px 20px 30px 20px; */
+    height: auto;
+  }
+  .content {
+    width: 200px;
+    margin: 10px 20px 10px 20px;
+  }
+  .content p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .subscribe {
+    height: 120px;
+    margin: 40px auto;
+  }
+  .imgcontainer img {
+    height: 300px;
+    margin-top: -100px;
+    margin-left: 170px;
+  }
+  .ctn {
+    height: 110px;
+    width: 45%;
+    margin: -200px 0px 0px 20px;
+   
+  }
+  .ctn p {
+    font-size: 6px;
+    color: #fff;
+
+  
+  }
+  .checkicobuttun {
+    background-color: cyan;
+    font-size: 4px;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  .item b {
+    margin-right: 2px;
+    color: aqua;
+    font-size: 9px;
+  }
+  .item span {
+    font-size: 7px;
+    padding-left: 3px;
+  }
+  .checkico {
+    margin-right: 10px;
+    color: rgb(46, 202, 202);
+    font-size: 15px;
+  }
+}

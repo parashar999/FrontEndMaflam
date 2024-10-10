@@ -6,7 +6,7 @@ import { CiCircleCheck } from "react-icons/ci";
 function Fundamental() {
   return (
     <div>
-       <div className={styles.Fundamental}>
+      <div className={styles.Fundamental}>
         <div className={styles.secondcontainer}>
           <div className={styles.content}>
             <p>Subscribe To The Full Filmmaking Fundamentals Package</p>
@@ -32,23 +32,24 @@ function Fundamental() {
 
                 <div className={styles.item}>
                   <CiCircleCheck className={styles.checkico} />
-                  <p>Includes all specialized courses plus two exclusive ones</p>
+                  <p>
+                    Includes all specialized courses plus two exclusive ones
+                  </p>
                 </div>
 
                 <div className={styles.item}>
                   <button className={styles.checkicobuttun}>Subscribe</button>
-                  <p><b>2.200</b><span>SR</span></p>
+                  <p>
+                    <b>2.200</b>
+                    <span>SR</span>
+                  </p>
                 </div>
-                
               </div>
-              
             </div>
           </div>
         </div>
-      </div> 
-      
+      </div>
     </div>
-    
   );
 }
 
