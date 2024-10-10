@@ -11,6 +11,7 @@
   box-sizing: border-box;
   margin-bottom: 50px;
   background-color: #030b11 !important; 
+  margin: 0 auto;
 }
 
 .content {
