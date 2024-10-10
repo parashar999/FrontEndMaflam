@@ -118,6 +118,8 @@ import FrameDiv4 from "./FrameDiv4.png"
 import FrameDiv5 from "./FrameDiv5.png"
 import FrameDiv6 from "./FrameDiv6.png"
 import FrameDiv7 from "./FrameDiv7.png"
+import logo1 from "./Logo1.png"
+import Footerlogo1 from "./footerlogo.png"
 export const assests = {
   youtubeImage,
   PricingHeroBackground,
@@ -125,6 +127,7 @@ export const assests = {
   caraImg,
   Popular1,
   Popular2,
+  logo1,
   Popular3,
   Popular4,
   Insights1,
@@ -220,7 +223,7 @@ export const assests = {
   videocrc,
   videocrc1,
   maflamScreen,
-  Subscribee,
+  Subscribee,Footerlogo1
   
 };
 
@@ -533,7 +536,7 @@ export const faqData = [
       "At maflam,we ensure lifetime access to our film-making content.Once you make a purchase, you gain permanent access to our exclusive educational materials,available anytime and from anywhere.",
   },
   {
-    question: "why should i choose a full course to learn film-making?",
+    question: "Why should i choose a full course to learn film-making?",
     answer:
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum nam eius quod deserunt quidem libero quo dignissimos esse nobis alias aliquam eaque sit assumenda distinctio excepturi iure minima nesciunt.",
   },
