@@ -21,23 +21,21 @@ function LearnAbout() {
           <div className={styles.firstcard}>
             <p>The full filmmaking fundamental Package</p>
             <div className={styles.breakline}></div>
-            <h1>
-              2,200 <span>SR</span>
-            </h1>
-
+            <h2> 2,200 <span>SR</span></h2>
             <button className={styles.subscribebutton}>Subscribe</button>
             <br></br>
             <div className={styles.buttondiv}>
+            <br></br>
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> 30+ Hours
               </button>
-              {/* <br></br> */}
-
+           
+          
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Flexible and
                 Focused Learning
               </button>
-
+             
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Available for
                 a Lifetime
@@ -47,9 +45,9 @@ function LearnAbout() {
           <div className={styles.secondcard}>
             <p>Traditional Education</p>
             <div className={styles.breakline}></div>
-            <h1>
+            <h2>
               +240,000 <span>SR</span>
-            </h1>
+            </h2>
           
             <button className={styles.rigthcheck}>
             

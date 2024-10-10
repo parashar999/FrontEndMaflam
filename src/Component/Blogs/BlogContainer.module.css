@@ -6,8 +6,13 @@
   }
   
   .MainContainer h1 {
-    color: #fff;
+    color: #FFF;
     text-align: center;
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 57.6px */
   }
   /* Responsive font size using viewport width */
   
@@ -34,22 +39,30 @@
     max-width: 650px;
   }
   .contentContainer h2 {
-    color: #fff;
-    font-size: 40px;
-    line-height: 40px;
-  
+    color: #EBF5F4;
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 54px */
   }
   .contentContainer p {
-    color: #fff;
-   
-    font-size: 25px;
-    line-height: 35px;
+    color: #FFF;
+    font-family: "Noto Kufi Arabic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 38.4px */
   }
   .contentContainer a {
-    color: #5affea;
-    
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+    font-family: "Noto Kufi Arabic";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94.1%; /* 15.997px */
+    letter-spacing: -0.34px;
     text-decoration: none;
-    font-size: 20px;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .MainContainer {
