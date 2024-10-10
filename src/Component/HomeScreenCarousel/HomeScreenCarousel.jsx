@@ -39,43 +39,28 @@ const HomeScreenCarousel = () => {
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
-          &larr;
+        &larr;
         </button>
 
         <div className={styles.sliderContainer} ref={sliderRef}>
-          {/* Separate divs for each card */}
-          <div className={styles.cardWrapper}>
-            <div className={styles.card}>
-              <img src={items[0].imgSrc} alt="Ebook Card 1" />
-            </div>
+          <div className={styles.slider}>
+            {items.map((item) => (
+              <div key={item.id} className={styles.card}>
+                {/* Different image for each card */}
+                <img src={item.imgSrc} alt={`Ebook Card ${item.id}`} />
+              </div>
+            ))}
           </div>
-
-          <div className={styles.cardWrapper}>
-            <div className={styles.card}>
-              <img src={items[1].imgSrc} alt="Ebook Card 2" />
-            </div>
-          </div>
-
-          <div className={styles.cardWrapper}>
-            <div className={styles.card}>
-              <img src={items[2].imgSrc} alt="Ebook Card 3" />
-            </div>
-          </div>
-
-          {/* Add more card divs as necessary */}
         </div>
 
         {/* Right Arrow */}
         <button className={styles.arrowRight} onClick={scrollRight}>
-          &rarr;
+        &rarr;
         </button>
       </div>
-
       <div className={styles.contentpara}>
-        <p>
-          Unlock your free eBook filled with essential tips and insights for filmmakers
-          simply enter your email to download and start learning today!
-        </p>
+        <p>Unlock your free eBook filled with essential tips and insights for filmmakers
+        simply enter your email to download and start learning today!</p>
       </div>
     </div>
   );
