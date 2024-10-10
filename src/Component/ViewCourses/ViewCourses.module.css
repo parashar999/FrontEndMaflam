@@ -214,7 +214,7 @@
   justify-content: center; 
   padding: 20px; 
   width: 100%; 
-  max-width: 1200px; 
+  max-width: 1500px; 
   margin: 0 auto; 
   background-image: url("../../assets/viewCoursebg.png");
   background-size: cover;
@@ -262,6 +262,7 @@
   background: 
     linear-gradient(90deg, rgba(138, 29, 138, 0.128) 0%, rgba(90, 255, 234, 0.2) 32%, rgba(255, 0, 147, 0.158) 63.5%, rgba(54, 153, 140, 0.2) 100%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14));
+    
 }
 
 /* Play Button Container */
