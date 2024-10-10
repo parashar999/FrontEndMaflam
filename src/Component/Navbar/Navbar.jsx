@@ -15,6 +15,8 @@ import { PiSuitcaseSimpleFill } from "react-icons/pi";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); // New state for hamburger
+
   const toggleDropdown = (dropdownName) => {
     if (openDropdown === dropdownName) {
       setOpenDropdown(null);
@@ -23,9 +25,13 @@ const Navbar = () => {
     }
   };
 
+  const toggleHamburger = () => {
+    setIsHamburgerOpen(!isHamburgerOpen); // Toggle hamburger open/close
+  };
+
   return (
     <nav
-      className={styles.navbar}
+      className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
       <img src={logo} alt="Logo" className={styles.logo} />
@@ -69,12 +75,10 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Packages Link */}
         <a href="#about">
           Packages <span className={styles.arrow}>&#8595;</span>
         </a>
 
-        {/* Resources Dropdown */}
         <div className={styles.dropdown}>
           <a href="#resources" onClick={() => toggleDropdown("resources")}>
             Resources <span className={styles.arrow}>&#8595;</span>
@@ -88,7 +92,6 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Contact Us Dropdown */}
         <div className={styles.dropdown}>
           <a href="#contact" onClick={() => toggleDropdown("contact")}>
             Contact Us <span className={styles.arrow}>&#8595;</span>
@@ -112,12 +115,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Search Container */}
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />
       </div>
 
-      {/* Right Links */}
       <div className={styles.rightLinks}>
         <a href="#" target="_blank" className={styles.signupButton}>
           Create an Account
@@ -128,7 +129,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Menu */}
-      <div className={styles.hamburger} onClick={() => {}}>
+      <div className={styles.hamburger} onClick={toggleHamburger}>
         <div></div>
         <div></div>
         <div></div>
