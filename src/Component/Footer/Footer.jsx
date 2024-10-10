@@ -2,7 +2,7 @@
 import React from 'react';
 import FooterLogo from '../../assets/footerLogo.svg';
 import styles from './Footer.module.css';
-import { footerColumnData } from '../../assets/assests';
+import { assests, footerColumnData } from '../../assets/assests';
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className={styles.footerColumns}>
           {/* Logo and Social Icons in the First Column */}
           <div className={styles.footerColumn}>
-            <img src={FooterLogo} alt="Footer Logo" className={styles.footerLogo} />
+            <img src={assests.Footerlogo1} alt="Footer Logo" className={styles.footerLogo} />
             <ul>
             <li className={styles.socialIcons}>
             <a href="#" aria-label="LinkedIn"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">

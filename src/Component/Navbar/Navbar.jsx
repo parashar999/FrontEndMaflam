@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import logo from "../../assets/logo.svg";
+import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrGroup } from "react-icons/gr";
@@ -34,7 +34,7 @@ const Navbar = () => {
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
-      <img src={logo} alt="Logo" className={styles.logo} />
+      <img src={logo1} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
         <a href="/aboutus">About Maflam</a>
         <div className={styles.dropdown}>
