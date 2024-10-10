@@ -533,7 +533,7 @@ export const faqData = [
       "At maflam,we ensure lifetime access to our film-making content.Once you make a purchase, you gain permanent access to our exclusive educational materials,available anytime and from anywhere.",
   },
   {
-    question: "why should i choose a full course to learn film-making?",
+    question: "Why should i choose a full course to learn film-making?",
     answer:
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, cum nam eius quod deserunt quidem libero quo dignissimos esse nobis alias aliquam eaque sit assumenda distinctio excepturi iure minima nesciunt.",
   },
