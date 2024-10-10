@@ -8,10 +8,25 @@
   background-position: center; 
   background-repeat: no-repeat;
   text-align: center; 
+  align-items: center;
   padding: 20px;
   margin: auto;
-  background-color: black;
+  /* background-color: black; */
+  width: 100%; 
+  max-width: 1500px; 
 }
+
+/* .container {
+  width: 100%; 
+  max-width: 1500px; 
+} */
+
+
+
+
+
+
+
 
 .faqContainer h2 {
   margin-bottom: 40px;

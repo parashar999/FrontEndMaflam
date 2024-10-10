@@ -25,19 +25,21 @@ function LearnAbout() {
               2,200 <span>SR</span>
             </p>
 
+          
             <button className={styles.subscribebutton}>Subscribe</button>
             <br></br>
             <div className={styles.buttondiv}>
+            <br></br>
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> 30+ Hours
               </button>
-              {/* <br></br> */}
-
+           
+          
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Flexible and
                 Focused Learning
               </button>
-
+             
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Available for
                 a Lifetime
@@ -50,6 +52,7 @@ function LearnAbout() {
             <p>
               +240,000 <span>SR</span>
             </p>
+       
           
             <button className={styles.rigthcheck}>
             
