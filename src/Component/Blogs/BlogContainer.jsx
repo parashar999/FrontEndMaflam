@@ -6,7 +6,7 @@ function BlogContainer() {
   return (
     <div>
       <div className={styles.MainContainer}>
-        <h1>Blogs</h1>
+        <h1>Maflam Blogs</h1>
         <div className={styles.pricingimg}>
            
         </div>

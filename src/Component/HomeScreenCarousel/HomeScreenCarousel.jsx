@@ -58,6 +58,10 @@ const HomeScreenCarousel = () => {
         &rarr;
         </button>
       </div>
+      <div className={styles.contentpara}>
+        <p>Unlock your free eBook filled with essential tips and insights for filmmakers
+        simply enter your email to download and start learning today!</p>
+      </div>
     </div>
   );
 };
