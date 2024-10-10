@@ -32,7 +32,7 @@ const Home = () => {
       <SuccessPartners></SuccessPartners>
       <LearnAbout></LearnAbout>
       <MaflamInstructors></MaflamInstructors>
-      <HomeScreenCarousel />
+      <HomeScreenCarousel /> 
       <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
