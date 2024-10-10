@@ -1,10 +1,9 @@
-/* Navbar container
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 15px 50px;
+  padding: 10px 50px;
   backdrop-filter: blur(30px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,9 +16,7 @@
 .logo {
   height: 40px;
 }
-
-/* Left Links */
-/* .leftLinks {
+.leftLinks {
   padding: 0 5px;
   display: flex;
   justify-content: center;
@@ -38,78 +35,7 @@
 .leftLinks a:hover {
   color: #0ccac4;
   font-weight: 500;
-} */ 
- /* Navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 15px 50px;
-  backdrop-filter: blur(30px);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 }
-
-.logo {
-  height: 40px;
-}
-
-/* Left Links */
-.leftLinks {
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  text-align: center;
-}
-
-.leftLinks a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.leftLinks a:hover {
-  color: #0ccac4;
-  font-weight: 500;
-}
-
-/* Dropdown Styling */
-.dropdown {
-  position: relative;
-}
-
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.submenu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.submenu a:hover {
-  color: #0ccac4;
-}
-
-
-/* Search Container */
 .searchContainer {
   height: 37px;
   max-width: 250px;
@@ -123,7 +49,6 @@
   border-color: #0ccac4;
   outline: #0ccac4;
 }
-
 .searchContainer input {
   border: none;
   background: transparent;
@@ -139,8 +64,6 @@
   color: #ccc;
   cursor: pointer;
 }
-
-/* Right Links */
 .rightLinks {
   margin-left: 20px;
   display: flex;
@@ -153,8 +76,6 @@
   color: #0ccac4;
   text-decoration: none;
 }
-
-/* Signup Button */
 .signupButton {
   border-radius: 64px;
   background: var(--Primary-Primary-300, #1A374B);
@@ -168,24 +89,21 @@
 .submenu a:hover {
   background-color: #444; /* Adjust hover effect */
 }
-/* Dropdown container (for the Resources link) */
 .dropdown {
   position: relative;
 }
-
-/* Submenu positioning */
 .submenu {
-  background-color: #333; /* Adjust as needed */
+  background-color: #333;
   padding: 10px;
   border-radius: 5px;
   position: absolute;
-  top: 100%; /* Position below the parent (Resources link) */
-  left: 0; /* Align with the Resources link */
+  top: 100%; 
+  left: 0; 
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 999; /* Ensure it appears above other elements */
-  min-width: 150px; /* Adjust submenu width if needed */
+  z-index: 999;
+  min-width: 150px;
 }
 
 .submenu a {
@@ -199,14 +117,9 @@
   background-color: #444; /* Adjust hover effect */
 }
 
-/* Ensure submenu doesn't get hidden behind other elements on smaller screens */
 .navbar {
-  z-index: 1000; /* Make sure the navbar and submenu stay on top */
+  z-index: 1000;
 }
-
-
-
-/* Hamburger Menu Icon */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -220,10 +133,6 @@
   background-color: #fff;
   transition: 0.3s ease;
 }
-
-/* Responsive Styles */
-
-/* Tablets (768px and below) */
 @media (max-width: 768px) {
   .leftLinks, .rightLinks, .searchContainer {
     display: none;
@@ -255,27 +164,23 @@
     padding: 10px 0;
   }
 }
-
-/* Small devices (576px and below) */
 @media (max-width: 576px) {
   .navbar {
-    padding: 15px 30px; /* Reduced padding for smaller screens */
+    padding: 15px 30px;
   }
 
   .logo {
-    height: 35px; /* Adjusted logo size */
+    height: 35px;
   }
 
   .signupButton {
-    font-size: 14px; /* Reduced button text size */
+    font-size: 14px;
     padding: 8px 20px;
   }
 }
-
-/* Extra small devices (425px and below) */
 @media (max-width: 425px) {
   .navbar {
-    padding: 15px 20px; /* Further reduced padding */
+    padding: 15px 20px;
   }
 
   .logo {
@@ -301,6 +206,7 @@
   }
 
   .signupButton {
+    text-align: right;
     font-size: 12px;
     padding: 6px 14px;
   }
