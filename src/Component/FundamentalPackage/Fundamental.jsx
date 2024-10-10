@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Fundamental.module.css";
 import Book from "../../assets/Rectangle 88 (1).png";
 import { CiCircleCheck } from "react-icons/ci";
