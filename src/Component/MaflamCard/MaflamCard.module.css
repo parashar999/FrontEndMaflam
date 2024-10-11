@@ -6,8 +6,8 @@
   padding: 20px;
   min-height: 500px;
   min-width: 400px;
-  margin-left: 100px;
-  margin-right: 100px;
+  max-width: 1500px;
+margin: 0  auto;
 }
 
 .container h2 {
@@ -123,7 +123,7 @@
 
 }
 
-@media (min-width: 345px) and (max-width: 667px) {
+@media (min-width: 305px) and (max-width: 667px) {
   
   .container {
     text-align: center;
@@ -133,6 +133,17 @@
     width: 90%;
     margin-left: 20px;
     margin-right: 100px;
+  }
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .image {
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
   }
   
   

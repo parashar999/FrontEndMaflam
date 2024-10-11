@@ -3,14 +3,12 @@
     /* background-image: url("../../assets/instructiobg.png"); */
     background-image: url("../../assets/backgronds.png");
     padding: 20px;
-    min-height: 730px;
+    min-height: 630px;
     border-radius: 8px;
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1250px;
+    margin:0 auto;
     margin-top: 60px;
     margin-bottom: 60px !important;
-  
-
     text-align: center;
   }
   .instructorsContainerss{
@@ -52,7 +50,7 @@ line-height: 160%;
   }
   
   .instructorImage {
-    width: 100%;
+    width: 90%;
     padding: 0px;
     height: auto;
     border-radius: 8px;
@@ -72,6 +70,12 @@ line-height: 160%;
   
 
   
-@media (min-width: 375px) and (max-width: 667px) {
+@media (min-width: 300px) and (max-width: 667px) {
+  .instructorImage {
+    width: 60%;
+    padding: 0px;
+    height: auto;
+    border-radius: 8px;
+  }
   
 }
