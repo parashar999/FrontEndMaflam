@@ -185,7 +185,8 @@
   flex-direction: column;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 999; /* Ensure it appears above other elements */
-  min-width: 150px; /* Adjust submenu width if needed */
+  min-width: 300px; /* Adjust submenu width if needed */
+  align-items: start;
 }
 
 .submenu a {
@@ -338,3 +339,5 @@
     padding: 10px 0;
   }
 }
+
+
