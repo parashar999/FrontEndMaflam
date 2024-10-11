@@ -18,29 +18,28 @@ import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCom
 import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
 import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 
+
 const Home = () => {
   return (
     <div className={Styles.Home}>
       <Navbar></Navbar>
-      <HomeHero></HomeHero>
-      <LearnMaflam></LearnMaflam>
+      <HomeHero></HomeHero> 
+       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
-      <LearnAbout></LearnAbout>
-      <MaflamInstructors></MaflamInstructors>
-      <HomeScreenCarousel />
-      <BlogContainer></BlogContainer>
-
-      <HomeCommunityCarousel></HomeCommunityCarousel>
-      <CarouselCommunity></CarouselCommunity>
+      <LearnAbout></LearnAbout> 
+       <MaflamInstructors></MaflamInstructors>
+      <HomeScreenCarousel /> 
       <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
-      <Faqs></Faqs>
-      <Footer></Footer>
+{/* 
+      <Faqs></Faqs> */}
+      <Footer></Footer> 
+   
     </div>
   );
 };

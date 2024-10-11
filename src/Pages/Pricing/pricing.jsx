@@ -14,7 +14,6 @@ function Pricing() {
       <div>
         <Navbar></Navbar>
         <PricingPage></PricingPage>
-        
         <Fundamental></Fundamental>
         <VariousCourse></VariousCourse>
         <Carousel></Carousel>

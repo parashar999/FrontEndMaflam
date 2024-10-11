@@ -1,327 +1,163 @@
-
-
 .MainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: auto;
     background-color: #030b11;
     padding: 30px 0px 50px 0px;
-}
-
-.MainContainer h1 {
-    color: #fff;
+    /* border: 1px solid rebeccapurple; */
+  }
+  
+  .MainContainer h1 {
+    color: #FFF;
     text-align: center;
-}
-
-.pricingimg {
-    background-image: url('../../assets/blogpricing.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-    margin-top: 100px;
-}
-
-.Rectangle {
-    background-image: url('../../assets/maflamhomeimg.png');
-    
-    height: 380px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: -360px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.Rectangle h2 {
-    color: #fff;
-    font-size: 28px;
-    text-align: left;
-    line-height:35px;
-    padding: 10px;
-}
-
-.Rectangle p {
-    color: #fff;
-    font-size: 16px;
-    text-align: left;
-    margin-left: -70px;
-    padding-left: -200px !important;
-    line-height: 25px;
-    padding: 20px;
-}
-
-.Rectangle a {
-    color: #5affea;
-    text-decoration: none;
-    font-size: 18px;
-    margin-left: -320px;
-    text-align: left !important;
-    padding: 10px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .pricingimg {
-        margin-top: 50px;
-        height: 200px;
-    }
-
-    .Rectangle {
-        margin-top: -300px;
-        height: 300px;
-    }
-
-    .Rectangle h2 {
-        font-size: 18px;
-        line-height: 25px;
-    }
-
-    .Rectangle p {
-        font-size: 13px;
-        line-height: 20px;
-    }
-
-    .Rectangle a {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .pricingimg {
-        margin-top: -30px;
-        height: 200px;
-        width: 90%;
-        margin: 0px 20px;
-    }
-
-    .Rectangle {
-        margin-top: -200px;
-        height: 200px;
-        width: 90%;
-    }
-
-    .Rectangle h2 {
-        font-size: 6px !important;
-        line-height: 20px;
-        padding: 40px 0;
-    }
-
-    .Rectangle p {
-        font-size: 5px;
-        line-height: 20px;
-        padding: 5px 0;
-    }
-
-    .Rectangle a {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .MainContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .Rectangle {
-        background-size: cover;
-        margin-top: -200px;
-        padding: 20px;
-    }
-
-    .Rectangle h2 {
-        font-size: 10px;
-        padding: 10px 0;
-    }
-
-    .Rectangle p {
-        font-size: 8px;
-        padding: 5px 0;
-    }
-
-    .Rectangle a {
-        font-size: 10px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .MainContainer {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .Rectangle {
-        text-align: center;
-        background-size: cover;
-        padding: 10px;
-    }
-
-    .Rectangle h2 {
-        font-size: 8px;
-    }
-
-    .Rectangle p {
-        font-size: 7px;
-    }
-
-    .Rectangle a {
-        font-size: 8px;
-    }
-}
-
-
-
-
-/* .MainContainer{
-
-    height: auto;
-    background-color: #030b11;
-    height: auto;
-    padding: 30px 0px 50px 0px;
-   
-}
-.MainContainer h1{
-    color: #fff;
-    text-align: center;
-}
-
-.pricingimg{
-    background-image: url('../../assets/blogpricing.png');
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 57.6px */
+  }
+  /* Responsive font size using viewport width */
+  
+  .pricingimg {
+    background-image: url("../../assets/blogpricing.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
     margin-top: 100px;
-}
-.Rectangle{
-    background-image: url('../../assets/maflamhomeimg.png');
+  }
+  
+  .Rectangle {
+    background-image: url("../../assets/maflamhomeimg.png");
     height: 400px;
-    width: auto;
-    background-position:center;
+    width: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     margin-top: -360px;
-  
-   
-    
-}
-.Rectangle h2{
-    color: #fff;
-    padding: 60px 480px 10px 350px;
-    font-size: 35px;
-    line-height: 40px;
-  
-}
-.Rectangle p{
-    color: #fff;
-    padding: 10px 420px 10px 350px;
-    font-size: 20px;
-    line-height: 35px;
-}
-.Rectangle a{
-    color: #5affea;
-    padding: 10px 520px 10px 350px;
+  }
+  .contentContainer{
+    margin: -330px auto 200px auto;
+    max-width: 650px;
+  }
+  .contentContainer h2 {
+    color: #EBF5F4;
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 54px */
+  }
+  .contentContainer p {
+    color: #FFF;
+    font-family: "Noto Kufi Arabic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 38.4px */
+  }
+  .contentContainer a {
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+    font-family: "Noto Kufi Arabic";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94.1%; /* 15.997px */
+    letter-spacing: -0.34px;
     text-decoration: none;
-}
-@media screen and (min-width: 768px) and (max-width:1024px){
-    .MainContainer{
-    
-        height: auto;
-        background-color: #030b11;
-        height: auto;
-        padding: 30px 0px 50px 0px;
-       
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .MainContainer {
+      height: auto;
+      background-color: #030b11;
+      height: auto;
+      padding: 30px 0px 50px 0px;
     }
-    .pricingimg{
-        margin-top: -30px;
-        height: 200px;
-        width: auto;
-        margin: 0px 20px;
+    .pricingimg {
+      margin-top: -30px;
+      height: 200px;
+      width: auto;
+      margin: 0px 20px;
     }
-    .Rectangle{
-        margin-top: -200px;
-        height: 200px;
-        width: auto;
+    .Rectangle {
+      margin-top: -200px;
+      height: 200px;
+      width: auto;
     }
-    .pricingimg{
-        background-image: url('../../assets/blogpricing.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 300px;
-        margin-top: 50px;
+    .pricingimg {
+      background-image: url("../../assets/blogpricing.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 300px;
+      margin-top: 50px;
     }
-    .Rectangle{
-        background-image: url('../../assets/maflamhomeimg.png');
-        height: 300px;
-        width: auto;
-        background-position:center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-top: -300px;
-       
-       
-        
+    .Rectangle {
+      background-image: url("../../assets/maflamhomeimg.png");
+      height: 320px;
+      width: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: -320px;
     }
-   
-    .Rectangle h2{
-        color: #fff;
-        padding: 50px 470px 0px 250px;
-        font-size: 18px;
-        line-height: 25px;
-    }
-    .Rectangle p{
-        color: #fff;
-        padding: 5px 430px 0px 250px;
-        font-size: 13px;
-        line-height: 20px;
-    }
-    .Rectangle a{
-       
-        padding: 0px 100px 10px 250px;
-       font-size: 14px;
-    }
-}
-@media screen and (max-width: 768px){
-    .pricingimg{
-        margin-top: -30px;
-        height: 200px;
-        width: auto;
-        margin: 0px 20px;
-    }
-    .Rectangle{
-        margin-top: -200px;
-        height: 200px;
-        width: auto;
-    }
-    .Rectangle h2{
-        color: #fff;
-        padding: 40px 100px 0px 30px;
-        font-size: 12px;
-        line-height: 20px;
-    }
-    .Rectangle p{
-        color: #fff;
-        padding: 5px 100px 0px 30px;
-        font-size: 10px;
-        line-height: 20px;
-    }
-    .Rectangle a{
-       
-        padding: 0px 100px 10px 30px;
-       font-size: 12px;
-    }
-} */
 
+    .contentContainer{
+        margin: -270px auto 200px auto;
+        max-width: 570px;
+      }
+  
+    .contentContainer h2 {
+        color: #fff;
+        font-size: 30px;
+        line-height: 40px;
+      
+      }
+    .contentContainer p {
+      color: #fff;
+     padding-top: 10px;
+      font-size: 25px;
+      line-height: 35px;
+    }
+    .contentContainer a {
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pricingimg {
+      margin-top: -30px;
+      height: 200px;
+      width: auto;
+      margin: 0px 20px;
+    }
+    .Rectangle {
+        background-image: url("../../assets/maflamhomeimg.png");
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: -270px;
+      }
+    .contentContainer{
+        margin: -290px auto 200px auto;
+        max-width: 570px;
+      }
+  
+    .contentContainer h2 {
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 0px 10px;
+      
+      }
+    .contentContainer p {
+      color: #fff;
+     padding-top: 10px;
+      font-size: 20px;
+      line-height: 25px;
+      padding: 10px 10px;
+    }
+    .contentContainer a {
+      font-size: 20px;
+      padding: 10px 10px;
+    }
+  } 

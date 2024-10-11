@@ -1,39 +1,106 @@
 .mainConatiner{
   background-color: #030b11;
-  height: auto;
+  /* height: 90vh; */
+  margin-top: 100px !important;
+  max-width: 1300px;
+   margin: 0 auto; 
+    min-height:700px;
+    padding: 0px 60px;
+     background-size: cover;
+
+  background-position: center;
   background-image: url('../../assets/AboutBackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
+  align-items: center;
+ 
+  
   line-height: 35px;
-  /* border: 2px solid aliceblue; */
+  
   padding: 20px 0px;
+  
   
  
  
 }
 .mainConatiner h1{
-  text-align: center;
+  /* text-align: center;
   font-size: 50px;
   background-image: linear-gradient(to right, #7C2D98, #00FFFF); 
-  /* color: white;  */
+  
   padding: 10px; 
-  /* display: inline-block;  */
+ 
   -webkit-background-clip: text; 
   background-clip: text;
-  color: transparent;
+  color: transparent; */
 
+  background: linear-gradient(266deg, #0FF -33.31%, #7C2D98 114.78%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  background: linear-gradient(266deg, #0FF -33.31%, #7C2D98 114.78%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
 
+/* Headlines/Headline 1 */
+font-family: "Noto Kufi Arabic";
+font-size: 65px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 97.5px */
+
+font-family: "Noto Kufi Arabic";
+font-size: 65px;
+font-style: normal;
+font-weight: 700;
+line-height: 150%;
 }
 .mainConatiner h2{
-  color: #fff;
+  color: var(--Accent-Accent-50, #F6FFFF);
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+.mainConatiner p{
+  
+text-align: center;
+font-family: "Noto Kufi Arabic";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%;
+color: #EBF5F4;
+  line-height: 160%; /* 57.6px */
 }
 .mainConatiner h3{
-  color: #fff;
+  color: #EBF5F4;
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 43.2px */
 }
 .para1{
-  color: #00FFFF;
+  color: rgba(90, 255, 255, 0.70);
+  font-family: "Noto Kufi Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
 }
 .contentConatiner {
   height: auto;
@@ -46,19 +113,47 @@
 
 }
 .firstcard{
-  height: 370px;
+  height: 500px;
   border: 0.2px solid #00FFFF;
-  width: 330px;
+  width: 420px;
+  height: auto;
+  border: 0.2px solid #00FFFF;
+  width: 390px;
   border-radius: 20px;
   margin: 40px 0px;
  
   
 }
-.firstcard p{
-  color: #fff;
+.firstcard h4{
+  /* color: #fff;
   font-size: 25px;
   text-align: left;
-  padding: 10px 25px;
+  padding: 10px 25px; */
+  color: var(--Accent-Accent-50, #F6FFFF);
+font-family: "Noto Kufi Arabic";
+font-size: 28px;
+font-style: normal;
+text-align: left;
+margin-left: 30px;
+margin-bottom: 20px;
+font-weight: 700;
+line-height: 160%;
+display: flex;
+height: 121px;
+flex-direction: column;
+justify-content: flex-end;
+flex-shrink: 0;
+align-self: stretch;
+}
+.firstcard p{
+  color: var(--Accent-Accent-50, #F6FFFF);
+font-family: "Noto Kufi Arabic";
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 57.6px */
+text-align: left;
+padding: 30px 25px 0px 25px;
 }
 .firstcard  .breakline{
   width: 80%;
@@ -69,23 +164,54 @@
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
-.firstcard h1{
-  font-size: 20px;
+.firstcard p{
+  font-size: 28px;
   padding: 10px 25px;
   color: #00FFFF;
   text-align: left;
+  
 }
 .firstcard span{
   color: #fff;
-  font-size: 15px;
+  font-size: 22px;
+}
+.firstcard h2{
+  color: var(--Accent-Accent-400---Main, #39FFFB);
+  text-align: left;
+  
+  /* Headlines/Headline 2 */
+  font-family: "Noto Kufi Arabic";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 67.2px */
+  padding: 0px 25px;
+}
+.firstcard span{
+  color: var(--Accent-Accent-50, #F6FFFF);
+  text-align: left;
+  
+  /* Headlines/Headline 6 */
+  font-family: "Noto Kufi Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 38.4px */
 }
 .firstcard .subscribebutton{
-float: left;
+  display: flex;
+  width: 149px;
+  height: 56px;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 64px;
+background: var(--Accent-Accent-400---Main, #39FFFB);
+box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
 margin: 0px 25px;
-padding: 5px 20px;
-background-color: #00FFFF;
 border: none;
-border-radius: 20px;
 }
 .firstcard .rigthcheck{
   background: #030b11;
@@ -96,36 +222,54 @@ border-radius: 20px;
   float: left;
   margin: 5px 25px 5px 25px;
   line-height: 20px;
-  
+  font-family: "Noto Kufi Arabic";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 25.2px */
+font-family: "Noto Kufi Arabic";
 }
 .firstcard .rigthclick{
   color: #00FFFF;
+  width: 20px;
+height: 20px;
   
 }
 .buttondiv{
   /* border: 1px solid beige; */
   height: 200px;
   line-height: 0px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 
 
 
 .secondcard{
-  height: 350px;
+  height: 450px;
   border: 1px solid #00FFFF;
-  width: 330px;
-  margin-top:60px;
+  width: 400px;
+  height: 460px;
+  border: 1px solid #00FFFF;
+  width: 370px;
+  margin-top:80px;
   border-radius: 20px;
  
 }
-.secondcard p{
-  color: #fff;
-  padding-top: 20px;
-  font-size: 25px;
-  text-align: left;
-  padding-left: 20px;
+.secondcard h4{
+  color: var(--Accent-Accent-50, #F6FFFF);
+text-align: left;
+
+/* Headlines/Healdine 5 */
+font-family: "Noto Kufi Arabic";
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 44.8px */
+padding: 50px 25px 0px 25px;
+/* margin-top: 20px; */
+margin-bottom: 20px;
+
 }
 .secondcard  .breakline{
   width: 85%;
@@ -136,18 +280,45 @@ border-radius: 20px;
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
-.secondcard h1{
-  font-size: 20px;
+.secondcard p{
+  font-size: 28px;
   padding: 10px 28px;
   color: #00FFFF;
   text-align: left;
 }
 .secondcard span{
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
+}
+.secondcard h2{
+  color: var(--Accent-Accent-400---Main, #39FFFB);
+
+/* Headlines/Headline 2 */
+font-family: "Noto Kufi Arabic";
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+
+line-height: 160%; /* 67.2px */
+text-align: left;
+padding: 0px 25px;
+}
+.secondcard span{
+  color: var(--Accent-Accent-50, #F6FFFF);
+  text-align: right;
+  
+  /* Headlines/Headline 6 */
+  font-family: "Noto Kufi Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 38.4px */
 }
 .secondcard .rigthclick{
+ 
   color: #fff;
+  width: 20px;
+  height: 20px;
 }
 .secondcard .rigthcheck{
   background: #030b11;
@@ -158,13 +329,29 @@ border-radius: 20px;
   float: left;
   margin: 5px 20px 5px 20px;
   line-height: 20px;
-  font-size: 12px;
+  
+  /* Paragraph/Paragraph S */
+font-family: "Noto Kufi Arabic";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 25.2px */
 }
 .para{
-  color: #fff;
-}
+  color: #fff;color: #FFF;
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 36px */}
 .link{
-  color: #00FFFF;
+  color: #5AFFFF;
+  font-family: "Noto Kufi Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
   text-decoration: none;
 }
 @media (max-width: 768px){
@@ -188,8 +375,8 @@ border-radius: 20px;
   
   }
   .firstcard{
-    height: 370px;
-    width: 330px;
+    height: 430px;
+    width: 350px;
     border-radius: 10px;
     margin:10px auto 10px auto;
    
@@ -197,7 +384,7 @@ border-radius: 20px;
   }
   .secondcard{
     height: 350px;
-    width: 330px;
+    width: 350px;
     margin:20px auto 10px auto;
     border-radius: 10px;
    
