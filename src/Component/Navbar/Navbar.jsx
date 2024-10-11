@@ -12,6 +12,12 @@ import { ImVideoCamera } from "react-icons/im";
 import { BiSolidMovie } from "react-icons/bi";
 import { RiMovie2Line } from "react-icons/ri";
 import { PiSuitcaseSimpleFill } from "react-icons/pi";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+import { TfiMobile } from "react-icons/tfi";
+import { BiSolidBookAlt } from "react-icons/bi";
+
+
+
 import { assests } from "../../assets/assests";
 
 const Navbar = () => {
@@ -109,9 +115,11 @@ const Navbar = () => {
           </a>
           {openDropdown === "resources" && (
             <div className={styles.submenu}>
-              <a href="#">Maflam Blog</a>
-              <a href="#">Social Media</a>
-              <a href="#">E-Booklet</a>
+              <a href="#"> <HiOutlineClipboardDocumentList /> &nbsp;&nbsp; Maflam Blog</a>
+              <a href="#"> <TfiMobile /> &nbsp;&nbsp;
+              Social Media</a>
+              <a href="#"> <BiSolidBookAlt /> &nbsp;&nbsp;
+              E-Booklet</a>
             </div>
           )}
         </div>
