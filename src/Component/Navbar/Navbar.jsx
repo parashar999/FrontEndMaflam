@@ -16,8 +16,7 @@ import { assests } from "../../assets/assests";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [openDropdown1, setOpenDropdown1] = useState(null);
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); // New state for hamburger
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
   const toggleDropdown = (dropdownName) => {
     if (openDropdown === dropdownName) {
@@ -27,16 +26,8 @@ const Navbar = () => {
     }
   };
 
-  const toggleDropdown1 = (dropdownName) => {
-    if (openDropdown1 === dropdownName) {
-      setOpenDropdown1(null);
-    } else {
-      setOpenDropdown1(dropdownName);
-    }
-  };
-
   const toggleHamburger = () => {
-    setIsHamburgerOpen(!isHamburgerOpen); // Toggle hamburger open/close
+    setIsHamburgerOpen(!isHamburgerOpen);
   };
 
   return (
@@ -47,15 +38,20 @@ const Navbar = () => {
       <img src={logo1} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
         <a href="/aboutus">About Maflam</a>
-        <div claWssName={styles.dropdown}>
+
+        <div className={styles.dropdown}>
           <a href="#courses" onClick={() => toggleDropdown("courses")}>
-            <p>Courses &#8595;</p>
-            
+            Courses{" "}
+            <span
+              className={`${styles.arrow} ${
+                openDropdown === "courses" ? styles.rotate : ""
+              }`}
+            >
+              &#8595;
+            </span>
           </a>
           {openDropdown === "courses" && (
-          
-            <div className={styles.submenu} >
-              
+            <div className={styles.submenu}>
               <a href="#">
                 <PiSuitcaseSimpleFill />
                 &nbsp;&nbsp;Full Package
@@ -89,12 +85,27 @@ const Navbar = () => {
         </div>
 
         <a href="#">
-          Packages <span className={`${styles.arrow} ${openDropdown1 === "contact" ? styles.rotate1 : ""}`}>&#8595;</span>
+          Packages{" "}
+          <span
+            className={`${styles.arrow} ${
+              openDropdown === "packages" ? styles.rotate : ""
+            }`}
+            onClick={() => toggleDropdown("packages")}
+          >
+            &#8595;
+          </span>
         </a>
 
         <div className={styles.dropdown}>
-          <a href="#resources" onClick={() => toggleDropdown1("resources")}>
-            Resources <span className={`${styles.arrow} ${openDropdown1 === "contact" ? styles.rotate : ""}`}>&#8595;</span>
+          <a href="#resources" onClick={() => toggleDropdown("resources")}>
+            Resources{" "}
+            <span
+              className={`${styles.arrow} ${
+                openDropdown === "resources" ? styles.rotate : ""
+              }`}
+            >
+              &#8595;
+            </span>
           </a>
           {openDropdown === "resources" && (
             <div className={styles.submenu}>
@@ -107,7 +118,14 @@ const Navbar = () => {
 
         <div className={styles.dropdown}>
           <a href="#contact" onClick={() => toggleDropdown("contact")}>
-            Contact Us <span className={`${styles.arrow} ${openDropdown === "contact" ? styles.rotate : ""}`}>&#8595;</span>
+            Contact Us{" "}
+            <span
+              className={`${styles.arrow} ${
+                openDropdown === "contact" ? styles.rotate : ""
+              }`}
+            >
+              &#8595;
+            </span>
           </a>
           {openDropdown === "contact" && (
             <div className={styles.submenu}>
@@ -144,8 +162,6 @@ const Navbar = () => {
           <span className={styles.arrow}>&#8592; </span> log in
         </a>
       </div>
-
-      {/* Hamburger Menu */}
       <div className={styles.hamburger} onClick={toggleHamburger}>
         <div></div>
         <div></div>
