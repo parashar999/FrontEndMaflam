@@ -16,7 +16,9 @@
 }
 
 .faqContainer h2 {
-  margin-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  /* margin-bottom: 40px; */
   color: white;
 }
 
@@ -40,10 +42,9 @@
   cursor: pointer;
   color: #39FFFb;
   transition: background-color 0.3s ease;
-  
+  margin-left: 100px;
 
- 
-}
+  }
 
 .faqItem.active {
   border-color: #39FFFb; 
@@ -111,6 +112,80 @@
   font-size: 20px; 
 }
 
+@media (min-width: 800px) {
+  .faqContainer {
+    /* padding: 40px; */
+    max-width: 1200px; 
+    margin: 0 auto;
+    align-items: center;
+
+  }
+  .faqItem {
+    max-width: 100%;
+    padding-right: 100px;
+    padding-left: 70px;
+  }
+
+  .faqItem.active {
+     padding-right: 30px;
+    
+   
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .answer {
+    width: 90%; 
+    padding: 0px 0px 0px 0px;
+    margin-left: 5px;
+
+  }
+
+  .arrowButton {
+    margin-left: 60%;
+    font-size: 24px;
+  }
+} 
+
+
+@media (min-width: 1024px) {
+  .faqContainer {
+    max-width: 1200px; 
+    margin: 0 auto;
+    align-items: center;
+
+  }
+
+  .faqItem {
+    max-width: 100%;
+    padding-right: 40px;
+    padding-left: 20px;
+  }
+
+  .faqItem.active {
+     padding-right: 10px; 
+   
+  }
+
+  .question {
+    padding-left: 100px; 
+    font-size: 18px;
+  }
+
+  .answer {
+    width: 60%; 
+    margin-left: 100px;
+    padding: 0px 0px 0px 0px;
+
+  }
+
+  .arrowButton {
+    margin-left: 60%;
+    font-size: 24px;
+  }
+} 
 
 @media (max-width: 768px) {
   .faqContainer {
@@ -124,7 +199,12 @@
   .faqItem {
     max-width: 100%; 
   }
-
+  .faqItem.active {
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-right: 20px;
+   
+  }
   .question {
     padding-left: 20px; 
     font-size: 16px; 
@@ -133,6 +213,8 @@
   .answer {
     padding-left: 20px; 
     padding-right: 20px;
+    margin-left: 3px;
+
   }
 
   .arrowButton {
@@ -150,6 +232,12 @@
 
   .faqItem {
     max-width: 100%;
+  }
+  .faqItem.active {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+   
   }
 
   .question {
@@ -172,34 +260,4 @@
 }
 
 
-@media (min-width: 1024px) {
-  .faqContainer {
-    padding: 40px;
-    max-width: 1200px; 
-    margin: 0 auto;
-    align-items: center;
-
-  }
-
-  .faqItem {
-    max-width: 1000px;
-  }
-
-  .question {
-    padding-left: 220px; 
-    font-size: 18px;
-  }
-
-  .answer {
-    width: 80%; 
-    padding-left: 100px;
-    padding-right: 80px;
-
-  }
-
-  .arrowButton {
-    margin-left: 60%;
-    font-size: 24px;
-  }
-} 
 
