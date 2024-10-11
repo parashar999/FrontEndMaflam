@@ -4,8 +4,9 @@
   min-height: 700px;
   border-radius: 8px;
   max-width: 90%;
-  margin: auto;
+  margin: 5% auto;
   text-align: center;
+  margin-bottom: 0px;  
 }
 
 .courseContainer {
@@ -27,7 +28,7 @@
   width: 100%; 
   max-width: 650px; 
   height: auto;
-  margin-top: 40px;
+
 }
 
 /* Responsive adjustments for tablets */
