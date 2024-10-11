@@ -57,6 +57,19 @@
   outline: none;
   margin-left: 5px;
 }
+.searchContainer img{
+  margin-right: 15px;
+  width: 16px;
+height: 16px;
+flex-shrink: 0;
+}
+.searchContainerGlobe img{
+  margin-right: 130px;
+  margin-top: 10px;
+  width: 24.06px;
+height: 24px;
+flex-shrink: 0;
+}
 
 .searchButton {
   background: none;
@@ -70,6 +83,7 @@
   align-items: center;
   justify-content: space-around;
   gap: 15px;
+  margin-right: 100px;
 }
 
 .rightLinks a {
@@ -107,6 +121,7 @@
 }
 
 .submenu a {
+
   color: white;
   padding: 8px 15px; /* Increase padding for better clickability */
   text-decoration: none;

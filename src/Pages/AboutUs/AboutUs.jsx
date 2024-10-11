@@ -27,12 +27,12 @@ export default function AboutUs() {
         <Filmmaker></Filmmaker>
         <OurVisionData></OurVisionData>
     
-     
+     <MaflamImageOffer></MaflamImageOffer>
         {/* <VariousCourse></VariousCourse> */}
     
         <MaflamInstructors></MaflamInstructors>
         <MaflamCard></MaflamCard>
-        {/* <MaflanContent></MaflanContent> */}
+        <MaflanContent></MaflanContent>
         <JoinUs></JoinUs>
         <Footer></Footer>
     </div>

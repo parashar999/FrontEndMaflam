@@ -41,9 +41,12 @@ const Navbar = () => {
         <div claWssName={styles.dropdown}>
           <a href="#courses" onClick={() => toggleDropdown("courses")}>
             <p>Courses &#8595;</p>
+            
           </a>
           {openDropdown === "courses" && (
-            <div className={styles.submenu}>
+          
+            <div className={styles.submenu} >
+              
               <a href="#">
                 <PiSuitcaseSimpleFill />
                 &nbsp;&nbsp;Full Package
@@ -120,7 +123,7 @@ const Navbar = () => {
         <input type="text" placeholder="Search for courses...!" />
         <img src={assests.Magnifine} alt="" />
       </div>
-      <div>
+      <div className={styles.searchContainerGlobe}>
         <img src={assests.Globe} alt="" />
       </div>
 
