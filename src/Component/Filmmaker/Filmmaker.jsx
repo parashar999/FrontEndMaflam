@@ -8,8 +8,8 @@ const Filmmaker = () => {
   return (
     <div className={styles.container}>
      
-      <h1 className={styles.title}>A Saudi platform designed to empower filmmakers with expertise and knowledge</h1>
-      <p className={styles.subtitle}>Maflam offers comprehensive educational content across all areas of filmmaking.</p>
+      <h1 className={styles.title}>A Saudi platform designed to empower Filmmakers with expertise and knowledge</h1>
+      <p className={styles.subtitle}>Maflam offers comprehensive educational content across all areas of Filmmaking.</p>
 
   
       <div className={styles.features}>
