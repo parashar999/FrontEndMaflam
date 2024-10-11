@@ -41,12 +41,9 @@ const Navbar = () => {
         <div claWssName={styles.dropdown}>
           <a href="#courses" onClick={() => toggleDropdown("courses")}>
             <p>Courses &#8595;</p>
-            
           </a>
           {openDropdown === "courses" && (
-          
-            <div className={styles.submenu} >
-              
+            <div className={styles.submenu}>
               <a href="#">
                 <PiSuitcaseSimpleFill />
                 &nbsp;&nbsp;Full Package

@@ -64,11 +64,10 @@ height: 16px;
 flex-shrink: 0;
 }
 .searchContainerGlobe img{
-  margin-right: 130px;
   margin-top: 10px;
   width: 24.06px;
-height: 24px;
-flex-shrink: 0;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .searchButton {
