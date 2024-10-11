@@ -12,6 +12,7 @@ import { ImVideoCamera } from "react-icons/im";
 import { BiSolidMovie } from "react-icons/bi";
 import { RiMovie2Line } from "react-icons/ri";
 import { PiSuitcaseSimpleFill } from "react-icons/pi";
+import { assests } from "../../assets/assests";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -37,7 +38,7 @@ const Navbar = () => {
       <img src={logo1} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
         <a href="/aboutus">About Maflam</a>
-        <div className={styles.dropdown}>
+        <div claWssName={styles.dropdown}>
           <a href="#courses" onClick={() => toggleDropdown("courses")}>
             <p>Courses &#8595;</p>
           </a>
@@ -117,6 +118,10 @@ const Navbar = () => {
 
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />
+        <img src={assests.Magnifine} alt="" />
+      </div>
+      <div>
+        <img src={assests.Globe} alt="" />
       </div>
 
       <div className={styles.rightLinks}>
