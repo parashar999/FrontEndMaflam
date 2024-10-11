@@ -5,7 +5,11 @@
     /* background-color: #0d0e1a;  */
     min-height: 700px;
     min-width: 350px;
+    background-color:#030B11;
     padding: 50px 20px;
+    max-width: 1500px;
+
+    margin: 0 auto;
     text-align: center;
     color: #fff;
   }
@@ -13,7 +17,7 @@
   .offersHeader h2 {
     /* font-size: 2.5rem;
     margin-bottom: 10px; */
-       margin-top: 30px;
+       margin-top: 0px;
     color: #FFF;
 
 text-align: center;
@@ -79,8 +83,50 @@ line-height: 160%;
     position: relative;
     bottom: 50px;
   }
+  
+  @media (min-width: 305px) and (max-width: 667px) {
 
-  @media (max-width: 368px) {
+    .offersContainer {
+      
+      min-height: 700px;
+      min-width: 150px;
+     max-width: 1000px;
+      background-color:#030B11;
+      padding: 50px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    .offerCard {
+   
+      width: 160%;
+      max-width: 950px;
+      margin-right: 0px;
+  
+    }
+    .offersHeader h2 {
+   
+         margin-top: 15px;
+      color: #FFF;
+  
+  text-align: left;
+  font-family: "Noto Kufi Arabic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+    }
+    
+    .offersHeader p {
+      text-align: left;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+}
+
+
+
+
+  /* @media (max-width: 368px) {
     .offerCard {
    
       width: 100%;
@@ -88,4 +134,5 @@ line-height: 160%;
   
     }
     
-  }
+  } */
+

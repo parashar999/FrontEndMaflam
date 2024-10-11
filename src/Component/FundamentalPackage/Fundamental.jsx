@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Fundamental.module.css";
 import Book from "../../assets/Rectangle 88 (1).png";
 import { CiCircleCheck } from "react-icons/ci";
@@ -41,7 +41,7 @@ function Fundamental() {
                   <button className={styles.checkicobuttun}>Subscribe</button>
                   <p>
                     <b>2.200</b>
-                    <span>SR</span>
+                    <span>SAR</span>
                   </p>
                 </div>
               </div>

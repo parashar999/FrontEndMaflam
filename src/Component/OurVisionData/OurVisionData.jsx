@@ -29,7 +29,7 @@
 
 
 
-import MaflamImageOffer from '../MaflamImageOffer/MaflamImageOffer';
+// import MaflamImageOffer from '../MaflamImageOffer/MaflamImageOffer';
 import styles from './OurVisionData.module.css';
 
 const OurVisionData = () => {
@@ -62,7 +62,7 @@ const OurVisionData = () => {
                     </div>
                 ))}
             </div>
-            <MaflamImageOffer></MaflamImageOffer>
+            {/* <MaflamImageOffer></MaflamImageOffer> */}
         </div>
     );
 };

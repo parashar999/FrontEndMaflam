@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import logo from "../../assets/logo.svg";
+import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrGroup } from "react-icons/gr";
@@ -18,9 +18,12 @@ import { BiSolidBookAlt } from "react-icons/bi";
 
 
 
+import { assests } from "../../assets/assests";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
   const toggleDropdown = (dropdownName) => {
     if (openDropdown === dropdownName) {
       setOpenDropdown(null);
@@ -29,17 +32,29 @@ const Navbar = () => {
     }
   };
 
+  const toggleHamburger = () => {
+    setIsHamburgerOpen(!isHamburgerOpen);
+  };
+
   return (
     <nav
-      className={styles.navbar}
+      className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
-      <img src={logo} alt="Logo" className={styles.logo} />
+      <img src={logo1} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
         <a href="/aboutus">About Maflam</a>
+
         <div className={styles.dropdown}>
           <a href="#courses" onClick={() => toggleDropdown("courses")}>
-            <p>Courses &#8595;</p>
+            Courses{" "}
+            <span
+              className={`${styles.arrow} ${
+                openDropdown === "courses" ? styles.rotate : ""
+              }`}
+            >
+              &#8595;
+            </span>
           </a>
           {openDropdown === "courses" && (
             <div className={styles.submenu}>
@@ -75,15 +90,28 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Packages Link */}
-        <a href="#about">
-          Packages <span className={styles.arrow}>&#8595;</span>
+        <a href="#">
+          Packages{" "}
+          <span
+            className={`${styles.arrow} ${
+              openDropdown === "packages" ? styles.rotate : ""
+            }`}
+            onClick={() => toggleDropdown("packages")}
+          >
+            &#8595;
+          </span>
         </a>
 
-        {/* Resources Dropdown */}
         <div className={styles.dropdown}>
           <a href="#resources" onClick={() => toggleDropdown("resources")}>
-            Resources <span className={styles.arrow}>&#8595;</span>
+            Resources{" "}
+            <span
+              className={`${styles.arrow} ${
+                openDropdown === "resources" ? styles.rotate : ""
+              }`}
+            >
+              &#8595;
+            </span>
           </a>
           {openDropdown === "resources" && (
             <div className={styles.submenu}>
@@ -96,10 +124,16 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Contact Us Dropdown */}
         <div className={styles.dropdown}>
           <a href="#contact" onClick={() => toggleDropdown("contact")}>
-            Contact Us <span className={styles.arrow}>&#8595;</span>
+            Contact Us{" "}
+            <span
+              className={`${styles.arrow} ${
+                openDropdown === "contact" ? styles.rotate : ""
+              }`}
+            >
+              &#8595;
+            </span>
           </a>
           {openDropdown === "contact" && (
             <div className={styles.submenu}>
@@ -120,12 +154,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Search Container */}
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />
+        <img src={assests.Magnifine} alt="" />
+      </div>
+      <div className={styles.searchContainerGlobe}>
+        <img src={assests.Globe} alt="" />
       </div>
 
-      {/* Right Links */}
       <div className={styles.rightLinks}>
         <a href="#" target="_blank" className={styles.signupButton}>
           Create an Account
@@ -134,9 +170,7 @@ const Navbar = () => {
           <span className={styles.arrow}>&#8592; </span> log in
         </a>
       </div>
-
-      {/* Hamburger Menu */}
-      <div className={styles.hamburger} onClick={() => {}}>
+      <div className={styles.hamburger} onClick={toggleHamburger}>
         <div></div>
         <div></div>
         <div></div>

@@ -7,7 +7,9 @@
   background-color: #030b11;
   padding: 50px 135px 220px 135px;
   height: auto;
-
+  max-width: 1500px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the Fundamental container */
+  height: auto;
 }
 
 .secondcontainer {
@@ -28,6 +30,7 @@
   line-height: 25px;
   text-align: left;
   font-size: 20px;
+  font-weight: 700;
   
 }
 
@@ -38,7 +41,7 @@
   background-repeat: no-repeat;
   height: 230px;
   margin: 20px 0px 20px 0px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .imgcontainer img {
   height: 700px;
@@ -65,19 +68,31 @@
   font-size: 20px;
 }
 .ctn p {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
+  font-weight: 100;
 
  
 }
 .checkicobuttun {
-  background-color: cyan;
-  font-size: 15px;
-  padding: 2px 7px;
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
+  border-radius: 64px;
+  background-color: #39fffb;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 7px;
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 17px;
+  color: #000;
+  font-family: 'Noto Kufi Arabic';
+  font-weight: 500;
   border: none;
-  border-radius: 10px;
-  margin-top: 5px;
-  margin-right: 5px;
+  margin: 10px;
 }
 .item b {
   margin-right: 2px;
@@ -99,6 +114,7 @@
   .content {
     width: 300px;
     margin: 20px 30px;
+
    
   }
 

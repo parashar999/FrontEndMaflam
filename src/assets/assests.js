@@ -111,20 +111,27 @@ import PricingCard1Background from "./pricingCard1background.png";
 import youtubeImage from "./youtubeImage.png";
 import backgrounds from "./backgronds.png";
 import aboutHero from "./aboutHero.png";
-import FrameDiv1 from "./FrameDiv1.png"
-import FrameDiv2 from "./FrameDiv2.png"
-import FrameDiv3 from "./FrameDiv3.png"
-import FrameDiv4 from "./FrameDiv4.png"
-import FrameDiv5 from "./FrameDiv5.png"
-import FrameDiv6 from "./FrameDiv6.png"
-import FrameDiv7 from "./FrameDiv7.png"
+import FrameDiv1 from "./FrameDiv1.png";
+import FrameDiv2 from "./FrameDiv2.png";
+import FrameDiv3 from "./FrameDiv3.png";
+import FrameDiv4 from "./FrameDiv4.png";
+import FrameDiv5 from "./FrameDiv5.png";
+import FrameDiv6 from "./FrameDiv6.png";
+import FrameDiv7 from "./FrameDiv7.png";
+import logo1 from "./Logo1.png";
+import Footerlogo1 from "./footerlogo.png";
+import Magnifine from "./magnifine.png";
+import Globe from "./globe.png";
 export const assests = {
+  Magnifine,
+  Globe,
   youtubeImage,
   PricingHeroBackground,
   PricingCard1Background,
   caraImg,
   Popular1,
   Popular2,
+  logo1,
   Popular3,
   Popular4,
   Insights1,
@@ -221,7 +228,7 @@ export const assests = {
   videocrc1,
   maflamScreen,
   Subscribee,
-  
+  Footerlogo1,
 };
 
 export const instructors = [
@@ -409,8 +416,10 @@ export const featuresData = [
     title: "A Passion for Empowering Cinematic Talents",
     description: "Access all the learning material anytime.",
   },
-  { title: "A Comprehensive Educational Experience in Arabic", description: "Get support from experts." },
- 
+  {
+    title: "A Comprehensive Educational Experience in Arabic",
+    description: "Get support from experts.",
+  },
 ];
 
 export const offersData = [
@@ -449,7 +458,6 @@ export const successPartnerss = [
   { name: "NEOM", logo: neom },
   { name: "Majid", logo: majid },
   { name: "Telfaz11 Studios", logo: studio },
-
 ];
 
 export const MaflamCards = [

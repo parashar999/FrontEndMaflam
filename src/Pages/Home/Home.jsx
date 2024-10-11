@@ -23,15 +23,15 @@ const Home = () => {
   return (
     <div className={Styles.Home}>
       <Navbar></Navbar>
-      <HomeHero></HomeHero>
-      <LearnMaflam></LearnMaflam>
+      <HomeHero></HomeHero> 
+       <LearnMaflam></LearnMaflam>
       <ViewCourses></ViewCourses>
       <CourseGrid></CourseGrid>
       <Fundamental></Fundamental>
       <Ourservices></Ourservices>
       <SuccessPartners></SuccessPartners>
-      <LearnAbout></LearnAbout>
-      <MaflamInstructors></MaflamInstructors>
+      <LearnAbout></LearnAbout> 
+       <MaflamInstructors></MaflamInstructors>
       <HomeScreenCarousel /> 
       <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
