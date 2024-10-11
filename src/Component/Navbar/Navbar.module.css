@@ -147,6 +147,19 @@ flex-shrink: 0;
   background-color: #fff;
   transition: 0.3s ease;
 }
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(-45deg);
+}
+.rotate1 {
+  transform: rotate(-45deg);
+}
+
 @media (max-width: 768px) {
   .leftLinks, .rightLinks, .searchContainer {
     display: none;

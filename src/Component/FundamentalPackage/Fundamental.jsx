@@ -41,7 +41,7 @@ function Fundamental() {
                   <button className={styles.checkicobuttun}>Subscribe</button>
                   <p>
                     <b>2.200</b>
-                    <span>SR</span>
+                    <span>SAR</span>
                   </p>
                 </div>
               </div>

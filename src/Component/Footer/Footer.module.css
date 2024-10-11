@@ -16,7 +16,8 @@
   background: #414A4C;
   /* color:#F6FFFF ; */
   margin: 0 auto;
-  width: 90vw; 
+  width: 90vw;
+  max-width: 1200px; 
   margin-bottom: 25px;
   opacity: 1;
   /* text-decoration: none; */
