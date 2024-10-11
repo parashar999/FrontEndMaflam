@@ -116,7 +116,8 @@ flex-shrink: 0;
   flex-direction: column;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  min-width: 150px;
+  min-width: 220px;
+  align-items: start;
 }
 
 .submenu a {
