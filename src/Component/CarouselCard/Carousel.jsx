@@ -5,13 +5,44 @@ import { assests } from "../../assets/assests";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Unique content for each card
   const items = [
-    { id: 1, text: "" },
-    { id: 2, text: "" },
-    { id: 3, text: "" },
-    { id: 4, text: "" },
-    { id: 5, text: "" },
-    { id: 6, text: "" },
+    {
+      id: 1,
+      text: "I was solely focused on photography and didn’t know anything about videography, especially documentary filmmaking. During the course, I entered a national competition and won second place, thanks to God and their efforts. ",
+      text2:"Shahad",
+      img: assests.caraImg, // Add corresponding image paths from your assets
+    },
+    {
+      id: 2,
+      text: "I was solely focused on photography and didn’t know anything about videography, especially documentary filmmaking. During the course, I entered a national competition and won second place, thanks to God and their efforts. ",
+      text2:"Shahad",
+      img: assests.caraImg,
+    },
+    {
+      id: 3,
+      text: "“I Mafilm is an unconventional experience, combining practical and traditional knowledge. It's a creative, artistic, and professional journey.”",
+      text2:"Zakaria",
+      img: assests.caraImg,
+    },
+    {
+      id: 4,
+      text: "I was solely focused on photography and didn’t know anything about videography, especially documentary filmmaking. During the course, I entered a national competition and won second place, thanks to God and their efforts. ",
+      text2:"Shahad",
+      img: assests.caraImg,
+    },
+    {
+      id: 5,
+      text: "I was solely focused on photography and didn’t know anything about videography, especially documentary filmmaking. During the course, I entered a national competition and won second place, thanks to God and their efforts. ",
+      text2:"Shahad",     
+       img: assests.caraImg,
+    },
+    {
+      id: 6,
+      text: "“I Mafilm is an unconventional experience, combining practical and traditional knowledge. It's a creative, artistic, and professional journey.”",
+      text2:"Zakaria",
+      img: assests.caraImg,
+    },
   ];
 
   const nextSlide = () => {
@@ -32,40 +63,40 @@ const Carousel = () => {
 
   return (
     <>
-      <div className={styles.carouselcontainer}>
-        <h2>كيف يحقق المتعلمون مثلك أهدافهم</h2>
-        <div className={styles.carousel}>
-          <button
-            className={`${styles.arrow} ${styles.left}`}
-            onClick={prevSlide}
-          >
-            ◀
-          </button>
-          <div className={styles.sliderContainer}>
-            <div
-              className={styles.slider}
-              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }} // Move cards by index
+      <div className={styles.mainContainer}>
+        <div className={styles.carouselcontainer}>
+          <h2>Our Success Stories</h2>
+          <div className={styles.carousel}>
+            <button
+              className={`${styles.arrow} ${styles.left}`}
+              onClick={prevSlide}
             >
-              {items.map((item) => (
-                <div key={item.id} className={styles.card}>
-                  <h2>
-                    نتعاون مع أكثر من 300 جامعة وشركة رائدةنتعاون مع أكثر من 300
-                    جامعة وشركة رائدةنتعاون مع أكثر من 300 جامعة وشركة رائدة
-                  </h2>
-                  <span className={styles.contentimg}>
-                    <p>نتعاون مع أكثر من 300 جامعة وشركة</p>
-                    <img src={assests.caraImg} alt="Carousel" />
-                  </span>
-                </div>
-              ))}
+              &larr;
+            </button>
+            <div className={styles.sliderContainer}>
+              <div
+                className={styles.slider}
+                style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+              >
+                {items.map((item) => (
+                  <div key={item.id} className={styles.card}>
+                    <h2>{item.text}</h2>
+                    <span className={styles.contentimg}>
+                     
+                      <img src={assests.caraImg}  alt={`Carousel ${item.id}`} />
+                      <p>{item.text2}</p>
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
+            <button
+              className={`${styles.arrow} ${styles.right}`}
+              onClick={nextSlide}
+            >
+              &rarr;
+            </button>
           </div>
-          <button
-            className={`${styles.arrow} ${styles.right}`}
-            onClick={nextSlide}
-          >
-            ▶
-          </button>
         </div>
       </div>
     </>

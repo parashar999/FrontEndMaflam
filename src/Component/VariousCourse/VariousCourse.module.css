@@ -1,21 +1,33 @@
 
 .maincontainer{
   background-color: #030b11;
+  /* border: 1px solid red; */
+ 
+
 }
 
 .container {
     padding: 20px;
     text-align: center;
-margin-left: 100px;
-margin-right: 100px;
-    max-width: 1500px;
+/* margin-left: 100px;
+margin-right: 100px; */
+    max-width: 1300px;
+    margin: 0 auto;
+ 
 
   }
   
   .container h2 {
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #EBF5F4;
+    text-align: center;
+    
+    /* Headlines/Headline 3 */
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 57.6px */
+    padding: 50px 0px;
   }
   
   .cardsGrid {

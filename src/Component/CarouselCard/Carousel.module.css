@@ -1,15 +1,36 @@
-.carouselcontainer {
+.mainContainer{
   background-color: #030b11;
-  /* border: 2px solid yellow; */
+  /* border: 1px solid red; */
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  height: auto;
+  
+ 
+}
+.carouselcontainer {
+ 
+
   background-image: url("../../assets/carouselvector.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 430px;
+  height: auto;
+  width: 100%; 
+  max-width: 1500px; 
+  margin: 0 auto;
+  padding: 0 100px;
+  
+  
 }
 .carouselcontainer h2 {
-  color: #fff;
+  color: var(--Accent-Accent-50, #F6FFFF);
   text-align: center;
+  
+  /* Headlines/Headline 3 */
+  font-family: "Noto Kufi Arabic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 57.6px */
 }
 .carousel {
   position: relative;
@@ -23,7 +44,9 @@
 
 .sliderContainer {
   width: 100%;
+ 
   overflow: hidden;
+  /* border: 1px solid aliceblue; */
 }
 
 .slider {
@@ -39,23 +62,54 @@
   box-sizing: border-box;
   /* background-color: #030b11; */
   text-align: center;
-  border: 1px solid #ccc;
+  border: 0.1px solid #ccc;
   border-radius: 5px;
-  height: 280px;
+  height: auto;
   color: #fff;
+  width: 500px;
+  height: auto;
+  /* border: 1px solid yellow; */
+  /* background: linear-gradient(270deg, #030B11 50%, rgba(3, 11, 17, 0.00) 94.87%); */
+
 }
 .card h2 {
-  font-size: 17px;
-  text-align: right;
+  width: 361px;
+  height: 231px;
+  text-align: left;
+  color: #FFF;
+font-family: "Noto Kufi Arabic";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; 
+/* border: 1px solid red; */
+
 }
 .contentimg p {
-  font-size: 11px;
-  width: 100px;
+  color: #FFF;
+text-align: left;
+
+/* Paragraph/Paragraph M */
+font-family: "Noto Kufi Arabic";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+padding-left: 10px;
+ 
 }
 .contentimg {
   display: flex;
   align-items: center;
-  margin: 20px 0px 20px 170px;
+ justify-content: left;
+  margin: 10px 0px 20px 0px;
+  width: 41px;
+height: 41px;
+flex-shrink: 0;
+/* border: 1px solid red; */
+width: 156px;
+height: auto;
+
 }
 
 .arrow {
@@ -72,14 +126,33 @@
 
 .left {
   left: 0px;
+    /* border: 1px solid aliceblue; */
+    border-radius: 50%;
+    width: 60px; /* Ensure width and height are equal */
+    height: 60px;
+    background-color: #4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
 }
 
 .right {
-  right: 0;
+  right: 0px;
+  /* border: 1px solid aliceblue; */
+  border-radius: 50%;
+  width: 60px; /* Ensure width and height are equal */
+  height: 60px;
+  background-color: #4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
 
 @media (max-width: 768px) {
   .card {
     flex: 1 0 100%; /* On mobile, show one card at a time */
+    
   }
 }
