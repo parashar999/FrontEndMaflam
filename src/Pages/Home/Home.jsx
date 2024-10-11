@@ -36,12 +36,8 @@ const Home = () => {
       <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
-<<<<<<< HEAD
-      <Faqs></Faqs> 
-=======
 
       <Faqs></Faqs>
->>>>>>> e1fc2ae07746d3a8b08808f0c9f557f167b8e0ae
       <Footer></Footer> 
    
     </div>
