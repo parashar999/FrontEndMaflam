@@ -36,8 +36,7 @@ const Home = () => {
       <BlogContainer></BlogContainer>
       <HomeCommunityCarousel></HomeCommunityCarousel>
       <CarouselCommunity></CarouselCommunity>
-{/* 
-      <Faqs></Faqs> */}
+      <Faqs></Faqs> 
       <Footer></Footer> 
    
     </div>
