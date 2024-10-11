@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
     min-height: 800px;
     /* background-image: url("../../assets/filmaker.png");          */
     background-image: url("../../assets/aboutHero.png");  
@@ -54,6 +56,9 @@
     /* background-color: rgba(255, 255, 255, 0.05); */
     transition: transform 0.3s ease;
   }
+  .featureItem h3 {
+   font-size: 25px;
+  }
   
   .featureItem:hover {
     transform: scale(1.05);
@@ -75,6 +80,7 @@ stroke: #5AFFFF;
     margin-bottom: 0.5rem;
   }
   
+  
   .featureDesc {
     font-size: 1rem;
     color: lightgray;
@@ -84,6 +90,33 @@ stroke: #5AFFFF;
   @media (max-width: 1200px) {
     .features {
       grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    .container h1 {
+
+      color: #EBF5F4;
+      /* background-color: rgba(0, 0, 0, 0.2); */
+  
+      text-align: center;
+      /* Headlines/Headline 1 */
+      margin-top: 90px;
+      font-family: "Noto Kufi Arabic";
+      font-size: 65px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;  
+    }
+    .container p{
+  
+      color: #EBF5F4;
+      /* background-color: rgba(0, 0, 0, 0.2); */
+      text-align: center;
+      /* Subheadline/Subheadline 1 */
+      font-family: "Noto Kufi Arabic";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 180%;
     }
   }
   
@@ -91,11 +124,65 @@ stroke: #5AFFFF;
     .features {
       grid-template-columns: 1fr 1fr;
     }
+    .container h1 {
+
+      color: #EBF5F4;
+      /* background-color: rgba(0, 0, 0, 0.2); */
+  
+      text-align: center;
+      /* Headlines/Headline 1 */
+      margin-top: 90px;
+      font-family: "Noto Kufi Arabic";
+      font-size: 65px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;  
+    }
+    .container p{
+  
+      color: #EBF5F4;
+      /* background-color: rgba(0, 0, 0, 0.2); */
+      text-align: center;
+      /* Subheadline/Subheadline 1 */
+      font-family: "Noto Kufi Arabic";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 180%;
+    }
   }
   
   @media (max-width: 480px) {
     .features {
       grid-template-columns: 1fr;
+    }
+    .container h1 {
+
+      color: #EBF5F4;
+      /* background-color: rgba(0, 0, 0, 0.2); */
+  
+      text-align: center;
+      /* Headlines/Headline 1 */
+      margin-top: 90px;
+      font-family: "Noto Kufi Arabic";
+      font-size: 30px;
+      text-align: left;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;  
+    }
+    .container p{
+  
+      color: #EBF5F4;
+      /* background-color: rgba(0, 0, 0, 0.2); */
+      text-align: center;
+      /* Subheadline/Subheadline 1 */
+      font-family: "Noto Kufi Arabic";
+      font-size: 10px;
+      font-style: normal;
+      text-align: left;
+      font-weight: 400;
+      line-height: 180%;
     }
   }
   

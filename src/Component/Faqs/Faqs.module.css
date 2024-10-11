@@ -1,86 +1,89 @@
-
-.faqContainer {
+ .faqContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("../../assets/Faqsbg.png"); 
+  background-image: url("../../assets/Faqsbg.png");
   background-size: cover;
-  background-position: center; 
+  background-position: center;
   background-repeat: no-repeat;
-  text-align: center; 
+  text-align: center;
   align-items: center;
-  padding: 20px;
-  margin: auto;
-  /* background-color: black; */
-  width: 100%; 
-  max-width: 1500px; 
+  padding:0 20px;
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1550px !important;
 }
+
 .faqContainer h2 {
   margin-bottom: 40px;
-  color: white;  
+  color: white;
 }
 
 .faqList {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  width: 100%; 
+  align-items: center;
+  width: 100%;
 }
 
 .faqItem {
-  border-radius: 8px;
+  width: 70%;
+  max-width: 1000px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent; 
+  padding: 8px 10px;
+  box-sizing: border-box; 
+  border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 2px; 
   cursor: pointer;
   color: #39FFFb;
   transition: background-color 0.3s ease;
-  border: none; 
-  width: 100%; 
-  max-width: 1000px; 
- 
+  
 
+ 
+}
+
+.faqItem.active {
+  border-color: #39FFFb; 
+ 
 }
 
 .question {
-color: rgba(90, 255, 255, 0.40);
-text-align: start;
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 100;
-line-height: 200%; 
-padding-left: 220px;
-margin: 0 auto;
+  color: rgba(90, 255, 255, 0.40);
+  text-align: start;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 100;
+
+ 
 }
 
 .answer {
   color: white;
-  /* padding: 15px 40px;  */
-  border: 1px solid #39FFFb;
-  border-radius: 15px;
   text-align: start;
   display: none; 
-  box-sizing: border-box; 
-  width: 80%;
   margin: 0 auto;
   position: relative;
-  padding-right: 80px;
-  padding-left: 100px;
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
   font-weight: 100;
-  line-height: 160%; 
+  line-height: 140%; 
+  margin-left: 120px;
+
 }
 
-.active .answer {
+.showAnswer {
   display: block; 
-   position: relative;
+  margin-top: 10px;
 }
 
 .arrowButton {
   background-color: transparent;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   border: none;
   cursor: pointer;
   margin-top: 40px;
@@ -98,103 +101,17 @@ margin: 0 auto;
 }
 
 .arrowButton:focus {
-  outline: none; 
-}
-
-/* 
-
-@media (max-width: 1200px) {
-  .faqItem {
-    max-width: 900px;
-  }
-  .question {
-    padding-left: 150px;
-  }
-  .answer {
-    width: 65%;
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 992px) {
-  .faqItem {
-    max-width: 800px;
-  }
-  .question {
-    font-size: 22px;
-    padding-left: 100px;
-  }
-  .answer {
-    width: 75%;
-    padding-right: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .faqItem {
-    max-width: 100%;
-  }
-  .question {
-    font-size: 20px;
-    padding-left: 60px;
-  }
-  .answer {
-    width: 85%;
-    padding-right: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .question {
-    font-size: 18px;
-    padding-left: 30px;
-  }
-  .answer {
-    width: 95%;
-    padding-right: 20px;
-  }
+  outline: none;
 }
 
 
-
-@media (max-width: 400px) {
-  .question {
-    font-size: 16px;
-    padding-left: 20px;
-  }
-  .answer {
-    width: 80%;
-    padding: 15px 15px; 
-    }
-} */
-/* Base styles remain the same */
-
-/* General mobile-first adjustments */
-/* .faqContainer {
-  padding: 20px;
-}
-
-.faqItem {
-  max-width: 100%; 
-} */
-
-.question {
-  padding-left: 20px; 
-  font-size: 16px; 
-}
-
-.answer {
-  width: 100%; 
-  padding-left: 20px; 
-  padding-right: 20px;
-}
 
 .arrowButton {
   margin-left: 0; 
   font-size: 20px; 
 }
 
-/* Responsive design for tablets and larger mobile devices (up to 768px) */
+
 @media (max-width: 768px) {
   .faqContainer {
     padding: 15px;
@@ -224,7 +141,6 @@ margin: 0 auto;
   }
 }
 
-/* Responsive design for mobile devices (up to 480px) */
 @media (max-width: 480px) {
   .faqContainer {
     padding: 10px;
@@ -245,6 +161,8 @@ margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 16px; 
+    margin-left: 0px;
+
   }
 
   .arrowButton {
@@ -253,7 +171,6 @@ margin: 0 auto;
   }
 }
 
-/* Desktop styles (1024px and up) */
 
 @media (min-width: 1024px) {
   .faqContainer {
@@ -277,10 +194,12 @@ margin: 0 auto;
     width: 80%; 
     padding-left: 100px;
     padding-right: 80px;
+
   }
 
   .arrowButton {
     margin-left: 60%;
     font-size: 24px;
   }
-}
+} 
+
