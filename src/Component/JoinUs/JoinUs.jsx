@@ -9,7 +9,7 @@ const JoinUs = () => {
       <div className={styles.JoinUsBox}>
         <h2 className={styles.heading}>Join our newslatter now </h2>
         <div className={styles.serachoption}>
-        <div ><button className={styles.button}>Send</button></div>
+        
        <div className={styles.inputBox}>
        
           <input
@@ -19,6 +19,7 @@ const JoinUs = () => {
           />
         
         </div>
+        <div ><button className={styles.button}>Send</button></div>
         </div>
        
       </div></div>

@@ -4,7 +4,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 900px;
+    max-width: 1950px;
+    margin: 0 auto;
   }
   
   .carouselcontainer h2 {
@@ -24,11 +26,11 @@
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    scrollbar-width: none; /* For Firefox */
+    scrollbar-width: none; 
   }
   
   .sliderContainer::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+    display: none; 
   }
   
   .slider {
@@ -38,26 +40,32 @@
   
   .card {
     flex: 0 0 auto;
-    /* padding: 20px; */
-    margin: 10px;
+   
+    margin: 5px;
     box-sizing: border-box;
     text-align: center;
-    /* border: 1px solid #ccc; */
+   
     border-radius: 5px;
-    /* height: 450px; */
+    height: 850px;
     color: #fff;
     width: 280px;
-    /* background-color: red; */
+  
   }
   .logo89 {
-    /* border: 1px solid rgb(208, 22, 22); */
-    width: 100%;
-    height: 130px;
+ 
+    /* width: 100%;
+    height: 130px; */
+    width: 293px;
+height: 177px;
+flex-shrink: 0;
   }
   .img89 {
-    /* border: 1px solid rgb(22, 208, 103); */
+ 
     width: 100%;
-    height: 320px;
+    height: 520px;
+    /* width: 336px;
+height: 533px;
+flex-shrink: 0; */
   }
  
  
@@ -74,10 +82,11 @@
   
   .arrowLeft {
     left: 10px;
-    /* border: 1px solid aliceblue; */
+
     border-radius: 50%;
-    width: 60px; /* Ensure width and height are equal */
+    width: 60px;
     height: 60px;
+    margin-left: -70px !important;
     background-color: #4444;
     display: flex;
     align-items: center;
@@ -86,9 +95,9 @@
   
   .arrowRight {
     right: 10px;
-    /* border: 1px solid #7777; */
+    margin-left: 70px !important;
     border-radius: 50%;
-    width: 60px; /* Ensure width and height are equal */
+    width: 60px; 
     height: 60px;
     background-color: #4444;
     display: flex;

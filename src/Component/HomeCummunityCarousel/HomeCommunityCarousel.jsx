@@ -6,11 +6,11 @@ const HomeCommunityCarousel = () => {
   // Updated items array with different images for each card
   const items = [
     { id: 1, imgSrc: assests.Reactangle49, logoSrc:assests.logo14   },
-    { id: 2, imgSrc: assests.Reactangle48, logoSrc:assests.logo15 },
+    { id: 2, imgSrc: assests.Reactangle48, logoSrc:assests.logo19  },
     { id: 3, imgSrc: assests.Reactangle50,  logoSrc:assests.logo16 },
-    { id: 4, imgSrc: assests.Reactangle51, logoSrc:assests.logo19 },
-    { id: 5, imgSrc: assests.Reactangle49,  logoSrc:assests.logo15 },
-    { id: 6, imgSrc: assests.Reactangle48, logoSrc:assests.logo16 },
+    { id: 4, imgSrc: assests.Reactangle48, logoSrc:assests.logo19  },
+    // { id: 5, imgSrc: assests.Reactangle49,  logoSrc:assests.logo15 },
+    { id: 6, imgSrc: assests.Reactangle51, logoSrc:assests.logo15 },
   ];
 
   const sliderRef = useRef(null);
