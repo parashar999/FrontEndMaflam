@@ -101,7 +101,7 @@ flex-shrink: 0;
 
 .submenu a:hover {
   background-color: #444; /* Adjust hover effect */
-}
+/* } */
 .dropdown {
   position: relative;
 }

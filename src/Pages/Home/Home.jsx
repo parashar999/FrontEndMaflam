@@ -21,7 +21,7 @@ import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 
 const Home = () => {
   return (
-    <div className={Styles.Home}>
+    <div className={Styles.Home} >
       <Navbar></Navbar>
       <HomeHero></HomeHero> 
        <LearnMaflam></LearnMaflam>
