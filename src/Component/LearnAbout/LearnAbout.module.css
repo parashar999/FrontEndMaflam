@@ -26,16 +26,6 @@
  
 }
 .mainConatiner h1{
-  /* text-align: center;
-  font-size: 50px;
-  background-image: linear-gradient(to right, #7C2D98, #00FFFF); 
-  
-  padding: 10px; 
- 
-  -webkit-background-clip: text; 
-  background-clip: text;
-  color: transparent; */
-
   background: linear-gradient(266deg, #0FF -33.31%, #7C2D98 114.78%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -49,17 +39,19 @@ text-align: center;
 
 /* Headlines/Headline 1 */
 font-family: "Noto Kufi Arabic";
-font-size: 65px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; /* 97.5px */
 
+
 font-family: "Noto Kufi Arabic";
-font-size: 65px;
+font-size: 40px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%;
 }
+
+
 .mainConatiner h2{
   color: var(--Accent-Accent-50, #F6FFFF);
   text-align: center;

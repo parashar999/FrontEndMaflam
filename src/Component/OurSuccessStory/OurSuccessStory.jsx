@@ -4,12 +4,12 @@ import { assests } from "../../assets/assests";
 
 const OurSuccessStory = () => {
   const items = [
-    { id: 1, imgSrc: assests. carouselcard1 },
+    { id: 1, imgSrc: assests. carouselcard2 },
     { id: 2, imgSrc: assests. carouselcard2 },
-    { id: 3, imgSrc: assests. carouselcard3 },
-    { id: 4, imgSrc: assests. carouselcard1 },
-    { id: 5, imgSrc: assests. carouselcard2 },
-    { id: 6, imgSrc: assests. carouselcard3 },
+    { id: 3, imgSrc: assests. carouselcard2},
+    // { id: 4, imgSrc: assests. carouselcard1 },
+    // { id: 5, imgSrc: assests. carouselcard2 },
+    // { id: 6, imgSrc: assests. carouselcard3 },
   ];
 
   const sliderRef = useRef(null);
