@@ -167,7 +167,7 @@ const Navbar = () => {
           Create an Account
         </a>
         <a href="#login">
-          <span className={styles.arrow}>&#8592; </span> log in
+          <span className={styles.arrow}>&#8592; </span> Log in
         </a>
       </div>
       <div className={styles.hamburger} onClick={toggleHamburger}>

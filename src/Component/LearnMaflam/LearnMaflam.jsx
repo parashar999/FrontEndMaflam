@@ -1,5 +1,5 @@
 import styles from "./LearnMaflam.module.css";
-import LearnMaflamImage from "../../assets/LearnMaflamImage.jpg";
+import LearnMaflamImage from "../../assets/LearnMaflamImage.png";
 
 const LearnMaflam = () => {
   return (

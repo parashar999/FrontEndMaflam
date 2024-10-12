@@ -1,9 +1,9 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 10px 50px;
+  padding: 10px 150px;
   backdrop-filter: blur(30px);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,6 +11,8 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  /* max-width: 1900px; */
+  margin: 0 auto;
 }
 
 .logo {
@@ -44,10 +46,10 @@
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  padding: 5px;
+  padding: 8px;
   border-radius: 20px;
-  border-color: #0ccac4;
-  outline: #0ccac4;
+  border:1px solid #0ccac4;
+  /* outline: #0ccac4; */
 }
 .searchContainer input {
   border: none;
@@ -55,7 +57,7 @@
   color: #f6fffe !important;
   font-size: 14px;
   outline: none;
-  margin-left: 5px;
+  /* margin-left: px; */
 }
 /* .searchContainer img{
   margin-right: 15px;
@@ -67,8 +69,10 @@ flex-shrink: 0;
   margin-top: 10px;
   width: 24.06px;
   height: 24px;
-  flex-shrink: 0;
-}
+  margin-left: -50px;
+  /* margin-right: -0px; */
+  /* flex-shrink: 0;
+} */
 
 .searchButton {
   background: none;
@@ -80,8 +84,8 @@ flex-shrink: 0;
   margin-left: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 10px;
   margin-right: 100px;
 }
 
@@ -191,6 +195,10 @@ flex-shrink: 0;
     text-align: center;
     padding: 10px 0;
   }
+
+  .searchContainerGlobe img{
+    display: none;
+  }
 }
 @media (max-width: 576px) {
   .navbar {
@@ -204,6 +212,9 @@ flex-shrink: 0;
   .signupButton {
     font-size: 14px;
     padding: 8px 20px;
+  }
+  .searchContainerGlobe img{
+    display: none;
   }
 }
 @media (max-width: 425px) {
@@ -224,6 +235,9 @@ flex-shrink: 0;
     font-size: 12px; /* Further reduced button text size */
     padding: 7px 16px;
   }
+  .searchContainerGlobe img{
+    display: none;
+  }
 }
 
 /* Ultra small devices (375px and below) */
@@ -237,6 +251,9 @@ flex-shrink: 0;
     text-align: right;
     font-size: 12px;
     padding: 6px 14px;
+  }
+  .searchContainerGlobe img{
+    display: none;
   }
 }
 
@@ -270,6 +287,9 @@ flex-shrink: 0;
     width: 100%;
     text-align: center;
     padding: 10px 0;
+  }
+  .searchContainerGlobe img{
+    display: none;
   }
 }
 

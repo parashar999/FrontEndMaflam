@@ -6,7 +6,7 @@
   background-size: cover;
   height: 800px;
   width: 100%; 
-  max-width: 1500px; 
+  max-width: 1900px; 
   margin: 0 auto;
  
 }
@@ -129,6 +129,8 @@ font-style: normal;
 font-weight: 400;
 line-height: 160%; 
 padding: 10px 200px;
+width: 70%;
+margin: 0 auto;
 
 }
 
