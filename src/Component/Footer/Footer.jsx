@@ -5,28 +5,54 @@ import styles from './Footer.module.css';
 import axios from 'axios';
 import { assests } from '../../assets/assests';
 // import {  footerColumnData } from '../../assets/assests';
+import  { useContext } from "react";
+import { LanguageContext } from "../LanguageContext/LanguageContext";
 
-const Footer = () => {
+// const Footer = () => {
+
+  const Footer = ( ) => {
+  const [footerColumnData1, setFooterColumnData1] = useState([]);
+  const { language, direction, toggleLanguage } = useContext(LanguageContext);
+  const FooterGetApi = (lang) => {
+    // Fetch footer data based on the selected language
+    axios
+      .get(`http://3.29.25.216:3001/maflam/fetch-footerdata?lang=${lang}`)
+      // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
+      .then((response) => {
+        setFooterColumnData1(response.data); // Set the fetched data in state
+        console.log("Footer data fetched successfully:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching footer data:", error);
+      });
+  };
+
+  useEffect(() => {
+    // Call the API when the component loads or when language changes
+    FooterGetApi(language === "ar" ? 0 : 1);
+  }, [language]);
+
+// const [footerColumnData1, setFooterColumnData1] = useState([])
+
+// const FooterGetApi = () =>{
+//   // axios.get('http://192.168.1.39:3001/maflam/get-footer-data')
+//   axios.get('http://192.168.1.39:3001/maflam/fetch-footerdata?lang=0')
+//   // axios.get('http://3.29.240.167:3001/maflam/get-footer-data')
+// .then(response => {
+//   setFooterColumnData1(response.data);
+//     console.log("Data fetched successfully:", response.data);
+// })
+// .catch(error => {
+//     console.error('Error fetching data:', error);
+// });
+// }
+
+// useEffect(()=>{
+//   FooterGetApi()
+// })
 
 
-const [footerColumnData1, setFooterColumnData1] = useState([])
 
-const FooterGetApi = () =>{
-  // axios.get('http://192.168.1.39:3001/maflam/get-footer-data')
-  axios.get('http://192.168.1.39:3001/maflam/fetch-footerdata?lang=0')
-  // axios.get('http://3.29.240.167:3001/maflam/get-footer-data')
-.then(response => {
-  setFooterColumnData1(response.data);
-    console.log("Data fetched successfully:", response.data);
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
-}
-
-useEffect(()=>{
-  FooterGetApi()
-})
   return (
     <footer className={styles.footer}>
      <hr className={styles.footerHr} />
