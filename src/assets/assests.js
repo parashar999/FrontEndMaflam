@@ -103,6 +103,7 @@ import carouselcard1 from "./CarouselCard1.png";
 import carouselcard2 from "./CarouselCard2.png";
 import carouselcard3 from "./CarouselCard3.png";
 import quotes from "./quotes icon.png";
+import LearnMaflamImage from  "./LearnMaflamImage.png";
 
 import maflamScreen from "./Maflam-Screen.png";
 import Subscribee from "./Subscribee.png";
@@ -169,6 +170,7 @@ export const assests = {
   Frame63,
   pricing,
   Rectangle13,
+  LearnMaflamImage,
   Rectangl13,
   Rectangl14,
   Rectangl15,

@@ -16,11 +16,11 @@ function Ourservices() {
 
           <div className={styles.text2}>
           <div className={styles.flexx}>  <h1>+550</h1>
-          <p>Specialized Courses</p></div>
+          <p>Educational Materials</p></div>
             <div className={styles.flexx}> <h1>+600</h1>
-            <p>Educational Video</p></div>
+            <p>Videos</p></div>
            <div className={styles.flexx}  >  <h1>+9</h1>
-           <p>Educational Materials</p></div>
+           <p>Specialized Courses</p></div>
           </div>
 
           <div className={styles.frane64}>

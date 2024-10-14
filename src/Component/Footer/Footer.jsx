@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Footer.module.css';
 import axios from 'axios';
 import { assests } from '../../assets/assests';
-// import { assests, footerColumnData } from '../../assets/assests';
+// import {  footerColumnData } from '../../assets/assests';
 
 const Footer = () => {
 
@@ -13,7 +13,8 @@ const [footerColumnData1, setFooterColumnData1] = useState([])
 
 const FooterGetApi = () =>{
   // axios.get('http://192.168.1.39:3001/maflam/get-footer-data')
-  axios.get('http://3.29.240.167:3001/maflam/get-footer-data')
+  axios.get('http://192.168.1.39:3001/maflam/fetch-footerdata?lang=0')
+  // axios.get('http://3.29.240.167:3001/maflam/get-footer-data')
 .then(response => {
   setFooterColumnData1(response.data);
     console.log("Data fetched successfully:", response.data);

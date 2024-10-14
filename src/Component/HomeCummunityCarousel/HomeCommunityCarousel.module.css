@@ -58,6 +58,11 @@
     width: 293px;
 height: 177px;
 flex-shrink: 0;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+width: 293px;
+height: 257px;
+flex-shrink: 0;
+
   }
   .img89 {
  
