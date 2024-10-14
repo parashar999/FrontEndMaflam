@@ -17,12 +17,13 @@ import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 
 import "./App.css"
+import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
 // import usePreventZoom from "./Component/UsePreventZoom/UsePreventZoom.jsx";
 
 const App = () => {
   // usePreventZoom()
   return (
-
+    <LanguageProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<AboutUs />} />
@@ -41,7 +42,7 @@ const App = () => {
           <Route path="/checkout" element={<Checkouts />} />
           <Route path="/pricing" element={<PricingDetails />} />
         </Routes>
-    
+        </LanguageProvider>
   );
 };
 

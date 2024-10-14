@@ -18,9 +18,13 @@
 }
 
 .langbtn{
-  border: solid black 1px;
-  padding: 10px;
-  background: #000;
+  border: solid rgba(26, 34, 40, 0.9) 1px;
+  margin-left: -40px;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+  /* background: #000; */
+  background-color: rgba(26, 34, 40, 0.9);
   color: #ccc;
 }
 .logo {

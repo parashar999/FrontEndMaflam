@@ -1,3 +1,56 @@
+
+
+
+import React from "react";
+import Navbar from "../../Component/Navbar/Navbar";
+import HomeHero from "../../Component/HomeHero/HomeHero";
+import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
+import ViewCourses from "../../Component/ViewCourses/ViewCourses";
+import CourseGrid from "../../Component/CourseCategories/Course";
+import Fundamental from "../../Component/FundamentalPackage/Fundamental";
+import Ourservices from "../../Component/Ourservices/Ourservices";
+import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
+import LearnAbout from "../../Component/LearnAbout/LearnAbout";
+import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
+import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
+import BlogContainer from "../../Component/Blogs/BlogContainer";
+import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel";
+import CarouselCommunity from "../../Component/Community/CarouselCommunity";
+import Faqs from "../../Component/Faqs/Faqs";
+import Footer from "../../Component/Footer/Footer";
+import Styles from "./Home.module.css";
+import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
+// import { LanguageProvider } from "../../context/LanguageContext"; 
+const Home = () => {
+  return (
+    <LanguageProvider>
+      <div className={Styles.Home}>
+        <Navbar />
+        <HomeHero />
+        <LearnMaflam />
+        <ViewCourses />
+        <CourseGrid />
+        <Fundamental />
+        <Ourservices />
+        <SuccessPartners />
+        <LearnAbout />
+        <MaflamInstructors />
+        <HomeScreenCarousel />
+        <BlogContainer />
+        <HomeCommunityCarousel />
+        <CarouselCommunity />
+        <Faqs />
+        <Footer />
+      </div>
+    </LanguageProvider>
+  );
+};
+
+export default Home;
+
+
+
+
 // import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
 // import Navbar from "../../Component/Navbar/Navbar";
 // import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
@@ -110,52 +163,3 @@
 // };
 
 // export default Home;
-
-
-
-import React from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import HomeHero from "../../Component/HomeHero/HomeHero";
-import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
-import ViewCourses from "../../Component/ViewCourses/ViewCourses";
-import CourseGrid from "../../Component/CourseCategories/Course";
-import Fundamental from "../../Component/FundamentalPackage/Fundamental";
-import Ourservices from "../../Component/Ourservices/Ourservices";
-import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
-import LearnAbout from "../../Component/LearnAbout/LearnAbout";
-import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
-import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
-import BlogContainer from "../../Component/Blogs/BlogContainer";
-import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel";
-import CarouselCommunity from "../../Component/Community/CarouselCommunity";
-import Faqs from "../../Component/Faqs/Faqs";
-import Footer from "../../Component/Footer/Footer";
-import Styles from "./Home.module.css";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-// import { LanguageProvider } from "../../context/LanguageContext"; 
-const Home = () => {
-  return (
-    <LanguageProvider>
-      <div className={Styles.Home}>
-        <Navbar />
-        <HomeHero />
-        <LearnMaflam />
-        <ViewCourses />
-        <CourseGrid />
-        <Fundamental />
-        <Ourservices />
-        <SuccessPartners />
-        <LearnAbout />
-        <MaflamInstructors />
-        <HomeScreenCarousel />
-        <BlogContainer />
-        <HomeCommunityCarousel />
-        <CarouselCommunity />
-        <Faqs />
-        <Footer />
-      </div>
-    </LanguageProvider>
-  );
-};
-
-export default Home;

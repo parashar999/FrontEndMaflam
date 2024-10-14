@@ -13,7 +13,7 @@ function Ourservices() {
           <div className={styles.ourservicesvector}>
             <p>We Take Pride in Ourselves Through</p>
           </div>
-
+    
           <div className={styles.text2}>
           <div className={styles.flexx}>  <h1>+550</h1>
           <p>Educational Materials</p></div>
