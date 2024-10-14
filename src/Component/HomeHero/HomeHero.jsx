@@ -5,8 +5,8 @@ const HomeHero = () => {
     <div className={styles.heroContainer}>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <h1 className={styles.title} style={{ fontSize: 36 }}>
-          A platform For Every Arab <br /> Passionate About Filmmaking
+        <h1 className={styles.title} style={{ fontSize: 45 }}>
+          A Platform For Every Arab <br /> Passionate About Filmmaking
         </h1>
         <p className={styles.description}>
           Get ready to access over 600 educational materials in filmmaking

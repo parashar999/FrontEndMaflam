@@ -10,10 +10,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15x;
     margin: 0 auto;
     width: 100%;
-    max-width: 1500px;
+    max-width: 1900px;
    
   }
   
@@ -66,8 +66,9 @@
     
     font-size:1.5rem;
      padding: 70px 100px;
-    text-align: left;
+    text-align: center;
     line-height: 1.5;
+    width: 80%;
     /* flex: 1; */
   }
   
@@ -106,6 +107,7 @@
   
   .text2 h1 {
     margin: 0; 
+    font-size: 40px;
   }
   
   .text2 p {

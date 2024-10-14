@@ -103,6 +103,7 @@ import carouselcard1 from "./CarouselCard1.png";
 import carouselcard2 from "./CarouselCard2.png";
 import carouselcard3 from "./CarouselCard3.png";
 import quotes from "./quotes icon.png";
+import LearnMaflamImage from  "./LearnMaflamImage.png";
 
 import maflamScreen from "./Maflam-Screen.png";
 import Subscribee from "./Subscribee.png";
@@ -169,6 +170,7 @@ export const assests = {
   Frame63,
   pricing,
   Rectangle13,
+  LearnMaflamImage,
   Rectangl13,
   Rectangl14,
   Rectangl15,
@@ -500,40 +502,40 @@ export const courses = [
   { title: "Introduction to Premiere Pro", img: course2 },
 ];
 
-export const footerColumnData = [
-  {
-    title: "Subscriptions",
-    links: [
-      { text: "Subscription prices", href: "#" },
-      { text: "Full courses", href: "#" },
-      { text: "Specialized courses", href: "#" },
-    ],
-  },
-  {
-    title: "Free education materials",
-    links: [
-      { text: "Blog", href: "#" },
-      { text: "E-book", href: "#" },
-      { text: "Join the mailing list", href: "#" },
-    ],
-  },
-  {
-    title: "Get to know Maflam",
-    links: [
-      { text: "About Maflam", href: "#" },
-      { text: "Our programs", href: "#" },
-      { text: "Our services", href: "#" },
-    ],
-  },
-  {
-    title: "Contact Us",
-    links: [
-      { text: "Join the Maflam world", href: "#" },
-      { text: "FAQs", href: "#" },
-      { text: "Contact information", href: "#" },
-    ],
-  },
-];
+// export const footerColumnData = [
+//   {
+//     title: "Subscriptions",
+//     links: [
+//       { text: "Subscription prices", href: "#" },
+//       { text: "Full courses", href: "#" },
+//       { text: "Specialized courses", href: "#" },
+//     ],
+//   },
+//   {
+//     title: "Free education materials",
+//     links: [
+//       { text: "Blog", href: "#" },
+//       { text: "E-book", href: "#" },
+//       { text: "Join the mailing list", href: "#" },
+//     ],
+//   },
+//   {
+//     title: "Get to know Maflam",
+//     links: [
+//       { text: "About Maflam", href: "#" },
+//       { text: "Our programs", href: "#" },
+//       { text: "Our services", href: "#" },
+//     ],
+//   },
+//   {
+//     title: "Contact Us",
+//     links: [
+//       { text: "Join the Maflam world", href: "#" },
+//       { text: "FAQs", href: "#" },
+//       { text: "Contact information", href: "#" },
+//     ],
+//   },
+// ];
 export const faqData = [
   {
     question: "When doese my course subscription end?",

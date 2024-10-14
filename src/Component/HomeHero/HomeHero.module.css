@@ -32,10 +32,11 @@
 .description {
   width: 100%;
   max-width: 540px;
- 
   line-height: 1.5;
   color: #fff;
   margin-top: 10px;
+  font-weight: 300;
+ 
 }
 
 .primaryButton {

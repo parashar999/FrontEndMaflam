@@ -3,7 +3,7 @@
     /* background-image: url("../../assets/instructiobg.png"); */
     background-image: url("../../assets/backgronds.png");
     padding: 20px;
-    min-height: 630px;
+    min-height: 700px;
     border-radius: 8px;
     max-width: 1250px;
     margin:0 auto;
@@ -27,7 +27,7 @@ font-family: "Noto Kufi Arabic";
 font-size: 36px;
 font-style: normal;
 font-weight: 700;
-line-height: 160%;
+line-height: 130%;
   }
   
   .instructorsGrid {
@@ -36,7 +36,7 @@ line-height: 160%;
     
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 10px;
-  }
+  }    
   
   .instructorCard {
 
@@ -76,6 +76,20 @@ line-height: 160%;
     padding: 0px;
     height: auto;
     border-radius: 8px;
+  }
+  .instructorsContainer {
+  
+    
+    background-image: url("../../assets/backgronds.png");
+
+    min-height: 180px;
+  
+  }
+  .instructorsContainerss{
+
+    
+    background: #030B11;
+    
   }
   
 }

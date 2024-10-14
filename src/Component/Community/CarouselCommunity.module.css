@@ -4,7 +4,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
+  max-width: 1500px;
+  margin: 0 auto ;
   /* border: 2px solid bisque; */
+  margin-top: 100px;
 }
 
 .carouselWrapper h2 {
@@ -24,7 +27,7 @@ line-height: 160%;
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 12 00px;
   margin: auto;
   padding: 20px 0px;
 }
@@ -47,7 +50,7 @@ line-height: 160%;
 
 .carouselCard {
   flex: 0 0 auto;
-  margin: 10px;
+  margin: 6px;
   box-sizing: border-box;
   text-align: center;
   border-radius: 5px;
@@ -57,7 +60,7 @@ line-height: 160%;
 }
 
 .carouselCard img {
-  height: 300px;
+  height: 350px;
   width: 100%;
 }
 
