@@ -26,7 +26,7 @@ const CarouselCommunity = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -375,
+      left: 375,
       behavior: "smooth",
     });
   };

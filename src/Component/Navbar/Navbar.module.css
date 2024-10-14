@@ -1,4 +1,344 @@
+
+
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 15px 150px;
+  backdrop-filter: blur(30px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* max-width: 1900px; */
+  margin: 0 auto;
+}
+
+.langbtn{
+  border: solid black 1px;
+  padding: 10px;
+  background: #000;
+  color: #ccc;
+}
+.logo {
+  height: 40px;
+}
+.leftLinks {
+  padding: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.leftLinks a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.leftLinks a:hover {
+  color: #0ccac4;
+  font-weight: 500;
+}
+.searchContainer {
+  height: 37px;
+  max-width: 250px;
+  font-size: 20px;
+  color: #f6fffe !important;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 20px;
+  border:1px solid #0ccac4;
+ 
+}
+.searchContainer input {
+  border: none;
+  background: transparent;
+  color: #f6fffe !important;
+  font-size: 14px;
+  outline: none;
+
+}
+
+
+.searchButton {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+}
+.rightLinks {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  
+}
+
+.rightLinks a {
+  color: #0ccac4;
+  text-decoration: none;
+}
+.signupButton {
+  border-radius: 64px;
+  background: var(--Primary-Primary-300, #1A374B);
+  padding: 5px 24px;
+  color: #39FFFB;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.submenu a:hover {
+  background-color: #444;
+}
+.dropdown {
+  position: relative;
+}
+.submenu {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%; 
+  left: 0; 
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  min-width: 220px;
+  align-items: start;
+}
+
+.submenu a {
+
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background-color: #444; 
+}
+
+.navbar {
+  z-index: 1000;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(-45deg);
+}
+.rotate1 {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .leftLinks, .rightLinks, .searchContainer {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar.active .leftLinks,
+  .navbar.active .rightLinks {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(26, 34, 40, 0.9);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .leftLinks a, .rightLinks a {
+    margin: 10px 0;
+  }
+
+  .signupButton {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .searchContainerGlobe img{
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .signupButton {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  .searchContainerGlobe img{
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    height: 30px; 
+  }
+
+  .hamburger div {
+    width: 20px;
+    height: 2px;
+  }
+
+  .signupButton {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+  .searchContainerGlobe img{
+    display: none;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .navbar {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .signupButton {
+    text-align: right;
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+  .searchContainerGlobe img{
+    display: none;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+ 
+  .searchContainer {
+    height: 37px;
+    max-width: 150px;
+    font-size: 18px;
+    color: #f6fffe !important;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 20px;
+    border:1px solid #0ccac4;
+   
+  }
+  .searchContainer input {
+    border: none;
+    background: transparent;
+    color: #f6fffe !important;
+    font-size: 14px;
+    outline: none;
+  
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    backdrop-filter: blur(30px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* max-width: 1900px; */
+    margin: 0 auto;
+  }
+   /* .navbar.active .leftLinks,
+  .navbar.active .rightLinks {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(26, 34, 40, 0.9);
+    width: 100%;
+    padding: 20px;
+  }
+
+  .leftLinks a, .rightLinks a {
+    margin: 10px 0;
+  }
+
+  .signupButton {
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .searchContainerGlobe img{
+    display: none;
+  } */
+
+ 
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+  **** Old Css In Below *** */
+
+/* .navbar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -11,7 +351,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  /* max-width: 1900px; */
+  max-width: 1900px;
   margin: 0 auto;
 }
 
@@ -49,7 +389,7 @@
   padding: 8px;
   border-radius: 20px;
   border:1px solid #0ccac4;
-  /* outline: #0ccac4; */
+ 
 }
 .searchContainer input {
   border: none;
@@ -57,22 +397,9 @@
   color: #f6fffe !important;
   font-size: 14px;
   outline: none;
-  /* margin-left: px; */
+
 }
-/* .searchContainer img{
-  margin-right: 15px;
-  width: 16px;
-height: 16px;
-flex-shrink: 0;
-}
-.searchContainerGlobe img{
-  margin-top: 10px;
-  width: 24.06px;
-  height: 24px;
-  margin-left: -50px;
-  /* margin-right: -0px; */
-  /* flex-shrink: 0;
-} */
+
 
 .searchButton {
   background: none;
@@ -86,7 +413,7 @@ flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-right: 100px;
+  
 }
 
 .rightLinks a {
@@ -104,7 +431,7 @@ flex-shrink: 0;
 
 
 .submenu a:hover {
-  background-color: #444; /* Adjust hover effect */
+  background-color: #444;
 }
 .dropdown {
   position: relative;
@@ -127,13 +454,13 @@ flex-shrink: 0;
 .submenu a {
 
   color: white;
-  padding: 8px 15px; /* Increase padding for better clickability */
+  padding: 8px 15px;
   text-decoration: none;
   font-size: 14px;
 }
 
 .submenu a:hover {
-  background-color: #444; /* Adjust hover effect */
+  background-color: #444; 
 }
 
 .navbar {
@@ -223,16 +550,16 @@ flex-shrink: 0;
   }
 
   .logo {
-    height: 30px; /* Further reduced logo size */
+    height: 30px; 
   }
 
   .hamburger div {
     width: 20px;
-    height: 2px; /* Smaller hamburger icon */
+    height: 2px;
   }
 
   .signupButton {
-    font-size: 12px; /* Further reduced button text size */
+    font-size: 12px;
     padding: 7px 16px;
   }
   .searchContainerGlobe img{
@@ -240,7 +567,7 @@ flex-shrink: 0;
   }
 }
 
-/* Ultra small devices (375px and below) */
+
 @media (max-width: 390px) {
   .navbar {
     width: 100%;
@@ -292,5 +619,5 @@ flex-shrink: 0;
     display: none;
   }
 }
-
+ */
 

@@ -3,10 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: px !important;
     text-align: center;
-    max-width: 1500px;
+    max-width: 19=50px !important;
     margin: 0 auto;
-    min-height: 800px;
+   width: 100vw;
+    min-height: 900px;
     /* background-image: url("../../assets/filmaker.png");          */
     background-image: url("../../assets/aboutHero.png");  
     /* background-color: rgba(0, 0, 0, 0.5); */

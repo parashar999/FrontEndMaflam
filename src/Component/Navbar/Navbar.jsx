@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
@@ -20,7 +20,7 @@ import { BiSolidBookAlt } from "react-icons/bi";
 
 import { assests } from "../../assets/assests";
 
-const Navbar = () => {
+const Navbar = ({ language, direction, toggleLanguage }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
@@ -41,6 +41,9 @@ const Navbar = () => {
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
+       <button className={styles.langbtn}  onClick={toggleLanguage}>
+        {language === "ar" ? "English" : "العربية"}
+      </button>
       <img src={logo1} alt="Logo" className={styles.logo} />
       <div className={styles.leftLinks}>
         <a href="/aboutus">About Maflam</a>
