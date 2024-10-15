@@ -103,6 +103,7 @@ import carouselcard1 from "./CarouselCard1.png";
 import carouselcard2 from "./CarouselCard2.png";
 import carouselcard3 from "./CarouselCard3.png";
 import quotes from "./quotes icon.png";
+import LearnMaflamImage from "./LearnMaflamImage.png";
 
 import maflamScreen from "./Maflam-Screen.png";
 import Subscribee from "./Subscribee.png";
@@ -169,6 +170,7 @@ export const assests = {
   Frame63,
   pricing,
   Rectangle13,
+  LearnMaflamImage,
   Rectangl13,
   Rectangl14,
   Rectangl15,
@@ -239,7 +241,6 @@ export const instructors = [
   { name: "Odai Abed", image: Rectangle42 },
   { name: "Khalid Yaslam", image: Rectangle43 },
 ];
-//importing bloghero component content
 export const blogPosts = [
   {
     id: 1,
@@ -348,23 +349,22 @@ export const insights = [
   {
     id: 1,
     title: "Our mission is to deliver top-quality educational content.",
-    imageUrl: Insights1, // Replace with your image paths
+    imageUrl: Insights1,
     category: "GL18",
   },
   {
     id: 2,
     title: "Our mission is to deliver top-quality educational content.",
-    imageUrl: Insights2, // Replace with your image paths
+    imageUrl: Insights2,
     category: "GL18",
   },
   {
     id: 3,
     title: "Our mission is to deliver top-quality educational content.",
-    imageUrl: Insights3, // Replace with your image paths
+    imageUrl: Insights3,
     category: "GL18",
   },
 ];
-//import popular resources content
 export const resources = [
   {
     id: 1,
@@ -392,21 +392,6 @@ export const resources = [
   },
 ];
 
-// export const featuresData = [
-//   {
-//     title: "Get certified",
-//     description: "Earn a certificate on completing the courses.",
-//   },
-//   {
-//     title: "Lifetime Access to Material",
-//     description: "Access all the learning material anytime.",
-//   },
-//   { title: "Ask your instructors", description: "Get support from experts." },
-//   {
-//     title: "Learn Anytime, Anywhere",
-//     description: "Access from any device at your convenience.",
-//   },
-// ];
 export const featuresData = [
   {
     title: "A Community of Aspiring Filmmakers",

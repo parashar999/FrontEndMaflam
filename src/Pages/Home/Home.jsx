@@ -1,46 +1,59 @@
-import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
+import React, { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
-import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
 import HomeHero from "../../Component/HomeHero/HomeHero";
-import CourseGrid from "../../Component/CourseCategories/Course";
-import Footer from "../../Component/Footer/Footer";
-import Fundamental from "../../Component/FundamentalPackage/Fundamental";
-import Faqs from "../../Component/Faqs/Faqs";
+import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
 import ViewCourses from "../../Component/ViewCourses/ViewCourses";
-import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam.jsx";
-import Ourservices from "../../Component/Ourservices/Ourservices.jsx";
-import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel.jsx";
-
-import CarouselCommunity from "../../Component/Community/CarouselCommunity.jsx";
+import CourseGrid from "../../Component/CourseCategories/Course";
+import Fundamental from "../../Component/FundamentalPackage/Fundamental";
+import Ourservices from "../../Component/Ourservices/Ourservices";
+import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
+import LearnAbout from "../../Component/LearnAbout/LearnAbout";
+import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
+import HomeScreenCarousel from "../../Component/HomeScreenCarousel/HomeScreenCarousel";
+import BlogContainer from "../../Component/Blogs/BlogContainer";
+import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel";
+import CarouselCommunity from "../../Component/Community/CarouselCommunity";
+import Faqs from "../../Component/Faqs/Faqs";
+import Footer from "../../Component/Footer/Footer";
 import Styles from "./Home.module.css";
-// import SuccessStories from "../../Component/SuccessStories/SuccessStories.jsx";
-import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCommunityCarousel.jsx";
-import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
-import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
-
+import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
+import {
+  HomePageContext,
+  HomePageProvider,
+} from "../../store/HomePageContext.jsx";
 
 const Home = () => {
-  return (
-    <div className={Styles.Home}>
-      <Navbar></Navbar>
-      <HomeHero></HomeHero> 
-       <LearnMaflam></LearnMaflam>
-      <ViewCourses></ViewCourses>
-      <CourseGrid></CourseGrid>
-      <Fundamental></Fundamental>
-      <Ourservices></Ourservices>
-      <SuccessPartners></SuccessPartners>
-      <LearnAbout></LearnAbout> 
-       <MaflamInstructors></MaflamInstructors>
-      <HomeScreenCarousel /> 
-      <BlogContainer></BlogContainer>
-      <HomeCommunityCarousel></HomeCommunityCarousel>
-      <CarouselCommunity></CarouselCommunity>
+  const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
-      <Faqs></Faqs>
-      <Footer></Footer> 
-   
-    </div>
+  useEffect(() => {
+    if (homeScreenDetails) {
+      console.log("Home Screen Details:", homeScreenDetails);
+    }
+  }, [homeScreenDetails]);
+
+  return (
+    <LanguageProvider>
+      <HomePageProvider>
+        <div className={Styles.Home}>
+          <Navbar />
+          <HomeHero />
+          <LearnMaflam />
+          <ViewCourses />
+          <CourseGrid />
+          <Fundamental />
+          <Ourservices />
+          <SuccessPartners />
+          <LearnAbout />
+          <MaflamInstructors />
+          <HomeScreenCarousel />
+          <BlogContainer />
+          <HomeCommunityCarousel />
+          <CarouselCommunity />
+          <Faqs />
+          <Footer />
+        </div>
+      </HomePageProvider>
+    </LanguageProvider>
   );
 };
 

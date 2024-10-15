@@ -1,17 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import styles from "./HomeScreenCarousel.module.css";
-import { assests } from "../../assets/assests";
+import { HomePageContext } from "../../store/HomePageContext"; // Import the context
 
 const HomeScreenCarousel = () => {
-  // Updated items array with different images for each card
-  const items = [
-    { id: 1, imgSrc: assests.EbookCard2 },
-    { id: 2, imgSrc: assests.EbookCard3 },
-    { id: 3, imgSrc: assests.EbookCard1 },
-    { id: 4, imgSrc: assests.EbookCard2 },
-    { id: 5, imgSrc: assests.EbookCard3 },
-    { id: 6, imgSrc: assests.EbookCard1 },
-  ];
+  const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
+
+  // Handle loading and error states
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error loading eBooklets: {error.message}</p>;
+  }
+
+  // Access eBooklet data
+  const eBookletData = homeScreenDetails?.eBookletData || {};
 
   const sliderRef = useRef(null);
 
@@ -35,19 +39,27 @@ const HomeScreenCarousel = () => {
 
   return (
     <div className={styles.carouselcontainer}>
-      <h2>E-Booklets</h2>
+      <h2>{eBookletData.title}</h2>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
-        &larr;
+          &larr;
         </button>
 
         <div className={styles.sliderContainer} ref={sliderRef}>
           <div className={styles.slider}>
-            {items.map((item) => (
-              <div key={item.id} className={styles.card}>
-                {/* Different image for each card */}
-                <img src={item.imgSrc} alt={`Ebook Card ${item.id}`} />
+            {eBookletData.ebookVideoUrl?.map((videoUrl, index) => (
+              <div key={index} className={styles.card}>
+                {/* Render video instead of image */}
+                <video
+                  src={videoUrl}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className={styles.video} // Apply styling to video
+                  alt={`Ebook Video ${index + 1}`}
+                />
               </div>
             ))}
           </div>
@@ -55,12 +67,11 @@ const HomeScreenCarousel = () => {
 
         {/* Right Arrow */}
         <button className={styles.arrowRight} onClick={scrollRight}>
-        &rarr;
+          &rarr;
         </button>
       </div>
       <div className={styles.contentpara}>
-        <p>Unlock your free eBook filled with essential tips and insights for filmmakers
-        simply enter your email to download and start learning today!</p>
+        <p>{eBookletData.description}</p>
       </div>
     </div>
   );
