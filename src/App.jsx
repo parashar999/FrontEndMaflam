@@ -16,6 +16,7 @@ import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/Repre
 import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 import { HomePageContext, HomePageProvider } from "./store/HomePageContext.jsx";
+import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
 
 import "./App.css";
 
@@ -26,9 +27,11 @@ const App = () => {
       <Route
         path="/"
         element={
-          <HomePageProvider>
-            <Home />
-          </HomePageProvider>
+          <LanguageProvider>
+            <HomePageProvider>
+              <Home />
+            </HomePageProvider>
+          </LanguageProvider>
         }
       />
       <Route path="/aboutus" element={<AboutUs />} />

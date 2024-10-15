@@ -1,5 +1,5 @@
 import { courses } from "../../assets/assests";
-import styles from "./course.module.css"; // Importing the CSS module
+import styles from "./course.module.css";
 
 const CourseGrid = () => {
   return (
