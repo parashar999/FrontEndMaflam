@@ -15,7 +15,7 @@ export const HomePageProvider = ({ children }) => {
     try {
       const response = await axios.get(
         // `http://3.29.25.216:3001/maflam/get-home-screen-details?lang=${langParam}`
-         `http://40.172.19.83:3001/maflam/get-home-screen-details?lang=${langParam}`
+        `https://prominenttrades.in/maflam/get-home-screen-details?lang=${langParam}`
         // 40.172.19.83
       );
       console.log("API Response:", response.data);
@@ -39,9 +39,6 @@ export const HomePageProvider = ({ children }) => {
     </HomePageContext.Provider>
   );
 };
-
-
-
 
 // import React, { createContext, useState, useEffect } from "react";
 // import axios from "axios";
