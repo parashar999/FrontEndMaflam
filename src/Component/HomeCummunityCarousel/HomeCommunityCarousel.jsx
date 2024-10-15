@@ -1,19 +1,13 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import styles from "./HomeCommunityCarousel.module.css";
-import { assests } from "../../assets/assests";
+import { HomePageContext } from "../../store/HomePageContext"; // Assuming you're using this context
 
 const HomeCommunityCarousel = () => {
-  // Updated items array with different images for each card
-  const items = [
-    { id: 1, imgSrc: assests.Reactangle49, logoSrc:assests.logo14   },
-    { id: 2, imgSrc: assests.Reactangle48, logoSrc:assests.logo19  },
-    { id: 3, imgSrc: assests.Reactangle50,  logoSrc:assests.logo16 },
-    { id: 4, imgSrc: assests.Reactangle48, logoSrc:assests.logo19  },
-    // { id: 5, imgSrc: assests.Reactangle49,  logoSrc:assests.logo15 },
-    { id: 6, imgSrc: assests.Reactangle51, logoSrc:assests.logo15 },
-  ];
-
+  const { homeScreenDetails } = useContext(HomePageContext); // Get the data from context
   const sliderRef = useRef(null);
+
+  const maflamShowsData = homeScreenDetails?.maflamShowsData || []; // Use data from the context
+  const maflamShowsDataTitle = homeScreenDetails?.maflamShowsTitle || []; // Use data from the context
 
   // Function to scroll the slider to the left
   const scrollLeft = () => {
@@ -35,7 +29,7 @@ const HomeCommunityCarousel = () => {
 
   return (
     <div className={styles.carouselcontainer}>
-      <h2>Maflam Shows</h2>
+      <h2>{maflamShowsDataTitle.title}</h2>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
@@ -44,12 +38,27 @@ const HomeCommunityCarousel = () => {
 
         <div className={styles.sliderContainer} ref={sliderRef}>
           <div className={styles.slider}>
-            {items.map((item) => (
-              <div key={item.id} className={styles.card}>
-                {/* Different image for each card */}
-                <img src={item.logoSrc} alt={`Ebook card ${item.id}`} className={styles.logo89}></img>
-               
-                <img src={item.imgSrc} alt={`Ebook Card ${item.id}`}  className={styles.img89}  />
+            {maflamShowsData.map((item, index) => (
+              <div key={index} className={styles.card}>
+                {/* Show logo */}
+                <img
+                  src={item.logoUrl}
+                  alt={`Show logo ${index + 1}`}
+                  className={styles.logo89}
+                />
+                
+                {/* Replace image with video */}
+                <video
+                  src={item.videoUrl}
+                  className={styles.img89}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster={item.thumbNailUrl} // Show thumbnail before the video plays
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             ))}
           </div>
@@ -57,7 +66,7 @@ const HomeCommunityCarousel = () => {
 
         {/* Right Arrow */}
         <button className={styles.arrowRight} onClick={scrollRight}>
-        &rarr;
+          &rarr;
         </button>
       </div>
     </div>

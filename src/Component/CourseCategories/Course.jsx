@@ -17,11 +17,13 @@ const CourseGrid = () => {
 
   // Assuming homeScreenDetails contains an array called "specializedCoursesData"
   const specializedCoursesData = homeScreenDetails?.specializedCoursesData || [];
+  const specializedCoursesDataTitle = homeScreenDetails?.specializedCoursesDataTitle || [];
+
 
   return (
     <div className={styles.courseContainer}>
       <div className={styles.coursesContainer}>
-        <h2>Specialized Courses</h2>
+        <h2>{specializedCoursesDataTitle.title}</h2>
         <div className={styles.coursesGrid}>
           {specializedCoursesData.map((course, index) => (
             <div key={index} className={styles.coursesCard}>
@@ -34,7 +36,7 @@ const CourseGrid = () => {
                  playsInline
                  className={styles.coursesImage}
               />
-              <p>{course.title}</p> {/* Display the course title */}
+              <p>{course.title}</p>
             </div>
           ))}
         </div>

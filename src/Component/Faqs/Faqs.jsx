@@ -19,7 +19,7 @@ const Faqs = () => {
 
   return (
     <div className={styles.faqContainer}>
-      <h2>FAQ</h2>
+      <h2>{faqData[0].title}</h2>
       <div className={styles.faqList}>
         {faqData.map((item, index) => (
           <div

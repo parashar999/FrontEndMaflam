@@ -1,32 +1,32 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext, useEffect } from "react";
 import styles from "./CarouselCommunity.module.css";
-import { assests } from "../../assets/assests";
+import { HomePageContext } from "../../store/HomePageContext"; // Import the context
 
 const CarouselCommunity = () => {
-  // const items = [
-  //   { id: 1, imgSrc: assests. carouselcard1 },
-  //   { id: 2, imgSrc: assests. carouselcard2 },
-  //   { id: 3, imgSrc: assests. carouselcard3 },
-  //   { id: 4, imgSrc: assests. carouselcard1 },
-  //   { id: 5, imgSrc: assests. carouselcard2 },
-  //   { id: 6, imgSrc: assests. carouselcard3 },
-  // ];
-  const items = [
-    { id: 1, imgSrc: assests. carouselcard2 },
-    { id: 2, imgSrc: assests. carouselcard2 },
-    { id: 3, imgSrc: assests. carouselcard2 },
-    { id: 4, imgSrc: assests. carouselcard2 },
-    { id: 5, imgSrc: assests. carouselcard2 },
-    { id: 6, imgSrc: assests. carouselcard2 },
-  ];
+  const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
 
+  // Handle loading and error states
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error loading success stories: {error.message}</p>;
+  }
+
+  // Access success stories data (array)
+  const successStoriesArray = homeScreenDetails?.maflamCommunity || [];
+
+  useEffect(() => {
+    console.log("successStoriesArray:", successStoriesArray); // Debugging output
+  }, [successStoriesArray]);
 
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 375,
+      left: -375,
       behavior: "smooth",
     });
   };
@@ -41,24 +41,38 @@ const CarouselCommunity = () => {
 
   return (
     <div className={styles.carouselWrapper}>
-      <h2>Maflam Community</h2>
+      <h2>{successStoriesArray[0].title}</h2>
       <div className={styles.carousel}>
         <button className={styles.carouselArrowLeft} onClick={scrollLeft}>
-        &larr;
+          &larr;
         </button>
 
         <div className={styles.carouselSliderContainer} ref={sliderRef}>
           <div className={styles.carouselSlider}>
-            {items.map((item) => (
-              <div key={item.id} className={styles.carouselCard}>
-                <img src={item.imgSrc} alt={`Ebook Card ${item.id}`} />
-              </div>
-            ))}
+            {successStoriesArray.length > 0 ? (
+              successStoriesArray.map((story, index) => (
+                <div key={index} className={styles.carouselCard}>
+                  {/* Render the video */}
+                  <video
+                    src={story.videoUrl}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className={styles.carouselVideo}
+                  />
+                  {/* Display the title */}
+                  {/* <p>{story.title}</p> */}
+                </div>
+              ))
+            ) : (
+              <p>No success stories available</p>
+            )}
           </div>
         </div>
 
         <button className={styles.carouselArrowRight} onClick={scrollRight}>
-        →
+          &rarr;
         </button>
       </div>
     </div>
