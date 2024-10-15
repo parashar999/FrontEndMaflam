@@ -23,6 +23,8 @@ function BlogContainer() {
           <img src={blogData[0]?.imageUrl || ""} alt="Blog" />
         </div>
         <div className={styles.Rectangle}></div>
+
+        
         
         <div className={styles.contentContainer}>
           <h2>{blogData[1]?.title || "Default Blog Subtitle"}</h2>

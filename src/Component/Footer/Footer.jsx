@@ -17,7 +17,8 @@ import { LanguageContext } from "../LanguageContext/LanguageContext";
   const FooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
     axios
-      .get(`http://3.29.25.216/maflam/fetch-footerdata?lang=${lang}`)
+      // .get(`http://3.29.25.216/maflam/fetch-footerdata?lang=${lang}`)
+      .get(`http://40.172.19.83/maflam/fetch-footerdata?lang=${lang}`)
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
       .then((response) => {
         setFooterColumnData1(response.data); // Set the fetched data in state
