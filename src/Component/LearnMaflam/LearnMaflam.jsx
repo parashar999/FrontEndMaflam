@@ -8,17 +8,17 @@ const LearnMaflam = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
-  // Extracting title and image URL from the API response
+  // Extracting title and video URL from the API response
   const title =
     homeScreenDetails?.homeScreenDetailsSec2?.title || "Default Title";
-  const imageUrl = homeScreenDetails?.homeScreenDetailsSec2?.imageUrl || ""; // Fallback to an empty string
+  const videoUrl = homeScreenDetails?.homeScreenDetailsSec2?.videoUrl || "";
 
   return (
     <div className={styles.courseContainer}>
       <div className={styles.coursesContainer}>
         <h2>{title}</h2>
         <div className={styles.LearnMaflam}>
-          {imageUrl && <img src={imageUrl} alt="Learn Maflam" />}
+          {videoUrl && <video src={videoUrl} autoPlay loop />}
         </div>
       </div>
     </div>

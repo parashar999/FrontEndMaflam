@@ -13,12 +13,21 @@ const HomeHero = () => {
   const description =
     homeScreenDetails?.homeScreenDetailsSec1?.description ||
     "Default description";
-  const imageUrl = homeScreenDetails?.homeScreenDetailsSec1?.imageUrl || "";
+  const videoUrl = homeScreenDetails?.homeScreenDetailsSec1?.videoUrl || "";
   const signUpText =
     homeScreenDetails?.homeScreenDetailsSec1?.signUpText || "Sign Up";
 
   return (
     <div className={styles.heroContainer}>
+      {videoUrl && (
+        <video
+          className={styles.backgroundVideo}
+          src={videoUrl}
+          autoPlay
+          muted
+          loop
+        />
+      )}
       <div className={styles.overlay}></div>
       <div className={styles.content}>
         <h1 className={styles.title} style={{ fontSize: 45 }}>
@@ -29,12 +38,6 @@ const HomeHero = () => {
           <button className={styles.signUpButton}>{signUpText}</button>
         )}
       </div>
-      {imageUrl && (
-        <div
-          className={styles.backgroundImage}
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        ></div>
-      )}
     </div>
   );
 };
