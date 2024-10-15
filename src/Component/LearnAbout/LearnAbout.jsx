@@ -3,7 +3,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import styles from "./LearnAbout.module.css";
-  
+
 function LearnAbout() {
   return (
     <div>
@@ -25,21 +25,19 @@ function LearnAbout() {
               2,200 <span>SR</span>
             </p>
 
-          
             <button className={styles.subscribebutton}>Subscribe</button>
             <br></br>
             <div className={styles.buttondiv}>
-            <br></br>
+              <br></br>
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> 30+ Hours
               </button>
-           
-          
+
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Flexible and
                 Focused Learning
               </button>
-             
+
               <button className={styles.rigthcheck}>
                 <FaRegCheckCircle className={styles.rigthclick} /> Available for
                 a Lifetime
@@ -52,10 +50,8 @@ function LearnAbout() {
             <p>
               +240,000 <span>SR</span>
             </p>
-       
-          
+
             <button className={styles.rigthcheck}>
-            
               <FaRegCheckCircle className={styles.rigthclick} /> At least a year
             </button>
 
@@ -68,7 +64,6 @@ function LearnAbout() {
               <FaRegCheckCircle className={styles.rigthclick} /> Limited-Time
               Access
             </button>
-          
           </div>
         </div>
         <p className={styles.para}>

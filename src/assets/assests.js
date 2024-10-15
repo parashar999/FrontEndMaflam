@@ -485,40 +485,6 @@ export const courses = [
   { title: "Introduction to Premiere Pro", img: course2 },
 ];
 
-export const footerColumnData = [
-  {
-    title: "Subscriptions",
-    links: [
-      { text: "Subscription prices", href: "#" },
-      { text: "Full courses", href: "#" },
-      { text: "Specialized courses", href: "#" },
-    ],
-  },
-  {
-    title: "Free education materials",
-    links: [
-      { text: "Blog", href: "#" },
-      { text: "E-book", href: "#" },
-      { text: "Join the mailing list", href: "#" },
-    ],
-  },
-  {
-    title: "Get to know Maflam",
-    links: [
-      { text: "About Maflam", href: "#" },
-      { text: "Our programs", href: "#" },
-      { text: "Our services", href: "#" },
-    ],
-  },
-  {
-    title: "Contact Us",
-    links: [
-      { text: "Join the Maflam world", href: "#" },
-      { text: "FAQs", href: "#" },
-      { text: "Contact information", href: "#" },
-    ],
-  },
-];
 export const faqData = [
   {
     question: "When doese my course subscription end?",

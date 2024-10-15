@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext"; // Import the context
 import styles from "./course.module.css"; // Importing the CSS module
 
+
 const CourseGrid = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
 
