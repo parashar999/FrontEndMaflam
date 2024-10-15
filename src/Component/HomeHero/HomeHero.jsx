@@ -34,9 +34,9 @@ const HomeHero = () => {
           {title}
         </h1>
         <p className={styles.description}>{description}</p>
-        {signUpText && (
+        {/* {signUpText && (
           <button className={styles.signUpButton}>{signUpText}</button>
-        )}
+        )} */}
       </div>
     </div>
   );
