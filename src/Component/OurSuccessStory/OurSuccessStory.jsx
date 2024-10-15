@@ -41,7 +41,7 @@ const OurSuccessStory = () => {
 
   return (
     <div className={styles.carouselWrapper}>
-      <h2>Our Success Stories</h2>
+      <h2>{successStoriesArray[0].title}</h2>
       <div className={styles.carousel}>
         <button className={styles.carouselArrowLeft} onClick={scrollLeft}>
           &larr;
