@@ -6,6 +6,7 @@ import Filmmaker from "../../Component/Filmmaker/Filmmaker";
 import Footer from "../../Component/Footer/Footer";
 import JoinUs from "../../Component/JoinUs/JoinUs";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
+// import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import MaflamCard from "../../Component/MaflamCard/MaflamCard";
 import MaflamImageOffer from "../../Component/MaflamImageOffer/MaflamImageOffer";
 
@@ -39,6 +40,6 @@ export default function AboutUs() {
         <Footer></Footer>
         
     </div>
-    </LanguageProvider>
+     </LanguageProvider>
   )
 }

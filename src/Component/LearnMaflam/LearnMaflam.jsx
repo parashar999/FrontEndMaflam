@@ -18,7 +18,7 @@ const LearnMaflam = () => {
       <div className={styles.coursesContainer}>
         <h2>{title}</h2>
         <div className={styles.LearnMaflam}>
-          {videoUrl && <video src={videoUrl} autoPlay loop />}
+          {videoUrl && <video src={videoUrl} autoPlay loop controls />}
         </div>
       </div>
     </div>
