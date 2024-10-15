@@ -53,7 +53,6 @@ import { LanguageContext } from "../LanguageContext/LanguageContext";
 // })
 
 
-
   return (
     <footer className={styles.footer}>
      <hr className={styles.footerHr} />

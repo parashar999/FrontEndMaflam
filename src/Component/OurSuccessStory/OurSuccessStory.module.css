@@ -1,102 +1,83 @@
 .carouselWrapper {
- 
+  background: #030B11;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  max-width: 1900px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+}
 
-background: #030B11;
+.carouselWrapper h2 {
+  color: #FFF;
+  padding-top: 130px;
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
 
-/* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    max-width: 1900px;
-    margin: 0 auto;
-    margin-bottom: 0px;
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  /* padding: 20px 0px; */
+}
 
-  }
-  
-  .carouselWrapper h2 {
-   
-    color: #FFF;
-    padding-top: 130px;
-text-align: center;
-font-family: "Noto Kufi Arabic";
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%;
-  }
-  
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 0px;
-  }
-  
-  .carouselSliderContainer {
-    width: 100%;
-    margin-top: 20px;
-    
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scrollbar-width: none;
-  }
-  
-  .carouselSliderContainer::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .carouselSlider {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-  .carouselCard {
-    flex: 0 0 auto;
-    margin: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 5px;
-    height: auto;
-    color: #fff;
-    width: 385px;
-  }
-  
-  .carouselCard img {
-    height: 350px;
-    width: 100%;
-  }
-  
-  .carouselArrowLeft,
-  .carouselArrowRight {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1;
-  }
-  
-  .carouselArrowLeft {
-    left: 10px;
-    
-    border-radius: 50%;
-    width: 60px; 
-    height: 60px;
-    background-color: #4444;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .carouselArrowRight {
-    right: 10px;
+.carouselSliderContainer {
+  width: 100%;
+  /* margin-top: 20px; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
 
+.carouselSliderContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselSlider {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carouselCard {
+  flex: 0 0 35%; /* Each card takes up 30% of the width */
+  margin: 0 10px; /* Margin to create space between cards */
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 5px;
+  height: auto;
+  color: #fff;
+  margin-top: 0px;
+}
+
+.carouselCard video {
+  height: 500px;
+  width: 100%; /* Full width of the card */
+  border-radius: 5px; /* Optional: To match the card's border radius */
+}
+
+.carouselArrowLeft,
+.carouselArrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.carouselArrowLeft {
+  left: 10px;
   border-radius: 50%;
   width: 60px; 
   height: 60px;
@@ -104,31 +85,32 @@ line-height: 160%;
   display: flex;
   align-items: center;
   justify-content: center;
-  }
-  
-  .carouselArrowLeft:hover,
-  .carouselArrowRight:hover {
-    background-color: #4444;
-  }
-  
-  @media (max-width: 768px) {
-    .carouselCard {
-      flex: 0 0 100%;
-      width: 275px;
-    }
-  
-    .carouselArrowLeft,
-    .carouselArrowRight {
-      font-size: 24px;
-    }
-  }
-   
+}
 
+.carouselArrowRight {
+  right: 10px;
+  border-radius: 50%;
+  width: 60px; 
+  height: 60px;
+  background-color: #4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
- 
-  /* .carouselWrapper::before {
-    margin: 235px 0 59px 350px ;
-    left: 0;
-    background: linear-gradient(to right, rgba(5, 3, 3, 9 ), transparent);
+.carouselArrowLeft:hover,
+.carouselArrowRight:hover {
+  background-color: #4444;
+}
+
+@media (max-width: 768px) {
+  .carouselCard {
+    flex: 0 0 100%;
+    width: 275px;
   }
-   */
+
+  .carouselArrowLeft,
+  .carouselArrowRight {
+    font-size: 24px;
+  }
+}

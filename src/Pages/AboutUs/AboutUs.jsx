@@ -9,13 +9,10 @@ import { LanguageProvider } from "../../Component/LanguageContext/LanguageContex
 // import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import MaflamCard from "../../Component/MaflamCard/MaflamCard";
 import MaflamImageOffer from "../../Component/MaflamImageOffer/MaflamImageOffer";
-
 import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
-
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Navbar from "../../Component/Navbar/Navbar";
 import OurVisionData from "../../Component/OurVisionData/OurVisionData";
-
 // import VariousCourse from "../../Component/VariousCourse/VariousCourse";
 import styles from  "./AboutUs.module.css"
 
