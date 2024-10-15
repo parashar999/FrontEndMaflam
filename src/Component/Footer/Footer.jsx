@@ -3,29 +3,29 @@ import React, { useEffect, useState } from 'react';
 // import FooterLogo from '../../assets/footerLogo.svg';
 import styles from './Footer.module.css';
 import axios from 'axios';
-import { assests } from '../../assets/assests';
-// import { assests, footerColumnData } from '../../assets/assests';
+// import { assests } from '../../assets/assests';
+import { assests, footerColumnData } from '../../assets/assests';
 
 const Footer = () => {
 
 
-const [footerColumnData1, setFooterColumnData1] = useState([])
+// const [footerColumnData1, setFooterColumnData1] = useState([])
 
-const FooterGetApi = () =>{
-  // axios.get('http://192.168.1.39:3001/maflam/get-footer-data')
-  axios.get('http://3.29.240.167:3001/maflam/get-footer-data')
-.then(response => {
-  setFooterColumnData1(response.data);
-    console.log("Data fetched successfully:", response.data);
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
-});
-}
+// const FooterGetApi = () =>{
+//   // axios.get('http://192.168.1.39:3001/maflam/get-footer-data')
+//   axios.get('http://3.29.240.167:3001/maflam/get-footer-data')
+// .then(response => {
+//   setFooterColumnData1(response.data);
+//     console.log("Data fetched successfully:", response.data);
+// })
+// .catch(error => {
+//     console.error('Error fetching data:', error);
+// });
+// }
 
-useEffect(()=>{
-  FooterGetApi()
-})
+// useEffect(()=>{
+//   FooterGetApi()
+// })
   return (
     <footer className={styles.footer}>
      <hr className={styles.footerHr} />
@@ -119,7 +119,7 @@ useEffect(()=>{
           </div>
 
           {/* Render the remaining footer columns */}
-          {footerColumnData1.map((column, index) => (
+          {footerColumnData.map((column, index) => (
             <div key={index} className={styles.footerColumn}>
               <h4>{column.title}</h4>
               <ul>
