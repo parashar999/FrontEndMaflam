@@ -43,6 +43,7 @@ const Navbar = () => {
       // .get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
       // .get(`http://3.29.25.216/maflam//fetch-nav-item?lang=${lang}`)
       .get(`http://40.172.19.83/maflam//fetch-nav-item?lang=${lang}`)
+      // .get(`http://prominenttrades.in/maflam//fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data); // Set the fetched data in state
         console.log("Footer data fetched successfully:", response.data);
