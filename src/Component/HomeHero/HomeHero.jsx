@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import styles from "./HomeHero.module.css";
-import { HomePageContext } from "../../store/HomePageContext.jsx"; // Import the context
+import { HomePageContext } from "../../store/HomePageContext.jsx";
 
 const HomeHero = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
-  if (loading) return <p>Loading...</p>; // Handle loading state
-  if (error) return <p>Error loading data</p>; // Handle error state
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
 
   // Ensure that the API data exists before rendering
   const titleDescriptionLogo =
