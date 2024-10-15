@@ -8,29 +8,33 @@ const HomeHero = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
-  // Ensure that the API data exists before rendering
-  const titleDescriptionLogo =
-    homeScreenDetails?.homeScreenDetailsSec1?.titleDescriptionLogo;
-  const signUpText = homeScreenDetails?.homeScreenDetailsSec1?.signUpText;
+  const title =
+    homeScreenDetails?.homeScreenDetailsSec1?.title || "Default Title";
+  const description =
+    homeScreenDetails?.homeScreenDetailsSec1?.description ||
+    "Default description";
+  const imageUrl = homeScreenDetails?.homeScreenDetailsSec1?.imageUrl || "";
+  const signUpText =
+    homeScreenDetails?.homeScreenDetailsSec1?.signUpText || "Sign Up";
 
   return (
     <div className={styles.heroContainer}>
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        {/* Dynamically render the title and description */}
         <h1 className={styles.title} style={{ fontSize: 45 }}>
-          {titleDescriptionLogo?.title || "Default Title"}
+          {title}
         </h1>
-        <p className={styles.description}>
-          {titleDescriptionLogo?.description || "Default description"}
-        </p>
-
-        {/* Render sign-up text if available */}
+        <p className={styles.description}>{description}</p>
         {signUpText && (
           <button className={styles.signUpButton}>{signUpText}</button>
         )}
       </div>
-      <div className={styles.backgroundImage}></div>
+      {imageUrl && (
+        <div
+          className={styles.backgroundImage}
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        ></div>
+      )}
     </div>
   );
 };
