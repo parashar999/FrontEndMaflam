@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./ViewCourses.module.css";
-import { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 
 function ViewCourses() {
@@ -10,6 +9,8 @@ function ViewCourses() {
   if (error) return <p>Error loading data</p>;
 
   const coursesData = homeScreenDetails?.coursesData || [];
+  const viewAllCoursesTitle =
+    homeScreenDetails?.viewAllCourses?.title || "View All Courses";
 
   const getCardClassName = (index) => {
     return `${styles.courseCard} ${styles[`courseCard--${index + 1}`]}`;
@@ -35,7 +36,9 @@ function ViewCourses() {
         ))}
       </div>
       <div className={styles.btnpadding}>
-        <button className={styles.fullWidthButton}>View All Courses</button>
+        <button className={styles.fullWidthButton}>
+          {viewAllCoursesTitle}
+        </button>
       </div>
       <div className={styles.playButtonContainer}>
         <svg
