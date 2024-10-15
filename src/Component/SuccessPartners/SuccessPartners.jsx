@@ -57,6 +57,7 @@ const SuccessPartners = () => {
   if (error) return <p>Error loading data</p>; // Handle error state
 
   // Ensure that the API data exists before rendering
+  const successPartnersData1 = homeScreenDetails?.successPartnerTitle|| [];
   const successPartnersData = homeScreenDetails?.successPartnersData || [];
 
   return (
@@ -66,12 +67,12 @@ const SuccessPartners = () => {
       </div>
       
       <div className={styles.successPartnersSection}>
-        <h2 className={styles.successPartnersTitle}>Success Partners</h2>
+        <h2 className={styles.successPartnersTitle}>{ successPartnersData1.title}</h2>
         <div className={styles.partnersLogos}>
           {successPartnersData.map((partner, index) => (
             <div key={index} className={styles.partnerLogo}>
               <img src={partner.logoUrl} alt="Image Not Found " />
-              <p>{partner.title}</p>
+              {/* <p>{partner.title}</p> */}
             </div>
           ))}
         </div>

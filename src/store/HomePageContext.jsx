@@ -1,20 +1,20 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { LanguageContext } from "../Component/LanguageContext/LanguageContext.jsx";
 
-// Create a context
 export const HomePageContext = createContext();
 
-// Create a provider component
 export const HomePageProvider = ({ children }) => {
   const [homeScreenDetails, setHomeScreenDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // API call function
-  const fetchHomeScreenDetails = async () => {
+  const { language } = useContext(LanguageContext);
+
+  const fetchHomeScreenDetails = async (langParam) => {
     try {
       const response = await axios.get(
-        "http://3.29.25.216:3001/maflam/get-home-screen-details?lang=0"
+        `http://3.29.25.216:3001/maflam/get-home-screen-details?lang=${langParam}`
       );
       console.log("API Response:", response.data);
 
@@ -27,8 +27,9 @@ export const HomePageProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchHomeScreenDetails();
-  }, []);
+    const langParam = language === "ar" ? 0 : 1;
+    fetchHomeScreenDetails(langParam);
+  }, [language]);
 
   return (
     <HomePageContext.Provider value={{ homeScreenDetails, loading, error }}>
