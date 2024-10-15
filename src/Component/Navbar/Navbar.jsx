@@ -1,6 +1,3 @@
-
-
-
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
@@ -19,16 +16,15 @@ import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { TfiMobile } from "react-icons/tfi";
 import { BiSolidBookAlt } from "react-icons/bi";
 import { assests } from "../../assets/assests";
-import  { useContext } from "react";
+import { useContext } from "react";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
 
-
 // const Navbar = ({ language, direction, toggleLanguage }) => {
-  const Navbar = () => {
+const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-  
+
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
 
   const toggleDropdown = (dropdownName) => {
@@ -39,14 +35,13 @@ import axios from "axios";
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
-
   const [navItems1, setNavItems1] = useState([]);
 
   const FooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
     axios
       // .get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
-      .get(`http://3.29.25.216:3001/maflam//fetch-nav-item?lang=${lang}`)
+      .get(`http://3.29.25.216/maflam//fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data); // Set the fetched data in state
         console.log("Footer data fetched successfully:", response.data);
@@ -105,7 +100,6 @@ import axios from "axios";
   //   },
   // ];
 
-
   const iconMap = {
     FaPhoneAlt: <FaPhoneAlt />,
     GrGroup: <GrGroup />,
@@ -127,7 +121,7 @@ import axios from "axios";
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
-        <button className={styles.langbtn}  onClick={toggleLanguage}>
+      <button className={styles.langbtn} onClick={toggleLanguage}>
         {language === "ar" ? "English" : "العربية"}
       </button>
       <img src={logo1} alt="Logo" className={styles.logo} />
@@ -152,9 +146,8 @@ import axios from "axios";
                       <a href="#" key={subIndex}>
                         {/* {subItem.icon}
                         &nbsp;&nbsp;{subItem.name} */}
-                         {iconMap[subItem.icon]}&nbsp;&nbsp;{subItem.name}
+                        {iconMap[subItem.icon]}&nbsp;&nbsp;{subItem.name}
                       </a>
-                      
                     ))}
                   </div>
                 )}
@@ -182,7 +175,7 @@ import axios from "axios";
           <span className={styles.arrow}>&#8592; </span> Log in
         </a>
       </div> */}
-       <div className={styles.rightLinks}>
+      <div className={styles.rightLinks}>
         {navItems1.find((item) => item.createAccount) && (
           <a href="#" className={styles.signupButton}>
             {navItems1.find((item) => item.createAccount).createAccount.name}
@@ -206,9 +199,6 @@ import axios from "axios";
 
 export default Navbar;
 
-
-
-
 // import  { useState } from "react";
 // import styles from "./Navbar.module.css";
 // import logo1 from "../../assets/logo1.png";
@@ -226,8 +216,6 @@ export default Navbar;
 // import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 // import { TfiMobile } from "react-icons/tfi";
 // import { BiSolidBookAlt } from "react-icons/bi";
-
-
 
 // import { assests } from "../../assets/assests";
 

@@ -1,7 +1,4 @@
-
-
-
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HomeHero from "../../Component/HomeHero/HomeHero";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
@@ -20,28 +17,43 @@ import Faqs from "../../Component/Faqs/Faqs";
 import Footer from "../../Component/Footer/Footer";
 import Styles from "./Home.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-// import { LanguageProvider } from "../../context/LanguageContext"; 
+import {
+  HomePageContext,
+  HomePageProvider,
+} from "../../store/HomePageContext.jsx";
+
 const Home = () => {
+  const {  homeScreenDetails, loading, error } = useContext(HomePageContext);
+
+  useEffect(() => {
+    if (homeScreenDetails) {
+      console.log("Home Screen Details:", homeScreenDetails);
+      
+    }
+  }, [homeScreenDetails]);
+
   return (
     <LanguageProvider>
-      <div className={Styles.Home}>
-        <Navbar />
-        <HomeHero />
-        <LearnMaflam />
-        <ViewCourses />
-        <CourseGrid />
-        <Fundamental />
-        <Ourservices />
-        <SuccessPartners />
-        <LearnAbout />
-        <MaflamInstructors />
-        <HomeScreenCarousel />
-        <BlogContainer />
-        <HomeCommunityCarousel />
-        <CarouselCommunity />
-        <Faqs />
-        <Footer />
-      </div>
+      <HomePageProvider>
+        <div className={Styles.Home}>
+          <Navbar />
+          <HomeHero />
+          <LearnMaflam />
+          <ViewCourses />
+          <CourseGrid />
+          <Fundamental />
+          <Ourservices />
+          <SuccessPartners />
+          <LearnAbout />
+          <MaflamInstructors />
+          <HomeScreenCarousel />
+          <BlogContainer />
+          <HomeCommunityCarousel />
+          <CarouselCommunity />
+          <Faqs />
+          <Footer />
+        </div>
+      </HomePageProvider>
     </LanguageProvider>
   );
 };
