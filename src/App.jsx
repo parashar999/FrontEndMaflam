@@ -34,9 +34,17 @@ const App = () => {
           </LanguageProvider>
         }
       />
-      <Route path="/aboutus" element=  {  <LanguageProvider>
-        <HomePageProvider>    <AboutUs />     </HomePageProvider>
-          </LanguageProvider>} />
+      <Route
+        path="/aboutus"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              {" "}
+              <AboutUs />{" "}
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/prc" element={<Pricing />} />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
