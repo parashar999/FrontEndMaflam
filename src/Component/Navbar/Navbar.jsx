@@ -18,6 +18,9 @@ import { BiSolidBookAlt } from "react-icons/bi";
 
 
 
+
+
+
 import { assests } from "../../assets/assests";
 
 const Navbar = ({ language, direction, toggleLanguage }) => {
@@ -62,31 +65,54 @@ const Navbar = ({ language, direction, toggleLanguage }) => {
           {openDropdown === "courses" && (
             <div className={styles.submenu}>
               <a href="#">
-                <PiSuitcaseSimpleFill />
+              <img src={assests.FullCourse} alt=""  />
+
+                {/* <PiSuitcaseSimpleFill /> */}
                 &nbsp;&nbsp;Full Package
               </a>
               <a href="#">
-                <RiMovie2Line />
+              <img src={assests.ScriptingWriting} alt=""  />
+
+                {/* <RiMovie2Line /> */}
                 &nbsp;&nbsp;Scriptwriting Courses
               </a>
               <a href="#">
-                <BiSolidMovie />
+              <img src={assests.Production} alt=""  />
+
+                {/* <RiMovie2Line /> */}
+                &nbsp;&nbsp;Production
+              </a>
+
+              <a href="#">
+              <img src={assests.Directing} alt=""  />
+
+                {/* <BiSolidMovie /> */}
                 &nbsp;&nbsp;Directing
               </a>
               <a href="#">
-                <ImVideoCamera />
+              <img src={assests.Cinematography} alt=""  />
+
+
+                {/* <ImVideoCamera /> */}
                 &nbsp;&nbsp;Cinematography
               </a>
               <a href="#">
-                <PiDiscDuotone />
+              <img src={assests.RecordingCourse} alt=""  />
+
+                {/* <PiDiscDuotone /> */}
                 &nbsp;&nbsp;Recording Courses
               </a>
               <a href="#">
-                <MdInsertPhoto />
+              <img src={assests.ActingCourse} alt=""  />
+
+                {/* <MdInsertPhoto /> */}
                 &nbsp;&nbsp;Acting Courses
               </a>
               <a href="#">
-                <BiSolidMoviePlay />
+              <img src={assests.EditingCourse} alt=""  />
+
+
+                {/* <BiSolidMoviePlay /> */}
                 &nbsp;&nbsp;Editing Courses
               </a>
             </div>
@@ -118,11 +144,22 @@ const Navbar = ({ language, direction, toggleLanguage }) => {
           </a>
           {openDropdown === "resources" && (
             <div className={styles.submenu}>
-              <a href="#"> <HiOutlineClipboardDocumentList /> &nbsp;&nbsp; Maflam Blog</a>
-              <a href="#"> <TfiMobile /> &nbsp;&nbsp;
-              Social Media</a>
-              <a href="#"> <BiSolidBookAlt /> &nbsp;&nbsp;
-              E-Booklet</a>
+              <a href="#">
+              <img src={assests.MaflamBlog} alt=""  />
+
+
+                 {/* <HiOutlineClipboardDocumentList /> */}
+               &nbsp;&nbsp; Maflam Blog</a>
+              <a href="#">
+              <img src={assests.SocialMedia} alt=""  />
+
+                 {/* <TfiMobile /> */}
+                  &nbsp;&nbsp; Social Media</a>
+              <a href="#">
+              <img src={assests.ebook} alt=""  />
+
+                 {/* <BiSolidBookAlt /> */}
+                  &nbsp;&nbsp; E-Booklet</a>
             </div>
           )}
         </div>
@@ -141,15 +178,23 @@ const Navbar = ({ language, direction, toggleLanguage }) => {
           {openDropdown === "contact" && (
             <div className={styles.submenu}>
               <a href="#">
-                <MdLiveTv />
+              <img src={assests.TraningProgramLogo} alt=""  />
+
+
+                {/* <MdLiveTv /> */}
                 &nbsp;&nbsp;Maflam Training Program
               </a>
               <a href="#">
-                <GrGroup />
+              <img src={assests.joinOurTeam} alt=""  />
+
+
+                {/* <GrGroup /> */}
                 &nbsp;&nbsp;Join our Team
               </a>
               <a href="#">
-                <FaPhoneAlt />
+              <img src={assests.ContactInfoLogo} alt=""  />
+
+                {/* <FaPhoneAlt /> */}
                 &nbsp;&nbsp;Contact Information
               </a>
             </div>

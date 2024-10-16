@@ -123,6 +123,23 @@ import logo1 from "./Logo1.png";
 import Footerlogo1 from "./footerlogo.png";
 import Magnifine from "./magnifine.png";
 import Globe from "./globe.png";
+import ContactInfoLogo from "./ContactInfoLogo.png";
+import joinOurTeam from "./joinOurTeam.png";
+import TraningProgramLogo from "./TraningProgramLogo.png";
+import  FullCourse from "./FullCourse.png"
+import  ScriptingWriting from "./ScriptingWriting.png"
+import  Production from "./Production.png"
+import  Directing from "./Directing.png"
+import  Cinematography from "./Cinematography.png"
+import  RecordingCourse from "./RecordingCourse.png"
+import  ActingCourse from "./ActingCourse.png"
+import  EditingCourse from "./EditingCourse.png"
+import  MaflamBlog from "./MaflamBlog.png"
+import  SocialMedia from "./SocialMedia.png"
+import  ebook from "./ebook.png"
+
+
+
 export const assests = {
   Magnifine,
   Globe,
@@ -231,6 +248,21 @@ export const assests = {
   maflamScreen,
   Subscribee,
   Footerlogo1,
+  ContactInfoLogo,
+  joinOurTeam,
+  TraningProgramLogo,
+  ActingCourse,
+  Cinematography,
+  Directing,
+  EditingCourse,
+  FullCourse,
+  Production,
+  RecordingCourse,
+  ScriptingWriting,
+  MaflamBlog,
+  ebook,
+  SocialMedia,
+  
 };
 
 export const instructors = [
@@ -844,7 +876,7 @@ export const faqDataPage = [
         answer: "Currently, all courses offer completion certificates...",
       },
     ],
-  },
+  }, 
 ];
 export const learnData = [
   "In this course, you will learn how to become a director and manage a film set, as well as the key points to consider when choosing a script. You’ll also understand what to focus on during the preparation phase, how to select and work with actors, and how to interact with them effectively.",
