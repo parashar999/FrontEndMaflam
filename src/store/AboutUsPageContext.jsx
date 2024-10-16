@@ -18,9 +18,8 @@ export const AboutusPageProvider = ({ children }) => {
     //     // 40.172.19.83
     //     //   `http://3.29.25.216:3001/maflam/get-Aboutus-screen-details?lang=${langParam}`
     //   );
-    const response = await axios.get(
-        
-        `https://prominenttrades.in/maflam/get-home-screen-details?lang=${langParam}`
+    const response = await axios.get(`https://prominenttrades.in/maflam/get-AboutUs-Details?lang=${langParam}`
+    // const response = await axios.get(`http://192.168.1.39:3001/maflam/get-AboutUs-Details?lang=${langParam}`
         // 40.172.19.83
       );
       console.log("API Response: for about ", response.data);
