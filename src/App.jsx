@@ -19,6 +19,7 @@ import { HomePageContext, HomePageProvider } from "./store/HomePageContext.jsx";
 import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
 
 import "./App.css";
+import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -35,7 +36,10 @@ const App = () => {
         }
       />
       <Route path="/aboutus" element=  {  <LanguageProvider>
-        <HomePageProvider>    <AboutUs />     </HomePageProvider>
+        <HomePageProvider>  <AboutusPageProvider>
+          
+            <AboutUs />  </AboutusPageProvider>    </HomePageProvider>
+
           </LanguageProvider>} />
       <Route path="/prc" element={<Pricing />} />
       <Route path="/blogDetails" element={<BlogDetails />} />

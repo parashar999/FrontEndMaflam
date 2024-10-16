@@ -10,8 +10,7 @@ const MaflamImageOffer = () => {
     <div className={styles.offersContainer}>
       <div className={styles.offersHeader}>
         <h2>What Maflam Offers</h2>
-        <p>
-          Together, we can discover and empower the new generation of filmmakers.
+        <p> Together, we can discover and empower the new generation of filmmakers
         </p>
       </div>
 
