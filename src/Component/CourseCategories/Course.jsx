@@ -30,8 +30,9 @@ const CourseGrid = () => {
               {/* Render the video using videoUrl */}
               <video
                  src={course.videoUrl}
-                 autoPlay
-                 muted
+                //  autoPlay
+                //  muted
+                 controls
                  loop
                  playsInline
                  className={styles.coursesImage}

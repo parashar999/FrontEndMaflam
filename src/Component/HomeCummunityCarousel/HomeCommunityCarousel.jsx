@@ -51,10 +51,11 @@ const HomeCommunityCarousel = () => {
                 <video
                   src={item.videoUrl}
                   className={styles.img89}
-                  autoPlay
+                  // autoPlay
                   muted
                   loop
                   playsInline
+                  controls
                   poster={item.thumbNailUrl} // Show thumbnail before the video plays
                 >
                   Your browser does not support the video tag.

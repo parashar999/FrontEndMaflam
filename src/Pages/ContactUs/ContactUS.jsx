@@ -6,10 +6,12 @@ import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Footer from "../../Component/Footer/Footer";
 import JoinUs from "../../Component/JoinUs/JoinUs";
 import styles from "./ContactUS.module.css";
+import {  LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 
 const ContactUS = () => {
   return (
     <div>
+      <LanguageProvider>
       <Navbar></Navbar>
       <HeroContact></HeroContact>
       <ContactForm></ContactForm>
@@ -18,6 +20,7 @@ const ContactUS = () => {
         <JoinUs></JoinUs>
       </div>
       <Footer></Footer>
+      </LanguageProvider>
     </div>
   );
 };
