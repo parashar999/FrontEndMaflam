@@ -55,9 +55,10 @@ const CarouselCommunity = () => {
                   {/* Render the video */}
                   <video
                     src={story.videoUrl}
-                    autoPlay
+                    // autoPlay
                     muted
                     loop
+                    controls
                     playsInline
                     className={styles.carouselVideo}
                   />

@@ -53,9 +53,10 @@ const HomeScreenCarousel = () => {
                 {/* Render video instead of image */}
                 <video
                   src={videoUrl}
-                  autoPlay
+                  // autoPlay
                   muted
                   loop
+                  controls
                   playsInline
                   className={styles.video} // Apply styling to video
                   alt={`Ebook Video ${index + 1}`}
