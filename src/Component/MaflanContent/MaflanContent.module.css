@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 20vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +90,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 40vh;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +125,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 30vh;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
