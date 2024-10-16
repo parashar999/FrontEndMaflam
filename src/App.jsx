@@ -15,33 +15,41 @@ import VegasProCourse from "./Pages/VegasProCourse/VegasProCourse.jsx";
 import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/RepresentationCourseDetail.jsx";
 import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
+import { HomePageContext, HomePageProvider } from "./store/HomePageContext.jsx";
+import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
 
-import "./App.css"
-// import usePreventZoom from "./Component/UsePreventZoom/UsePreventZoom.jsx";
+import "./App.css";
 
 const App = () => {
   // usePreventZoom()
   return (
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/prc" element={<Pricing />} />
-          <Route path="/blogDetails" element={<BlogDetails />} />
-          <Route path="/coursedetails" element={<CourseDetail />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
-          <Route path="/adobe" element={<AdobePrimereProCourse />} />
-          <Route path="/vegas" element={<VegasProCourse />} />
-          <Route path="/rep" element={<RepresentationCourseDetail />} />
-          <Route path="/ebooks" element={<Ebooks />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
-          <Route path="/faqs" element={<FaqPage />} />
-          <Route path="/checkout" element={<Checkouts />} />
-          <Route path="/pricing" element={<PricingDetails />} />
-        </Routes>
-    
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <Home />
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
+      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/prc" element={<Pricing />} />
+      <Route path="/blogDetails" element={<BlogDetails />} />
+      <Route path="/coursedetails" element={<CourseDetail />} />
+      <Route path="/contact" element={<ContactUs />} />
+      <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
+      <Route path="/adobe" element={<AdobePrimereProCourse />} />
+      <Route path="/vegas" element={<VegasProCourse />} />
+      <Route path="/rep" element={<RepresentationCourseDetail />} />
+      <Route path="/ebooks" element={<Ebooks />} />
+      <Route path="/blogs" element={<Blogs />} />
+      <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
+      <Route path="/faqs" element={<FaqPage />} />
+      <Route path="/checkout" element={<Checkouts />} />
+      <Route path="/pricing" element={<PricingDetails />} />
+    </Routes>
   );
 };
 

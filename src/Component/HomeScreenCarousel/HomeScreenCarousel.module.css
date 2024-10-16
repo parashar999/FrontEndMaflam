@@ -1,6 +1,6 @@
 .carouselcontainer {
   background-color: #030b11;
-  background-image: url("../../assets/E-booklets-backround-img.png");
+  background-image: url("../../assets/E-booklets-backround-video.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,8 +59,8 @@
   width: 330px;
 }
 
-.card img{
-  height: 500px;
+.card video{
+  height: 700px;
   width: 100%;
 }
 
@@ -69,12 +69,12 @@
   text-align: right;
 }
 
-.contentimg p {
+.contentvideo p {
   font-size: 11px;
   width: 100px;
 }
 
-.contentimg {
+.contentvideo {
   display: flex;
   align-items: center;
   margin: 20px 0px 20px 170px;
