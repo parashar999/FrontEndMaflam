@@ -54,10 +54,11 @@ const OurSuccessStory = () => {
                 {/* Render the video */}
                 <video
                   src={story.videoUrl}
-                  autoPlay
+                  // autoPlay
                   muted
                   loop
                   playsInline
+                  controls
                   className={styles.carouselVideo}
                   alt={story.title}
                 />
