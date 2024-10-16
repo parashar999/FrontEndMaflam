@@ -16,11 +16,25 @@ import Navbar from "../../Component/Navbar/Navbar";
 import OurVisionData from "../../Component/OurVisionData/OurVisionData";
 // import VariousCourse from "../../Component/VariousCourse/VariousCourse";
 import styles from  "./AboutUs.module.css"
+import {
+  HomePageContext,
+  HomePageProvider,
+} from "../../store/HomePageContext.jsx";
+import { useContext, useEffect } from "react";
 
 
 export default function AboutUs() {
+  const {  homeScreenDetails, loading, error } = useContext(HomePageContext);
+
+  useEffect(() => {
+    if (homeScreenDetails) {
+      console.log("Home Screen Details:", homeScreenDetails);
+      
+    }
+  }, [homeScreenDetails]);
   return (
     <LanguageProvider>
+           <HomePageProvider>
 
     <div className={styles.container} >
         <Navbar></Navbar>
@@ -38,6 +52,7 @@ export default function AboutUs() {
         <Footer></Footer>
         
     </div>
+    </HomePageProvider>
      </LanguageProvider>
   )
 }
