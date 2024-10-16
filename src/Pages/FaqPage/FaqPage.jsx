@@ -7,11 +7,11 @@ import { LanguageProvider } from "../../Component/LanguageContext/LanguageContex
 const FaqPage  = () => {
   return (
     <div>
-        <LanguageProvider>
-      <Navbar></Navbar>
-      <FaqsQues></FaqsQues>
-      <Footer></Footer>
-      </LanguageProvider>
+   <LanguageProvider >
+    <Navbar></Navbar>
+    <FaqsQues></FaqsQues>
+    <Footer></Footer>
+   </LanguageProvider >
 
     </div>
   );
