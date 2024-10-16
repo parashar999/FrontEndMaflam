@@ -427,15 +427,15 @@ export const resources = [
 export const featuresData = [
   {
     title: "A Community of Aspiring Filmmakers",
-    description: "Earn a certificate on completing the courses.",
+
   },
   {
     title: "A Passion for Empowering Cinematic Talents",
-    description: "Access all the learning material anytime.",
+
   },
   {
     title: "A Comprehensive Educational Experience in Arabic",
-    description: "Get support from experts.",
+
   },
 ];
 
