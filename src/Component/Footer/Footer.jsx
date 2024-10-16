@@ -14,8 +14,9 @@ const Footer = () => {
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
   const FooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
-    axios
-      .get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
+    axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
+      // .get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
+      // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       // .get(`http://40.172.19.83/maflam/fetch-footerdata?lang=${lang}`)
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
       .then((response) => {
