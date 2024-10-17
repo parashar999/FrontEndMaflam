@@ -24,7 +24,9 @@ import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
 const App = () => {
   // usePreventZoom()
   return (
+  
     <Routes>
+     
       <Route
         path="/"
         element={
@@ -43,8 +45,8 @@ const App = () => {
           </LanguageProvider>} />
       <Route path="/prc" element={<Pricing />} />
       <Route path="/blogDetails" element={<BlogDetails />} />
-      <Route path="/coursedetails" element={<CourseDetail />} />
-      <Route path="/contact" element={<ContactUs />} />
+      <Route path="/coursedetails" element={<CourseDetail />   } />
+      <Route path="/contact" element={<ContactUs />} /> 
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
@@ -55,7 +57,9 @@ const App = () => {
       <Route path="/faqs" element={<FaqPage />} />
       <Route path="/checkout" element={<Checkouts />} />
       <Route path="/pricing" element={<PricingDetails />} />
+      
     </Routes>
+  
   );
 };
 

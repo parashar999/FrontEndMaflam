@@ -137,6 +137,7 @@ import  EditingCourse from "./EditingCourse.png"
 import  MaflamBlog from "./MaflamBlog.png"
 import  SocialMedia from "./SocialMedia.png"
 import  ebook from "./ebook.png"
+import  MaflamBlog1 from "./MaflamBlog.png"
 
 
 
@@ -262,6 +263,7 @@ export const assests = {
   MaflamBlog,
   ebook,
   SocialMedia,
+  MaflamBlog1,
   
 };
 
@@ -427,15 +429,15 @@ export const resources = [
 export const featuresData = [
   {
     title: "A Community of Aspiring Filmmakers",
-    description: "Earn a certificate on completing the courses.",
+
   },
   {
     title: "A Passion for Empowering Cinematic Talents",
-    description: "Access all the learning material anytime.",
+
   },
   {
     title: "A Comprehensive Educational Experience in Arabic",
-    description: "Get support from experts.",
+
   },
 ];
 
@@ -685,6 +687,37 @@ export const VariousCard = [
     imageUrl: variousCourse8,
   },
 ];
+
+export const articles =
+ [
+    {
+      "title": "How does a professional Director Manage the Crew on Set?",
+      "description": "Educational, Entertaining, Research-Based, Critical",
+      "category": "Educational",
+      "imageUrl": "image1_url",
+      "readMoreLink": "#"
+    },
+    {
+      "title": "What does a film producer do?",
+      "category": "Category",
+      "imageUrl": "image2_url",
+      "readMoreLink": "#"
+    },
+    {
+      "title": "How do you showcase your unique writing style?",
+      "category": "Category",
+      "imageUrl": "image3_url",
+      "readMoreLink": "#"
+    },
+    {
+      "title": "The Significance of Storytelling",
+      "category": "Category",
+      "imageUrl": "image4_url",
+      "readMoreLink": "#"
+    }
+  ]
+
+
 
 export const cardDetails = {
   title: "Fundamentals of acting",
