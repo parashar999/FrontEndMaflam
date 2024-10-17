@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./EbooksCards.module.css";
 import { ebooks } from "../../assets/assests";
-
 const EbooksCards = () => {
 
 
@@ -44,3 +43,5 @@ const EbooksCards = () => {
 };
 
 export default EbooksCards;
+
+

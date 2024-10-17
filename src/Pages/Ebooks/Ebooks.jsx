@@ -7,6 +7,7 @@ import JoinUs from "../../Component/JoinUs/JoinUs";
 const Ebooks = () => {
   return (
     <div>
+      
       <Navbar></Navbar>
     <EbooksCards></EbooksCards>
       <JoinUs></JoinUs>
