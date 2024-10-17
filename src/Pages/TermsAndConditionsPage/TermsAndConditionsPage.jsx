@@ -5,6 +5,7 @@ import TermsAndConditions from "../../Component/TermsAndCondition/TermsAndCondit
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 
 const TermsAndConditionsPage  = () => {
+  
   return (
     <div>
       <LanguageProvider>
