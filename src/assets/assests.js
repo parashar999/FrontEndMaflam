@@ -123,6 +123,23 @@ import logo1 from "./Logo1.png";
 import Footerlogo1 from "./footerlogo.png";
 import Magnifine from "./magnifine.png";
 import Globe from "./globe.png";
+import ContactInfoLogo from "./ContactInfoLogo.png";
+import joinOurTeam from "./joinOurTeam.png";
+import TraningProgramLogo from "./TraningProgramLogo.png";
+import  FullCourse from "./FullCourse.png"
+import  ScriptingWriting from "./ScriptingWriting.png"
+import  Production from "./Production.png"
+import  Directing from "./Directing.png"
+import  Cinematography from "./Cinematography.png"
+import  RecordingCourse from "./RecordingCourse.png"
+import  ActingCourse from "./ActingCourse.png"
+import  EditingCourse from "./EditingCourse.png"
+import  MaflamBlog from "./MaflamBlog.png"
+import  SocialMedia from "./SocialMedia.png"
+import  ebook from "./ebook.png"
+
+
+
 export const assests = {
   Magnifine,
   Globe,
@@ -231,6 +248,21 @@ export const assests = {
   maflamScreen,
   Subscribee,
   Footerlogo1,
+  ContactInfoLogo,
+  joinOurTeam,
+  TraningProgramLogo,
+  ActingCourse,
+  Cinematography,
+  Directing,
+  EditingCourse,
+  FullCourse,
+  Production,
+  RecordingCourse,
+  ScriptingWriting,
+  MaflamBlog,
+  ebook,
+  SocialMedia,
+  
 };
 
 export const instructors = [
@@ -764,37 +796,75 @@ export const TermsData = [
   },
 ];
 
+// export const faqDataPage = [
+//   {
+//     faq: [
+
+//       {question: "What is Maflam?",
+//         answer: " "
+//       },
+
+//       {
+//         question: "What is Maflam's platform?",
+//         answer:
+//           "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic.",
+//       },
+//       {
+//         question: "When does my course subscription end?",
+//         answer:
+//           "At Maflam, we are committed to providing lifetime access to our filmmaking content...",
+//       },
+//       {
+//         question: "How do you select instructors on Maflam’s platform?",
+//         answer:
+//           "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best.",
+//       },
+//       {
+//         question: "Is there practical content on the platform?",
+//         answer:
+//           "Yes, the platform integrates both theoretical and practical content. It includes exercises...",
+//       },
+//       {
+//         question:
+//           "Will I receive a completion certificate after finishing a course?",
+//         answer: "Currently, all courses offer completion certificates...",
+//       },
+//     ],
+//   }, 
+// ];
+
 export const faqDataPage = [
   {
+    title: "About the Platform",
     faq: [
       {
-        question: "What is Maflam's platform?",
-        answer:
-          "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic.",
+        question: "What is Maflam?",
+        answer: "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic."
       },
       {
         question: "When does my course subscription end?",
-        answer:
-          "At Maflam, we are committed to providing lifetime access to our filmmaking content...",
+        answer: "At Maflam, we are committed to providing lifetime access to our filmmaking content..."
       },
+    ]
+  },
+  {
+    title: "About Our Courses",
+    faq: [
       {
         question: "How do you select instructors on Maflam’s platform?",
-        answer:
-          "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best.",
+        answer: "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best."
       },
       {
-        question: "Is there practical content on the platform?",
-        answer:
-          "Yes, the platform integrates both theoretical and practical content. It includes exercises...",
+        question: "Will I receive a completion certificate after finishing a course?",
+        answer: "Currently, all courses offer completion certificates..."
       },
-      {
-        question:
-          "Will I receive a completion certificate after finishing a course?",
-        answer: "Currently, all courses offer completion certificates...",
-      },
-    ],
-  },
+    ]
+  }
 ];
+
+
+
+
 export const learnData = [
   "In this course, you will learn how to become a director and manage a film set, as well as the key points to consider when choosing a script. You’ll also understand what to focus on during the preparation phase, how to select and work with actors, and how to interact with them effectively.",
   " You will dive deep into camera techniques, understanding the meaning behind camera movements, how to establish a scene, manage production, and make the most of each shooting day until the film reaches the editing room. Together, we will explore essential directing rules you must follow to professionally direct your first film.",
