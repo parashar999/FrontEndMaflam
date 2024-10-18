@@ -20,6 +20,7 @@ import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.js
 
 import "./App.css";
 import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
+import { TermsConditionProvider } from "./store/TermsConditionContext.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -43,6 +44,17 @@ const App = () => {
             <AboutUs />  </AboutusPageProvider>    </HomePageProvider>
 
           </LanguageProvider>} />
+
+      <Route path="/terms&condition" element={
+        <LanguageProvider> <HomePageProvider> 
+          <TermsConditionProvider>
+            <TermsAndConditionsPage>
+              </TermsAndConditionsPage>
+               </TermsConditionProvider> 
+                </HomePageProvider>  
+                 </LanguageProvider> } />   
+
+
       <Route path="/prc" element={<Pricing />} />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />   } />
@@ -53,7 +65,6 @@ const App = () => {
       <Route path="/rep" element={<RepresentationCourseDetail />} />
       <Route path="/ebooks" element={<Ebooks />} />
       <Route path="/blogs" element={<Blogs />} />
-      <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route path="/checkout" element={<Checkouts />} />
       <Route path="/pricing" element={<PricingDetails />} />
