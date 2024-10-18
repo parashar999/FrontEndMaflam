@@ -20,6 +20,7 @@ import { LanguageContext, LanguageProvider } from "./Component/LanguageContext/L
 
 import "./App.css";
 import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
+import { TermsConditionProvider } from "./store/TermsConditionContext.jsx";
 import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 
 const App = () => {
@@ -44,6 +45,17 @@ const App = () => {
             <AboutUs />  </AboutusPageProvider>    </HomePageProvider>
 
           </LanguageProvider>} />
+
+      <Route path="/terms&condition" element={
+        <LanguageProvider> <HomePageProvider> 
+          <TermsConditionProvider>
+            <TermsAndConditionsPage>
+              </TermsAndConditionsPage>
+               </TermsConditionProvider> 
+                </HomePageProvider>  
+                 </LanguageProvider> } />   
+
+
       <Route path="/prc" element={<Pricing />} />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />   } />

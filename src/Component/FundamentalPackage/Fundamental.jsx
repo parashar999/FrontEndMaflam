@@ -86,7 +86,9 @@ function Fundamental() {
         <div className={styles.subscribe}>
           <div className={styles.imgcontainer}>
             {/* Use dynamic imageUrl from the context */}
-            <img src={imageUrl} alt="Filmmaking Package" />
+            <div className={styles.imghead}>
+              <img src={imageUrl} alt="Filmmaking Package" />
+            </div>
             <div className={styles.ctn}>
               {categories.map((item, index) => (
                 <div key={index} className={styles.item}>
