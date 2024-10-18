@@ -16,11 +16,12 @@ import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/Repre
 import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
 import { HomePageContext, HomePageProvider } from "./store/HomePageContext.jsx";
-import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
+import { LanguageContext, LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
 
 import "./App.css";
 import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
 import { TermsConditionProvider } from "./store/TermsConditionContext.jsx";
+import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -63,8 +64,19 @@ const App = () => {
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
       <Route path="/rep" element={<RepresentationCourseDetail />} />
-      <Route path="/ebooks" element={<Ebooks />} />
+      <Route path="/ebooks" element={
+        <LanguageProvider>
+         
+          <AboutusPageProvider>
+            <EbookPageContextProvider>
+        <Ebooks /> 
+        </EbookPageContextProvider>
+        </AboutusPageProvider>
+        
+        </LanguageProvider>
+      } />
       <Route path="/blogs" element={<Blogs />} />
+      <Route path="/terms&condition" element={ <TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route path="/checkout" element={<Checkouts />} />
       <Route path="/pricing" element={<PricingDetails />} />
