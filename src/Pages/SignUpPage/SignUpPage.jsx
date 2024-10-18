@@ -4,17 +4,14 @@ import Footer from "../../Component/Footer/Footer";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import SignUp from "../../Component/SignUp/SignUp";
 
-const SignUpPage  = () => {
+const SignUpPage = () => {
   return (
     <div>
-   <LanguageProvider >
-    <Navbar></Navbar>
+      <LanguageProvider>
         <SignUp></SignUp>
-    <Footer></Footer>
-   </LanguageProvider >
-
+      </LanguageProvider>
     </div>
   );
 };
 
-export default SignUpPage ;
+export default SignUpPage;

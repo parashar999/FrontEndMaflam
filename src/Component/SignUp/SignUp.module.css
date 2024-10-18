@@ -2,8 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('../../assets/LoginBack.png'); /* Use the background from your screenshot */
+    background-image: url('../../assets/LoginBack.png');
     background-size: cover;
     background-position: center;
   }
