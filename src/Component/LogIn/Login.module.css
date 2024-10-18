@@ -1,0 +1,166 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height to fit the screen */
+    background-image: url('../../assets/LoginBack.png'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  
+  .Subcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 3rem; /* Padding for the subcontainer */
+  }
+  
+  .loginBox {
+    background-color: rgba(227, 226, 226, 0.232); /* Slightly transparent black background */
+    padding: 5rem 8rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px; /* Limits the width on larger screens */
+    text-align: center;
+    
+  }
+  
+  .title {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  .rememberMeContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .checkbox {
+    margin-right: 0.5rem;
+  }
+  
+  .checkboxLabel {
+    color: #fff;
+  }
+  
+  .loginButton {
+    background-color: #00d4ff;
+    color: #000;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .forgotPassword {
+    color: #00d4ff;
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .divider {
+    margin: 2rem 0;
+    color: #fff;
+    position: relative;
+  }
+  
+  .divider span {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 1rem;
+  }
+  
+  .socialLogin {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .socialButton {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #00d4ff;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .createAccount {
+    color: #00d4ff;
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .loginBox {
+      padding: 2rem 1.5rem; /* Reduce padding on smaller screens */
+      margin: 1.5rem;
+      max-width: 350px;
+    }
+  
+    .title {
+      font-size: 1.3rem; /* Slightly smaller title font */
+    }
+  
+    .input {
+      padding: 0.6rem; /* Adjust input padding */
+    }
+  
+    .loginButton, .socialButton {
+      padding: 0.6rem; /* Adjust button padding */
+    }
+  
+    .divider {
+      margin: 1.5rem 0; /* Adjust margin */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .loginBox {
+      padding: 1.5rem 1rem; /* Further reduce padding */
+      margin: 1rem;
+      max-width: 90%; /* Make the box nearly full-width */
+    }
+  
+    .title {
+      font-size: 1.2rem;
+    }
+  
+    .input {
+      padding: 0.5rem;
+    }
+  
+    .loginButton, .socialButton {
+      padding: 0.5rem;
+    }
+  
+    .divider {
+      margin: 1rem 0;
+    }
+  }
+  

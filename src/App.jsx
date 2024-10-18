@@ -25,6 +25,7 @@ import "./App.css";
 import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
 import { TermsConditionProvider } from "./store/TermsConditionContext.jsx";
 import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
+import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -87,6 +88,7 @@ const App = () => {
         }
       />
       <Route path="/blogs" element={<Blogs />} />
+      <Route path="/login" element={<LoginPage></LoginPage>} />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route path="/checkout" element={<Checkouts />} />
