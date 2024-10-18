@@ -1,5 +1,3 @@
-
-
 import React, { useContext, useEffect } from "react";
 import Filmmaker from "../../Component/Filmmaker/Filmmaker";
 import Footer from "../../Component/Footer/Footer";
@@ -16,10 +14,17 @@ import {
   HomePageContext,
   HomePageProvider,
 } from "../../store/HomePageContext.jsx";
-import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext.jsx";
+import {
+  AboutusPageContext,
+  AboutusPageProvider,
+} from "../../store/AboutUsPageContext.jsx";
 
 export default function AboutUs() {
-  const { homeScreenDetails, loading: homeLoading, error: homeError } = useContext(HomePageContext);
+  const {
+    homeScreenDetails,
+    loading: homeLoading,
+    error: homeError,
+  } = useContext(HomePageContext);
 
   useEffect(() => {
     if (homeScreenDetails) {
@@ -27,7 +32,11 @@ export default function AboutUs() {
     }
   }, [homeScreenDetails]);
 
-  const { aboutusScreenDetails, loading: aboutLoading, error: aboutError } = useContext(AboutusPageContext);
+  const {
+    aboutusScreenDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(AboutusPageContext);
 
   useEffect(() => {
     if (aboutusScreenDetails) {
@@ -56,13 +65,7 @@ export default function AboutUs() {
   );
 }
 
-
-
-
-
-
 // import Filmmaker from "../../Component/Filmmaker/Filmmaker";
-
 
 // import Footer from "../../Component/Footer/Footer";
 // import JoinUs from "../../Component/JoinUs/JoinUs";
@@ -83,25 +86,22 @@ export default function AboutUs() {
 // import { useContext, useEffect } from "react";
 // import { AboutusPageContext } from "../../store/AboutUsPageContext.jsx";
 
-
-
 // export default function AboutUs() {
 //   const {  homeScreenDetails, loading, error } = useContext(HomePageContext);
 
 //   useEffect(() => {
 //     if (homeScreenDetails) {
 //       console.log("Home Screen Details:", homeScreenDetails);
-      
+
 //     }
 //   }, [homeScreenDetails]);
-
 
 //   const {  aboutusScreenDetails, loading, error  } = useContext(AboutusPageContext);
 
 //   useEffect(() => {
 //     if (aboutusScreenDetails) {
 //       console.log("Home Screen Details:", aboutusScreenDetails);
-      
+
 //     }
 //   }, [aboutusScreenDetails]);
 //   return (
@@ -114,20 +114,19 @@ export default function AboutUs() {
 
 //         <Filmmaker></Filmmaker>
 //         <OurVisionData></OurVisionData>
-    
+
 //      <MaflamImageOffer></MaflamImageOffer>
 //         {/* <VariousCourse></VariousCourse> */}
-    
+
 //         <MaflamInstructors></MaflamInstructors>
 //         <MaflamCard></MaflamCard>
 //         <MaflanContent></MaflanContent>
 //         <JoinUs></JoinUs>
 //         <Footer></Footer>
-        
+
 //     </div>
 //     </AboutusPageProvider>
 //     </HomePageProvider>
 //      </LanguageProvider>
 //   )
 // }
-
