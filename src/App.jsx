@@ -15,10 +15,11 @@ import VegasProCourse from "./Pages/VegasProCourse/VegasProCourse.jsx";
 import RepresentationCourseDetail from "./Pages/RepresentationCourseDetail/RepresentationCourseDetail.jsx";
 import Checkouts from "./Pages/Checkout/Checkouts.jsx";
 import PricingDetails from "./Pages/PricingDetails/PricingDetails.jsx";
-import { HomePageContext, HomePageProvider } from "./store/HomePageContext.jsx";
+import { HomePageProvider } from "./store/HomePageContext.jsx";
 import { LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
 
 import "./App.css";
+import { AboutusPageProvider } from "./store/AboutUsPageContext.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -39,8 +40,9 @@ const App = () => {
         element={
           <LanguageProvider>
             <HomePageProvider>
-              {" "}
-              <AboutUs />{" "}
+              <AboutusPageProvider>
+                <AboutUs />{" "}
+              </AboutusPageProvider>{" "}
             </HomePageProvider>
           </LanguageProvider>
         }
