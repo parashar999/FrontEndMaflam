@@ -28,8 +28,13 @@ import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 
 import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
+import { PurchaseCancellationProvider } from "./store/PurchaseCancellationContext.jsx";
+import PurchaseCancellationPage from "./Pages/PurchaseCancellationPage/PurchaseCancellationPage.jsx";
+import { CommunityGuidelinesProvider } from "./store/CommunityGuidelinesPageContext.jsx";
+import CommunityGuidelinesPage from "./Pages/CommunityGuidelinesPage/CommunityGuidelinesPage.jsx";
 import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
+import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx"
 
 const App = () => {
   return (
@@ -70,20 +75,44 @@ const App = () => {
         }
       />
 
-      <Route
-        path="/prc"
+<Route
+        path="/purchaseCancellation"
         element={
           <LanguageProvider>
             <HomePageProvider>
-              <AboutusPageProvider>
-                <PricingPageContextProvider>
-                  <Pricing />
-                </PricingPageContextProvider>
-              </AboutusPageProvider>
+              <PurchaseCancellationProvider>
+                  <PurchaseCancellationPage></PurchaseCancellationPage>
+              </PurchaseCancellationProvider>
+              </HomePageProvider>
+              </LanguageProvider>} />
+
+
+<Route
+        path="/CommunityGuidelines"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <CommunityGuidelinesProvider>
+                  <CommunityGuidelinesPage></CommunityGuidelinesPage>
+              </CommunityGuidelinesProvider>
             </HomePageProvider>
           </LanguageProvider>
         }
       />
+
+     
+      <Route path="/prc" element={
+        <LanguageProvider>
+          <HomePageProvider>
+            <AboutusPageProvider>
+              <PricingPageContextProvider >
+        <Pricing />
+        </PricingPageContextProvider>
+        </AboutusPageProvider>
+        </HomePageProvider>
+        </LanguageProvider>
+        
+        } />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
