@@ -14,9 +14,10 @@ export const EbookPageContextProvider = ({ children }) => {
 
   const fetchebookPageContextDetails = async (langParam) => {
     try {
-    //   const response = await axios.get(`https://prominenttrades.in/maflam/get-Aboutus-screen-details?lang=${langParam}`
    
-    const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
+   
+    // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
+       const response = await axios.get(`https://prominenttrades.in/maflam/getEBooks?lang=${langParam}`
 
       );
       console.log("API Response: ebooks  ", response.data);

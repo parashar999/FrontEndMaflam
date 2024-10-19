@@ -28,6 +28,8 @@ import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 
 import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
+import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
+import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -69,7 +71,18 @@ const App = () => {
         }
       />
 
-      <Route path="/prc" element={<Pricing />} />
+      <Route path="/prc" element={
+        <LanguageProvider>
+          <HomePageProvider>
+            <AboutusPageProvider>
+              <PricingPageContextProvider >
+        <Pricing />
+        </PricingPageContextProvider>
+        </AboutusPageProvider>
+        </HomePageProvider>
+        </LanguageProvider>
+        
+        } />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
@@ -94,7 +107,13 @@ const App = () => {
       <Route path="/signUp" element={<SignUpPage></SignUpPage>} />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
-      <Route path="/checkout" element={<Checkouts />} />
+      <Route path="/checkout" element={ 
+           <LanguageProvider>
+            <CheckoutPaymentContextProvider>
+        <Checkouts />
+        </CheckoutPaymentContextProvider>
+        </LanguageProvider>
+        } />
       <Route path="/pricing" element={<PricingDetails />} />
     </Routes>
   );
