@@ -692,6 +692,7 @@ export const VariousCard = [
     para: "SAR ",
     price: "750",
     image: Ellipse1,
+    button: "Buy Now",
 
     duration: "5 hours of viewing",
     icon: Groups,
