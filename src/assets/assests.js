@@ -138,10 +138,19 @@ import  MaflamBlog from "./MaflamBlog.png"
 import  SocialMedia from "./SocialMedia.png"
 import  ebook from "./ebook.png"
 import  MaflamBlog1 from "./MaflamBlog.png"
+import  Facebooklogin from "./Facebooklogin.png"
+import  applelogin from "./applelogin.png"
+import  googlelogin from "./googlelogin.png"
+import  eyeicon from "./eyeicon.png"
+
 
 
 
 export const assests = {
+  eyeicon,
+  googlelogin,
+  applelogin,
+  Facebooklogin,
   Magnifine,
   Globe,
   youtubeImage,
@@ -692,6 +701,7 @@ export const VariousCard = [
     para: "SAR ",
     price: "750",
     image: Ellipse1,
+    button: "Buy Now",
 
     duration: "5 hours of viewing",
     icon: Groups,
