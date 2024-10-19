@@ -8,9 +8,10 @@ const SignUpPage = () => {
   return (
     <div>
       <LanguageProvider>
-        <Navbar></Navbar>
+        <Navbar ></Navbar>
         <SignUp></SignUp>
-        <Footer></Footer>
+
+        <Footer ></Footer>
       </LanguageProvider>
     </div>
   );
