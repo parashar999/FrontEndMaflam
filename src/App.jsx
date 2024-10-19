@@ -28,6 +28,10 @@ import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 
 import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
+import { PurchaseCancellationProvider } from "./store/PurchaseCancellationContext.jsx";
+import PurchaseCancellationPage from "./Pages/PurchaseCancellationPage/PurchaseCancellationPage.jsx";
+import { CommunityGuidelinesProvider } from "./store/CommunityGuidelinesPageContext.jsx";
+import CommunityGuidelinesPage from "./Pages/CommunityGuidelinesPage/CommunityGuidelinesPage.jsx";
 
 const App = () => {
   // usePreventZoom()
@@ -64,6 +68,32 @@ const App = () => {
               <TermsConditionProvider>
                 <TermsAndConditionsPage></TermsAndConditionsPage>
               </TermsConditionProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
+
+<Route
+        path="/purchaseCancellation"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <PurchaseCancellationProvider>
+                  <PurchaseCancellationPage></PurchaseCancellationPage>
+              </PurchaseCancellationProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
+
+<Route
+        path="/CommunityGuidelines"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <CommunityGuidelinesProvider>
+                  <CommunityGuidelinesPage></CommunityGuidelinesPage>
+              </CommunityGuidelinesProvider>
             </HomePageProvider>
           </LanguageProvider>
         }

@@ -15,7 +15,7 @@ export const FaqPageProvider = ({ children }) => {
     try {
       setLoading(true); 
       const response = await axios.get(
-        `http://192.168.1.39:3001/maflam/get-faq?lang=${langParam}`
+        `https://prominenttrades.in/maflam/get-faq?lang=${langParam}`
       );
       console.log("API Response:", response.data);
 
