@@ -77,8 +77,8 @@ const App = () => {
             <HomePageProvider>
               <AboutusPageProvider>
                 <PricingPageContextProvider>
-                  <Pricing />
-                </PricingPageContextProvider>
+                  <Pricing />`
+                </PricingPageContextProvider>`
               </AboutusPageProvider>
             </HomePageProvider>
           </LanguageProvider>
@@ -87,7 +87,7 @@ const App = () => {
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
-      <Route path="/contact2" element={<ContactUsPage2 />} />
+      {/* <Route path="/contact2" element={<ContactUsPage2 />} /> */}
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
