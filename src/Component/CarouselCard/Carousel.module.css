@@ -5,7 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 430px;
+  height: 530px;
 }
 .carouselcontainer h2 {
   color: #fff;
@@ -41,7 +41,7 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 280px;
+  height: 350px;
   color: #fff;
 }
 .card h2 {
