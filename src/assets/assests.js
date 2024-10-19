@@ -319,18 +319,28 @@ export const CoursesData = [
   { name: "Acting", backgroundImage: `url(${FrameDiv2})` },
   { name: "Editing", backgroundImage: `url(${FrameDiv1})` },
 ];
+
 export const questionsData = [
   {
     question: "Scriptwriting Introduction",
     answers: [
-      "The Importance of Filmmaking - 3:59",
-      "Stages of Film Production - 2:49",
-      "Film Crew Departments - 3:20 ",
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
       "Understanding the Hierarchical",
-      "Structure of the Production Team - 2:39",
-      "About Maflam Platform - 1:39",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
     ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
   },
+  
   {
     question: "From Idea to Story",
     answers: [
@@ -376,7 +386,110 @@ export const questionsData = [
   },
 ];
 
-export default questionsData;
+
+
+
+export const CourseContentData = [
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  
+  
+];
+
+
 
 //import latest insights
 export const insights = [
