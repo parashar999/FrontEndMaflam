@@ -28,9 +28,9 @@ import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 
 import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
+import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
 
 const App = () => {
-  // usePreventZoom()
   return (
     <Routes>
       <Route
@@ -73,6 +73,7 @@ const App = () => {
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/contact2" element={<ContactUsPage2 />} />
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />

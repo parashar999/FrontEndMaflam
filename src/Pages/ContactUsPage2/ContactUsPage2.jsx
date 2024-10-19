@@ -6,19 +6,19 @@ import ContactInformation from "../../Component/ContactInformation/ContactInform
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Footer from "../../Component/Footer/Footer";
 import JoinUs from "../../Component/JoinUs/JoinUs";
-import styles from "./ContactUS.module.css";
+import styles from "./ContactUsPage2.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import { HomePageProvider } from "../../store/HomePageContext";
 import { AboutusPageProvider } from "../../store/AboutUsPageContext";
 
-const ContactUS = () => {
+const ContactUsPage2 = () => {
   return (
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
           <Navbar></Navbar>
           <HeroContact></HeroContact>
-          <ContactInformation></ContactInformation>
+          <ContactForm></ContactForm>
           <div className={styles.container}>
             <MaflanContent></MaflanContent>
             <JoinUs></JoinUs>
@@ -30,4 +30,4 @@ const ContactUS = () => {
   );
 };
 
-export default ContactUS;
+export default ContactUsPage2;

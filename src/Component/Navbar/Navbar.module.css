@@ -163,6 +163,25 @@
 .rotate1 {
   transform: rotate(-45deg);
 }
+.profile{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+
+.username {
+  color: white;
+  font-size: 16px;
+}
+
 
 @media (max-width: 1024px) {
   .leftLinks, .rightLinks, .searchContainer {
