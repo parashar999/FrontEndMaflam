@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full height to fit the screen */
-    background-image: url('../../assets/LoginBack.png'); /* Add your background image */
+    min-height: 100vh; 
+    background-image: url('../../assets/LoginBack.png'); 
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -15,19 +15,25 @@
     align-items: center;
     width: 100%;
     max-width: 1000px;
-    padding: 3rem; /* Padding for the subcontainer */
+    padding: 3rem; 
   }
   
   .loginBox {
-    background-color: rgba(227, 226, 226, 0.232); /* Slightly transparent black background */
+    background-color: rgba(227, 226, 226, 0.232); 
     padding: 5rem 8rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
     border-radius: 10px;
     width: 100%;
-    max-width: 700px; /* Limits the width on larger screens */
+    max-width: 700px; 
     text-align: center;
     
+  }
+  .resetlogo {
+    width: 86px;
+    height: 45.5px;
+    position: relative;
+    margin-bottom: 10px;
   }
   
   .title {
@@ -44,10 +50,12 @@
   .input {
     margin-bottom: 1rem;
     padding: 0.75rem;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     border-radius: 5px;
-    background-color: #1a1a1a;
-    color: #fff;
+    /* background-color: #1a1a1a; */
+    /* color: #fff; */
+    border: none;
+    outline: none;
   }
   
   .rememberMeContainer {
@@ -65,23 +73,26 @@
   }
   
   .loginButton {
-    background-color: #00d4ff;
+    background-color: #39FFFb;
     color: #000;
     padding: 0.75rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 64px;
     cursor: pointer;
+    box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
+
   }
   
   .forgotPassword {
-    color: #00d4ff;
+    color: #39FFFb;
     display: block;
     margin-top: 1rem;
     font-size: 0.9rem;
     text-decoration: none;
+    text-align: left;
   }
   
-  .divider {
+  /* .divider {
     margin: 2rem 0;
     color: #fff;
     position: relative;
@@ -90,8 +101,8 @@
   .divider span {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 0 1rem;
-  }
-  
+  } */
+/*   
   .socialLogin {
     display: flex;
     flex-direction: column;
@@ -102,49 +113,122 @@
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
-    background-color: #00d4ff;
+    background-color: #BBFFFF;
     color: #000;
     cursor: pointer;
-  }
+  } */
   
   .createAccount {
-    color: #00d4ff;
+    color: #39FFFb;
     display: block;
     margin-top: 1rem;
     font-size: 0.9rem;
     text-decoration: none;
-  }
+    text-align: right;
+    }
   
-  /* Responsive styles */
+
+  .form label {
+    color: white; 
+    
+    text-align: left; 
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.6px;
+  }
+
+  input::placeholder {
+    color: #3d5c72; 
+    
+  }
+  .form input:focus {
+    outline: none;
+    border: 1px solid #39FFFb;
+  }
+
+
+
+.rememberMeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  gap: 0.5rem; 
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #39FFFb; 
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.divider span {
+  padding: 0 10px; 
+  color: #fff;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0); 
+  font-weight: 500;
+}
+
+.hrLine {
+  flex-grow: 1; 
+  height: 2px;
+  border: none;
+  background-color: #39FFFb; 
+  max-width: 20%;
+}
+
+
   @media screen and (max-width: 768px) {
     .loginBox {
-      padding: 2rem 1.5rem; /* Reduce padding on smaller screens */
+      padding: 2rem 1.5rem; 
       margin: 1.5rem;
       max-width: 350px;
     }
   
     .title {
-      font-size: 1.3rem; /* Slightly smaller title font */
+      font-size: 1.3rem;
     }
   
     .input {
-      padding: 0.6rem; /* Adjust input padding */
+      padding: 0.6rem; 
     }
   
     .loginButton, .socialButton {
-      padding: 0.6rem; /* Adjust button padding */
+      padding: 0.6rem; 
     }
   
     .divider {
-      margin: 1.5rem 0; /* Adjust margin */
+      margin: 1.5rem 0; 
     }
   }
   
   @media screen and (max-width: 480px) {
     .loginBox {
-      padding: 1.5rem 1rem; /* Further reduce padding */
+      padding: 1.5rem 1rem; 
       margin: 1rem;
-      max-width: 90%; /* Make the box nearly full-width */
+      max-width: 90%; 
     }
   
     .title {
@@ -163,4 +247,105 @@
       margin: 1rem 0;
     }
   }
+  .socialLogin {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+  }
   
+  .socialButton {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #BBFFFF; 
+    color: #000; 
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    padding: 0.75rem 1rem; 
+    margin-bottom: 1rem; 
+    cursor: pointer; 
+    width: 100%; 
+    max-width: 450px; 
+    height: 50px; 
+    transition: background-color 0.3s; 
+  }
+  
+  
+  
+  .socialButton span {
+    margin-left: 10px; 
+  }
+  
+  .socialIconImage {
+    width: 24px; 
+    height: 24px; 
+  }
+  
+  
+  .socialIconContainer {
+    display: flex; 
+    align-items: center; 
+  }
+ 
+  
+  
+  @media screen and (max-width: 768px) {
+    .socialButton {
+      padding: 0.6rem; 
+      max-width: 90%; 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .socialButton {
+      padding: 0.5rem; 
+    }
+  
+    .socialIconImage {
+      width: 20px; 
+      height: 20px; 
+    }
+  }
+  /* #eyesymbol {
+    padding-left: 40px; 
+    background-image: url("../../assets/eyeicon.png"); 
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 20px; 
+    
+    
+} */
+
+
+
+
+
+
+.passwordContainer {
+  position: relative; 
+}
+
+.input {
+  width: 100%; 
+  padding: 0.75rem 2.5rem; 
+  border: none;
+  border-radius: 5px;
+  outline: none; 
+}
+
+.eyeIcon {
+  position: absolute; 
+  right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  width: 20px; 
+  height: 20px; 
+  background-image: url("../../assets/eyeicon.png"); 
+  background-repeat: no-repeat;
+  background-size: contain; 
+  cursor: pointer; 
+}
