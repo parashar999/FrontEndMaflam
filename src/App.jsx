@@ -32,7 +32,6 @@ import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.j
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
 
 const App = () => {
-  // usePreventZoom()
   return (
     <Routes>
       <Route
@@ -71,21 +70,24 @@ const App = () => {
         }
       />
 
-      <Route path="/prc" element={
-        <LanguageProvider>
-          <HomePageProvider>
-            <AboutusPageProvider>
-              <PricingPageContextProvider >
-        <Pricing />
-        </PricingPageContextProvider>
-        </AboutusPageProvider>
-        </HomePageProvider>
-        </LanguageProvider>
-        
-        } />
+      <Route
+        path="/prc"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <AboutusPageProvider>
+                <PricingPageContextProvider>
+                  <Pricing />
+                </PricingPageContextProvider>
+              </AboutusPageProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
+      <Route path="/contact2" element={<ContactUsPage2 />} />
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
@@ -107,13 +109,16 @@ const App = () => {
       <Route path="/signUp" element={<SignUpPage></SignUpPage>} />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
-      <Route path="/checkout" element={ 
-           <LanguageProvider>
+      <Route
+        path="/checkout"
+        element={
+          <LanguageProvider>
             <CheckoutPaymentContextProvider>
-        <Checkouts />
-        </CheckoutPaymentContextProvider>
-        </LanguageProvider>
-        } />
+              <Checkouts />
+            </CheckoutPaymentContextProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/pricing" element={<PricingDetails />} />
     </Routes>
   );

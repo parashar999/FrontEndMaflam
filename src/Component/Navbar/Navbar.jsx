@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
@@ -16,15 +17,18 @@ import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { TfiMobile } from "react-icons/tfi";
 import { BiSolidBookAlt } from "react-icons/bi";
 import { assests } from "../../assets/assests";
-import { useContext } from "react";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
+import auth from "../../Auth/Auth.js";
 
-// const Navbar = ({ language, direction, toggleLanguage }) => {
 const Navbar = () => {
+  const userDetails = auth.getAuthData();
+  console.log("from Navbar", userDetails);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-
+  const [navItems1, setNavItems1] = useState([]);
+  const [user, setUser] = useState(null); // Store user data here
+  const navigate = useNavigate();
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
 
   const toggleDropdown = (dropdownName) => {
@@ -35,18 +39,12 @@ const Navbar = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
-  const [navItems1, setNavItems1] = useState([]);
-
+  // Fetch nav items based on the language
   const FooterGetApi = (lang) => {
-    // Fetch footer data based on the selected language
     axios
-      // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
-      // .get(`http://3.29.25.216/maflam//fetch-nav-item?lang=${lang}`)
-      // .get(`http://40.172.19.83/maflam/fetch-nav-item?lang=${lang}`)
       .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
-        setNavItems1(response.data); // Set the fetched data in state
-        console.log("Footer data fetched successfully:", response.data);
+        setNavItems1(response.data);
       })
       .catch((error) => {
         console.error("Error fetching footer data:", error);
@@ -54,9 +52,20 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Call the API when the component loads or when language changes
     FooterGetApi(language === "ar" ? 0 : 1);
+
+    // Fetch user data from auth service
+    const loggedInUser = auth.getAuthData();
+    setUser(loggedInUser); // Set user state when logged in
   }, [language]);
+
+  const handleLogoutClick = () => {
+    auth.logout();
+    localStorage.removeItem("user");
+    setUser(null); // Clear user on logout
+    navigate("/login");
+  };
+
   const iconMap = {
     FaPhoneAlt: <FaPhoneAlt />,
     GrGroup: <GrGroup />,
@@ -101,8 +110,6 @@ const Navbar = () => {
                   <div className={styles.submenu}>
                     {item.dropdownItems.map((subItem, subIndex) => (
                       <a href="#" key={subIndex}>
-                        {/* {subItem.icon}
-                        &nbsp;&nbsp;{subItem.name} */}
                         {iconMap[subItem.icon]}&nbsp;&nbsp;{subItem.name}
                       </a>
                     ))}
@@ -124,18 +131,46 @@ const Navbar = () => {
         <img src={assests.Globe} alt="Globe Icon" />
       </div>
       <div className={styles.rightLinks}>
-        {navItems1.find((item) => item.createAccount) && (
-          <a href="#" className={styles.signupButton}>
-            {navItems1.find((item) => item.createAccount).createAccount.name}
-          </a>
-        )}
-        {navItems1.find((item) => item.logIn) && (
-          <a href="#login">
-            <span className={styles.arrow}>&#8592; </span>
-            {navItems1.find((item) => item.logIn).logIn.name}
-          </a>
+        {user ? (
+          <>
+            <div className={styles.profile}>
+              <img
+                src={userDetails.userPhoto}
+                alt="Profile"
+                className={styles.profileImage}
+              />
+              <span
+                className={styles.username}
+              >{`welcome, ${userDetails.username}`}</span>
+            </div>
+          </>
+        ) : (
+          <>
+            {navItems1.find((item) => item.createAccount) && (
+              <a
+                href="#signup"
+                className={`${styles.signupButton} ${styles.navButton}`}
+                onClick={() => navigate("/signUp")}
+              >
+                {
+                  navItems1.find((item) => item.createAccount).createAccount
+                    .name
+                }
+              </a>
+            )}
+            {navItems1.find((item) => item.logIn) && (
+              <a
+                href="#login"
+                className={`${styles.loginButton} ${styles.navButton}`}
+                onClick={() => navigate("/login")}
+              >
+                {navItems1.find((item) => item.logIn).logIn.name}
+              </a>
+            )}
+          </>
         )}
       </div>
+
       <div className={styles.hamburger} onClick={toggleHamburger}>
         <div></div>
         <div></div>

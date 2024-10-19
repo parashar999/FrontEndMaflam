@@ -8,32 +8,21 @@ const HeroContact = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Contact Us</h1>
         <p className={styles.description}>
-          We are happy to hear from you to answer your <br /> inquiries and
-          provide any support you may need.
+          We are delighted to assist you by answering your <br />
+          questions and providing all the support you need.
         </p>
         <div className={styles.cardsContainer}>
           <div className={styles.card}>
-            <div className={styles.cardIcon}>
-              <img src={assests.Google} alt="" />
-            </div>
+            <div className={styles.cardText}>Contact Information</div>
+          </div>
+          <div className={styles.card}>
             <div className={styles.cardText}>
-              Application for the training program at Maflam.
+              Apply to Become Part of the world of malfam
             </div>
           </div>
           <div className={styles.card}>
-            <div className={styles.cardIcon}>
-              <img src={assests.LinkedIn} alt="" />
-            </div>
             <div className={styles.cardText}>
-              Application for the employment program at Maflam.
-            </div>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.cardIcon}>
-              <img src={assests.Email} alt="" />
-            </div>
-            <div className={styles.cardText}>
-              Contact us at Services@maflam.com
+              Apply for the training program of maflam
             </div>
           </div>
         </div>
