@@ -8,13 +8,15 @@ import { SingupPageContext, SingupPageContextProvider } from "../../store/Singup
 const SignUpPage = () => {
 
 
-  const{ singupPageContextDetails, loading, error } = useContext(SingupPageContext);
+  // const{ singupPageContextDetails, loading, error } = useContext(SingupPageContext);
+  const{ singupPageContextDetails, loading, error ,}= useContext(SingupPageContext);
 
   useEffect(() => {
     if (singupPageContextDetails) {
       console.log("Home Screen Details:", singupPageContextDetails);
       
     }
+    
   }, [singupPageContextDetails]);
   return (
     <div>

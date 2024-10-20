@@ -19,6 +19,13 @@ import { BiSolidBookAlt } from "react-icons/bi";
 import { assests } from "../../assets/assests";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
+
+import { LuHelpCircle } from "react-icons/lu";
+import { FaRegHeart } from "react-icons/fa";
+import { CgLogOut } from "react-icons/cg";
+import { FaRegUser } from "react-icons/fa";
+import { PiCertificateBold } from "react-icons/pi";
+import { CiFlag1 } from "react-icons/ci";
 import auth from "../../Auth/Auth.js";
 
 const Navbar = () => {
@@ -150,7 +157,14 @@ const Navbar = () => {
             {isProfileMenuOpen && (
               <div className={styles.profileMenu}>
                 <ul>
-                  <li onClick={handleLogoutClick}>Logout</li>
+                <li> My Courses</li>
+                  <li className={styles.iconstyle}> <FaRegUser />   &nbsp;  My Profile</li>
+                  <li  > <PiCertificateBold />  &nbsp;  My Certificates</li>
+                  <li > <FaRegHeart />  &nbsp;  My Wishlist</li>
+                  <li > <CiFlag1 />  &nbsp;  My Subscriptions</li>
+                  <li > <LuHelpCircle />  &nbsp;   Help Center </li>
+                  <li onClick={handleLogoutClick}> <CgLogOut /> &nbsp;   Logout</li>
+
                 </ul>
               </div>
             )}

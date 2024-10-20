@@ -45,6 +45,7 @@ const App = () => {
         path="/"
         element={
           <LanguageProvider>
+
             <HomePageProvider>
               <Home />
             </HomePageProvider>
@@ -172,6 +173,7 @@ const App = () => {
         }
       />
       <Route path="/pricing" element={<PricingDetails />} />
+      
     </Routes>
   );
 };

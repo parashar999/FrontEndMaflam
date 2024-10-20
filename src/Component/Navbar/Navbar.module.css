@@ -199,8 +199,10 @@
 }
 
 .profileMenu {
-  width: 120px;
-  background-color: black;
+  width: 220px;
+  /* background-color: black; */
+  border-radius: 10px;
+background: rgba(26, 34, 40, 1.0);
   position: absolute;
   top: 100%;
   right: 0;
@@ -227,7 +229,9 @@
   cursor: pointer;
 }
 
-
+.iconstyle{
+  margin-top: 3px;
+}
 
 
 @media (max-width: 1024px) {
