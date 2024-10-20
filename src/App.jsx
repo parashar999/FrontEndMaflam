@@ -34,7 +34,9 @@ import { CommunityGuidelinesProvider } from "./store/CommunityGuidelinesPageCont
 import CommunityGuidelinesPage from "./Pages/CommunityGuidelinesPage/CommunityGuidelinesPage.jsx";
 import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
-import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx"
+import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
+import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
+// import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx"
 
 const App = () => {
   return (
@@ -80,13 +82,7 @@ const App = () => {
         element={
           <LanguageProvider>
             <HomePageProvider>
-<<<<<<< HEAD
-              <AboutusPageProvider>
-                <PricingPageContextProvider>
-                  <Pricing />`
-                </PricingPageContextProvider>`
-              </AboutusPageProvider>
-=======
+            
               <PurchaseCancellationProvider>
                   <PurchaseCancellationPage></PurchaseCancellationPage>
               </PurchaseCancellationProvider>
@@ -102,7 +98,6 @@ const App = () => {
               <CommunityGuidelinesProvider>
                   <CommunityGuidelinesPage></CommunityGuidelinesPage>
               </CommunityGuidelinesProvider>
->>>>>>> 5c8daa94b89103aeababba5ac8fd240777f7bf4b
             </HomePageProvider>
           </LanguageProvider>
         }
@@ -142,8 +137,21 @@ const App = () => {
         }
       />
       <Route path="/blogs" element={<Blogs />} />
-      <Route path="/login" element={<LoginPage></LoginPage>} />
-      <Route path="/signUp" element={<SignUpPage></SignUpPage>} />
+      <Route path="/login" element={ 
+        <LanguageProvider>
+          <LoginPageContextProvider>
+        <LoginPage></LoginPage> 
+        </LoginPageContextProvider>
+        </LanguageProvider>  } />
+
+
+      <Route path="/signUp" element={
+        <LanguageProvider>
+          <SingupPageContextProvider>
+        <SignUpPage></SignUpPage>
+        </SingupPageContextProvider>
+        </LanguageProvider>}
+         />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route
