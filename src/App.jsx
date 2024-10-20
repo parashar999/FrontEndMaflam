@@ -30,6 +30,7 @@ import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
 import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
+import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
 
 const App = () => {
   return (

@@ -181,6 +181,53 @@
   color: white;
   font-size: 16px;
 }
+.profileContainer {
+  position: relative;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.username {
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.profileMenu {
+  width: 120px;
+  background-color: black;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--Accent-Accent-50, #F6FFFF);
+  font-family: "Noto Kufi Arabic";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.profileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profileMenu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
 
 
 @media (max-width: 1024px) {
