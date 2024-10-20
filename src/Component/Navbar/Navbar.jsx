@@ -27,7 +27,8 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [navItems1, setNavItems1] = useState([]);
-  const [user, setUser] = useState(null); // Store user data here
+  const [user, setUser] = useState(null);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false); // Profile submenu state
   const navigate = useNavigate();
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
 
@@ -39,7 +40,10 @@ const Navbar = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
 
-  // Fetch nav items based on the language
+  const toggleProfileMenu = () => {
+    setIsProfileMenuOpen(!isProfileMenuOpen);
+  };
+
   const FooterGetApi = (lang) => {
     axios
       .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
@@ -54,15 +58,14 @@ const Navbar = () => {
   useEffect(() => {
     FooterGetApi(language === "ar" ? 0 : 1);
 
-    // Fetch user data from auth service
     const loggedInUser = auth.getAuthData();
-    setUser(loggedInUser); // Set user state when logged in
+    setUser(loggedInUser);
   }, [language]);
 
   const handleLogoutClick = () => {
     auth.logout();
     localStorage.removeItem("user");
-    setUser(null); // Clear user on logout
+    setUser(null);
     navigate("/login");
   };
 
@@ -132,8 +135,8 @@ const Navbar = () => {
       </div>
       <div className={styles.rightLinks}>
         {user ? (
-          <>
-            <div className={styles.profile}>
+          <div className={styles.profileContainer}>
+            <div className={styles.profile} onClick={toggleProfileMenu}>
               <img
                 src={userDetails.userPhoto}
                 alt="Profile"
@@ -141,9 +144,17 @@ const Navbar = () => {
               />
               <span
                 className={styles.username}
-              >{`welcome, ${userDetails.username}`}</span>
+              >{`${userDetails.username}`}</span>
             </div>
-          </>
+
+            {isProfileMenuOpen && (
+              <div className={styles.profileMenu}>
+                <ul>
+                  <li onClick={handleLogoutClick}>Logout</li>
+                </ul>
+              </div>
+            )}
+          </div>
         ) : (
           <>
             {navItems1.find((item) => item.createAccount) && (

@@ -1,5 +1,3 @@
-
-    
 import React, { useState, useContext } from "react";
 import styles from "./Login.module.css";
 import auth from "../../Auth/Auth.js";
@@ -9,23 +7,27 @@ import { assests } from "../../assets/assests.js";
 import { LoginPageContext } from "../../store/loginPageContext.jsx";
 
 const Login = () => {
-  const [phone, setPhone] = useState("");
+  const [emailOrPhone, setEmailOrPhone] = useState(""); // Handle both email and phone
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [popupMessage, setPopupMessage] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const navigate = useNavigate();
 
-  const { loginPageContexttDetails, loading, error: apiError } = useContext(LoginPageContext);
+  const {
+    loginPageContexttDetails,
+    loading,
+    error: apiError,
+  } = useContext(LoginPageContext);
 
   if (loading) return <p>Loading...</p>; // Handle loading state
   if (apiError) return <p>Error loading data</p>; // Handle error state
 
   // Extract relevant data from the context API
   const loginData = loginPageContexttDetails?.loginData || [];
-  
+
   const title = loginData[0]?.title || "Together to make your first movie";
-  const emailLabel = loginData[1]?.title || "Email";
+  const emailLabel = loginData[1]?.title || "Email or Phone";
   const passwordLabel = loginData[2]?.title || "Password";
   const rememberMeLabel = loginData[3]?.title || "Remember me";
   const loginButtonLabel = loginData[4]?.title || "Log in";
@@ -38,16 +40,24 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Determine if the input is an email or a phone number
+    const isEmail = emailOrPhone.includes("@");
+
     try {
       const response = await axios.post(
         "https://prominenttrades.in/maflam/sign-in",
-        { phone, password }
+        {
+          phone: isEmail ? "" : emailOrPhone, // Send phone if not email
+          emailId: isEmail ? emailOrPhone : "", // Send emailId if it's an email
+          password, // Send password as it is
+        }
       );
       const data = response.data;
       if (data) {
         auth.login(data);
         setPopupMessage("Login Successfully");
-        setPhone("");
+        setEmailOrPhone("");
         setPassword("");
         navigate("/");
       } else {
@@ -67,7 +77,11 @@ const Login = () => {
     <div className={styles.container}>
       <div className={styles.Subcontainer}>
         <div className={styles.loginBox}>
-          <img src={assests.logo1} alt="resetlogo" className={styles.resetlogo} />
+          <img
+            src={assests.logo1}
+            alt="resetlogo"
+            className={styles.resetlogo}
+          />
           <h1 className={styles.title}>{title}</h1>
           <form className={styles.form} onSubmit={handleSubmit}>
             <label htmlFor="email">{emailLabel}</label>
@@ -75,8 +89,8 @@ const Login = () => {
               type="text"
               placeholder={emailLabel}
               className={styles.input}
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              value={emailOrPhone}
+              onChange={(e) => setEmailOrPhone(e.target.value)} // Single input for both email and phone
             />
             <label htmlFor="password">{passwordLabel}</label>
             <div className={styles.passwordContainer}>
@@ -87,15 +101,19 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <div 
-                className={styles.eyeIcon} 
-                onClick={togglePasswordVisibility} 
-                role="button" 
+              <div
+                className={styles.eyeIcon}
+                onClick={togglePasswordVisibility}
+                role="button"
                 aria-label="Toggle password visibility"
               />
             </div>
             <div className={styles.rememberMeContainer}>
-              <input type="checkbox" id="rememberMe" className={styles.checkbox} />
+              <input
+                type="checkbox"
+                id="rememberMe"
+                className={styles.checkbox}
+              />
               <label htmlFor="rememberMe" className={styles.checkboxLabel}>
                 {rememberMeLabel}
               </label>
@@ -115,15 +133,28 @@ const Login = () => {
           </div>
           <div className={styles.socialLogin}>
             <button className={styles.socialButton}>
-              <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
+              <img
+                src={assests.googlelogin}
+                alt="Google"
+                className={styles.socialIconImage}
+              />
               <span>&nbsp;{googleLoginText}</span>
             </button>
             <button className={styles.socialButton}>
-              <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
+              <img
+                src={assests.applelogin}
+                alt="Apple"
+                className={styles.socialIconImage}
+                id={styles.applelogo}
+              />
               <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
             </button>
             <button className={styles.socialButton}>
-              <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
+              <img
+                src={assests.Facebooklogin}
+                alt="Facebook"
+                className={styles.socialIconImage}
+              />
               <span>{facebookLoginText}</span>
             </button>
           </div>
@@ -137,10 +168,6 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
 
 // import React, { useState } from "react";
 // import styles from "./Login.module.css";
@@ -160,8 +187,6 @@ export default Login;
 
 //   const handleSubmit = async (e) => {
 
-
-    
 //     e.preventDefault();
 
 //     try {
@@ -220,10 +245,10 @@ export default Login;
 //                 value={password}
 //                 onChange={(e) => setPassword(e.target.value)}
 //               />
-//               <div 
-//                 className={styles.eyeIcon} 
-//                 onClick={togglePasswordVisibility} 
-//                 role="button" 
+//               <div
+//                 className={styles.eyeIcon}
+//                 onClick={togglePasswordVisibility}
+//                 role="button"
 //                 aria-label="Toggle password visibility"
 //               />
 //             </div>
@@ -275,14 +300,6 @@ export default Login;
 
 // export default Login;
 
-
-
-
-
-
-
-
-
 // import React, { useState } from "react";
 // import styles from "./Login.module.css";
 // import auth from "../../Auth/Auth.js";
@@ -290,7 +307,6 @@ export default Login;
 // import axios from "axios"; // Ensure axios is imported
 // import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 // import { assests } from "../../assets/assests.js";
-
 
 // const Login = () => {
 //   // State management for phone (or email) and password
@@ -357,11 +373,9 @@ export default Login;
 
 //              id={styles.eyesymbol}
 
-
 //               onChange={(e) => setPassword(e.target.value)}
 //             />
 
-            
 //             <div className={styles.rememberMeContainer}>
 //               <input
 //                 type="checkbox"
@@ -380,7 +394,7 @@ export default Login;
 //           <a href="#" className={styles.forgotPassword}>
 //             Forgot password?
 //           </a>
-          
+
 //           <div className={styles.divider}>
 //                 <hr className={styles.hrLine} />
 //                      <span>or</span>
@@ -411,4 +425,3 @@ export default Login;
 // };
 
 // export default Login;
-

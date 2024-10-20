@@ -77,45 +77,46 @@ const App = () => {
         }
       />
 
-<Route
+      <Route
         path="/purchaseCancellation"
         element={
           <LanguageProvider>
             <HomePageProvider>
-            
               <PurchaseCancellationProvider>
-                  <PurchaseCancellationPage></PurchaseCancellationPage>
+                <PurchaseCancellationPage></PurchaseCancellationPage>
               </PurchaseCancellationProvider>
-              </HomePageProvider>
-              </LanguageProvider>} />
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
 
-
-<Route
+      <Route
         path="/CommunityGuidelines"
         element={
           <LanguageProvider>
             <HomePageProvider>
               <CommunityGuidelinesProvider>
-                  <CommunityGuidelinesPage></CommunityGuidelinesPage>
+                <CommunityGuidelinesPage></CommunityGuidelinesPage>
               </CommunityGuidelinesProvider>
             </HomePageProvider>
           </LanguageProvider>
         }
       />
 
-     
-      <Route path="/prc" element={
-        <LanguageProvider>
-          <HomePageProvider>
-            <AboutusPageProvider>
-              <PricingPageContextProvider >
-        <Pricing />
-        </PricingPageContextProvider>
-        </AboutusPageProvider>
-        </HomePageProvider>
-        </LanguageProvider>
-        
-        } />
+      <Route
+        path="/prc"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <AboutusPageProvider>
+                <PricingPageContextProvider>
+                  <Pricing />
+                </PricingPageContextProvider>
+              </AboutusPageProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
@@ -137,21 +138,27 @@ const App = () => {
         }
       />
       <Route path="/blogs" element={<Blogs />} />
-      <Route path="/login" element={ 
-        <LanguageProvider>
-          <LoginPageContextProvider>
-        <LoginPage></LoginPage> 
-        </LoginPageContextProvider>
-        </LanguageProvider>  } />
+      <Route
+        path="/login"
+        element={
+          <LanguageProvider>
+            <LoginPageContextProvider>
+              <LoginPage></LoginPage>
+            </LoginPageContextProvider>
+          </LanguageProvider>
+        }
+      />
 
-
-      <Route path="/signUp" element={
-        <LanguageProvider>
-          <SingupPageContextProvider>
-        <SignUpPage></SignUpPage>
-        </SingupPageContextProvider>
-        </LanguageProvider>}
-         />
+      <Route
+        path="/signUp"
+        element={
+          <LanguageProvider>
+            <SingupPageContextProvider>
+              <SignUpPage></SignUpPage>
+            </SingupPageContextProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route
