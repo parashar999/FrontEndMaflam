@@ -28,9 +28,15 @@ import { EbookPageContextProvider } from "./store/ebookPageContext.jsx";
 import LoginPage from "./Pages/LoginPage/LoginPage.jsx";
 
 import SignUpPage from "./Pages/SignUpPage/SignUpPage.jsx";
+import { PurchaseCancellationProvider } from "./store/PurchaseCancellationContext.jsx";
+import PurchaseCancellationPage from "./Pages/PurchaseCancellationPage/PurchaseCancellationPage.jsx";
+import { CommunityGuidelinesProvider } from "./store/CommunityGuidelinesPageContext.jsx";
+import CommunityGuidelinesPage from "./Pages/CommunityGuidelinesPage/CommunityGuidelinesPage.jsx";
 import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
-import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
+import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
+import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
+// import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx"
 
 const App = () => {
   return (
@@ -72,6 +78,32 @@ const App = () => {
       />
 
       <Route
+        path="/purchaseCancellation"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <PurchaseCancellationProvider>
+                <PurchaseCancellationPage></PurchaseCancellationPage>
+              </PurchaseCancellationProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
+
+      <Route
+        path="/CommunityGuidelines"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <CommunityGuidelinesProvider>
+                <CommunityGuidelinesPage></CommunityGuidelinesPage>
+              </CommunityGuidelinesProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
+
+      <Route
         path="/prc"
         element={
           <LanguageProvider>
@@ -88,7 +120,7 @@ const App = () => {
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
-      <Route path="/contact2" element={<ContactUsPage2 />} />
+      {/* <Route path="/contact2" element={<ContactUsPage2 />} /> */}
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
@@ -106,8 +138,27 @@ const App = () => {
         }
       />
       <Route path="/blogs" element={<Blogs />} />
-      <Route path="/login" element={<LoginPage></LoginPage>} />
-      <Route path="/signUp" element={<SignUpPage></SignUpPage>} />
+      <Route
+        path="/login"
+        element={
+          <LanguageProvider>
+            <LoginPageContextProvider>
+              <LoginPage></LoginPage>
+            </LoginPageContextProvider>
+          </LanguageProvider>
+        }
+      />
+
+      <Route
+        path="/signUp"
+        element={
+          <LanguageProvider>
+            <SingupPageContextProvider>
+              <SignUpPage></SignUpPage>
+            </SingupPageContextProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route

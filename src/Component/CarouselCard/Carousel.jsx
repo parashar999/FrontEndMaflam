@@ -11,7 +11,7 @@ const Carousel = () => {
 
   // Fetching the title and success stories data from context
   const successTitle = pricingPageContextDetails?.getPricingCourse1DetailsSec2?.title || "Success Stories";
-  const successStories = pricingPageContextDetails?.pricinSuccessStoriesCourseData || [];
+  const successStories = pricingPageContextDetails?.repeatedSuccessStories|| [];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
