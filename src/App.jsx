@@ -36,8 +36,8 @@ import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.j
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
 import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
 import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
-// import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx"
-
+import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
+import ContactUsPage3 from "./Pages/ContactUsPage3/ContactUsPage3.jsx";
 const App = () => {
   return (
     <Routes>
@@ -120,7 +120,8 @@ const App = () => {
       <Route path="/blogDetails" element={<BlogDetails />} />
       <Route path="/coursedetails" element={<CourseDetail />} />
       <Route path="/contact" element={<ContactUs />} />
-      {/* <Route path="/contact2" element={<ContactUsPage2 />} /> */}
+      <Route path="/contact2" element={<ContactUsPage2 />} />
+      <Route path="/contact3" element={<ContactUsPage3 />} />
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
