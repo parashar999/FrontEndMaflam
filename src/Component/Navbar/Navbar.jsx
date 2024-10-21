@@ -100,7 +100,7 @@ const Navbar = () => {
       <button className={styles.langbtn} onClick={toggleLanguage}>
         {language === "ar" ? "English" : "العربية"}
       </button>
-      <img src={logo1} alt="Logo" className={styles.logo} />
+    <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
       <div className={styles.leftLinks}>
         {navItems1.map((item, index) => (
           <div key={index} className={styles.dropdown}>
