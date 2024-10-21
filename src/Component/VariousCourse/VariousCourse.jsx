@@ -53,7 +53,7 @@ const VariousCourse = () => {
 };
 
 export default VariousCourse;
-
+import { VariousCard } from "../../assets/assests";
 
 
 

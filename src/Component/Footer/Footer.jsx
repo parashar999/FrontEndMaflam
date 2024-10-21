@@ -267,16 +267,16 @@ const Footer = () => {
         <div className={styles.footerBottomContainer}>
           <ul className={styles.footerLinks}>
             <li>
-              <a href="#">Purchase policy</a>
+              <a href="/purchaseCancellation">Purchase policy</a>
             </li>
             <li>
               <a href="#">Help Center</a>
             </li>
             <li>
-              <a href="#">Community Guidelines</a>
+              <a href="/CommunityGuidelines">Community Guidelines</a>
             </li>
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="/terms&condition">Privacy Policy</a>
             </li>
             <li>
               <a href="/terms&condition">Terms and Conditions</a>
