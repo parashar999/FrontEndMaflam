@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HeroContact from "../../Component/HeroContact/HeroContact";
 import ContactForm from "../../Component/ContactForm/ContactForm";
+import ContactForm2 from "../../Component/ContactForm2/ContactForm2";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Footer from "../../Component/Footer/Footer";
 import JoinUs from "../../Component/JoinUs/JoinUs";
@@ -17,7 +18,7 @@ const ContactUsPage3 = () => {
         <AboutusPageProvider>
           <Navbar></Navbar>
           <HeroContact></HeroContact>
-          <ContactForm></ContactForm>
+          <ContactForm2></ContactForm2>
           <div className={styles.container}>
             <MaflanContent></MaflanContent>
             <JoinUs></JoinUs>

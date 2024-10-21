@@ -1,369 +1,546 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./ContactForm2.module.css";
 
 const ContactForm2 = () => {
   const [formData, setFormData] = useState({
     fullName: "",
-    email: "",
-    age: "",
-    phoneNumber: "",
     gender: "",
+    age: "",
+    nationality: "",
     city: "",
-    country: "",
-    currentProgram: "",
+    degree: "",
+    email: "",
+    phoneNumber: "",
     experience: "",
-    preferredField: [],
-    availability: "",
-    language: "",
-    source: "",
-    reason: "",
-    contribution: "",
-    referral: "",
+    trainingField: [],
+    workingHours: "",
+    reasonForInternship: "",
+    university: "",
+    trainingHoursRequired: "",
+    trainingCompletionDate: "",
+    trainingWeeks: "",
+    startDate: { day: "", month: "", year: "" },
+    referralSource: "",
+    resumeFile: null,
+    portfolioFile: null,
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
-
-  const handleCheckboxChange = (e) => {
-    const { value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      preferredField: prevState.preferredField.includes(value)
-        ? prevState.preferredField.filter((field) => field !== value)
-        : [...prevState.preferredField, value],
-    }));
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setFormData({
+      ...formData,
+      [name]: files[0],
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted: ", formData);
+    // Handle form submission
+    console.log(formData);
   };
 
   return (
     <div className={styles.container}>
-      <div className={styles.formContainer}>
-        <h2 className={styles.title}>Apply for Maflam Training Program</h2>
-        <form className={styles.contactForm} onSubmit={handleSubmit}>
-          {/* Full Name */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="fullName">Full Name *</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              placeholder="Full Name"
-            />
-          </div>
+      <h2 className={styles.title}>Apply for Maflam Training Program</h2>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.inputGroup}>
+          <label htmlFor="fullName">
+            Full name<span>*</span>
+          </label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Full name"
+          />
+        </div>
 
-          {/* Email */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="email">Email *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
-            />
-          </div>
-
-          {/* Age */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="age">Age *</label>
-            <input
-              type="text"
-              id="age"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              placeholder="Enter your age"
-            />
-          </div>
-
-          {/* Phone Number */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="phoneNumber">Phone Number *</label>
-            <input
-              type="text"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              placeholder="Phone Number"
-            />
-          </div>
-
-          {/* Gender */}
-          <div className={styles.inputGroup}>
-            <label>Gender *</label>
-            <div className={styles.radioGroup}>
-              <label>
-                <input
-                  type="radio"
-                  name="gender"
-                  value="Male"
-                  checked={formData.gender === "Male"}
-                  onChange={handleChange}
-                />
-                Male
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="gender"
-                  value="Female"
-                  checked={formData.gender === "Female"}
-                  onChange={handleChange}
-                />
-                Female
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="gender"
-                  value="Other"
-                  checked={formData.gender === "Other"}
-                  onChange={handleChange}
-                />
-                Other
-              </label>
-            </div>
-          </div>
-
-          {/* City */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="city">City *</label>
-            <input
-              type="text"
-              id="city"
-              name="city"
-              value={formData.city}
-              onChange={handleChange}
-              placeholder="City"
-            />
-          </div>
-
-          {/* Country */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="country">Country *</label>
-            <input
-              type="text"
-              id="country"
-              name="country"
-              value={formData.country}
-              onChange={handleChange}
-              placeholder="Country"
-            />
-          </div>
-
-          {/* Current Program */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="currentProgram">Current Program *</label>
-            <input
-              type="text"
-              id="currentProgram"
-              name="currentProgram"
-              value={formData.currentProgram}
-              onChange={handleChange}
-              placeholder="e.g., School, College, Job"
-            />
-          </div>
-
-          {/* Previous Experience */}
-          <div className={styles.inputGroup}>
-            <label>Previous Experience *</label>
-            <div className={styles.radioGroup}>
-              <label>
-                <input
-                  type="radio"
-                  name="experience"
-                  value="Yes"
-                  checked={formData.experience === "Yes"}
-                  onChange={handleChange}
-                />
-                Yes
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="experience"
-                  value="No"
-                  checked={formData.experience === "No"}
-                  onChange={handleChange}
-                />
-                No
-              </label>
-            </div>
-          </div>
-
-          {/* Preferred Training Field */}
-          <div className={styles.inputGroup}>
-            <label>Preferred Training Field *</label>
-            <div className={styles.checkboxGroup}>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Directing"
-                  onChange={handleCheckboxChange}
-                />
-                Directing
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Editing"
-                  onChange={handleCheckboxChange}
-                />
-                Editing
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Cinematography"
-                  onChange={handleCheckboxChange}
-                />
-                Cinematography
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Scriptwriting"
-                  onChange={handleCheckboxChange}
-                />
-                Scriptwriting
-              </label>
-              {/* Add more fields as needed */}
-            </div>
-          </div>
-
-          {/* Availability */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="availability">Availability *</label>
-            <input
-              type="text"
-              id="availability"
-              name="availability"
-              value={formData.availability}
-              onChange={handleChange}
-              placeholder="Enter your availability"
-            />
-          </div>
-
-          {/* Language Proficiency */}
-          <div className={styles.inputGroup}>
-            <label>Language Proficiency *</label>
-            <div className={styles.radioGroup}>
-              <label>
-                <input
-                  type="radio"
-                  name="language"
-                  value="Arabic"
-                  checked={formData.language === "Arabic"}
-                  onChange={handleChange}
-                />
-                Arabic
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="language"
-                  value="English"
-                  checked={formData.language === "English"}
-                  onChange={handleChange}
-                />
-                English
-              </label>
-              {/* Add more languages if needed */}
-            </div>
-          </div>
-
-          {/* How did you hear about the program? */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="source">How did you hear about the program?</label>
-            <input
-              type="text"
-              id="source"
-              name="source"
-              value={formData.source}
-              onChange={handleChange}
-              placeholder="e.g., Social Media, Friend"
-            />
-          </div>
-
-          {/* Reason for Joining */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="reason">Why do you want to join? *</label>
-            <textarea
-              id="reason"
-              name="reason"
-              value={formData.reason}
-              onChange={handleChange}
-              placeholder="Enter your reason for joining"
-            />
-          </div>
-
-          {/* Contribution */}
-          <div className={styles.inputGroup}>
-            <label htmlFor="contribution">How can you contribute? *</label>
-            <textarea
-              id="contribution"
-              name="contribution"
-              value={formData.contribution}
-              onChange={handleChange}
-              placeholder="Explain how you can contribute"
-            />
-          </div>
-
-          {/* Referral */}
-          <div className={styles.inputGroup}>
-            <label>Referral *</label>
-            <div className={styles.radioGroup}>
-              <label>
-                <input
-                  type="radio"
-                  name="referral"
-                  value="Yes"
-                  checked={formData.referral === "Yes"}
-                  onChange={handleChange}
-                />
-                Yes
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  name="referral"
-                  value="No"
-                  checked={formData.referral === "No"}
-                  onChange={handleChange}
-                />
-                No
-              </label>
-            </div>
-          </div>
-
-          {/* File Uploads */}
-          <div className={styles.inputGroup}>
-            <label>Portfolio *</label>
-            <input type="file" name="portfolio" />
-          </div>
-          <div className={styles.inputGroup}>
-            <label>CV *</label>
-            <input type="file" name="cv" />
-          </div>
-
-          {/* Submit Button */}
-          <div className={styles.submitGroup}>
-            <button type="submit" className={styles.submitBtn}>
-              Submit
+        {/* Gender */}
+        <div className={styles.inputGroup}>
+          <label>
+            Gender<span>*</span>
+          </label>
+          <div className={styles.options}>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.gender === "Male" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, gender: "Male" })}
+            >
+              Male
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.gender === "Female" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, gender: "Female" })}
+            >
+              Female
             </button>
           </div>
-        </form>
-      </div>
+        </div>
+
+        {/* Age */}
+        <div className={styles.inputGroup}>
+          <label>
+            Age<span>*</span>
+          </label>
+          <div className={styles.options}>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.age === "Under 18" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, age: "Under 18" })}
+            >
+              Under 18
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.age === "18 to 20" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, age: "18 to 20" })}
+            >
+              From 18 to 20
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.age === "20 to 30" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, age: "20 to 30" })}
+            >
+              From 20 to 30
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.age === "Over 30" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, age: "Over 30" })}
+            >
+              Over 30
+            </button>
+          </div>
+        </div>
+
+        {/* Nationality */}
+        <div className={styles.inputGroup}>
+          <label>
+            Nationality<span>*</span>
+          </label>
+          <div className={styles.options}>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.nationality === "Saudi" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, nationality: "Saudi" })}
+            >
+              Saudi
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.nationality === "Non-Saudi" ? styles.active : ""
+              }`}
+              onClick={() =>
+                setFormData({ ...formData, nationality: "Non-Saudi" })
+              }
+            >
+              Non-Saudi resident in Saudi Arabia
+            </button>
+            <input
+              type="text"
+              name="nationality"
+              placeholder="Other"
+              className={styles.input}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+
+        {/* City */}
+        <div className={styles.inputGroup}>
+          <label>
+            City<span>*</span>
+          </label>
+          <div className={styles.options}>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.city === "Jeddah" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, city: "Jeddah" })}
+            >
+              Jeddah
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.city === "Riyadh" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, city: "Riyadh" })}
+            >
+              Riyadh
+            </button>
+            <input
+              type="text"
+              name="city"
+              placeholder="Other"
+              className={styles.input}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+
+        {/* Your Degree */}
+        <div className={styles.inputGroup}>
+          <label>
+            Your Degree<span>*</span>
+          </label>
+          <div className={styles.options}>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.degree === "Secondary" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, degree: "Secondary" })}
+            >
+              Secondary
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.degree === "Diploma" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, degree: "Diploma" })}
+            >
+              Diploma
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.degree === "Bachelor's" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, degree: "Bachelor's" })}
+            >
+              Bachelor's
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.degree === "Masters" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, degree: "Masters" })}
+            >
+              Masters
+            </button>
+            <button
+              type="button"
+              className={`${styles.optionButton} ${
+                formData.degree === "PhD" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, degree: "PhD" })}
+            >
+              PhD
+            </button>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="email">
+            Email<span>*</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Email"
+          />
+        </div>
+
+        {/* Phone Number */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="phoneNumber">
+            Phone Number<span>*</span>
+          </label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Phone Number"
+          />
+        </div>
+        <div className={styles.inputGroup}>
+          <label htmlFor="experience">
+            Do you have previous experience in your chosen field?<span>*</span>
+          </label>
+          <input
+            type="text"
+            id="experience"
+            name="experience"
+            value={formData.experience}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Answer"
+          />
+        </div>
+        <div className={styles.inputGroup}>
+          <label>
+            Required Training Field<span>*</span>
+          </label>
+          <div className={styles.options}>
+            {[
+              "Camera Department",
+              "Editing Department",
+              "Production Department",
+              "Content Writing Department",
+              "Sound Department",
+              "Directing Department",
+              "Acting Department",
+              "Voiceover Department",
+              "Research Department",
+              "Marketing Department",
+              "Design/Graphics Department",
+            ].map((field) => (
+              <button
+                type="button"
+                key={field}
+                className={`${styles.optionButton} ${
+                  formData.trainingField.includes(field) ? styles.active : ""
+                }`}
+                onClick={() => handleTrainingFieldChange(field)}
+              >
+                {field}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Current Working Hours */}
+        <div className={styles.inputGroup}>
+          <label>
+            Current Working Hours<span>*</span>
+          </label>
+          <div className={styles.options}>
+            {[
+              "Employed",
+              "I am Not Currently Working",
+              "About to Graduate",
+              "Student",
+            ].map((status) => (
+              <button
+                type="button"
+                key={status}
+                className={`${styles.optionButton} ${
+                  formData.workingHours === status ? styles.active : ""
+                }`}
+                onClick={() =>
+                  setFormData({ ...formData, workingHours: status })
+                }
+              >
+                {status}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Reason for Internship */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="reasonForInternship">
+            Why would you like to have an internship opportunity at Maflam?
+            <span>*</span>
+          </label>
+          <input
+            type="text"
+            id="reasonForInternship"
+            name="reasonForInternship"
+            value={formData.reasonForInternship}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Reason"
+          />
+        </div>
+
+        {/* University */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="university">
+            University<span>*</span>
+          </label>
+          <input
+            type="text"
+            id="university"
+            name="university"
+            value={formData.university}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="University"
+          />
+        </div>
+
+        {/* Number of Training Hours Required */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="trainingHoursRequired">
+            Number of Training Hours Required<span>*</span>
+          </label>
+          <input
+            type="number"
+            id="trainingHoursRequired"
+            name="trainingHoursRequired"
+            value={formData.trainingHoursRequired}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Enter hours"
+          />
+        </div>
+
+        {/* Specific Date for Training Completion */}
+        <div className={styles.inputGroup}>
+          <label>
+            Is There a Specific Date by Which You Need to Complete the Training
+            Hours?
+          </label>
+          <input
+            type="date"
+            name="trainingCompletionDate"
+            value={formData.trainingCompletionDate}
+            onChange={handleInputChange}
+            className={styles.input}
+          />
+        </div>
+
+        <div className={styles.inputGroup}>
+          <label htmlFor="trainingWeeks">
+            How many weeks do you want to train?<span>*</span>
+          </label>
+          <input
+            type="number"
+            id="trainingWeeks"
+            name="trainingWeeks"
+            value={formData.trainingWeeks}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Enter number of weeks"
+          />
+        </div>
+
+        {/* Start Date */}
+        <div className={styles.inputGroup}>
+          <label>
+            When will you be able to start?<span>*</span>
+          </label>
+          <div className={styles.dateInputs}>
+            <input
+              type="number"
+              name="day"
+              value={formData.startDate.day}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  startDate: { ...formData.startDate, day: e.target.value },
+                })
+              }
+              className={styles.input}
+              placeholder="Day"
+            />
+            <input
+              type="number"
+              name="month"
+              value={formData.startDate.month}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  startDate: { ...formData.startDate, month: e.target.value },
+                })
+              }
+              className={styles.input}
+              placeholder="Month"
+            />
+            <input
+              type="number"
+              name="year"
+              value={formData.startDate.year}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  startDate: { ...formData.startDate, year: e.target.value },
+                })
+              }
+              className={styles.input}
+              placeholder="Year"
+            />
+          </div>
+        </div>
+
+        {/* Referral Source */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="referralSource">
+            How did you know about Maflam?<span>*</span>
+          </label>
+          <input
+            type="text"
+            id="referralSource"
+            name="referralSource"
+            value={formData.referralSource}
+            onChange={handleInputChange}
+            className={styles.input}
+            placeholder="Answer"
+          />
+        </div>
+
+        {/* Resume Upload */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="resumeFile">
+            Resume<span>*</span>
+          </label>
+          <input
+            type="file"
+            id="resumeFile"
+            name="resumeFile"
+            onChange={handleFileChange}
+            className={styles.fileUpload}
+          />
+        </div>
+
+        {/* Portfolio Upload */}
+        <div className={styles.inputGroup}>
+          <label htmlFor="portfolioFile">Portfolio</label>
+          <input
+            type="file"
+            id="portfolioFile"
+            name="portfolioFile"
+            onChange={handleFileChange}
+            className={styles.fileUpload}
+          />
+        </div>
+
+        {/* Submit Button */}
+        <div className={styles.inputGroup}>
+          <button type="submit" className={styles.submitButton}>
+            Send
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
