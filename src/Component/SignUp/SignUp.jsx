@@ -73,7 +73,7 @@ const SignUp = () => {
 
       const data = response.data;
       if (data) {
-        // alert("Sign Up Successfully");
+        alert("Sign Up Successfully");
         setPopupMessage("Sign Up Successfully");
         setUsername("");
         setEmailId("");
