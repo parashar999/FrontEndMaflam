@@ -1,9 +1,7 @@
-import React, {  useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 import axios from "axios";
 import { LanguageContext } from "../Component/LanguageContext/LanguageContext";
-// import { LanguageContext } from "../Component/LanguageContext/LanguageContext.jsx";
-
-export const LoginPageContext= createContext();
+export const LoginPageContext = createContext();
 
 export const LoginPageContextProvider = ({ children }) => {
   const [loginPageContexttDetails, setLoginPageContextDetails] = useState(null);
@@ -14,15 +12,10 @@ export const LoginPageContextProvider = ({ children }) => {
 
   const fetchLoginPageContextDetails = async (langParam) => {
     try {
-   
-   
-    // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
-       const response = await axios.get(`https://prominenttrades.in/maflam/get-LogIn-Details?lang=${langParam}`
-
+      const response = await axios.get(
+        `https://prominenttrades.in/maflam/get-LogIn-Details?lang=${langParam}`
       );
       console.log("API Response: login  ", response.data);
-
-
 
       setLoginPageContextDetails(response.data);
       setLoading(false);
