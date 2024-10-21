@@ -25,15 +25,17 @@ export const LoginPageContextProvider = ({ children }) => {
     }
   };
 
+
+
+
+  
   useEffect(() => {
     const langParam = language === "ar" ? 0 : 1;
     fetchLoginPageContextDetails(langParam);
   }, [language]);
 
   return (
-    <LoginPageContext.Provider
-      value={{ loginPageContexttDetails, loading, error, language }}
-    >
+    <LoginPageContext.Provider value={{ loginPageContexttDetails, loading, error }}>
       {children}
     </LoginPageContext.Provider>
   );

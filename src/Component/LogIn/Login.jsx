@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Ensure axios is imported
 import { assests } from "../../assets/assests.js";
 import { LoginPageContext } from "../../store/loginPageContext.jsx";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState(""); // Handle both email and phone
@@ -48,24 +50,31 @@ const Login = () => {
       const response = await axios.post(
         "https://prominenttrades.in/maflam/sign-in",
         {
-          phone: isEmail ? "" : emailOrPhone, // Send phone if not email
-          emailId: isEmail ? emailOrPhone : "", // Send emailId if it's an email
-          password, // Send password as it is
+          phone: isEmail ? "" : emailOrPhone, 
+          emailId: isEmail ? emailOrPhone : "", 
+          password, 
         }
       );
+      toast.success(response.data.message);
       const data = response.data;
+     
       if (data) {
         auth.login(data);
         setPopupMessage("Login Successfully");
+        toast.success(data.message || "Sign Up Successful!");
+
         setEmailOrPhone("");
         setPassword("");
         navigate("/");
       } else {
         throw new Error("Invalid response from server");
       }
+      
     } catch (err) {
       console.error("Login Error:", err);
-      setError("Login failed. Please check your credentials.");
+      const errorMessage = err.response?.data?.message || err.message;
+      toast.error(`Error: ${errorMessage}`);
+      // setError("Login failed. Please check your credentials.");
     }
   };
 
@@ -90,7 +99,7 @@ const Login = () => {
               placeholder={emailLabel}
               className={styles.input}
               value={emailOrPhone}
-              onChange={(e) => setEmailOrPhone(e.target.value)} // Single input for both email and phone
+              onChange={(e) => setEmailOrPhone(e.target.value)}
             />
             <label htmlFor="password">{passwordLabel}</label>
             <div className={styles.passwordContainer}>
@@ -163,6 +172,7 @@ const Login = () => {
           </a>
         </div>
       </div>
+          <ToastContainer />
     </div>
   );
 };

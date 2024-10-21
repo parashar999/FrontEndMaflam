@@ -10,6 +10,9 @@ import styles from "./SignUp.module.css";
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const SignUp = () => {
   const { singupPageContextDetails, loading, error: apiError } = useContext(SingupPageContext);
 
@@ -57,7 +60,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "https://prominenttrades.in/maflam/sign-up?lang=1",
+        "https://prominenttrades.in/maflam/sign-up?lang=0",
         {
           username,
           emailId,
@@ -79,12 +82,17 @@ const SignUp = () => {
         setPhone("");
         setDateofBirth({ day: '', month: '', year: '' }); // Reset date fields
         navigate("/login");
+      
       } else {
         throw new Error("Invalid response from server");
       }
+      toast.success(response.data.message);
     } catch (err) {
       console.error("Sign Up Error:", err);
-      setError("Sign Up failed. Please check your details.");
+
+      const errorMessage = err.response?.data?.message || err.message;
+      toast.error(`Error: ${errorMessage}`);
+      // setError("Sign Up failed. Please check your details.");
     }
   };
 
@@ -244,6 +252,7 @@ const SignUp = () => {
           <a href="/login">{signInText}</a>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
