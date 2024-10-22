@@ -53,6 +53,7 @@ const Navbar = () => {
 
   const FooterGetApi = (lang) => {
     axios
+    // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
       .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data);
@@ -100,7 +101,43 @@ const Navbar = () => {
       <button className={styles.langbtn} onClick={toggleLanguage}>
         {language === "ar" ? "English" : "العربية"}
       </button>
-    <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
+      {/* <a href="/">
+      <img src={logo1} alt="Logo" className={styles.logo} />
+    </a> */}
+     <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
+    <div className={styles.leftLinks}>
+      {navItems1.map((item, index) => (
+        <div key={index} className={styles.dropdown}>
+          {item.hasDropdown ? (
+            <>
+              <a href="#" onClick={() => toggleDropdown(item.name)}>
+                {item.name}{" "}
+                <span
+                  className={`${styles.arrow} ${
+                    openDropdown === item.name ? styles.rotate : ""
+                  }`}
+                >
+                  &#8595;
+                </span>
+              </a>
+              {openDropdown === item.name && (
+                <div className={styles.submenu}>
+                  {item.dropdownItems?.map((subItem, subIndex) => (
+                    <a href={subItem.href} key={subIndex}>
+                      &nbsp;&nbsp;{subItem.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <a href={item.href}>{item.name}</a>
+          )}
+        </div>
+      ))}
+    </div>
+
+    {/* <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
       <div className={styles.leftLinks}>
         {navItems1.map((item, index) => (
           <div key={index} className={styles.dropdown}>
@@ -120,7 +157,8 @@ const Navbar = () => {
                   <div className={styles.submenu}>
                     {item.dropdownItems.map((subItem, subIndex) => (
                       <a href="#" key={subIndex}>
-                        {iconMap[subItem.icon]}&nbsp;&nbsp;{subItem.name}
+                        { subItem.href}
+                        {subItem.icon}&nbsp;&nbsp;{subItem.name}
                       </a>
                     ))}
                   </div>
@@ -131,7 +169,7 @@ const Navbar = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />

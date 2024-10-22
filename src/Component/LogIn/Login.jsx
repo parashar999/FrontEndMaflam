@@ -48,7 +48,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://prominenttrades.in/maflam/sign-in",
+        "https://prominenttrades.in/maflam/sign-in?lang=0",
         {
           phone: isEmail ? "" : emailOrPhone, 
           emailId: isEmail ? emailOrPhone : "", 

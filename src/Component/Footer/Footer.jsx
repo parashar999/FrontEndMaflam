@@ -15,6 +15,8 @@ const Footer = () => {
   const FooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
     axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
+    // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
+    // .get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
       // .get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
       // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       // .get(`http://40.172.19.83/maflam/fetch-footerdata?lang=${lang}`)
@@ -276,7 +278,7 @@ const Footer = () => {
               <a href="/CommunityGuidelines">Community Guidelines</a>
             </li>
             <li>
-              <a href="/terms&condition">Privacy Policy</a>
+              <a href="/purchaseCancellation">Privacy Policy</a>
             </li>
             <li>
               <a href="/terms&condition">Terms and Conditions</a>
