@@ -133,8 +133,11 @@ const App = () => {
         />
       <Route path="/coursedetails" element={  
             <LanguageProvider>
+              <HomePageProvider>
+
               
         <CourseDetail />
+        </HomePageProvider>
         </LanguageProvider>
         
         } />
