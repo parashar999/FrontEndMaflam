@@ -1,0 +1,133 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #0d1b2a;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 100px;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.inputGroup span {
+    color: red;
+}
+
+.input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #1b263b;
+    color: white;
+    font-size: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.optionButton {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #415a77;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.optionButton:hover {
+    background-color: #778da9;
+}
+
+.active {
+    background-color: #e0e1dd;
+    color: #0d1b2a;
+}
+
+/* For the date input fields (start date section) */
+.dateInputs {
+    display: flex;
+    gap: 10px;
+}
+
+.dateInputs input {
+    width: 30%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #1b263b;
+    color: white;
+    font-size: 1rem;
+}
+
+.fileUpload {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fileUpload input[type="file"] {
+    display: none;
+}
+
+.fileUpload label {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    background-color: #415a77;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.fileUpload label:hover {
+    background-color: #778da9;
+}
+
+.submitButton {
+    background-color: #00e3e3;
+    border: none;
+    color: black;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #00c9c9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dateInputs input {
+        width: 100%;
+    }
+
+    .fileUpload label {
+        width: 100%;
+    }
+}

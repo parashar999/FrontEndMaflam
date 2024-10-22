@@ -41,6 +41,11 @@
     gap: 10px;
     flex-wrap: wrap;
   }
+
+
+  .cardText a{
+    color: white;
+  }
   
   .card {
     background-image: url("../../assets/googleBackground.png");
