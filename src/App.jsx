@@ -165,10 +165,11 @@ const App = () => {
          <LanguageProvider>
          <AboutusPageProvider>
          <ContactUsContextProvider>
+         <ContactUs2ContextProvider>
         
         <ContactUsPage3 />
 
-     
+        </ContactUs2ContextProvider>
         </ContactUsContextProvider>
         </AboutusPageProvider>
         </LanguageProvider>
@@ -229,7 +230,7 @@ const App = () => {
         <PricingDetails />
         } />
       
-    </Routes>
+    </Routes> 
   );
 };
 
