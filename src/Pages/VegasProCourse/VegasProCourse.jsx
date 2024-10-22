@@ -7,6 +7,8 @@ import Footer from '../../Component/Footer/Footer'
 import { LanguageProvider } from '../../Component/LanguageContext/LanguageContext'
 import CourseContent from '../../Component/CourseContent/CourseContent'
 import ResetPassword from '../../Component/ResetPassword/ResetPassword'
+import FailureMessage from '../../Component/FailureMessage/FailureMessage'
+import SuccessMessage from '../../Component/SuccessMessage/SuccessMessage'
 
 function VegasProCourse() {
   return (
@@ -20,6 +22,8 @@ function VegasProCourse() {
         <KeyTopic />
         <CourseContent />
         <ResetPassword />
+        <FailureMessage />
+        <SuccessMessage />
         <Footer />
         
         </LanguageProvider>

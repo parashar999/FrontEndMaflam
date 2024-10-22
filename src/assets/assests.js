@@ -142,11 +142,20 @@ import  Facebooklogin from "./Facebooklogin.png"
 import  applelogin from "./applelogin.png"
 import  googlelogin from "./googlelogin.png"
 import  eyeicon from "./eyeicon.png"
+import  successtickmark from "./successtickmark.png"
+import  Arrow from "./Arrow.png"
+import  profilecourse from "./profilecourse.png"
+import  profilecoursefirst from "./profilecoursefirst.png"
+
 
 
 
 
 export const assests = {
+  profilecoursefirst,
+  profilecourse,
+  Arrow,
+  successtickmark,
   eyeicon,
   googlelogin,
   applelogin,

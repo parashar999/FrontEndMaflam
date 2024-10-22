@@ -38,6 +38,9 @@ import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
 import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
 import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
 import ContactUsPage3 from "./Pages/ContactUsPage3/ContactUsPage3.jsx";
+import MyCertificate from "./Pages/MyCertificate/MyCertificate.jsx";
+import PersonalInformation from "./Pages/PersonalInformation/PersonalInformation.jsx";
+import FilmProduction from "./Pages/FilmProduction/FilmProduction.jsx";
 const App = () => {
   return (
     <Routes>
@@ -127,6 +130,9 @@ const App = () => {
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path="/vegas" element={<VegasProCourse />} />
       <Route path="/rep" element={<RepresentationCourseDetail />} />
+      <Route path="/mycertificate" element={<MyCertificate />} />
+      <Route path="/personalinformation" element={<PersonalInformation />} />
+      <Route path="/filmproduction" element={<FilmProduction />} />
       <Route
         path="/ebooks"
         element={
