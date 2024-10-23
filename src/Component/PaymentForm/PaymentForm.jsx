@@ -27,8 +27,8 @@ const PaymentForm = () => {
           <div className={styles.paymentCard}>
             <p className={styles.titles}>{cardDetails[2]?.title}</p> {/* Payment Method */}
             <img src={cardDetails[3]?.imageUrl} alt="NotFound" />
-            <img src={cardDetails[4]?.imageUrl} alt="NotFound" />
-            <img src={cardDetails[5]?.imageUrl} alt="NotFound" />
+            <img src={cardDetails[4]?.imageUrl} alt="visa" />
+            <img src={cardDetails[5]?.imageUrl} alt="master card" />
           </div>
           <hr />
 
