@@ -17,7 +17,7 @@ export const PricingPageContextProvider = ({ children }) => {
    
    
     // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
-       const response = await axios.get(`https://prominenttrades.in/maflam/get-pricing-course1-details?lang=${langParam}`
+       const response = await axios.get(`https://backend.maflam.com/maflam/get-pricing-course1-details?lang=${langParam}`
 
       );
       console.log("API Response: pricing  ", response.data);

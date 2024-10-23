@@ -14,7 +14,7 @@ export const FaqPageProvider = ({ children }) => {
   const fetchfaqScreenDetails = async (langParam) => {
     try {
       setLoading(true); 
-      const response = await axios.get(`https://prominenttrades.in/maflam/get-faq?lang=${langParam}`
+      const response = await axios.get(`https://backend.maflam.com/maflam/get-faq?lang=${langParam}`
 
 
         // `http://192.168.1.39:3001/maflam/get-faq?lang=${langParam}`

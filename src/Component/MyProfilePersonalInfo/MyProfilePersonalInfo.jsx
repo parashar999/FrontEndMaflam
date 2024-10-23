@@ -33,6 +33,7 @@
 import React, { useState } from 'react';
 import { FaEdit } from 'react-icons/fa'; // Importing edit icon from react-icons
 import styles from './MyProfilePersonalInfo.module.css';
+import { Link } from 'react-router-dom';
 
 function MyProfilePersonalInfo() {
   const [userImage, setUserImage] = useState('default-image-url.png'); // Default image state
@@ -72,9 +73,9 @@ function MyProfilePersonalInfo() {
 
       <nav>
         <ul className={styles.profileTabs}>
-          <li className={styles.activeTab}>Personal Information</li>
+          <li className={styles.activeTab}><Link to="#"> Personal Information</Link></li>
           <li>My Courses</li>
-          <li>My Certificates</li>
+          <li className={styles.activeTab1}><Link to="/mycertificate"> My Certificates</Link></li>
           <li>My Wishlist</li>
         </ul>
         <hr className={styles.footerHr} />

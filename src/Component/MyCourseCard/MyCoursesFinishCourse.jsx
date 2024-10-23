@@ -1,39 +1,19 @@
-
-
-import React from 'react';
-import styles from './MyProfileCertificate.module.css';
+import React from 'react'
+import styles from "./myCoursesFinishCourses.module.css"
 import Arrow from "../../assets/Arrow.png";
-import profilecoursefirst from "../../assets/profilecoursefirst.png";
+import profilecoursefirst from "../../assets/profilecoursefirst.png"
 import profilecourse from "../../assets/profilecourse.png";
-import { Link } from 'react-router-dom';
 
-function MyProfileCertificate() {
+export default function MyCoursesFinishCourse() {
   return (
-    <div className={styles.profileContainer}>
-      <header className={styles.profileHeader}>
-        <h1>My Profile</h1>
-      </header>
+    <div>
 
-      <nav>
-        <ul className={styles.profileTabs}>
-          <li className={styles.activeTab1}><a href="#">Personal Information</a></li>
-          <li className={styles.activeTab1}><Link to="/mycourses">My Courses</Link></li>
-          <li className={styles.activeTab}><a href="/mycertificate">My Certificates</a></li>
-          <li className={styles.activeTab1}><a href="#">My Wishlist</a></li>
-        </ul>
-        <hr className={styles.footerHr} />
-
-      </nav>
-
-      <div className={styles.certificateSection}>
-        <h2>Finished Courses</h2>
+<div className={styles.certificateSection}>
+        <h2>Continue Your Journey</h2>
 
         {/* Course 1 */}
         <div className={styles.courseCard}>
-          <div className={styles.getCertificateDiv}>
-            Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
-          </div>
+       
 
           <div className={styles.courseImageWrapper}>
             <img src={profilecoursefirst} alt="Course" className={styles.courseImage} />
@@ -49,14 +29,15 @@ function MyProfileCertificate() {
             </div>
             <p className={styles.courseProgress}>Overall Progress</p>
           </div>
-        </div>
-
-        {/* Course 2 */}
-        <div className={styles.courseCard}>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
             <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
           </div>
+        </div>
+
+        {/* Course 2 */}
+        <div className={styles.courseCard}>
+        
 
           <div className={styles.courseImageWrapper}>
             <img src={profilecourse} alt="Course" className={styles.courseImage} />
@@ -71,15 +52,16 @@ function MyProfileCertificate() {
               </div>
             </div>
             <p className={styles.courseProgress}>Overall Progress</p>
+          </div>
+          <div className={styles.getCertificateDiv}>
+            Get the Certificate
+            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
           </div>
         </div>
 
         {/* Course 3 */}
         <div className={styles.courseCard}>
-          <div className={styles.getCertificateDiv}>
-            Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
-          </div>
+         
 
           <div className={styles.courseImageWrapper}>
             <img src={profilecourse} alt="Course" className={styles.courseImage} />
@@ -94,13 +76,15 @@ function MyProfileCertificate() {
               </div>
             </div>
             <p className={styles.courseProgress}>Overall Progress</p>
+          </div>
+          <div className={styles.getCertificateDiv}>
+            Get the Certificate
+            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
           </div>
         </div>
 
         {/* Add more course cards as needed */}
       </div>
     </div>
-  );
+  )
 }
-export default MyProfileCertificate;
-

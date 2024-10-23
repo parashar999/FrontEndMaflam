@@ -43,6 +43,10 @@ import PersonalInformation from "./Pages/PersonalInformation/PersonalInformation
 import FilmProduction from "./Pages/FilmProduction/FilmProduction.jsx";
 import { ContactUsContextProvider } from "./store/ContactUsContext.jsx";
 import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
+import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
+import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
+// import Mycourses from "./Component/MyCourses/Mycourses.jsx";
+// import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
   return (
     <Routes>
@@ -82,6 +86,8 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+
 
       <Route
         path="/purchaseCancellation"
@@ -136,8 +142,11 @@ const App = () => {
         />
       <Route path="/coursedetails" element={  
             <LanguageProvider>
+              <HomePageProvider>
+
               
         <CourseDetail />
+        </HomePageProvider>
         </LanguageProvider>
         
         } />
@@ -231,11 +240,15 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+   <Route path="/paymentgateway" element={<PaymentGateWayApi/>} />
+<Route path="/mycourses" element ={ <MyCousesPages/>}  />
       <Route path="/pricing" element={
         
         <PricingDetails />
         } />
       
+     
     </Routes> 
   );
 };
