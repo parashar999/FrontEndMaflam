@@ -60,7 +60,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "https://prominenttrades.in/maflam/sign-up?lang=0",
+        "https://backend.maflam.com/maflam/sign-up?lang=0",
         {
           username,
           emailId,
@@ -90,9 +90,9 @@ const SignUp = () => {
     } catch (err) {
       console.error("Sign Up Error:", err);
 
-      const errorMessage = err.response?.data?.message || err.message;
-      toast.error(`Error: ${errorMessage}`);
-      // setError("Sign Up failed. Please check your details.");
+      // const errorMessage = err.response?.data?.message || err.message;
+      // toast.error(`Error: ${errorMessage}`);
+      setError("Sign Up failed. Please check your details.");
     }
   };
 

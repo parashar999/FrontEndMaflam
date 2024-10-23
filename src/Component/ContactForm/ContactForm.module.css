@@ -86,18 +86,6 @@
   color: white;
   cursor: pointer;
 }
-
-.captchaContainer {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-}
-
-.captchaContainer img {
-  margin-bottom: 20px;
-  display: block;
-}
-
 /* Submit Button */
 .submitButton {
   width: 150px;

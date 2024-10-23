@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
@@ -54,7 +54,8 @@ const Navbar = () => {
   const FooterGetApi = (lang) => {
     axios
     // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
-      .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
+      // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
+      .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data);
       })
@@ -68,6 +69,7 @@ const Navbar = () => {
 
     const loggedInUser = auth.getAuthData();
     setUser(loggedInUser);
+
   }, [language]);
 
   const handleLogoutClick = () => {
@@ -195,9 +197,9 @@ const Navbar = () => {
             {isProfileMenuOpen && (
               <div className={styles.profileMenu}>
                 <ul>
-                <li> My Courses</li>
-                  <li className={styles.iconstyle}> <FaRegUser />   &nbsp;  My Profile</li>
-                  <li  > <PiCertificateBold />  &nbsp;  My Certificates</li>
+                <li> <Link to="/mycourses"> My Courses</Link></li>
+                  <li className={styles.iconstyle}> <FaRegUser />   &nbsp; <Link  to="#"> My Profile</Link ></li>
+                  <li  > <PiCertificateBold />  &nbsp;  <Link  to="/mycertificate">My Certificates</Link></li>
                   <li > <FaRegHeart />  &nbsp;  My Wishlist</li>
                   <li > <CiFlag1 />  &nbsp;  My Subscriptions</li>
                   <li > <LuHelpCircle />  &nbsp;   Help Center </li>

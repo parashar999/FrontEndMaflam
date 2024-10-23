@@ -142,11 +142,20 @@ import  Facebooklogin from "./Facebooklogin.png"
 import  applelogin from "./applelogin.png"
 import  googlelogin from "./googlelogin.png"
 import  eyeicon from "./eyeicon.png"
+import  successtickmark from "./successtickmark.png"
+import  Arrow from "./Arrow.png"
+import  profilecourse from "./profilecourse.png"
+import  profilecoursefirst from "./profilecoursefirst.png"
+
 
 
 
 
 export const assests = {
+  profilecoursefirst,
+  profilecourse,
+  Arrow,
+  successtickmark,
   eyeicon,
   googlelogin,
   applelogin,
@@ -772,43 +781,43 @@ export const VariousCard = [
     icon: Groups,
     imageUrl: variousCourse5,
   },
-  {
-    id: 7,
-    instructor: "Ayman Khoja",
-    title: "Introduction to Vegas Pro",
-    description:
-      "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
-    price: "750",
-    para: "SAR ",
+  // {
+  //   id: 7,
+  //   instructor: "Ayman Khoja",
+  //   title: "Introduction to Vegas Pro",
+  //   description:
+  //     "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
+  //   price: "750",
+  //   para: "SAR ",
 
-    duration: "5 hours of viewing",
-    icon: Groups,
-    imageUrl: variousCourse6,
-  },
-  {
-    id: 8,
-    instructor: "Ayman Khoja",
-    title: "Introduction to DaVinci Resolve",
-    description:
-      "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
-    price: "750",
-    para: "SAR ",
-    duration: "5 hours of viewing",
-    icon: Groups,
-    imageUrl: variousCourse7,
-  },
-  {
-    id: 9,
-    instructor: "Ayman Khoja",
-    title: "Introduction to Premiere Pro",
-    description:
-      "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
-    price: "750",
-    para: "SAR ",
-    duration: "5 hours of viewing",
-    icon: Groups,
-    imageUrl: variousCourse8,
-  },
+  //   duration: "5 hours of viewing",
+  //   icon: Groups,
+  //   imageUrl: variousCourse6,
+  // },
+  // {
+  //   id: 8,
+  //   instructor: "Ayman Khoja",
+  //   title: "Introduction to DaVinci Resolve",
+  //   description:
+  //     "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
+  //   price: "750",
+  //   para: "SAR ",
+  //   duration: "5 hours of viewing",
+  //   icon: Groups,
+  //   imageUrl: variousCourse7,
+  // },
+  // {
+  //   id: 9,
+  //   instructor: "Ayman Khoja",
+  //   title: "Introduction to Premiere Pro",
+  //   description:
+  //     "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
+  //   price: "750",
+  //   para: "SAR ",
+  //   duration: "5 hours of viewing",
+  //   icon: Groups,
+  //   imageUrl: variousCourse8,
+  // },
 ];
 
 export const articles =
