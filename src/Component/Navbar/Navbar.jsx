@@ -100,9 +100,10 @@ const Navbar = () => {
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
-      <button className={styles.langbtn} onClick={toggleLanguage}>
+      <div>  <button className={styles.langbtn} onClick={toggleLanguage}>
         {language === "ar" ? "English" : "العربية"}
-      </button>
+      </button></div>
+     
       {/* <a href="/">
       <img src={logo1} alt="Logo" className={styles.logo} />
     </a> */}
@@ -191,8 +192,9 @@ const Navbar = () => {
               />
               <span
                 className={styles.username}
-              >{`${userDetails.username}`}</span>
+              >{`${userDetails.usernameInEng || userDetails.usernameInArb}`}</span>
             </div>
+
 
             {isProfileMenuOpen && (
               <div className={styles.profileMenu}>

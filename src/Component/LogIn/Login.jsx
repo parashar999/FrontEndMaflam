@@ -48,7 +48,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "https://backend.maflam.com/maflam/sign-in?lang=0",
+        "https://backend.maflam.com/maflam/sign-in",
         {
           phone: isEmail ? "" : emailOrPhone, 
           emailId: isEmail ? emailOrPhone : "", 
