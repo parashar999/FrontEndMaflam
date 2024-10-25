@@ -27,7 +27,7 @@
   padding: 40px;
 
   /* background-color: rgba(0, 0, 0, 0.6);  */
-  width: 80%;
+  width: 70% !important;
 
   max-width: 600px;
   color: white;
@@ -36,23 +36,30 @@
 .heading {
   color: #FFF;
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
+
 
 /* Button styling */
 .button {
-  padding: 15px 30px;
+  padding: 12px 30px;
+  margin-top: 20px;
   background-color: #39FFFB;
   color: black;
   border: none;
+  width: 35% !important;
   border-radius: 8px;
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+.button a{
+   text-decoration: none;
+   color : black
+}
 .button:hover {
   background-color: #39FFFB;
 }

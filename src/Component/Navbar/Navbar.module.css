@@ -21,10 +21,11 @@
   border: solid rgba(26, 34, 40, 0.9) 1px;
   margin-left: -40px;
   padding: 15px;
+  margin-right: 50px;
   font-size: 15px;
   border-radius: 10px;
   /* background: #000; */
-  background-color: rgba(26, 34, 40, 0.9);
+  background-color: rgba(26, 34, 40, 0.9) !important;
   color: #ccc;
 }
 .logo {

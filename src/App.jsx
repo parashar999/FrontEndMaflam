@@ -45,6 +45,7 @@ import { ContactUsContextProvider } from "./store/ContactUsContext.jsx";
 import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
 import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
 import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
+import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
@@ -189,7 +190,7 @@ const App = () => {
         } />
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
-      <Route path="/vegas" element={<VegasProCourse />} />
+      <Route path=" " element={<VegasProCourse />} />
       <Route path="/rep" element={<RepresentationCourseDetail />} />
       <Route path="/mycertificate" element={<MyCertificate />} />
       <Route path="/personalinformation" element={<PersonalInformation />} />
@@ -240,6 +241,8 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+      <Route path="/socialmedia" element={<SocialMediaPage></SocialMediaPage>}/>
 
    <Route path="/paymentgateway" element={<PaymentGateWayApi/>} />
 <Route path="/mycourses" element ={ <MyCousesPages/>}  />

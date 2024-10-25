@@ -1,6 +1,7 @@
 import React, { useRef, useContext } from "react";
 import styles from "./HomeScreenCarousel.module.css";
 import { HomePageContext } from "../../store/HomePageContext"; // Import the context
+import { Link } from "react-router-dom";
 
 const HomeScreenCarousel = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
@@ -39,7 +40,7 @@ const HomeScreenCarousel = () => {
 
   return (
     <div className={styles.carouselcontainer}>
-      <h2>{eBookletData.title}</h2>
+      <Link className={styles.linking} to="/ebooks">{eBookletData.title}</Link>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
@@ -51,7 +52,8 @@ const HomeScreenCarousel = () => {
             {eBookletData.ebookVideoUrl?.map((videoUrl, index) => (
               <div key={index} className={styles.card}>
                 {/* Render video instead of image */}
-                <video
+               <Link to="/ebooks">
+               <video
                   src={videoUrl}
                   // autoPlay
                   muted
@@ -61,6 +63,7 @@ const HomeScreenCarousel = () => {
                   className={styles.video} // Apply styling to video
                   alt={`Ebook Video ${index + 1}`}
                 />
+               </Link>
               </div>
             ))}
           </div>
