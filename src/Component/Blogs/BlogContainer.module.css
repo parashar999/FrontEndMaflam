@@ -13,6 +13,7 @@
     font-size: 36px;
     font-style: normal;
     margin-left: 800px;
+    margin-right: 800px;
     font-weight: 700;
     line-height: 160%; /* 57.6px */
   }
@@ -61,11 +62,14 @@
     font-weight: 400;
     line-height: 160%; /* 38.4px */
   }
-  .contentContainer a {
+  .contentContainer h5  a{
     color: var(--Accent-Accent-400---Main, #39FFFB);
     font-family: "Noto Kufi Arabic";
     font-size: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
     
+
     font-style: normal;
    
     font-weight: 700;

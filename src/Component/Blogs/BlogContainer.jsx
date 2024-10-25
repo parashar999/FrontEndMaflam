@@ -29,7 +29,8 @@ function BlogContainer() {
         <div className={styles.contentContainer}>
           <h2>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
           <p>{blogData[1]?.description || "No description available."}</p>
-          <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div>
+          {/* <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div> */}
+          <div>  <h5> <a href="/blogDetails"> {blogData[2]?.title || "Read More"}</a></h5></div>
         </div>
        
       </div>

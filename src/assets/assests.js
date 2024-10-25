@@ -155,15 +155,30 @@ import channel1 from "./channel1.png"
 import channel2 from "./channel2.png"
 
 import youtubeicon from "./youtubeicon.png"
+import education1 from "./education1.png"
+import education2 from "./education2.png"
+
+import education3 from "./education3.png"
+import eventpic from "./eventpic.png"
+import instagramlogo from "./instagraplogo.png"
+import posdcost from "./podcost.png"
+import Maflammac from "./Maflammac.png"
 
 export const assests = {
   instagram ,
+  instagramlogo,
   youtube,
   tiktok,
   channel1 ,
   channel2 ,
   youtubeicon,
   socialimage,
+  education1,
+  education2,
+  education3,
+  eventpic,
+  posdcost ,
+  Maflammac,
   profilecoursefirst,
   profilecourse,
   Arrow,
@@ -311,6 +326,24 @@ icon : youtubeicon
     imagelogo :logo19 ,
     icon : youtubeicon
        },
+] 
+
+export const EducationPost =[
+  {title: "Educational content that reveals secrets of the filmmaking profession and explains why it is so important.",
+episode :"More",
+imageurl : education1,
+
+   },
+   {title : "Motivational quotes from world-renowned filmmakers based on their experiences in the field.",
+    episode :"More",
+    imageurl :education2,
+   
+       },
+       {title : "Fun posts to engage with filmmakers.",
+        episode :"More",
+        imageurl :education3 
+       
+           },
 ]
 
 export const instructors = [

@@ -22,9 +22,10 @@
   line-height: 160%; 
 } */
 
-.carouselcontainer a{
+.carouselcontainer a {
   color: #FFF;
   text-align: center;
+
 
   text-decoration: none;
   font-family: "Noto Kufi Arabic";
@@ -35,7 +36,10 @@
 }
 
 .linking {
-  margin-left: 850px;
+  margin-left: 750px;
+  
+  margin-right: 750px;
+  text-align: center;
 }
 .carousel {
   position: relative;
