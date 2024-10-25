@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from "react";
 import styles from "./HomeCommunityCarousel.module.css";
 import { HomePageContext } from "../../store/HomePageContext"; // Assuming you're using this context
+import { Link } from "react-router-dom";
 
 const HomeCommunityCarousel = () => {
   const { homeScreenDetails } = useContext(HomePageContext); // Get the data from context
@@ -29,7 +30,7 @@ const HomeCommunityCarousel = () => {
 
   return (
     <div className={styles.carouselcontainer}>
-      <h2>{maflamShowsDataTitle.title}</h2>
+      <Link to="/socialmedia">{maflamShowsDataTitle.title}</Link>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>

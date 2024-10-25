@@ -3,6 +3,7 @@ import styles from "./Faqs.module.css";
 import { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -19,7 +20,7 @@ const Faqs = () => {
 
   return (
     <div className={styles.faqContainer}>
-      <h2>{faqData[0].title}</h2>
+      <Link to="/faqs">{faqData[0].title}</Link>
       <div className={styles.faqList}>
         {faqData.map((item, index) => (
           <div

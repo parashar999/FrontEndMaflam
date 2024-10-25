@@ -147,11 +147,23 @@ import  Arrow from "./Arrow.png"
 import  profilecourse from "./profilecourse.png"
 import  profilecoursefirst from "./profilecoursefirst.png"
 
+import instagram from "./instaram.png"
+import youtube from "./youtube.png"
+import tiktok from "./tiktok.png"
+import socialimage from "./socialimage.png"
+import channel1 from "./channel1.png"
+import channel2 from "./channel2.png"
 
-
-
+import youtubeicon from "./youtubeicon.png"
 
 export const assests = {
+  instagram ,
+  youtube,
+  tiktok,
+  channel1 ,
+  channel2 ,
+  youtubeicon,
+  socialimage,
   profilecoursefirst,
   profilecourse,
   Arrow,
@@ -284,6 +296,22 @@ export const assests = {
   MaflamBlog1,
   
 };
+
+
+export const youtubeChannel =[
+  {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+episode :"For more episodes",
+imageurl : channel1 ,
+imagelogo :logo14  ,
+icon : youtubeicon
+   },
+   {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+    episode :"For more episodes",
+    imageurl :channel2  ,
+    imagelogo :logo19 ,
+    icon : youtubeicon
+       },
+]
 
 export const instructors = [
   { name: "Ayman Khoja", image: Rectangle2 },

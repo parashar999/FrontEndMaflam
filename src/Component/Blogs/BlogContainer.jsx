@@ -18,7 +18,7 @@ function BlogContainer() {
   return (
     <div>
       <div className={styles.MainContainer}>
-        <h1>{blogData[0]?.title || "Default Blog Title"}</h1>
+        <Link to="/blogs">{blogData[0]?.title || "Default Blog Title"}</Link>
         <div className={styles.pricingimg}>
           <img src={blogData[0]?.imageUrl || ""} alt="Blog" />
         </div>
@@ -29,8 +29,9 @@ function BlogContainer() {
         <div className={styles.contentContainer}>
           <h2>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
           <p>{blogData[1]?.description || "No description available."}</p>
-          <Link to=''>{blogData[2]?.title || "Read More"}</Link>
+          <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div>
         </div>
+       
       </div>
     </div>
   );
