@@ -230,12 +230,21 @@
   flex-wrap: wrap; 
   gap: 10px; 
   width: 100%; 
+  margin-left: 80px;
   margin: 20px 0; 
 }
+
+.courseGrid a {
+   color: white ;
+   text-decoration: none;
+}
+
 
 /* Course Card */
 .courseCard {
   display: flex;
+  margin-left: 10px;
+
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -247,7 +256,9 @@
   color: white; 
   flex: 0 0 156px; 
 }
-.btnpadding{
+.btnpadding {
+  margin-right: 160px !important;
+
 
 }
 /* Full-width Button */

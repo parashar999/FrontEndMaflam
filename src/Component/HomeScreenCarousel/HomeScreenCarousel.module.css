@@ -159,6 +159,12 @@ margin: 0 auto;
     flex: 0 0 100%;
     width: 275px;
   }
+  .linking {
+    padding-left: 500px !important;
+    
+    margin-right: 750px;
+    text-align: right;
+  }
 
   .arrowLeft, .arrowRight {
     font-size: 24px;
@@ -173,5 +179,17 @@ margin: 0 auto;
     line-height: 160%; 
     padding: 10px 10px;
     
+    }
+    .carouselcontainer a {
+      color: #FFF;
+      text-align: center;
+    
+    
+      text-decoration: none;
+      font-family: "Noto Kufi Arabic";
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; 
     }
   }

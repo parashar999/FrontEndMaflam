@@ -56,7 +56,8 @@ line-height: 130%;
     border-radius: 8px;
   }
   
-  .instructorCard p {
+  .instructorCard p a {
+    text-decoration: none;
    
     color: #FFF;
     margin-top: -60px;

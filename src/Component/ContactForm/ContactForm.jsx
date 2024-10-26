@@ -63,7 +63,7 @@ const ContactForm = () => {
             <label htmlFor="phone">
               {phoneTitle} <span>*</span>
             </label>
-            <input type="text" id="phone" placeholder={phonePlaceholder} />
+            <input type="number" id="phone" placeholder={phonePlaceholder} />
           </div>
 
           {/* Job Role Options */}

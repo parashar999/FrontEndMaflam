@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext"; // Import the context
 import styles from "./course.module.css"; // Importing the CSS module
+import { Link } from "react-router-dom";
 
 
 const CourseGrid = () => {
@@ -37,7 +38,7 @@ const CourseGrid = () => {
                  playsInline
                  className={styles.coursesImage}
               />
-              <p>{course.title}</p>
+              <p><Link to="/coursedetails"> {course.title}</Link></p>
             </div>
           ))}
         </div>
