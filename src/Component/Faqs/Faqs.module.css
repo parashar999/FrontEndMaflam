@@ -15,11 +15,14 @@
   height: 700px;  
 }
 
-.faqContainer h2 {
+
+.faqContainer a {
   padding-top: 100px;
   padding-bottom: 50px;
+  text-decoration: none;
   /* margin-bottom: 40px; */
   color: white;
+  font-size: 27px;
 }
 
 .faqList {

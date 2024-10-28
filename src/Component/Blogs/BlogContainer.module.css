@@ -5,12 +5,14 @@
     /* border: 1px solid rebeccapurple; */
   }
   
-  .MainContainer h1 {
+  .MainContainer a {
     color: #FFF;
-    text-align: center;
+    text-align: right;
+    text-decoration: none;
     font-family: "Noto Kufi Arabic";
     font-size: 36px;
     font-style: normal;
+    margin-left: 800px;
     font-weight: 700;
     line-height: 160%; /* 57.6px */
   }
@@ -54,7 +56,7 @@
   .contentContainer p {
     color: #FFF;
     font-family: "Noto Kufi Arabic";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 38.4px */
@@ -62,8 +64,10 @@
   .contentContainer a {
     color: var(--Accent-Accent-400---Main, #39FFFB);
     font-family: "Noto Kufi Arabic";
-    font-size: 17px;
+    font-size: 20px;
+    
     font-style: normal;
+   
     font-weight: 700;
     line-height: 94.1%; /* 15.997px */
     letter-spacing: -0.34px;

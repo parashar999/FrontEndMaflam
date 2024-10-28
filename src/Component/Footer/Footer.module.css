@@ -85,6 +85,7 @@
 .footerLinks {
     list-style: none;
     display: flex;
+    margin-top: 10px;
     gap: 20px;
     padding: 20px 0;
     justify-content: center;

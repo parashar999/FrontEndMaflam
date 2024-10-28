@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
@@ -19,6 +19,13 @@ import { BiSolidBookAlt } from "react-icons/bi";
 import { assests } from "../../assets/assests";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
+
+import { LuHelpCircle } from "react-icons/lu";
+import { FaRegHeart } from "react-icons/fa";
+import { CgLogOut } from "react-icons/cg";
+import { FaRegUser } from "react-icons/fa";
+import { PiCertificateBold } from "react-icons/pi";
+import { CiFlag1 } from "react-icons/ci";
 import auth from "../../Auth/Auth.js";
 
 const Navbar = () => {
@@ -46,7 +53,9 @@ const Navbar = () => {
 
   const FooterGetApi = (lang) => {
     axios
-      .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
+    // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
+      // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
+      .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data);
       })
@@ -60,6 +69,7 @@ const Navbar = () => {
 
     const loggedInUser = auth.getAuthData();
     setUser(loggedInUser);
+
   }, [language]);
 
   const handleLogoutClick = () => {
@@ -90,10 +100,47 @@ const Navbar = () => {
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
-      <button className={styles.langbtn} onClick={toggleLanguage}>
+      <div>  <button className={styles.langbtn} onClick={toggleLanguage}>
         {language === "ar" ? "English" : "العربية"}
-      </button>
+      </button></div>
+     
+      {/* <a href="/">
       <img src={logo1} alt="Logo" className={styles.logo} />
+    </a> */}
+     <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
+    <div className={styles.leftLinks}>
+      {navItems1.map((item, index) => (
+        <div key={index} className={styles.dropdown}>
+          {item.hasDropdown ? (
+            <>
+              <a href="#" onClick={() => toggleDropdown(item.name)}>
+                {item.name}{" "}
+                <span
+                  className={`${styles.arrow} ${
+                    openDropdown === item.name ? styles.rotate : ""
+                  }`}
+                >
+                  &#8595;
+                </span>
+              </a>
+              {openDropdown === item.name && (
+                <div className={styles.submenu}>
+                  {item.dropdownItems?.map((subItem, subIndex) => (
+                    <a href={subItem.href} key={subIndex}>
+                      &nbsp;&nbsp;{subItem.name}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <a href={item.href}>{item.name}</a>
+          )}
+        </div>
+      ))}
+    </div>
+
+    {/* <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
       <div className={styles.leftLinks}>
         {navItems1.map((item, index) => (
           <div key={index} className={styles.dropdown}>
@@ -113,7 +160,8 @@ const Navbar = () => {
                   <div className={styles.submenu}>
                     {item.dropdownItems.map((subItem, subIndex) => (
                       <a href="#" key={subIndex}>
-                        {iconMap[subItem.icon]}&nbsp;&nbsp;{subItem.name}
+                        { subItem.href}
+                        {subItem.icon}&nbsp;&nbsp;{subItem.name}
                       </a>
                     ))}
                   </div>
@@ -124,7 +172,7 @@ const Navbar = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />
@@ -144,13 +192,21 @@ const Navbar = () => {
               />
               <span
                 className={styles.username}
-              >{`${userDetails.username}`}</span>
+              >{`${userDetails.usernameInEng || userDetails.usernameInArb}`}</span>
             </div>
+
 
             {isProfileMenuOpen && (
               <div className={styles.profileMenu}>
                 <ul>
-                  <li onClick={handleLogoutClick}>Logout</li>
+                <li> <Link to="/mycourses"> My Courses</Link></li>
+                  <li className={styles.iconstyle}> <FaRegUser />   &nbsp; <Link  to="#"> My Profile</Link ></li>
+                  <li  > <PiCertificateBold />  &nbsp;  <Link  to="/mycertificate">My Certificates</Link></li>
+                  <li > <FaRegHeart />  &nbsp;  My Wishlist</li>
+                  <li > <CiFlag1 />  &nbsp;  My Subscriptions</li>
+                  <li > <LuHelpCircle />  &nbsp;   Help Center </li>
+                  <li onClick={handleLogoutClick}> <CgLogOut /> &nbsp;   Logout</li>
+
                 </ul>
               </div>
             )}

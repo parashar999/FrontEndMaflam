@@ -3,6 +3,7 @@
 import { useContext } from 'react';
 import { AboutusPageContext } from '../../store/AboutUsPageContext';
 import styles from './MaflanContent.module.css';
+import { Link } from 'react-router-dom';
 
 const MaflanContent = () => {
   const { aboutusScreenDetails, loading, error } = useContext(AboutusPageContext);
@@ -23,7 +24,7 @@ const MaflanContent = () => {
           
           <div className={styles.serachoption}>
           
-            <button className={styles.button}>{aboutUsDetails1[1]?.title || ""}</button>
+            <button className={styles.button}><Link to="/prc"> {aboutUsDetails1[1]?.title || ""}</Link></button>
           </div>
 
           

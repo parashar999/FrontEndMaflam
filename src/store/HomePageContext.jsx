@@ -13,9 +13,10 @@ export const HomePageProvider = ({ children }) => {
 
   const fetchHomeScreenDetails = async (langParam) => {
     try {
-      const response = await axios.get(
+      const response = await axios.get
+      (
         // `http://3.29.25.216:3001/maflam/get-home-screen-details?lang=${langParam}`
-        `https://prominenttrades.in/maflam/get-home-screen-details?lang=${langParam}`
+        `https://backend.maflam.com/maflam/get-home-screen-details?lang=${langParam}`
         // 40.172.19.83
       );
       console.log("API Response:", response.data);

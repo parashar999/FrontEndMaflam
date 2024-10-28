@@ -11,9 +11,22 @@
  
 }
 
-.carouselcontainer h2 {
+/* .carouselcontainer h2{
   color: #FFF;
   text-align: center;
+  text-decoration: none;
+  font-family: "Noto Kufi Arabic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; 
+} */
+
+.carouselcontainer a{
+  color: #FFF;
+  text-align: center;
+
+  text-decoration: none;
   font-family: "Noto Kufi Arabic";
   font-size: 36px;
   font-style: normal;
@@ -21,6 +34,9 @@
   line-height: 160%; 
 }
 
+.linking {
+  margin-left: 850px;
+}
 .carousel {
   position: relative;
   width: 100%;

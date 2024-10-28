@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./ViewCourses.module.css";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 
-function ViewCourses() {
+function  ViewCourses() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
   if (loading) return <p>Loading...</p>;

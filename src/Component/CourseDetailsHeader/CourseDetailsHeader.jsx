@@ -9,12 +9,20 @@ import { CiClock2 } from "react-icons/ci";
 import WhatWeLearn from '../WhatWeLearn/WhatWeLearn';
 import KeyTopic from '../KeyTopic/KeyTopic';
 import AboutInstructor from '../AboutInstructor/AboutInstructor';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
 function CourseDetailsHeader() {
+   const navigate = useNavigate();
+
+
+   const checkoutpage = ()=>{
+    navigate("/checkout")
+
+   }
   return (
     <> 
       <div className={styles.coursedetailsheader}>
@@ -46,7 +54,7 @@ function CourseDetailsHeader() {
              </div>
 
 
-              <button className={styles.subcribebtn}> <FaShoppingCart /> &nbsp;&nbsp;Subcribe </button>
+              <button  onClick={checkoutpage}  className={styles.subcribebtn}>  <FaShoppingCart /> &nbsp;&nbsp;Subscribe </button>
               <button className={styles.addtowishlist}> <FaHeart />&nbsp;&nbsp;Add to whishlist </button>
               </div>
 

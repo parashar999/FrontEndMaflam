@@ -14,10 +14,10 @@ const Footer = () => {
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
   const FooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
-    axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
-      // .get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
-      // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
-      // .get(`http://40.172.19.83/maflam/fetch-footerdata?lang=${lang}`)
+    // axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
+    axios.get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
+    // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
+    
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
       .then((response) => {
         setFooterColumnData1(response.data); // Set the fetched data in state
@@ -267,16 +267,16 @@ const Footer = () => {
         <div className={styles.footerBottomContainer}>
           <ul className={styles.footerLinks}>
             <li>
-              <a href="#">Purchase policy</a>
+              <a href="/purchaseCancellation">Purchase Policy</a>
             </li>
             <li>
               <a href="#">Help Center</a>
             </li>
             <li>
-              <a href="#">Community Guidelines</a>
+              <a href="/CommunityGuidelines">Community Guidelines</a>
             </li>
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="/purchaseCancellation">Privacy Policy</a>
             </li>
             <li>
               <a href="/terms&condition">Terms and Conditions</a>

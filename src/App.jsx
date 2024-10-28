@@ -38,6 +38,16 @@ import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
 import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
 import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
 import ContactUsPage3 from "./Pages/ContactUsPage3/ContactUsPage3.jsx";
+import MyCertificate from "./Pages/MyCertificate/MyCertificate.jsx";
+import PersonalInformation from "./Pages/PersonalInformation/PersonalInformation.jsx";
+import FilmProduction from "./Pages/FilmProduction/FilmProduction.jsx";
+import { ContactUsContextProvider } from "./store/ContactUsContext.jsx";
+import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
+import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
+import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
+import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
+// import Mycourses from "./Component/MyCourses/Mycourses.jsx";
+// import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
   return (
     <Routes>
@@ -45,6 +55,7 @@ const App = () => {
         path="/"
         element={
           <LanguageProvider>
+
             <HomePageProvider>
               <Home />
             </HomePageProvider>
@@ -76,6 +87,8 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+
 
       <Route
         path="/purchaseCancellation"
@@ -117,15 +130,71 @@ const App = () => {
           </LanguageProvider>
         }
       />
-      <Route path="/blogDetails" element={<BlogDetails />} />
-      <Route path="/coursedetails" element={<CourseDetail />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/contact2" element={<ContactUsPage2 />} />
-      <Route path="/contact3" element={<ContactUsPage3 />} />
+      <Route path="/blogDetails" element={
+        
+        <LanguageProvider>
+            <HomePageProvider>
+              <AboutusPageProvider>
+        <BlogDetails />
+        </AboutusPageProvider>
+            </HomePageProvider>
+          </LanguageProvider>} 
+        
+        />
+      <Route path="/coursedetails" element={  
+            <LanguageProvider>
+              <HomePageProvider>
+
+              
+        <CourseDetail />
+        </HomePageProvider>
+        </LanguageProvider>
+        
+        } />
+      <Route path="/contact" element={
+        
+        <LanguageProvider>
+          <AboutusPageProvider>
+            <ContactUsContextProvider>
+        <ContactUs />
+        </ContactUsContextProvider>
+        </AboutusPageProvider>
+        </LanguageProvider>
+        
+        } />
+      <Route path="/contact2" element={
+        <LanguageProvider>
+        <AboutusPageProvider>
+        <ContactUsContextProvider>
+        <ContactUs2ContextProvider>
+        <ContactUsPage2 />
+        </ContactUs2ContextProvider>
+        </ContactUsContextProvider>
+        </AboutusPageProvider>
+        </LanguageProvider>
+        
+        } />
+      <Route path="/contact3" element={
+         <LanguageProvider>
+         <AboutusPageProvider>
+         <ContactUsContextProvider>
+         <ContactUs2ContextProvider>
+        
+        <ContactUsPage3 />
+
+        </ContactUs2ContextProvider>
+        </ContactUsContextProvider>
+        </AboutusPageProvider>
+        </LanguageProvider>
+        
+        } />
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
-      <Route path="/vegas" element={<VegasProCourse />} />
+      <Route path=" " element={<VegasProCourse />} />
       <Route path="/rep" element={<RepresentationCourseDetail />} />
+      <Route path="/mycertificate" element={<MyCertificate />} />
+      <Route path="/personalinformation" element={<PersonalInformation />} />
+      <Route path="/filmproduction" element={<FilmProduction />} />
       <Route
         path="/ebooks"
         element={
@@ -172,8 +241,18 @@ const App = () => {
           </LanguageProvider>
         }
       />
-      <Route path="/pricing" element={<PricingDetails />} />
-    </Routes>
+
+      <Route path="/socialmedia" element={<SocialMediaPage></SocialMediaPage>}/>
+
+   <Route path="/paymentgateway" element={<PaymentGateWayApi/>} />
+<Route path="/mycourses" element ={ <MyCousesPages/>}  />
+      <Route path="/pricing" element={
+        
+        <PricingDetails />
+        } />
+      
+     
+    </Routes> 
   );
 };
 

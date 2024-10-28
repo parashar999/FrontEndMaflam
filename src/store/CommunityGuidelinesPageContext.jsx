@@ -14,7 +14,7 @@ export const CommunityGuidelinesProvider = ({ children }) => {
   const fetchCommunityGuidelinesDetails = async (langParam) => {
     try {
       const response = await axios.get(
-        `https://prominenttrades.in/maflam/get-communityguidelines?lang=${langParam}`
+        `https://backend.maflam.com/maflam/get-communityguidelines?lang=${langParam}`
       );
       console.log("API Response for Community Guidelines: ", response.data);
 

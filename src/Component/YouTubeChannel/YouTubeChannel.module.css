@@ -1,0 +1,33 @@
+.imagagelogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+}
+
+.card{
+    margin-left: 100px;
+}
+.bgcontainer{
+    /* display: flex; */
+    color: white;
+    /* justify-content: center;
+    align-items: center; */
+}
+.CardContainer{
+    display: flex;
+}
+
+.titless{
+    display: flex;
+    gap: 20px;
+}
+
+.titless p{
+    font-size: 20px;
+}
+
+.imagagelogo h5{
+    font-size: 20px;
+}
