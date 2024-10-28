@@ -62,8 +62,6 @@
     background-color: #e0e1dd;
     color: #0d1b2a;
 }
-
-/* For the date input fields (start date section) */
 .dateInputs {
     display: flex;
     gap: 10px;
