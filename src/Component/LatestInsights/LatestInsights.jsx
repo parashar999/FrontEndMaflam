@@ -17,7 +17,7 @@ const LatestInsights = () => {
             <div className={styles.cardContent}>
               <span className={styles.category}>{insight.category}</span>
               <p className={styles.title}>{insight.title}</p>
-              <a href="#" className={styles.readMore}>
+              <a href="/blogDetails" className={styles.readMore}>
                 ← Continue reading
               </a>
             </div>

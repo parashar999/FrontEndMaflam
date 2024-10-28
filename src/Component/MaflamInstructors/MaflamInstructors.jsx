@@ -38,6 +38,7 @@
 import { useContext } from 'react';
 import styles from './MaflamInstructors.module.css';
 import { HomePageContext } from "../../store/HomePageContext.jsx"; 
+import { Link } from 'react-router-dom';
 
 const MaflamInstructors = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
@@ -61,7 +62,7 @@ const MaflamInstructors = () => {
                 alt={instructor.title} 
                 className={styles.instructorImage} 
               />
-              <p>{instructor.title}</p>
+              <p><Link to="/coursedetails"> {instructor.title}</Link></p>
             </div>
           ))}
         </div>

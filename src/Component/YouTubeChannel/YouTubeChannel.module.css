@@ -7,27 +7,43 @@
 }
 
 .card{
-    margin-left: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+  
 }
 .bgcontainer{
-    /* display: flex; */
+   
     color: white;
-    /* justify-content: center;
-    align-items: center; */
+    
+}
+
+.bgcontainer h1{ 
+   
+    color: white;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 30px;
+    
 }
 .CardContainer{
     display: flex;
+    gap: 0px;
 }
 
 .titless{
     display: flex;
-    gap: 20px;
+    gap: 18px;
 }
 
 .titless p{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .imagagelogo h5{
+    color: #EBF5F4;
+    font-family: "Noto Kufi Arabic";
     font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 149%;
 }

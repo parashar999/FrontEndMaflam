@@ -1,16 +1,22 @@
 import React, { useContext } from "react";
 import styles from "./ViewCourses.module.css";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 function  ViewCourses() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-
+const navigate = useNavigate()
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
   const coursesData = homeScreenDetails?.coursesData || [];
   const viewAllCoursesTitle =
     homeScreenDetails?.viewAllCourses?.title || "View All Courses";
+
+
+    const Courses = ()=>{
+      navigate("/coursedetails")
+    }
 
   const getCardClassName = (index) => {
     return `${styles.courseCard} ${styles[`courseCard--${index + 1}`]}`;
@@ -26,17 +32,18 @@ function  ViewCourses() {
             style={{
               backgroundImage: `url(${course.backgroundImage})`,
               backgroundSize: "cover",
+              
               backgroundPosition: "center",
               fontSize: "15px",
               color: "white",
             }}
           >
-            {course.name}
+          <a href="/coursedetails">   {course.name}</a>
           </div>
         ))}
       </div>
       <div className={styles.btnpadding}>
-        <button className={styles.fullWidthButton}>
+        <button  onClick={Courses} className={styles.fullWidthButton}>
           {viewAllCoursesTitle}
         </button>
       </div>

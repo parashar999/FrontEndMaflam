@@ -1,4 +1,4 @@
-/* 
+
    .container {
     display: flex;
     flex-direction: column;
@@ -32,10 +32,20 @@
     text-align: center;
     padding: 10px;
   }
+  .btnpadding {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
   
   .fullWidthButton {
     width: 100%; 
-    padding: 15px;
+
+    padding: 25px;
+   padding-left: 700px;
+   padding-right: 700px;
     color: white;
     border: none;
     border-radius: 5px;
@@ -85,7 +95,12 @@
     text-align: center; 
     margin-bottom: 250px;
   }
-  
+  .courseGrid a {
+    color: white ;
+    font-size: 20px;
+    text-decoration: none;
+ }
+ 
   .infoText {
     font-weight: 700;
     color: white; 
@@ -93,6 +108,7 @@
     max-width: 600px; 
     line-height: 57.6px;
   }
+
   
   
   @media (max-width: 1024px) {
@@ -203,10 +219,10 @@
       margin-bottom: 100px;
     }
   }
-   */
+  
 
    /* ViewCourses.module.css */
-
+/* 
 .container {
   display: flex;
   flex-direction: column;
@@ -223,19 +239,27 @@
   margin-top: 30px;
 }
 
-/* Course Grid */
 .courseGrid {
   display: flex; 
   justify-content: center; 
   flex-wrap: wrap; 
   gap: 10px; 
   width: 100%; 
+  margin-left: 80px;
   margin: 20px 0; 
 }
 
-/* Course Card */
+.courseGrid a {
+   color: white ;
+   text-decoration: none;
+}
+
+
+
 .courseCard {
   display: flex;
+  margin-left: 0px;
+
   align-items: center;
   justify-content: center;
   border-radius: 5px;
@@ -247,15 +271,21 @@
   color: white; 
   flex: 0 0 156px; 
 }
-.btnpadding{
+.btnpadding {
+  margin-right: 150px;
+  margin-left: 200px !important;
+
+
 
 }
-/* Full-width Button */
+
 .fullWidthButton {
   width: 100%;
-  padding-left: 510px !important;
+  margin-left:40px ;
+  padding-left:510px !important;
   padding-right: 510px !important;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -270,14 +300,13 @@
     
 }
 
-/* Play Button Container */
+
 .playButtonContainer {
   display: flex;
   justify-content: center;
   margin-top: 50px; 
 }
 
-/* Play Button */
 .playButton {
   background-color: gray;
   border-radius: 50%;
@@ -293,26 +322,26 @@
   border: none;
 }
 
-/* Styling the play icon inside the button */
+
 .iconWithBorder {
   color: rgba(0, 255, 255, 0.7);
   border-radius: 50%;
   font-size: 40px;
 }
 
-/* Play Button Hover Effect */
+
 .playButton:hover {
   transform: scale(1.1);
 }
 
-/* Text Container */
+
 .textContainer {
   margin-top: 70px;
   text-align: center;
   margin-bottom: 250px; 
 }
 
-/* Info Text */
+
 .infoText {
   font-weight: 700;
   color: white;
@@ -321,7 +350,6 @@
   line-height: 57.6px;
 }
 
-/* Responsive Styles */
 
 @media (max-width: 1200px) {
   .container {
@@ -421,4 +449,4 @@
   .textContainer {
     margin-bottom: 100px;
   }
-}
+} */

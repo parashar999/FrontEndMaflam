@@ -97,7 +97,7 @@
   cursor: pointer;
   font-size: 18px;
   text-align: center;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 .submitButton:hover {
