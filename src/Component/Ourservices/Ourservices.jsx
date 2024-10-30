@@ -19,6 +19,12 @@ function Ourservices() {
   const countData = homeScreenDetails?.countData || [];
   
   const title1 = countData[0]?.title || "Default Title";
+   
+  const title2= countData[1]?.title || "Default Title";
+   
+  const title3 = countData[2]?.title || "Default Title";
+   
+  const title4 = countData[3]?.title || "Default Title";
   const description1 = countData[1]?.description || "No Description";
   const description2 = countData[2]?.description || "No Description";
   const description3 = countData[3]?.description || "No Description";
@@ -34,15 +40,18 @@ function Ourservices() {
 
           <div className={styles.text2}>
             <div className={styles.flexx}>
-              <h1>+550</h1>
+              {/* <h1>+550</h1> */}
+              <h1>{ title2}</h1>
               <p>{description1}</p>
             </div>
             <div className={styles.flexx}>
-              <h1>+600</h1>
+              {/* <h1>+600</h1> */}
+              <h1>{ title3}</h1>
               <p>{description2}</p>
             </div>
             <div className={styles.flexx}>
-              <h1>+9</h1>
+              {/* <h1>+9</h1> */}
+              <h1>{ title4}</h1>
               <p>{description3}</p>
             </div>
           </div>

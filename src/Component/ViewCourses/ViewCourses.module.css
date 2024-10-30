@@ -47,8 +47,10 @@
    padding-left: 700px;
    padding-right: 700px;
     color: white;
+  
+    margin-top: -150px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -62,9 +64,11 @@
   .playButtonContainer {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 250px;
+
+
   }
-  
+
   .playButton {
     background-color: gray; 
     border-radius: 50%; 
@@ -104,7 +108,7 @@
   .infoText {
     font-weight: 700;
     color: white; 
-    font-size: 36px; 
+    font-size: 30px; 
     max-width: 600px; 
     line-height: 57.6px;
   }

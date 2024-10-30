@@ -23,6 +23,11 @@
     color: #fff;
   }
   
+
+  .ourservicesvector p{
+    margin-top: 60px !important;
+
+  }
   .ourservicesvector {
     background-image: url('../../assets/ourservicevector.png');
     background-size: cover;
@@ -30,6 +35,7 @@
     background-repeat: no-repeat;
     height: 200px;
     width: 100%;
+    margin-top: 30px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +102,18 @@
     text-align: center;
   }
  
+
+  .para
+  {
+    margin-top: 6px;
+    color: #FFF;
+text-align: center;
+font-family: "Noto Kufi Arabic";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
+  }
   
   .text2 {
     display: flex;
