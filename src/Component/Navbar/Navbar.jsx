@@ -100,17 +100,11 @@ const Navbar = () => {
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
       <div>
-        {" "}
         <button className={styles.langbtn} onClick={toggleLanguage}>
           {language === "ar" ? "English" : "العربية"}
         </button>
       </div>
-
-      {/* <a href="/">
-      <img src={logo1} alt="Logo" className={styles.logo} />
-    </a> */}
       <a href="/">
-        {" "}
         <img src={logo1} alt="Logo" className={styles.logo} />
       </a>
       <div className={styles.leftLinks}>
@@ -119,7 +113,7 @@ const Navbar = () => {
             {item.hasDropdown ? (
               <>
                 <a href="#" onClick={() => toggleDropdown(item.name)}>
-                  {item.name}{" "}
+                  {item.name}
                   <span
                     className={`${styles.arrow} ${
                       openDropdown === item.name ? styles.rotate : ""
@@ -144,48 +138,13 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-
-      {/* <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
-      <div className={styles.leftLinks}>
-        {navItems1.map((item, index) => (
-          <div key={index} className={styles.dropdown}>
-            {item.hasDropdown ? (
-              <>
-                <a href="#" onClick={() => toggleDropdown(item.name)}>
-                  {item.name}{" "}
-                  <span
-                    className={`${styles.arrow} ${
-                      openDropdown === item.name ? styles.rotate : ""
-                    }`}
-                  >
-                    &#8595;
-                  </span>
-                </a>
-                {openDropdown === item.name && (
-                  <div className={styles.submenu}>
-                    {item.dropdownItems.map((subItem, subIndex) => (
-                      <a href="#" key={subIndex}>
-                        { subItem.href}
-                        {subItem.icon}&nbsp;&nbsp;{subItem.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </>
-            ) : (
-              <a href={item.href}>{item.name}</a>
-            )}
-          </div>
-        ))}
-      </div> */}
-
       <div className={styles.searchContainer}>
         <input type="text" placeholder="Search for courses...!" />
         <img src={assests.Magnifine} alt="Search Icon" />
       </div>
-      <div className={styles.searchContainerGlobe}>
+      {/* <div className={styles.searchContainerGlobe}>
         <img src={assests.Globe} alt="Globe Icon" />
-      </div>
+      </div> */}
       <div className={styles.rightLinks}>
         {user ? (
           <div className={styles.profileContainer}>

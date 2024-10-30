@@ -1,5 +1,5 @@
 .coursesContainer {
-  margin-top: 100px;
+  /* margin-top: 50px; */
   padding: 20px;
   min-height: 800px;
   border-radius: 8px;
@@ -29,6 +29,9 @@
   line-height: 160%;
   padding: 20px;
   
+}
+.LearnMaflam{
+  margin-top: 20px;
 }
 
 .LearnMaflam video {
