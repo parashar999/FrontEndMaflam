@@ -46,6 +46,8 @@ import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
 import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
 import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
 import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy.jsx";
+import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
@@ -230,6 +232,14 @@ const App = () => {
         }
       />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
+      <Route path="/privacypolicy" element={
+        <LanguageProvider>
+          <HomePageProvider>
+            <PrivacyPolicyProvider>
+        <PrivacyPolicy />
+        </PrivacyPolicyProvider>
+        </HomePageProvider>
+        </LanguageProvider>} />
       <Route path="/faqs" element={<FaqPage />} />
       <Route
         path="/checkout"

@@ -6,7 +6,7 @@
     padding: 70px;
     height: 80vh    ;
     
-    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/Subscribee.png') no-repeat center center;
+    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/Maflammac1.png') no-repeat center center;
     
     
 
@@ -17,8 +17,11 @@
   }
   
   .imagewrapper {
+    margin-top: 50px !important;
     position: relative;
     width: 100%;
+    margin-left:200px;
+    margin-right: 200px;
     margin-top: -180px;
   
     max-width: 550px;
@@ -26,6 +29,9 @@
   .imagewrapper img {
 
     /* background-image: linear-gradient(white, black); */
+    width: 900px;
+    height: 600px;
+    position: relative;
     
     background: linear-gradient(130deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),no-repeat center center;
   }
@@ -56,8 +62,12 @@
    
 color: var(--Accent-Accent-50, #F6FFFF);
 text-align: center;
-margin-top: -30px;
-background-color: rgba(0, 0, 0, 0.6);
+margin-top: -250px;
+
+margin-left: 10px;
+
+margin-right: 50px;
+/* background-color: rgba(0, 0, 0, 0.6); */
 font-family: "Noto Kufi Arabic";
 font-size: 30px;
 font-style: normal;
@@ -66,7 +76,7 @@ line-height: 150%;
   }
   
   .subscribebutton {
-   
+    
     display: flex;
 padding: 24px 32px;
 justify-content: center;
@@ -74,7 +84,8 @@ align-items: center;
 font-size: 20px;
 font-weight: bold;
 margin-top: 30px;
-margin-left: 200px;
+margin-left: 400px;
+margin-right: 400px;
 gap: 8px;
 border-radius: 64px;
 background: var(--Accent-Accent-400---Main, #39FFFB);

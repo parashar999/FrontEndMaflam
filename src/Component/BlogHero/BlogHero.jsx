@@ -29,7 +29,7 @@ const BlogHero = () => {
             Yes, make sure to select the best lessons that fit your needs and
             skill level.
           </p>
-          <a href="#" className={styles.readMoreBtn}>
+          <a href="/blogDetails" className={styles.readMoreBtn}>
             Read story
           </a>
         </div>
@@ -46,7 +46,7 @@ const BlogHero = () => {
             <div className={styles.blogContent}>
               <p className={styles.category}>{post.category}</p>
               <h3 className={styles.title}>{post.title}</h3>
-              <a href="#" className={styles.readMore}>
+              <a href="/blogDetails" className={styles.readMore}>
                 {post.linkText}
               </a>
             </div>

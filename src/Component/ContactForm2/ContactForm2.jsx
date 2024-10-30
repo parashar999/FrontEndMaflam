@@ -282,7 +282,7 @@ const ContactForm2 = () => {
             Phone Number<span>*</span>
           </label>
           <input
-            type="tel"
+            type="number"
             id="phoneNumber"
             name="phoneNumber"
             value={formData.phoneNumber}
