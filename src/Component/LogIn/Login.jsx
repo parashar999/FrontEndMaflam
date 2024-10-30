@@ -4,7 +4,7 @@ import auth from "../../Auth/Auth.js";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Ensure axios is imported
 import { assests } from "../../assets/assests.js";
-import { LoginPageContext } from "../../store/loginPageContext.jsx";
+import { LoginPageContext } from "../../store/LoginPageContext.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

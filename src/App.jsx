@@ -34,7 +34,7 @@ import { CommunityGuidelinesProvider } from "./store/CommunityGuidelinesPageCont
 import CommunityGuidelinesPage from "./Pages/CommunityGuidelinesPage/CommunityGuidelinesPage.jsx";
 import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
-import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
+import { LoginPageContextProvider } from "./store/LoginPageContext.jsx";
 import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
 import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
 import ContactUsPage3 from "./Pages/ContactUsPage3/ContactUsPage3.jsx";
