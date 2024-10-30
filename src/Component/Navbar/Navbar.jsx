@@ -53,7 +53,7 @@ const Navbar = () => {
 
   const FooterGetApi = (lang) => {
     axios
-    // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
+      // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
       // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
@@ -69,7 +69,6 @@ const Navbar = () => {
 
     const loggedInUser = auth.getAuthData();
     setUser(loggedInUser);
-
   }, [language]);
 
   const handleLogoutClick = () => {
@@ -100,47 +99,53 @@ const Navbar = () => {
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
-      <div>  <button className={styles.langbtn} onClick={toggleLanguage}>
-        {language === "ar" ? "English" : "العربية"}
-      </button></div>
-     
+      <div>
+        {" "}
+        <button className={styles.langbtn} onClick={toggleLanguage}>
+          {language === "ar" ? "English" : "العربية"}
+        </button>
+      </div>
+
       {/* <a href="/">
       <img src={logo1} alt="Logo" className={styles.logo} />
     </a> */}
-     <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
-    <div className={styles.leftLinks}>
-      {navItems1.map((item, index) => (
-        <div key={index} className={styles.dropdown}>
-          {item.hasDropdown ? (
-            <>
-              <a href="#" onClick={() => toggleDropdown(item.name)}>
-                {item.name}{" "}
-                <span
-                  className={`${styles.arrow} ${
-                    openDropdown === item.name ? styles.rotate : ""
-                  }`}
-                >
-                  &#8595;
-                </span>
-              </a>
-              {openDropdown === item.name && (
-                <div className={styles.submenu}>
-                  {item.dropdownItems?.map((subItem, subIndex) => (
-                    <a href={subItem.href} key={subIndex}>
-                      &nbsp;&nbsp;{subItem.name}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </>
-          ) : (
-            <a href={item.href}>{item.name}</a>
-          )}
-        </div>
-      ))}
-    </div>
+      <a href="/">
+        {" "}
+        <img src={logo1} alt="Logo" className={styles.logo} />
+      </a>
+      <div className={styles.leftLinks}>
+        {navItems1.map((item, index) => (
+          <div key={index} className={styles.dropdown}>
+            {item.hasDropdown ? (
+              <>
+                <a href="#" onClick={() => toggleDropdown(item.name)}>
+                  {item.name}{" "}
+                  <span
+                    className={`${styles.arrow} ${
+                      openDropdown === item.name ? styles.rotate : ""
+                    }`}
+                  >
+                    &#8595;
+                  </span>
+                </a>
+                {openDropdown === item.name && (
+                  <div className={styles.submenu}>
+                    {item.dropdownItems?.map((subItem, subIndex) => (
+                      <a href={subItem.href} key={subIndex}>
+                        &nbsp;&nbsp;{subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <a href={item.href}>{item.name}</a>
+            )}
+          </div>
+        ))}
+      </div>
 
-    {/* <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
+      {/* <a href="/">   <img src={logo1} alt="Logo" className={styles.logo} /></a>
       <div className={styles.leftLinks}>
         {navItems1.map((item, index) => (
           <div key={index} className={styles.dropdown}>
@@ -190,23 +195,43 @@ const Navbar = () => {
                 alt="Profile"
                 className={styles.profileImage}
               />
-              <span
-                className={styles.username}
-              >{`${userDetails.usernameInEng || userDetails.usernameInArb}`}</span>
+              <span className={styles.username}>{`${
+                userDetails.usernameInEng || userDetails.usernameInArb
+              }`}</span>
             </div>
-
 
             {isProfileMenuOpen && (
               <div className={styles.profileMenu}>
                 <ul>
-                <li> <Link to="/mycourses"> My Courses</Link></li>
-                  <li className={styles.iconstyle}> <FaRegUser />   &nbsp; <Link  to="#"> My Profile</Link ></li>
-                  <li  > <PiCertificateBold />  &nbsp;  <Link  to="/mycertificate">My Certificates</Link></li>
-                  <li > <FaRegHeart />  &nbsp;  My Wishlist</li>
-                  <li > <CiFlag1 />  &nbsp;  My Subscriptions</li>
-                  <li > <LuHelpCircle />  &nbsp;   Help Center </li>
-                  <li onClick={handleLogoutClick}> <CgLogOut /> &nbsp;   Logout</li>
-
+                  <li>
+                    {" "}
+                    <Link to="/mycourses"> My Courses</Link>
+                  </li>
+                  <li className={styles.iconstyle}>
+                    {" "}
+                    <FaRegUser /> &nbsp; <Link to="#"> My Profile</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <PiCertificateBold /> &nbsp;{" "}
+                    <Link to="/mycertificate">My Certificates</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <FaRegHeart /> &nbsp; My Wishlist
+                  </li>
+                  <li>
+                    {" "}
+                    <CiFlag1 /> &nbsp; My Subscriptions
+                  </li>
+                  <li>
+                    {" "}
+                    <LuHelpCircle /> &nbsp; Help Center{" "}
+                  </li>
+                  <li onClick={handleLogoutClick}>
+                    {" "}
+                    <CgLogOut /> &nbsp; Logout
+                  </li>
                 </ul>
               </div>
             )}
