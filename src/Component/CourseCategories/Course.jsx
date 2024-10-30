@@ -29,15 +29,17 @@ const CourseGrid = () => {
           {specializedCoursesData.map((course, index) => (
             <div key={index} className={styles.coursesCard}>
               {/* Render the video using videoUrl */}
+             <Link to="/coursedetails"> 
               <video
                  src={course.videoUrl}
-                //  autoPlay
+                 autoPlay
                 //  muted
-                 controls
+                //  controls
                  loop
-                 playsInline
+                //  playsInline
                  className={styles.coursesImage}
               />
+              </Link>
               <p><Link to="/coursedetails"> {course.title}</Link></p>
             </div>
           ))}

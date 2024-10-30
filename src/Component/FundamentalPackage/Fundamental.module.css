@@ -7,6 +7,7 @@
   background-color: #030b11;
   padding: 50px 135px 220px 135px;
   height: auto;
+  
   max-width: 1500px; /* Set a max-width for the container */
   margin: 0 auto; /* Center the Fundamental container */
   height: auto;
@@ -29,6 +30,7 @@
   color: #fff;
   line-height: 25px;
   text-align: left;
+padding-top: 100px;
   font-size: 20px;
   font-weight: 700;
   
