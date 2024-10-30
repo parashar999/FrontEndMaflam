@@ -57,7 +57,6 @@ const App = () => {
         path="/"
         element={
           <LanguageProvider>
-
             <HomePageProvider>
               <Home />
             </HomePageProvider>
@@ -90,8 +89,6 @@ const App = () => {
         }
       />
 
-
-
       <Route
         path="/purchaseCancellation"
         element={
@@ -104,7 +101,6 @@ const App = () => {
           </LanguageProvider>
         }
       />
-
       <Route
         path="/CommunityGuidelines"
         element={
@@ -132,64 +128,68 @@ const App = () => {
           </LanguageProvider>
         }
       />
-      <Route path="/blogDetails" element={
-        
-        <LanguageProvider>
+      <Route
+        path="/blogDetails"
+        element={
+          <LanguageProvider>
             <HomePageProvider>
               <AboutusPageProvider>
-        <BlogDetails />
-        </AboutusPageProvider>
+                <BlogDetails />
+              </AboutusPageProvider>
             </HomePageProvider>
-          </LanguageProvider>} 
-        
-        />
-      <Route path="/coursedetails" element={  
-            <LanguageProvider>
-              <HomePageProvider>
-
-              
-        <CourseDetail />
-        </HomePageProvider>
-        </LanguageProvider>
-        
-        } />
-      <Route path="/contact" element={
-        
-        <LanguageProvider>
-          <AboutusPageProvider>
-            <ContactUsContextProvider>
-        <ContactUs />
-        </ContactUsContextProvider>
-        </AboutusPageProvider>
-        </LanguageProvider>
-        
-        } />
-      <Route path="/contact2" element={
-        <LanguageProvider>
-        <AboutusPageProvider>
-        <ContactUsContextProvider>
-        <ContactUs2ContextProvider>
-        <ContactUsPage2 />
-        </ContactUs2ContextProvider>
-        </ContactUsContextProvider>
-        </AboutusPageProvider>
-        </LanguageProvider>
-        
-        } />
-      <Route path="/contact3" element={
-         <LanguageProvider>
-         <AboutusPageProvider>
-         <ContactUsContextProvider>
-         <ContactUs2ContextProvider>
-        
-        <ContactUsPage3 />
-
-        </ContactUs2ContextProvider>
-        </ContactUsContextProvider>
-        </AboutusPageProvider>
-        </LanguageProvider>
-        
-        } />
+          </LanguageProvider>
+        }
+      />
+      <Route
+        path="/coursedetails"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <CourseDetail />
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <LanguageProvider>
+            <AboutusPageProvider>
+              <ContactUsContextProvider>
+                <ContactUs />
+              </ContactUsContextProvider>
+            </AboutusPageProvider>
+          </LanguageProvider>
+        }
+      />
+      <Route
+        path="/contact2"
+        element={
+          <LanguageProvider>
+            <AboutusPageProvider>
+              <ContactUsContextProvider>
+                <ContactUs2ContextProvider>
+                  <ContactUsPage2 />
+                </ContactUs2ContextProvider>
+              </ContactUsContextProvider>
+            </AboutusPageProvider>
+          </LanguageProvider>
+        }
+      />
+      <Route
+        path="/contact3"
+        element={
+          <LanguageProvider>
+            <AboutusPageProvider>
+              <ContactUsContextProvider>
+                <ContactUs2ContextProvider>
+                  <ContactUsPage3 />
+                </ContactUs2ContextProvider>
+              </ContactUsContextProvider>
+            </AboutusPageProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/devinciresolve" element={<DevinciResolveCourseDetail />} />
       <Route path="/adobe" element={<AdobePrimereProCourse />} />
       <Route path=" " element={<VegasProCourse />} />
@@ -252,17 +252,15 @@ const App = () => {
         }
       />
 
-      <Route path="/socialmedia" element={<SocialMediaPage></SocialMediaPage>}/>
+      <Route
+        path="/socialmedia"
+        element={<SocialMediaPage></SocialMediaPage>}
+      />
 
-   <Route path="/paymentgateway" element={<PaymentGateWayApi/>} />
-<Route path="/mycourses" element ={ <MyCousesPages/>}  />
-      <Route path="/pricing" element={
-        
-        <PricingDetails />
-        } />
-      
-     
-    </Routes> 
+      <Route path="/paymentgateway" element={<PaymentGateWayApi />} />
+      <Route path="/mycourses" element={<MyCousesPages />} />
+      <Route path="/pricing" element={<PricingDetails />} />
+    </Routes>
   );
 };
 
