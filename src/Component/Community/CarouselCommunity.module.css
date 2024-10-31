@@ -44,7 +44,7 @@
 .carouselSlider {
   display: flex;
   flex-wrap: nowrap;
-  overflow: hidde;
+  
 }
 
 .carouselCard {

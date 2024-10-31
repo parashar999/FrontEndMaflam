@@ -8,7 +8,7 @@
   width: 100%; 
   max-width: 1900px; 
   margin: 0 auto;
- 
+  margin-bottom: 100px;
 }
 
 /* .carouselcontainer h2{
@@ -52,7 +52,7 @@
 .sliderContainer {
   display: flex;
   width: 100%;
-  overflow-x: scroll;
+
   overflow-y: hidden;
   scrollbar-width: none;
 }
@@ -67,23 +67,52 @@
 }
 
 .card {
-  flex: 0 0 auto;
   
-  margin: 10px;
+  flex: 0 0 auto;
+  margin: 5px;
   box-sizing: border-box;
   text-align: center;
-  
   border-radius: 5px;
-  height: 500px;
+  height: 614.67px;
   color: #fff;
-  width: 330px;
+  width: 370px;
+}
+.overlay {
+  position: absolute;
+  right: -200px;
+  bottom: 0;
+  width: 40%;
+  height: 140%;
+  filter: blur(40px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.8;
+  z-index: 1; /* Make sure overlay is above the video */
+}
+.roverlay {
+  position: absolute;
+  left: -200px;
+  bottom: 0;
+  width: 40%;
+  height: 140%;
+  filter: blur(40px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1; /* Make sure overlay is above the video */
+}
+.card :hover
+{
+  zoom: 1.1;
 }
 
 .card video{
-  height: 700px;
+
   width: 100%;
 }
 
+.card video :hover
+{
+  zoom: 1.1;
+}
 .card h2 {
   font-size: 17px;
   text-align: right;
@@ -110,7 +139,7 @@
   font-size: 30px;
   cursor: pointer;
   padding: 10px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .arrowLeft {

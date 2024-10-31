@@ -24,7 +24,7 @@ const HomeScreenCarousel = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -375, // Adjust this value based on your card width
+      left: -20, // Adjust this value based on your card width
       behavior: "smooth", // Smooth scroll effect
     });
   };
@@ -33,7 +33,7 @@ const HomeScreenCarousel = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 375, // Adjust this value based on your card width
+      left: 20, // Adjust this value based on your card width
       behavior: "smooth", // Smooth scroll effect
     });
   };
@@ -46,7 +46,8 @@ const HomeScreenCarousel = () => {
         <button className={styles.arrowLeft} onClick={scrollLeft}>
           &larr;
         </button>
-
+        <div className={styles.roverlay}></div>
+        <div className={styles.overlay}></div>
         <div className={styles.sliderContainer} ref={sliderRef}>
           <div className={styles.slider}>
             {eBookletData.ebookVideoUrl?.map((videoUrl, index) => (

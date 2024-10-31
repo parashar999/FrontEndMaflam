@@ -26,7 +26,7 @@ const OurSuccessStory = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -375,
+      left: -25,
       behavior: "smooth",
     });
   };
@@ -34,7 +34,7 @@ const OurSuccessStory = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 375,
+      left: 25,
       behavior: "smooth",
     });
   };
@@ -49,6 +49,8 @@ const OurSuccessStory = () => {
 
         <div className={styles.carouselSliderContainer} ref={sliderRef}>
           <div className={styles.carouselSlider}>
+          <div className={styles.roverlay}></div>
+          <div className={styles.overlay}></div>
             {successStoriesArray.map((story, index) => (
               <div key={index} className={styles.carouselCard}>
                 {/* Render the video */}

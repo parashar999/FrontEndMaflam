@@ -26,15 +26,15 @@ const CarouselCommunity = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -619,
+      left: -25,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
     sliderRef.current.scrollBy({
-      top: 0,
-      left: 61,
+      top: 100,
+      left: 100,
       behavior: "smooth",
     });
   };
