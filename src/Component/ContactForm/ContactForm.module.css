@@ -50,7 +50,7 @@
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #3d5c72;
+  background-color: #1a374b;
   color: white;
   font-size: 16px;
 }
@@ -63,16 +63,19 @@
 /* Radio Group and File Upload */
 .radioGroup {
   display: flex;
+  gap: 10px;
   justify-content: space-between;
 }
 
 .radioButton {
-  padding: 10px 20px;
-  background-color: #2b4256;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  background-color: #1a374b;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 
 .radioButton:hover {

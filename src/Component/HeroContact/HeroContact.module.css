@@ -45,6 +45,7 @@
 
   .cardText a{
     color: white;
+    text-decoration: none;
   }
   
   .card {
