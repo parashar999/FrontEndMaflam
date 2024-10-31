@@ -29,16 +29,19 @@ const HomeCommunityCarousel = () => {
   };
 
   return (
+    <div className={styles.parent}>
     <div className={styles.carouselcontainer}>
+              <div className={styles.croverlay}></div>
+              <div className={styles.coverlay}></div>
       <Link to="/socialmedia">{maflamShowsDataTitle.title}</Link>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         <button className={styles.arrowLeft} onClick={scrollLeft}>
           &larr;
         </button>
-
         <div className={styles.sliderContainer} ref={sliderRef}>
           <div className={styles.slider}>
+
             {maflamShowsData.map((item, index) => (
               <div key={index} className={styles.card}>
                 {/* Show logo */}
@@ -71,6 +74,7 @@ const HomeCommunityCarousel = () => {
           &rarr;
         </button>
       </div>
+    </div>
     </div>
   );
 };

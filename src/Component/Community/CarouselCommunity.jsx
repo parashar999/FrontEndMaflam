@@ -26,7 +26,7 @@ const CarouselCommunity = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -375,
+      left: -619,
       behavior: "smooth",
     });
   };
@@ -34,7 +34,7 @@ const CarouselCommunity = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 375,
+      left: 61,
       behavior: "smooth",
     });
   };
@@ -49,6 +49,8 @@ const CarouselCommunity = () => {
 
         <div className={styles.carouselSliderContainer} ref={sliderRef}>
           <div className={styles.carouselSlider}>
+          <div className={styles.roverlay}></div>
+          <div className={styles.overlay}></div>
             {successStoriesArray.length > 0 ? (
               successStoriesArray.map((story, index) => (
                 <div key={index} className={styles.carouselCard}>

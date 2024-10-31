@@ -30,7 +30,7 @@ const Faqs = () => {
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={styles.question}>{item.title}</div>
+            <div className={styles.question}> + {item.title}</div>
             <div
               className={`${styles.answer} ${
                 activeIndex === index ? styles.showAnswer : ""

@@ -40,9 +40,13 @@ const CourseGrid = () => {
                  className={styles.coursesImage}
               />
               </Link>
-              <p><Link to="/coursedetails"> {course.title}</Link></p>
+              <div style={{ position:'absolute', bottom:'10px', zIndex:'10'}} >
+              <p ><Link to="/coursedetails"> {course.title}</Link></p>
+              </div>
+              <div className={styles.overlay}></div>
             </div>
           ))}
+          
         </div>
       </div>
     </div>

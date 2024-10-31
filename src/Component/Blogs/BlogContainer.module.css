@@ -1,5 +1,8 @@
 .MainContainer {
     height: auto;
+    margin: auto;
+    width: 100vw;
+    width: 1920px;
     background-color: #030b11;
     padding: 30px 0px 50px 0px;
     /* border: 1px solid rebeccapurple; */
@@ -25,13 +28,15 @@
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
-    margin-top: 100px;
+    margin-top: 130px;
   }
   .pricingimg  img{
-    height: 400px;
-    margin-top: -50px;
-    margin-left: 400px;
-    margin-right: 400px;
+    transform: scaleX(-1);
+    height:500px;
+    position: relative;
+    margin-top: -100px;
+    margin-left: 300px;
+    margin-right: 500px;
   }
   .Rectangle {
     /* background-image: url("../../assets/maflamhomeimg.png"); */
@@ -40,13 +45,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: -360px;
+    margin-top: -300px;
   }
   .contentContainer{
     margin: -330px auto 200px auto;
+    position: relative;
     max-width: 650px;
+    z-index: 100;
   }
   .contentContainer h2 {
+    position: relative;
+    right: -80px;
     color: #EBF5F4;
     font-family: "Noto Kufi Arabic";
     font-size: 36px;
@@ -56,6 +65,8 @@
   }
   .contentContainer p {
     color: #FFF;
+    position: relative;
+    right: -80px;
     font-family: "Noto Kufi Arabic";
     font-size: 20px;
     font-style: normal;
@@ -98,7 +109,7 @@
       line-height: 160%; /* 57.6px */
     }
     .pricingimg {
-      margin-top: -30px;
+      margin-top: 130px;
       height: 200px;
       width: auto;
       margin: 0px 20px;
@@ -114,7 +125,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       height: 300px;
-      margin-top: 50px;
+      margin-top: 150px;
     }
     .Rectangle {
       /* background-image: url("../../assets/maflamhomeimg.png"); */
@@ -123,7 +134,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      margin-top: -320px;
+      margin-top: -200px;
     }
 
     .contentContainer{

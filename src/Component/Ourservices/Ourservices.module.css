@@ -1,7 +1,7 @@
 
 
    .OurservicesContainer {
-    height: 50vh;
+   
     background-image: url('../../assets/Ourservicesbanner.png');
     background-size: cover;
     background-position: center;
@@ -12,9 +12,10 @@
     align-items: center;
     padding: 15x;
     margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 50px;
     width: 100%;
     max-width: 1900px;
-   
   }
   
   .text {
@@ -49,11 +50,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     height: 200px;
-    width: 90%;
     border-radius: 10px;
     display: flex;
- 
-    margin: 50px auto;
+    max-width: 1433px;
+    margin-top: 200px;
     /* border: 1px solid red; */
    
   
@@ -134,7 +134,21 @@ line-height: 160%;
   }
   
 
-
+  @media (max-width:1600px)
+  {
+      .OurservicesContainer
+      {
+        zoom: 0.8;
+      }
+  }
+  
+  @media (max-width:1280px)
+  {
+      .OurservicesContainer
+      {
+        zoom: 0.5;
+      }
+  }
 
   
   /* Media query for mobile devices */

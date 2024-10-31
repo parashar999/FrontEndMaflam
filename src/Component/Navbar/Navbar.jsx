@@ -19,7 +19,7 @@ import { BiSolidBookAlt } from "react-icons/bi";
 import { assests } from "../../assets/assests";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
-
+import loginarrow from "../../assets/Arrow.png";
 import { LuHelpCircle } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa";
 import { CgLogOut } from "react-icons/cg";
@@ -95,9 +95,10 @@ const Navbar = () => {
   };
 
   return (
+    <div className="navmenu" style={{ backgroundImage: `url(${navbarBackground})` }}  >
     <nav
       className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
-      style={{ backgroundImage: `url(${navbarBackground})` }}
+      
     >
       <div>
         <button className={styles.langbtn} onClick={toggleLanguage}>
@@ -198,15 +199,18 @@ const Navbar = () => {
         ) : (
           <>
             {navItems1.find((item) => item.createAccount) && (
-              <a
+              
+              <a 
                 href="#signup"
                 className={`${styles.signupButton} ${styles.navButton}`}
                 onClick={() => navigate("/signUp")}
               >
+                
                 {
                   navItems1.find((item) => item.createAccount).createAccount
                     .name
                 }
+                <img src={loginarrow} alt="" style={{marginRight:'10px'}} /> 
               </a>
             )}
             {navItems1.find((item) => item.logIn) && (
@@ -226,8 +230,10 @@ const Navbar = () => {
         <div></div>
         <div></div>
         <div></div>
+        
       </div>
     </nav>
+    </div>
   );
 };
 

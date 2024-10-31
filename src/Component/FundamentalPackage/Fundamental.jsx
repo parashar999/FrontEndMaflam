@@ -89,7 +89,8 @@ function Fundamental() {
             <div className={styles.imghead}>
               <img src={imageUrl} alt="Filmmaking Package" />
             </div>
-            <div className={styles.ctn}>
+          </div>
+          <div className={styles.ctn}>
               {categories.map((item, index) => (
                 <div key={index} className={styles.item}>
                   <CiCircleCheck className={styles.checkico} />
@@ -103,7 +104,6 @@ function Fundamental() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>

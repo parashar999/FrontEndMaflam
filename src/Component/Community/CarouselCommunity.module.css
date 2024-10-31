@@ -4,9 +4,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  max-width: 1900px;
+  max-width: 1980px;
   margin: 0 auto;
-  margin-bottom: 0px;
+  margin-bottom: 200px;
 }
 
 .carouselWrapper h2 {
@@ -23,8 +23,9 @@
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: auto;
+  overflow: hidden;
   /* padding: 20px 0px; */
 }
 
@@ -43,29 +44,36 @@
 .carouselSlider {
   display: flex;
   flex-wrap: nowrap;
+  overflow: hidde;
 }
 
 .carouselCard {
-  flex: 0 0 35%; /* Each card takes up 30% of the width */
   margin: 0 10px; /* Margin to create space between cards */
   box-sizing: border-box;
   text-align: center;
   border-radius: 5px;
-  height: auto;
+  height: 483px;
+  right: 25%;
+  min-width:609px !important;
   color: #fff;
-  margin-top: 0px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
 .carouselCard video {
-  height: 500px;
-  width: 100%; /* Full width of the card */
+  margin-top: 50px;
+  position: relative;
+  height: 483px;
+  left: 15%;
+  /* Full width of the card */
   border-radius: 5px; /* Optional: To match the card's border radius */
 }
 
 .carouselArrowLeft,
 .carouselArrowRight {
   position: absolute;
-  top: 50%;
+  top: 80%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
@@ -73,7 +81,7 @@
   font-size: 30px;
   cursor: pointer;
   padding: 10px;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .carouselArrowLeft {
@@ -87,6 +95,29 @@
   justify-content: center;
 }
 
+
+.overlay {
+  position: absolute;
+  right: -400px;
+  bottom: 0;
+  width: 50%;
+  height: 140%;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.8;
+  z-index: 1; /* Make sure overlay is above the video */
+}
+.roverlay {
+  position: absolute;
+  left: -400px;
+  bottom: 0;
+  width: 50%;
+  height: 140%;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1; /* Make sure overlay is above the video */
+}
 .carouselArrowRight {
   right: 10px;
   border-radius: 50%;
@@ -96,11 +127,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 .carouselArrowLeft:hover,
 .carouselArrowRight:hover {
   background-color: #4444;
+  z-index: 1000;
 }
 
 @media (max-width: 768px) {

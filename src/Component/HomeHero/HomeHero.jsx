@@ -18,6 +18,7 @@ const HomeHero = () => {
     homeScreenDetails?.homeScreenDetailsSec1?.signUpText || "Sign Up";
 
   return (
+    <div className={styles.herosection}>
     <div className={styles.heroContainer}>
       {videoUrl && (
         <video
@@ -29,15 +30,19 @@ const HomeHero = () => {
         />
       )}
       <div className={styles.overlay}></div>
+      <div className={styles.rightoverlay}> </div>
+      <div className={styles.leftoverlay}></div>
+      <div className={styles.bottomoverlay}> </div>
       <div className={styles.content}>
         <h1 className={styles.title} style={{ fontSize: 45 }}>
           {title}
         </h1>
         <p className={styles.description}>{description}</p>
-        {/* {signUpText && (
+         {signUpText && (
           <button className={styles.signUpButton}>{signUpText}</button>
-        )} */}
+        )} 
       </div>
+    </div>
     </div>
   );
 };
