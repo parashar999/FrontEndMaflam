@@ -103,6 +103,7 @@ import carouselcard1 from "./CarouselCard1.png";
 import carouselcard2 from "./CarouselCard2.png";
 import carouselcard3 from "./CarouselCard3.png";
 import quotes from "./quotes icon.png";
+import quotesArabic from "./quotes iconar.png";
 import LearnMaflamImage from "./LearnMaflamImage.png";
 
 import maflamScreen from "./Maflam-Screen.png";
@@ -288,6 +289,7 @@ export const assests = {
   carouselcard2,
   carouselcard3,
   quotes,
+  quotesArabic,
 
   videocrc,
   videocrc1,

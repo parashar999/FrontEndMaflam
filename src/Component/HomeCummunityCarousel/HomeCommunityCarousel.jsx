@@ -14,7 +14,7 @@ const HomeCommunityCarousel = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -25, // Adjust this value based on your card width
+      left: -500, // Adjust this value based on your card width
       behavior: "smooth", // Smooth scroll effect
     });
   };
@@ -23,7 +23,7 @@ const HomeCommunityCarousel = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 25, // Adjust this value based on your card width
+      left: 500, // Adjust this value based on your card width
       behavior: "smooth", // Smooth scroll effect
     });
   };

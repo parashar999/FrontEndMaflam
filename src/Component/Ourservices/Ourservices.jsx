@@ -57,7 +57,7 @@ function Ourservices() {
           </div>
 
           <div className={styles.frane64}>
-            <img src={assests.quotes} className={styles.quotesIcon} alt="Quotes" />
+            <img src={assests.quotesArabic} className={styles.quotesIcon} alt="Quotes" />
             <p className={styles.para}>{testimonial}</p>
           </div>
         </div>

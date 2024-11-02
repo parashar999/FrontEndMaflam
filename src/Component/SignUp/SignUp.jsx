@@ -12,6 +12,7 @@ import { SingupPageContext } from "../../store/SingupPageContext.jsx";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { GoogleLogin } from '@react-oauth/google';
 
 const SignUp = () => {
   const { singupPageContextDetails, loading, error: apiError } = useContext(SingupPageContext);
@@ -99,6 +100,35 @@ const SignUp = () => {
     }
   };
 
+  function SignIn() {
+    const handleSuccess = (credentialResponse) => {
+      // Handle the successful login here
+      console.log('Google login successful', credentialResponse);
+    };
+  
+    const handleError = () => {
+      // Handle login errors here
+      console.log('Google login failed');
+    };
+  
+    return (
+      <div className={styles.socialLogin}>
+      <button className={styles.socialButton}>
+        <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
+        <span>&nbsp;{googleLoginText}</span>
+      </button>
+      {/* <button className={styles.socialButton}>
+        <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
+      </button> */}
+      {/* <button className={styles.socialButton}>
+        <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
+        <span>&nbsp;{facebookLoginText}</span>
+      </button> */}
+    </div>
+    );
+  }
+
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(!isPasswordVisible);
   };
@@ -107,7 +137,49 @@ const SignUp = () => {
     const { name, value } = e.target;
     setDateofBirth((prev) => ({ ...prev, [name]: value }));
   };
+  
+  const handleGoogleLogin=async(e)=>{
+    try {
+      const response = await axios.post(
+        "https://backend.maflam.com/maflam/sign-up",
+        {
+          usernameInEng ,
+          emailId,
+          password,
+          confirmPassword,
+          phone,
+          dateofBirth: formattedDOB, 
+        }
+      );
 
+      toast.success(response.data.message);
+      const data = response.data;
+      if (data) {
+        // toast.success(data.message)
+        toast.success(data.message || "Sign Up Successful!");
+        alert("Sign Up Successfully");
+        setPopupMessage("Sign Up Successfully");
+        setUsername("");
+        setEmailId("");
+        setPassword("");
+        setConfirmPassword("");
+        setPhone("");
+        setDateofBirth({ day: '', month: '', year: '' }); // Reset date fields
+        navigate("/login");
+      
+      } else {
+        throw new Error("Invalid response from server");
+      }
+      toast.success(response.data.message);
+    } catch (err) {
+      console.error("Sign Up Error:", err);
+
+      const errorMessage = err.response?.data?.message || err.message;
+      toast.error(`Error: ${errorMessage}`);
+      // setError("Sign Up failed. Please check your details.");
+    }
+
+  }
   return (
     <div className={styles.container}>
       <div className={styles.formWrapper}>
@@ -180,16 +252,16 @@ const SignUp = () => {
           <div className={styles.dobWrapper}>
             <label htmlFor="dob">{dobLabel}</label>
             <div className={styles.dobInputs}>
-              <select
-                name="day"
-                value={dateofBirth.day}
+            <select
+                name="year"
+                value={dateofBirth.year}
                 onChange={handleDOBChange}
                 className={styles.dobSelect}
               >
-                <option value="">Day</option>
-                {[...Array(31)].map((_, index) => (
-                  <option key={index + 1} value={index + 1}>
-                    {index + 1}
+                <option value="">Year</option>
+                {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
+                  <option key={year} value={year}>
+                    {year}
                   </option>
                 ))}
               </select>
@@ -207,18 +279,20 @@ const SignUp = () => {
                 ))}
               </select>
               <select
-                name="year"
-                value={dateofBirth.year}
+                name="day"
+                value={dateofBirth.day}
                 onChange={handleDOBChange}
                 className={styles.dobSelect}
               >
-                <option value="">Year</option>
-                {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
-                  <option key={year} value={year}>
-                    {year}
+                <option value="">Day</option>
+                {[...Array(31)].map((_, index) => (
+                  <option key={index + 1} value={index + 1}>
+                    {index + 1}
                   </option>
                 ))}
               </select>
+             
+              
             </div>
           </div>
 
@@ -240,15 +314,16 @@ const SignUp = () => {
             <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
             <span>&nbsp;{googleLoginText}</span>
           </button>
-          <button className={styles.socialButton}>
+          {/* <button className={styles.socialButton}>
             <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
             <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
-          </button>
-          <button className={styles.socialButton}>
+          </button> */}
+          {/* <button className={styles.socialButton}>
             <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
             <span>&nbsp;{facebookLoginText}</span>
-          </button>
+          </button> */}
         </div>
+        
 
         <div className={styles.signupPrompt}>
           <span>{signInPrompt}</span>

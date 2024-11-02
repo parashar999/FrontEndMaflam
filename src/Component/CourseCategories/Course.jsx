@@ -33,10 +33,11 @@ const CourseGrid = () => {
               <video
                  src={course.videoUrl}
                  autoPlay
-                //  muted
+                  muted
                 //  controls
                  loop
                 //  playsInline
+                onMouseOver={event=>event.target.autoPlay}
                  className={styles.coursesImage}
               />
               </Link>

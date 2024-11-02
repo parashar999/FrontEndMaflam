@@ -18,7 +18,10 @@ function BlogContainer() {
   return (
     <div>
       <div className={styles.MainContainer}>
-        <Link style={{marginbottom:'20px'}} to="/blogs">{blogData[0]?.title || "Default Blog Title"}</Link>
+        <div >
+        <Link className={styles.header} to="/blogs">{blogData[0]?.title || "Default Blog Title"}</Link>
+        </div>
+          {/* <h2> {blogData[0]?.title || "Default Blog Title"}</h2> */}
         <div className={styles.pricingimg}>
           <img src={blogData[0]?.imageUrl || ""} alt="Blog" />
         </div>

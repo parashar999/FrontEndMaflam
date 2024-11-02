@@ -10,17 +10,40 @@ import WhatWeLearn from '../WhatWeLearn/WhatWeLearn';
 import KeyTopic from '../KeyTopic/KeyTopic';
 import AboutInstructor from '../AboutInstructor/AboutInstructor';
 import { useNavigate } from 'react-router-dom';
-
-
-
-
+import axios from "axios"; 
+import { ToastContainer, toast } from 'react-toastify';
 
 function CourseDetailsHeader() {
    const navigate = useNavigate();
+   
+   const checkoutpage = async()=>{
+    //try {
+      navigate("/checkout");
+    //   const response = await axios.post(
+    //     "https://backend.maflam.com/maflam/paymenttransction",
+    //     {
+    //       amount:750
+    //     }
+    //   );
 
+    //   toast.success(response.data.message);
+    //   const data = response.data;
+    //   if (data) {
+    //     console.log(response.data.data.redirect_url)
+    //     window.open(response.data.data.redirect_url);
+        
+    //   } else {
+    //     throw new Error("Invalid response from server");
+    //   }
+    //   toast.success(response.data.message);
+    // } catch (err) {
+    //   console.error("Sign Up Error:", err);
 
-   const checkoutpage = ()=>{
-    navigate("/checkout")
+    //   const errorMessage = err.response?.data?.message || err.message;
+    //   toast.error(`Error: ${errorMessage}`);
+    //   // setError("Sign Up failed. Please check your details.");
+    // }
+    
 
    }
   return (

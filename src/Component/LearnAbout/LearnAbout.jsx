@@ -148,7 +148,7 @@ function LearnAbout() {
         <p className={styles.para}>
           {packageData[7]?.description}
           <Link to={"/to"} className={styles.link}>
-            Terms & Conditions
+             Terms & Conditions
           </Link>
         </p>
       </div>

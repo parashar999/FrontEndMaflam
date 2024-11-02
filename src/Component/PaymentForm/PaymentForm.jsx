@@ -4,6 +4,40 @@ import { useContext } from 'react';
 import styles from './PaymentForm.module.css';
 import { Link } from 'react-router-dom';
 import { CheckoutPaymentContext } from '../../store/CheckoutPaymentContext';
+import axios from "axios"; 
+import { ToastContainer, toast } from 'react-toastify';
+
+
+const checkoutpage = async()=>{
+  try {
+    console.log("Checkout Page called")
+    const response = await axios.post(
+      "https://backend.maflam.com/maflam/paymenttransction",
+      {
+        amount:750
+      }
+    );
+
+    toast.success(response.data.message);
+    const data = response.data;
+    if (data) {
+      console.log(response.data.data.redirect_url)
+      window.open(response.data.data.redirect_url);
+      
+    } else {
+      throw new Error("Invalid response from server");
+    }
+    toast.success(response.data.message);
+  } catch (err) {
+    console.error("Sign Up Error:", err);
+
+    const errorMessage = err.response?.data?.message || err.message;
+    toast.error(`Error: ${errorMessage}`);
+    // setError("Sign Up failed. Please check your details.");
+  }
+  
+
+ }
 
 const PaymentForm = () => {
   const { checkoutPaymentContextDetails, loading, error } = useContext(CheckoutPaymentContext);
@@ -31,8 +65,10 @@ const PaymentForm = () => {
             <img src={cardDetails[5]?.imageUrl} alt="master card" />
           </div>
           <hr />
-
-          <form className={styles.form}>
+          <div>
+          </div>
+          <button type="submit" onClick={checkoutpage} className={styles.payBtn} >{cardDetails[11]?.title}</button>
+          {/* <form className={styles.form}>
             <div className={styles.inputGroup}>
               <label>{cardDetails[6]?.title}</label>
               <input type="text" placeholder={cardDetails[6]?.description} />
@@ -62,7 +98,7 @@ const PaymentForm = () => {
 
             <button type="submit" className={styles.payBtn}>{cardDetails[11]?.title}</button>
             <p className={styles.paras}>{cardDetails[12]?.title}</p>
-          </form>
+          </form> */}
         </div>
 
         <div>

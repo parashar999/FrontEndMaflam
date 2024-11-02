@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import FooterLogo from '../../assets/footerLogo.svg';
-import styles from "./Footer.module.css";
+import styles from "./SubFooter.module.css";
 import axios from "axios";
 import { assests } from "../../assets/assests";
 // import {  footerColumnData } from '../../assets/assests';
@@ -9,11 +9,11 @@ import { LanguageContext } from "../LanguageContext/LanguageContext";
 
 // const Footer = () => {
 
-const Footer = () => {
-  const [footerColumnData1, setFooterColumnData1] = useState([]);
+const SubFooter = () => {
+ 
   const [footerSubColumnData1, setFooterSubColumnData1] = useState([]);
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
-  const FooterGetApi = (lang) => {
+  const SubFooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
     // axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
     axios.get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
@@ -21,8 +21,8 @@ const Footer = () => {
     
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
       .then((response) => {
-        setFooterColumnData1(response.data); 
-        setFooterSubColumnData1(response.data[1]);// Set the fetched data in state
+
+        setFooterSubColumnData1(response.data);// Set the fetched data in state
         console.log("Footer data fetched successfully:", response.data);
         console.log("SubFooter data fetched successfully:", response.data[1]);
       })
@@ -33,7 +33,7 @@ const Footer = () => {
 
   useEffect(() => {
     // Call the API when the component loads or when language changes
-    FooterGetApi(language === "ar" ? 0 : 1);
+    SubFooterGetApi(language === "ar" ? 0 : 1);
   }, [language]);
 
   // const [footerColumnData1, setFooterColumnData1] = useState([])
@@ -304,4 +304,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default SubFooter;

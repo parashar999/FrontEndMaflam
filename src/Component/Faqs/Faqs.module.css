@@ -1,13 +1,13 @@
  .faqContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   background-image: url("../../assets/Faqsbg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  text-align: center;
-  align-items: center;
+  /* text-align: center; */
+  /* align-items: center; */
   padding:0 20px;
   margin: 0 auto;
   width: 100%;
@@ -57,8 +57,8 @@
 }
 
 .question {
-color: rgba(90, 255, 255, 0.40);
-text-align: right;
+color: #5affff;
+/* text-align: right; */
 font-family: "Noto Kufi Arabic";
 font-size: 24px;
 font-style: normal;
@@ -70,7 +70,7 @@ line-height: 160%; /* 38.4px */
 
 .answer {
   color: white;
-  text-align: start;
+  /* text-align: right; */
   display: none; 
   margin: 0 auto;
   position: relative;

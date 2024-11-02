@@ -16,19 +16,22 @@ const PrivacyPolicy = () => {
   }
 
   // Check if termsConditionDetails exist and has TermsData
-  const terms = PrivacyPolicyDetails?.TermsData?.[0] || {};
+  const terms = PrivacyPolicyDetails || [];
+
+  console.log("terms data"+terms[0].title);
 
   return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
         {/* <h1 className={styles.title}>{terms.title}</h1> */}
-        <h1 className={styles.title}>Privacy Policy </h1>
-        
-        {terms.description?.map((desc, index) => (
+        {/* <h1 className={styles.title}>Privacy Policy </h1> */}
+        <h1 className={styles.title}>{terms[0].title}</h1>
+
+        {terms[0].description?.map((desc, index) => (
           <p key={index} className={styles.description}>{desc}</p>
         ))}
 
-        {terms.sections?.map((section, index) => (
+        {terms[0].sections?.map((section, index) => (
           <div key={index} className={styles.section}>
             <h2 className={styles.sectionTitle}>{section.title}</h2>
             <ul className={styles.list}>

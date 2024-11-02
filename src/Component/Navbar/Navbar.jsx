@@ -207,8 +207,7 @@ const Navbar = () => {
               >
                 
                 {
-                  navItems1.find((item) => item.createAccount).createAccount
-                    .name
+                  navItems1.find((item) => item.createAccount).createAccount.name
                 }
                 <img src={loginarrow} alt="" style={{marginRight:'10px'}} /> 
               </a>

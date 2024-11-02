@@ -15,6 +15,7 @@ import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCom
 import CarouselCommunity from "../../Component/Community/CarouselCommunity";
 import Faqs from "../../Component/Faqs/Faqs";
 import Footer from "../../Component/Footer/Footer";
+import SubFooter from "../../Component/SubFooter/SubFooter.jsx";
 import Styles from "./Home.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
@@ -52,6 +53,7 @@ const Home = () => {
           <CarouselCommunity />
           <Faqs />
           <Footer />
+          {/* <SubFooter/> */}
         </div>
       </HomePageProvider>
     </LanguageProvider>

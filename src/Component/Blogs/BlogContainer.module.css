@@ -1,8 +1,11 @@
 .MainContainer {
+
+
     height: auto;
+    width: auto;
     margin: auto;
-    width: 100vw;
-    width: 1920px;
+    /* width: 100vw; */
+    /* width: 1920px; */
     background-color: #030b11;
     padding: 30px 0px 50px 0px;
     /* border: 1px solid rebeccapurple; */
@@ -20,6 +23,16 @@
     font-weight: 700;
     line-height: 160%; /* 57.6px */
   }
+  .MainContainer h2 {
+    margin-top: 30px;
+     color: #FFF;
+ text-align: center;
+ font-family: "Noto Kufi Arabic";
+ font-size: 36px;
+ font-style: normal;
+ font-weight: 700;
+ line-height: 130%;
+   }
   /* Responsive font size using viewport width */
   
   .pricingimg {
@@ -30,14 +43,28 @@
     height: 300px;
     margin-top: 130px;
   }
+
+  @media screen and (max-width: 480px) {
+    .pricingimg  img{
+      transform: scaleX(-1);
+      height:500px;
+      position: relative;
+      margin-top: -100px;
+      margin-left: 500px;
+      margin-right: 500px;
+    }
+
+  }
+
+  @media screen and (max-width: 1366px) {
   .pricingimg  img{
     transform: scaleX(-1);
     height:500px;
     position: relative;
     margin-top: -100px;
-    margin-left: 300px;
-    margin-right: 500px;
-  }
+    margin-left: 1000px;
+    margin-right: 200px;
+  }}
   .Rectangle {
     /* background-image: url("../../assets/maflamhomeimg.png"); */
     height: 400px;
@@ -219,4 +246,11 @@
       font-size: 20px;
       padding: 10px 10px;
     }
+
+    header {
+      background: rgb(73, 176, 236);
+      display: flex;
+      align-items: center;
+      flex: 1 0 auto
+    } 
   } 

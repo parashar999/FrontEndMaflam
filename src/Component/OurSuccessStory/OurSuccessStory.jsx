@@ -26,7 +26,7 @@ const OurSuccessStory = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -25,
+      left: -700,
       behavior: "smooth",
     });
   };
@@ -34,7 +34,7 @@ const OurSuccessStory = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 25,
+      left: 700,
       behavior: "smooth",
     });
   };
