@@ -12,7 +12,7 @@
   .Subcontainer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     width: 100%;
     max-width: 1000px;
     padding: 3rem; 
@@ -26,7 +26,7 @@
     border-radius: 10px;
     width: 100%;
     max-width: 700px; 
-    text-align: center;
+    /* text-align: center; */
     background-color: #ffffff15;
     
   }
@@ -35,12 +35,14 @@
     height: 45.5px;
     position: relative;
     margin-bottom: 10px;
+   
   }
   
   .title {
     color: #fff;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    
   }
   
   .form {
@@ -53,7 +55,7 @@
     padding: 0.75rem;
     /* border: 1px solid #333; */
     border-radius: 5px;
-    /* background-color: #1a1a1a; */
+    background-color: #121d2f;
     /* color: #fff; */
     border: none;
     outline: none;
@@ -131,8 +133,8 @@
 
   .form label {
     color: white; 
+  
     
-    text-align: left; 
     font-size: 16px;
     font-weight: 700;
     line-height: 25.6px;

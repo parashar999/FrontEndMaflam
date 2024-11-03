@@ -31,6 +31,20 @@ const Footer = () => {
       });
   };
 
+  const purchasePolicy =  language === "ar"?"شروط الاستخدام":"Purchase policy";
+  const helpCenter =  language === "ar"?"سياسة الخصوصية":" Help Center";
+  const Community =  language === "ar"?"مركز المساعدة":"Community Guidelines";
+  const PrivacyPolicy =  language === "ar"?"مبادئ مجتمع مفلم":"Privacy Policy";
+  const termsandcondition =  language === "ar"?"سياسة الشراء":" Terms and Conditions";
+  const copyrighttext =  language === "ar"?"جميع الحقوق محفوظة © مفلم 2023":" All rights reserved © Maflam 2023";
+  
+
+
+
+
+
+
+
   useEffect(() => {
     // Call the API when the component loads or when language changes
     FooterGetApi(language === "ar" ? 0 : 1);
@@ -272,23 +286,23 @@ const Footer = () => {
 
         <div className={styles.footerLinks}>
           <div className={styles.footerBottom}>
-            <p>All rights reserved © Maflam 2023</p>
+            <p>{copyrighttext}</p>
           </div>
           <ul className={styles.footerLinks}>
             <li>
-              <a href="/purchaseCancellation">Purchase Policy</a>
+              <a href="/purchaseCancellation">{purchasePolicy}</a>
             </li>
             <li>
-              <a href="#">Help Center</a>
+              <a href="#">{helpCenter}</a>
             </li>
             <li>
-              <a href="/CommunityGuidelines">Community Guidelines</a>
+              <a href="/CommunityGuidelines">{Community}</a>
             </li>
             <li>
-              <a href="/privacypolicy">Privacy Policy</a>
+              <a href="/privacypolicy">{PrivacyPolicy}</a>
             </li>
             <li>
-              <a href="/terms&condition">Terms and Conditions</a>
+              <a href="/terms&condition">{termsandcondition}</a>
             </li>
           </ul>
           

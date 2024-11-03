@@ -145,6 +145,8 @@ import  googlelogin from "./googlelogin.png"
 import  eyeicon from "./eyeicon.png"
 import  successtickmark from "./successtickmark.png"
 import  Arrow from "./Arrow.png"
+import  colorArrow from "./rightNavArrow.png"
+import  leftArrow from "./leftNavArrow.png"
 import  profilecourse from "./profilecourse.png"
 import  profilecoursefirst from "./profilecoursefirst.png"
 
@@ -218,6 +220,8 @@ export const assests = {
   Rectangle42,
   Rectangle43,
   instructiobg,
+  colorArrow,
+  leftArrow,
   film,
   netflix,
   srmg,

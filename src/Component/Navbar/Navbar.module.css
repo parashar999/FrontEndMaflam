@@ -61,22 +61,24 @@
   font-weight: 500;
 }
 .searchContainer {
-  height: 37px;
-  width: 294px;
+  height: 48px;
+  max-width: 294px;
   font-size: 17px;
-  color: #f6fffe !important;
+  color: #F6FFFE !important;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 8px;
-  border-radius: 20px;
+  padding-left: 12px;
+  
+  border-radius: 24px;
   border:1px solid #0ccac4;
  
 }
 .searchContainer input {
   border: none;
   background: transparent;
-  color: #f6fffe !important;
+  color: #F6FFFE !important;
   font-size: 17px;
   outline: none;
 

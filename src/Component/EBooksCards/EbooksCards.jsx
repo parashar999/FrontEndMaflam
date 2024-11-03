@@ -101,11 +101,11 @@ const EbooksCards = () => {
                 <button className={ebookItem.comingSoon ? styles.soonButton1 : styles.downloadButton}>
                   {ebookItem.comingSoon ? "Soon" : ebookItem.buttonText}
                 </button>
-                <svg className={ebookItem.comingSoon ? styles.soonButton : styles.downloadsvg} width="120" height="42" viewBox="0 0 42 42" fill="none">
+                {/* <svg className={ebookItem.comingSoon ? styles.soonButton : styles.downloadsvg} width="120" height="42" viewBox="0 0 42 42" fill="none">
                   <rect width="42" height="42" rx="21" fill="#39FFFB" />
                   <path d="M29.2514 23.0107C28.8282 23.0107 28.5027 23.3362 28.5027 23.7594V26.754C28.5027 27.1771 28.1772 27.5026 27.7541 27.5026H14.2459C13.8228 27.5026 13.4973 27.1771 13.4973 26.754V23.7594C13.4973 23.3362 13.1718 23.0107 12.7486 23.0107C12.3255 23.0107 12 23.3362 12 23.7594V26.754C12 27.9909 13.009 28.9999 14.2459 28.9999H27.7541C28.991 28.9999 30 27.9909 30 26.754V23.7594C30 23.3688 29.6745 23.0107 29.2514 23.0107Z" fill="#061C2B"/>
                   <path d="M15.9726 21.1881L19.4229 24.6383C20.3018 25.5172 21.7339 25.5172 22.6128 24.6383L26.0631 21.1881C26.356 20.8951 26.3886 20.4394 26.0956 20.1139C25.8027 19.7884 25.347 19.7884 25.0215 20.0814L24.9889 20.1139L21.7665 23.3363V11.7486C21.7665 11.3255 21.441 11 21.0178 11C20.5947 11 20.2692 11.3255 20.2692 11.7486V23.3363L17.0468 20.1139C16.7538 19.821 16.2981 19.7884 15.9726 20.0814C15.6471 20.3743 15.6471 20.8626 15.9726 21.1881Z" fill="#061C2B"/>
-                </svg>
+                </svg> */}
               </div>
              
             </div>

@@ -83,72 +83,76 @@ import React, { useContext } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
-
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 import styles from "./LearnAbout.module.css";
+import stylesEng from "./LearnAboutEng.module.css";
+
 
 function LearnAbout() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-
+  const { language} = useContext(LanguageContext);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
-
+  const stylesSelected = language === "ar"?styles:stylesEng;
   const packageData = homeScreenDetails?.packageData || [];
+  const termsText =  language === "ar"?"الشروط والأحكام  ":" terms and condition"
+  const currencyText =  language === "ar"?"ر.س":"SR"
 
   const renderCourseCategory = (categories) => {
     return categories.map((category, index) => (
-      <button key={index} className={styles.rigthcheck}>
-        <FaRegCheckCircle className={styles.rigthclick} /> {category}
+      <button key={index} className={stylesSelected.rigthcheck}>
+        <FaRegCheckCircle className={stylesSelected.rigthclick} /> {category}
       </button>
     ));
   };
 
   return (
     <div>
-      <div className={styles.mainConatiner}>
+      <div className={stylesSelected.mainConatiner}>
         <h1>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Title"}</h2>
         <p>
-          {packageData[1]?.description || "Default description"}
-          <span className={styles.para1}>
-            {packageData[1]?.description || ""}
+          {packageData[1]?.description.substring(0,39) || "Default description"}
+          <span className={stylesSelected.para1}>
+            {packageData[1]?.description.substring(40) || ""}
           </span>
         </p>
 
-        <div className={styles.contentConatiner}>
-          <div className={styles.firstcard}>
+        <div className={stylesSelected.contentConatiner}>
+          <div className={stylesSelected.firstcard}>
             <h4>{packageData[2]?.title || "Default Title"}</h4>
-            <div className={styles.breakline}></div>
+            <div className={stylesSelected.breakline}></div>
             <p>
-              {packageData[3]?.title} <span>SR</span>
+              {packageData[3]?.title} <span>{currencyText}</span>
             </p>
 
-            <button className={styles.subscribebutton}>
+            <button className={stylesSelected.subscribebutton}>
               {packageData[4]?.title || "Subscribe"}
             </button>
             <br></br>
-            <div className={styles.buttondiv}>
+            <div className={stylesSelected.buttondiv}>
               <br></br>
               {renderCourseCategory(packageData[2]?.nameOfCourseCategory || [])}
             </div>
           </div>
 
-          <div className={styles.secondcard}>
+          <div className={stylesSelected.secondcard}>
             <h4>{packageData[5]?.title || "Traditional Education"}</h4>
-            <div className={styles.breakline}></div>
+            <div className={stylesSelected.breakline}></div>
             <p>
-              {packageData[6]?.title} <span>SR</span>
+              {packageData[6]?.title} <span>{currencyText}</span>
             </p>
 
-            <div className={styles.buttondiv}>
+            <div className={stylesSelected.buttondiv}>
               {renderCourseCategory(packageData[5]?.nameOfCourseCategory || [])}
             </div>
           </div>
         </div>
 
-        <p className={styles.para}>
+        <p className={stylesSelected.para}>
           {packageData[7]?.description}
-          <Link to={"/to"} className={styles.link}>
-             Terms & Conditions
+          <Link to={"/terms&condition"} className={stylesSelected.link}>
+          {termsText}
           </Link>
         </p>
       </div>

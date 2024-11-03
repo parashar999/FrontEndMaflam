@@ -84,7 +84,8 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.Subcontainer}>
+        <div className={styles.Subcontainer}>
+       
         <div className={styles.loginBox}>
           <img
             src={assests.logo1}
@@ -149,7 +150,7 @@ const Login = () => {
               />
               <span>&nbsp;{googleLoginText}</span>
             </button>
-            <button className={styles.socialButton}>
+            {/* <button className={styles.socialButton}>
               <img
                 src={assests.applelogin}
                 alt="Apple"
@@ -165,7 +166,7 @@ const Login = () => {
                 className={styles.socialIconImage}
               />
               <span>{facebookLoginText}</span>
-            </button>
+            </button> */}
           </div>
           <a href="#" className={styles.createAccount}>
             {createAccountText}

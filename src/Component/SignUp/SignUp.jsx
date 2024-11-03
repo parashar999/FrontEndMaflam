@@ -1,28 +1,26 @@
 
-
-  
-
-
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Ensure axios is imported
 import styles from "./SignUp.module.css";
+import stylesArabic from "./SignUpArabic.module.css";
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleLogin } from '@react-oauth/google';
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
+
 
 const SignUp = () => {
   const { singupPageContextDetails, loading, error: apiError } = useContext(SingupPageContext);
-
+  const { language} = useContext(LanguageContext);
   if (loading) return <p>Loading...</p>; // Handle loading state
   if (apiError) return <p>Error loading data</p>; // Handle error state
-
+  
+  const stylesSelected = language === "ar"?stylesArabic:styles;
   // Extract relevant data from the context API
   const signUpData = singupPageContextDetails?.signUpData || [];
-
   const welcomeTitle = signUpData[0]?.title || "Welcome";
   const subtitleText = signUpData[0]?.description || "Start your journey now and learn filmmaking.";
   const fullNameLabel = signUpData[1]?.title || "Full name";
@@ -112,9 +110,9 @@ const SignUp = () => {
     };
   
     return (
-      <div className={styles.socialLogin}>
-      <button className={styles.socialButton}>
-        <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
+      <div className={stylesSelected.socialLogin}>
+      <button className={stylesSelected.socialButton}>
+        <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
         <span>&nbsp;{googleLoginText}</span>
       </button>
       {/* <button className={styles.socialButton}>
@@ -181,18 +179,18 @@ const SignUp = () => {
 
   }
   return (
-    <div className={styles.container}>
-      <div className={styles.formWrapper}>
-        <img src={assests.logo1} alt="resetlogo" className={styles.resetlogo} />
-        <h3 className={styles.welcome}>{welcomeTitle}</h3>
-        <p className={styles.subtitle}>{subtitleText}</p>
+    <div className={stylesSelected.container}>
+      <div className={stylesSelected.formWrapper}>
+        <img src={assests.logo1} alt="resetlogo" className={stylesSelected.resetlogo} />
+        <h3 className={stylesSelected.welcome}>{welcomeTitle}</h3>
+        <p className={stylesSelected.subtitle}>{subtitleText}</p>
 
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={stylesSelected.form} onSubmit={handleSubmit}>
           <label htmlFor="Full Name">{fullNameLabel}</label>
           <input
             type="text"
             placeholder={fullNameLabel}
-            className={styles.input}
+            className={stylesSelected.input}
             value={usernameInEng}
             onChange={(e) => setUsername(e.target.value)}
           />
@@ -201,62 +199,63 @@ const SignUp = () => {
           <input
             type="email"
             placeholder={emailLabel}
-            className={styles.input}
+            className={stylesSelected.input}
             value={emailId}
             onChange={(e) => setEmailId(e.target.value)}
           />
 
           <label htmlFor="password">{passwordLabel}</label>
-          <div className={styles.passwordContainer}>
+          <div className={stylesSelected.passwordContainer}>
             <input
               type={isPasswordVisible ? "text" : "password"}
               placeholder={passwordLabel}
-              className={styles.input}
+              className={stylesSelected.input}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div
-              className={styles.eyeIcon}
+            {/* <div
+              className={stylesSelected.eyeIcon}
               onClick={togglePasswordVisibility}
               role="button"
               aria-label="Toggle password visibility"
-            />
+            /> */}
           </div>
 
           <label htmlFor="Confirm Password">{confirmPasswordLabel}</label>
-          <div className={styles.passwordContainer}>
-            <input
-              type={isPasswordVisible ? "text" : "password"}
-              placeholder={confirmPasswordLabel}
-              className={styles.input}
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            <div
-              className={styles.eyeIcon}
+          <div className={stylesSelected.passwordContainer}>
+          {/* <div
+              className={stylesSelected.eyeIcon}
               onClick={togglePasswordVisibility}
               role="button"
               aria-label="Toggle password visibility"
+            /> */}
+            <input
+              type={isPasswordVisible ? "text" : "password"}
+              placeholder={confirmPasswordLabel}
+              className={stylesSelected.input}
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
+            
           </div>
 
-          <label htmlFor="Phone">Phone</label>
+          {/* <label htmlFor="Phone">Phone</label>
           <input
             type="text"
             placeholder="Phone"
             className={styles.input}
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-          />
+          /> */}
 
-          <div className={styles.dobWrapper}>
+          <div className={stylesSelected.dobWrapper}>
             <label htmlFor="dob">{dobLabel}</label>
-            <div className={styles.dobInputs}>
+            <div className={stylesSelected.dobInputs}>
             <select
                 name="year"
                 value={dateofBirth.year}
                 onChange={handleDOBChange}
-                className={styles.dobSelect}
+                className={stylesSelected.dobSelect}
               >
                 <option value="">Year</option>
                 {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (

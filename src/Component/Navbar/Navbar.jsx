@@ -27,7 +27,8 @@ import { FaRegUser } from "react-icons/fa";
 import { PiCertificateBold } from "react-icons/pi";
 import { CiFlag1 } from "react-icons/ci";
 import auth from "../../Auth/Auth.js";
-
+import RightNavArrow from "../../assets/rightNavArrow.png";
+import LeftNavArrow from "../../assets/leftNavArrow.png";
 const Navbar = () => {
   const userDetails = auth.getAuthData();
   console.log("from Navbar", userDetails);
@@ -38,11 +39,12 @@ const Navbar = () => {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false); // Profile submenu state
   const navigate = useNavigate();
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
-
+  
   const toggleDropdown = (dropdownName) => {
     setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
   };
 
+  
   const toggleHamburger = () => {
     setIsHamburgerOpen(!isHamburgerOpen);
   };
@@ -51,7 +53,14 @@ const Navbar = () => {
     setIsProfileMenuOpen(!isProfileMenuOpen);
   };
 
-  const FooterGetApi = (lang) => {
+   const placeHolderTitle = language === "ar" ? "ابحث عن دورات تدريبية...|":"Search for courses...!";
+   
+   const arrow = language === "ar"?
+   <img src={loginarrow} alt="" style={{marginRight:'10px'}} /> 
+   :<img src={loginarrow} alt="" style={{marginRight:'10px'}} />
+
+  
+   const FooterGetApi = (lang) => {
     axios
       // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
       // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
@@ -140,7 +149,7 @@ const Navbar = () => {
         ))}
       </div>
       <div className={styles.searchContainer}>
-        <input type="text" placeholder="Search for courses...!" />
+        <input type="text" placeholder= {placeHolderTitle} />
         <img src={assests.Magnifine} alt="Search Icon" />
       </div>
       {/* <div className={styles.searchContainerGlobe}>
@@ -198,6 +207,9 @@ const Navbar = () => {
           </div>
         ) : (
           <>
+
+
+          
             {navItems1.find((item) => item.createAccount) && (
               
               <a 
@@ -205,11 +217,10 @@ const Navbar = () => {
                 className={`${styles.signupButton} ${styles.navButton}`}
                 onClick={() => navigate("/signUp")}
               >
-                
                 {
                   navItems1.find((item) => item.createAccount).createAccount.name
                 }
-                <img src={loginarrow} alt="" style={{marginRight:'10px'}} /> 
+                
               </a>
             )}
             {navItems1.find((item) => item.logIn) && (
@@ -218,7 +229,12 @@ const Navbar = () => {
                 className={`${styles.loginButton} ${styles.navButton}`}
                 onClick={() => navigate("/login")}
               >
+                <span style={{marginLeft:"20px"}}>
+                {arrow}
+                </span>
+               
                 {navItems1.find((item) => item.logIn).logIn.name}
+                
               </a>
             )}
           </>

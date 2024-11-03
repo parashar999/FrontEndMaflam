@@ -1,17 +1,19 @@
 
-
-
-
-
-
 import React, { useContext } from 'react';
 import styles from "./Ourservices.module.css";
+import stylesEng from "./OurservicesEnglish.module.css";
 import { assests } from '../../assets/assests';
 import { HomePageContext } from "../../store/HomePageContext.jsx"; // Import the context
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
+
 
 function Ourservices() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-
+  const { language} = useContext(LanguageContext);
+  console.log(language);
+    const stylesSelected = language === "ar"?styles:stylesEng;
+    const quoteimage = language === "ar"?assests.quotesArabic:assests.quotes;
+  
   if (loading) return <p>Loading...</p>; // Handle loading state
   if (error) return <p>Error loading data</p>; // Handle error state
 
@@ -32,33 +34,33 @@ function Ourservices() {
 
   return (
     <>
-      <div className={styles.OurservicesContainer}>
-        <div className={styles.text}>
-          <div className={styles.ourservicesvector}>
+      <div className={stylesSelected.OurservicesContainer}>
+        <div className={stylesSelected.text}>
+          <div className={stylesSelected.ourservicesvector}>
             <p>{title1}</p>
           </div>
 
-          <div className={styles.text2}>
-            <div className={styles.flexx}>
+          <div className={stylesSelected.text2}>
+            <div className={stylesSelected.flexx}>
               {/* <h1>+550</h1> */}
               <h1>{ title2}</h1>
               <p>{description1}</p>
             </div>
-            <div className={styles.flexx}>
+            <div className={stylesSelected.flexx}>
               {/* <h1>+600</h1> */}
               <h1>{ title3}</h1>
               <p>{description2}</p>
             </div>
-            <div className={styles.flexx}>
+            <div className={stylesSelected.flexx}>
               {/* <h1>+9</h1> */}
               <h1>{ title4}</h1>
               <p>{description3}</p>
             </div>
           </div>
 
-          <div className={styles.frane64}>
-            <img src={assests.quotesArabic} className={styles.quotesIcon} alt="Quotes" />
-            <p className={styles.para}>{testimonial}</p>
+          <div className={stylesSelected.frane64}>
+            <img src={quoteimage} className={stylesSelected.quotesIcon} alt="Quotes" />
+            <p className={stylesSelected.para}>{testimonial}</p>
           </div>
         </div>
       </div>

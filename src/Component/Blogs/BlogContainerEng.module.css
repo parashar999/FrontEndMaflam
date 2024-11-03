@@ -42,8 +42,6 @@
     margin-top: 130px;
   }
   .pricingimg  img{
-    opacity: 0.9;
-    transform: scaleX(-1);
     height:540px;
     position: relative;
     top: 20px;
@@ -52,11 +50,11 @@
   .contentContainer{
     position: relative ;
     top: -280px;
-    right: 250px;
-    text-align: right;
+    left: 250px;
+    text-align: left;
   }
   .contentContainer h2 {
-    width: 350px;
+    width:600px;
     position: relative;
     color: #EBF5F4;
     font-family: "Noto Kufi Arabic";
@@ -66,7 +64,7 @@
     line-height: 150%; /* 54px */
   }
   .contentContainer p {
-    width: 440px;
+    width:600px;
     margin-top: 40px;
     color: #FFF;
     position: relative;
@@ -118,3 +116,4 @@
       font-size: larger;
     }
   }
+  
