@@ -14,7 +14,6 @@
   margin: 0 auto; /* Center the Fundamental container */
   margin-top: 125px;
   margin-bottom: 100px;
-  height: auto;
 }
 
 .secondcontainer {
@@ -123,6 +122,8 @@ padding-top: 100px;
     .imgcontainer
     {
       width: 549px;
+      left:44%;
+      top:-110%;
     }
 }
 
@@ -142,6 +143,7 @@ padding-top: 100px;
     top: 0px;
     position: relative;
     left: 40px;
+    top: -95%;
   }
   .ctn
   {
