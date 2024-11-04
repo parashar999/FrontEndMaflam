@@ -15,24 +15,17 @@ const LearnMaflam = () => {
 
   return (
     <div className={styles.coursecontainermain}>
-    <div className={styles.loverlay}></div>
+      <div className={styles.loverlay}></div>
       <div className={styles.coursesContainer}>
         <span className={styles.learnMaflamTitle}>
-        <h2>{title}</h2>
+          <h2>{title}</h2>
         </span>
-        
+
         <div className={styles.LearnMaflam}>
-          {videoUrl && <video src={videoUrl} 
-          loop
-          autoPlay
-          autobuffer="true"
-          preload="true"
-          tabIndex="0"
-          controls
-          />}
+          {videoUrl && <video src={videoUrl} controls unmuted />}
         </div>
         <div className={styles.boverlay}></div>
-    </div>
+      </div>
     </div>
   );
 };

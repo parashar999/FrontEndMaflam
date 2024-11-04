@@ -234,7 +234,7 @@ const Navbar = () => {
               )}
               {navItems1.find((item) => item.logIn) && (
                 <a
-                  href="#login"
+                  href=""
                   className={`${styles.loginButton} ${styles.navButton}`}
                   onClick={() => navigate("/login")}
                 >

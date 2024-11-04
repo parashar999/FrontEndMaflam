@@ -16,13 +16,14 @@ const Footer = () => {
   const FooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
     // axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
-    axios.get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
-    // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
-    
+    axios
+      .get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
+      // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
+
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
       .then((response) => {
-        setFooterColumnData1(response.data); 
-        setFooterSubColumnData1(response.data[1]);// Set the fetched data in state
+        setFooterColumnData1(response.data);
+        setFooterSubColumnData1(response.data[1]); // Set the fetched data in state
         console.log("Footer data fetched successfully:", response.data);
         console.log("SubFooter data fetched successfully:", response.data[1]);
       })
@@ -31,19 +32,19 @@ const Footer = () => {
       });
   };
 
-  const purchasePolicy =  language === "ar"?"شروط الاستخدام":"Purchase policy";
-  const helpCenter =  language === "ar"?"سياسة الخصوصية":" Help Center";
-  const Community =  language === "ar"?"مركز المساعدة":"Community Guidelines";
-  const PrivacyPolicy =  language === "ar"?"مبادئ مجتمع مفلم":"Privacy Policy";
-  const termsandcondition =  language === "ar"?"سياسة الشراء":" Terms and Conditions";
-  const copyrighttext =  language === "ar"?"جميع الحقوق محفوظة © مفلم 2023":" All rights reserved © Maflam 2023";
-  
-
-
-
-
-
-
+  const purchasePolicy =
+    language === "ar" ? "شروط الاستخدام" : "Purchase policy";
+  const helpCenter = language === "ar" ? "سياسة الخصوصية" : " Help Center";
+  const Community =
+    language === "ar" ? "مركز المساعدة" : "Community Guidelines";
+  const PrivacyPolicy =
+    language === "ar" ? "مبادئ مجتمع مفلم" : "Privacy Policy";
+  const termsandcondition =
+    language === "ar" ? "سياسة الشراء" : " Terms and Conditions";
+  const copyrighttext =
+    language === "ar"
+      ? "جميع الحقوق محفوظة © مفلم 2023"
+      : " All rights reserved © Maflam 2023";
 
   useEffect(() => {
     // Call the API when the component loads or when language changes
@@ -281,9 +282,6 @@ const Footer = () => {
           <hr className={styles.footerHr} />
         </div>
 
-
-
-
         <div className={styles.footerLinks}>
           <div className={styles.footerBottom}>
             <p>{copyrighttext}</p>
@@ -305,14 +303,7 @@ const Footer = () => {
               <a href="/terms&condition">{termsandcondition}</a>
             </li>
           </ul>
-          
         </div>
-
-       
-
-
-
-
       </div>
     </footer>
   );

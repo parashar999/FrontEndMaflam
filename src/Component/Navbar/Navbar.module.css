@@ -146,6 +146,7 @@
   padding: 5px;
   text-decoration: none;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .submenu:hover {
@@ -305,6 +306,9 @@ background: rgba(26, 34, 40, 1.0);
   .signupButton {
     font-size: 17px;
     padding: 8px 20px;
+  }
+  .loginButton{
+    cursor: pointer;
   }
   .searchContainerGlobe img{
     display: none;
