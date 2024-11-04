@@ -13,15 +13,14 @@
     background-size: cover;
     height: 900px;
     position: relative;
-    max-width: 1950px;
-    
+    max-width: 1900px;    
   }
   
   .carouselcontainer a {
+    display: block;
     color: #fff;
     text-decoration: none;
-    padding-left: 820px;
-    padding-right: 860px;
+
     text-align: center;
     font-size: 30px;
   }
@@ -34,28 +33,29 @@
     padding: 20px 0px;
   }
   
-  .coverlay {
-    position: absolute;
-    
-    bottom: 0;
-    width: 300px;
-    right: 0px;
-    height: 900px;
-    filter: blur(50px);
-    background: var(--Neutral-Website-Bakground---Dark, #030B11);
-    opacity: 1;
-    z-index: 1; /* Make sure overlay is above the video */
-  }
-  .croverlay {
-    position: absolute;
-    left: 0px;
-    width: 300px;
-    height: 900px;
-    filter: blur(50px);
-    background: var(--Neutral-Website-Bakground---Dark, #030B11);
-    opacity: 1;
-    z-index: 1; /* Make sure overlay is above the video */
-  }
+.coverlay {
+  position: absolute;
+  
+  bottom: 0px;
+  width: 250px;
+  right: -20px;
+  height: 900px;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 1;
+  z-index: 100; /* Make sure overlay is above the video */
+}
+.croverlay {
+  position: absolute;
+  left: -10px;
+  bottom: 0px;
+  width: 250px;
+  height: 500px;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 1;
+  z-index: 100; /* Make sure overlay is above the video */
+}
   .sliderContainer {
     width: 100%;
     overflow-x: auto;
@@ -83,6 +83,7 @@
     height: 850px;
     color: #fff;
     width: 340px;
+    z-index: 10;
   
   }
   .logo89 {
@@ -145,10 +146,34 @@ flex-shrink: 0; */
     justify-content: center;
   }
   
-  @media (max-width: 768px) {
-    .card {
-      flex: 0 0 100%;
-      width: 275px;
-    }
+@media (max-width:1500px)
+{
+  .carouselcontainer{
+
+      zoom: 0.8;
   }
-  
+}
+
+@media (max-width:1280px)
+{
+  .carouselcontainer{
+
+      zoom: 0.6;
+  }
+}
+
+@media (max-width:800px)
+{
+  .carouselcontainer
+  {
+    width: 100vw;
+  }
+  .coverlay
+  {
+    display: none;
+  }
+  .croverlay
+  {
+    display: none;
+  }
+}

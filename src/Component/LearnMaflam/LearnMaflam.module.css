@@ -51,6 +51,8 @@
 
   
 }
+
+
 .LearnMaflam{
   margin-top: 20px;
 }
@@ -97,5 +99,22 @@
     width: 100%; /* Full width for mobile screens */
     height: auto;
     margin-top: 20px; /* Reduce top margin for mobile */
+  }
+}
+
+@media (max-width:1220px)
+{
+  
+  .learnMaflamTitle
+  {
+    zoom: 0.8
+  }
+}
+
+@media (max-width:768px)
+{
+  .learnMaflamTitle
+  {
+    zoom: 0.5;
   }
 }
