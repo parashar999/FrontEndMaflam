@@ -14,7 +14,8 @@ export const PurchaseCancellationProvider = ({ children }) => {
   const fetchpurchaseCancellationDetails = async (langParam) => {
     try {
       const response = await axios.get(
-        `https://backend.maflam.com/maflam/get-policy?lang=${langParam}`
+        `https://backend.maflam.com/maflam/get-purchases-cancellation-policy?lang=${langParam}`
+      
       );
       console.log("API Response for Purchase Cancellition: ", response.data);
 

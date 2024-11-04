@@ -144,12 +144,14 @@ padding-top: 100px;
     position: relative;
     left: 40px;
     top: -95%;
+    
   }
   .ctn
   {
       position: relative;
       top: -100px;
   }
+  
   .secondcontainer
   {
     display: flex;
@@ -164,17 +166,39 @@ padding-top: 100px;
 }
 
 @media (max-width:550px){
-  .ctn
+  .subscribe
   {
-    top: -200px;
-    zoom: 0.7;
-  }   
-  .content
-  {
-    zoom: 0.7;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
   }
   .imgcontainer
   {
-    zoom: 0.7;
+    position: relative;
+    left: 20px;
+    top: 0;
+    width: 95%;
+    
+  }
+  .ctn
+  {
+      position: relative;
+      top: -100px;
+  }
+  
+  .secondcontainer
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkicobuttun
+  {
+    width: 150px;
   }
 }
+

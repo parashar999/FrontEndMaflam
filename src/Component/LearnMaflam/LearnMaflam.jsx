@@ -22,7 +22,14 @@ const LearnMaflam = () => {
         </span>
         
         <div className={styles.LearnMaflam}>
-          {videoUrl && <video src={videoUrl} autoPlay loop controls />}
+          {videoUrl && <video src={videoUrl} 
+          loop
+          autoPlay
+          autobuffer="true"
+          preload="true"
+          tabIndex="0"
+          controls
+          />}
         </div>
         <div className={styles.boverlay}></div>
     </div>
