@@ -47,8 +47,10 @@ const Home = () => {
           <SuccessPartners />
           <LearnAbout />
           <MaflamInstructors />
+          <div className={Styles.ebook}>
           <HomeScreenCarousel />
           <BlogContainer />
+          </div>
           <HomeCommunityCarousel />
           <CarouselCommunity />
           <Faqs />
