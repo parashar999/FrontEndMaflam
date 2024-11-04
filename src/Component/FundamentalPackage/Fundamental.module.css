@@ -1,16 +1,19 @@
-
-
-
+.parentfundamental
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 .Fundamental {
   background-color: #030b11;
   height: auto;
+  width: 100vw;
   max-width: 1500px; /* Set a max-width for the container */
   margin: 0 auto; /* Center the Fundamental container */
   margin-top: 125px;
   margin-bottom: 100px;
-  height: auto;
 }
 
 .secondcontainer {
@@ -18,8 +21,8 @@
 }
 
 .content {
-  width: 450px;
-  /* text-align: left; */
+  width: 610px;
+  text-align: left;
   margin:50px;
   margin-bottom: 30px;
 }
@@ -27,7 +30,7 @@
 .content p {
   color: #fff;
   line-height: 45px;
-  /* text-align: left; */
+  text-align: Right;
 padding-top: 100px;
   font-size: 36px;
   font-weight: 700;
@@ -45,23 +48,18 @@ padding-top: 100px;
   padding-right: 60px;
   max-width: 1427.255px;
   border-radius: 20px;
+  position: relative;
 }
 .imgcontainer  {
-    height: 1058px;
+  width: 549px;
     position: absolute;
-    left: 10%;
-    top: -320px;
-}
+    right: 0px;
+    top: -400px;
+  }
 
-.imghead{
-  height: 1058px;
-  /* margin-left: 50px; */
-
-}
 .ctn {
  
   height: auto;
-  width: 55%;
   margin-left: 50px;
 
   
@@ -110,6 +108,7 @@ padding-top: 100px;
 }
 
 .item span {
+  margin-top: 10px;
   font-size: 15px;
   padding-left: 3px;
 }
@@ -120,23 +119,63 @@ padding-top: 100px;
     {
       zoom: 0.8;
     }
-    .imghead
+    .imgcontainer
     {
-      zoom: 0.9;
+      width: 549px;
+      right: 55%;
+      top: -95%;
+    
     }
-
 }
 
-@media (max-width:1280px)
+@media (max-width:1200px)
 {
-    .Fundamental
-    {
-      zoom: 0.5;
-    }
-    .imghead
-    {
+  .subscribe
+  {
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .imgcontainer
+  {
+    top: 0px;
+    position: relative;
+    right: 40%;
+    top: -95%;
+  }
+  .ctn
+  {
       position: relative;
-      top: -10px;
-      zoom: 1;
-    }
+      top: -100px;
+  }
+  .secondcontainer
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkicobuttun
+  {
+    width: 150px;
+  }
+}
+
+@media (max-width:550px){
+  .ctn
+  {
+    top: -200px;
+    zoom: 0.7;
+  }   
+  .content
+  {
+    zoom: 0.7;
+  }
+  .imgcontainer
+  {
+    zoom: 0.7;
+  }
 }
