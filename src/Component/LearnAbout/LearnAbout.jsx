@@ -87,16 +87,16 @@ import { LanguageContext } from "../../Component/LanguageContext/LanguageContext
 import styles from "./LearnAbout.module.css";
 import stylesEng from "./LearnAboutEng.module.css";
 
-
 function LearnAbout() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-  const { language} = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
-  const stylesSelected = language === "ar"?styles:stylesEng;
+  const stylesSelected = language === "ar" ? styles : stylesEng;
   const packageData = homeScreenDetails?.packageData || [];
-  const termsText =  language === "ar"?"الشروط والأحكام  ":" terms and condition"
-  const currencyText =  language === "ar"?"ر.س":"SR"
+  const termsText =
+    language === "ar" ? "الشروط والأحكام  " : " terms and condition";
+  const currencyText = language === "ar" ? "ر.س" : "SR";
 
   const renderCourseCategory = (categories) => {
     return categories.map((category, index) => (
@@ -112,7 +112,8 @@ function LearnAbout() {
         <h1>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Title"}</h2>
         <p>
-          {packageData[1]?.description.substring(0,39) || "Default description"}
+          {packageData[1]?.description.substring(0, 39) ||
+            "Default description"}
           <span className={stylesSelected.para1}>
             {packageData[1]?.description.substring(40) || ""}
           </span>
@@ -152,7 +153,7 @@ function LearnAbout() {
         <p className={stylesSelected.para}>
           {packageData[7]?.description}
           <Link to={"/terms&condition"} className={stylesSelected.link}>
-          {termsText}
+            {termsText}
           </Link>
         </p>
       </div>

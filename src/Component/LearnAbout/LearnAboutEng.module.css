@@ -36,14 +36,10 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 text-align: center;
-
-/* Headlines/Headline 1 */
 font-family: "Noto Kufi Arabic";
 font-style: normal;
 font-weight: 700;
-line-height: 150%; /* 97.5px */
-
-
+line-height: 150%;
 font-family: "Noto Kufi Arabic";
 font-size: 40px;
 font-style: normal;
