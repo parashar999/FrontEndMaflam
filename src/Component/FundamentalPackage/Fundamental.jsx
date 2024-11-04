@@ -95,7 +95,7 @@ function Fundamental() {
         <div className={stylesSelected.subscribe}>
           <div >
             {/* Use dynamic imageUrl from the context */}
-            <div className={stylesSelected.imghead}>
+            <div className={stylesSelected.imgcontainer}>
               <img src={imageUrl} alt="Filmmaking Package" className={styles.imgcontainer}  />
             </div>
           </div>
