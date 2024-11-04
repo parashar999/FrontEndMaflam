@@ -73,7 +73,7 @@
   text-align: center;
   border-radius: 5px;
   height: 483px;
-  right: 30%;
+  left: 25%;
   min-width:609px !important;
   color: #fff;
   margin-top: 10px;
@@ -85,7 +85,7 @@
   margin-top: 50px;
   position: relative;
   height: 483px;
-  right: 25%;
+  left: 20%;
   /* Full width of the card */
   border-radius: 5px; /* Optional: To match the card's border radius */
 }
@@ -154,6 +154,6 @@
   }
   .carouselCard
   {
-    right: 70%;
+    left: 70%;
   }
 }

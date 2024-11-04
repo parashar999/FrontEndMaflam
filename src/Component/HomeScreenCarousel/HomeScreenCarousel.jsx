@@ -40,7 +40,7 @@ const HomeScreenCarousel = () => {
 
   return (
     <div className={styles.carouselcontainer}>
-      <Link className={styles.linking} to="/ebooks">{eBookletData.title}</Link>
+      <h2><Link className={styles.linking} to="/ebooks">{eBookletData.title}</Link></h2>
       <div className={styles.carousel}>
         {/* Left Arrow */}
         {/* <button className={styles.arrowLeft} onClick={scrollLeft}>
@@ -76,7 +76,7 @@ const HomeScreenCarousel = () => {
                   // autoPlay
                   muted
                   loop
-                  controls
+                 
                   playsInline
                   className={styles.video} // Apply styling to video
                   alt={`Ebook Video 1`}
@@ -92,7 +92,7 @@ const HomeScreenCarousel = () => {
                   // autoPlay
                   muted
                   loop
-                  controls
+                 
                   playsInline
                   className={styles.video} // Apply styling to video
                   alt={`Ebook Video 1`}
@@ -108,7 +108,7 @@ const HomeScreenCarousel = () => {
                   // autoPlay
                   muted
                   loop
-                  controls
+               
                   playsInline
                   className={styles.video} // Apply styling to video
                   alt={`Ebook Video 1`}

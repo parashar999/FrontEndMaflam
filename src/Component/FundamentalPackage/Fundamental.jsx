@@ -57,8 +57,8 @@
 
 
 import { useContext } from "react";
-import styles from "./Fundamental.module.css";
-import stylesEnglish from "./FundamentalEnglish.module.css";
+import stylesArabic from "./Fundamental.module.css";
+import styles from "./FundamentalEnglish.module.css";
 import { CiCircleCheck } from "react-icons/ci";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
@@ -69,7 +69,7 @@ function Fundamental() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language} = useContext(LanguageContext);
   console.log(language);
-    const stylesSelected = language === "ar"?styles:stylesEnglish;
+    const stylesSelected = language === "ar"?stylesArabic:styles;
 
 
   if (loading) return <p>Loading...</p>;
@@ -86,16 +86,17 @@ function Fundamental() {
   const price = sectionData[2]?.title || "2.200 SAR";
 
   return (
+    <div className="parentfundamental">
     <div className={stylesSelected.Fundamental}>
       <div className={stylesSelected.secondcontainer}>
         <div className={stylesSelected.content}>
           <p>{title}</p>
         </div>
         <div className={stylesSelected.subscribe}>
-          <div className={stylesSelected.imgcontainer}>
+          <div >
             {/* Use dynamic imageUrl from the context */}
             <div className={stylesSelected.imghead}>
-              <img src={imageUrl} alt="Filmmaking Package" />
+              <img src={imageUrl} alt="Filmmaking Package" className={styles.imgcontainer}  />
             </div>
           </div>
           <div className={stylesSelected.ctn}>
@@ -115,7 +116,43 @@ function Fundamental() {
         </div>
       </div>
     </div>
+    </div>
   );
+
+
+
+
+  // return (
+  //   <div className={stylesSelected.Fundamental}>
+  //     <div className={stylesSelected.secondcontainer}>
+  //       <div className={stylesSelected.content}>
+  //         <p>{title}</p>
+  //       </div>
+  //       <div className={stylesSelected.subscribe}>
+  //         <div className={stylesSelected.imgcontainer}>
+  //           {/* Use dynamic imageUrl from the context */}
+  //           <div className={stylesSelected.imghead}>
+  //             <img src={imageUrl} alt="Filmmaking Package" />
+  //           </div>
+  //         </div>
+  //         <div className={stylesSelected.ctn}>
+  //             {categories.map((item, index) => (
+  //               <div key={index} className={stylesSelected.item}>
+  //                 <CiCircleCheck className={stylesSelected.checkico} />
+  //                 <p>{item}</p>
+  //               </div>
+  //             ))}
+  //             <div className={stylesSelected.item}>
+  //               <button className={stylesSelected.checkicobuttun}>{subscribeText}</button>
+  //               <p>
+  //                 <b>{price}</b>
+  //               </p>
+  //             </div>
+  //           </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default Fundamental;
