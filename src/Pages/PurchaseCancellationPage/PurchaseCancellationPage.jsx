@@ -6,20 +6,30 @@ import {
   HomePageContext,
   HomePageProvider,
 } from "../../store/HomePageContext.jsx";
-import { PurchaseCancellationContext, PurchaseCancellationProvider } from "../../store/PurchaseCancellationContext.jsx";
+import {
+  PurchaseCancellationContext,
+  PurchaseCancellationProvider,
+} from "../../store/PurchaseCancellationContext.jsx";
 import PurchaseCancellation from "../../Component/PurchaseCancellation/PurchaseCancellation.jsx";
 
-const PurchaseCancellationPage  = () => {
-  
-  const { homeScreenDetails, loading: homeLoading, error: homeError } = useContext(HomePageContext);
+const PurchaseCancellationPage = () => {
+  const {
+    homeScreenDetails,
+    loading: homeLoading,
+    error: homeError,
+  } = useContext(HomePageContext);
 
   useEffect(() => {
     if (homeScreenDetails) {
       console.log("Home Screen Details:", homeScreenDetails);
     }
   }, [homeScreenDetails]);
-  
-  const { purchaseCancellationDetails, loading: aboutLoading, error: aboutError } = useContext(PurchaseCancellationContext);
+
+  const {
+    purchaseCancellationDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(PurchaseCancellationContext);
 
   useEffect(() => {
     if (purchaseCancellationDetails) {
@@ -30,16 +40,16 @@ const PurchaseCancellationPage  = () => {
   return (
     <div>
       <LanguageProvider>
-       <HomePageProvider> 
-        <PurchaseCancellationProvider>        
-         <Navbar></Navbar>
-         <PurchaseCancellation></PurchaseCancellation>
-         <Footer></Footer>
-         </PurchaseCancellationProvider>
-       </HomePageProvider>
+        <HomePageProvider>
+          <PurchaseCancellationProvider>
+            <Navbar></Navbar>
+            <PurchaseCancellation></PurchaseCancellation>
+            <Footer></Footer>
+          </PurchaseCancellationProvider>
+        </HomePageProvider>
       </LanguageProvider>
     </div>
   );
 };
 
-export default PurchaseCancellationPage ;
+export default PurchaseCancellationPage;

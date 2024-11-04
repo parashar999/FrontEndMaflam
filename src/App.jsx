@@ -232,14 +232,18 @@ const App = () => {
         }
       />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
-      <Route path="/privacypolicy" element={
-        <LanguageProvider>
-          <HomePageProvider>
-            <PrivacyPolicyProvider>
-        <PrivacyPolicy />
-        </PrivacyPolicyProvider>
-        </HomePageProvider>
-        </LanguageProvider>} />
+      <Route
+        path="/privacypolicy"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <PrivacyPolicyProvider>
+                <PrivacyPolicy />
+              </PrivacyPolicyProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/faqs" element={<FaqPage />} />
       <Route
         path="/checkout"
