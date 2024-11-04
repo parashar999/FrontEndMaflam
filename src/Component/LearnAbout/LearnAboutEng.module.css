@@ -36,14 +36,10 @@ background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 text-align: center;
-
-/* Headlines/Headline 1 */
 font-family: "Noto Kufi Arabic";
 font-style: normal;
 font-weight: 700;
-line-height: 150%; /* 97.5px */
-
-
+line-height: 150%;
 font-family: "Noto Kufi Arabic";
 font-size: 40px;
 font-style: normal;
@@ -99,6 +95,7 @@ color: #EBF5F4;
   /* border: 2px solid red; */
   margin: 10px 200px;   
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin: 0px 0px;
@@ -238,7 +235,6 @@ height: 20px;
 
 
 .secondcard{
-  opacity: 0.5;
   height: 450px;
   border: 1px solid #00FFFF;
   width: 400px;
@@ -347,42 +343,30 @@ line-height: 180%; /* 25.2px */
   line-height: 180%;
   text-decoration: none;
 }
-@media (max-width: 768px){
-  .mainConatiner h1{
-    font-size: 30px;
-  }
-  .mainConatiner h2{
-    font-size: 20px;
-  }
-  .mainConatiner h3{
-    font-size: 15px;
-  }
-  .contentConatiner {
-    height: auto;
-    /* border: 2px solid red; */
-    margin: 10px 200px;   
-    flex-direction: column;
-  
-    gap: 20px;
-    margin: 0px 0px;
-  
-  }
-  .firstcard{
-    height: 430px;
-    width: 350px;
-    border-radius: 10px;
-    margin:10px auto 10px auto;
-   
-    
-  }
-  .secondcard{
-    height: 350px;
-    width: 350px;
-    margin:20px auto 10px auto;
-    border-radius: 10px;
-   
+
+@media (max-width:1600px)
+{
+  .mainConatiner
+  {
+    zoom: 0.9;
   }
 }
 
-
-
+@media (max-width:1200px)
+{
+  .mainConatiner
+  {
+    margin: 40px;
+    zoom: 0.7;
+  }
+  .contentConatiner
+  {
+    margin-bottom: 40px;
+  }
+  .firstcard , .secondcard
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+}
