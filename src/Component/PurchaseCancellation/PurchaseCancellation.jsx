@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
-import styles from './PurchaseCancellation.module.css';
-import { PurchaseCancellationContext } from '../../store/PurchaseCancellationContext';
+import React, { useContext } from "react";
+import styles from "./PurchaseCancellation.module.css";
+import { PurchaseCancellationContext } from "../../store/PurchaseCancellationContext";
 
 const PurchaseCancellation = () => {
-  const { purchaseCancellationDetails, loading, error } = useContext(PurchaseCancellationContext); // Access the context
+  const { purchaseCancellationDetails, loading, error } = useContext(
+    PurchaseCancellationContext
+  ); // Access the context
 
   // Handle loading and error states
   if (loading) {
@@ -25,7 +27,9 @@ const PurchaseCancellation = () => {
             <h1 className={styles.title}>{terms[0].title}</h1>
 
             {term.description?.map((desc, idx) => (
-              <p key={idx} className={styles.description}>{desc}</p>
+              <p key={idx} className={styles.description}>
+                {desc}
+              </p>
             ))}
 
             {term.sections ? (
@@ -34,7 +38,9 @@ const PurchaseCancellation = () => {
                   <h2 className={styles.sectionTitle}>{section.title}</h2>
                   <ul className={styles.list}>
                     {section.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className={styles.listItem}>{item}</li>
+                      <li key={itemIdx} className={styles.listItem}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
