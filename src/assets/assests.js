@@ -57,6 +57,7 @@ import variousCourse6 from "./variousCourse6.png";
 import variousCourse7 from "./variousCourse7.png";
 import variousCourse8 from "./variousCourse8.png";
 import Visa from "./Visa.png";
+import filter from "./filter.png";
 import MasterCard from "./MasterCard.png";
 import Mada from "./Mada.png";
 import Checkoutbg from "./Checkoutbg.png";
@@ -198,6 +199,7 @@ export const assests = {
   caraImg,
   Popular1,
   Popular2,
+  filter,
   logo1,
   Popular3,
   Popular4,
