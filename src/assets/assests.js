@@ -166,9 +166,11 @@ import eventpic from "./eventpic.png"
 import instagramlogo from "./instagraplogo.png"
 import posdcost from "./podcost.png"
 import Maflammac from "./Maflammac.png"
+import heartlogo from "./heartlogo.png"
 
 export const assests = {
   instagram ,
+  heartlogo,
   instagramlogo,
   youtube,
   tiktok,

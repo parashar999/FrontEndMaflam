@@ -1,5 +1,5 @@
 .container {
-    padding: 12% 12%; /* Adjusted padding for smaller screens */
+    padding: 12% 12%; 
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
       url("../../assets/ebookBackground.png") no-repeat center center;
     background-size: cover;
@@ -8,24 +8,43 @@
   
   .containerHeader {
     color: white;
-    padding: 20px;
-    height: 50vh;
     font-size: 50px;
     text-align: center;
-    width: 80%;
-  }
+    width: fixed(1,305px);
+    height: Hug(208px);
+    font-weight: 700;
+    line-height: 75px;
+    font-family: 'Work Sans';
+
+    }
   
   .cardsContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
-    gap: 20px;
-    padding: 40px 0;
+    gap: 10px;
+    margin-top: 100px;
   }
   
   /* Card styles */
   .card {
     border-radius: 8px;
     color: white;
+
+    width: 100%;
+    position: relative;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    height: 600px;
+    overflow: hidden;
+    flex-shrink: 0;
+    max-width: 100%;
+
+
+
+
+
+
+    
   }
   
   .image {
@@ -44,26 +63,47 @@
   }
   
   .content p {
-    color: #00bfa5;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    line-height: 160%;
+    font-family: 'Work Sans';
+    color: #39fffb;
+    text-align: left;
+    display: inline-block;
   }
-  
+  .text{
+    font-size: 20px;
+    line-height: 160%;
+
+
+    
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    line-height: 160%;
+    display: inline-block;
+    font-family: 'Work Sans';
+    color: #fff;
+    text-align: left;
+    height: 59px;
+
+  }
   /* Button styles */
   .downloadButton {
     margin-top: 20px;
     position: relative;
     box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
-    border-radius: 20px;
+    border-radius: 64px;
     background-color: #39fffb;
     border: none;
-    width: 14vw;
+    width: 300px;
+    height: 42px;
     font-weight: 900;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 5px;
+    padding: 10px ;
     box-sizing: border-box;
-    text-align: right;
     font-size: 20px;
     color: #061c2b;
     font-family: 'Sans Serif';
@@ -71,7 +111,6 @@
   
   .downloadsvg {
     margin-top: 20px;
-    margin-left: 10px;
   }
   
   /* Styles for "Coming Soon" button */
@@ -81,16 +120,53 @@
   
   .soonButton1 {
     background-color: transparent;
-    color: #00bfa5;
+    color: #39fffb;
     border: none;
     padding: 10px 20px;
     cursor: not-allowed;
+
+
+
+
+
+
+
+    width: 338px;
+position: relative;
+font-size: 20px;
+line-height: 160%;
+font-family: 'Work Sans';
+color: #5affff;
+text-align: left;
+display: inline-block;
+
   }
   
   button:hover {
     opacity: 0.9;
   }
   
+    
+  .loadMoreButton {
+    font-family: 'Noto Kufi Arabic';
+    display: block;
+    margin: 20px auto; /* Centers the button */
+    padding: 12px 24px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 600;
+    color: #f6ffff;
+    background-color: #061c2b;
+    border: none;
+    border-radius: 64px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    height:75px;
+  }
+  
+
   /* Responsive Media Queries */
   @media (max-width: 1200px) {
     .cardsContainer {
@@ -145,4 +221,3 @@
       width: 50vw;
     }
   }
-  
