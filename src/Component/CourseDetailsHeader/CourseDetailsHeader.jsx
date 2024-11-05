@@ -18,6 +18,8 @@ function CourseDetailsHeader() {
    
    const checkoutpage = async()=>{
     //try {
+
+    
       navigate("/checkout");
     //   const response = await axios.post(
     //     "https://backend.maflam.com/maflam/paymenttransction",
