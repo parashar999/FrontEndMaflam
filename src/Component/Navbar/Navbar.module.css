@@ -1,8 +1,7 @@
-.navmenu
-{
-  justify-content:center;
+.navmenu {
+  justify-content: center;
   align-items: center;
-  height:78px;
+  height: 78px;
   z-index: 100;
 }
 
@@ -20,12 +19,12 @@
   width: 100%;
   z-index: 1000;
   box-sizing: border-box;
-  max-width: 1980px; 
+  max-width: 1980px;
   margin: 0 auto;
 }
 
 
-.langbtn{
+.langbtn {
   border: solid rgba(26, 34, 40, 0.9) 1px;
   margin-left: -40px;
   padding: 15px;
@@ -36,11 +35,13 @@
   background-color: rgba(26, 34, 40, 0.9) !important;
   color: #ccc;
 }
+
 .logo {
   margin-top: 10px;
   height: 56px;
   width: 100px;
 }
+
 .leftLinks {
   display: flex;
   justify-content: center;
@@ -60,6 +61,7 @@
   color: #0ccac4;
   font-weight: 500;
 }
+
 .searchContainer {
   height: 48px;
   max-width: 294px;
@@ -70,11 +72,12 @@
   background: rgba(255, 255, 255, 0.1);
   padding: 8px;
   padding-left: 12px;
-  
+
   border-radius: 24px;
-  border:1px solid #0ccac4;
- 
+  border: 1px solid #0ccac4;
+
 }
+
 .searchContainer input {
   border: none;
   background: transparent;
@@ -84,6 +87,13 @@
 
 }
 
+.subIcon {
+  margin-left: 10px;
+}
+
+.subIconArb {
+  margin-right: 10px;
+}
 
 .searchButton {
   background: none;
@@ -91,67 +101,70 @@
   color: #ccc;
   cursor: pointer;
 }
+
 .rightLinks {
   margin-left: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  
+
 }
 
 .rightLinks a {
   color: #0ccac4;
   text-decoration: none;
 }
+
 .signupButton {
   border-radius: 64px;
   background: var(--Primary-Primary-300, #1A374B);
   padding: 5px 24px;
-  margin-left:10px;
-  margin-right:10px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: #39FFFB;
   font-size: 17px;
   font-weight: 700;
 }
 
 
-.submenu a:hover {
-  background-color: #444;
-}
 .dropdown {
   position: relative;
 }
+
 .submenu {
-  background-color: #333;
+  background-color: #1A2228;
   padding: 10px;
   border-radius: 5px;
   position: absolute;
-  top: 100%; 
-  left: 0; 
+  top: 100%;
+  left: 0px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  min-width: 220px;
+  min-width: 280px;
   align-items: start;
 }
 
 .submenu a {
 
   color: white;
-  padding: 8px 15px;
+  /* padding: 8px 15px; */
+  padding: 5px;
   text-decoration: none;
   font-size: 17px;
+  cursor: pointer;
 }
 
-.submenu a:hover {
-  background-color: #444; 
+.submenu:hover {
+  color: #39FFFB;
 }
 
 .navbar {
   z-index: 1000;
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -174,20 +187,23 @@
 .rotate {
   transform: rotate(-45deg);
 }
+
 .rotate1 {
   transform: rotate(-45deg);
 }
-.profile{
+
+.profile {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 10px;
 }
+
 .profileImage {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 
@@ -195,6 +211,7 @@
   color: white;
   font-size: 17px;
 }
+
 .profileContainer {
   position: relative;
 }
@@ -216,7 +233,7 @@
   width: 220px;
   /* background-color: black; */
   border-radius: 10px;
-background: rgba(26, 34, 40, 1.0);
+  background: rgba(26, 34, 40, 1.0);
   position: absolute;
   top: 100%;
   right: 0;
@@ -243,20 +260,21 @@ background: rgba(26, 34, 40, 1.0);
   cursor: pointer;
 }
 
-.iconstyle{
+.iconstyle {
   margin-top: 3px;
 }
 
-@media (max-width:1500px)
-{
-  .navbar
-  {
+@media (max-width:1500px) {
+  .navbar {
     zoom: 0.8;
   }
 }
 
 @media (max-width: 1024px) {
-  .leftLinks, .rightLinks, .searchContainer {
+
+  .leftLinks,
+  .rightLinks,
+  .searchContainer {
     display: none;
   }
 
@@ -276,7 +294,8 @@ background: rgba(26, 34, 40, 1.0);
     padding: 20px;
   }
 
-  .leftLinks a, .rightLinks a {
+  .leftLinks a,
+  .rightLinks a {
     margin: 10px 0;
   }
 
@@ -286,10 +305,11 @@ background: rgba(26, 34, 40, 1.0);
     padding: 10px 0;
   }
 
-  .searchContainerGlobe img{
+  .searchContainerGlobe img {
     display: none;
   }
 }
+
 @media (max-width: 576px) {
   .navbar {
     padding: 15px 30px;
@@ -303,17 +323,23 @@ background: rgba(26, 34, 40, 1.0);
     font-size: 17px;
     padding: 8px 20px;
   }
-  .searchContainerGlobe img{
+
+  .loginButton {
+    cursor: pointer;
+  }
+
+  .searchContainerGlobe img {
     display: none;
   }
 }
+
 @media (max-width: 425px) {
   .navbar {
     padding: 15px 20px;
   }
 
   .logo {
-    height: 30px; 
+    height: 30px;
   }
 
   .hamburger div {
@@ -325,7 +351,8 @@ background: rgba(26, 34, 40, 1.0);
     font-size: 17px;
     padding: 7px 16px;
   }
-  .searchContainerGlobe img{
+
+  .searchContainerGlobe img {
     display: none;
   }
 }
@@ -342,14 +369,15 @@ background: rgba(26, 34, 40, 1.0);
     font-size: 17px;
     padding: 6px 14px;
   }
-  .searchContainerGlobe img{
+
+  .searchContainerGlobe img {
     display: none;
   }
 }
 
 
 @media (min-width: 1024px) and (max-width: 1400px) {
- 
+
   .searchContainer {
     height: 37px;
     max-width: 150px;
@@ -360,18 +388,19 @@ background: rgba(26, 34, 40, 1.0);
     background: rgba(255, 255, 255, 0.1);
     padding: 8px;
     border-radius: 20px;
-    border:1px solid #0ccac4;
-   
+    border: 1px solid #0ccac4;
+
   }
+
   .searchContainer input {
     border: none;
     background: transparent;
     color: #f6fffe !important;
     font-size: 17px;
     outline: none;
-  
+
   }
-  
+
   .navbar {
     display: flex;
     align-items: center;
@@ -388,57 +417,3 @@ background: rgba(26, 34, 40, 1.0);
     margin: 0 auto;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

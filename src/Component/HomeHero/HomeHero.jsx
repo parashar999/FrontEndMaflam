@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import styles from "./HomeHero.module.css";
-import stylesArabic from "./HomeHero_arabic.module.css";
+import stylesArabic from "./HomeHero.module.css";
+import styles from "./HomeHero_arabic.module.css";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 

@@ -1,6 +1,8 @@
 import React, { useRef, useContext, useEffect,useState } from "react";
 import styles from "./OurSuccessStory.module.css";
+import stylesArabic from "./OurSuccessStoryArabic.module.css";
 import { HomePageContext } from "../../store/HomePageContext"; // Import the context
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 
 
 // const OurSuccessStory = () => {
@@ -96,7 +98,7 @@ const OurSuccessStory = () => {
   const sliderRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Track window width
-
+  const { language} = useContext(LanguageContext);
   useEffect(() => {
     console.log("successStoriesArray:", successStoriesArray);
   }, [successStoriesArray]);
@@ -110,6 +112,7 @@ const OurSuccessStory = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  const stylesSelected = language === "ar"?stylesArabic:styles;
 
   const scrollLeft = () => {
     if (currentIndex > 0) {
@@ -134,56 +137,56 @@ const OurSuccessStory = () => {
   };
 
   return (
-    <div className={styles.carouselWrapper}>
+    <div className={stylesSelected.carouselWrapper}>
       <h2>{successStoriesArray[0]?.title}</h2>
-      <div className={styles.carousel}>
+      <div className={stylesSelected.carousel}>
         <button
-          className={styles.carouselArrowLeft}
+          className={stylesSelected.carouselArrowLeft}
           onClick={scrollLeft}
           disabled={currentIndex === 0}
         >
           &larr;
         </button>
 
-        <div className={styles.carouselSliderContainer} ref={sliderRef}>
-          <div className={styles.carouselSlider}>
-            <div className={styles.roverlay}></div>
-            <div className={styles.overlay}></div>
+        <div className={stylesSelected.carouselSliderContainer} ref={sliderRef}>
+          <div className={stylesSelected.carouselSlider}>
+            <div className={stylesSelected.roverlay}></div>
+            <div className={stylesSelected.overlay}></div>
             {successStoriesArray.length > 0 && (
-              <div className={styles.carouselCard}>
+              <div className={stylesSelected.carouselCard}>
                 <video
                   src={successStoriesArray.at(-1).videoUrl}
                   muted
                   loop
                   playsInline
                   controls
-                  className={styles.carouselVideo}
+                  className={stylesSelected.carouselVideo}
                   alt={successStoriesArray.at(-1).title}
                 />
               </div>
             )}
             {successStoriesArray.map((story, index) => (
-              <div key={index} className={styles.carouselCard}>
+              <div key={index} className={stylesSelected.carouselCard}>
                 <video
                   src={story.videoUrl}
                   muted
                   loop
                   playsInline
                   controls
-                  className={styles.carouselVideo}
+                  className={stylesSelected.carouselVideo}
                   alt={story.title}
                 />
               </div>
             ))}
             {successStoriesArray.length > 0 && (
-              <div className={styles.carouselCard}>
+              <div className={stylesSelected.carouselCard}>
                 <video
                   src={successStoriesArray[0].videoUrl}
                   muted
                   loop
                   playsInline
                   controls
-                  className={styles.carouselVideo}
+                  className={stylesSelected.carouselVideo}
                   alt={successStoriesArray[0].title}
                 />
               </div>
@@ -192,7 +195,7 @@ const OurSuccessStory = () => {
         </div>
 
         <button
-          className={styles.carouselArrowRight}
+          className={stylesSelected.carouselArrowRight}
           onClick={scrollRight}
           disabled={currentIndex >= totalElements - 2}
         >

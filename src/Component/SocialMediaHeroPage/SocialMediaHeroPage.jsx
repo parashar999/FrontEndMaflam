@@ -12,13 +12,13 @@ export default function SocialMediaHeroPage() {
 
 <div className={styles.btndiv}> 
     <button className={styles.btnyoutube}> 
-YouTube 
+      YouTube 
     </button>
     <button className={styles.btntiktok}> 
-TikTok
+      TikTok
     </button>
     <button className={styles.btninsta}> 
-Instagram
+       Instagram
     </button>
 
 </div>

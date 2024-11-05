@@ -4,9 +4,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  max-width: 1980px;
+  max-width: 1250px;
   margin: 0 auto;
-  margin-bottom: 200px;
+  margin-bottom: 120px;
 }
 
 .carouselWrapper h2 {
@@ -19,82 +19,6 @@
   font-weight: 700;
   line-height: 160%;
 }
-
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 1220px;
-  margin: auto;
-  overflow: hidden;
-  /* padding: 20px 0px; */
-}
-
-.carouselSliderContainer {
-  width: 100%;
-  /* margin-top: 20px; */
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scrollbar-width: none;
-}
-
-.carouselSliderContainer::-webkit-scrollbar {
-  display: none;
-}
-
-.carouselSlider {
-  display: flex;
-  flex-wrap: nowrap;
-  
-}
-
-.carouselCard {
-  margin: 0 10px; /* Margin to create space between cards */
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 5px;
-  height: 483px;
-  right: 25%;
-  min-width:609px !important;
-  color: #fff;
-  margin-top: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.carouselCard video {
-  margin-top: 50px;
-  position: relative;
-  height: 483px;
-  left: 15%;
-  /* Full width of the card */
-  border-radius: 5px; /* Optional: To match the card's border radius */
-}
-
-.carouselArrowLeft,
-.carouselArrowRight {
-  position: absolute;
-  top: 80%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1000;
-}
-
-.carouselArrowLeft {
-  left: 10px;
-  border-radius: 50%;
-  width: 60px; 
-  height: 60px;
-  background-color: #4444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 .overlay {
   position: absolute;
@@ -118,6 +42,79 @@
   opacity: 0.9;
   z-index: 1; /* Make sure overlay is above the video */
 }
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  /* padding: 20px 0px; */
+}
+
+.carouselSliderContainer {
+  width: 100%;
+  /* margin-top: 20px; */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.carouselSliderContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselSlider {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.carouselCard {
+  margin: 0 10px; /* Margin to create space between cards */
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 5px;
+  height: 483px;
+  right: 30%;
+  min-width:609px !important;
+  color: #fff;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselCard video {
+  margin-top: 50px;
+  position: relative;
+  height: 483px;
+  right: 25%;
+  /* Full width of the card */
+  border-radius: 5px; /* Optional: To match the card's border radius */
+}
+
+.carouselArrowLeft,
+.carouselArrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.carouselArrowLeft {
+  left: 10px;
+  border-radius: 50%;
+  width: 60px; 
+  height: 60px;
+  background-color: #4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carouselArrowRight {
   right: 10px;
   border-radius: 50%;
@@ -127,23 +124,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
 }
 
 .carouselArrowLeft:hover,
 .carouselArrowRight:hover {
   background-color: #4444;
-  z-index: 1000;
 }
 
-@media (max-width: 768px) {
-  .carouselCard {
-    flex: 0 0 100%;
-    width: 275px;
+@media (max-width:1500px)
+{
+  .carouselWrapper{
+    zoom:0.8;
   }
+}
 
-  .carouselArrowLeft,
-  .carouselArrowRight {
-    font-size: 24px;
+@media (max-width:1280px)
+{
+   .carouselWrapper{
+    zoom:0.7;
+   }
+}
+
+@media (max-width:900px)
+{
+  .carouselWrapper
+  {
+    max-width: 800px;
+    zoom: 0.5;
+  }
+  .carouselCard
+  {
+    right: 70%;
   }
 }

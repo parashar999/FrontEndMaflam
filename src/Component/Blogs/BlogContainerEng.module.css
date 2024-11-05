@@ -3,8 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 .MainContainer {
+  
     height: auto;
     margin: auto;
     justify-content: center;

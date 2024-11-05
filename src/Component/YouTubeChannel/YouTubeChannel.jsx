@@ -56,7 +56,8 @@ export default function YouTubeChannel() {
               <div>
                 <h5>{channel.title}</h5>
                 <div className={styles.titless}><p>{channel.episode}</p>
-                <img src={assests.youtubeicon} alt="Icon" className={styles.iconImage} /></div>
+                <img src={assests.youtubeicon} alt="Icon" className={styles.iconImage} />
+                </div>
               </div>
             </div>
           </div>

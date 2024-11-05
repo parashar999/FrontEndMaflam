@@ -6,10 +6,12 @@
 .container {
     padding: 20px;
     text-align: center;
-margin-left: 100px;
-margin: 0 auto;
-max-width: 1500px;
+   margin-left: 100px;
+   margin: 0 auto;
+   max-width: 1500px;
 /* margin-right: 100px; */
+padding-left: 100px;
+padding-right: 100px;
   
 
   }
@@ -23,7 +25,7 @@ max-width: 1500px;
   .cardsGrid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: -70px !important;
   }
   
@@ -38,9 +40,9 @@ max-width: 1500px;
     margin-top: 30px;
     overflow: hidden;
     height: 800px;
-    width: 470px;
+    width: 340px;
     display: flex;
-    gap: 60px;
+    gap: 10px;
     flex-direction: column;
     color: #fff;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
@@ -129,15 +131,27 @@ text-align: start;
     line-height: 94.1%;
     letter-spacing: -0.34px;
   }
+  .footer p{
+    font-size: 10px;
+  }
   
   .buyNow {
   
 
-    border-radius: 24px;
-    padding: 17px;
-background: var(--Accent-Accent-400---Main, #39FFFB);
-box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
+    border-radius: 64px;
+    /* padding: 17px; */
+  background: var(--Accent-Accent-400---Main, #39FFFB);
+  box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
+
+
+
+
+
   }
+
+
+
+
   
   .buyNow:hover {
     background-color: rgba(90, 255, 234, 0.30);

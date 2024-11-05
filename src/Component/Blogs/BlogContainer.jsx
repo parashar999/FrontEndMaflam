@@ -84,7 +84,7 @@ function BlogContainer() {
 
   return (
     
-    <div className="parentcont">
+    <div className="parentcont" style={{marginTop:"150px"}}>
       <div className={stylesSelected.MainContainer}>
         <Link style={{marginbottom:'20px', textAlign:'center', display:'block'}} to="/blogs">{blogData[0]?.title || "Default Blog Title"}</Link>
         <div className={stylesSelected.pricingimg}>
