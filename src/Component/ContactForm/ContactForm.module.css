@@ -59,6 +59,19 @@
   resize: none;
   height: 100px;
 }
+/* Existing styles... */
+
+/* Add the selected state styling */
+.selected {
+  background-color: #3d5c72;
+}
+
+/* Hover effect for radio buttons */
+.radioButton:hover,
+.radioButton.selected {
+  background-color: #3d5c72;
+}
+
 
 /* Radio Group and File Upload */
 .radioGroup {
