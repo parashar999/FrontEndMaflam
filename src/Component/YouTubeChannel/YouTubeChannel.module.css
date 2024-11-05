@@ -28,6 +28,7 @@ margin-bottom: 30px;
 .CardContainer{
     display: flex;
     gap: 0px;
+    border: 2px solid brown;
 }
 
 .titless{

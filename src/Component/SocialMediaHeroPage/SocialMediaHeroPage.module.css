@@ -1,6 +1,5 @@
 .cointainer{
-    margin-top: 70px;
-    
+    margin-top: 52px;
     height: 900px;
     margin-bottom: -250px;
     background: url("../../assets/socialimage.png");
@@ -15,19 +14,50 @@
     align-items: center;
     justify-content: center;
     margin-top: 90px;
+
+
+
+
+    
+
+
+
+
+    
   
  
 }
+.vector-icon {
+    position: absolute;
+    top: 81.93px;
+    left: -36.95px;
+    border-radius: 5px;
+    width: 236.3px;
+    height: 231.9px;
+    object-fit: contain;
+    }
+    .vector-icon1 {
+    position: absolute;
+    top: -84.43px;
+    left: 257.94px;
+    border-radius: 5px;
+    width: 333.9px;
+    height: 330.1px;
+    object-fit: contain;
+    }
+    
 
 .btnyoutube {
     background-image: url("../../assets/youtube.png");
     padding: 30px;
     padding-left: 70px;
-    padding-right: 70px;
-  
+    padding-right: 70px;  
     font-size: 20px;
     border-radius: 10px;
     color: white;
+    border: none;
+    width: 231.3px;
+
 
 }
 .btninsta {
@@ -53,11 +83,9 @@
    padding-top: 150px;
 }
 .titles h1 {
-color: white;
 text-align: center;
-color: #FFF;
+color: #fff;
 text-align: center;
-/* Headlines/Headline 1 */
 font-family: "Noto Kufi Arabic";
 font-size: 65px;
 font-style: normal;
@@ -65,11 +93,9 @@ font-weight: 700;
 line-height: 150%;
 }
 .titles p{
-    color: white;
     text-align: center;
-    color: #EBF5F4;
+    color: #ebf5f4;
     text-align: center;
-    /* Subheadline/Subheadline 1 */
     font-family: "Noto Kufi Arabic";
     font-size: 24px;
     font-style: normal;

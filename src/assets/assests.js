@@ -167,9 +167,23 @@ import eventpic from "./eventpic.png"
 import instagramlogo from "./instagraplogo.png"
 import posdcost from "./podcost.png"
 import Maflammac from "./Maflammac.png"
+import heartlogo from "./heartlogo.png"
+import downarrow from "./downarrow.png"
+import showcase from "./showcase.png"
+import onebooklet from "./onebooklet.png"
+import twobooklet from "./twobooklet.png"
+import threebooklet from "./threebooklet.png"
+
+
 
 export const assests = {
+  threebooklet,
+  twobooklet,
+  onebooklet,
+  showcase,
+  downarrow,
   instagram ,
+  heartlogo,
   instagramlogo,
   youtube,
   tiktok,
