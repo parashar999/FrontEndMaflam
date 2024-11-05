@@ -27,16 +27,9 @@ const PurchaseCancellation = () => {
             {/* Display title */}
             <h1 className={styles.title}>{term.title}</h1>
 
-<<<<<<< HEAD
             {/* Display descriptions if they exist */}
             {term.description && term.description.map((desc, idx) => (
               <p key={idx} className={styles.description}>{desc}</p>
-=======
-            {term.description?.map((desc, idx) => (
-              <p key={idx} className={styles.description}>
-                {desc}
-              </p>
->>>>>>> 3d8216cdb7c74420ee22b552b58f48e6177760bc
             ))}
 
             {/* Display items if sections are not present */}
