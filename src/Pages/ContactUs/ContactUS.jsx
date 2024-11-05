@@ -9,12 +9,21 @@ import JoinUs from "../../Component/JoinUs/JoinUs";
 import styles from "./ContactUs.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import { HomePageProvider } from "../../store/HomePageContext";
-import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext";
-import { ContactUsContext, ContactUsContextProvider } from "../../store/ContactUsContext";
+import {
+  AboutusPageContext,
+  AboutusPageProvider,
+} from "../../store/AboutUsPageContext";
+import {
+  ContactUsContext,
+  ContactUsContextProvider,
+} from "../../store/ContactUsContext";
 
 const ContactUS = () => {
-  
-  const { aboutusScreenDetails, loading: aboutLoading, error: aboutError } = useContext(AboutusPageContext);
+  const {
+    aboutusScreenDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(AboutusPageContext);
 
   useEffect(() => {
     if (aboutusScreenDetails) {
@@ -22,12 +31,11 @@ const ContactUS = () => {
     }
   }, [aboutusScreenDetails]);
 
-
-
-
-
-
-  const {contactUsContextDetails , loading: homeLoading, error: homeError } = useContext(ContactUsContext);
+  const {
+    contactUsContextDetails,
+    loading: homeLoading,
+    error: homeError,
+  } = useContext(ContactUsContext);
 
   useEffect(() => {
     if (contactUsContextDetails) {
@@ -35,20 +43,19 @@ const ContactUS = () => {
     }
   }, [contactUsContextDetails]);
 
-
   return (
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
           <ContactUsContextProvider>
-          <Navbar></Navbar>
-          <HeroContact></HeroContact>
-          <ContactInformation></ContactInformation>
-          <div className={styles.container}>
-            <MaflanContent></MaflanContent>
-            <JoinUs></JoinUs>
-          </div>
-          <Footer></Footer>
+            <Navbar></Navbar>
+            <HeroContact></HeroContact>
+            <ContactInformation></ContactInformation>
+            <div className={styles.container}>
+              <MaflanContent></MaflanContent>
+              <JoinUs></JoinUs>
+            </div>
+            <Footer></Footer>
           </ContactUsContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>

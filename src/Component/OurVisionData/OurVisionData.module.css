@@ -29,14 +29,14 @@
   color: #FFF;
   padding-top: 20px;
   padding-left: 90px;
-
-  font-family: "Noto Kufi Arabic";
+font-family: "Noto Kufi Arabic";
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
   text-align: start;
   margin: 0 auto;
+  width: 552px;
 }
 
 .underline {
@@ -61,15 +61,14 @@ flex-shrink: 0;
   justify-content: center;
   gap: 90px;
   margin-top:80px;
-  
   flex-wrap: wrap;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
   border-radius: 8px;
   padding: 20px;
-  width: 400px;
+  width: 466px;
   text-align: center;
   backdrop-filter: blur(10px);
 
