@@ -33,7 +33,7 @@ const CourseGrid = () => {
               <video
                  src={course.videoUrl}
                  autoPlay
-                //  muted
+                 muted
                 //  controls
                  loop
                 //  playsInline
