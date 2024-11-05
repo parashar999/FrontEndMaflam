@@ -76,6 +76,7 @@ stroke: #5AFFFF;
   }
   
   .featureTitle {
+    width: 267px;
     font-size: 1.5rem;
     color: white;
     text-align: start;

@@ -6,16 +6,33 @@ import { Link } from 'react-router-dom';
 import { CheckoutPaymentContext } from '../../store/CheckoutPaymentContext';
 import axios from "axios"; 
 import { ToastContainer, toast } from 'react-toastify';
+import auth from '../../Auth/Auth';
 
 
 const checkoutpage = async()=>{
+  const userdetails=auth.getAuthData();
+  const token=userdetails.token;
+  const requestBody={
+    amount:750,
+    callback:"https://maflam.web.app/mycourses"
+
+  }
+
   try {
+
+    
     console.log("Checkout Page called")
-    const response = await axios.post(
+    console.log(token);
+    const response = await axios
+    .post(
       "https://backend.maflam.com/maflam/paymenttransction",
+      requestBody,
       {
-        amount:750
+        headers:{
+        Authorization:`Bearer ${token}`,
+        },
       }
+      
     );
 
     toast.success(response.data.message);
@@ -66,6 +83,7 @@ const PaymentForm = () => {
           </div>
           <hr />
           <div>
+            <span style={{height:"100px"}}></span>
           </div>
           <button type="submit" onClick={checkoutpage} className={styles.payBtn} >{cardDetails[11]?.title}</button>
           {/* <form className={styles.form}>
