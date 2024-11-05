@@ -143,14 +143,17 @@ padding-top: 100px;
   {
     top: 0px;
     position: relative;
-    right: 40%;
+    left: 20px;
     top: -95%;
+    right: 300px;
+    
   }
   .ctn
   {
       position: relative;
       top: -100px;
   }
+  
   .secondcontainer
   {
     display: flex;
@@ -176,6 +179,10 @@ padding-top: 100px;
   }
   .imgcontainer
   {
-    zoom: 0.7;
+    position: relative;
+   right: 0px;
+    top: 0;
+    width: 95%;
+    left: 20px;
   }
 }

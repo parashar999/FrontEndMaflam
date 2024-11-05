@@ -291,7 +291,7 @@ const Footer = () => {
               <a href="/purchaseCancellation">{purchasePolicy}</a>
             </li>
             <li>
-              <a href="#">{helpCenter}</a>
+              <a href="/purchaseCancellation">{helpCenter}</a>
             </li>
             <li>
               <a href="/CommunityGuidelines">{Community}</a>

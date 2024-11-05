@@ -1,13 +1,10 @@
-
-
-
-
 import React, { useContext } from "react";
 import styles from "./ContactInformation.module.css";
 import { ContactUsContext } from "../../store/ContactUsContext";
 
 const ContactInformation = () => {
-  const { contactUsContextDetails, loading, error } = useContext(ContactUsContext);
+  const { contactUsContextDetails, loading, error } =
+    useContext(ContactUsContext);
 
   if (loading) return <p>Loading...</p>; // Handle loading state
   if (error) return <p>Error loading data</p>; // Handle error state
@@ -49,9 +46,6 @@ const ContactInformation = () => {
 };
 
 export default ContactInformation;
-
-
-
 
 // import React from "react";
 // import styles from "./ContactInformation.module.css";

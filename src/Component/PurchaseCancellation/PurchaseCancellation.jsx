@@ -24,15 +24,16 @@ const PurchaseCancellation = () => {
       <div className={styles.container}>
         {terms.map((term, index) => (
           <div key={index}>
-            <h1 className={styles.title}>{terms[0].title}</h1>
+            {/* Display title */}
+            <h1 className={styles.title}>{term.title}</h1>
 
-            {term.description?.map((desc, idx) => (
-              <p key={idx} className={styles.description}>
-                {desc}
-              </p>
+            {/* Display descriptions if they exist */}
+            {term.description && term.description.map((desc, idx) => (
+              <p key={idx} className={styles.description}>{desc}</p>
             ))}
 
-            {term.sections ? (
+            {/* Display items if sections are not present */}
+            {term.sections && term.sections.length > 0 ? (
               term.sections.map((section, secIdx) => (
                 <div key={secIdx} className={styles.section}>
                   <h2 className={styles.sectionTitle}>{section.title}</h2>
@@ -46,11 +47,13 @@ const PurchaseCancellation = () => {
                 </div>
               ))
             ) : (
-              <ul className={styles.list}>
-                {/* {term.items?.map((item, idx) => (
-                  <li key={idx} className={styles.listItem}>{item}</li>
-                ))} */}
-              </ul>
+              term.items && (
+                <ul className={styles.list}>
+                  {term.items.map((item, idx) => (
+                    <li key={idx} className={styles.listItem}>{item}</li>
+                  ))}
+                </ul>
+              )
             )}
           </div>
         ))}
