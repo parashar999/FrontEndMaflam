@@ -59,7 +59,7 @@
 
 .leftLinks a:hover {
   color: #0ccac4;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .searchContainer {
