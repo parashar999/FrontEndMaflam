@@ -14,10 +14,7 @@ export default function BlogPostHero1() {
     <div className={styles.header}>
         <div>
         <h1>Read and Explore Various Articles in the Film Industry</h1>
-        <div className={styles.searchBar}>
-          <input type="text" placeholder={"Search"} />
-          <img src={assests.Magnifine} alt="Search Icon" />
-        </div>
+        
         <div className={styles.searchBar}>
           <input type="text" placeholder="Search" />
           <button className={styles.categoryButton}>Category

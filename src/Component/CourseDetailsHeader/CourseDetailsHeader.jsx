@@ -25,7 +25,6 @@ function CourseDetailsHeader() {
       navigate("/checkout");
     } else {
       navigate("/login");
-      // alert("Please log in to subscribe to this course.");
     }
   };
 

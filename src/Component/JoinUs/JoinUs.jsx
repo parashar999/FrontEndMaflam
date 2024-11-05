@@ -38,7 +38,7 @@ const JoinUs = () => {
       );
       setSubmitStatus("Thank you for subscribing!");
       toast.success(response.data.message);
-      setEmail(""); // Clear the email input field after successful subscription
+      setEmail("");
     } catch (error) {
       setSubmitStatus("Failed to subscribe. Please try again.");
       console.error("Error submitting email:", error);
