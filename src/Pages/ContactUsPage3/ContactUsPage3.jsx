@@ -18,7 +18,9 @@ const ContactUsPage3 = () => {
         <AboutusPageProvider>
           <Navbar></Navbar>
           <HeroContact></HeroContact>
-          <ContactForm2></ContactForm2>
+          <div className={styles.contact3}>
+            <ContactForm2></ContactForm2>
+          </div>
           <div className={styles.container}>
             <MaflanContent></MaflanContent>
             <JoinUs></JoinUs>
