@@ -5,15 +5,23 @@ import { LanguageProvider } from '../../Component/LanguageContext/LanguageContex
 import MyProfileWishlist from '../../Component/MyProfileWishlist/MyProfileWishlist'
 import WishlistSpecializedCourses from '../../Component/WishlistSpecializedCourses/WishlistSpecializedCourses'
 import WishlistArticle from '../../Component/WishlistArticle/WishlistArticle'
+import WishlistEbookCard from '../../Component/WishlistEbookCard/WishlistEbookCard'
+
+
+
 
 
 function MyWishlist() {
+
+    
+
   return (
     <div>
       <LanguageProvider >
         <Navbar />
         <MyProfileWishlist />
         <WishlistSpecializedCourses />
+        <WishlistEbookCard />
         <WishlistArticle />
         <Footer />        
      </LanguageProvider>

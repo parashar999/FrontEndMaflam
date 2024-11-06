@@ -12,7 +12,7 @@ const WishlistEbookCard = () => {
         const response = await fetch("/api/ebookData"); 
         const data = await response.json();
         setEbookPageContextDetails(data); 
-      } catch (err) {
+      } catch (err) {       
         console.error("Error fetching data", err);
       }
     };
@@ -30,10 +30,7 @@ const WishlistEbookCard = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div>
-        <h1 className={styles.containerHeader}>{title}</h1>    
-      </div>   
+    <div className={styles.container}>   
 
       <div className={styles.cardsContainer}>
         {ebook?.slice(0, displayCount).map((ebookItem) => (
@@ -67,13 +64,18 @@ const WishlistEbookCard = () => {
         ))}
       </div>
 
-      {/* {ebook && displayCount < ebook.length && (
+      {ebook && displayCount < ebook.length && (
         <button onClick={loadMoreItems} className={styles.loadMoreButton}>
           Load More ({displayCount}/{ebook.length})
         </button>
-      )} */}
+      )}
     </div>
   );
 };
 
 export default WishlistEbookCard;
+
+
+
+
+

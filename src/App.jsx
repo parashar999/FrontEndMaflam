@@ -204,7 +204,9 @@ const App = () => {
       <Route path="/filmproduction" element={
         <LanguageProvider>
           <FilmProductionProvider>
+            <AboutusPageProvider> 
           <FilmProduction />
+          </AboutusPageProvider>
           </FilmProductionProvider>
         </LanguageProvider>
         } />
@@ -284,7 +286,12 @@ const App = () => {
           <LanguageProvider>
 
             <HomePageProvider>
+            <EbookPageContextProvider>
+              <AboutusPageProvider> 
+
               <MyWishlist />
+              </AboutusPageProvider>
+              </EbookPageContextProvider>
             </HomePageProvider>
           </LanguageProvider>
         }

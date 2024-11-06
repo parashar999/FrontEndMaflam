@@ -7,6 +7,9 @@ import FilmProductionInstructor from '../../Component/FilmProductionInstructor/F
 import FilmProductionCourseContent from '../../Component/FilmProductionCourseContent/FilmProductionCourseContent'
 import SubscribeFundamentalPackage from '../../Component/SubscribeFundamentalPackage/SubscribeFundamentalPackage'
 import { FilmProductionProvider , FilmProductionContext } from '../../store/FilmProductionContext'
+import JoinUs from "../../Component/JoinUs/JoinUs";
+// import { AboutusPageProvider } from "../../store/AboutUsPageContext";
+import { AboutusPageContext, AboutusPageProvider,} from "../../store/AboutUsPageContext";
 
 function FilmProduction() {
 
@@ -22,16 +25,39 @@ function FilmProduction() {
       console.log("Film Production Screen Details:", filmproductionScreenDetails);
     }
   }, [filmproductionScreenDetails]);
+
+
+
+  const {
+    aboutusScreenDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(AboutusPageContext);
+
+  useEffect(() => {
+    if (aboutusScreenDetails) {
+      console.log("About Us Screen Details:", aboutusScreenDetails);
+    }
+  }, [aboutusScreenDetails]);
+
+
+
+
   return (
     <div>
       <LanguageProvider >
         <FilmProductionProvider>
+          <AboutusPageProvider>  
+
         <Navbar />
         <FundamentalFilmProduction />
         <FilmProductionInstructor />
         <FilmProductionCourseContent />
         <SubscribeFundamentalPackage />
+        <JoinUs />
         <Footer />    
+        </AboutusPageProvider>
+
         </FilmProductionProvider>    
      </LanguageProvider>
 
