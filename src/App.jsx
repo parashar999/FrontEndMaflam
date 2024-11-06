@@ -48,6 +48,8 @@ import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
 import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+import EbookTwo from "./Pages/EbookTwo/EbookTwo.jsx";
+
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
@@ -197,6 +199,8 @@ const App = () => {
       <Route path="/mycertificate" element={<MyCertificate />} />
       <Route path="/personalinformation" element={<PersonalInformation />} />
       <Route path="/filmproduction" element={<FilmProduction />} />
+      <Route path="/ebooktwo" element={<EbookTwo />} />
+
       <Route
         path="/ebooks"
         element={

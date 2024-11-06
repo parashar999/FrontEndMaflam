@@ -15,7 +15,7 @@ const navigate = useNavigate()
 
 
     const Courses = ()=>{
-      navigate("/coursedetails")
+      navigate("/prc")
     }
 
   const getCardClassName = (index) => {

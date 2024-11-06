@@ -62,12 +62,13 @@ import styles from "./FundamentalEnglish.module.css";
 import { CiCircleCheck } from "react-icons/ci";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
-
+import { useNavigate } from "react-router-dom";
 
 
 function Fundamental() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language} = useContext(LanguageContext);
+  const navigate = useNavigate();
   console.log(language);
     const stylesSelected = language === "ar"?stylesArabic:styles;
 
@@ -79,11 +80,12 @@ function Fundamental() {
   const sectionData = homeScreenDetails?.homeScreenDetailsSec7 || [];
   const title = sectionData[0]?.title || "Subscribe 60 The Full Filmmaking Fundamentals Package";
   const imageUrl = sectionData[0]?.imageUrl || ""; // Use context imageUrl or a fallback
-  const categories = sectionData[0]?.category || [
-    
-  ];
+  const categories = sectionData[0]?.category || [];
   const subscribeText = sectionData[1]?.title || "Subscribe";
   const price = sectionData[2]?.title || "2.200 SAR";
+  const Subscribe = ()=>{
+    navigate("/prc")
+  }
 
   return (
     <div className="parentfundamental">
@@ -107,7 +109,9 @@ function Fundamental() {
                 </div>
               ))}
               <div className={stylesSelected.item}>
-                <button className={stylesSelected.checkicobuttun}>{subscribeText}</button>
+                <button onClick={Subscribe} className={stylesSelected.checkicobuttun} >{subscribeText}
+                  
+                </button>
                 <p>
                   <b>{price}</b>
                 </p>

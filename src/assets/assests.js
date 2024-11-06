@@ -57,6 +57,7 @@ import variousCourse6 from "./variousCourse6.png";
 import variousCourse7 from "./variousCourse7.png";
 import variousCourse8 from "./variousCourse8.png";
 import Visa from "./Visa.png";
+import filter from "./filter.png";
 import MasterCard from "./MasterCard.png";
 import Mada from "./Mada.png";
 import Checkoutbg from "./Checkoutbg.png";
@@ -166,9 +167,23 @@ import eventpic from "./eventpic.png"
 import instagramlogo from "./instagraplogo.png"
 import posdcost from "./podcost.png"
 import Maflammac from "./Maflammac.png"
+import heartlogo from "./heartlogo.png"
+import downarrow from "./downarrow.png"
+import showcase from "./showcase.png"
+import onebooklet from "./onebooklet.png"
+import twobooklet from "./twobooklet.png"
+import threebooklet from "./threebooklet.png"
+
+
 
 export const assests = {
+  threebooklet,
+  twobooklet,
+  onebooklet,
+  showcase,
+  downarrow,
   instagram ,
+  heartlogo,
   instagramlogo,
   youtube,
   tiktok,
@@ -198,6 +213,7 @@ export const assests = {
   caraImg,
   Popular1,
   Popular2,
+  filter,
   logo1,
   Popular3,
   Popular4,

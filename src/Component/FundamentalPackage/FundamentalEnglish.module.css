@@ -113,6 +113,20 @@ padding-top: 100px;
   padding-left: 3px;
 }
 
+@media (max-width:5000px)
+{
+    .Fundamental
+    {
+      zoom: 0.8;
+    }
+    .imgcontainer
+    {
+      width: 549px;
+      left:44%;
+      top:-110%;
+    }
+}
+
 @media (max-width:1600px)
 {
     .Fundamental
