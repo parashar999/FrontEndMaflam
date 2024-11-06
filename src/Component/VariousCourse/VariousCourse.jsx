@@ -6,10 +6,9 @@ const VariousCourse = () => {
   const { pricingPageContextDetails, loading, error } =
     useContext(PricingPageContext);
 
-  if (loading) return <p>Loading...</p>; // Handle loading state
-  if (error) return <p>Error loading data</p>; // Handle error state
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
 
-  // Fetching the course data from context
   const courses = pricingPageContextDetails?.formattedCourseData || [];
   const buttonTitle =
     pricingPageContextDetails?.getPricingCourse1DetailsSecButton?.title ||
@@ -22,7 +21,7 @@ const VariousCourse = () => {
           {pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title ||
             "Or, choose from our various courses"}
         </h2>
-        <div className={styles.cardsGrid}>
+        <div className={styles.cardsContainer}>
           {courses.map((course) => (
             <div key={course.courseId} className={styles.card}>
               <img
@@ -31,25 +30,22 @@ const VariousCourse = () => {
                 className={styles.cardImage}
               />
               <div className={styles.cardContent}>
-                <div className={styles.imageflex}>
+                <div className={styles.instructorContainer}>
                   {course.instructors.map((instructor) => (
-                    <div key={instructor.name}>
-                      <img src={instructor.photoUrl} alt={instructor.name} />
-                      <p className={styles.instructor}>{instructor.name}</p>
+                    <div key={instructor.name} className={styles.instructor}>
+                      <img
+                        src={instructor.photoUrl}
+                        alt={instructor.name}
+                        className={styles.instructorImage}
+                      />
+                      <p>{instructor.name}</p>
                     </div>
                   ))}
                 </div>
                 <h3 className={styles.title}>{course.title}</h3>
                 <p className={styles.description}>{course.description}</p>
                 <div className={styles.footer}>
-                  <p>{course.para}</p>
-                  <img
-                    src={course.estimatedLearningTime?.icon}
-                    alt="time icon"
-                  />
-                  <span>
-                    {course.price} {course.para}
-                  </span>
+                  <span>{course.price}</span>
                   <p>{course.estimatedLearningTime?.time}</p>
                   <button className={styles.buyNow}>{buttonTitle}</button>
                 </div>
