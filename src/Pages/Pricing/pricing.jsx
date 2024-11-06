@@ -65,7 +65,7 @@ function Pricing() {
                 <PricingPage></PricingPage>
                 <Fundamental></Fundamental>
                 <VariousCourse></VariousCourse>
-                <Carousel></Carousel>
+                {/* <Carousel></Carousel> */}
                 <MaflanContent />
                 <JoinUs />
                 <Footer></Footer>

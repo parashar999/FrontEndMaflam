@@ -1,20 +1,16 @@
-
 .maincontainer{
   background-color: #030b11;
 }
-
 .container {
     padding: 20px;
     text-align: center;
    margin-left: 100px;
    margin: 0 auto;
    max-width: 1500px;
-/* margin-right: 100px; */
-padding-left: 100px;
-padding-right: 100px;
-  
-
-  }
+  /* margin-right: 100px; */
+  padding-left: 100px;
+  padding-right: 100px;
+}
   
   .container h2 {
     color: #fff;
@@ -25,7 +21,7 @@ padding-right: 100px;
   .cardsGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    /* gap: -170px !important; */
+    gap: -170px !important;
   }
   
   .card {
