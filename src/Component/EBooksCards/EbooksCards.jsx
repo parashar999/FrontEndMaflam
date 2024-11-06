@@ -43,25 +43,30 @@ const EbooksCards = () => {
               <p>{ebookItem.text}</p>
               <h3 className={styles.text}>{ebookItem.title}</h3>
               <div className={styles.btn}>
-              <button className={ebookItem.comingSoon ? styles.soonButton1 : styles.downloadButton}>
-                {ebookItem.comingSoon ? "Soon" : (
-                  <>
+                {ebookItem.comingSoon ? (
+                  <button className={styles.soonButton1}>Soon</button>
+                ) : (
+                  <a
+                    href={ebookItem.ebookPdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.downloadButton}
+                    style={{textDecoration:"none"}}
+                  >
                     <span className={styles.downbtnspan}>{ebookItem.buttonText.text}</span>
                     <img 
                       src={ebookItem.buttonText.icon} 
                       alt="Button Icon" 
-                      className={ebookItem.comingSoon ? styles.soonIcon : styles.downloadIcon} 
+                      className={styles.downloadIcon} 
                     />
-                  </>
+                  </a>
                 )}
-              </button>
-              <img 
-                src={ebookItem.icon2.icon} 
-                alt="Arrow Icon" 
-                className={styles.likeicon} 
-              />
-            </div>
-
+                <img 
+                  src={ebookItem.icon2.icon} 
+                  alt="Arrow Icon" 
+                  className={styles.likeicon} 
+                />
+              </div>
             </div>
           </div>
         ))}

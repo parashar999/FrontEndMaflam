@@ -46,12 +46,16 @@ const Home = () => {
           <SuccessPartners />
           <LearnAbout />
           <MaflamInstructors />
+          <div className={Styles.BlogContainer}>
           <HomeScreenCarousel />
           <BlogContainer />
           <HomeCommunityCarousel />
+          </div>
           <CarouselCommunity />
+          <div className={Styles.Footer}>
           <Faqs />
           <Footer />
+          </div>
           {/* <SubFooter/> */}
         </div>
       </HomePageProvider>
