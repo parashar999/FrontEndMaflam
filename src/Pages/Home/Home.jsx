@@ -1,4 +1,4 @@
-import  { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HomeHero from "../../Component/HomeHero/HomeHero";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
@@ -24,12 +24,11 @@ import {
 } from "../../store/HomePageContext.jsx";
 
 const Home = () => {
-  const {  homeScreenDetails, loading, error } = useContext(HomePageContext);
+  const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
   useEffect(() => {
     if (homeScreenDetails) {
       console.log("Home Screen Details:", homeScreenDetails);
-      
     }
   }, [homeScreenDetails]);
 
@@ -62,9 +61,6 @@ const Home = () => {
 
 export default Home;
 
-
-
-
 // import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
 // import Navbar from "../../Component/Navbar/Navbar";
 // import SuccessPartners from "../../Component/SuccessPartners/SuccessPartners";
@@ -85,35 +81,32 @@ export default Home;
 // import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
 // import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 
-
 // const Home = () => {
 //   return (
 //     <div className={Styles.Home}>
 //       <Navbar></Navbar>
-//       <HomeHero></HomeHero> 
+//       <HomeHero></HomeHero>
 //        <LearnMaflam></LearnMaflam>
 //       <ViewCourses></ViewCourses>
 //       <CourseGrid></CourseGrid>
 //       <Fundamental></Fundamental>
 //       <Ourservices></Ourservices>
 //       <SuccessPartners></SuccessPartners>
-//       <LearnAbout></LearnAbout> 
+//       <LearnAbout></LearnAbout>
 //        <MaflamInstructors></MaflamInstructors>
-//       <HomeScreenCarousel /> 
+//       <HomeScreenCarousel />
 //       <BlogContainer></BlogContainer>
 //       <HomeCommunityCarousel></HomeCommunityCarousel>
 //       <CarouselCommunity></CarouselCommunity>
 
 //       <Faqs></Faqs>
-//       <Footer></Footer> 
-   
+//       <Footer></Footer>
+
 //     </div>
 //   );
 // };
 
 // export default Home;
-
-
 
 // import React, { useState, useEffect } from "react";
 // import Navbar from "../../Component/Navbar/Navbar";
@@ -135,16 +128,15 @@ export default Home;
 // import Styles from "./Home.module.css";
 
 // const Home = () => {
-//   const [language, setLanguage] = useState("ar"); 
-//   const [direction, setDirection] = useState("rtl"); 
-
+//   const [language, setLanguage] = useState("ar");
+//   const [direction, setDirection] = useState("rtl");
 
 //   useEffect(() => {
 //     if (language === "ar") {
-//       document.body.dir = "rtl"; 
+//       document.body.dir = "rtl";
 //       setDirection("rtl");
 //     } else {
-//       document.body.dir = "ltr"; 
+//       document.body.dir = "ltr";
 //       setDirection("ltr");
 //     }
 //   }, [language]);
