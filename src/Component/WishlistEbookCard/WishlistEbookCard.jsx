@@ -25,51 +25,32 @@ const WishlistEbookCard = () => {
   const { EbookDataTitle, ebook } = ebookPageContextDetails || {};
   const { title } = EbookDataTitle || { title: "Default Title" };
 
-  const loadMoreItems = () => {
-    setDisplayCount((prevCount) => prevCount + 8);
-  };
+
 
   return (
-    <div className={styles.container}>   
+    <>
+    <div className={styles.container}>  
+    <h1 className={styles.title}>E-Books</h1>
+
 
       <div className={styles.cardsContainer}>
+        
         {ebook?.slice(0, displayCount).map((ebookItem) => (
+            
           <div key={ebookItem.id} className={styles.card}>
             <img src={ebookItem.imgSrc} alt={ebookItem.title} className={styles.image} />
             <div className={styles.content}>
-              <p>{ebookItem.text}</p>
               <h3 className={styles.text}>{ebookItem.title}</h3>
-              <div className={styles.btn}>
-              {/* <button className={ebookItem.comingSoon ? styles.soonButton1 : styles.downloadButton}>
-                {ebookItem.comingSoon ? "Soon" : (
-                  <>
-                    <span className={styles.downbtnspan}>{ebookItem.buttonText.text}</span>
-                    <img 
-                      src={ebookItem.buttonText.icon} 
-                      alt="Button Icon" 
-                      className={ebookItem.comingSoon ? styles.soonIcon : styles.downloadIcon} 
-                    />
-                  </>
-                )}
-              </button> */}
-              {/* <img 
-                src={ebookItem.icon2.icon} 
-                alt="Arrow Icon" 
-                className={styles.likeicon} 
-              /> */}
-            </div>
+              
 
             </div>
           </div>
         ))}
       </div>
 
-      {ebook && displayCount < ebook.length && (
-        <button onClick={loadMoreItems} className={styles.loadMoreButton}>
-          Load More ({displayCount}/{ebook.length})
-        </button>
-      )}
+     
     </div>
+    </>
   );
 };
 

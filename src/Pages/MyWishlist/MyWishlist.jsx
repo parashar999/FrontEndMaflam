@@ -6,6 +6,7 @@ import MyProfileWishlist from '../../Component/MyProfileWishlist/MyProfileWishli
 import WishlistSpecializedCourses from '../../Component/WishlistSpecializedCourses/WishlistSpecializedCourses'
 import WishlistArticle from '../../Component/WishlistArticle/WishlistArticle'
 import WishlistEbookCard from '../../Component/WishlistEbookCard/WishlistEbookCard'
+import styles from "./MyWishlist.module.css"
 
 
 
@@ -19,10 +20,12 @@ function MyWishlist() {
     <div>
       <LanguageProvider >
         <Navbar />
+        <div className={styles.wishlistbg}>
         <MyProfileWishlist />
         <WishlistSpecializedCourses />
         <WishlistEbookCard />
         <WishlistArticle />
+        </div>
         <Footer />        
      </LanguageProvider>
 
