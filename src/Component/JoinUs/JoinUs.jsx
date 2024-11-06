@@ -3,6 +3,7 @@ import axios from "axios";
 import { AboutusPageContext } from "../../store/AboutUsPageContext";
 import styles from "./JoinUs.module.css";
 import { ToastContainer, toast } from "react-toastify";
+import joinUsIcon from "../../assets/joinUsIcon.png";
 
 const JoinUs = () => {
   const { aboutusScreenDetails, loading, error } =
@@ -52,7 +53,10 @@ const JoinUs = () => {
     >
       <div className={styles.container}>
         <div className={styles.JoinUsBox}>
-          <h2 className={styles.heading}>{joinTitle}</h2>
+          <div className={styles.flexbox}>
+            <img src={joinUsIcon} alt="" />
+            <h2 className={styles.heading}>{joinTitle}</h2>
+          </div>
           <div className={styles.serachoption}>
             <div className={styles.inputBox}>
               <input
