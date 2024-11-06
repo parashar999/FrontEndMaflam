@@ -58,7 +58,7 @@ line-height: 130%;
 .instructorImage {
   width: 97%;
   padding: 0px;
-  height: 300px !important;
+  height: 100%;
   height: auto;
   border-radius: 8px;
 }

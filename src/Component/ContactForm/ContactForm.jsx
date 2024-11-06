@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import styles from "./ContactForm.module.css";
 import { ContactUs2Context } from "../../store/ContactUs2Context";
+import downloadIcon from "../../assets/downloadIcon.png"; // Ensure this path is correct
 
 const ContactForm = () => {
   const { contactUs2ContextDetails, loading, error } =
@@ -45,8 +46,13 @@ const ContactForm = () => {
   const handlePhoneInput = (e) => {
     e.target.value = e.target.value.replace(/\D/g, ""); // Allow only numeric input
   };
+
   const handleSelect = (index, setter) => {
     setter((prev) => (prev === index ? null : index));
+  };
+
+  const triggerFileUpload = (id) => {
+    document.getElementById(id).click();
   };
 
   return (
@@ -86,7 +92,7 @@ const ContactForm = () => {
           {/* Job Role Options */}
           <div className={styles.inputGroup}>
             <label>
-              I Would Like to Join the world of Maflam as: <span>*</span>
+              {jobRoleTitle} <span>*</span>
             </label>
             <div className={styles.radioGroup}>
               {jobRoleCategories.map((role, index) => (
@@ -114,7 +120,7 @@ const ContactForm = () => {
 
           {/* Years of Experience */}
           <div className={styles.inputGroup}>
-            <label>Years of experience</label>
+            <label>{experienceTitle}</label>
             <div className={styles.radioGroup}>
               {experienceCategories.map((exp, index) => (
                 <button
@@ -139,24 +145,40 @@ const ContactForm = () => {
             <textarea id="coverLetter" placeholder={coverLetterPlaceholder} />
           </div>
 
-          {/* Resume */}
+          {/* Resume Upload Button */}
           <div className={styles.inputGroup}>
-            <label htmlFor="resume">
+            <label htmlFor="resumeUpload">
               {resumeTitle} <span>*</span>
             </label>
+            <button
+              type="button"
+              onClick={() => triggerFileUpload("resumeUpload")}
+              className={styles.downloadIcon}
+            >
+              <img src={downloadIcon} alt="Upload Resume" />
+            </button>
             <input
               type="file"
-              id="resume"
+              id="resumeUpload"
+              style={{ display: "none" }}
               onChange={(e) => handleFileUpload(e, setResume)}
             />
           </div>
 
-          {/* Portfolio */}
+          {/* Portfolio Upload Button */}
           <div className={styles.inputGroup}>
-            <label htmlFor="portfolio">{portfolioTitle}</label>
+            <label htmlFor="portfolioUpload">{portfolioTitle}</label>
+            <button
+              type="button"
+              onClick={() => triggerFileUpload("portfolioUpload")}
+              className={styles.downloadIcon}
+            >
+              <img src={downloadIcon} alt="Upload Portfolio" />
+            </button>
             <input
               type="file"
-              id="portfolio"
+              id="portfolioUpload"
+              style={{ display: "none" }}
               onChange={(e) => handleFileUpload(e, setPortfolio)}
             />
           </div>

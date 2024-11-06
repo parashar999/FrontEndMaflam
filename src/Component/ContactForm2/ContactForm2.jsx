@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ContactForm2.module.css";
+import downloadIcon from "../../assets/downloadIcon.png";
 
 const ContactForm2 = () => {
   const [formData, setFormData] = useState({
@@ -24,27 +25,30 @@ const ContactForm2 = () => {
     resumeFile: null,
     portfolioFile: null,
   });
-
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    setFormData({
-      ...formData,
-      [name]: files[0],
-    });
+
+  // Trigger file input by button click
+  const triggerFileUpload = (inputId) => {
+    document.getElementById(inputId).click();
+  };
+
+  // Handle file upload and set file in form data
+  const handleFileUpload = (e, setFileField) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [setFileField]: e.target.files[0],
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
   };
-
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Apply for Maflam Training Program</h2>
@@ -510,27 +514,39 @@ const ContactForm2 = () => {
 
         {/* Resume Upload */}
         <div className={styles.inputGroup}>
-          <label htmlFor="resumeFile">
+          <label htmlFor="resumeUpload">
             Resume<span>*</span>
           </label>
+          <button
+            type="button"
+            onClick={() => triggerFileUpload("resumeUpload")}
+            className={styles.downloadIcon}
+          >
+            <img src={downloadIcon} alt="Upload Resume" />
+          </button>
           <input
             type="file"
-            id="resumeFile"
-            name="resumeFile"
-            onChange={handleFileChange}
-            className={styles.fileUpload}
+            id="resumeUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, "resumeFile")}
           />
         </div>
 
         {/* Portfolio Upload */}
         <div className={styles.inputGroup}>
-          <label htmlFor="portfolioFile">Portfolio</label>
+          <label htmlFor="portfolioUpload">Portfolio</label>
+          <button
+            type="button"
+            onClick={() => triggerFileUpload("portfolioUpload")}
+            className={styles.downloadIcon}
+          >
+            <img src={downloadIcon} alt="Upload Portfolio" />
+          </button>
           <input
             type="file"
-            id="portfolioFile"
-            name="portfolioFile"
-            onChange={handleFileChange}
-            className={styles.fileUpload}
+            id="portfolioUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, "portfolioFile")}
           />
         </div>
 
