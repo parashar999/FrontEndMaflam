@@ -34,7 +34,7 @@ const Navbar = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [navItems1, setNavItems1] = useState([]);
   const [user, setUser] = useState(null);
-  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false); // Profile submenu state
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
 
