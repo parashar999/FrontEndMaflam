@@ -50,11 +50,11 @@ const ContactUS = () => {
           <ContactUsContextProvider>
             <Navbar></Navbar>
             <HeroContact></HeroContact>
-            <ContactInformation></ContactInformation>
             <div className={styles.container}>
+              <ContactInformation></ContactInformation>
               <MaflanContent></MaflanContent>
-              <JoinUs></JoinUs>
             </div>
+            <JoinUs></JoinUs>
             <Footer></Footer>
           </ContactUsContextProvider>
         </AboutusPageProvider>

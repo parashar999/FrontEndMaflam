@@ -49,7 +49,7 @@
   }
   
   .card {
-    background-image: url("../../assets/googleBackground.png");
+    /* background-image: url("../../assets/googleBackground.png"); */
     background-size: cover;
     padding: 40px;
     width: 330px;
@@ -61,12 +61,13 @@
     text-align: center;
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease-in-out; 
+    background: linear-gradient(331deg, #091D2C 7.84%, #173434 92.51%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .card:hover{
     transform: scale(1.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: transparent;
+    background: linear-gradient(1deg, rgba(9, 29, 44, 0.90) 0.65%, rgba(44, 102, 109, 0.90) 108.99%), lightgray 50% / cover no-repeat;
   }
   
   .cardIcon {
