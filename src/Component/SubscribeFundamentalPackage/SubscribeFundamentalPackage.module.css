@@ -1,0 +1,83 @@
+.maincontainer {
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+    text-align: center; 
+  }
+  .image {
+    
+    
+    width: 90%;
+    height: auto;
+    
+  }
+  
+  .textOverlay {
+    width: 1205px;
+
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    padding: 10px;
+    font-size: 50px; 
+    text-align: center;
+    border-radius: 5px; 
+    font-weight: 700;
+    margin-top: 200px;
+  }
+  
+  .subscribeButton {
+    position: relative;
+    box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
+    border-radius: 64px;
+    background-color: #39fffb;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    color: #061c2b;
+    font-family: 'Work Sans', sans-serif;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px; 
+  }
+  
+
+
+  
+  /* Responsive styling for text overlay */
+  @media (max-width: 768px) {
+    .textOverlay {
+      font-size: 2rem; /* Smaller font size on medium screens */
+      margin-top: 120px;
+      text-align: center;
+      padding-left: 300px;
+      padding-right: 300px;
+    }
+    .subscribeButton {
+        padding: 16px 24px; /* Smaller padding on medium screens */
+        font-size: 16px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .textOverlay {
+      font-size: 1.5rem; /* Even smaller font size for mobile screens */
+      margin-top: 50px;
+      padding: 5px;
+      text-align: center;
+      padding-left: 350px;
+      padding-right: 350px;
+    }
+    .subscribeButton {
+        padding: 12px 20px; /* Smaller padding for mobile screens */
+        font-size: 15px;
+        margin-top: 20px;
+      }
+  }
+  
+  
+  
+ 
