@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useContext } from "react";
 import styles from "./ContactForm2.module.css";
 import downloadIcon from "../../assets/downloadIcon.png";
+import { LanguageContext } from "../LanguageContext/LanguageContext";
 
 const ContactForm2 = () => {
   const [formData, setFormData] = useState({
@@ -49,6 +51,8 @@ const ContactForm2 = () => {
     e.preventDefault();
     console.log(formData);
   };
+  const { language, direction, toggleLanguage } = useContext(LanguageContext);
+  const btnText = language === "en" ? "Upload file" : "تحميل الملف";
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Apply for Maflam Training Program</h2>
@@ -517,13 +521,16 @@ const ContactForm2 = () => {
           <label htmlFor="resumeUpload">
             Resume<span>*</span>
           </label>
-          <button
-            type="button"
-            onClick={() => triggerFileUpload("resumeUpload")}
-            className={styles.downloadIcon}
-          >
-            <img src={downloadIcon} alt="Upload Resume" />
-          </button>
+          <div className={styles.imgUpload}>
+            <button
+              type="button"
+              onClick={() => triggerFileUpload("resumeUpload")}
+              className={styles.downloadIcon}
+            >
+              <img src={downloadIcon} alt="Upload Resume" />
+            </button>
+            <p>{btnText}</p>
+          </div>
           <input
             type="file"
             id="resumeUpload"
@@ -534,14 +541,17 @@ const ContactForm2 = () => {
 
         {/* Portfolio Upload */}
         <div className={styles.inputGroup}>
-          <label htmlFor="portfolioUpload">Portfolio</label>
-          <button
-            type="button"
-            onClick={() => triggerFileUpload("portfolioUpload")}
-            className={styles.downloadIcon}
-          >
-            <img src={downloadIcon} alt="Upload Portfolio" />
-          </button>
+          <label htmlFor="portfolioUpload">Portfolio</label>{" "}
+          <div className={styles.imgUpload}>
+            <button
+              type="button"
+              onClick={() => triggerFileUpload("portfolioUpload")}
+              className={styles.downloadIcon}
+            >
+              <img src={downloadIcon} alt="Upload Portfolio" />
+            </button>
+            <p>{btnText}</p>
+          </div>
           <input
             type="file"
             id="portfolioUpload"

@@ -135,6 +135,11 @@ box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
 .submitButton:hover {
   background-color: #00c9c9;
 }
+.imgUpload{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /* Responsive Styles */
 

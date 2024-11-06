@@ -171,6 +171,11 @@
 .submitButton:hover {
     background-color: #00c9c9;
 }
+.imgUpload{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
