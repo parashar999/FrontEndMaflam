@@ -49,6 +49,8 @@ import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
 import EbookTwo from "./Pages/EbookTwo/EbookTwo.jsx";
+import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
+import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
 
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
@@ -198,7 +200,16 @@ const App = () => {
       <Route path="/rep" element={<RepresentationCourseDetail />} />
       <Route path="/mycertificate" element={<MyCertificate />} />
       <Route path="/personalinformation" element={<PersonalInformation />} />
-      <Route path="/filmproduction" element={<FilmProduction />} />
+
+      <Route path="/filmproduction" element={
+        <LanguageProvider>
+          <FilmProductionProvider>
+            <AboutusPageProvider> 
+          <FilmProduction />
+          </AboutusPageProvider>
+          </FilmProductionProvider>
+        </LanguageProvider>
+        } />
       <Route path="/ebooktwo" element={<EbookTwo />} />
 
       <Route
@@ -268,6 +279,23 @@ const App = () => {
       <Route path="/paymentgateway" element={<PaymentGateWayApi />} />
       <Route path="/mycourses" element={<MyCousesPages />} />
       <Route path="/pricing" element={<PricingDetails />} />
+
+      <Route
+        path="/mywishlist"
+        element={
+          <LanguageProvider>
+
+            <HomePageProvider>
+            <EbookPageContextProvider>
+              <AboutusPageProvider> 
+
+              <MyWishlist />
+              </AboutusPageProvider>
+              </EbookPageContextProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
     </Routes>
   );
 };

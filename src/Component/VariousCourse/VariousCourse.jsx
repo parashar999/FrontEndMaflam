@@ -1,10 +1,14 @@
 import { useContext } from "react";
 import styles from "./VariousCourse.module.css";
 import { PricingPageContext } from "../../store/PricingPageContext";
+import { useNavigate } from "react-router-dom"; 
+
 
 const VariousCourse = () => {
   const { pricingPageContextDetails, loading, error } =
     useContext(PricingPageContext);
+    const navigate = useNavigate(); 
+
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
@@ -55,7 +59,14 @@ const VariousCourse = () => {
 </svg>&nbsp;
 
                   <p>{course.estimatedLearningTime?.time}</p>
-                  <button className={styles.buyNow}>{buttonTitle}</button>
+                  {/* <button className={styles.buyNow}>{buttonTitle}</button> */}
+                  <button 
+                    className={styles.buyNow} 
+                    onClick={() => navigate('/filmproduction')} 
+                  >
+                    {buttonTitle}
+                  </button>
+
                 </div>
               </div>
             </div>
