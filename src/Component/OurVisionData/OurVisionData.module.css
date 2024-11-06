@@ -1,13 +1,15 @@
 .container {
   /* background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../assets/mafamvisual.png') no-repeat center center; */
   background-size: cover;
-  background-color: #030B11;
+  /* background-color: #030B11; */
   color: white;
-  min-height: 900px;
+  min-height: 800px;
   padding: 40px;
   max-width: 1500px;
   margin: 0 auto;
   text-align: center;
+  margin-top: -50px;
+  z-index: 999;
 }
 
 .headingSection h1 {
@@ -35,7 +37,7 @@ font-family: "Noto Kufi Arabic";
   font-weight: 400;
   line-height: 160%;
   text-align: start;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 552px;
 }
 
@@ -62,13 +64,14 @@ flex-shrink: 0;
   gap: 90px;
   margin-top:80px;
   flex-wrap: wrap;
+  /* padding: 100px; */
 }
 
 .card {
   background-color: #ffffff1a;
   border-radius: 8px;
-  padding: 20px;
-  width: 466px;
+  padding: 50px;
+  width: 580px;
   text-align: center;
   backdrop-filter: blur(10px);
 }
@@ -88,11 +91,12 @@ flex-shrink: 0;
 .card p {
   color: #FFF;
   font-family: "Noto Kufi Arabic";
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   text-align: start;
-  font-weight: 400;
-  line-height: 160%; 
+  font-weight: 300;
+  margin:auto;
+  /* line-height: 160%;  */
 /*  
   text-align: start;
   color: #FFF;

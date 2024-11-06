@@ -3,7 +3,7 @@
    .offersContainer {
     /* background-image: url("../../assets/mafamvisual.png"); */
     /* background-color: #0d0e1a;  */
-    min-height: 700px;
+    min-height: 500px;
     min-width: 350px;
     background-color:#030B11;
     padding: 50px 20px;
@@ -12,6 +12,7 @@
     margin: 0 auto;
     text-align: center;
     color: #fff;
+    margin-bottom: 0px;
   }
   
   .offersHeader h2 {
@@ -26,6 +27,7 @@ font-size: 36px;
 font-style: normal;
 font-weight: 700;
 line-height: 160%;
+margin-bottom:50px;
   }
   
   .offersHeader p {

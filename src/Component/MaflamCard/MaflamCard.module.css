@@ -3,21 +3,22 @@
    /* MaflamCard.module.css */
 .container {
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
   min-height: 500px;
   min-width: 400px;
-  max-width: 1500px;
+  max-width: 1250px;
 margin: 0  auto;
 }
 
 .container h2 {
   color: #FFF;
   text-align: center;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
+  
 }
 
 .title {
@@ -30,7 +31,7 @@ margin: 0  auto;
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .card {
@@ -41,19 +42,11 @@ margin: 0  auto;
 
 .image {
   width: 80%;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   transition: transform 0.3s ease;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: linear-gradient(transparent, rgba(112, 28, 146, 0.9));
-  color: #FFF;
-}
+/*  */
 
 .overlay p {
   text-align: center;
@@ -137,12 +130,12 @@ margin: 0  auto;
   .card {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    /* border-radius: 10px; */
   }
   
   .image {
     width: 70%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition: transform 0.3s ease;
   }
   
