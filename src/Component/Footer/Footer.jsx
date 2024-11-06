@@ -281,7 +281,7 @@ const Footer = () => {
           ))}
           <hr className={styles.footerHr} />
         </div>
-
+         <div></div>
         <div className={styles.footerLinks}>
           <div className={styles.footerBottom}>
             <p>{copyrighttext}</p>
