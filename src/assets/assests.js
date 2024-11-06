@@ -173,10 +173,15 @@ import showcase from "./showcase.png"
 import onebooklet from "./onebooklet.png"
 import twobooklet from "./twobooklet.png"
 import threebooklet from "./threebooklet.png"
+import filmvideoimg from "./filmvideoimg.png"
+import subscribefundamentalpackage from "./subscribefundamentalpackage.png"
 
 
 
 export const assests = {
+  subscribefundamentalpackage,
+  
+  filmvideoimg,
   threebooklet,
   twobooklet,
   onebooklet,
@@ -1126,3 +1131,16 @@ export const aboutInstructorData = {
     " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
   ],
 };
+
+export const FilmProductionInstructorData = {
+  name: "Ayman khoja",
+  details: [
+    "A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017.",
+    "  Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments.",
+    " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
+  ],
+};
+
+export const FilmProductionlearnData = [
+  "In this course, you will learn the fundamentals of production and the role of producers in filmmaking. You'll master financial aspects through effective planning and budgeting, as well as creating precise schedules. Additionally, you'll develop crucial skills for overseeing the film at every stage, working with distributors, and protecting the film's intellectual property rights. You’ll also cover other important details, and you'll have access to downloadable files and worksheets for practical exercises to enhance your skills.",
+];
