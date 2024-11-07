@@ -75,13 +75,28 @@ import styles from './FundamentalFilmProduction.module.css';
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { CiClock2 } from "react-icons/ci";
 import { FilmProductionContext } from '../../store/FilmProductionContext';
+import auth from "../../Auth/Auth";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const FundamentalFilmProduction = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { filmproductionScreenDetails, loading, error } = useContext(FilmProductionContext);
-
+    const userDetails = auth.getAuthData();
+    const navigate = useNavigate();
+    
     const toggleContent = () => {
         setIsOpen(!isOpen);
+    };
+    
+    const checkoutpage = () => {
+      console.log("Button was clicked");
+      if (userDetails) {
+        navigate("/checkout");
+      } else {
+        navigate("/login");
+      }
     };
 
     if (loading) return <p>Loading...</p>;
@@ -133,7 +148,7 @@ const FundamentalFilmProduction = () => {
                         <img src={mainCourse?.photo || ''} alt="Video" />
                         <div className={styles.videocontent}>
                             <p>{summaryData?.summary || 'No summary available.'}</p>
-                            <button className={styles.subcribebtn}><FaShoppingCart /> &nbsp;&nbsp;{summaryData?.buttonText || 'Subscribe'}</button>
+                            <button onClick={checkoutpage} className={styles.subcribebtn}><FaShoppingCart /> &nbsp;&nbsp;{summaryData?.buttonText || 'Subscribe'}</button>
                             <button className={styles.addtowishlist}><FaHeart />&nbsp;&nbsp;{summaryData?.wishlist || 'Add to wishlist'}</button>
                         </div>
                     </div>
