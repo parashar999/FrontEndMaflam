@@ -1,10 +1,15 @@
 
+
+
 .container {
-  padding: 12% 12%; 
+  /* padding: % 12%;  */
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url("../../assets/ebookBackground.png") no-repeat center center;
   background-size: cover;
   background-color: black;
+  padding-left: 140px;
+  padding-right: 110px;
+  padding-top: 150px;
 }
 
 .containerHeader {
@@ -39,7 +44,13 @@
   overflow: hidden;
   flex-shrink: 0;
   max-width: 100%;
-  padding: 10px;  
+
+
+
+
+
+
+  
 }
 
 .image {
@@ -78,7 +89,7 @@
   font-size: 18px;
   line-height: 160%;
   display: inline-block;
-  /* font-family: 'Work Sans'; */
+  font-family: 'Work Sans';
   color: #fff;
   text-align: left;
   height: 59px;
@@ -97,14 +108,19 @@
   font-weight: 900;
   display: flex;
   flex-direction: row;
-  padding: 8px ;
+  padding: 5px ;
   box-sizing: border-box;
-  font-size: 13px;
+  font-size: 17px;
+  letter-spacing: -0.02em;
   color: #061c2b;
-  text-align: center;
-  /* font-family: 'Sans Serif'; */
+  font-family: 'Sans Serif';
+  padding-left: 10px;
+  
 }
-
+.downloadIcon{
+  margin-top: 5px;
+  padding-left: 5px;
+}
 .downloadsvg {
   margin-top: 20px;
 }
@@ -120,6 +136,13 @@
   border: none;
   padding: 10px 20px;
   cursor: not-allowed;
+
+
+
+
+
+
+
   width: 338px;
 position: relative;
 font-size: 20px;
@@ -134,7 +157,12 @@ display: inline-block;
 button:hover {
   opacity: 0.9;
 }
-
+.likeicon{
+  margin-top: 20px;
+  margin-left: 4px;
+  width: 35px;
+  height: 42px;
+}
   
 .loadMoreButton {
   font-family: 'Noto Kufi Arabic';
@@ -155,16 +183,6 @@ button:hover {
   height:75px;
 }
 
-.downbtnspan{
-  margin: 0  auto;
-  text-align: center;
-}
-
-.likeicon{
-  height: 50px;
-  width: 50px;
-  margin:auto 20px;
-}
 
 /* Responsive Media Queries */
 @media (max-width: 1200px) {
