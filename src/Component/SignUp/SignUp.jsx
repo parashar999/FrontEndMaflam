@@ -1,25 +1,23 @@
-
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"; // Ensure axios is imported
+import axios from "axios";
 import styles from "./SignUp.module.css";
 import stylesArabic from "./SignUpArabic.module.css";
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
-
 
 const SignUp = () => {
   const { singupPageContextDetails, loading, error: apiError } = useContext(SingupPageContext);
-  const { language} = useContext(LanguageContext);
-  if (loading) return <p>Loading...</p>; // Handle loading state
-  if (apiError) return <p>Error loading data</p>; // Handle error state
+  const { language } = useContext(LanguageContext);
   
-  const stylesSelected = language === "ar"?stylesArabic:styles;
-  // Extract relevant data from the context API
+  const navigate = useNavigate();
+  
+  const stylesSelected = language === "ar" ? stylesArabic : styles;
+  
   const signUpData = singupPageContextDetails?.signUpData || [];
   const welcomeTitle = signUpData[0]?.title || "Welcome";
   const subtitleText = signUpData[0]?.description || "Start your journey now and learn filmmaking.";
@@ -31,14 +29,9 @@ const SignUp = () => {
   const continueButtonLabel = signUpData[6]?.title || "Continue";
   const orText = signUpData[7]?.title || "or";
   const googleLoginText = signUpData[8]?.title || "Continue with Google";
-  const appleLoginText = signUpData[9]?.title || "Continue with Apple";
-  const facebookLoginText = signUpData[10]?.title || "Continue with Facebook";
   const signInPrompt = signUpData[11]?.title || "Already have an account?";
   const signInText = signUpData[11]?.signInText || "Sign in";
 
-  const navigate = useNavigate();
-
-  // State management for the form fields
   const [usernameInEng, setUsername] = useState("");
   const [emailId, setEmailId] = useState("");
   const [password, setPassword] = useState("");
@@ -46,138 +39,63 @@ const SignUp = () => {
   const [phone, setPhone] = useState("");
   const [dateofBirth, setDateofBirth] = useState({ day: '', month: '', year: '' });
 
-  const [error, setError] = useState("");
-  const [popupMessage, setPopupMessage] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Format dateofBirth for API submission
     const formattedDOB = `${dateofBirth.year}-${dateofBirth.month.padStart(2, '0')}-${dateofBirth.day.padStart(2, '0')}`;
 
     try {
       const response = await axios.post(
         "https://backend.maflam.com/maflam/sign-up",
         {
-          usernameInEng ,
+          usernameInEng,
           emailId,
           password,
           confirmPassword,
           phone,
-          dateofBirth: formattedDOB, 
+          dateofBirth: formattedDOB,
         }
       );
 
-      toast.success(response.data.message);
-      const data = response.data;
-      if (data) {
-        // toast.success(data.message)
-        toast.success(data.message || "Sign Up Successful!");
-        alert("Sign Up Successfully");
-        setPopupMessage("Sign Up Successfully");
-        setUsername("");
-        setEmailId("");
-        setPassword("");
-        setConfirmPassword("");
-        setPhone("");
-        setDateofBirth({ day: '', month: '', year: '' }); // Reset date fields
-        navigate("/login");
-      
-      } else {
-        throw new Error("Invalid response from server");
-      }
-      toast.success(response.data.message);
+      toast.success(response.data.message || "Sign Up Successful!");
+      setUsername("");
+      setEmailId("");
+      setPassword("");
+      setConfirmPassword("");
+      setPhone("");
+      setDateofBirth({ day: '', month: '', year: '' });
+      navigate("/login");
     } catch (err) {
-      console.error("Sign Up Error:", err);
-
       const errorMessage = err.response?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
-      // setError("Sign Up failed. Please check your details.");
     }
   };
 
-  function SignIn() {
-    const handleSuccess = (credentialResponse) => {
-      // Handle the successful login here
-      console.log('Google login successful', credentialResponse);
-    };
-  
-    const handleError = () => {
-      // Handle login errors here
-      console.log('Google login failed');
-    };
-  
-    return (
-      <div className={stylesSelected.socialLogin}>
-      <button className={stylesSelected.socialButton}>
-        <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
-        <span>&nbsp;{googleLoginText}</span>
-      </button>
-      {/* <button className={styles.socialButton}>
-        <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
-      </button> */}
-      {/* <button className={styles.socialButton}>
-        <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
-        <span>&nbsp;{facebookLoginText}</span>
-      </button> */}
-    </div>
-    );
-  }
+  const handleGoogleLoginSuccess = async (credentialResponse) => {
+    try {
+      const response = await axios.post(
+        "https://backend.maflam.com/maflam/sign-up",
+        { googleCredential: credentialResponse.credential }
+      );
 
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible(!isPasswordVisible);
+      toast.success(response.data.message || "Google Sign Up Successful!");
+      navigate("/login");
+    } catch (err) {
+      const errorMessage = err.response?.data?.message || err.message;
+      toast.error(`Error: ${errorMessage}`);
+    }
+  };
+
+  const handleGoogleLoginError = () => {
+    toast.error("Google login failed. Please try again.");
   };
 
   const handleDOBChange = (e) => {
     const { name, value } = e.target;
     setDateofBirth((prev) => ({ ...prev, [name]: value }));
   };
-  
-  const handleGoogleLogin=async(e)=>{
-    try {
-      const response = await axios.post(
-        "https://backend.maflam.com/maflam/sign-up",
-        {
-          usernameInEng ,
-          emailId,
-          password,
-          confirmPassword,
-          phone,
-          dateofBirth: formattedDOB, 
-        }
-      );
 
-      toast.success(response.data.message);
-      const data = response.data;
-      if (data) {
-        // toast.success(data.message)
-        toast.success(data.message || "Sign Up Successful!");
-        alert("Sign Up Successfully");
-        setPopupMessage("Sign Up Successfully");
-        setUsername("");
-        setEmailId("");
-        setPassword("");
-        setConfirmPassword("");
-        setPhone("");
-        setDateofBirth({ day: '', month: '', year: '' }); // Reset date fields
-        navigate("/login");
-      
-      } else {
-        throw new Error("Invalid response from server");
-      }
-      toast.success(response.data.message);
-    } catch (err) {
-      console.error("Sign Up Error:", err);
-
-      const errorMessage = err.response?.data?.message || err.message;
-      toast.error(`Error: ${errorMessage}`);
-      // setError("Sign Up failed. Please check your details.");
-    }
-
-  }
   return (
     <div className={stylesSelected.container}>
       <div className={stylesSelected.formWrapper}>
@@ -213,45 +131,21 @@ const SignUp = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            {/* <div
-              className={stylesSelected.eyeIcon}
-              onClick={togglePasswordVisibility}
-              role="button"
-              aria-label="Toggle password visibility"
-            /> */}
           </div>
 
           <label htmlFor="Confirm Password">{confirmPasswordLabel}</label>
-          <div className={stylesSelected.passwordContainer}>
-          {/* <div
-              className={stylesSelected.eyeIcon}
-              onClick={togglePasswordVisibility}
-              role="button"
-              aria-label="Toggle password visibility"
-            /> */}
-            <input
-              type={isPasswordVisible ? "text" : "password"}
-              placeholder={confirmPasswordLabel}
-              className={stylesSelected.input}
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            
-          </div>
-
-          {/* <label htmlFor="Phone">Phone</label>
           <input
-            type="text"
-            placeholder="Phone"
-            className={styles.input}
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          /> */}
+            type={isPasswordVisible ? "text" : "password"}
+            placeholder={confirmPasswordLabel}
+            className={stylesSelected.input}
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
 
           <div className={stylesSelected.dobWrapper}>
             <label htmlFor="dob">{dobLabel}</label>
             <div className={stylesSelected.dobInputs}>
-            <select
+              <select
                 name="year"
                 value={dateofBirth.year}
                 onChange={handleDOBChange}
@@ -268,7 +162,7 @@ const SignUp = () => {
                 name="month"
                 value={dateofBirth.month}
                 onChange={handleDOBChange}
-                className={styles.dobSelect}
+                className={stylesSelected.dobSelect}
               >
                 <option value="">Month</option>
                 {[...Array(12)].map((_, index) => (
@@ -281,7 +175,7 @@ const SignUp = () => {
                 name="day"
                 value={dateofBirth.day}
                 onChange={handleDOBChange}
-                className={styles.dobSelect}
+                className={stylesSelected.dobSelect}
               >
                 <option value="">Day</option>
                 {[...Array(31)].map((_, index) => (
@@ -290,41 +184,49 @@ const SignUp = () => {
                   </option>
                 ))}
               </select>
-             
-              
             </div>
           </div>
 
-          <button type="submit" className={styles.continueButton}>
+          <button type="submit" className={stylesSelected.continueButton}>
             {continueButtonLabel}
           </button>
         </form>
 
-        {error && <p className={styles.errorMessage}>{error}</p>}
-
-        <div className={styles.divider}>
-          <hr className={styles.hrLine} />
+        <div className={stylesSelected.divider}>
+          <hr className={stylesSelected.hrLine} />
           <span>{orText}</span>
-          <hr className={styles.hrLine} />
+          <hr className={stylesSelected.hrLine} />
         </div>
 
-        <div className={styles.socialLogin}>
-          <button className={styles.socialButton}>
-            <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
-            <span>&nbsp;{googleLoginText}</span>
+         <div className={stylesSelected.socialLogin}>
+          <GoogleLogin
+            onSuccess={handleGoogleLoginSuccess}
+            onError={handleGoogleLoginError}
+            render={({ onClick }) => (
+              <button onClick={onClick} className={stylesSelected.socialButton}>
+                <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
+                <span>&nbsp;{googleLoginText}</span>
+              </button>
+            )}
+          />
+        </div> 
+{/* 
+        <div className={stylesSelected.socialLogin}>
+          <button className={stylesSelected.socialButton}>
+            <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
+            <span>&nbsp;{googleLoginText}</span>  
           </button>
-          {/* <button className={styles.socialButton}>
+          <button className={styles.socialButton}>
             <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
             <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
-          </button> */}
-          {/* <button className={styles.socialButton}>
+          </button>
+          <button className={styles.socialButton}>
             <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
             <span>&nbsp;{facebookLoginText}</span>
-          </button> */}
-        </div>
-        
+          </button>
+        </div> */}
 
-        <div className={styles.signupPrompt}>
+        <div className={stylesSelected.signupPrompt}>
           <span>{signInPrompt}</span>
           <a href="/login">{signInText}</a>
         </div>
@@ -335,6 +237,345 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+
+// import React, { useState, useContext } from "react";
+// import { useNavigate } from "react-router-dom";
+// import axios from "axios"; // Ensure axios is imported
+// import styles from "./SignUp.module.css";
+// import stylesArabic from "./SignUpArabic.module.css";
+// import { assests } from "../../assets/assests.js";
+// import { SingupPageContext } from "../../store/SingupPageContext.jsx";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { GoogleLogin } from '@react-oauth/google';
+// import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
+
+
+// const SignUp = () => {
+//   const { singupPageContextDetails, loading, error: apiError } = useContext(SingupPageContext);
+//   const { language} = useContext(LanguageContext);
+//   if (loading) return <p>Loading...</p>; // Handle loading state
+//   if (apiError) return <p>Error loading data</p>; // Handle error state
+  
+//   const stylesSelected = language === "ar"?stylesArabic:styles;
+//   // Extract relevant data from the context API
+//   const signUpData = singupPageContextDetails?.signUpData || [];
+//   const welcomeTitle = signUpData[0]?.title || "Welcome";
+//   const subtitleText = signUpData[0]?.description || "Start your journey now and learn filmmaking.";
+//   const fullNameLabel = signUpData[1]?.title || "Full name";
+//   const emailLabel = signUpData[2]?.title || "Email";
+//   const passwordLabel = signUpData[3]?.title || "Password";
+//   const confirmPasswordLabel = signUpData[4]?.title || "Confirm Password";
+//   const dobLabel = signUpData[5]?.title || "Date of birth";
+//   const continueButtonLabel = signUpData[6]?.title || "Continue";
+//   const orText = signUpData[7]?.title || "or";
+//   const googleLoginText = signUpData[8]?.title || "Continue with Google";
+//   const appleLoginText = signUpData[9]?.title || "Continue with Apple";
+//   const facebookLoginText = signUpData[10]?.title || "Continue with Facebook";
+//   const signInPrompt = signUpData[11]?.title || "Already have an account?";
+//   const signInText = signUpData[11]?.signInText || "Sign in";
+
+//   const navigate = useNavigate();
+
+//   // State management for the form fields
+//   const [usernameInEng, setUsername] = useState("");
+//   const [emailId, setEmailId] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [confirmPassword, setConfirmPassword] = useState("");
+//   const [phone, setPhone] = useState("");
+//   const [dateofBirth, setDateofBirth] = useState({ day: '', month: '', year: '' });
+
+//   const [error, setError] = useState("");
+//   const [popupMessage, setPopupMessage] = useState("");
+//   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+//   // Handle form submission
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     // Format dateofBirth for API submission
+//     const formattedDOB = `${dateofBirth.year}-${dateofBirth.month.padStart(2, '0')}-${dateofBirth.day.padStart(2, '0')}`;
+
+//     try {
+//       const response = await axios.post(
+//         "https://backend.maflam.com/maflam/sign-up",
+//         {
+//           usernameInEng ,
+//           emailId,
+//           password,
+//           confirmPassword,
+//           phone,
+//           dateofBirth: formattedDOB, 
+//         }
+//       );
+
+//       toast.success(response.data.message);
+//       const data = response.data;
+//       if (data) {
+//         // toast.success(data.message)
+//         toast.success(data.message || "Sign Up Successful!");
+//         alert("Sign Up Successfully");
+//         setPopupMessage("Sign Up Successfully");
+//         setUsername("");
+//         setEmailId("");
+//         setPassword("");
+//         setConfirmPassword("");
+//         setPhone("");
+//         setDateofBirth({ day: '', month: '', year: '' }); // Reset date fields
+//         navigate("/login");
+      
+//       } else {
+//         throw new Error("Invalid response from server");
+//       }
+//       toast.success(response.data.message);
+//     } catch (err) {
+//       console.error("Sign Up Error:", err);
+
+//       const errorMessage = err.response?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
+//       // setError("Sign Up failed. Please check your details.");
+//     }
+//   };
+
+//   function SignIn() {
+//     const handleSuccess = (credentialResponse) => {
+//       // Handle the successful login here
+//       console.log('Google login successful', credentialResponse);
+//     };
+  
+//     const handleError = () => {
+//       // Handle login errors here
+//       console.log('Google login failed');
+//     };
+  
+//     return (
+//       <div className={stylesSelected.socialLogin}>
+//       <button className={stylesSelected.socialButton}>
+//         <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
+//         <span>&nbsp;{googleLoginText}</span>
+//       </button>
+//       {/* <button className={styles.socialButton}>
+//         <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
+//         <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
+//       </button> */}
+//       {/* <button className={styles.socialButton}>
+//         <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
+//         <span>&nbsp;{facebookLoginText}</span>
+//       </button> */}
+//     </div>
+//     );
+//   }
+
+//   const togglePasswordVisibility = () => {
+//     setIsPasswordVisible(!isPasswordVisible);
+//   };
+
+//   const handleDOBChange = (e) => {
+//     const { name, value } = e.target;
+//     setDateofBirth((prev) => ({ ...prev, [name]: value }));
+//   };
+  
+//   const handleGoogleLogin=async(e)=>{
+//     try {
+//       const response = await axios.post(
+//         "https://backend.maflam.com/maflam/sign-up",
+//         {
+//           usernameInEng ,
+//           emailId,
+//           password,
+//           confirmPassword,
+//           phone,
+//           dateofBirth: formattedDOB, 
+//         }
+//       );
+
+//       toast.success(response.data.message);
+//       const data = response.data;
+//       if (data) {
+//         // toast.success(data.message)
+//         toast.success(data.message || "Sign Up Successful!");
+//         alert("Sign Up Successfully");
+//         setPopupMessage("Sign Up Successfully");
+//         setUsername("");
+//         setEmailId("");
+//         setPassword("");
+//         setConfirmPassword("");
+//         setPhone("");
+//         setDateofBirth({ day: '', month: '', year: '' }); // Reset date fields
+//         navigate("/login");
+      
+//       } else {
+//         throw new Error("Invalid response from server");
+//       }
+//       toast.success(response.data.message);
+//     } catch (err) {
+//       console.error("Sign Up Error:", err);
+
+//       const errorMessage = err.response?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
+//       // setError("Sign Up failed. Please check your details.");
+//     }
+
+//   }
+//   return (
+//     <div className={stylesSelected.container}>
+//       <div className={stylesSelected.formWrapper}>
+//         <img src={assests.logo1} alt="resetlogo" className={stylesSelected.resetlogo} />
+//         <h3 className={stylesSelected.welcome}>{welcomeTitle}</h3>
+//         <p className={stylesSelected.subtitle}>{subtitleText}</p>
+
+//         <form className={stylesSelected.form} onSubmit={handleSubmit}>
+//           <label htmlFor="Full Name">{fullNameLabel}</label>
+//           <input
+//             type="text"
+//             placeholder={fullNameLabel}
+//             className={stylesSelected.input}
+//             value={usernameInEng}
+//             onChange={(e) => setUsername(e.target.value)}
+//           />
+
+//           <label htmlFor="Email">{emailLabel}</label>
+//           <input
+//             type="email"
+//             placeholder={emailLabel}
+//             className={stylesSelected.input}
+//             value={emailId}
+//             onChange={(e) => setEmailId(e.target.value)}
+//           />
+
+//           <label htmlFor="password">{passwordLabel}</label>
+//           <div className={stylesSelected.passwordContainer}>
+//             <input
+//               type={isPasswordVisible ? "text" : "password"}
+//               placeholder={passwordLabel}
+//               className={stylesSelected.input}
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//             />
+//             {/* <div
+//               className={stylesSelected.eyeIcon}
+//               onClick={togglePasswordVisibility}
+//               role="button"
+//               aria-label="Toggle password visibility"
+//             /> */}
+//           </div>
+
+//           <label htmlFor="Confirm Password">{confirmPasswordLabel}</label>
+//           <div className={stylesSelected.passwordContainer}>
+//           {/* <div
+//               className={stylesSelected.eyeIcon}
+//               onClick={togglePasswordVisibility}
+//               role="button"
+//               aria-label="Toggle password visibility"
+//             /> */}
+//             <input
+//               type={isPasswordVisible ? "text" : "password"}
+//               placeholder={confirmPasswordLabel}
+//               className={stylesSelected.input}
+//               value={confirmPassword}
+//               onChange={(e) => setConfirmPassword(e.target.value)}
+//             />
+            
+//           </div>
+
+//           {/* <label htmlFor="Phone">Phone</label>
+//           <input
+//             type="text"
+//             placeholder="Phone"
+//             className={styles.input}
+//             value={phone}
+//             onChange={(e) => setPhone(e.target.value)}
+//           /> */}
+
+//           <div className={stylesSelected.dobWrapper}>
+//             <label htmlFor="dob">{dobLabel}</label>
+//             <div className={stylesSelected.dobInputs}>
+//             <select
+//                 name="year"
+//                 value={dateofBirth.year}
+//                 onChange={handleDOBChange}
+//                 className={stylesSelected.dobSelect}
+//               >
+//                 <option value="">Year</option>
+//                 {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
+//                   <option key={year} value={year}>
+//                     {year}
+//                   </option>
+//                 ))}
+//               </select>
+//               <select
+//                 name="month"
+//                 value={dateofBirth.month}
+//                 onChange={handleDOBChange}
+//                 className={styles.dobSelect}
+//               >
+//                 <option value="">Month</option>
+//                 {[...Array(12)].map((_, index) => (
+//                   <option key={index + 1} value={index + 1}>
+//                     {index + 1}
+//                   </option>
+//                 ))}
+//               </select>
+//               <select
+//                 name="day"
+//                 value={dateofBirth.day}
+//                 onChange={handleDOBChange}
+//                 className={styles.dobSelect}
+//               >
+//                 <option value="">Day</option>
+//                 {[...Array(31)].map((_, index) => (
+//                   <option key={index + 1} value={index + 1}>
+//                     {index + 1}
+//                   </option>
+//                 ))}
+//               </select>
+             
+              
+//             </div>
+//           </div>
+
+//           <button type="submit" className={styles.continueButton}>
+//             {continueButtonLabel}
+//           </button>
+//         </form>
+
+//         {error && <p className={styles.errorMessage}>{error}</p>}
+
+//         <div className={styles.divider}>
+//           <hr className={styles.hrLine} />
+//           <span>{orText}</span>
+//           <hr className={styles.hrLine} />
+//         </div>
+
+        // <div className={styles.socialLogin}>
+        //   <button className={styles.socialButton}>
+        //     <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
+        //     <span>&nbsp;{googleLoginText}</span>
+        //   </button>
+        //   {/* <button className={styles.socialButton}>
+        //     <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
+        //     <span>&nbsp;&nbsp;&nbsp;&nbsp;{appleLoginText}</span>
+        //   </button> */}
+        //   {/* <button className={styles.socialButton}>
+        //     <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
+        //     <span>&nbsp;{facebookLoginText}</span>
+        //   </button> */}
+        // </div>
+        
+
+//         <div className={styles.signupPrompt}>
+//           <span>{signInPrompt}</span>
+//           <a href="/login">{signInText}</a>
+//         </div>
+//       </div>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
+
+// export default SignUp;
 
 
 
