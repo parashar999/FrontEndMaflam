@@ -1,10 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+
+import React, { useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; 
 import styles from "./EbooksCards.module.css";
 import { EbookPageContext } from "../../store/ebookPageContext";
+import auth from "../../Auth/Auth";
 
 const EbooksCards = () => {
   const { ebookPageContextDetails, setEbookPageContextDetails, loading, error } = useContext(EbookPageContext);
-  const [displayCount, setDisplayCount] = useState(8); // Show 8 items initially
+  const [displayCount, setDisplayCount] = useState(8); 
+  const navigate = useNavigate(); 
+  
+  // Get user details from the auth object
+  const userDetails = auth.getAuthData();
+  console.log("User Details: ", userDetails); 
 
   useEffect(() => {
     const fetchEbooks = async () => {
@@ -18,6 +26,20 @@ const EbooksCards = () => {
     };
     fetchEbooks();
   }, [setEbookPageContextDetails]);
+
+  // Function to handle download button click
+  const handleDownloadClick = (ebookUrl) => {
+    // Check if userDetails has a valid token (indicating the user is logged in)
+    if (!userDetails || !userDetails.token) {
+      // If not logged in, redirect to the login page
+      console.log("User not logged in, redirecting to login...");
+      navigate("/login");
+    } else {
+      // If logged in, proceed with the download
+      console.log("User logged in, downloading file...");
+      window.location.href = ebookUrl; 
+    }
+  };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
@@ -46,12 +68,9 @@ const EbooksCards = () => {
                 {ebookItem.comingSoon ? (
                   <button className={styles.soonButton1}>Soon</button>
                 ) : (
-                  <a
-                    href={ebookItem.ebookPdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleDownloadClick(ebookItem.ebookPdfUrl)} 
                     className={styles.downloadButton}
-                    style={{textDecoration:"none"}}
                   >
                     <span className={styles.downbtnspan}>{ebookItem.buttonText.text}</span>
                     <img 
@@ -59,7 +78,7 @@ const EbooksCards = () => {
                       alt="Button Icon" 
                       className={styles.downloadIcon} 
                     />
-                  </a>
+                  </button>
                 )}
                 <img 
                   src={ebookItem.icon2.icon} 
