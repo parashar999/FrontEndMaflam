@@ -77,15 +77,12 @@ import { CiClock2 } from "react-icons/ci";
 import { FilmProductionContext } from '../../store/FilmProductionContext';
 import auth from "../../Auth/Auth";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-
 
 const FundamentalFilmProduction = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { filmproductionScreenDetails, loading, error } = useContext(FilmProductionContext);
     const userDetails = auth.getAuthData();
     const navigate = useNavigate();
-    
     const toggleContent = () => {
         setIsOpen(!isOpen);
     };
@@ -101,6 +98,7 @@ const FundamentalFilmProduction = () => {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error loading data: {error.message}</p>;
+    
 
     const { courseData, lessonData } = filmproductionScreenDetails || {};
     const mainCourse = courseData ? courseData[0] : null;
@@ -148,7 +146,7 @@ const FundamentalFilmProduction = () => {
                         <img src={mainCourse?.photo || ''} alt="Video" />
                         <div className={styles.videocontent}>
                             <p>{summaryData?.summary || 'No summary available.'}</p>
-                            <button onClick={checkoutpage} className={styles.subcribebtn}><FaShoppingCart /> &nbsp;&nbsp;{summaryData?.buttonText || 'Subscribe'}</button>
+                            <button onClick={checkoutpage}  className={styles.subcribebtn}><FaShoppingCart /> &nbsp;&nbsp;{summaryData?.buttonText || 'Subscribe'}</button>
                             <button className={styles.addtowishlist}><FaHeart />&nbsp;&nbsp;{summaryData?.wishlist || 'Add to wishlist'}</button>
                         </div>
                     </div>
@@ -159,3 +157,4 @@ const FundamentalFilmProduction = () => {
 };
 
 export default FundamentalFilmProduction;
+    
