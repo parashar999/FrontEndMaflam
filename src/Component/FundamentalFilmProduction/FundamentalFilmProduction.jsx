@@ -75,17 +75,28 @@ import styles from './FundamentalFilmProduction.module.css';
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { CiClock2 } from "react-icons/ci";
 import { FilmProductionContext } from '../../store/FilmProductionContext';
+import auth from "../../Auth/Auth";
+import { useNavigate } from "react-router-dom";
 
 const FundamentalFilmProduction = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { filmproductionScreenDetails, loading, error } = useContext(FilmProductionContext);
+    const userDetails = auth.getAuthData();
+    const navigate = useNavigate();
 
     const toggleContent = () => {
         setIsOpen(!isOpen);
     };
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error loading data: {error.message}</p>;
+    if (error) return <p>Error loading data: {error.message}</p>; const checkoutpage = () => {
+        console.log("Button was clicked");
+        if (userDetails) {
+          navigate("/checkout");
+        } else {
+          navigate("/login");
+        }
+      };
 
     const { courseData, lessonData } = filmproductionScreenDetails || {};
     const mainCourse = courseData ? courseData[0] : null;
@@ -133,7 +144,7 @@ const FundamentalFilmProduction = () => {
                         <img src={mainCourse?.photo || ''} alt="Video" />
                         <div className={styles.videocontent}>
                             <p>{summaryData?.summary || 'No summary available.'}</p>
-                            <button className={styles.subcribebtn}><FaShoppingCart /> &nbsp;&nbsp;{summaryData?.buttonText || 'Subscribe'}</button>
+                            <button onClick={checkoutpage}  className={styles.subcribebtn}><FaShoppingCart /> &nbsp;&nbsp;{summaryData?.buttonText || 'Subscribe'}</button>
                             <button className={styles.addtowishlist}><FaHeart />&nbsp;&nbsp;{summaryData?.wishlist || 'Add to wishlist'}</button>
                         </div>
                     </div>
@@ -144,3 +155,4 @@ const FundamentalFilmProduction = () => {
 };
 
 export default FundamentalFilmProduction;
+    
