@@ -53,7 +53,7 @@ function FilmProduction() {
         <FundamentalFilmProduction />
         <FilmProductionInstructor />
         <FilmProductionCourseContent />
-        <SubscribeFundamentalPackage />
+        {/* <SubscribeFundamentalPackage /> */}
         <JoinUs />
         <Footer />    
         </AboutusPageProvider>
