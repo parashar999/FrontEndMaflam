@@ -33,7 +33,7 @@ const Footer = () => {
   };
 
   const purchasePolicy =
-    language === "ar" ? "شروط الاستخدام" : "Purchase policy";
+    language === "ar" ? "شروط الاستخدام" : "Purchase Policy";
   const helpCenter = language === "ar" ? "سياسة الخصوصية" : " Help Center";
   const Community =
     language === "ar" ? "مركز المساعدة" : "Community Guidelines";
