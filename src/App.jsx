@@ -34,7 +34,7 @@ import { CommunityGuidelinesProvider } from "./store/CommunityGuidelinesPageCont
 import CommunityGuidelinesPage from "./Pages/CommunityGuidelinesPage/CommunityGuidelinesPage.jsx";
 import { CheckoutPaymentContextProvider } from "./store/CheckoutPaymentContext.jsx";
 import { PricingPageContextProvider } from "./store/PricingPageContext.jsx";
-import { LoginPageContextProvider } from "./store/loginPageContext.jsx";
+import { LoginPageContextProvider } from "./store/LoginPageContext.jsx";
 import { SingupPageContextProvider } from "./store/SingupPageContext.jsx";
 import ContactUsPage2 from "./Pages/ContactUsPage2/ContactUsPage2.jsx";
 import ContactUsPage3 from "./Pages/ContactUsPage3/ContactUsPage3.jsx";
@@ -46,8 +46,12 @@ import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
 import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
 import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
 import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
-import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy.jsx";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+import EbookTwo from "./Pages/EbookTwo/EbookTwo.jsx";
+import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
+import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
+
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
@@ -196,7 +200,18 @@ const App = () => {
       <Route path="/rep" element={<RepresentationCourseDetail />} />
       <Route path="/mycertificate" element={<MyCertificate />} />
       <Route path="/personalinformation" element={<PersonalInformation />} />
-      <Route path="/filmproduction" element={<FilmProduction />} />
+
+      <Route path="/filmproduction" element={
+        <LanguageProvider>
+          <FilmProductionProvider>
+            <AboutusPageProvider> 
+          <FilmProduction />
+          </AboutusPageProvider>
+          </FilmProductionProvider>
+        </LanguageProvider>
+        } />
+      <Route path="/ebooktwo" element={<EbookTwo />} />
+
       <Route
         path="/ebooks"
         element={
@@ -232,14 +247,18 @@ const App = () => {
         }
       />
       <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
-      <Route path="/privacypolicy" element={
-        <LanguageProvider>
-          <HomePageProvider>
-            <PrivacyPolicyProvider>
-        <PrivacyPolicy />
-        </PrivacyPolicyProvider>
-        </HomePageProvider>
-        </LanguageProvider>} />
+      <Route
+        path="/privacypolicy"
+        element={
+          <LanguageProvider>
+            <HomePageProvider>
+              <PrivacyPolicyProvider>
+                <PrivacyPolicy />
+              </PrivacyPolicyProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/faqs" element={<FaqPage />} />
       <Route
         path="/checkout"
@@ -260,6 +279,23 @@ const App = () => {
       <Route path="/paymentgateway" element={<PaymentGateWayApi />} />
       <Route path="/mycourses" element={<MyCousesPages />} />
       <Route path="/pricing" element={<PricingDetails />} />
+
+      <Route
+        path="/mywishlist"
+        element={
+          <LanguageProvider>
+
+            <HomePageProvider>
+            <EbookPageContextProvider>
+              <AboutusPageProvider> 
+
+              <MyWishlist />
+              </AboutusPageProvider>
+              </EbookPageContextProvider>
+            </HomePageProvider>
+          </LanguageProvider>
+        }
+      />
     </Routes>
   );
 };

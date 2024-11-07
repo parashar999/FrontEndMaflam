@@ -11,12 +11,16 @@
   .formWrapper {
     padding: 2rem;
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 600px;
     width: 100%;
     color: #fff;
     text-align: center;
     backdrop-filter: blur(2px); 
     background-color: #ffffff15;
+    padding-right: 8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 8rem;
   }
   
   .logo {
@@ -115,8 +119,8 @@
   justify-content: center; 
   background-color: #BBFFFF; 
   color: #000; 
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  /* font-weight: bold; */
   border: none;
   border-radius: 5px; 
   padding: 0.75rem 1rem; 
@@ -192,6 +196,7 @@ input::placeholder {
 }
 
 .input {
+  background-color: #121d24; 
   width: 100%; 
   padding: 0.75rem 2.5rem; 
   border: none;
@@ -236,7 +241,7 @@ input::placeholder {
   padding: 0.75rem; 
   border-radius: 5px; 
   outline: none; 
-  background-color: #3d5c72;
+  background-color: #121d24;
   border: none;
   color: white;
 }

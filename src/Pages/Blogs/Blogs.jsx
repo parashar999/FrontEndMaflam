@@ -8,7 +8,7 @@ import PopularResources from "../../Component/PopularResources/PopularResources.
 import styles from "./Blogs.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext.jsx";
 import { AboutusPageProvider } from "../../store/AboutUsPageContext.jsx";
-import BlogPostHero1 from "../../Component/BlogPostHero1/BlogPostHero1.JSX";
+import BlogPostHero1 from "../../Component/BlogPostHero1/BlogPostHero1.jsx";
 // import BlogPostHero1 from "../../Component/BlogPostHero1/BlogPostHero1.JSX";
 // import BlogPostHero1 from "../../Component/BlogPostHero1/BlogPostHero1.JSX";
 const Blogs = () => {

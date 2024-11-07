@@ -1,23 +1,44 @@
-.coursesContainer {
-  /* margin-top: 50px; */
-  padding: 20px;
-  min-height: 800px;
-  border-radius: 8px;
-  max-width: 90%;
-  margin: 5% auto;
-  text-align: center;
-  margin-bottom: 0px;  
- 
-  max-width: 1900px;
-}
-
-.courseContainer {
-  background-image: url("../../assets/learnAbt.png");
+.coursecontainermain
+{
+  width:100vw;
+  display: flex;
+  justify-content: center;
   background-size: cover;
-  background-position: center;
-
+  background-image: url("../../assets/learnAbt.png");
+  background-position: bottom;
+  background-size: 140%;
+  padding-top: 75px;
+  padding-bottom: 150px;
+  position: relative;
+}
+.coursesContainer {
+ 
+  border-radius: 8px;
+  width: 90%;
+  text-align: center;
+  max-width: 1920px;
 }
 
+.loverlay {
+  position: absolute;
+  top: -75px; 
+  width: 100%;
+  height: 16%;
+  filter: blur(60px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1; /* Make sure overlay is above the video */
+}
+.boverlay {
+  position: absolute;
+  top: -75px; 
+  width: 100%;
+  height: 10%;
+  filter: blur(60px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1; /* Make sure overlay is above the video */
+}
 .coursesContainer h2 {
   margin-top: 30px;
   color: #FFF;
@@ -27,16 +48,19 @@
   font-style: normal;
   font-weight: 600;
   line-height: 160%;
-  padding: 20px;
+
   
 }
+
+
 .LearnMaflam{
   margin-top: 20px;
 }
 
 .LearnMaflam video {
-  width: 50%; 
-  /* max-width: 650px;  */
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1195px; 
   height: auto;
 
 }
@@ -75,5 +99,22 @@
     width: 100%; /* Full width for mobile screens */
     height: auto;
     margin-top: 20px; /* Reduce top margin for mobile */
+  }
+}
+
+@media (max-width:1220px)
+{
+  
+  .learnMaflamTitle
+  {
+    zoom: 0.8
+  }
+}
+
+@media (max-width:768px)
+{
+  .learnMaflamTitle
+  {
+    zoom: 0.5;
   }
 }

@@ -24,7 +24,7 @@ const HomeScreenCarousel = () => {
   const scrollLeft = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: -375, // Adjust this value based on your card width
+      left: -500, // Adjust this value based on your card width
       behavior: "smooth", // Smooth scroll effect
     });
   };
@@ -33,25 +33,26 @@ const HomeScreenCarousel = () => {
   const scrollRight = () => {
     sliderRef.current.scrollBy({
       top: 0,
-      left: 375, // Adjust this value based on your card width
+      left: 500, // Adjust this value based on your card width
       behavior: "smooth", // Smooth scroll effect
     });
   };
 
   return (
     <div className={styles.carouselcontainer}>
-      <Link className={styles.linking} to="/ebooks">{eBookletData.title}</Link>
+      <h2><Link className={styles.linking} to="/ebooks">{eBookletData.title}</Link></h2>
       <div className={styles.carousel}>
         {/* Left Arrow */}
-        <button className={styles.arrowLeft} onClick={scrollLeft}>
+        {/* <button className={styles.arrowLeft} onClick={scrollLeft}>
           &larr;
-        </button>
-
+        </button> */}
+        <div className={styles.roverlay}></div>
+        <div className={styles.overlay}></div>
         <div className={styles.sliderContainer} ref={sliderRef}>
-          <div className={styles.slider}>
+          {/* <div className={styles.slider}>
             {eBookletData.ebookVideoUrl?.map((videoUrl, index) => (
               <div key={index} className={styles.card}>
-                {/* Render video instead of image */}
+          
                <Link to="/ebooks">
                <video
                   src={videoUrl}
@@ -66,13 +67,61 @@ const HomeScreenCarousel = () => {
                </Link>
               </div>
             ))}
-          </div>
+          </div> */}
+         <div className={styles.cardL}>
+                {/* Render video instead of image */}
+               <Link to="/ebooks">
+               <video
+                  src={eBookletData.ebookVideoUrl[0]}
+                  // autoPlay
+                  muted
+                  loop
+                 
+                  playsInline
+                  className={styles.video} // Apply styling to video
+                  alt={`Ebook Video 1`}
+                />
+               </Link>
+               
+              </div>
+              <div className={styles.card}>
+                {/* Render video instead of image */}
+               <Link to="/ebooks">
+               <video
+                  src={eBookletData.ebookVideoUrl[1]}
+                  // autoPlay
+                  muted
+                  loop
+                 
+                  playsInline
+                  className={styles.video} // Apply styling to video
+                  alt={`Ebook Video 1`}
+                />
+               </Link>
+               
+              </div>
+              <div className={styles.cardL}>
+                {/* Render video instead of image */}
+               <Link to="/ebooks">
+               <video
+                  src={eBookletData.ebookVideoUrl[2]}
+                  // autoPlay
+                  muted
+                  loop
+               
+                  playsInline
+                  className={styles.video} // Apply styling to video
+                  alt={`Ebook Video 1`}
+                />
+               </Link>
+               
+              </div>
         </div>
 
         {/* Right Arrow */}
-        <button className={styles.arrowRight} onClick={scrollRight}>
+        {/* <button className={styles.arrowRight} onClick={scrollRight}>
           &rarr;
-        </button>
+        </button> */}
       </div>
       <div className={styles.contentpara}>
         <p>{eBookletData.description}</p>

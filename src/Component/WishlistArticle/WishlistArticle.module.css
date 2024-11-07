@@ -1,0 +1,58 @@
+.articleSection {
+    padding: 40px 0;
+    text-align: start;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .heading {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .articlesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .articleCard {
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 350px;
+
+    
+    
+  } 
+  
+
+   .articleImage {
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 261px;
+    object-fit: cover;
+    
+
+  }
+  
+  .articleContent {
+    padding: 20px;
+  }
+  
+  .readMore {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    
+  }
+  
+  .readMore:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+

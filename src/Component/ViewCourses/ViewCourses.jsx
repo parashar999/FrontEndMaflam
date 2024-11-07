@@ -15,7 +15,7 @@ const navigate = useNavigate()
 
 
     const Courses = ()=>{
-      navigate("/coursedetails")
+      navigate("/prc")
     }
 
   const getCardClassName = (index) => {
@@ -23,21 +23,17 @@ const navigate = useNavigate()
   };
 
   return (
+    <div className={styles.viewcoursecontainer}>
     <div className={styles.container}>
       <div className={styles.courseGrid}>
-        {coursesData.map((course, index) => (
+        {coursesData.slice(0,7).map((course, index) => (
           <div
             key={index}
             className={getCardClassName(index)}
             style={{
               backgroundImage: `url(${course.backgroundImage})`,
               backgroundSize: "cover",
-              borderRadius:"15px",
-//               width:" 197.667px",
-//               marginLeft:"50px",
-//               marginRight:"50px " ,
-// height: "143.593px",
-              
+              borderRadius:"10px",              
               backgroundPosition: "center",
               fontSize: "15px",
               color: "white",
@@ -49,7 +45,7 @@ const navigate = useNavigate()
       </div>
       <div className={styles.btnpadding}>
         <button  onClick={Courses} className={styles.fullWidthButton}>
-    <h5>      {viewAllCoursesTitle}</h5>
+        <p>  {viewAllCoursesTitle} </p>
         </button>
       </div>
       <div className={styles.playButtonContainer}>
@@ -90,6 +86,7 @@ const navigate = useNavigate()
             "Explore the paths and choose the one that's right for you"}
         </p>
       </div>
+    </div>
     </div>
   );
 }

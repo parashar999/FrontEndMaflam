@@ -13,6 +13,7 @@ const Faqs = () => {
   if (error) return <p>Error loading data</p>;
 
   const faqData = homeScreenDetails?.FAQData || [];
+  const faqTitle = homeScreenDetails?.FAQTitle || [];
 
   const handleToggle = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -20,7 +21,7 @@ const Faqs = () => {
 
   return (
     <div className={styles.faqContainer}>
-      <Link to="/faqs">{faqData[0].title}</Link>
+      <Link to="/faqs">{faqTitle.title}</Link>
       <div className={styles.faqList}>
         {faqData.map((item, index) => (
           <div
@@ -30,7 +31,7 @@ const Faqs = () => {
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={styles.question}>{item.title}</div>
+            <div className={styles.question}> + {item.title}</div>
             <div
               className={`${styles.answer} ${
                 activeIndex === index ? styles.showAnswer : ""

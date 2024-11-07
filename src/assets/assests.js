@@ -42,8 +42,8 @@ import course7 from "./course7.png";
 import course8 from "./course8.png";
 import course9 from "./course9.png";
 import filmaker from "./filmaker.png";
-import rectangle21 from "./rectangle21.png";
-import rectangle22 from "./rectangle22.png";
+import rectangle21 from "./Rectangle21.png";
+import rectangle22 from "./Rectangle22.png";
 import Google from "./Google.png";
 import Email from "./Email.png";
 import LinkedIn from "./LinkedIn.png";
@@ -57,6 +57,7 @@ import variousCourse6 from "./variousCourse6.png";
 import variousCourse7 from "./variousCourse7.png";
 import variousCourse8 from "./variousCourse8.png";
 import Visa from "./Visa.png";
+import filter from "./filter.png";
 import MasterCard from "./MasterCard.png";
 import Mada from "./Mada.png";
 import Checkoutbg from "./Checkoutbg.png";
@@ -75,7 +76,7 @@ import Blog3 from "./Blog3.png";
 import mainBlog from "./mainBlog.png";
 import Insights1 from "./Insights1.png";
 import Insights2 from "./Insights2.png";
-import Insights3 from "./insighs3.png";
+import Insights3 from "./Insighs3.png";
 import Popular1 from "./Popular1.png";
 import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
@@ -103,6 +104,7 @@ import carouselcard1 from "./CarouselCard1.png";
 import carouselcard2 from "./CarouselCard2.png";
 import carouselcard3 from "./CarouselCard3.png";
 import quotes from "./quotes icon.png";
+import quotesArabic from "./quotes iconar.png";
 import LearnMaflamImage from "./LearnMaflamImage.png";
 
 import maflamScreen from "./Maflam-Screen.png";
@@ -119,7 +121,7 @@ import FrameDiv4 from "./FrameDiv4.png";
 import FrameDiv5 from "./FrameDiv5.png";
 import FrameDiv6 from "./FrameDiv6.png";
 import FrameDiv7 from "./FrameDiv7.png";
-import logo1 from "./Logo1.png";
+import logo1 from "./logo1.png";
 import Footerlogo1 from "./footerlogo.png";
 import Magnifine from "./magnifine.png";
 import Globe from "./globe.png";
@@ -144,6 +146,8 @@ import  googlelogin from "./googlelogin.png"
 import  eyeicon from "./eyeicon.png"
 import  successtickmark from "./successtickmark.png"
 import  Arrow from "./Arrow.png"
+import  colorArrow from "./rightNavArrow.png"
+import  leftArrow from "./leftNavArrow.png"
 import  profilecourse from "./profilecourse.png"
 import  profilecoursefirst from "./profilecoursefirst.png"
 
@@ -163,9 +167,28 @@ import eventpic from "./eventpic.png"
 import instagramlogo from "./instagraplogo.png"
 import posdcost from "./podcost.png"
 import Maflammac from "./Maflammac.png"
+import heartlogo from "./heartlogo.png"
+import downarrow from "./downarrow.png"
+import showcase from "./showcase.png"
+import onebooklet from "./onebooklet.png"
+import twobooklet from "./twobooklet.png"
+import threebooklet from "./threebooklet.png"
+import filmvideoimg from "./filmvideoimg.png"
+import subscribefundamentalpackage from "./subscribefundamentalpackage.png"
+
+
 
 export const assests = {
+  subscribefundamentalpackage,
+  
+  filmvideoimg,
+  threebooklet,
+  twobooklet,
+  onebooklet,
+  showcase,
+  downarrow,
   instagram ,
+  heartlogo,
   instagramlogo,
   youtube,
   tiktok,
@@ -195,6 +218,7 @@ export const assests = {
   caraImg,
   Popular1,
   Popular2,
+  filter,
   logo1,
   Popular3,
   Popular4,
@@ -217,6 +241,8 @@ export const assests = {
   Rectangle42,
   Rectangle43,
   instructiobg,
+  colorArrow,
+  leftArrow,
   film,
   netflix,
   srmg,
@@ -288,6 +314,7 @@ export const assests = {
   carouselcard2,
   carouselcard3,
   quotes,
+  quotesArabic,
 
   videocrc,
   videocrc1,
@@ -1104,3 +1131,16 @@ export const aboutInstructorData = {
     " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
   ],
 };
+
+export const FilmProductionInstructorData = {
+  name: "Ayman khoja",
+  details: [
+    "A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017.",
+    "  Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments.",
+    " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
+  ],
+};
+
+export const FilmProductionlearnData = [
+  "In this course, you will learn the fundamentals of production and the role of producers in filmmaking. You'll master financial aspects through effective planning and budgeting, as well as creating precise schedules. Additionally, you'll develop crucial skills for overseeing the film at every stage, working with distributors, and protecting the film's intellectual property rights. You’ll also cover other important details, and you'll have access to downloadable files and worksheets for practical exercises to enhance your skills.",
+];

@@ -17,7 +17,7 @@
   .title {
     font-size: 30px;
     color: #FFFFFF;
-    text-align: left;
+    /* text-align: left; */
     margin-bottom: 20px;
   }
   
@@ -25,7 +25,7 @@
   .description {
     font-size: 18px;
     color: #CFCFCF;
-    text-align: left;
+    /* text-align: left; */
     margin-bottom: 40px;
   }
   

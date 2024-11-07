@@ -38,6 +38,12 @@
   font-weight: 700;
   line-height: 160%;
 }
+.flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
 .serachoption {
   display: flex;
@@ -64,7 +70,7 @@
   font-size: 1rem;
   outline: none;
   width: 100%;
-  color: #10171D;
+  color: #fff;
   background-color: transparent;
 }
 

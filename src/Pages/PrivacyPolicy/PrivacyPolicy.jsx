@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
-
+import Navbar from "../../Component/Navbar/Navbar.jsx";
+import Footer from "../../Component/Footer/Footer.jsx";
+import PrivacyPolicy from "../../Component/PrivacyPolicy/PrivacyPolicy.jsx";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
   HomePageContext,
@@ -8,8 +10,6 @@ import {
 // import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext.jsx";
 // import { TermsConditionProvider , TermsConditionContext } from "../../store/TermsConditionContext.jsx";
 import { PrivacyPolicyContext, PrivacyPolicyProvider } from "../../store/PrivacyPolicy.jsx";
-import Navbar from "../../Component/Navbar/Navbar.jsx";
-import Footer from "../../Component/Footer/Footer.jsx";
 
 const PrivacyPolicyPage  = () => {
   
@@ -32,14 +32,14 @@ const PrivacyPolicyPage  = () => {
   return (
     <div>
       <LanguageProvider>
-       {/* <HomePageProvider>  */}
+       <HomePageProvider>
         <PrivacyPolicyProvider>        
         <Navbar></Navbar>
          {/* <TermsAndConditions></TermsAndConditions> */}
-         <PrivacyPolicyPage></PrivacyPolicyPage>
+         <PrivacyPolicy></PrivacyPolicy>
       <Footer></Footer>
          </PrivacyPolicyProvider>
-       {/* </HomePageProvider> */}
+       </HomePageProvider>
       </LanguageProvider>
     </div>
   );

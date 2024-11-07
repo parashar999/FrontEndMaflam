@@ -1,37 +1,38 @@
-
-
-
+.parentfundamental
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 .Fundamental {
   background-color: #030b11;
-  padding: 50px 135px 220px 135px;
   height: auto;
-  
+  width: 100vw;
   max-width: 1500px; /* Set a max-width for the container */
   margin: 0 auto; /* Center the Fundamental container */
-  height: auto;
+  margin-top: 125px;
+  margin-bottom: 100px;
 }
 
 .secondcontainer {
- 
   height: auto;
 }
 
 .content {
-  width: 350px;
-  margin-left: 40px;
-  margin-right: 0;
-  margin-top: 50px;
-
+  width: 610px;
+  text-align: left;
+  margin:50px;
+  margin-bottom: 30px;
 }
 
 .content p {
   color: #fff;
-  line-height: 25px;
-  text-align: left;
+  line-height: 45px;
+  text-align: Right;
 padding-top: 100px;
-  font-size: 20px;
+  font-size: 36px;
   font-weight: 700;
   
 }
@@ -40,32 +41,25 @@ padding-top: 100px;
   background-image: url("../../assets/pricing-3.png");
   background-position: center;
   background-size: cover;
+  position: relative;
   background-repeat: no-repeat;
-  height: 230px;
-  margin: 20px 0px 20px 0px;
-  border-radius: 15px;
-}
-.imgcontainer img {
-  height: 700px;
-    /* margin-top: -270px; */
-    /* margin-left: 700px; */
-    position: relative;
-    right: 60%;
-    bottom: 250px;
- 
-}
-
-.imghead{
-  height: auto;
   width: 100%;
-  /* margin-left: 50px; */
-
+  padding: 50px;
+  padding-right: 60px;
+  max-width: 1427.255px;
+  border-radius: 20px;
+  position: relative;
 }
+.imgcontainer  {
+  width: 549px;
+    position: absolute;
+    right: 0px;
+    top: -400px;
+  }
+
 .ctn {
  
   height: auto;
-  width: 55%;
-  margin-top: -700px;
   margin-left: 50px;
 
   
@@ -76,11 +70,12 @@ padding-top: 100px;
 }
 .checkico {
   margin-right: 10px;
+  margin-left: 10px;
   color: rgb(46, 202, 202);
-  font-size: 20px;
+  font-size: 25px;
 }
 .ctn p {
-  font-size: 18px;
+  font-size: 24px;
   color: #fff;
   font-weight: 100;
 
@@ -99,7 +94,7 @@ padding-top: 100px;
   padding: 5px 7px;
   box-sizing: border-box;
   text-align: right;
-  font-size: 17px;
+  font-size: 24px;
   color: #000;
   font-family: 'Noto Kufi Arabic';
   font-weight: 500;
@@ -113,367 +108,95 @@ padding-top: 100px;
 }
 
 .item span {
+  margin-top: 10px;
   font-size: 15px;
   padding-left: 3px;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .Fundamental {
-    padding: 40px 50px 40px 50px;
-    height: auto;
- 
+
+@media (max-width:5000px)
+{
+    .Fundamental
+    {
+      zoom: 0.8;
+    }
+    .imgcontainer
+    {
+      width: 549px;
+      right: 55%;
+      top: -95%;
+    }
+}
+
+@media (max-width:1600px)
+{
+    .Fundamental
+    {
+      zoom: 0.8;
+    }
+    .imgcontainer
+    {
+      width: 549px;
+      right: 55%;
+      top: -95%;
+    
+    }
+}
+
+@media (max-width:1200px)
+{
+  .subscribe
+  {
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
   }
-
-  .content {
-    width: 300px;
-    margin: 20px 30px;
-
-   
+  .imgcontainer
+  {
+    top: 0px;
+    position: relative;
+    left: 20px;
+    top: -95%;
+    right: 300px;
+    
   }
-
-  .content p {
-    font-size: 16px;
-    line-height: 20px;
+  .ctn
+  {
+      position: relative;
+      top: -100px;
   }
-
-  .subscribe {
-    height: 180px;
-    margin: 30px auto;
-  }
-
-  .imgcontainer img {
-    height: 500px;
-    margin-top: -180px;
-    margin-left: 600px;
-  }
-
-  .ctn {
-    height: auto;
-    width: 50%;
-    margin-top: -320px;
-    margin-left: 30px;
   
+  .secondcontainer
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-
-  .ctn p {
-    font-size: 14px;
-  }
-
-  .checkicobuttun {
-    font-size: 10px;
-    padding: 3px 6px;
-  }
-
-  .item b {
-    font-size: 18px;
-  }
-
-  .item span {
-    font-size: 12px;
-  }
-
-  .checkico {
-    font-size: 18px;
+  .checkicobuttun
+  {
+    width: 150px;
   }
 }
 
-
-
-@media screen and (max-width: 768px) {
-  .Fundamental {
-    padding: 30px 20px 30px 20px;
-    height: auto;
+@media (max-width:550px){
+  .ctn
+  {
+    top: -200px;
+    zoom: 0.7;
+  }   
+  .content
+  {
+    zoom: 0.7;
   }
-  .content {
-    width: 200px;
-    margin: 10px 20px 10px 20px;
-  }
-  .content p {
-    font-size: 11px;
-    line-height: 15px;
-  }
-  .subscribe {
-    height: 120px;
-    margin: 40px auto;
-  }
-  .imgcontainer img {
-    height: 300px;
-    margin-top: -100px;
-    margin-left: 200px;
-  }
-  .ctn {
-    height: 110px;
-    width: 45%;
-    margin: -200px 0px 0px 20px;
-   
-  }
-  .ctn p {
-    font-size: 6px;
-    color: #fff;
-
-  
-  }
-  .checkicobuttun {
-    background-color: cyan;
-    font-size: 4px;
-    padding: 2px 5px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-  .item b {
-    margin-right: 2px;
-    color: aqua;
-    font-size: 9px;
-  }
-  .item span {
-    font-size: 7px;
-    padding-left: 3px;
-  }
-  .checkico {
-    margin-right: 10px;
-    color: rgb(46, 202, 202);
-    font-size: 15px;
-  }
-}  
-  
-  
-@media (min-width: 820px) and (max-width: 1180px) {
-  .Fundamental {
-    /* padding: 30px 20px 30px 20px; */
-    height: auto;
-  }
-  .content {
-    width: 200px;
-    margin: 10px 20px 10px 20px;
-  }
-  .content p {
-    font-size: 11px;
-    line-height: 15px;
-  }
-  .subscribe {
-    height: 120px;
-    margin: 40px auto;
-  }
-  .imgcontainer img {
-    height: 300px;
-    margin-top: -100px;
-    margin-left: 500px;
-  }
-  .ctn {
-    height: 110px;
-    width: 45%;
-    margin: -200px 0px 0px 20px;
-   
-  }
-  .ctn p {
-    font-size: 6px;
-    color: #fff;
-
-  
-  }
-  .checkicobuttun {
-    background-color: cyan;
-    font-size: 4px;
-    padding: 2px 5px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-  .item b {
-    margin-right: 2px;
-    color: aqua;
-    font-size: 9px;
-  }
-  .item span {
-    font-size: 7px;
-    padding-left: 3px;
-  }
-  .checkico {
-    margin-right: 10px;
-    color: rgb(46, 202, 202);
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 667px) {
-  .Fundamental {
-    /* padding: 30px 20px 30px 20px; */
-    height: auto;
-  }
-  .content {
-    width: 200px;
-    margin: 10px 20px 10px 20px;
-  }
-  .content p {
-    font-size: 11px;
-    line-height: 15px;
-  }
-  .subscribe {
-    height: 120px;
-    margin: 40px auto;
-  }
-  .imgcontainer img {
-    height: 300px;
-    margin-top: -100px;
-    margin-left: 180px;
-  }
-  .ctn {
-    height: 110px;
-    width: 45%;
-    margin: -200px 0px 0px 20px;
-   
-  }
-  .ctn p {
-    font-size: 6px;
-    color: #fff;
-
-  
-  }
-  .checkicobuttun {
-    background-color: cyan;
-    font-size: 4px;
-    padding: 2px 5px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-  .item b {
-    margin-right: 2px;
-    color: aqua;
-    font-size: 9px;
-  }
-  .item span {
-    font-size: 7px;
-    padding-left: 3px;
-  }
-  .checkico {
-    margin-right: 10px;
-    color: rgb(46, 202, 202);
-    font-size: 15px;
-  }
-}
-
-
-
-@media (min-width: 360px) and (max-width: 740px) {
-  .Fundamental {
-    /* padding: 30px 20px 30px 20px; */
-    height: auto;
-  }
-  .content {
-    width: 200px;
-    margin: 10px 20px 10px 20px;
-  }
-  .content p {
-    font-size: 11px;
-    line-height: 15px;
-  }
-  .subscribe {
-    height: 120px;
-    margin: 40px auto;
-  }
-  .imgcontainer img {
-    height: 300px;
-    margin-top: -100px;
-    margin-left: 170px;
-  }
-  .ctn {
-    height: 110px;
-    width: 45%;
-    margin: -200px 0px 0px 20px;
-   
-  }
-  .ctn p {
-    font-size: 6px;
-    color: #fff;
-
-  
-  }
-  .checkicobuttun {
-    background-color: cyan;
-    font-size: 4px;
-    padding: 2px 5px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-  .item b {
-    margin-right: 2px;
-    color: aqua;
-    font-size: 9px;
-  }
-  .item span {
-    font-size: 7px;
-    padding-left: 3px;
-  }
-  .checkico {
-    margin-right: 10px;
-    color: rgb(46, 202, 202);
-    font-size: 15px;
-  }
-}
-
-
-
-@media (min-width: 344px) and (max-width: 882px) {
-  .Fundamental {
-    /* padding: 30px 20px 30px 20px; */
-    height: auto;
-  }
-  .content {
-    width: 200px;
-    margin: 10px 20px 10px 20px;
-  }
-  .content p {
-    font-size: 11px;
-    line-height: 15px;
-  }
-  .subscribe {
-    height: 120px;
-    margin: 40px auto;
-  }
-  .imgcontainer img {
-    height: 300px;
-    margin-top: -100px;
-    margin-left: 170px;
-  }
-  .ctn {
-    height: 110px;
-    width: 45%;
-    margin: -200px 0px 0px 20px;
-   
-  }
-  .ctn p {
-    font-size: 6px;
-    color: #fff;
-
-  
-  }
-  .checkicobuttun {
-    background-color: cyan;
-    font-size: 4px;
-    padding: 2px 5px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-  .item b {
-    margin-right: 2px;
-    color: aqua;
-    font-size: 9px;
-  }
-  .item span {
-    font-size: 7px;
-    padding-left: 3px;
-  }
-  .checkico {
-    margin-right: 10px;
-    color: rgb(46, 202, 202);
-    font-size: 15px;
+  .imgcontainer
+  {
+    position: relative;
+   right: 0px;
+    top: 0;
+    width: 95%;
+    left: 20px;
   }
 }

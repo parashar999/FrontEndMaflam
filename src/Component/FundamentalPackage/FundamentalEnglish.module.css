@@ -1,0 +1,218 @@
+.parentfundamental
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Fundamental {
+  background-color: #030b11;
+  height: auto;
+  width: 100vw;
+  max-width: 1500px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the Fundamental container */
+  margin-top: 125px;
+  margin-bottom: 100px;
+}
+
+.secondcontainer {
+  height: auto;
+}
+
+.content {
+  width: 610px;
+  text-align: left;
+  margin:50px;
+  margin-bottom: 30px;
+}
+
+.content p {
+  color: #fff;
+  line-height: 45px;
+  text-align: left;
+padding-top: 100px;
+  font-size: 36px;
+  font-weight: 700;
+  
+}
+
+.subscribe {
+  background-image: url("../../assets/pricing-3.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 50px;
+  padding-right: 60px;
+  max-width: 1427.255px;
+  border-radius: 20px;
+  position: relative;
+}
+.imgcontainer  {
+  width: 549px;
+    position: absolute;
+    right: 0px;
+    top: -400px;
+  }
+
+.ctn {
+ 
+  height: auto;
+  margin-left: 50px;
+
+  
+}
+.item {
+  display: flex;
+  align-items: center;
+}
+.checkico {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: rgb(46, 202, 202);
+  font-size: 25px;
+}
+.ctn p {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 100;
+
+ 
+}
+.checkicobuttun {
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
+  border-radius: 64px;
+  background-color: #39fffb;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 7px;
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 24px;
+  color: #000;
+  font-family: 'Noto Kufi Arabic';
+  font-weight: 500;
+  border: none;
+  margin: 10px;
+}
+.item b {
+  margin-right: 2px;
+  color: aqua;
+  font-size: 25px;
+}
+
+.item span {
+  margin-top: 10px;
+  font-size: 15px;
+  padding-left: 3px;
+}
+
+@media (max-width:5000px)
+{
+    .Fundamental
+    {
+      zoom: 0.8;
+    }
+    .imgcontainer
+    {
+      width: 549px;
+      left:44%;
+      top:-110%;
+    }
+}
+
+@media (max-width:1600px)
+{
+    .Fundamental
+    {
+      zoom: 0.8;
+    }
+    .imgcontainer
+    {
+      width: 549px;
+      left:44%;
+      top:-110%;
+    }
+}
+
+@media (max-width:1200px)
+{
+  .subscribe
+  {
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .imgcontainer
+  {
+    top: 0px;
+    position: relative;
+    left: 40px;
+    top: -95%;
+    
+  }
+  .ctn
+  {
+      position: relative;
+      top: -100px;
+  }
+  
+  .secondcontainer
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkicobuttun
+  {
+    width: 150px;
+  }
+}
+
+@media (max-width:550px){
+  .subscribe
+  {
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+  .imgcontainer
+  {
+    position: relative;
+    left: 20px;
+    top: 0;
+    width: 95%;
+    
+  }
+  .ctn
+  {
+      position: relative;
+      top: -100px;
+  }
+  
+  .secondcontainer
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkicobuttun
+  {
+    width: 150px;
+  }
+}
+

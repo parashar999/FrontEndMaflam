@@ -1,0 +1,121 @@
+.parentcont
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.MainContainer {
+  
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    max-width: 1341px !important;
+    /* background-color: #030b11; */
+    font-family: sans-serif;
+    font-size: 36px;
+    color: white;
+    font-weight: 700;
+    /* border: 1px solid rebeccapurple; */
+  }
+  
+  .MainContainer a
+  {
+    font-family: sans-serif;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+  }
+  /* Responsive font size using viewport width */
+  
+  .pricingimg {
+    background-image: url("../../assets/blogpricing.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-top: 130px;
+  }
+  .pricingimg  img{
+    height:540px;
+    position: relative;
+    top: 20px;
+  }
+
+  .contentContainer{
+    position: relative ;
+    top: -280px;
+    left: 250px;
+    text-align: left;
+  }
+  .contentContainer h2 {
+    width:600px;
+    position: relative;
+    color: #EBF5F4;
+    font-family: "Noto Kufi Arabic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 54px */
+  }
+  .contentContainer p {
+    width:600px;
+    margin-top: 40px;
+    color: #FFF;
+    position: relative;
+    font-family: "Noto Kufi Arabic";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 38.4px */
+  }
+  .contentContainer h5  a{
+    color: var(--Accent-Accent-400---Main, #39FFFB);
+    font-family: "Noto Kufi Arabic";
+    text-align: left;
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94.1%; /* 15.997px */
+    letter-spacing: -0.34px;
+    text-decoration: none;
+  }
+
+  @media (max-width:1500px)
+  {
+    .MainContainer
+    {
+      zoom: 0.9;
+    }
+  }
+
+  @media (max-width:1280px)
+  {
+    .MainContainer
+    {
+      zoom: 0.75;
+    }
+    .contentContainer
+    {
+      left: 150px;
+    }
+  }
+
+  @media (max-width:768px)
+  {
+    .contentContainer
+    {
+      zoom: 0.5;
+      width: 90vw;
+      font-size: larger;
+    }
+  }
+  

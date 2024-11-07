@@ -2,3 +2,8 @@
     padding: 40px 0px;  
     background-color: #000;
 } */
+
+.container{
+    background-image: url("../../assets/cntct.png");
+    background-position: center;
+}

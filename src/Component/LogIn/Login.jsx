@@ -4,7 +4,7 @@ import auth from "../../Auth/Auth.js";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Ensure axios is imported
 import { assests } from "../../assets/assests.js";
-import { LoginPageContext } from "../../store/loginPageContext.jsx";
+import { LoginPageContext } from "../../store/LoginPageContext.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -84,7 +84,8 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.Subcontainer}>
+        <div className={styles.Subcontainer}>
+       
         <div className={styles.loginBox}>
           <img
             src={assests.logo1}
@@ -149,7 +150,7 @@ const Login = () => {
               />
               <span>&nbsp;{googleLoginText}</span>
             </button>
-            <button className={styles.socialButton}>
+            {/* <button className={styles.socialButton}>
               <img
                 src={assests.applelogin}
                 alt="Apple"
@@ -165,7 +166,7 @@ const Login = () => {
                 className={styles.socialIconImage}
               />
               <span>{facebookLoginText}</span>
-            </button>
+            </button> */}
           </div>
           <a href="#" className={styles.createAccount}>
             {createAccountText}

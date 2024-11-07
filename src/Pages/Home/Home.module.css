@@ -4,6 +4,19 @@
     background-color: #030b11;
 }
 
+.Footer{
+  background-image: url("../../assets/Faqsbg.png");
+  background: linear-gradient(0deg, #030B11 6.41%, rgba(3, 11, 17, 0.50) 22.94%), linear-gradient(180deg, #030B11 0%, rgba(3, 11, 17, 0.50) 39.16%), url("../../assets/Rectangle1.png") lightgray 50% / cover no-repeat;
+}
+
+.BlogContainer{
+  background-image: url("../../assets//blg.png");
+  background-repeat: no-repeat;
+  background-attachment: cover;
+  background-position: center;
+}
+
+
 
 
 /* .Home {

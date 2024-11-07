@@ -1,4 +1,4 @@
-import  { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HomeHero from "../../Component/HomeHero/HomeHero";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
@@ -15,6 +15,7 @@ import HomeCommunityCarousel from "../../Component/HomeCummunityCarousel/HomeCom
 import CarouselCommunity from "../../Component/Community/CarouselCommunity";
 import Faqs from "../../Component/Faqs/Faqs";
 import Footer from "../../Component/Footer/Footer";
+import SubFooter from "../../Component/SubFooter/SubFooter.jsx";
 import Styles from "./Home.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
@@ -23,12 +24,11 @@ import {
 } from "../../store/HomePageContext.jsx";
 
 const Home = () => {
-  const {  homeScreenDetails, loading, error } = useContext(HomePageContext);
+  const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
   useEffect(() => {
     if (homeScreenDetails) {
       console.log("Home Screen Details:", homeScreenDetails);
-      
     }
   }, [homeScreenDetails]);
 
@@ -46,12 +46,17 @@ const Home = () => {
           <SuccessPartners />
           <LearnAbout />
           <MaflamInstructors />
+          <div className={Styles.BlogContainer}>
           <HomeScreenCarousel />
           <BlogContainer />
           <HomeCommunityCarousel />
+          </div>
           <CarouselCommunity />
+          <div className={Styles.Footer}>
           <Faqs />
           <Footer />
+          </div>
+          {/* <SubFooter/> */}
         </div>
       </HomePageProvider>
     </LanguageProvider>
@@ -59,9 +64,6 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
 
 // import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
 // import Navbar from "../../Component/Navbar/Navbar";
@@ -83,35 +85,32 @@ export default Home;
 // import LearnAbout from "../../Component/LearnAbout/LearnAbout.jsx";
 // import BlogContainer from "../../Component/Blogs/BlogContainer.jsx";
 
-
 // const Home = () => {
 //   return (
 //     <div className={Styles.Home}>
 //       <Navbar></Navbar>
-//       <HomeHero></HomeHero> 
+//       <HomeHero></HomeHero>
 //        <LearnMaflam></LearnMaflam>
 //       <ViewCourses></ViewCourses>
 //       <CourseGrid></CourseGrid>
 //       <Fundamental></Fundamental>
 //       <Ourservices></Ourservices>
 //       <SuccessPartners></SuccessPartners>
-//       <LearnAbout></LearnAbout> 
+//       <LearnAbout></LearnAbout>
 //        <MaflamInstructors></MaflamInstructors>
-//       <HomeScreenCarousel /> 
+//       <HomeScreenCarousel />
 //       <BlogContainer></BlogContainer>
 //       <HomeCommunityCarousel></HomeCommunityCarousel>
 //       <CarouselCommunity></CarouselCommunity>
 
 //       <Faqs></Faqs>
-//       <Footer></Footer> 
-   
+//       <Footer></Footer>
+
 //     </div>
 //   );
 // };
 
 // export default Home;
-
-
 
 // import React, { useState, useEffect } from "react";
 // import Navbar from "../../Component/Navbar/Navbar";
@@ -133,16 +132,15 @@ export default Home;
 // import Styles from "./Home.module.css";
 
 // const Home = () => {
-//   const [language, setLanguage] = useState("ar"); 
-//   const [direction, setDirection] = useState("rtl"); 
-
+//   const [language, setLanguage] = useState("ar");
+//   const [direction, setDirection] = useState("rtl");
 
 //   useEffect(() => {
 //     if (language === "ar") {
-//       document.body.dir = "rtl"; 
+//       document.body.dir = "rtl";
 //       setDirection("rtl");
 //     } else {
-//       document.body.dir = "ltr"; 
+//       document.body.dir = "ltr";
 //       setDirection("ltr");
 //     }
 //   }, [language]);

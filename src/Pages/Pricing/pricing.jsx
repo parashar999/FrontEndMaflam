@@ -1,4 +1,3 @@
-
 import PricingPage from "../../Component/PricingPage/PricingPage";
 import Fundamental from "../../Component/FundamentalPackage/Fundamental";
 import Footer from "../../Component/Footer/Footer";
@@ -9,14 +8,17 @@ import { LanguageProvider } from "../../Component/LanguageContext/LanguageContex
 import { HomePageContext, HomePageProvider } from "../../store/HomePageContext";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import JoinUs from "../../Component/JoinUs/JoinUs";
-import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext";
-import { PricingPageContext, PricingPageContextProvider } from "../../store/PricingPageContext";
+import {
+  AboutusPageContext,
+  AboutusPageProvider,
+} from "../../store/AboutUsPageContext";
+import {
+  PricingPageContext,
+  PricingPageContextProvider,
+} from "../../store/PricingPageContext";
 import { useContext, useEffect } from "react";
 
-
-
 function Pricing() {
-
   const {
     homeScreenDetails,
     loading: homeLoading,
@@ -41,15 +43,17 @@ function Pricing() {
     }
   }, [aboutusScreenDetails]);
 
-
-  const { pricingPageContextDetails,loading: pricingLoading,  error: pricingerror, }= useContext(PricingPageContext);
+  const {
+    pricingPageContextDetails,
+    loading: pricingLoading,
+    error: pricingerror,
+  } = useContext(PricingPageContext);
 
   useEffect(() => {
-    if ( pricingPageContextDetails) {
-      console.log("Home Screen Details:",  pricingPageContextDetails);
-      
+    if (pricingPageContextDetails) {
+      console.log("Home Screen Details:", pricingPageContextDetails);
     }
-  }, [ pricingPageContextDetails]);
+  }, [pricingPageContextDetails]);
   return (
     <>
       <div>
@@ -57,18 +61,18 @@ function Pricing() {
           <HomePageProvider>
             <AboutusPageProvider>
               <PricingPageContextProvider>
-        <Navbar></Navbar>
-        <PricingPage></PricingPage>
-        <Fundamental></Fundamental>
-        <VariousCourse></VariousCourse>
-        <Carousel></Carousel>
-        <MaflanContent/>
-        <JoinUs/>
-         <Footer></Footer>
-         </PricingPageContextProvider>
-         </AboutusPageProvider>
-         </HomePageProvider>
-         </LanguageProvider>
+                <Navbar></Navbar>
+                <PricingPage></PricingPage>
+                <Fundamental></Fundamental>
+                <VariousCourse></VariousCourse>
+                {/* <Carousel></Carousel> */}
+                <MaflanContent />
+                <JoinUs />
+                <Footer></Footer>
+              </PricingPageContextProvider>
+            </AboutusPageProvider>
+          </HomePageProvider>
+        </LanguageProvider>
       </div>
     </>
   );

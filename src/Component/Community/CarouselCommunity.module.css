@@ -4,9 +4,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  max-width: 1900px;
+  max-width: 1250px;
   margin: 0 auto;
-  margin-bottom: 0px;
+  margin-bottom: 120px;
 }
 
 .carouselWrapper h2 {
@@ -20,6 +20,28 @@
   line-height: 160%;
 }
 
+.overlay {
+  position: absolute;
+  right: -400px;
+  bottom: 0;
+  width: 50%;
+  height: 140%;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.8;
+  z-index: 1; /* Make sure overlay is above the video */
+}
+.roverlay {
+  position: absolute;
+  left: -400px;
+  bottom: 0;
+  width: 50%;
+  height: 140%;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1; /* Make sure overlay is above the video */
+}
 .carousel {
   position: relative;
   width: 100%;
@@ -31,7 +53,7 @@
 .carouselSliderContainer {
   width: 100%;
   /* margin-top: 20px; */
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-width: none;
 }
@@ -46,19 +68,25 @@
 }
 
 .carouselCard {
-  flex: 0 0 35%; /* Each card takes up 30% of the width */
   margin: 0 10px; /* Margin to create space between cards */
   box-sizing: border-box;
   text-align: center;
   border-radius: 5px;
-  height: auto;
+  height: 483px;
+  right: 30%;
+  min-width:609px !important;
   color: #fff;
-  margin-top: 0px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
 .carouselCard video {
-  height: 500px;
-  width: 100%; /* Full width of the card */
+  margin-top: 50px;
+  position: relative;
+  height: 483px;
+  right: 25%;
+  /* Full width of the card */
   border-radius: 5px; /* Optional: To match the card's border radius */
 }
 
@@ -73,7 +101,7 @@
   font-size: 30px;
   cursor: pointer;
   padding: 10px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .carouselArrowLeft {
@@ -103,14 +131,29 @@
   background-color: #4444;
 }
 
-@media (max-width: 768px) {
-  .carouselCard {
-    flex: 0 0 100%;
-    width: 275px;
+@media (max-width:1500px)
+{
+  .carouselWrapper{
+    zoom:0.8;
   }
+}
 
-  .carouselArrowLeft,
-  .carouselArrowRight {
-    font-size: 24px;
+@media (max-width:1280px)
+{
+   .carouselWrapper{
+    zoom:0.7;
+   }
+}
+
+@media (max-width:900px)
+{
+  .carouselWrapper
+  {
+    max-width: 800px;
+    zoom: 0.5;
+  }
+  .carouselCard
+  {
+    right: 70%;
   }
 }

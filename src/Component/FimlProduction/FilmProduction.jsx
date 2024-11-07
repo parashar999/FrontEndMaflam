@@ -1,6 +1,6 @@
 
 
-import { assests } from '../../assets/Assests';
+import { assests } from '../../assets/assests';
 import styles from './FilmProduction.module.css';
 
 const FilmProduction = () => {

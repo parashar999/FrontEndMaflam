@@ -1,17 +1,11 @@
 .successPartnersSection {
-  max-width: 1950px; 
+  max-width: 1980px; 
   margin: 0 auto; 
   color: #fff;
   text-align: center;
-  height: 60vh;
   min-height: 1100px;
   padding: 0px 90px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, .1) 100%,
-      rgba(1, 1, 1, 1)
-    ),
-    url("../../assets/Rectangle1.png");
+  background: linear-gradient(0deg, #030B11 6.41%, rgba(3, 11, 17, 0.50) 22.94%), linear-gradient(180deg, #030B11 0%, rgba(3, 11, 17, 0.50) 39.16%), url("../../assets/Rectangle1.png") lightgray 50% / cover no-repeat;
   background-size: cover;
 
   background-position: center;
