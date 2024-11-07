@@ -201,15 +201,18 @@ const App = () => {
       <Route path="/mycertificate" element={<MyCertificate />} />
       <Route path="/personalinformation" element={<PersonalInformation />} />
 
-      <Route path="/filmproduction" element={
-        <LanguageProvider>
-          <FilmProductionProvider>
-            <AboutusPageProvider> 
-          <FilmProduction />
-          </AboutusPageProvider>
-          </FilmProductionProvider>
-        </LanguageProvider>
-        } />
+      <Route
+        path="/filmproduction"
+        element={
+          <LanguageProvider>
+            <FilmProductionProvider>
+              <AboutusPageProvider>
+                <FilmProduction />
+              </AboutusPageProvider>
+            </FilmProductionProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/ebooktwo" element={<EbookTwo />} />
 
       <Route
@@ -284,13 +287,11 @@ const App = () => {
         path="/mywishlist"
         element={
           <LanguageProvider>
-
             <HomePageProvider>
-            <EbookPageContextProvider>
-              <AboutusPageProvider> 
-
-              <MyWishlist />
-              </AboutusPageProvider>
+              <EbookPageContextProvider>
+                <AboutusPageProvider>
+                  <MyWishlist />
+                </AboutusPageProvider>
               </EbookPageContextProvider>
             </HomePageProvider>
           </LanguageProvider>

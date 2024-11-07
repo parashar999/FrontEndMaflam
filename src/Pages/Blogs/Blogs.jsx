@@ -16,16 +16,15 @@ const Blogs = () => {
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
-      <Navbar></Navbar>
-      <BlogPostHero1></BlogPostHero1>
-  
-      <LatestInsights></LatestInsights>
-      <div className={styles.container}>
-        {/* <PopularResources></PopularResources> */}
-        <JoinUs></JoinUs>
-      </div>
-      <Footer></Footer>
-      </AboutusPageProvider>
+          <Navbar></Navbar>
+          <BlogPostHero1></BlogPostHero1>
+          <LatestInsights></LatestInsights>
+          <div className={styles.container}>
+            {/* <PopularResources></PopularResources> */}
+            <JoinUs></JoinUs>
+          </div>
+          <Footer></Footer>
+        </AboutusPageProvider>
       </LanguageProvider>
     </div>
   );
