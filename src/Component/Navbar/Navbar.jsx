@@ -165,7 +165,9 @@ const Navbar = () => {
         </div>
         <div className={styles.searchContainer}>
           <input type="text" placeholder={placeHolderTitle} />
+          <a href="/filmproduction">
           <img src={assests.Magnifine} alt="Search Icon" />
+          </a>
         </div>
         {/* <div className={styles.searchContainerGlobe}>
         <img src={assests.Globe} alt="Globe Icon" />

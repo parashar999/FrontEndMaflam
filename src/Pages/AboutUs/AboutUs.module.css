@@ -3,3 +3,12 @@
     
     
 }
+
+.AboutUsbg{
+        background-image: url("../../assets/aboutbg1.png");
+          background-repeat: no-repeat;
+  background-attachment: cover;
+  background-position: center;
+  position: relative;
+  z-index:999;
+}

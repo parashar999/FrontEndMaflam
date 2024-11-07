@@ -83,20 +83,22 @@ const FundamentalFilmProduction = () => {
     const { filmproductionScreenDetails, loading, error } = useContext(FilmProductionContext);
     const userDetails = auth.getAuthData();
     const navigate = useNavigate();
-
     const toggleContent = () => {
         setIsOpen(!isOpen);
     };
+    
+    const checkoutpage = () => {
+      console.log("Button was clicked");
+      if (userDetails) {
+        navigate("/checkout");
+      } else {
+        navigate("/login");
+      }
+    };
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error loading data: {error.message}</p>; const checkoutpage = () => {
-        console.log("Button was clicked");
-        if (userDetails) {
-          navigate("/checkout");
-        } else {
-          navigate("/login");
-        }
-      };
+    if (error) return <p>Error loading data: {error.message}</p>;
+    
 
     const { courseData, lessonData } = filmproductionScreenDetails || {};
     const mainCourse = courseData ? courseData[0] : null;

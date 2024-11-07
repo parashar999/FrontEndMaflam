@@ -20,28 +20,31 @@ const ContactInformation = () => {
   const locationDescription = contactDetailsSec3[3]?.description || "";
 
   return (
-    <div className={styles.contactContainer}>
-      <h2 className={styles.heading}>{title}</h2>
+    <>
+      <div className={styles.bgimage}></div>
+      <div className={styles.contactContainer}>
+        <h2 className={styles.heading}>{title}</h2>
 
-      <div className={styles.contactSection}>
-        <h3>{emailTitle}</h3>
-        {emailCategory.map((item, index) => (
-          <p key={index}>{item}</p>
-        ))}
-      </div>
+        <div className={styles.contactSection}>
+          <h3>{emailTitle}</h3>
+          {emailCategory.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
+        </div>
 
-      <div className={styles.contactSection}>
-        <h3>{contactNumberTitle}</h3>
-        <p>{contactNumberDescription}</p>
-      </div>
+        <div className={styles.contactSection}>
+          <h3>{contactNumberTitle}</h3>
+          <p>{contactNumberDescription}</p>
+        </div>
 
-      <div className={styles.contactSection}>
-        <h3>{locationTitle}</h3>
-        <p>
-          <span className={styles.blueText}>{locationDescription}</span>
-        </p>
+        <div className={styles.contactSection}>
+          <h3>{locationTitle}</h3>
+          <p>
+            <span className={styles.blueText}>{locationDescription}</span>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -50,8 +50,10 @@ export default function AboutUs() {
         <AboutusPageProvider>
           <div className={styles.container}>
             <Navbar />
+            <div className={styles.AboutUsbg}>
             <Filmmaker />
             <OurVisionData />
+            </div>
             <MaflamImageOffer />
             <MaflamInstructors />
             <MaflamCard />

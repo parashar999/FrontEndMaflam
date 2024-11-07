@@ -9,14 +9,25 @@ import JoinUs from "../../Component/JoinUs/JoinUs";
 import styles from "./ContactUsPage2.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import { HomePageProvider } from "../../store/HomePageContext";
-import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext";
-import { ContactUsContext, ContactUsContextProvider } from "../../store/ContactUsContext";
-import { ContactUs2Context, ContactUs2ContextProvider } from "../../store/ContactUs2Context";
+import {
+  AboutusPageContext,
+  AboutusPageProvider,
+} from "../../store/AboutUsPageContext";
+import {
+  ContactUsContext,
+  ContactUsContextProvider,
+} from "../../store/ContactUsContext";
+import {
+  ContactUs2Context,
+  ContactUs2ContextProvider,
+} from "../../store/ContactUs2Context";
 
 const ContactUsPage2 = () => {
-
-
-  const { aboutusScreenDetails, loading: aboutLoading, error: aboutError } = useContext(AboutusPageContext);
+  const {
+    aboutusScreenDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(AboutusPageContext);
 
   useEffect(() => {
     if (aboutusScreenDetails) {
@@ -24,12 +35,11 @@ const ContactUsPage2 = () => {
     }
   }, [aboutusScreenDetails]);
 
-
-
-
-
-
-  const {contactUsContextDetails , loading: homeLoading, error: homeError } = useContext(ContactUsContext);
+  const {
+    contactUsContextDetails,
+    loading: homeLoading,
+    error: homeError,
+  } = useContext(ContactUsContext);
 
   useEffect(() => {
     if (contactUsContextDetails) {
@@ -37,10 +47,7 @@ const ContactUsPage2 = () => {
     }
   }, [contactUsContextDetails]);
 
-
-
-  
-  const {contactUs2ContextDetails } = useContext(ContactUs2Context);
+  const { contactUs2ContextDetails } = useContext(ContactUs2Context);
 
   useEffect(() => {
     if (contactUs2ContextDetails) {
@@ -51,18 +58,20 @@ const ContactUsPage2 = () => {
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
-        <ContactUsContextProvider>
-          <ContactUs2ContextProvider>
-          <Navbar></Navbar>
-          <HeroContact></HeroContact>
-          <ContactForm></ContactForm>
-          <div className={styles.container}>
-            <MaflanContent></MaflanContent>
-            <JoinUs></JoinUs>
-          </div>
-          <Footer></Footer>
-          </ContactUs2ContextProvider>
-         </ContactUsContextProvider>
+          <ContactUsContextProvider>
+            <ContactUs2ContextProvider>
+              <Navbar></Navbar>
+              <HeroContact></HeroContact>
+              <div className={styles.contact2}>
+                <ContactForm></ContactForm>
+              </div>
+              <div className={styles.container}>
+                <MaflanContent></MaflanContent>
+                <JoinUs></JoinUs>
+              </div>
+              <Footer></Footer>
+            </ContactUs2ContextProvider>
+          </ContactUsContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>
     </div>

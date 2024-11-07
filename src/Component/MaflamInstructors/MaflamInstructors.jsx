@@ -1,10 +1,7 @@
-
 // import { instructors } from '../../assets/assests';
 // import styles from './MaflamInstructors.module.css';
-// import { HomePageContext } from "../../store/HomePageContext.jsx"; 
+// import { HomePageContext } from "../../store/HomePageContext.jsx";
 // import { useContext } from 'react';
-
-
 
 // const MaflamInstructors = () => {
 //   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
@@ -34,11 +31,10 @@
 
 // export default MaflamInstructors;
 
-
-import { useContext } from 'react';
-import styles from './MaflamInstructors.module.css';
-import { HomePageContext } from "../../store/HomePageContext.jsx"; 
-import { Link } from 'react-router-dom';
+import { useContext } from "react";
+import styles from "./MaflamInstructors.module.css";
+import { HomePageContext } from "../../store/HomePageContext.jsx";
+import { Link } from "react-router-dom";
 
 const MaflamInstructors = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
@@ -47,7 +43,8 @@ const MaflamInstructors = () => {
   if (error) return <p>Error loading data</p>; // Handle error state
 
   // Ensure that the API data exists before rendering
-  const instructorTitle = homeScreenDetails?.instructorTitle?.title || 'Instructors';
+  const instructorTitle =
+    homeScreenDetails?.instructorTitle?.title || "Instructors";
   const maflamInstructorData = homeScreenDetails?.maflamInstructorData || [];
 
   return (
@@ -57,12 +54,14 @@ const MaflamInstructors = () => {
         <div className={styles.instructorsGrid}>
           {maflamInstructorData.map((instructor, index) => (
             <div key={index} className={styles.instructorCard}>
-              <img 
-                src={instructor.imageUrl} 
-                alt={instructor.title} 
-                className={styles.instructorImage} 
+              <img
+                src={instructor.imageUrl}
+                alt={instructor.title}
+                className={styles.instructorImage}
               />
-              <p><Link to="/coursedetails"> {instructor.title}</Link></p>
+              <p>
+                <Link to="/coursedetails"> {instructor.title}</Link>
+              </p>
             </div>
           ))}
         </div>
@@ -72,4 +71,3 @@ const MaflamInstructors = () => {
 };
 
 export default MaflamInstructors;
-
