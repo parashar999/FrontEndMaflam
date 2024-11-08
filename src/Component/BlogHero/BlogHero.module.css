@@ -13,6 +13,9 @@
     padding: 20px;
     /* background-color: #0f1624; */
   }
+  .blogSubtitle{
+    color: #ffffff;
+  }
   
   .featuredBlog {
     display: flex;
