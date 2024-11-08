@@ -43,8 +43,11 @@ const Login = () => {
       );
       toast.success(response.data.message);
       auth.login(response.data);
-
-      navigate("/");
+     
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+      // navigate("/");
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
@@ -60,10 +63,15 @@ const Login = () => {
 
       toast.success(response.data.message);
       auth.login(response.data);
-      navigate("/");
+      // navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     } catch (error) {
       console.error("Google Login Error:", error);
-      toast.error("Google Login failed. Please try again.");
+      // toast.error("Google Login failed. Please try again.");
+      const errorMessage = error.response?.data?.message ||error.message;
+      toast.error(`Error: ${errorMessage}`);
     }
   };
 
@@ -85,6 +93,7 @@ const Login = () => {
               <label htmlFor="email">{emailLabel}</label>
               <input
                 type="text"
+                required
                 placeholder={emailLabel}
                 className={styles.input}
                 value={emailOrPhone}
@@ -96,6 +105,7 @@ const Login = () => {
                   type={isPasswordVisible ? "text" : "password"}
                   placeholder={passwordLabel}
                   className={styles.input}
+                  required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />

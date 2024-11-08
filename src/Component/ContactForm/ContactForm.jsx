@@ -87,10 +87,14 @@ const ContactForm = () => {
     if (portfolio) payload.append("portfolio", portfolio);
 
     try {
-      await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
-      toast.success("Form submitted successfully!");
+     const res = await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
+      // toast.success("Form submitted successfully!");
+      toast.success(res.data.message);
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
     } catch (err) {
-      const errorMessage = err.response?.data?.message || err.message;
+      const errorMessage = err.res?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
     }
   };
@@ -108,6 +112,7 @@ const ContactForm = () => {
             </label>
             <input
               type="text"
+              required
               id="fullNameInEng"
               maxLength={50}
               placeholder="Full Name"
@@ -123,6 +128,7 @@ const ContactForm = () => {
             <input
               type="email"
               id="email"
+              required
               placeholder={emailPlaceholder}
               value={formData.email}
               onChange={handleInputChange}
@@ -136,6 +142,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="phoneNo"
+              required
               maxLength={16}
               placeholder={phonePlaceholder}
               onInput={handlePhoneInput}
@@ -151,6 +158,7 @@ const ContactForm = () => {
                 <button
                   key={index}
                   type="button"
+                  required
                   className={`${styles.radioButton} ${selectedJobRole === index ? styles.selected : ""}`}
                   onClick={() => handleSelect(index, setSelectedJobRole)}
                 >
@@ -167,6 +175,7 @@ const ContactForm = () => {
             <input
               type="text"
               id="jobTitleInEng"
+              required
               maxLength={60}
               placeholder="Answer"
               value={formData.jobTitleInEng}
@@ -196,6 +205,7 @@ const ContactForm = () => {
             </label>
             <textarea
               id="coverLetterInEng"
+              required
               placeholder={coverLetterPlaceholder}
               value={formData.coverLetterInEng}
               onChange={handleInputChange}
@@ -210,12 +220,12 @@ const ContactForm = () => {
               {resume ? (
                 <>
                   <span>{resume.name}</span>
-                  <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButton}>
-                    <MdDelete />
+                  <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButtons}>
+                  <i> <MdDelete /></i>
                   </button>
                 </>
               ) : (
-                <div className={styles.btnstyles}>
+                <div className={styles.btnstyless}>
                   <button
                     type="button"
                     onClick={() => triggerFileUpload("resumeUpload")}
@@ -241,12 +251,12 @@ const ContactForm = () => {
               {portfolio ? (
                 <>
                   <span>{portfolio.name}</span>
-                  <button type="button" onClick={() => handleDeleteFile(setPortfolio)} className={styles.deleteButton}>
-                    <MdDelete />
+                  <button type="button" onClick={() => handleDeleteFile(setPortfolio)} className={styles.deleteButtons}>
+                  <i> <MdDelete /></i>
                   </button>
                 </>
               ) : (
-                <div className={styles.btnstyles}>
+                <div className={styles.btnstyless}>
                   <button
                     type="button"
                     onClick={() => triggerFileUpload("portfolioUpload")}
