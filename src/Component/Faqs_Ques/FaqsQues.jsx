@@ -209,7 +209,7 @@ const FaqsQues = () => {
   return (
     <div className={styles.mainContainers}>
       <div className={styles.faqContainer}>
-        <h1 className={styles.title}>{faqDataTitle || "FAQ"}</h1>
+        <h1 className={styles.title}>{faqDataTitle?.title || "FAQ"}</h1>
         {faqData.map((section, sectionIndex) => {
           const faqs = isArabic ? section.faqInArb : section.faqInEng;
 
