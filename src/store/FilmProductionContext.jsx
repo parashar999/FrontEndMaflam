@@ -16,8 +16,12 @@ export const FilmProductionProvider = ({ children }) => {
       // const response = await axios.get(
       //   `https://backend.maflam.com/maflam/get-course-page-3?lang=${langParam}&&_id=6718da57daa8cddd1deb614a`
       // );
+      // const response = await axios.get(
+      //   `https://backend.maflam.com/maflam/get-courses-by-id?lang=1&&_id=672c6cb662d002aa55e9229c`
+      // );
+
       const response = await axios.get(
-        `https://backend.maflam.com/maflam/get-courses-by-id?lang=1&&_id=672c6cb662d002aa55e9229c`
+        `https://backend.maflam.com/maflam/get-courses-by-id?lang=${langParam}&&_id=672c6cb662d002aa55e9229c`
       );
       console.log("API Response: for filmproduction ", response.data);
 
