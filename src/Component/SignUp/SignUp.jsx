@@ -75,7 +75,7 @@ const SignUp = () => {
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
       const response = await axios.post(
-        "https://backend.maflam.com/maflam/sign-in-with-google",
+        "https://backend.maflam.com/maflam/sign-up-with-google",
         { googleCredential: credentialResponse.credential }
       );
 
