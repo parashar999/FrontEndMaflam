@@ -192,7 +192,7 @@ const ContactForm2 = () => {
         {/* nationalityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            nationality<span>*</span>
+            Nationality<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -229,7 +229,7 @@ const ContactForm2 = () => {
         {/* cityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            city<span>*</span>
+            City<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -320,7 +320,7 @@ const ContactForm2 = () => {
         {/* email */}
         <div className={styles.inputGroup}>
           <label htmlFor="email">
-            email<span>*</span>
+            Email<span>*</span>
           </label>
           <input
             type="email"
