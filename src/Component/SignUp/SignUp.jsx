@@ -65,7 +65,10 @@ const SignUp = () => {
       setConfirmPassword("");
       setPhone("");
       setDateofBirth({ day: '', month: '', year: '' });
-      navigate("/login");
+     
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
@@ -80,7 +83,10 @@ const SignUp = () => {
       );
 
       toast.success(response.data.message || "Google Sign Up Successful!");
-      navigate("/login");
+      // navigate("/login");
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
@@ -107,6 +113,8 @@ const SignUp = () => {
           <label htmlFor="Full Name">{fullNameLabel}</label>
           <input
             type="text"
+            required
+            maxLength={30}
             placeholder={fullNameLabel}
             className={stylesSelected.input}
             value={usernameInEng}
@@ -116,6 +124,8 @@ const SignUp = () => {
           <label htmlFor="Email">{emailLabel}</label>
           <input
             type="email"
+            required
+            maxLength={50}
             placeholder={emailLabel}
             className={stylesSelected.input}
             value={emailId}
@@ -127,6 +137,8 @@ const SignUp = () => {
             <input
               type={isPasswordVisible ? "text" : "password"}
               placeholder={passwordLabel}
+              required
+              maxLength={20}
               className={stylesSelected.input}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -139,6 +151,7 @@ const SignUp = () => {
             placeholder={confirmPasswordLabel}
             className={stylesSelected.input}
             value={confirmPassword}
+            required
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
@@ -160,6 +173,7 @@ const SignUp = () => {
               </select>
               <select
                 name="month"
+                // required
                 value={dateofBirth.month}
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
