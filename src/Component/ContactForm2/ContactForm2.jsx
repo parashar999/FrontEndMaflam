@@ -107,6 +107,7 @@ const ContactForm2 = () => {
             type="text"
             id="fullNameInEng"  
             required
+            maxLength={50}
             name="fullNameInEng"
             value={formData.fullNameInEng}
             onChange={handleInputChange}
