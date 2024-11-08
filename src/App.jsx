@@ -247,7 +247,14 @@ const App = () => {
           </LanguageProvider>
         }
       />
-      <Route path="/blogs" element={<Blogs />} />
+      <Route path="/blogs" element={
+            <LanguageProvider>
+                 <AboutusPageProvider>
+        <Blogs />
+        </AboutusPageProvider>
+        </LanguageProvider>
+
+        } />
       <Route
         path="/login"
         element={

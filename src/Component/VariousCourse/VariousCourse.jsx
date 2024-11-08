@@ -50,6 +50,7 @@ const VariousCourse = () => {
                 </p>
                 <div className={styles.footer}>
                   <span className={styles.para}>{course.para}</span>
+                  &nbsp;
                   <span className={styles.price}>{course.price}</span>
                   <span className={styles.line}>|</span>
                   &nbsp;
