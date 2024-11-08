@@ -1,64 +1,217 @@
-import React from "react";
+
+
+
+import React, { useContext } from "react";
 import styles from "./BlogHero.module.css";
-import { blogPosts } from "../../assets/assests.js";
-import { assests } from "../../assets/assests.js";
-// import BlogPostHero1 from "../BlogPostHero1/BlogPostHero1.JSX";
+import { BlogsPageContent } from "../../store/BlogsPageContent.jsx";
 
 const BlogHero = () => {
-  return (
-    <div className={styles.blogDetails}>    
-    
+  const { blogsPageContentDetails, loading, error } = useContext(BlogsPageContent);
 
-    <div className={styles.heroSection}>
-  
-      <div className={styles.featuredBlog}>
-        
-        <div className={styles.featuredContent}>
-          <img
-            src={assests.mainBlog}
-            alt="Featured Blog"
-            className={styles.featuredImage}
-          />
-          <p className={styles.featuredCategory}>
-            Educational, Entertaining, Research-Based, Critical
-          </p>
-          <h2 className={styles.featuredTitle}>
-            How does a professional director <br /> manage the crew on set?
-          </h2>
-          <p className={styles.featuredDescription}>
-            Yes, make sure to select the best lessons that fit your needs and
-            skill level.
-          </p>
-          <a href="/blogDetails" className={styles.readMoreBtn}>
-            Read story
-          </a>
+  if (loading) return <p>Loading...</p>; // Handle loading state
+  if (error) return <p>Error loading data</p>; // Handle error state
+
+  // Destructure formattedBlogDataforheader from context
+  const { formattedBlogDataforheader = [] } = blogsPageContentDetails || {};
+
+  // Check if there’s data in formattedBlogDataforheader
+  if (!formattedBlogDataforheader.length) return <p>No blog data available</p>;
+
+  return (
+    <div className={styles.blogDetails}>
+      <div className={styles.heroSection}>
+        {/* Display the first item as the featured blog */}
+        <div className={styles.featuredBlog}>
+          <div className={styles.featuredContent}>
+            <img
+              src={formattedBlogDataforheader[0].blogImage}
+              alt="Featured Blog"
+              className={styles.featuredImage}
+            />
+            {/* <p className={styles.featuredCategory}>
+              Educational, Entertaining, Research-Based, Critical
+            </p> */}
+            <h2 className={styles.featuredTitle}>
+              {formattedBlogDataforheader[0].title}
+            </h2>
+            <p className={styles.featuredDescription}>
+              {formattedBlogDataforheader[0].blogSubtitle1}
+            </p>
+            <a href="/blogDetails" className={styles.readMoreBtn}>
+              {formattedBlogDataforheader[0].btnTitle}
+            </a>
+          </div>
+        </div>
+
+        {/* Display remaining items as blog cards */}
+        <div className={styles.blogList}>
+          {formattedBlogDataforheader.slice(1).map((post, index) => (
+            <div key={index} className={styles.blogCard}>
+              <img
+                src={post.blogImage || "default-image-url.jpg"} // Add a default image if none is provided
+                alt={post.title}
+                className={styles.blogImage}
+              />
+              <div className={styles.blogContent}>
+                <h3 className={styles.title}>{post.title}</h3>
+                {/* <p className={styles.blogSubtitle}>{post.blogSubtitle1}</p> */}
+                <a href="/blogDetails" className={styles.readMore}>
+                  {post.btnTitle}
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className={styles.blogList}>
-        {blogPosts.map((post) => (
-          <div key={post.id} className={styles.blogCard}>
-            <img
-              src={post.image}
-              alt={post.title}
-              className={styles.blogImage}
-            />
-            <div className={styles.blogContent}>
-              <p className={styles.category}>{post.category}</p>
-              <h3 className={styles.title}>{post.title}</h3>
-              <a href="/blogDetails" className={styles.readMore}>
-                {post.linkText}
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
     </div>
   );
 };
 
 export default BlogHero;
+
+
+
+
+// import React, { useContext } from "react";
+// import styles from "./BlogHero.module.css";
+// import { blogPosts } from "../../assets/assests.js";
+// import { assests } from "../../assets/assests.js";
+// import { BlogsPageContent } from "../../store/BlogsPageContent.jsx";
+
+// const BlogHero = () => {
+//   const { blogsPageContentDetails, loading, error } = useContext(BlogsPageContent);
+
+//   if (loading) return <p>Loading...</p>; // Handle loading state
+//   if (error) return <p>Error loading data</p>; // Handle error state
+
+//   // Destructure the formatted blog data
+//   const { formattedBlogDataforheader = [] } = blogsPageContentDetails || {};
+
+//   return (
+//     <div className={styles.blogDetails}>    
+//       <div className={styles.heroSection}>
+//         <div className={styles.featuredBlog}>
+//           <div className={styles.featuredContent}>
+//             <img
+//               // src={assests.mainBlog}
+//               src={ formattedBlogDataforheader[0].blogImage}
+//               alt="Featured Blog"
+//               className={styles.featuredImage}
+//             />
+//             {formattedBlogDataforheader.length > 0 && (
+//               <>
+//                 <p className={styles.featuredCategory}>
+//                   {formattedBlogDataforheader[0].blogSubtitle1}
+//                 </p>
+//                 <h2 className={styles.featuredTitle}>
+//                   {formattedBlogDataforheader[0].title} <br /> {formattedBlogDataforheader[0].title2}
+//                 </h2>
+//                 <p className={styles.featuredDescription}>
+//                   {formattedBlogDataforheader[0].blogSubtitle2}
+//                 </p>
+//                 <a href="/blogDetails" className={styles.readMoreBtn}>
+//                   {formattedBlogDataforheader[0].btnTitle}
+//                 </a>
+//               </>
+//             )}
+//           </div>
+//         </div>
+
+//         <div className={styles.blogList}>
+//           {blogPosts.map((post) => (
+//             <div key={post.id} className={styles.blogCard}>
+//               <img
+//                 src={post.image}
+//                 alt={post.title}
+//                 className={styles.blogImage}
+//               />
+//               <div className={styles.blogContent}>
+//                 <p className={styles.category}>{post.category}</p>
+//                 <h3 className={styles.title}>{post.title}</h3>
+//                 <a href="/blogDetails" className={styles.readMore}>
+//                   {post.linkText}
+//                 </a>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default BlogHero;
+// import React from "react";
+// import styles from "./BlogHero.module.css";
+// import { blogPosts } from "../../assets/assests.js";
+// import { assests } from "../../assets/assests.js";
+// import { BlogsPageContent } from "../../store/BlogsPageContent.jsx";
+// // import BlogPostHero1 from "../BlogPostHero1/BlogPostHero1.JSX";
+
+// const BlogHero = () => {
+
+
+//   const { blogsPageContentDetails, loading, error } = useContext(BlogsPageContent);
+
+//   if (loading) return <p>Loading...</p>; // Handle loading state
+//   if (error) return <p>Error loading data</p>; // Handle error state
+
+//   // Destructure blogTitle data from context
+//   const { blogTitle = [] } = blogsPageContentDetails || {};
+//   return (
+//     <div className={styles.blogDetails}>    
+    
+
+//     <div className={styles.heroSection}>
+  
+//       <div className={styles.featuredBlog}>
+        
+//         <div className={styles.featuredContent}>
+//           <img
+//             src={assests.mainBlog}
+//             alt="Featured Blog"
+//             className={styles.featuredImage}
+//           />
+//           <p className={styles.featuredCategory}>
+//             Educational, Entertaining, Research-Based, Critical
+//           </p>
+//           <h2 className={styles.featuredTitle}>
+//             How does a professional director <br /> manage the crew on set?
+//           </h2>
+//           <p className={styles.featuredDescription}>
+//             Yes, make sure to select the best lessons that fit your needs and
+//             skill level.
+//           </p>
+//           <a href="/blogDetails" className={styles.readMoreBtn}>
+//             Read story
+//           </a>
+//         </div>
+//       </div>
+
+//       <div className={styles.blogList}>
+//         {blogPosts.map((post) => (
+//           <div key={post.id} className={styles.blogCard}>
+//             <img
+//               src={post.image}
+//               alt={post.title}
+//               className={styles.blogImage}
+//             />
+//             <div className={styles.blogContent}>
+//               <p className={styles.category}>{post.category}</p>
+//               <h3 className={styles.title}>{post.title}</h3>
+//               <a href="/blogDetails" className={styles.readMore}>
+//                 {post.linkText}
+//               </a>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//     </div>
+//   );
+// };
+
+// export default BlogHero;
 
 
 
