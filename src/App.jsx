@@ -51,6 +51,8 @@ import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
 import EbookTwo from "./Pages/EbookTwo/EbookTwo.jsx";
 import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
 import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
+import PageNotFoundPage from "./Pages/PageNotFoundPage/PageNotFoundPage.jsx";
+import ContentRequiredPage from "./Pages/ContentRequiredPage/ContentRequiredPage.jsx";
 
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
@@ -201,15 +203,36 @@ const App = () => {
       <Route path="/mycertificate" element={<MyCertificate />} />
       <Route path="/personalinformation" element={<PersonalInformation />} />
 
-      <Route path="/filmproduction" element={
-        <LanguageProvider>
-          <FilmProductionProvider>
-            <AboutusPageProvider> 
-          <FilmProduction />
-          </AboutusPageProvider>
-          </FilmProductionProvider>
-        </LanguageProvider>
-        } />
+      <Route
+        path="/pagenotfound"
+        element={
+          <LanguageProvider>
+            <PageNotFoundPage />
+          </LanguageProvider>
+        }
+      />
+
+      <Route
+        path="/contentrequired"
+        element={
+          <LanguageProvider>
+            <ContentRequiredPage />
+          </LanguageProvider>
+        }
+      />
+
+      <Route
+        path="/filmproduction"
+        element={
+          <LanguageProvider>
+            <FilmProductionProvider>
+              <AboutusPageProvider>
+                <FilmProduction />
+              </AboutusPageProvider>
+            </FilmProductionProvider>
+          </LanguageProvider>
+        }
+      />
       <Route path="/ebooktwo" element={<EbookTwo />} />
 
       <Route
@@ -291,13 +314,11 @@ const App = () => {
         path="/mywishlist"
         element={
           <LanguageProvider>
-
             <HomePageProvider>
-            <EbookPageContextProvider>
-              <AboutusPageProvider> 
-
-              <MyWishlist />
-              </AboutusPageProvider>
+              <EbookPageContextProvider>
+                <AboutusPageProvider>
+                  <MyWishlist />
+                </AboutusPageProvider>
               </EbookPageContextProvider>
             </HomePageProvider>
           </LanguageProvider>

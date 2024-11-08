@@ -191,7 +191,7 @@ const Navbar = () => {
                   <ul>
                     <li>
                       {" "}
-                      <Link to="/filmproduction "> My Courses</Link>
+                      <Link to="/mycourses "> My Courses</Link>
                     </li>
                     <li className={styles.iconstyle}>
                       {" "}

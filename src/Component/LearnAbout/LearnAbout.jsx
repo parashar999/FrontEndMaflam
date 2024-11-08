@@ -96,7 +96,7 @@ function LearnAbout() {
   const packageData = homeScreenDetails?.packageData || [];
   const termsText =
     language === "ar" ? "الشروط والأحكام  " : " terms and condition";
-  const currencyText = language === "ar" ? "ر.س" : "SR";
+  const currencyText = language === "ar" ? "ر.س" : "SAR";
 
   const renderCourseCategory = (categories) => {
     return categories.map((category, index) => (

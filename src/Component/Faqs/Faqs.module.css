@@ -59,7 +59,7 @@
 .question {
 color: #5affff;
 /* text-align: right; */
-font-family: "Noto Kufi Arabic";
+font-family: "Noto Kufi Arabic" !important;
 font-size: 24px;
 font-style: normal;
 font-weight: 300;
