@@ -7,6 +7,7 @@ import downloadIcon from "../../assets/downloadIcon.png";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { MdDelete } from "react-icons/md";
 
 const ContactForm2 = () => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,33 @@ const ContactForm2 = () => {
     // resumeFile: null,
     // portfolioFile: null,
   });
+  const [resume, setResume] = useState(null);
+  const [portfolio, setPortfolio] = useState(null);
+  
+
+  const handleDeleteFile = (setter) => {
+    setter(null);
+  };
+
+  const handlePhoneInput = (e) => {
+    e.target.value = e.target.value.replace(/\D/g, "");
+  };
+  const triggerFileUpload = (inputId) => {
+    document.getElementById(inputId).click();
+  };
+
+  const handleFileUpload = (e, setFileField) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFileField(file); // Update resume or portfolio state
+      setFormData((prevData) => ({
+        ...prevData,
+        [setFileField === setResume ? "resume" : "portfolio"]: file,
+      }));
+    }
+  };
+
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -39,17 +67,17 @@ const ContactForm2 = () => {
   };
 
   // Trigger file input by button click
-  const triggerFileUpload = (inputId) => {
-    document.getElementById(inputId).click();
-  };
+  // const triggerFileUpload = (inputId) => {
+  //   document.getElementById(inputId).click();
+  // };
 
-  // Handle file upload and set file in form data
-  const handleFileUpload = (e, setFileField) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [setFileField]: e.target.files[0],
-    }));
-  };
+  // // Handle file upload and set file in form data
+  // const handleFileUpload = (e, setFileField) => {
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [setFileField]: e.target.files[0],
+  //   }));
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -81,18 +109,23 @@ const ContactForm2 = () => {
     // if (portfolio) payload.append("portfolio", portfolio);
 
     try {
-      await axios.post("https://backend.maflam.com/maflam/create-internship-form", payload);
-      toast.success("Form submitted successfully!");
-    } catch (err) {
-      const errorMessage = err.response?.data?.message || err.message;
+       const res = await axios.post("https://backend.maflam.com/maflam/create-internship-form", payload);
+      // toast.success("Form submitted successfully!");
+      toast.success(res.data.message)
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    }
+      catch (err) {
+      const errorMessage = err.res?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
     }
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(formData);
-  // };
+
+  
+
+  
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
   const btnText = language === "en" ? "Upload file" : "تحميل الملف";
   return (
@@ -107,6 +140,7 @@ const ContactForm2 = () => {
             type="text"
             id="fullNameInEng"  
             required
+            maxLength={50}
             name="fullNameInEng"
             value={formData.fullNameInEng}
             onChange={handleInputChange}
@@ -192,7 +226,7 @@ const ContactForm2 = () => {
         {/* nationalityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            nationality<span>*</span>
+            Nationality<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -229,7 +263,7 @@ const ContactForm2 = () => {
         {/* cityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            city<span>*</span>
+            City<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -320,7 +354,7 @@ const ContactForm2 = () => {
         {/* email */}
         <div className={styles.inputGroup}>
           <label htmlFor="email">
-            email<span>*</span>
+            Email<span>*</span>
           </label>
           <input
             type="email"
@@ -335,22 +369,48 @@ const ContactForm2 = () => {
         </div>
 
         {/* Phone Number */}
-        <div className={styles.inputGroup}>
+        {/* <div className={styles.inputGroup}>
           <label htmlFor="phoneNo">
             Phone Number<span>*</span>
           </label>
           <input
-            type="number"
-            id="phoneNo"
-            required 
-            maxLength={16}
+           type="number"
+           id="phoneNo"
+           maxLength={16}
+        required
             name="phoneNo"
             value={formData.phoneNo}
             onChange={handleInputChange}
             className={styles.input}
             placeholder="Phone Number"
           />
-        </div>
+        </div> */}
+         <div className={styles.inputGroup}>
+         <label htmlFor="phoneNo">
+            Phone Number<span>*</span>
+          </label>
+         <input
+    type="number"
+    id="phoneNo"
+    required
+    name="phoneNo"
+    value={formData.phoneNo}
+    onChange={(e) => {
+      const value = e.target.value.replace(/\D/g, ""); // Remove any non-numeric characters
+      if (value.length <= 16) {
+        setFormData({ ...formData, phoneNo: value });
+      }
+    }}
+    onInput={(e) => {
+      if (e.target.value.length > 10) e.target.value = e.target.value.slice(0, 16);
+    }}
+    className={styles.input}
+    placeholder="Phone Number"
+    maxLength={16}
+    pattern="\d{10}"
+    title="Phone number should be 10 digits"
+  />
+  </div>
         <div className={styles.inputGroup}>
           <label htmlFor="hasPreviousExperienceInEng">
             Do you have previous hasPreviousExperienceInEng in your chosen field?<span>*</span>
@@ -574,7 +634,7 @@ const ContactForm2 = () => {
         </div>
 
         {/* Resume Upload */}
-        <div className={styles.inputGroup}>
+        {/* <div className={styles.inputGroup}>
           <label htmlFor="resumeUpload">
             Resume<span>*</span>
           </label>
@@ -595,9 +655,83 @@ const ContactForm2 = () => {
             style={{ display: "none" }}
             onChange={(e) => handleFileUpload(e, "resumeFile")}
           />
-        </div>
+        </div> */}
 
-        {/* Portfolio Upload */}
+<div className={styles.inputGroup}>
+        <label htmlFor="resumeUpload">
+          Resume<span>*</span>
+        </label>
+        <div className={styles.imgUpload}>
+          {resume ? (
+            <>
+              <span>{resume.name}</span>
+              <button
+                type="button"
+                onClick={() => handleDeleteFile(setResume)}
+                className={styles.deleteButton}
+              >
+         <i> <MdDelete /></i>
+              </button>
+            </>
+          ) : (
+            <div className={styles.btnstyles}>
+              <button
+                type="button"
+                onClick={() => triggerFileUpload("resumeUpload")}
+                className={styles.downloadIcon}
+              >
+                <img src={downloadIcon} alt="Upload Resume" />
+              </button>
+              <p className="uploadFile">Upload Resume</p>
+            </div>
+          )}
+          <input
+            type="file"
+            id="resumeUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, setResume)}
+          />
+        </div>
+      </div>
+
+      {/* Portfolio Upload */}
+      <div className={styles.inputGroup}>
+        <label htmlFor="portfolioUpload">Portfolio</label>
+        <div className={styles.imgUpload}>
+          {portfolio ? (
+            <>
+              <span>{portfolio.name}</span>
+              <button
+                type="button"
+                onClick={() => handleDeleteFile(setPortfolio)}
+                className={styles.deleteButton}
+              >
+     <i> <MdDelete /></i>
+              </button>
+            </>
+          ) : (
+            <div className={styles.btnstyles}>
+              <button
+                type="button"
+                onClick={() => triggerFileUpload("portfolioUpload")}
+                className={styles.downloadIcon}
+              >
+                <img src={downloadIcon} alt="Upload Portfolio" />
+              </button>
+              <p className="uploadFile">Upload Portfolio</p>
+            </div>
+          )}
+          <input
+            type="file"
+            id="portfolioUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, setPortfolio)}
+          />
+        </div>
+      </div>
+
+
+        {/* Portfolio Upload
         <div className={styles.inputGroup}>
           <label htmlFor="portfolioUpload">Portfolio</label>{" "}
           <div className={styles.imgUpload}>
@@ -617,7 +751,7 @@ const ContactForm2 = () => {
             style={{ display: "none" }}
             onChange={(e) => handleFileUpload(e, "portfolioFile")}
           />
-        </div>
+        </div> */}
 
         {/* Submit Button */}
         <div className={styles.inputGroup}>

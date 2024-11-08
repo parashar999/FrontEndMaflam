@@ -16,6 +16,7 @@
   border-radius: 10px; /* Rounded corners */
  
 }
+
 .flex-container {
     display: flex;
     background-color: #1a374b;
@@ -135,6 +136,17 @@
   .hiddenInput {
     display: none;
   }
+  .imgUpload span {
+    background: #39FFFB;
+    border: solid 1px #39FFFB;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .deleteButton i {
+    margin-top: 10px;
+  font-size: 30px;
+  }
   .downloadIcon {
     display: flex;
     align-items: center;
@@ -175,6 +187,28 @@
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+
+  .deleteButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Increase width for a larger circle */
+    height: 40px; /* Increase height for a larger circle */
+    border-radius: 50%;
+    padding: 0; /* Remove padding to keep icon centered */
+    background-color: #00c9c9;
+    border: none; /* Optional: remove border for a cleaner look */
+    cursor: pointer;
+  background: var(--Accent-Accent-400---Main, #39FFFB);
+  box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
+  }
+  .btnstyles{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
   }
 
 /* Responsive adjustments */
