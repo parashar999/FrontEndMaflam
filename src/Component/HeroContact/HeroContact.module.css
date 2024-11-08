@@ -67,7 +67,8 @@
   .card:hover{
     transform: scale(1.08);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(1deg, rgba(9, 29, 44, 0.90) 0.65%, rgba(44, 102, 109, 0.90) 108.99%), lightgray 50% / cover no-repeat;
+    background-image: url("../../assets/transperency.png") !important;
+    /* background: linear-gradient(1deg, rgba(9, 29, 44, 0.90) 0.65%, rgba(44, 102, 109, 0.90) 108.99%), lightgray 50% / cover no-repeat; */
   }
   
   .cardIcon {
