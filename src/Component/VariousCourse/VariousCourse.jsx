@@ -12,8 +12,7 @@ const VariousCourse = () => {
   if (error) return <p>Error loading data</p>;
 
   const courses = pricingPageContextDetails?.formattedCourseData || [];
-  const buttonTitle =
-    pricingPageContextDetails?.getPricingCourse1DetailsSecButton?.title ||
+  const buttonTitle = pricingPageContextDetails?.getPricingCourse1DetailsSecButton?.title ||
     "Buy now";
 
   return (
@@ -77,7 +76,7 @@ const VariousCourse = () => {
                     className={styles.buyNow}
                     onClick={() => navigate("/filmproduction")}
                   >
-                    {buttonTitle}
+                    {course?.btnTitle}
                   </button>
                 </div>
               </div>

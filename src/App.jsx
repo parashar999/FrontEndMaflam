@@ -324,6 +324,8 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+      
     </Routes>
   );
 };
