@@ -17,6 +17,8 @@ export default function BlogPostHero1() {
   // Destructure blogTitle data from context
   const { blogTitle = [] } = blogsPageContentDetails || {};
 
+  console.log("blogs")
+
   return (
     <div className={styles.header}>
       <div>
@@ -31,7 +33,7 @@ export default function BlogPostHero1() {
           </button>
         </div>
         
-        <BlogHero />
+        <BlogHero />  
       </div>
     </div>
   );

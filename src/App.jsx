@@ -53,6 +53,7 @@ import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
 import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
 import PageNotFoundPage from "./Pages/PageNotFoundPage/PageNotFoundPage.jsx";
 import ContentRequiredPage from "./Pages/ContentRequiredPage/ContentRequiredPage.jsx";
+import BlogEjsPage from "./Pages/BlogEjsPage/BlogEjsPage.jsx";
 
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
@@ -255,6 +256,7 @@ const App = () => {
         </LanguageProvider>
 
         } />
+         <Route path="/blogDetails/:id" element={<BlogEjsPage />} />
       <Route
         path="/login"
         element={
