@@ -125,7 +125,7 @@ const ContactForm = () => {
             <label htmlFor="email">
               {emailTitle} <span>*</span>
             </label>
-            <input
+            <input 
               type="email"
               id="email"
               required
