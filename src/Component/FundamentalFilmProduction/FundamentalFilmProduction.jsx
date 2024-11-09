@@ -29,9 +29,10 @@ const FundamentalFilmProduction = () => {
   if (error) return <p>Error loading data: {error.message}</p>;
 
   // Destructure required data from filmproductionScreenDetails
-  const courseData = filmproductionScreenDetails?.formattedCourseData || {};
+  const courseData = filmproductionScreenDetails?.formattedCourseData?.description || {};
+  const courseImg = filmproductionScreenDetails?.formattedCourseData || {};
   const buttonData = filmproductionScreenDetails?.getPricingCourse1DetailsSecButton || {};
-  const learningTitle = filmproductionScreenDetails?.getPricingCourse1DetailsSec1?.title || "What you will learn";
+  const learningTitle = filmproductionScreenDetails?.formattedCourseData?.descriptio || "What you will learn";
 
   console.log("hello",courseData)
 
@@ -40,8 +41,8 @@ const FundamentalFilmProduction = () => {
       <div className={styles.coursedetailsheader}>
         <div className={styles.videoTheory}>
           <div className={styles.headerText}>
-            <h6>{courseData.title || "Fundamentals of Film Production"}</h6>
-            <p>{courseData.description || "Course description not available."}</p>
+            <h6>{courseImg.title || "Fundamentals of Film Production"}</h6>
+            <p> {courseData} || "Course description not available."</p>
             <div className={styles.lessonsprice}>
               <div className={styles.riyals}>
                 {courseData.price ? `${courseData.price} ${courseData.para}` : "750 SAR"}
@@ -67,18 +68,21 @@ const FundamentalFilmProduction = () => {
                 </div>
                 {isOpen && (
                   <div>
-                    {courseData.courseObjective?.map((item, index) => (
+                    {/* {courseData.lessions?.map((item, index) => (
                       <p key={index} className={styles.answer} style={{ margin: "0", padding: "0", lineHeight: "145%", fontSize: "20px" }}>
                         {item}
                       </p>
-                    ))}
+                    ))} */}
+                    <p  className={styles.answer} style={{ margin: "0", padding: "0", lineHeight: "145%", fontSize: "20px" }}>
+                    {courseData}
+                      </p>
                   </div>
                 )}
               </div>
             </div>
           </div>
           <div className={styles.courseVideo}>
-            <img src={courseData.promoPhoto || ""} alt="Course Preview" />
+            <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
             <div className={styles.videocontent}>
               <p>{filmproductionScreenDetails.getPricingCourse1DetailsSec1?.description || "No summary available."}</p>
               <button onClick={checkoutpage} className={styles.subcribebtn}>
