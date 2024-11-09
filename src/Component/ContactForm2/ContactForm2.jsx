@@ -429,7 +429,7 @@ const ContactForm2 = () => {
           <label>
             Required Training Field<span>*</span>
           </label>
-          <div className={styles.options}>
+          <div className={styles.options2}>
             {[
               "Camera Department",
               "Editing Department",
@@ -447,7 +447,7 @@ const ContactForm2 = () => {
                 type="button"
                 key={field}
                 required
-                className={`${styles.optionButton} ${
+                className={`${styles.optionButton2} ${
                   formData.trainingFieldsInEng.includes(field) ? styles.active : ""
                 }`}
                 onClick={() => handletrainingFieldsInEngChange(field)}
@@ -463,7 +463,7 @@ const ContactForm2 = () => {
           <label>
             Current Working Hours<span>*</span>
           </label>
-          <div className={styles.options}>
+          <div className={styles.options1}>
             {[
               "Employed",
               "I am Not Currently Working",
@@ -473,7 +473,7 @@ const ContactForm2 = () => {
               <button
                 type="button"
                 key={status}
-                className={`${styles.optionButton} ${
+                className={`${styles.optionButton1} ${
                   formData.currentWorkingHoursInEng === status ? styles.active : ""
                 }`}
                 onClick={() =>

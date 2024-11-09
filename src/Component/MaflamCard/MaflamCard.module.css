@@ -31,17 +31,20 @@ margin: 0  auto;
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  /* gap: 10px; */
+  gap: 0px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .card {
   position: relative;
   overflow: hidden;
+
   border-radius: 10px;
 }
 
 .image {
-  width: 80%;
+  width: 94%;
   /* border-radius: 10px; */
   transition: transform 0.3s ease;
 }
