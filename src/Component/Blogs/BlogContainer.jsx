@@ -90,8 +90,8 @@ function BlogContainer() {
         <div className={stylesSelected.pricingimg}>
           <img src={blogData[0]?.imageUrl || ""} alt="Blog" />
           <div className={stylesSelected.contentContainer}>
-          <h2>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
-          <p>{blogData[1]?.description || "No description available."}</p>
+          <h2 style={{maxWidth:'80%'}}>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
+          <p style={{maxWidth:'80%'}}>{blogData[1]?.description || "No description available."}</p>
           {/* <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div> */}
           <div>  <h5> <a href="/blogDetails"> {blogData[2]?.title || "Read More"}</a>
           {arrow}
