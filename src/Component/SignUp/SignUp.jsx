@@ -219,7 +219,7 @@ const SignUp = () => {
             render={({ onClick }) => (
               <button onClick={onClick} className={stylesSelected.socialButton}>
                 <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
-                <span>&nbsp;{googleLoginText}</span>
+                <span style={{width:'100%', textAlign:'center'}}> &nbsp; {googleLoginText} </span>
               </button>
             )}
           />

@@ -107,7 +107,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navmenu"
+      className={styles.navmenu}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
       <nav
@@ -121,6 +121,7 @@ const Navbar = () => {
         <a href="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </a>
+        <div className={styles.menuelements}>
         <div className={styles.leftLinks}>
           {console.log("check language", language)}
           {navItems1.map((item, index) => (
@@ -250,7 +251,7 @@ const Navbar = () => {
             </>
           )}
         </div>
-
+        </div>
         <div className={styles.hamburger} onClick={toggleHamburger}>
           <div></div>
           <div></div>

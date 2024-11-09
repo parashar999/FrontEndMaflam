@@ -104,7 +104,7 @@
   right: -200px;
   bottom: 0;
   width: 40%;
-  height: 140%;
+  height: 100%;
   filter: blur(40px);
   background: var(--Neutral-Website-Bakground---Dark, #030B11);
   opacity: 0.8;
@@ -115,7 +115,7 @@
   left: -200px;
   bottom: 0;
   width: 40%;
-  height: 140%;
+  height: 100%;
   filter: blur(40px);
   background: var(--Neutral-Website-Bakground---Dark, #030B11);
   opacity: 0.9;
@@ -207,48 +207,32 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 160%; 
-padding: 10px 200px;
-width: 83%;
+padding: 10px 20px;
 margin: 0 auto;
 
 }
 
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 100%;
-    width: 275px;
+@media (max-width:1250px)
+{
+  .carouselcontainer
+  {
+    zoom: 0.8;
   }
-  .linking {
-    padding-left: 500px !important;
-    
-    margin-right: 750px;
-    text-align: right;
-  }
+}
 
-  .arrowLeft, .arrowRight {
-    font-size: 24px;
-  }
-  .contentpara p{
-    color: #FFF;
-    text-align: start;
-    font-family: "Noto Kufi Arabic";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%; 
-    padding: 10px 10px;
-    
+@media (max-width:1024)
+{
+    .carouselcontainer
+    {
+      zoom: 0.7;
     }
-    .carouselcontainer a {
-      color: #FFF;
-      text-align: center;
-    
-    
-      text-decoration: none;
-      font-family: "Noto Kufi Arabic";
-      font-size: 23px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 160%; 
+}
+
+@media (max-width:900px)
+{
+    .carousel
+    {
+      overflow: hidden;
+      max-width: 380px;
     }
-  }
+}
