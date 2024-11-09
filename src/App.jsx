@@ -56,8 +56,8 @@ import ContentRequiredPage from "./Pages/ContentRequiredPage/ContentRequiredPage
 import BlogEjsPage from "./Pages/BlogEjsPage/BlogEjsPage.jsx";
 import { ContactUs3ContextProvider } from "./store/ContactUs3Context.jsx";
 
-// import Mycourses from "./Component/MyCourses/Mycourses.jsx";
-// import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
+//import Mycourses from "./Component/MyCourses/Mycourses.jsx";
+//import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
   return (
     <Routes>
