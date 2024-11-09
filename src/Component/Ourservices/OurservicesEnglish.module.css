@@ -43,27 +43,29 @@
 }
 
 .frane64 {
+  display: flex;
   background-image: url('../../assets/Frame 64.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 200px;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   display: flex;
   max-width: 1433px;
   margin-top: 200px;
+  position: relative;
   /* border: 1px solid red; */
  
 
 }
 
 .frane64 .quotesIcon {
- 
+  position: absolute;
+  left: 20px;
+  top: -60px;
   padding-left: 20px;
-  margin-bottom: 150px;
-  margin-left: 20px;
-  width: 130.978px;
-  height: 90px;
+  height: auto;
 }
 
 .frane64 p {
@@ -132,15 +134,56 @@ line-height: 160%;
 
 
 
-@media (max-width:950px)
+@media (max-width:1280px)
 {
-  .frane64
+  .text
   {
-    zoom: 0.5;
+    zoom: 0.8;
   }
   .text2
   {
     display: flex;
     flex-direction: column;
+  }
+
+}
+@media (max-width:768px)
+{
+  .text
+  {
+    zoom: 0.7;
+  }
+  .frane64 p
+  {
+    font-size: 24px;
+  }
+  .text2
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .OurservicesContainer
+  {
+    padding-top: 0px;
+  }
+  
+  .quotesIcon
+  {
+    top: 0px;
+    height: 80px !important;
+  }
+}
+
+@media (max-width:440px)
+{
+  .quotesIcon
+  {
+    top: 60px;
+    height: 40px !important;
+  }
+  
+  .frane64 p
+  {
+    font-size: 16px;
   }
 }

@@ -19,7 +19,7 @@ const ContentRequired = () => {
     <div className={styles.pageContainer}>
       <div className={styles.contentWrapper}>
         <h1 className={styles.title}>Content Required</h1>
-        <p className={styles.description}>
+        <p style={{maxWidth:'100%'}} className={styles.description}>
           We are sorry, but the content you are looking for is currently unavailable or missing.
           Please check the link or try again later. If you need help, feel free to contact our support team.
         </p>

@@ -108,33 +108,31 @@ font-weight: 400;
 line-height: 160%; */
 }
 
-@media (max-width: 768px) {
-  .headingSection h1 {
-      font-size: 2rem;
-      text-align: left;
-      margin-left: -100px;
+@media (max-width:1250px)
+{
+  .headingSection
+  {
+    zoom: 0.8;
   }
-  
-  .headingSection p {
-      font-size: 1rem;
-      margin-left: -100px;
-      text-align: left;
+  .cards h3, .cards p
+  {
+      font-size: smaller;
   }
-  .underline {
-    margin-left: -100px;
-   
-    stroke-width: 4px;
-    margin-top: 40px ;
-  stroke: #5AFFFF;
-  margin-left:90px;
-  width: 200px;
-  background-color: #5AFFFF;
-  height: 1px;
-  flex-shrink: 0;
-  }
+}
 
-  .card {
-      width: 100%;
-      margin-bottom: 20px;
+@media (max-width:768px)
+{
+  .headingSection
+  {
+    zoom: 0.7;
+  }
+  .cards h3, .cards p
+  {
+      font-size: smaller;
+  }
+  .cards p
+  {
+    max-width: 100%;
+    padding: 0px;
   }
 }

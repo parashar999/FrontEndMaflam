@@ -28,9 +28,9 @@ padding-top: 200px;
   display: grid;
   padding-top: 50px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap:10px;
   justify-items: center;
   align-items: center;
+  gap: 40px;
   max-width: 1000px; 
   margin: 0 auto; 
 }
@@ -41,44 +41,35 @@ padding-top: 200px;
   flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
-  .partnersLogos {
-    grid-template-columns: repeat(2, minmax(160px, 1fr));
-    max-width: 800px; 
+@media (max-width:1280px)
+{
+  .successPartnersSection
+  {
+    zoom: 0.8;
   }
-
-  .partnerLogo img {
-    width: 160px;
-    height: 110px;
-  }
-}
-
-@media (max-width: 360px) {
-  .partnersLogos {
-    grid-template-columns: repeat(1, minmax(260px, 1fr));
-    max-width: 400px; 
-    height: 20px;
-  }
-
-  .partnerLogo img {
-    max-width: 140px;
-    margin-top: -20px;
-    height: 70px;
+  .partnersLogos
+  {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 }
 
-
-@media (min-width: 375px) and (max-width: 667px) {
-  .partnersLogos {
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
-    max-width: 400px; 
+@media (max-width:768px)
+{
+  .successPartnersSection
+  {
+    zoom: 0.7;
   }
-
-  .partnerLogo img {
-    max-width: 120px;
-    height: auto;
+  .successPartnersSection h2
+  {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .partnersLogos
+  {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
+
 
   
   

@@ -46,8 +46,8 @@ import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
 import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
 import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
 import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
-import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
-import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+// import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
+// import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
 import EbookTwo from "./Pages/EbookTwo/EbookTwo.jsx";
 import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
 import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
@@ -285,9 +285,9 @@ const App = () => {
         element={
           <LanguageProvider>
             <HomePageProvider>
-              <PrivacyPolicyProvider>
+             {/* <PrivacyPolicyProvider>
                 <PrivacyPolicy />
-              </PrivacyPolicyProvider>
+              </PrivacyPolicyProvider> */}
             </HomePageProvider>
           </LanguageProvider>
         }

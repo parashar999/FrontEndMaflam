@@ -1,5 +1,6 @@
 .herosection
 {
+  margin-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +117,6 @@
 {
   .content 
   {
-    zoom: 0.5;
+    zoom: 0.8;
   }
 }
