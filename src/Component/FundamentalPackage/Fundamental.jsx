@@ -92,15 +92,13 @@ function Fundamental() {
     <div className={stylesSelected.Fundamental}>
       <div className={stylesSelected.secondcontainer}>
         <div className={stylesSelected.content}>
-          <p>{title}</p>
-        </div>
-        <div className={stylesSelected.subscribe}>
-          <div >
-            {/* Use dynamic imageUrl from the context */}
-            <div className={stylesSelected.imgcontainer}>
+          <p style={{maxWidth:'100%', textAlign:'center'}} >{title}</p>
+          <div className={stylesSelected.imgcontainer}>
               <img src={imageUrl} alt="Filmmaking Package" className={styles.imgcontainer}  />
             </div>
-          </div>
+        </div>
+        <div className={stylesSelected.subscribe}>
+
           <div className={stylesSelected.ctn}>
               {categories.map((item, index) => (
                 <div key={index} className={stylesSelected.item}>

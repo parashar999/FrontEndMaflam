@@ -62,7 +62,7 @@ line-height: 150%;
   line-height: 160%;
 }
 .mainConatiner p{
-  
+  margin: auto;
 text-align: center;
 font-family: "Noto Kufi Arabic";
 font-size: 20px;
@@ -377,10 +377,11 @@ line-height: 180%; /* 25.2px */
   .mainConatiner
   {
     margin: 40px;
-    zoom: 0.7;
+    zoom: 0.8;
   }
   .contentConatiner
   {
+    margin: 0px;
     margin-bottom: 40px;
   }
   .firstcard , .secondcard
@@ -391,5 +392,13 @@ line-height: 180%; /* 25.2px */
   
 }
 
+@media (max-width:768px)
+{
+  .mainConatiner
+  {
+    zoom: 0.7;
+  }
 
+  
+}
 

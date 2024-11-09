@@ -89,8 +89,7 @@ function BlogContainer() {
         <Link style={{marginbottom:'20px', textAlign:'center', display:'block'}} to="/blogs">{blogData[0]?.title || "Default Blog Title"}</Link>
         <div className={stylesSelected.pricingimg}>
           <img src={blogData[0]?.imageUrl || ""} alt="Blog" />
-        </div>  
-        <div className={stylesSelected.contentContainer}>
+          <div className={stylesSelected.contentContainer}>
           <h2>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
           <p>{blogData[1]?.description || "No description available."}</p>
           {/* <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div> */}
@@ -98,7 +97,7 @@ function BlogContainer() {
           {arrow}
           </h5></div>
         </div>
-       
+        </div> 
       </div>
       </div>
   );
