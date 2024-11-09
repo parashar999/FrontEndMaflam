@@ -53,6 +53,7 @@ import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
 import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
 import PageNotFoundPage from "./Pages/PageNotFoundPage/PageNotFoundPage.jsx";
 import ContentRequiredPage from "./Pages/ContentRequiredPage/ContentRequiredPage.jsx";
+import { ContactUs3ContextProvider } from "./store/ContactUs3Context.jsx";
 
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
@@ -188,9 +189,9 @@ const App = () => {
           <LanguageProvider>
             <AboutusPageProvider>
               <ContactUsContextProvider>
-                <ContactUs2ContextProvider>
+                <ContactUs3ContextProvider>
                   <ContactUsPage3 />
-                </ContactUs2ContextProvider>
+                </ContactUs3ContextProvider>
               </ContactUsContextProvider>
             </AboutusPageProvider>
           </LanguageProvider>

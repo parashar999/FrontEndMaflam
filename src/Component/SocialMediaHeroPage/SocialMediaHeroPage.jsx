@@ -12,13 +12,14 @@ export default function SocialMediaHeroPage() {
 
 <div className={styles.btndiv}> 
     <button className={styles.btnyoutube}> 
-      YouTube 
+   <a href="/https://youtube.com/@maflamcom?si=nEBvwausBsKW8TuF"> YouTube </a>
+   {/* <a href="https://www.youtube.com/@maflamcom"> YouTube </a> */}
     </button>
     <button className={styles.btntiktok}> 
-      TikTok
+   <a href="/https://www.tiktok.com/@maflam.com">TikTok</a>
     </button>
     <button className={styles.btninsta}> 
-       Instagram
+     <a href="https://www.instagram.com/maflam.com">Instagram</a>
     </button>
 
 </div>

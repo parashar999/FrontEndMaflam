@@ -4,12 +4,108 @@ import  { useState } from "react";
 import { useContext } from "react";
 import styles from "./ContactForm2.module.css";
 import downloadIcon from "../../assets/downloadIcon.png";
-import { LanguageContext } from "../LanguageContext/LanguageContext";
+
 import axios from "axios";
 import { toast } from "react-toastify";
 import { MdDelete } from "react-icons/md";
+import { ContactUs3Context } from "../../store/ContactUs3Context";
+import { LanguageContext } from "../LanguageContext/LanguageContext";
 
 const ContactForm2 = () => {
+
+  const { ContactUs3ContextDetails , loading, error } = useContext(ContactUs3Context);
+  const { language } = useContext(LanguageContext);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
+
+
+  const contactDetailsSec3 = ContactUs3ContextDetails?.contactDetails3Sec3 || [];
+  const title = contactDetailsSec3[0]?.title || "Apply for Maflam Training Program";
+  const fullNameDescription = contactDetailsSec3[1]?.description || "Full Name";
+  const fullNameTitle = contactDetailsSec3[1]?.title || "Full Name";
+
+  const maletitle = contactDetailsSec3[2]?.title || "Gender";
+const categoryMale = contactDetailsSec3[2]?.category[0] || "Male";
+const categoryFemale = contactDetailsSec3[2]?.category[1] || "Female";
+const age = contactDetailsSec3[3]?.title || "Age";
+const categoryage = contactDetailsSec3[3]?.category[0] || "Under 18";
+const categoryage1 = contactDetailsSec3[3]?.category[1] || "From 18 to 20";
+
+const categoryage2 = contactDetailsSec3[3]?.category[2] || "From 20 to 30";
+const categoryage3 = contactDetailsSec3[3]?.category[3] || "other";
+
+const Natinality = contactDetailsSec3[4]?.title || "";
+const categoryNatinality = contactDetailsSec3[4]?.category[0] || "";
+const categoryNatinality1 = contactDetailsSec3[4]?.category[1] || "";
+const categoryNatinality2 = contactDetailsSec3[4]?.category[2] || "";
+
+const city= contactDetailsSec3[5]?.title || "";
+const categorycity = contactDetailsSec3[5]?.category[0] || "";
+const categorycity1 = contactDetailsSec3[5]?.category[1] || "";
+const categorycity2 = contactDetailsSec3[5]?.category[2] || "";
+
+const Degree= contactDetailsSec3[6]?.title || "";
+const categoryDegree1 = contactDetailsSec3[6]?.category[0] || "";
+const categoryDegree2 = contactDetailsSec3[6]?.category[1] || "";
+const categoryDegree3 = contactDetailsSec3[6]?.category[2] || "";
+const categoryDegree4 = contactDetailsSec3[6]?.category[3] || "";
+const categoryDegree5= contactDetailsSec3[6]?.category[4] || "";
+
+  const emailTitle = contactDetailsSec3[7]?.title || "";
+  const emailPlaceholder = contactDetailsSec3[7]?.description || "";
+  const phoneTitle = contactDetailsSec3[8]?.title || "";
+  const phonePlaceholder = contactDetailsSec3[8]?.description || "";
+  const experianceTitle = contactDetailsSec3[9]?.title || "";
+  const experiancePlaceholder = contactDetailsSec3[9]?.description || "";
+
+ const Traning = contactDetailsSec3[10]?.title || "";
+const categoryTraning = contactDetailsSec3[10]?.category || "";
+
+
+const workingHoursTitle = contactDetailsSec3[11]?.title || "Current Working Hours";
+const workingHoursOptions = contactDetailsSec3[11]?.category || [
+  "Employed",
+  "I am Not Currently Working",
+  "About to Graduate (Training University)",
+  "Student"
+];
+
+const internship = contactDetailsSec3[12]?.title || "";
+const internshipPlaceholder = contactDetailsSec3[12]?.description || "";
+
+const university = contactDetailsSec3[13]?.title || "";
+const univercityPlaceholder = contactDetailsSec3[13]?.description || "";
+
+
+const TrainingHoursTitle = contactDetailsSec3[14]?.title || "";
+const TrainingHoursPlaceholder = contactDetailsSec3[14]?.description || "";
+
+const TrainingTitleDate = contactDetailsSec3[15]?.title || "";
+const TrainingDatePlaceholder = contactDetailsSec3[15]?.description || "";
+
+const TrainingWeekDate = contactDetailsSec3[16]?.title || "";
+const TrainingWeekPlaceholder = contactDetailsSec3[16]?.description || "";
+
+const TrainingDate = contactDetailsSec3[17]?.title || "";
+const TrainingPlaceholder = contactDetailsSec3[17]?.category[0] || "";
+const TrainingPlaceholder1= contactDetailsSec3[17]?.category[0] || "";
+const TrainingPlaceholder2= contactDetailsSec3[17]?.category[0] || "";
+// const TrainingPlaceholder = contactDetailsSec3[17]?.description || "";
+
+
+const About  = contactDetailsSec3[18]?.title || "";
+const AboutPlaceholder = contactDetailsSec3[18]?.description || "";
+const resumetitle = contactDetailsSec3[19]?.title || "";
+const resumePlaceholder = contactDetailsSec3[19]?.description || "";
+const portfoliyo = contactDetailsSec3[20]?.title || "";
+const portfoliyoPlaceholder = contactDetailsSec3[20]?.description || "";
+const sendbtn1 = contactDetailsSec3[21]?.title || "";
+
+
+
+
+
+
   const [formData, setFormData] = useState({
     fullNameInEng: "",
      genderInEng: "",
@@ -126,15 +222,17 @@ const ContactForm2 = () => {
   
 
   
-  const { language, direction, toggleLanguage } = useContext(LanguageContext);
-  const btnText = language === "en" ? "Upload file" : "تحميل الملف";
+  // const { language, direction, toggleLanguage } = useContext(LanguageContext);
+  // const btnText = language === "en" ? "Upload file" : "تحميل الملف";
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Apply for Maflam Training Program</h2>
+      {/* <h2 className={styles.title}>Apply for Maflam Training Program</h2> */}
+      <h2 className={styles.title}>{title}</h2>
+      <hr style={{width:'100%', color:'#F1F2FA', height:'0.5px'}}/>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <label htmlFor="fullNameInEng">
-            Full name<span>*</span>
+            {fullNameTitle}<span>*</span>
           </label>
           <input
             type="text"
@@ -145,14 +243,14 @@ const ContactForm2 = () => {
             value={formData.fullNameInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Full name"
+            placeholder={fullNameDescription}
           />
         </div>
 
         {/*  genderInEng */}
         <div className={styles.inputGroup}>
           <label>
-             Gender<span>*</span>
+             {maletitle}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -163,7 +261,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData,  genderInEng: "Male" })}
             >
-              Male
+          {categoryMale}
             </button>
             <button
               type="button"
@@ -172,7 +270,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData,  genderInEng: "Female" })}
             >
-              Female
+            {categoryFemale}
             </button>
           </div>
         </div>
@@ -180,7 +278,7 @@ const ContactForm2 = () => {
         {/* Age */}
         <div className={styles.inputGroup}>
           <label>
-            Age<span>*</span>
+            {age}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -191,7 +289,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "Under 18" })}
             >
-              Under 18
+          {categoryage}
             </button>
             <button
               type="button"
@@ -200,7 +298,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "18 to 20" })}
             >
-              From 18 to 20
+             {categoryage1}
             </button>
             <button
               type="button"
@@ -209,7 +307,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "20 to 30" })}
             >
-              From 20 to 30
+              {categoryage2}
             </button>
             <button
               type="button"
@@ -218,7 +316,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "Over 30" })}
             >
-              Over 30
+          {categoryage3}
             </button>
           </div>
         </div>
@@ -226,35 +324,36 @@ const ContactForm2 = () => {
         {/* nationalityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            Nationality<span>*</span>
+            {Natinality}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
               required
-              className={`${styles.optionButton} ${
+              className={`${styles.optionButton2} ${
                 formData.nationalityInEng === "Saudi" ? styles.active : ""
               }`}
               onClick={() => setFormData({ ...formData, nationalityInEng: "Saudi" })}
             >
-              Saudi
+             {categoryNatinality}
             </button>
             <button
               type="button"
-              className={`${styles.optionButton} ${
+              className={`${styles.optionButton2} ${
                 formData.nationalityInEng === "Non-Saudi" ? styles.active : ""
               }`}
               onClick={() =>
                 setFormData({ ...formData, nationalityInEng: "Non-Saudi" })
               }
             >
-              Non-Saudi resident in Saudi Arabia
+              {/* Non-Saudi resident in Saudi Arabia */}
+              {categoryNatinality1}
             </button>
             <input
               type="text"
               name="nationalityInEng"
-              placeholder="Other"
-              className={styles.input}
+              placeholder={categoryNatinality2}
+              className={styles.input2}
               onChange={handleInputChange}
             />
           </div>
@@ -263,33 +362,33 @@ const ContactForm2 = () => {
         {/* cityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            City<span>*</span>
+            { city}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
               required
-              className={`${styles.optionButton} ${
+              className={`${styles.optionButton2} ${
                 formData.cityInEng === "Jeddah" ? styles.active : ""
               }`}
               onClick={() => setFormData({ ...formData, cityInEng: "Jeddah" })}
             >
-              Jeddah
+           {categorycity1}
             </button>
             <button
               type="button"
-              className={`${styles.optionButton} ${
+              className={`${styles.optionButton2} ${
                 formData.cityInEng === "Riyadh" ? styles.active : ""
               }`}
               onClick={() => setFormData({ ...formData, cityInEng: "Riyadh" })}
             >
-              Riyadh
+          {categorycity}
             </button>
             <input
               type="text"
               name="cityInEng"
-              placeholder="Other"
-              className={styles.input}
+              placeholder= {categorycity2}
+              className={styles.input2}
               onChange={handleInputChange}
             />
           </div>
@@ -298,7 +397,7 @@ const ContactForm2 = () => {
         {/* Your degreeInEng */}
         <div className={styles.inputGroup}>
           <label>
-            Your degree<span>*</span>
+           {Degree}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
@@ -309,7 +408,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, degreeInEng: "Secondary" })}
             >
-              Secondary
+          {categoryDegree1}
             </button>
             <button
               type="button"
@@ -319,7 +418,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, degreeInEng: "Diploma" })}
             >
-              Diploma
+           {categoryDegree2}
             </button>
             <button
               type="button"
@@ -328,7 +427,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, degreeInEng: "Bachelor's" })}
             >
-              Bachelor's
+           {categoryDegree3}
             </button>
             <button
               type="button"
@@ -337,7 +436,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, degreeInEng: "Masters" })}
             >
-              Masters
+         {categoryDegree4}
             </button>
             <button
               type="button"
@@ -346,7 +445,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, degreeInEng: "PhD" })}
             >
-              PhD
+          {categoryDegree5}
             </button>
           </div>
         </div>
@@ -354,7 +453,7 @@ const ContactForm2 = () => {
         {/* email */}
         <div className={styles.inputGroup}>
           <label htmlFor="email">
-            Email<span>*</span>
+            {emailTitle}<span>*</span>
           </label>
           <input
             type="email"
@@ -364,7 +463,7 @@ const ContactForm2 = () => {
             value={formData.email}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="email"
+            placeholder={emailPlaceholder}
           />
         </div>
 
@@ -387,7 +486,7 @@ const ContactForm2 = () => {
         </div> */}
          <div className={styles.inputGroup}>
          <label htmlFor="phoneNo">
-            Phone Number<span>*</span>
+            {phoneTitle}<span>*</span>
           </label>
          <input
     type="number"
@@ -405,7 +504,7 @@ const ContactForm2 = () => {
       if (e.target.value.length > 10) e.target.value = e.target.value.slice(0, 16);
     }}
     className={styles.input}
-    placeholder="Phone Number"
+    placeholder={phonePlaceholder}
     maxLength={16}
     pattern="\d{10}"
     title="Phone number should be 10 digits"
@@ -413,7 +512,7 @@ const ContactForm2 = () => {
   </div>
         <div className={styles.inputGroup}>
           <label htmlFor="hasPreviousExperienceInEng">
-            Do you have previous hasPreviousExperienceInEng in your chosen field?<span>*</span>
+        { experianceTitle}<span>*</span>
           </label>
           <input
             type="text"
@@ -422,27 +521,30 @@ const ContactForm2 = () => {
             value={formData.hasPreviousExperienceInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Answer"
+            placeholder={experiancePlaceholder}
           />
         </div>
         <div className={styles.inputGroup}>
           <label>
-            Required Training Field<span>*</span>
+         { Traning}<span>*</span>
           </label>
           <div className={styles.options2}>
-            {[
-              "Camera Department",
-              "Editing Department",
-              "Production Department",
-              "Content Writing Department",
-              "Sound Department",
-              "Directing Department",
-              "Acting Department",
-              "Voiceover Department",
-              "Research Department",
-              "Marketing Department",
-              "Design/Graphics Department",
-            ].map((field) => (
+            {
+            // [
+            //   "Camera Department",
+            //   "Editing Department",
+            //   "Production Department",
+            //   "Content Writing Department",
+            //   "Sound Department",
+            //   "Directing Department",
+            //   "Acting Department",
+            //   "Voiceover Department",
+            //   "Research Department",
+            //   "Marketing Department",
+            //   "Design/Graphics Department",
+        
+            // ]
+            categoryTraning.map((field) => (
               <button
                 type="button"
                 key={field}
@@ -450,7 +552,13 @@ const ContactForm2 = () => {
                 className={`${styles.optionButton2} ${
                   formData.trainingFieldsInEng.includes(field) ? styles.active : ""
                 }`}
-                onClick={() => handletrainingFieldsInEngChange(field)}
+                // onClick={() =>
+                  
+                //   //  handletrainingFieldsInEngChange(field)
+                //   }
+                onClick={() =>
+                  setFormData({ ...formData, trainingFieldsInEng: field })
+                }
               >
                 {field}
               </button>
@@ -461,15 +569,17 @@ const ContactForm2 = () => {
         {/* Current Working Hours */}
         <div className={styles.inputGroup}>
           <label>
-            Current Working Hours<span>*</span>
+        { workingHoursTitle}<span>*</span>
           </label>
           <div className={styles.options1}>
-            {[
-              "Employed",
-              "I am Not Currently Working",
-              "About to Graduate",
-              "Student",
-            ].map((status) => (
+            {
+            // [
+            //   "Employed",
+            //   "I am Not Currently Working",
+            //   "About to Graduate",
+            //   "Student",
+            // ]
+            workingHoursOptions.map((status) => (
               <button
                 type="button"
                 key={status}
@@ -489,7 +599,7 @@ const ContactForm2 = () => {
         {/* Reason for Internship */}
         <div className={styles.inputGroup}>
           <label htmlFor="reasonForMaflamInEng">
-            Why would you like to have an internship opportunity at Maflam?
+ {internship}
             <span>*</span>
           </label>
           <input
@@ -500,14 +610,14 @@ const ContactForm2 = () => {
             value={formData.reasonForMaflamInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Reason"
+            placeholder={internshipPlaceholder}
           />
         </div>
 
         {/* universityInEng */}
         <div className={styles.inputGroup}>
           <label htmlFor="universityInEng">
-            University<span>*</span>
+            { university}<span>*</span>
           </label>
           <input
             type="text"
@@ -518,14 +628,14 @@ const ContactForm2 = () => {
             value={formData.universityInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="universityInEng"
+            placeholder={univercityPlaceholder}
           />
         </div>
 
         {/* Number of Training Hours Required */}
         <div className={styles.inputGroup}>
           <label htmlFor="requiredTrainingHours">
-            Number of Training Hours Required<span>*</span>
+            { TrainingHoursTitle}<span>*</span>
           </label>
           <input
             type="number"
@@ -534,15 +644,14 @@ const ContactForm2 = () => {
             value={formData.requiredTrainingHours}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Enter hours"
+            placeholder={TrainingHoursPlaceholder}
           />
         </div>
 
         {/* Specific Date for Training Completion */}
         <div className={styles.inputGroup}>
           <label>
-            Is There a Specific Date by Which You Need to Complete the Training
-            Hours?
+      {TrainingTitleDate}
           </label>
           <input
             type="date"
@@ -550,12 +659,13 @@ const ContactForm2 = () => {
             value={formData.dateForTraining}
             onChange={handleInputChange}
             className={styles.input}
+            placeholder={TrainingDatePlaceholder}
           />
         </div>
 
         <div className={styles.inputGroup}>
           <label htmlFor="weeksForTraining">
-            How many weeks do you want to train?<span>*</span>
+           {TrainingWeekDate}<span>*</span>
           </label>
           <input
             type="number"
@@ -564,17 +674,17 @@ const ContactForm2 = () => {
             value={formData.weeksForTraining}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Enter number of weeks"
+            placeholder={TrainingWeekPlaceholder}
           />
         </div>
 
         {/* Start Date */}
         <div className={styles.inputGroup}>
           <label>
-            When will you be able to start?<span>*</span>
+ { TrainingDate}<span>*</span>
           </label>
           <div className={styles.dateInputs}>
-            <input
+            <input style={{width:'153px', background:'#1A374B', textAlign:'right'}}
               type="number"
               name="day"
               required
@@ -586,9 +696,9 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder="Day"
+              placeholder={TrainingPlaceholder}
             />
-            <input
+            <input style={{width:'153px', backgroundColor:'#1A374B', color:'white', textAlign:'right'}}
               type="number"
               name="month"
               value={formData.startDate.month}
@@ -599,9 +709,9 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder="Month"
+              placeholder={TrainingPlaceholder1}
             />
-            <input
+            <input style={{width:'200px', background:'#1A374B', textAlign:'right'}}
               type="number"
               name="year"
               value={formData.startDate.year}
@@ -612,7 +722,7 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder="Year"
+              placeholder={TrainingPlaceholder2}
             />
           </div>
         </div>
@@ -620,7 +730,7 @@ const ContactForm2 = () => {
         {/* Referral Source */}
         <div className={styles.inputGroup}>
           <label htmlFor="howDidYouKnowMaflamInEng">
-            How did you know about Maflam?<span>*</span>
+            { About }<span>*</span>
           </label>
           <input
             type="text"
@@ -629,7 +739,7 @@ const ContactForm2 = () => {
             value={formData.howDidYouKnowMaflamInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Answer"
+            placeholder={AboutPlaceholder}
           />
         </div>
 
@@ -659,7 +769,7 @@ const ContactForm2 = () => {
 
 <div className={styles.inputGroup}>
         <label htmlFor="resumeUpload">
-          Resume<span>*</span>
+         {resumetitle}<span>*</span>
         </label>
         <div className={styles.imgUpload}>
           {resume ? (
@@ -682,7 +792,7 @@ const ContactForm2 = () => {
               >
                 <img src={downloadIcon} alt="Upload Resume" />
               </button>
-              <p className="uploadFile">Upload Resume</p>
+              <p className="uploadFile">{ resumePlaceholder}</p>
             </div>
           )}
           <input
@@ -696,7 +806,7 @@ const ContactForm2 = () => {
 
       {/* Portfolio Upload */}
       <div className={styles.inputGroup}>
-        <label htmlFor="portfolioUpload">Portfolio</label>
+        <label htmlFor="portfolioUpload">{portfoliyo}</label>
         <div className={styles.imgUpload}>
           {portfolio ? (
             <>
@@ -711,14 +821,14 @@ const ContactForm2 = () => {
             </>
           ) : (
             <div className={styles.btnstyles}>
-              <button
+              <button 
                 type="button"
                 onClick={() => triggerFileUpload("portfolioUpload")}
                 className={styles.downloadIcon}
               >
                 <img src={downloadIcon} alt="Upload Portfolio" />
               </button>
-              <p className="uploadFile">Upload Portfolio</p>
+              <p className="uploadFile">{ portfoliyoPlaceholder}</p>
             </div>
           )}
           <input
@@ -754,8 +864,8 @@ const ContactForm2 = () => {
         </div> */}
 
         {/* Submit Button */}
-        <div className={styles.inputGroup}>
-          <button type="submit" className={styles.submitButton}>
+        <div className={styles.inputGroup} >
+          <button type="submit" className={styles.submitButton} style={{width:'185px'}}>
             Send
           </button>
         </div>
