@@ -222,7 +222,7 @@ const App = () => {
       />
 
       <Route
-        path="/filmproduction"
+        path="/filmproduction/:courseId"
         element={
           <LanguageProvider>
             <FilmProductionProvider>
@@ -324,6 +324,8 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+      
     </Routes>
   );
 };

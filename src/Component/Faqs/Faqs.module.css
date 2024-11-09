@@ -74,7 +74,7 @@ line-height: 160%; /* 38.4px */
   display: none; 
   margin: 0 auto;
   position: relative;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 24px;
   font-style: normal;
   font-weight: 100;

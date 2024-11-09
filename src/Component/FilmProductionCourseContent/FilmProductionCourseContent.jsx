@@ -1,8 +1,7 @@
-
 import React, { useState, useContext } from 'react';
 import styles from './FilmProductionCourseContent.module.css';
-import { FilmProductionContext } from '../../store/FilmProductionContext'; 
-import { LanguageContext } from '../LanguageContext/LanguageContext'; 
+import { FilmProductionContext } from '../../store/FilmProductionContext';
+import { LanguageContext } from '../LanguageContext/LanguageContext';
 
 const FilmProductionCourseContent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +15,10 @@ const FilmProductionCourseContent = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data: {error.message}</p>;
 
-  
-  const lessonData = filmproductionScreenDetails?.lessonData || [];
+  // Retrieve lesson data from the formattedCourseData
+  const lessonData = filmproductionScreenDetails?.formattedCourseData?.lessions || [];
 
+  // Handle RTL/LTR direction
   const collapsibleClass = direction === 'rtl' ? styles.collapsibleRtl : styles.collapsibleLtr;
 
   return (
@@ -33,7 +33,7 @@ const FilmProductionCourseContent = () => {
             {isOpen ? '-' : '+'}
           </div>
           <h5 className={styles.toggle}>
-            {lessonData[0]?.title || 'Course Content'}
+            {lessonData[0]?.LessonTitle || 'Course Content'}
           </h5>
           <hr className={styles.line} />
         </div>
@@ -42,9 +42,9 @@ const FilmProductionCourseContent = () => {
             {lessonData.slice(1).map((item, index) => (
               <QuestionItem 
                 key={index} 
-                question={item.title} 
-                answers={item.content.map(contentItem => contentItem.title)} 
-                timeStamp={item.content.map(contentItem => contentItem.SpendToHrs)}
+                question={item.LessonTitle} 
+                objective={item.objective}
+                timeStamp={item.SpendToHrs}
               />
             ))}
           </div>
@@ -54,7 +54,7 @@ const FilmProductionCourseContent = () => {
   );
 };
 
-const QuestionItem = ({ question, answers, timeStamp }) => {
+const QuestionItem = ({ question, objective, timeStamp }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleContent = () => {
@@ -71,16 +71,12 @@ const QuestionItem = ({ question, answers, timeStamp }) => {
       </div>
       {isOpen && (
         <div className={styles.mainAnsTab}>
-          <div>
-            {answers.map((answer, index) => (
-              <p key={index} className={styles.answer}>{answer}</p>
-            ))}
-          </div>
-          <div>
-            {timeStamp.map((time, index) => (
-              <p key={index} className={styles.answer}>{time}</p>
-            ))}
-          </div>
+          <p className={styles.answer}>
+            {/* <strong>Objective:</strong> */}
+             {objective}</p>
+          <p className={styles.answer}>
+            {/* <strong>Time to Spent</strong> */}
+             {timeStamp}</p>
         </div>
       )}
     </div>
