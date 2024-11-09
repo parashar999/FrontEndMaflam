@@ -4,4 +4,10 @@
     background-repeat: no-repeat;
     background-color: #030b11;
 
+    min-height: 600px;
+    width: 100vw;
+    max-width: 1980px;
+    background-position: center;
+    margin: auto;
+
 }

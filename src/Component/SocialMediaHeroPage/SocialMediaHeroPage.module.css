@@ -5,6 +5,10 @@
     background: url("../../assets/socialimage.png");
     
 }
+.btndiv a{
+    text-decoration: none;
+    color: white;
+}
 
 .btndiv{
     display: flex;
