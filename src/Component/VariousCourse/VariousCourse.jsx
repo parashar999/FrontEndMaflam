@@ -25,9 +25,14 @@ const VariousCourse = () => {
           {courses.map((course) => (
             <div key={course.courseId} className={styles.card}>
               <img src={course.promoPhoto} alt={course.title} className={styles.cardImage} />
+              <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap', alignItems:'center', paddingRight:'10px', paddingLeft:'10px'}}>
+                <img src={course.promoPhoto} alt="" style={{width:'40px', height:'40px', margin:'10px', borderRadius:'20px'}} />
+              <p>Name</p>
+              </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.title}>{course.title}</h3>
                 <p className={styles.description}>{course.description.split(" ").slice(0, 23).join(" ")}...</p>
+                <hr style={{color:'#39FFFB'}} />
                 <div className={styles.footer}>
                   <span className={styles.para}>{course.para}</span>
                   &nbsp;

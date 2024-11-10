@@ -24,7 +24,7 @@ export default function SocialMediaPage() {
         <SocialMediaHeroPage></SocialMediaHeroPage>
         <HomeScreenCarousel />
         <YouTubeChannel></YouTubeChannel>
-        <Podcost></Podcost>
+        {/*<Podcost></Podcost>*/}
         <EducationaPost></EducationaPost>
         {/* <FilmProduction></FilmProduction> */}
         <JoinUs></JoinUs>
