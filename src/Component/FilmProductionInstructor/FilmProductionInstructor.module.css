@@ -1,12 +1,16 @@
 
 .maincontainer {
   width: 100%;
-  background-image: url("../../assets/keytopicbgg.jpg");
-  background-size: cover;
-  background-position: center;
+  max-width: 1397px;
+  margin: auto;
+  padding-top: 20px;
+  justify-content: baseline;
+  align-items: baseline;
+  padding: 30px;
 }
 
 .header {
+  max-width: 768px;
   display: flex;
   align-items: center;
   color: white;
@@ -20,6 +24,7 @@
 .line {
   flex-grow: 1;
   border: none;
+  margin: 10px;
   height: 1px;
   background-color: #39FFFb;
 }
@@ -39,12 +44,10 @@
 .instructorName {
   color: white;
   font-size: 20px;
-  margin: 10px 0;
-  text-align: left; 
+  margin: 10px 0; 
 }
 
 .paragraph {
-  text-align: justify;
   font-size: 14px;
   color: white;
   margin-bottom: 15px;
@@ -52,13 +55,12 @@
 
 /* Collapsible for LTR */
 .collapsibleLtr {
-  margin: 10px 0;
-  border: 1px solid gray;
-  padding-left: 50px;
-  padding-right: 50px;
+  border: 1px solid white;
   display: inline-block;
-  width: 600px;
-  margin-left: 9%; 
+  width: 768px; 
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 10px;
   background-image: url("../../assets/aboutinstbg.png");
   background-size: cover;
@@ -67,83 +69,35 @@
 }
 
 /* Collapsible for RTL */
-.collapsibleRtl {
-  margin: 10px 0;
-  border: 1px solid gray;
-  padding-left: 50px;
-  padding-right: 50px;
-  display: inline-block;
-  width: 600px;
-  margin-right: 8%; 
-  border-radius: 10px;
-  background-image: url("../../assets/aboutinstbg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
-/* Responsive CSS */
-@media screen and (max-width: 1200px) {
-  .collapsibleLtr, .collapsibleRtl {
-    width: 400px;
-    margin-left: 25%;
-    padding-left: 40px;
-    padding-right: 40px;
+
+
+@media (max-width:1600px)
+{
+  .maincontainer
+  {
+    zoom: 0.8;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .collapsibleLtr, .collapsibleRtl {
-    width: 300px;
-    margin-left: 20%;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+@media (max-width:1250px)
+{
+
 }
 
-@media screen and (max-width: 768px) {
-  .collapsibleLtr, .collapsibleRtl {
-    width: 100%;
-    margin-left: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+@media (max-width:768px)
+{
+  .collapsibleLtr
+  {
+    max-width: 500px;
   }
-  
-  .header {
-    flex-direction: column;
+  .maincontainer
+  {
+    zoom: 0.7;
+    max-width: 780px;
   }
-
-  .line {
-    margin: 10px 0;
-  }
-  
-  .toggleButton {
-    font-size: 20px;
-  }
-
-  .content, .answer {
-    font-size: 10px;
+  .collapsibleLtr
+  {
+    max-width: 100%;
   }
 }
-
-@media screen and (max-width: 576px) {
-  .collapsibleLtr, .collapsibleRtl {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .toggleButton {
-    font-size: 18px;
-  }
-
-  .content, .answer {
-    font-size: 9px;
-  }
-}
-
-
-
-
-
-
-

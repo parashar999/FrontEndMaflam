@@ -68,11 +68,6 @@ const FundamentalFilmProduction = () => {
                 </div>
                 {isOpen && (
                   <div>
-                    {/* {courseData.lessions?.map((item, index) => (
-                      <p key={index} className={styles.answer} style={{ margin: "0", padding: "0", lineHeight: "145%", fontSize: "20px" }}>
-                        {item}
-                      </p>
-                    ))} */}
                     <p  className={styles.answer} style={{ margin: "0", padding: "0", lineHeight: "145%", fontSize: "20px" }}>
                     {courseData}
                       </p>
