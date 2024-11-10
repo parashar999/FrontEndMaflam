@@ -1,5 +1,6 @@
 .invsetMainContainer {
     /* border: 1px solid rgb(202, 45, 45);  */
+    position: relative;
     height: auto;
     background-color: #030b11;
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -16,8 +17,12 @@
  .paracontainer {
     width: 100%; /* Use percentage for better responsiveness */
     max-width: 860px; /* Set a max-width for larger screens */
-    height: auto; /* Let the height adjust automatically */
+ /* Let the height adjust automatically */
     /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    align-items: last baseline;
     margin: 30px auto 20px auto;
  }
  
@@ -36,41 +41,18 @@
      padding: 12px 17%; /* Use percentage for padding */
  }
  
- @media screen and (max-width: 768px) {
-     .invsetMainContainer {
-         height: auto;
-         background-color: #030b11;
-         overflow-x: hidden; /* Ensure no horizontal scrolling on mobile */
-     }
- 
-     .backimgcontainer {
-         background-image: url('../../assets/Group 119.png');
-         background-position: center;
-         background-size: contain;
-         background-repeat: no-repeat;
-         height: 100px;
-     }
- 
-     .paracontainer {
-         width: 90%; /* Use a percentage to adjust for smaller screens */
-         height: auto; /* Adjust height automatically */
-         /* border: 1px solid red; */
-         margin: 30px auto 20px auto;
-     }
- 
-     .paracontainer h2 {
-         font-size: 20px; /* Adjust font size for mobile */
-         color: #fff;
-         line-height: 30px;
-         text-align: center;
-     }
- 
-     .paracontainer p {
-         color: #fff;
-         line-height: 25px;
-         font-size: 14px; /* Adjust font size for mobile */
-         text-align: center;
-         padding: 12px 5%; /* Adjust padding for mobile */
-     }
- }
- 
+@media (max-width:1250px)
+{
+    .paracontainer
+    {
+        padding: 20px;
+        zoom: 0.8;
+    }
+}
+@media (max-width:768px)
+{
+    .paracontainer
+    {
+        zoom: 0.8;
+    }
+}

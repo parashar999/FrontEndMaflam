@@ -19,8 +19,6 @@
   font-family: "Noto Kufi Arabic";
   font-size: 28px;
   font-style: normal;
-  padding-left: 90px;
-
   padding-top: 70px;
   font-weight: 700;
   line-height: 160%;
@@ -30,7 +28,6 @@
 .headingSection p {
   color: #FFF;
   padding-top: 20px;
-  padding-left: 90px;
 font-family: "Noto Kufi Arabic";
   font-size: 15px;
   font-style: normal;
@@ -39,6 +36,7 @@ font-family: "Noto Kufi Arabic";
   text-align: start;
   /* margin: 0 auto; */
   width: 552px;
+  max-width: 100vw;
 }
 
 .underline {
@@ -51,7 +49,6 @@ font-family: "Noto Kufi Arabic";
   stroke-width: 4px;
 stroke: #5AFFFF;
 stroke: #5AFFFF;
-margin-left:90px;
 width: 380px;
 background-color: #5AFFFF;
 height: 1px;

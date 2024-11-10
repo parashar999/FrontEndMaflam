@@ -20,7 +20,7 @@ const FilmProductionInstructor = () => {
 
   return (
     <div className={styles.maincontainer}>
-      <div className={collapsibleClass}>
+      <div className={styles.collapsibleLtr}>
         <div className={styles.header}>
           <div 
             onClick={toggleContent} 

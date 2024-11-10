@@ -11,6 +11,7 @@ import {
   FilmProductionContext,
 } from "../../store/FilmProductionContext";
 import JoinUs from "../../Component/JoinUs/JoinUs";
+import './FilmProduction.css'
 // import { AboutusPageProvider } from "../../store/AboutUsPageContext";
 import {
   AboutusPageContext,
@@ -47,11 +48,13 @@ function FilmProduction() {
 
   return (
     <div>
+    <Navbar />
+    <div  className="elements">
       <LanguageProvider>
         <FilmProductionProvider>
           <AboutusPageProvider>
-            <Navbar />
             <FundamentalFilmProduction />
+         
             <FilmProductionInstructor />
             <FilmProductionCourseContent />
             {/* <SubscribeFundamentalPackage /> */}
@@ -60,6 +63,7 @@ function FilmProduction() {
           </AboutusPageProvider>
         </FilmProductionProvider>
       </LanguageProvider>
+    </div>
     </div>
   );
 }
