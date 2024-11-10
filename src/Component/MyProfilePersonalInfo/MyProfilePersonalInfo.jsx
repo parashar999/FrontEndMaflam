@@ -78,10 +78,12 @@ function MyProfilePersonalInfo() {
 
       <nav>
         <ul className={styles.profileTabs}>
-          <li className={styles.activeTab}><Link to="/mycourses"> Personal Information</Link></li>
-          <li>My Courses</li>
+          <li className={styles.activeTab}><Link to="/personalInformation"> Personal Information</Link></li>
+          <li className={styles.activeTab1}><Link to="/mycourses"> My Courses</Link></li>
           <li className={styles.activeTab1}><Link to="/mycertificate"> My Certificates</Link></li>
-          <li>My Wishlist</li>
+          <li className={styles.activeTab1}><Link to="/mywishlist"> My Wishlist</Link></li>
+          
+          {/* <li>My Wishlist</li> */}
         </ul>
         <hr className={styles.footerHr} />
       </nav>
