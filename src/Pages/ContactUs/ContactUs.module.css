@@ -4,7 +4,19 @@
 } */
 
 .container{
+    width:100vw;
+    max-width: 1920px;
+    margin: auto;
     background-image: url("../../assets/cntct.png");
-
     background-position: center;
+}
+
+.contactContainer
+{
+    max-width: 1400px;
+}
+
+.contactContainer h2, .contactSection
+{
+    max-width: 961px;
 }
