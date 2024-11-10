@@ -165,6 +165,12 @@ padding-bottom: 50px;
     position: relative;
     top: -250px;
   }
+
+  .content p{
+    font-size: xx-large;
+    line-height: 75px;
+
+}
 }
 @media (max-width:768px)
 {
@@ -184,6 +190,12 @@ padding-bottom: 50px;
 
 @media (max-width:542px)
 {
+
+  .content p{
+    font-size: x-large;
+    line-height: 75px;
+
+}
   .subscribe
   {
     font-size: 10px;
