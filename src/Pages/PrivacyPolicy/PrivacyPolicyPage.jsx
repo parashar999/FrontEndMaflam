@@ -1,15 +1,19 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "../../Component/Navbar/Navbar.jsx";
-import Footer from "../../Component/Footer/Footer.jsx";
-import PrivacyPolicy from "../../Component/PrivacyPolicy/PrivacyPolicy.jsx";
+// import Navbar from "../../Component/Navbar/Navbar";
+// import Footer from "../../Component/Footer/Footer";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
   HomePageContext,
   HomePageProvider,
 } from "../../store/HomePageContext.jsx";
+import { PrivacyPolicyContext, PrivacyPolicyProvider } from "../../store/PrivacyPolicy.jsx";
+import PrivacyPolicy from "../../Component/PrivacyPolicy/PrivacyPolicy.jsx";
+import TermsAndConditions from "../../Component/TermsAndCondition/TermsAndConditions.jsx";
+import Navbar from "../../Component/Navbar/Navbar.jsx";
+import Footer from "../../Component/Footer/Footer.jsx";
 // import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext.jsx";
 // import { TermsConditionProvider , TermsConditionContext } from "../../store/TermsConditionContext.jsx";
-import { PrivacyPolicyContext, PrivacyPolicyProvider } from "../../store/PrivacyPolicy.jsx";
+// import { PrivacyPolicyContext, PrivacyPolicyProvider } from "../../store/PrivacyPolicy.jsx";
 
 const PrivacyPolicyPage  = () => {
   
@@ -33,12 +37,13 @@ const PrivacyPolicyPage  = () => {
     <div>
       <LanguageProvider>
        <HomePageProvider>
-        <PrivacyPolicyProvider>        
-        <Navbar></Navbar>
+       <PrivacyPolicyProvider>       
+     
          {/* <TermsAndConditions></TermsAndConditions> */}
+         <Navbar/>
          <PrivacyPolicy></PrivacyPolicy>
-      <Footer></Footer>
-         </PrivacyPolicyProvider>
+      <Footer/>
+         </PrivacyPolicyProvider> 
        </HomePageProvider>
       </LanguageProvider>
     </div>

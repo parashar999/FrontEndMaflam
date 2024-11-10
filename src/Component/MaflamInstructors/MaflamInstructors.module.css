@@ -64,8 +64,8 @@ line-height: 130%;
 }
 
 .instructorCard p a {
+  width: 100%;
   text-decoration: none;
- 
   color: #FFF;
   margin-top: -60px;
 text-align: center;

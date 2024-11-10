@@ -1,19 +1,18 @@
-import React, { useState, useContext } from "react";
-import styles from "./Faqs.module.css";
-import stylesArabic from "./FaqsArabic.module.css"; // Assuming you have a similar Arabic CSS file
+import React, { useState } from "react";
+import stylesEnglish from "./Faqs.module.css";
+import stylesArabic from "./FaqsArabic.module.css"
+import { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
-import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
-  
-  // Conditionally select styles based on language
-  const stylesSelected = language === "ar" ? stylesArabic : styles;
-
+  console.log(language);
+  const styles = language === "ar" ? stylesArabic : stylesEnglish;
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
@@ -25,30 +24,29 @@ const Faqs = () => {
   };
 
   return (
-    <div className={stylesSelected.faqContainer}>
-      <Link to="/faqs" className={stylesSelected.faqTitle}>
-        {faqTitle.title}
-      </Link>
-      <div className={stylesSelected.faqList}>
+    <div className={styles.faqContainer}>
+      <Link to="/faqs">{faqTitle.title}</Link>
+      <div className={styles.faqList}>
         {faqData.map((item, index) => (
           <div
             key={index}
-            className={`${stylesSelected.faqItem} ${
-              activeIndex === index ? stylesSelected.active : ""
+            className={`${styles.faqItem} ${
+              activeIndex === index ? styles.active : ""
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={stylesSelected.question}> + {item.title}</div>
+            <div className={styles.question}> + {item.title}</div>
             <div
-              className={`${stylesSelected.answer} ${
-                activeIndex === index ? stylesSelected.showAnswer : ""
+              className={`${styles.answer} ${
+                activeIndex === index ? styles.showAnswer : ""
               }`}
             >
               {item.description || "No answer provided yet."}
             </div>
           </div>
         ))}
-        <button className={stylesSelected.arrowButton}>
+
+        <button className={styles.arrowButton}>
           <AiOutlineArrowDown size={20} />
         </button>
       </div>

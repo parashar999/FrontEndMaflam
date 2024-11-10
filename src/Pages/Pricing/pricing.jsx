@@ -8,6 +8,7 @@ import { LanguageProvider } from "../../Component/LanguageContext/LanguageContex
 import { HomePageContext, HomePageProvider } from "../../store/HomePageContext";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import JoinUs from "../../Component/JoinUs/JoinUs";
+import bggradient from "../../assets/PricingPageVector.png"
 import {
   AboutusPageContext,
   AboutusPageProvider,
@@ -64,7 +65,7 @@ function Pricing() {
                 <Navbar></Navbar>
                 <PricingPage></PricingPage>
                 <Fundamental></Fundamental>
-                <VariousCourse></VariousCourse>
+                <VariousCourse style={{backgroundimage:{}}}></VariousCourse>
                 {/* <Carousel></Carousel> */}
                 <MaflanContent />
                 <JoinUs />

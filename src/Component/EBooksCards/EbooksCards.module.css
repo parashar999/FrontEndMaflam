@@ -7,50 +7,52 @@
     url("../../assets/ebookBackground.png") no-repeat center center;
   background-size: cover;
   background-color: black;
-  padding-left: 140px;
-  padding-right: 110px;
-  padding-top: 150px;
+  padding-top: 300px;
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .containerHeader {
   color: white;
-  font-size: 50px;
+  font-size: 65px;
   text-align: center;
-  width: fixed(1,305px);
-  height: Hug(208px);
   font-weight: 700;
+  max-width: 1305px;
   line-height: 75px;
   font-family: 'Work Sans';
 
   }
 
 .cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 1600px;
+  flex-direction: row;
   gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* Card styles */
 .card {
   border-radius: 8px;
   color: white;
-
-  width: 100%;
+  margin-top: 100px;
+  width: 371px;
   position: relative;
   backdrop-filter: blur(1px);
   border-radius: 10px;
-  height: 600px;
+  height: 730px;
   overflow: hidden;
   flex-shrink: 0;
-  max-width: 100%;
-
-
-
-
-
-
-  
+  max-width: 100%; 
 }
 
 .image {
@@ -81,9 +83,6 @@
 .text{
   font-size: 20px;
   line-height: 160%;
-
-
-  
   width: 100%;
   position: relative;
   font-size: 18px;
@@ -99,11 +98,10 @@
 .downloadButton {
   margin-top: 20px;
   position: relative;
-  box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
   border-radius: 64px;
   background-color: #39fffb;
   border: none;
-  width: 300px;
+  width: 215px;
   height: 42px;
   font-weight: 900;
   display: flex;
@@ -143,7 +141,7 @@
 
 
 
-  width: 338px;
+width: 338px;
 position: relative;
 font-size: 20px;
 line-height: 160%;
@@ -159,8 +157,8 @@ button:hover {
 }
 .likeicon{
   margin-top: 20px;
-  margin-left: 4px;
-  width: 35px;
+  margin-left: 8px;
+  width: 42px;
   height: 42px;
 }
   
@@ -183,59 +181,26 @@ button:hover {
   height:75px;
 }
 
-
-/* Responsive Media Queries */
-@media (max-width: 1200px) {
-  .cardsContainer {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
-  }
+@media (max-width:1600px)
+{
+   .container
+   {
+    zoom: 0.9;
+   }
 }
 
-@media (max-width: 900px) {
-  .containerHeader {
-    font-size: 40px;
-    width: 80%;
-  }
-
-  .cardsContainer {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
-    gap: 15px;
-  }
-
-  .downloadButton {
-    width: 9vw;
-    font-size: 14px;
-  }
+@media (max-width:1250px)
+{
+   .container
+   {
+    zoom: 0.8;
+   }
 }
 
-@media (max-width: 600px) {
-  .containerHeader {
-    font-size: 30px;
-    text-align: center; /* Center the header on small screens */
-    width: 90%;
-  }
-
-  .cardsContainer {
-    grid-template-columns: 1fr; /* Single column for mobile */
-  }
-
-  .downloadButton {
-    width: 40vw; /* Button takes more width on smaller screens */
-    font-size: 12px;
-  }
-
-  .downloadsvg {
-    margin-left: 5px;
-  }
+@media (max-width:768px)
+{
+   .container
+   {
+    zoom: 0.7;
+   }
 }
-
-@media (max-width: 480px) {
-  .containerHeader {
-    font-size: 24px;
-  }
-
-  .downloadButton {
-    width: 50vw;
-  }
-}
-

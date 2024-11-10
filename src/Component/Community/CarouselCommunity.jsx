@@ -33,6 +33,7 @@ const CarouselCommunity = () => {
   const sliderRef = useRef(null);
   const videoRefs = useRef([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
     const observerOptions = {
@@ -63,24 +64,28 @@ const CarouselCommunity = () => {
   }, [successStoriesArray]);
 
   const scrollLeft = () => {
-    if (currentIndex > 0) {
+    if (currentIndex > 0 && !isScrolling) {
+      setIsScrolling(true); // Mark scrolling as started
       setCurrentIndex(currentIndex - 1);
       sliderRef.current.scrollBy({
         top: 0,
-        left: -625,
+        left: -629,
         behavior: "smooth",
       });
+      setTimeout(() => setIsScrolling(false), 600); // Adjust timeout to match scroll animation duration
     }
   };
 
   const scrollRight = () => {
-    if (currentIndex < totalElements - 1) {
+    if (currentIndex < totalElements - 1 && !isScrolling) {
+      setIsScrolling(true); // Mark scrolling as started
       setCurrentIndex(currentIndex + 1);
       sliderRef.current.scrollBy({
         top: 0,
-        left: 625,
+        left: 629,
         behavior: "smooth",
       });
+      setTimeout(() => setIsScrolling(false), 600); // Adjust timeout to match scroll animation duration
     }
   };
 
@@ -91,7 +96,7 @@ const CarouselCommunity = () => {
         <button
           className={stylesSelected.carouselArrowLeft}
           onClick={scrollLeft}
-          disabled={currentIndex === 0}
+          disabled={currentIndex === 0 || isScrolling} // Disable button if scrolling
         >
           &larr;
         </button>
@@ -100,15 +105,44 @@ const CarouselCommunity = () => {
           <div className={stylesSelected.carouselSlider}>
             <div className={stylesSelected.roverlay}></div>
             <div className={stylesSelected.overlay}></div>
+            {successStoriesArray.slice(-1).map((story, index) => (
+              <div key={index} className={stylesSelected.carouselCard}>
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={story.videoUrl}
+                  loop
+                  playsInline
+                  muted
+                  controls
+                  className={stylesSelected.carouselVideo}
+                  alt={story.title}
+                />
+              </div>
+            ))}
             {successStoriesArray.map((story, index) => (
               <div key={index} className={stylesSelected.carouselCard}>
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={story.videoUrl}
-             
                   loop
                   playsInline
-         
+                  muted
+                  controls
+                  
+                  className={stylesSelected.carouselVideo}
+                  alt={story.title}
+                />
+              </div>
+            ))}
+            {successStoriesArray.slice(0, 1).map((story, index) => (
+              <div key={index} className={stylesSelected.carouselCard}>
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={story.videoUrl}
+                  loop
+                  muted
+                  controls
+                  playsInline
                   className={stylesSelected.carouselVideo}
                   alt={story.title}
                 />
@@ -120,7 +154,7 @@ const CarouselCommunity = () => {
         <button
           className={stylesSelected.carouselArrowRight}
           onClick={scrollRight}
-          disabled={currentIndex >= totalElements - 1}
+          disabled={currentIndex >= totalElements - 1 || isScrolling} // Disable button if scrolling
         >
           &rarr;
         </button>

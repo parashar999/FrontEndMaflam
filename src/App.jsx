@@ -46,14 +46,21 @@ import { ContactUs2ContextProvider } from "./store/ContactUs2Context.jsx";
 import MyCousesPages from "./Pages/MyCousesPages/MyCousesPages.jsx";
 import PaymentGateWayApi from "./Pages/PaymentGateWayApi.jsx";
 import SocialMediaPage from "./Pages/SocialMedialPage/SocialMediaPage.jsx";
-import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
-import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+// import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
+// import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
 import EbookTwo from "./Pages/EbookTwo/EbookTwo.jsx";
 import { FilmProductionProvider } from "./store/FilmProductionContext.jsx";
 import MyWishlist from "./Pages/MyWishlist/MyWishlist.jsx";
 import PageNotFoundPage from "./Pages/PageNotFoundPage/PageNotFoundPage.jsx";
 import ContentRequiredPage from "./Pages/ContentRequiredPage/ContentRequiredPage.jsx";
+import BlogEjsPage from "./Pages/BlogEjsPage/BlogEjsPage.jsx";
 import { ContactUs3ContextProvider } from "./store/ContactUs3Context.jsx";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy.jsx";
+import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
+// import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+// import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
+
 
 // import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 // import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
@@ -223,7 +230,7 @@ const App = () => {
       />
 
       <Route
-        path="/filmproduction"
+        path="/filmproduction/:courseId"
         element={
           <LanguageProvider>
             <FilmProductionProvider>
@@ -256,6 +263,7 @@ const App = () => {
         </LanguageProvider>
 
         } />
+         <Route path="/blogDetails/:id" element={<BlogEjsPage />} />
       <Route
         path="/login"
         element={
@@ -283,8 +291,10 @@ const App = () => {
         element={
           <LanguageProvider>
             <HomePageProvider>
-              <PrivacyPolicyProvider>
-                <PrivacyPolicy />
+             <PrivacyPolicyProvider>
+                {/* <PrivacyPolicy/> */}
+                <PrivacyPolicyPage></PrivacyPolicyPage>
+             
               </PrivacyPolicyProvider>
             </HomePageProvider>
           </LanguageProvider>
@@ -325,6 +335,8 @@ const App = () => {
           </LanguageProvider>
         }
       />
+
+      
     </Routes>
   );
 };
