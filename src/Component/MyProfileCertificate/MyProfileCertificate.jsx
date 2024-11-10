@@ -6,7 +6,7 @@ import Arrow from "../../assets/Arrow.png";
 import profilecoursefirst from "../../assets/profilecoursefirst.png";
 import profilecourse from "../../assets/profilecourse.png";
 import { Link } from 'react-router-dom';
-
+import downloadIcon from "../../assets/downloadIcon.png";
 function MyProfileCertificate() {
   return (
     <div className={styles.profileContainer}>
@@ -16,7 +16,7 @@ function MyProfileCertificate() {
 
       <nav>
         <ul className={styles.profileTabs}>
-          <li className={styles.activeTab1}><a href="#">Personal Information</a></li>
+          <li className={styles.activeTab1}><a href="/personalInformation">Personal Information</a></li>
           <li className={styles.activeTab1}><Link to="/mycourses">My Courses</Link></li>
           <li className={styles.activeTab}><a href="/mycertificate">My Certificates</a></li>
           <li className={styles.activeTab1}><a href="mywishlist">My Wishlist</a></li>
@@ -32,9 +32,15 @@ function MyProfileCertificate() {
         <div className={styles.courseCard}>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
+            <button
+                    type="button"
+                    onClick={() => triggerFileUpload("portfolioUpload")}
+                    className={styles.downloadIcon}
+                  >
+                    <img src={downloadIcon} alt="Upload Portfolio" />
+                  </button> 
           </div>
-
+         
           <div className={styles.courseImageWrapper}>
             <img src={profilecoursefirst} alt="Course" className={styles.courseImage} />
           </div>
@@ -55,9 +61,15 @@ function MyProfileCertificate() {
         <div className={styles.courseCard}>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
+            <button
+                    type="button"
+                    onClick={() => triggerFileUpload("portfolioUpload")}
+                    className={styles.downloadIcon}
+                  >
+                    <img src={downloadIcon} alt="Upload Portfolio" />
+                  </button> 
           </div>
-
+         
           <div className={styles.courseImageWrapper}>
             <img src={profilecourse} alt="Course" className={styles.courseImage} />
           </div>
@@ -78,7 +90,13 @@ function MyProfileCertificate() {
         <div className={styles.courseCard}>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
+            <button
+                    type="button"
+                    onClick={() => triggerFileUpload("portfolioUpload")}
+                    className={styles.downloadIcon}
+                  >
+                    <img src={downloadIcon} alt="Upload Portfolio" />
+                  </button> 
           </div>
 
           <div className={styles.courseImageWrapper}>
