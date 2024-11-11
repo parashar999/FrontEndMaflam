@@ -192,11 +192,11 @@ const Navbar = () => {
                   <ul>
                     <li>
                       {" "}
-                      <Link to="/mycourses"> My Courses</Link>
+                      <FaRegUser /><Link to="/mycourses"> My Courses</Link>
                     </li>
                     <li className={styles.iconstyle}>
                       {" "}
-                      <FaRegUser /> &nbsp; <Link to="#"> My Profile</Link>
+                      <FaRegUser /> &nbsp; <Link to="/personalInformation"> My Profile</Link>
                     </li>
                     <li>
                       {" "}
@@ -205,15 +205,15 @@ const Navbar = () => {
                     </li>
                     <li>
                       {" "}
-                      <FaRegHeart /> &nbsp; My Wishlist
+                      <FaRegHeart /> &nbsp; <Link to="/mywishlist"></Link> My Wishlist
                     </li>
                     <li>
                       {" "}
-                      <CiFlag1 /> &nbsp; My Subscriptions
+                      <CiFlag1 /> &nbsp; <Link to="/contentrequired"> </Link>My Subscriptions
                     </li>
                     <li>
                       {" "}
-                      <LuHelpCircle /> &nbsp; Help Center{" "}
+                      <LuHelpCircle /> &nbsp; <Link to="/contentrequired"></Link> Help Center{" "}
                     </li>
                     <li onClick={handleLogoutClick}>
                       {" "}

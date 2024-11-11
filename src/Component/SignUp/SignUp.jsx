@@ -240,9 +240,12 @@ const SignUp = () => {
           </button>
         </div> */}
 
-        <div className={stylesSelected.signupPrompt}>
+        <div className={stylesSelected.signInLink}>
           <span>{signInPrompt}</span>
+          
           <a href="/login">{signInText}</a>
+          
+         
         </div>
       </div>
       <ToastContainer />

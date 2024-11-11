@@ -138,6 +138,11 @@ const Login = () => {
                 text={googleLoginText}
               />
             </div>
+            <div>
+           <a href="/signUp" className={styles.createAccount}>
+             Create an account
+           </a>
+        </div>
           </div>
         </div>
         <ToastContainer />
