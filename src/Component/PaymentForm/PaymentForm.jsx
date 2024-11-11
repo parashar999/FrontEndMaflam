@@ -1,46 +1,37 @@
+import { useContext } from "react";
+import styles from "./PaymentForm.module.css";
+import { Link } from "react-router-dom";
+import { CheckoutPaymentContext } from "../../store/CheckoutPaymentContext";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import auth from "../../Auth/Auth";
 
-
-import { useContext } from 'react';
-import styles from './PaymentForm.module.css';
-import { Link } from 'react-router-dom';
-import { CheckoutPaymentContext } from '../../store/CheckoutPaymentContext';
-import axios from "axios"; 
-import { ToastContainer, toast } from 'react-toastify';
-import auth from '../../Auth/Auth';
-
-
-const checkoutpage = async()=>{
-  const userdetails=auth.getAuthData();
-  const token=userdetails.token;
-  const requestBody={
-    amount:750,
-    callback:"https://maflam.web.app/mycourses"
-
-  }
+const checkoutpage = async () => {
+  const userdetails = auth.getAuthData();
+  const token = userdetails.token;
+  const requestBody = {
+    amount: 750,
+    callback: "https://maflam.web.app/mycourses",
+  };
 
   try {
-
-    
-    console.log("Checkout Page called")
-    console.log(token);
-    const response = await axios
-    .post(
+    // console.log("Checkout Page called")
+    // console.log(token);
+    const response = await axios.post(
       "https://backend.maflam.com/maflam/paymenttransction",
       requestBody,
       {
-        headers:{
-        Authorization:`Bearer ${token}`,
+        headers: {
+          Authorization: `Bearer ${token}`,
         },
       }
-      
     );
 
     toast.success(response.data.message);
     const data = response.data;
     if (data) {
-      console.log(response.data.data.redirect_url)
+      console.log(response.data.data.redirect_url);
       window.open(response.data.data.redirect_url);
-      
     } else {
       throw new Error("Invalid response from server");
     }
@@ -52,40 +43,51 @@ const checkoutpage = async()=>{
     toast.error(`Error: ${errorMessage}`);
     // setError("Sign Up failed. Please check your details.");
   }
-  
-
- }
+};
 
 const PaymentForm = () => {
-  const { checkoutPaymentContextDetails, loading, error } = useContext(CheckoutPaymentContext);
+  const { checkoutPaymentContextDetails, loading, error } = useContext(
+    CheckoutPaymentContext
+  );
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
   // Ensure that the API data exists before rendering
   const cardDetails = checkoutPaymentContextDetails?.maflamData1 || [];
-  const termsDetails = checkoutPaymentContextDetails?.maflamPricingDetailsSec5 || [];
-  const imageSrc = checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl;
+  const termsDetails =
+    checkoutPaymentContextDetails?.maflamPricingDetailsSec5 || [];
+  const imageSrc =
+    checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl;
 
   return (
     <div className={styles.maincontainer}>
       <div className={styles.container}>
         <div className={styles.card}>
           <img src={imageSrc} alt="Course Image" className={styles.image} />
-          <h2 className={styles.price}>{cardDetails[0]?.title}</h2> {/* Price */}
-          <h3 className={styles.title}>{cardDetails[1]?.title}</h3> {/* Course title */}
+          <h2 className={styles.price}>{cardDetails[0]?.title}</h2>{" "}
+          {/* Price */}
+          <h3 className={styles.title}>{cardDetails[1]?.title}</h3>{" "}
+          {/* Course title */}
           <hr />
           <div className={styles.paymentCard}>
-            <p className={styles.titles}>{cardDetails[2]?.title}</p> {/* Payment Method */}
+            <p className={styles.titles}>{cardDetails[2]?.title}</p>{" "}
+            {/* Payment Method */}
             <img src={cardDetails[3]?.imageUrl} alt="NotFound" />
             <img src={cardDetails[4]?.imageUrl} alt="visa" />
             <img src={cardDetails[5]?.imageUrl} alt="master card" />
           </div>
           <hr />
           <div>
-            <span style={{height:"100px"}}></span>
+            <span style={{ height: "100px" }}></span>
           </div>
-          <button type="submit" onClick={checkoutpage} className={styles.payBtn} >{cardDetails[11]?.title}</button>
+          <button
+            type="submit"
+            onClick={checkoutpage}
+            className={styles.payBtn}
+          >
+            {cardDetails[11]?.title}
+          </button>
           {/* <form className={styles.form}>
             <div className={styles.inputGroup}>
               <label>{cardDetails[6]?.title}</label>
@@ -124,9 +126,9 @@ const PaymentForm = () => {
         </div>
         <div>
           <p className={styles.termconditions1}>
-            {termsDetails[1]?.title} 
-            <Link to="/terms&condition"> Terms and Conditions </Link> 
-            {termsDetails[2]?.title} 
+            {termsDetails[1]?.title}
+            <Link to="/terms&condition"> Terms and Conditions </Link>
+            {termsDetails[2]?.title}
             <Link to="/privacy-policy"> Privacy Policy</Link>
           </p>
         </div>
@@ -136,8 +138,6 @@ const PaymentForm = () => {
 };
 
 export default PaymentForm;
-
-
 
 // import { useContext, useState } from 'react';
 // import styles from './PaymentForm.module.css';
@@ -247,9 +247,9 @@ export default PaymentForm;
 //         </div>
 //         <div>
 //           <p className={styles.termconditions1}>
-//             {termsDetails[1]?.title} 
-//             <Link to="/terms&condition"> Terms and Conditions </Link> 
-//             {termsDetails[2]?.title} 
+//             {termsDetails[1]?.title}
+//             <Link to="/terms&condition"> Terms and Conditions </Link>
+//             {termsDetails[2]?.title}
 //             <Link to="/privacy-policy"> Privacy Policy</Link>
 //           </p>
 //         </div>
@@ -258,12 +258,7 @@ export default PaymentForm;
 //   );
 // };
 
-
 // export default PaymentForm;
-
-
-
-
 
 // import styles from './PaymentForm.module.css';
 // import { cardDetails } from '../../assets/Assests';
@@ -272,12 +267,11 @@ export default PaymentForm;
 
 // const PaymentForm = () => {
 
-
 //   return (
 //     <div className={styles.maincontainer}>
-   
+
 //     <div className={styles.container}>
-     
+
 //       <div className={styles.card}>
 //         <img src={cardDetails.imageSrc} alt="Course Image" className={styles.image} />
 //         <h2 className={styles.price}>{cardDetails.priceHead}</h2>
@@ -295,7 +289,7 @@ export default PaymentForm;
 //             <label>Name on card</label>
 //             <input type="text" placeholder="Name on card" />
 //           </div>
-          
+
 //           <div className={styles.inputGroup}>
 //             <label>Card Number</label>
 //             <input type="text" placeholder="XXX XXX XXX XXX" />
@@ -311,14 +305,14 @@ export default PaymentForm;
 //               <input type="text" placeholder="MM/YY" />
 //             </div>
 //           </div>
-// {/* 
-//           <div className={styles.inputGroup}> 
+// {/*
+//           <div className={styles.inputGroup}>
 //             <label>Coupon</label>
 //             <div className={styles.coupon}><input type="text" placeholder="Enter Coupon" />
 //             <button type="button" className={styles.sendBtn}>Send</button></div>
 //           </div> */}
 
-// <div className={styles.inputGroup}> 
+// <div className={styles.inputGroup}>
 //   <label>Coupon</label>
 //   <div className={styles.coupon}>
 //     <input type="text" placeholder="Enter Coupon" />
@@ -326,20 +320,17 @@ export default PaymentForm;
 //   </div>
 // </div>
 
-
 //           <button type="submit" className={styles.payBtn}> {cardDetails.price}</button>
 //         <p className={styles.paras}> {cardDetails.para} </p>
 //         </form>
-
 
 //       </div>
 //       <div>   <p className={styles.termconditions}> {cardDetails.termcondition} </p></div>
 //       <div>   <p className={styles.termconditions1}> {cardDetails.termcondition1} <Link to="/terms&condition"> Terms and Conditions  </Link>  {cardDetails.termcondition2} <Link To="">  Privacy Policy .</Link> </p></div>
 //       </div>
-     
+
 //     </div>
- 
-   
+
 //   );
 // };
 

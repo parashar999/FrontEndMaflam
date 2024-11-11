@@ -29,11 +29,11 @@ const ContactUsPage2 = () => {
     error: aboutError,
   } = useContext(AboutusPageContext);
 
-  useEffect(() => {
-    if (aboutusScreenDetails) {
-      console.log("About Us Screen Details:", aboutusScreenDetails);
-    }
-  }, [aboutusScreenDetails]);
+  // useEffect(() => {
+  //   if (aboutusScreenDetails) {
+  //     console.log("About Us Screen Details:", aboutusScreenDetails);
+  //   }
+  // }, [aboutusScreenDetails]);
 
   const {
     contactUsContextDetails,
@@ -49,11 +49,11 @@ const ContactUsPage2 = () => {
 
   const { contactUs2ContextDetails } = useContext(ContactUs2Context);
 
-  useEffect(() => {
-    if (contactUs2ContextDetails) {
-      console.log("Home Screen Details:", contactUs2ContextDetails);
-    }
-  }, [contactUs2ContextDetails]);
+  // useEffect(() => {
+  //   if (contactUs2ContextDetails) {
+  //     console.log("Home Screen Details:", contactUs2ContextDetails);
+  //   }
+  // }, [contactUs2ContextDetails]);
   return (
     <div>
       <LanguageProvider>

@@ -25,11 +25,11 @@ const ContactUS = () => {
     error: aboutError,
   } = useContext(AboutusPageContext);
 
-  useEffect(() => {
-    if (aboutusScreenDetails) {
-      console.log("About Us Screen Details:", aboutusScreenDetails);
-    }
-  }, [aboutusScreenDetails]);
+  // useEffect(() => {
+  //   if (aboutusScreenDetails) {
+  //     console.log("About Us Screen Details:", aboutusScreenDetails);
+  //   }
+  // }, [aboutusScreenDetails]);
 
   const {
     contactUsContextDetails,
@@ -37,11 +37,11 @@ const ContactUS = () => {
     error: homeError,
   } = useContext(ContactUsContext);
 
-  useEffect(() => {
-    if (contactUsContextDetails) {
-      console.log("Home Screen Details:", contactUsContextDetails);
-    }
-  }, [contactUsContextDetails]);
+  // useEffect(() => {
+  //   if (contactUsContextDetails) {
+  //     console.log("Home Screen Details:", contactUsContextDetails);
+  //   }
+  // }, [contactUsContextDetails]);
 
   return (
     <div>

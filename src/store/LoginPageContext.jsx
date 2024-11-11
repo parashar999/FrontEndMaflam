@@ -15,7 +15,7 @@ export const LoginPageContextProvider = ({ children }) => {
       const response = await axios.get(
         `https://backend.maflam.com/maflam/get-LogIn-Details?lang=${langParam}`
       );
-      console.log("API Response: login  ", response.data);
+      // console.log("API Response: login  ", response.data);
 
       setLoginPageContextDetails(response.data);
       setLoading(false);
@@ -25,17 +25,15 @@ export const LoginPageContextProvider = ({ children }) => {
     }
   };
 
-
-
-
-  
   useEffect(() => {
     const langParam = language === "ar" ? 0 : 1;
     fetchLoginPageContextDetails(langParam);
   }, [language]);
 
   return (
-    <LoginPageContext.Provider value={{ loginPageContexttDetails, loading, error }}>
+    <LoginPageContext.Provider
+      value={{ loginPageContexttDetails, loading, error }}
+    >
       {children}
     </LoginPageContext.Provider>
   );

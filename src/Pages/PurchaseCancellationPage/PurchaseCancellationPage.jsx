@@ -19,11 +19,11 @@ const PurchaseCancellationPage = () => {
     error: homeError,
   } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
 
   const {
     purchaseCancellationDetails,

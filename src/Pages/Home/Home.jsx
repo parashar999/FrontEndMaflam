@@ -26,11 +26,11 @@ import {
 const Home = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
 
   return (
     <LanguageProvider>
@@ -47,14 +47,14 @@ const Home = () => {
           <LearnAbout />
           <MaflamInstructors />
           <div className={Styles.BlogContainer}>
-          <HomeScreenCarousel />
-          <BlogContainer />
-          <HomeCommunityCarousel />
+            <HomeScreenCarousel />
+            <BlogContainer />
+            <HomeCommunityCarousel />
           </div>
           <CarouselCommunity />
           <div className={Styles.Footer}>
-          <Faqs />
-          <Footer />
+            <Faqs />
+            <Footer />
           </div>
           {/* <SubFooter/> */}
         </div>

@@ -10,17 +10,24 @@ import {
 // import { TermsConditionProvider , TermsConditionContext } from "../../store/TermsConditionContext.jsx";
 // import { PrivacyPolicyContext, PrivacyPolicyProvider } from "../../store/PrivacyPolicy.jsx";
 
-const PrivacyPolicyPage  = () => {
-  
-  const { homeScreenDetails, loading: homeLoading, error: homeError } = useContext(HomePageContext);
+const PrivacyPolicyPage = () => {
+  const {
+    homeScreenDetails,
+    loading: homeLoading,
+    error: homeError,
+  } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
-  
-  const { PrivacyPolicyDetails, loading: aboutLoading, error: aboutError } = useContext(PrivacyPolicyContext);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
+
+  const {
+    PrivacyPolicyDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(PrivacyPolicyContext);
 
   useEffect(() => {
     if (PrivacyPolicyDetails) {
@@ -31,17 +38,17 @@ const PrivacyPolicyPage  = () => {
   return (
     <div>
       <LanguageProvider>
-       <HomePageProvider>
-       {/* <PrivacyPolicyProvider> */}       
-        <Navbar></Navbar>
-         {/* <TermsAndConditions></TermsAndConditions> */}
-        {/* <PrivacyPolicy></PrivacyPolicy>
+        <HomePageProvider>
+          {/* <PrivacyPolicyProvider> */}
+          <Navbar></Navbar>
+          {/* <TermsAndConditions></TermsAndConditions> */}
+          {/* <PrivacyPolicy></PrivacyPolicy>
       <Footer></Footer>
          </PrivacyPolicyProvider> */}
-       </HomePageProvider>
+        </HomePageProvider>
       </LanguageProvider>
     </div>
   );
 };
 
-export default PrivacyPolicyPage ;
+export default PrivacyPolicyPage;

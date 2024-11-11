@@ -26,11 +26,11 @@ export default function AboutUs() {
     error: homeError,
   } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
 
   const {
     aboutusScreenDetails,
@@ -38,11 +38,11 @@ export default function AboutUs() {
     error: aboutError,
   } = useContext(AboutusPageContext);
 
-  useEffect(() => {
-    if (aboutusScreenDetails) {
-      console.log("About Us Screen Details:", aboutusScreenDetails);
-    }
-  }, [aboutusScreenDetails]);
+  // useEffect(() => {
+  //   if (aboutusScreenDetails) {
+  //     console.log("About Us Screen Details:", aboutusScreenDetails);
+  //   }
+  // }, [aboutusScreenDetails]);
 
   return (
     <LanguageProvider>
@@ -51,8 +51,8 @@ export default function AboutUs() {
           <div className={styles.container}>
             <Navbar />
             <div className={styles.AboutUsbg}>
-            <Filmmaker />
-            <OurVisionData />
+              <Filmmaker />
+              <OurVisionData />
             </div>
             <MaflamImageOffer />
             <MaflamInstructors />

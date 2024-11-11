@@ -1,117 +1,260 @@
-
 .profileContainer {
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1500px; 
+    margin: 20px auto;
     padding: 20px;
+    border-radius: 8px;
+    background-color: black; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 100px;
+  }
+  .imageUploadContainer h2{
+    margin-bottom: 10px;
     color: white;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    background-image: url("../../assets/myprofilecertificate.png");
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    margin-top: 60px;
-}
-
-.profileHeader {
-    text-align: start;
-    margin-bottom: 30px;
-}
-
-.profileHeader h1 {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.profileTabs {
+  }
+  .profileHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profileHeader h1 {
+    font-size: 2em;
+    color: #fff; 
+  }
+  
+  .profileTabs {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
-    margin: 20px 0;
-}
-
-.footerHr {
-    border: none;
-    border-top: 1px solid #39FFFb;
-    opacity: 0.2;
-    margin: 20px 0;
-}
-
-.profileTabs li {
-    cursor: pointer;
-    font-size: 18px;
+  }
+  
+  .profileTabs li  a{
     padding: 10px 20px;
-    color: white;
-}
-
-.activeTab {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white; 
+    text-decoration: none;
+  }
+  
+  .profileTabs .activeTab {
     border-bottom: 2px solid white;
     font-weight: bold;
-}
-
-.activeTab a{
-    color: white ;
+  }
+  .activeTab a{
+    color: white;
+    outline: none;
     text-decoration: none;
-}
-.activeTab1 a{
-    color: white ;
-    text-decoration: none;
-}
-.profileForm{
-    padding: 50px 50px;
-}
 
+  }
+  
+  .footerHr {
+    margin-top: 10px;
+    border: 0;
+    border-top: 1px solid #39FFFb;
+    opacity: 0.2;
+  }
+  
+  .profileForm {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: #8BA1AF; 
+    border-radius: 8px;     
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+ 
 .imageUploadContainer {
     display: flex; 
     flex-direction: column; 
-    align-items: center; 
+    align-items: start; 
     margin-bottom: 20px; 
+    margin-top: 20px;
+    padding-left: 20px;
 }
 
 .imagePreview {
     position: relative; 
-    width: 200px; /* Width of the circular image */
-    height: 200px; /* Height of the circular image */
-    border-radius: 48%; /* Rounded shape */
-    overflow: hidden; /* Hide overflow */
-    display: flex; /* Flexbox for centering the image */
-    justify-content: center; /* Centering the image */
-    align-items: center; /* Centering the image */
-    background-color: rgba(255, 255, 255, 0.2); /* Optional: background color */
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    border: 2px solid #ffffff; 
 }
 
 .imagePreview img {
-    width: 100%; /* Fill the container */
-    height: 100%; /* Fill the container */
-    object-fit: cover; /* Cover aspect ratio */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
 .editIconContainer {
-    position: absolute; /* Absolute positioning over the image */
-    bottom: 10px; /* Position it above the bottom */
-    right: 10px; /* Position it towards the right */
-    width: 36px; /* Circular icon size */
-    height: 36px; /* Circular icon size */
-    border-radius: 50%; /* Circular background */
-    display: flex; /* Center icon inside */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    cursor: pointer; /* Change cursor to pointer */
-}
-
-.fileInput {
-    display: none; /* Hide the file input */
-}
-
-.editIconLabel {
-    cursor: pointer; /* Pointer cursor for label */
-}
-
-.editIcon {
-    margin-top: 5px;
-    color: white; /* Icon color */
-    font-size: 30px; /* Size of the edit icon */
+    position: absolute; 
+    bottom: 1px; 
+    right: 10px; 
+    width: 60px; 
+    height: 40px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
 }
 
 
+
+  
+  .fileInput {
+    display: none;
+  }
+  
+  .genderContainer {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 2%;
+    outline: none;
+  }
+  
+  .genderBox {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #3D5C72; 
+    width: 49%;
+    outline: none;
+    color: white;
+
+  }
+  
+  .genderBox:hover {
+    color: white;
+    outline: none;
+  }
+  
+  .genderBox.active {
+    color: black;
+    outline: none;
+    border: 1px solid #39FFFB
+  }
+  
+  .dobGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .dobGroup select {
+    flex: 1;
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid #39FFFB;
+    border-radius: 4px;
+  }
+  
+  .formGroup {
+    margin-bottom: 0px;
+    padding: 20px 20px;
+
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: white; 
+  }
+  
+  .formGroup input,
+  .formGroup select {
+    width: 100%; 
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #3D5C72;
+    color: white; 
+    border: none;
+    outline: nonesss;
+  }
+  
+  /* Placeholder styling */
+  .formGroup input::placeholder,
+  .formGroup select::placeholder {
+    color: #8BA1AF; 
+  }
+  .formGroup input:focus,
+.formGroup select:focus {
+    border: 1px solid #39FFFB; 
+    outline: none;
+}
+  
+  .formGroup select[name='profession'] {
+    width: 30%; 
+  }
+  
+  .linksGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .linksGroup input {
+    margin-bottom: 10px;
+   
+  }
+  
+  .skillsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .skillsContainer select {
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  
+  .skillPreviewContainer {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 10px; 
+  }
+  
+  .skillPreview {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  
+  }
+
+  .closeIcon {
+    cursor: pointer;
+    margin-left: 5px;
+    color: black;
+  }
+
+  .formGroup select[name='interestedInLearning'] {
+    width: 30%; 
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #39FFFB;
+    box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
+    color: white;
+    border: none;
+    border-radius: 64px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.submitButton:hover {
+    background-color: #3D5C72;
+  }

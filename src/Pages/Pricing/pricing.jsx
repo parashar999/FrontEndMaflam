@@ -8,7 +8,7 @@ import { LanguageProvider } from "../../Component/LanguageContext/LanguageContex
 import { HomePageContext, HomePageProvider } from "../../store/HomePageContext";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import JoinUs from "../../Component/JoinUs/JoinUs";
-import bggradient from "../../assets/PricingPageVector.png"
+import bggradient from "../../assets/PricingPageVector.png";
 import {
   AboutusPageContext,
   AboutusPageProvider,
@@ -26,11 +26,11 @@ function Pricing() {
     error: homeError,
   } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
 
   const {
     aboutusScreenDetails,
@@ -38,11 +38,11 @@ function Pricing() {
     error: aboutError,
   } = useContext(AboutusPageContext);
 
-  useEffect(() => {
-    if (aboutusScreenDetails) {
-      console.log("About Us Screen Details:", aboutusScreenDetails);
-    }
-  }, [aboutusScreenDetails]);
+  // useEffect(() => {
+  //   if (aboutusScreenDetails) {
+  //     console.log("About Us Screen Details:", aboutusScreenDetails);
+  //   }
+  // }, [aboutusScreenDetails]);
 
   const {
     pricingPageContextDetails,
@@ -50,11 +50,11 @@ function Pricing() {
     error: pricingerror,
   } = useContext(PricingPageContext);
 
-  useEffect(() => {
-    if (pricingPageContextDetails) {
-      console.log("Home Screen Details:", pricingPageContextDetails);
-    }
-  }, [pricingPageContextDetails]);
+  // useEffect(() => {
+  //   if (pricingPageContextDetails) {
+  //     console.log("Home Screen Details:", pricingPageContextDetails);
+  //   }
+  // }, [pricingPageContextDetails]);
   return (
     <>
       <div>
@@ -65,7 +65,7 @@ function Pricing() {
                 <Navbar></Navbar>
                 <PricingPage></PricingPage>
                 <Fundamental></Fundamental>
-                <VariousCourse style={{backgroundimage:{}}}></VariousCourse>
+                <VariousCourse style={{ backgroundimage: {} }}></VariousCourse>
                 {/* <Carousel></Carousel> */}
                 <MaflanContent />
                 <JoinUs />
