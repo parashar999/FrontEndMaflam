@@ -47,6 +47,8 @@ const JoinUs = () => {
   };
 
   return (
+
+    <div className={styles.joinUsParent}>
     <div
       className={styles.maincontainer}
       style={{ backgroundImage: `url(${imageUrl})` }}
@@ -54,7 +56,7 @@ const JoinUs = () => {
       <div className={styles.container}>
         <div className={styles.JoinUsBox}>
           <div className={styles.flexbox}>
-            <img src={joinUsIcon} alt="" />
+            <img src={joinUsIcon} style={{width:'40px'}} alt="" />
             <h2 className={styles.heading}>{joinTitle}</h2>
           </div>
           <div className={styles.serachoption}>
@@ -82,6 +84,7 @@ const JoinUs = () => {
         </div>
       </div>
       <ToastContainer />
+    </div>
     </div>
   );
 };
