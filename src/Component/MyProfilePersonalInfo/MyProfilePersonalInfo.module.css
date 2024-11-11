@@ -254,7 +254,11 @@
     width: 30%;
     margin-left: 20px;
     margin-bottom: 20px;
-}
-.submitButton:hover {
+
+
+    
+  }
+  
+  .submitButton:hover {
     background-color: #3D5C72;
   }

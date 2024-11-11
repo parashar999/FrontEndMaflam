@@ -57,7 +57,12 @@ export default function MyCourseCard() {
   return (
     // <div className="container department ">
     //   <h1>You May Be Interested in the Following Courses</h1>
+
+
+    
     <div className={styles.maincontainer}>
+ 
+
          <MyCoursesFinishCourse></MyCoursesFinishCourse>
     <div className={styles.container}>
       <h2>You May Be Interested in the Following Courses</h2>

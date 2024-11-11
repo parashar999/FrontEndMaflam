@@ -231,7 +231,7 @@ const ContactForm2 = () => {
             {fullNameTitle}
             <span>*</span>
           </label>
-          <input
+          <input autoFocus
             type="text"
             id="fullNameInEng"
             required
