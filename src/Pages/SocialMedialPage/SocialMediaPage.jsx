@@ -12,7 +12,8 @@ import JoinUs from '../../Component/JoinUs/JoinUs'
 import { AboutusPageProvider } from '../../store/AboutUsPageContext'
 import FilmProduction from '../../Component/FimlProduction/FilmProduction'
 import Podcost from '../../Component/Podcast/Podcost'
-
+import OSPCarousel from '../../Component/OSPCarousel/OSPCarousel'
+import BTSCarousel from '../../Component/BTSCarousel/BTSCarousel'
 
 export default function SocialMediaPage() {
   return (
@@ -22,11 +23,12 @@ export default function SocialMediaPage() {
               <AboutusPageProvider>
         <Navbar></Navbar>
         <SocialMediaHeroPage></SocialMediaHeroPage>
-        <HomeScreenCarousel />
+        <OSPCarousel/>
         <YouTubeChannel></YouTubeChannel>
         {/*<Podcost></Podcost>*/}
         <EducationaPost></EducationaPost>
         {/* <FilmProduction></FilmProduction> */}
+        <BTSCarousel/>
         <JoinUs></JoinUs>
         <Footer></Footer>
         </AboutusPageProvider>
