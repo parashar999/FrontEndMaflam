@@ -3,7 +3,7 @@ import styles from "./myCoursesFinishCourses.module.css"
 import Arrow from "../../assets/Arrow.png";
 import profilecoursefirst from "../../assets/profilecoursefirst.png"
 import profilecourse from "../../assets/profilecourse.png";
-
+import downloadIcon from "../../assets/downloadIcon.png";
 export default function MyCoursesFinishCourse() {
   return (
     <div>
@@ -31,7 +31,13 @@ export default function MyCoursesFinishCourse() {
           </div>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
+            <button
+                    type="button"
+                    onClick={() => triggerFileUpload("portfolioUpload")}
+                    className={styles.downloadIcon}
+                  >
+                    <img src={downloadIcon} alt="Upload Portfolio" />
+                  </button> 
           </div>
         </div>
 
@@ -55,7 +61,13 @@ export default function MyCoursesFinishCourse() {
           </div>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
+            <button
+                    type="button"
+                    onClick={() => triggerFileUpload("portfolioUpload")}
+                    className={styles.downloadIcon}
+                  >
+                    <img src={downloadIcon} alt="Upload Portfolio" />
+                  </button> 
           </div>
         </div>
 
@@ -79,8 +91,15 @@ export default function MyCoursesFinishCourse() {
           </div>
           <div className={styles.getCertificateDiv}>
             Get the Certificate
-            <img src={Arrow} alt="Arrow" className={styles.resetlogo} />
+            <button
+                    type="button"
+                    onClick={() => triggerFileUpload("portfolioUpload")}
+                    className={styles.downloadIcon}
+                  >
+                    <img src={downloadIcon} alt="Upload Portfolio" />
+                  </button> 
           </div>
+          
         </div>
 
         {/* Add more course cards as needed */}
