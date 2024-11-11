@@ -19,7 +19,7 @@ const VariousCourse = () => {
 
   return (
     <div className={styles.maincontainer}>
-      <div className={styles.container}>
+      <div className={styles.container} >
         <h2>{pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title || "Or, choose from our various courses"}</h2>
         <div className={styles.cardsContainer}>
           {courses.map((course) => (

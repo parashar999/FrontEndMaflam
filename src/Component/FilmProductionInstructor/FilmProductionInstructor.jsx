@@ -12,7 +12,7 @@ const FilmProductionInstructor = () => {
 
   // Access the instructor's data
   const instructorData = filmproductionScreenDetails?.formattedCourseData.instructors?.[0] || {}; // Assuming the first instructor is selected
-  const instructorTitle = filmproductionScreenDetails?.formattedCourseData.instructors || [];
+  const instructorTitle = filmproductionScreenDetails?.formattedCourseData.instructors.nameInEng || [];
 
   const collapsibleClass = direction === 'rtl' ? styles.collapsibleRtl : styles.collapsibleLtr;
 
