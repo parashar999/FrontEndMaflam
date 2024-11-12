@@ -7,17 +7,20 @@ import { LanguageContext } from "../../Component/LanguageContext/LanguageContext
 const HomeHero = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
-
+  console.log(language);
   const stylesSelected = language === "ar" ? styles : stylesArabic;
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
-  const {
-    title = "Default Title",
-    description = "Default description",
-    videoUrl = "",
-  } = homeScreenDetails?.homeScreenDetailsSec1 || {};
+  const title =
+    homeScreenDetails?.homeScreenDetailsSec1?.title || "Default Title";
+  const description =
+    homeScreenDetails?.homeScreenDetailsSec1?.description ||
+    "Default description";
+  const videoUrl = homeScreenDetails?.homeScreenDetailsSec1?.videoUrl || "";
+  const signUpText =
+    homeScreenDetails?.homeScreenDetailsSec1?.signUpText || "Sign Up";
 
   return (
     <div className={stylesSelected.herosection}>
@@ -32,13 +35,17 @@ const HomeHero = () => {
           />
         )}
         <div className={stylesSelected.overlay}></div>
-        <div className={stylesSelected.rightoverlay}></div>
+        <div className={stylesSelected.rightoverlay}> </div>
         <div className={stylesSelected.leftoverlay}></div>
+        <div className={stylesSelected.bottomoverlay}></div>
         <div className={stylesSelected.content}>
-          <h1 className={stylesSelected.title}>{title}</h1>
+          <h1 className={stylesSelected.title} style={{ fontSize: 45 }}>
+            {title}
+          </h1>
           <p className={stylesSelected.description}>{description}</p>
-          {/* Uncomment if you wish to include the sign-up button */}
-          {/* {signUpText && <button className={stylesSelected.signUpButton}>{signUpText}</button>} */}
+          {/* {signUpText && (
+          <button className={styles.signUpButton}>{signUpText}</button>
+        )}  */}
         </div>
       </div>
     </div>

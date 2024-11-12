@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";  // Import to detect route changes
 import styles from "./ContactInformation.module.css";
 import { ContactUsContext } from "../../store/ContactUsContext";
-
+import FocusLock from 'react-focus-lock';
 const ContactInformation = () => {
   const { contactUsContextDetails, loading, error } = useContext(ContactUsContext);
   const location = useLocation();  // Hook to detect route changes
@@ -31,6 +31,7 @@ const ContactInformation = () => {
 
   return (
     <>
+   
       <div className={styles.bgimage}></div>
       <div className={styles.contactContainer}>
         <h2 className={styles.heading}>{title}</h2>
@@ -52,8 +53,10 @@ const ContactInformation = () => {
           <p>
             <span className={styles.blueText}>{locationDescription}</span>
           </p>
+          
         </div>
       </div>
+      
     </>
   );
 };

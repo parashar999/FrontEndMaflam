@@ -5,17 +5,27 @@
       url("../../assets/ebookBackground.png") no-repeat center center; */
     background-size: cover;
     /* background-color: black; */
-    padding-left: 90px;
+    width: 100vw;
+    max-width: 1920px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .title{
-    width: 536.3px;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
 position: relative;
 font-size: 36px;
 line-height: 160%;
 display: inline-block;
 /* font-family: 'Work Sans'; */
 color: #fff;
-text-align: left;
+justify-content: baseline;
+align-items: baseline;
 height: 64.9px;
 
   }
@@ -23,7 +33,6 @@ height: 64.9px;
     color: white;
     font-size: 50px;
     text-align: center;
-    width: fixed(1,305px);
     height: Hug(208px);
     font-weight: 700;
     line-height: 75px;
@@ -32,21 +41,24 @@ height: 64.9px;
     }
   
   .cardsContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: wrap;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 0px;
+    margin-top: 5px;
   }
   
   /* Card styles */
   .card {
     border-radius: 8px;
     color: white;  
-    width: 100%;
+    width: 338px;
     position: relative;
     backdrop-filter: blur(1px);
     border-radius: 10px;
-    height: 500px;
+
     overflow: hidden;
     flex-shrink: 0;
     max-width: 100%;
@@ -90,60 +102,19 @@ height: 64.9px;
   
   }
   
-  
-  /* Responsive Media Queries */
-  @media (max-width: 1200px) {
-    .cardsContainer {
-      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  @media (max-width:1250px)
+  {
+    .container
+    {
+      zoom: 0.8;
     }
   }
+
   
-  @media (max-width: 900px) {
-    .containerHeader {
-      font-size: 40px;
-      width: 80%;
-    }
-  
-    .cardsContainer {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
-      gap: 15px;
-    }
-  
-    .downloadButton {
-      width: 9vw;
-      font-size: 14px;
+  @media (max-width:768px)
+  {
+    .container
+    {
+      zoom: 0.7;
     }
   }
-  
-  @media (max-width: 600px) {
-    .containerHeader {
-      font-size: 30px;
-      text-align: center; /* Center the header on small screens */
-      width: 90%;
-    }
-  
-    .cardsContainer {
-      grid-template-columns: 1fr; /* Single column for mobile */
-    }
-  
-    .downloadButton {
-      width: 40vw; /* Button takes more width on smaller screens */
-      font-size: 12px;
-    }
-  
-    .downloadsvg {
-      margin-left: 5px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .containerHeader {
-      font-size: 24px;
-    }
-  
-    .downloadButton {
-      width: 50vw;
-    }
-  }
-  
-  
