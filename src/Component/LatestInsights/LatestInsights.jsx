@@ -92,7 +92,7 @@ const LatestInsights = () => {
           </div>
         ))}
       </div>
-      <button className={styles.loadMoreBtn}>Load more (58)</button>
+      {/* <button className={styles.loadMoreBtn}>Load more (58)</button> */}
     </section>
   );
 };
