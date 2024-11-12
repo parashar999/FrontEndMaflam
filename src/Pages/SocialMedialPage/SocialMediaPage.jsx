@@ -27,8 +27,8 @@ export default function SocialMediaPage() {
         <YouTubeChannel></YouTubeChannel>
         {/*<Podcost></Podcost>*/}
         <EducationaPost></EducationaPost>
-        {/* <FilmProduction></FilmProduction> */}
         <BTSCarousel/>
+        <FilmProduction></FilmProduction> 
         <JoinUs></JoinUs>
         <Footer></Footer>
         </AboutusPageProvider>
