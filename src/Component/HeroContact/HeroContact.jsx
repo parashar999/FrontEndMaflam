@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext }from "react";
 import styles from "./HeroContact.module.css";
 import { ContactUsContext } from "../../store/ContactUsContext.jsx";
+import { Link } from "react-router-dom";
 
 const HeroContact = () => {
   const { contactUsContextDetails, loading, error } =
@@ -22,17 +23,17 @@ const HeroContact = () => {
         <div className={styles.cardsContainer}>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <a href="/contact">{title}</a>
+              <Link to="/contact">{title}</Link>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <a href="/contact2"> {title1}</a>
+              <Link to="/contact2"> {title1}</Link>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <a href="/contact3">{title2}</a>
+              <Link to="/contact3">{title2}</Link>
             </div>
           </div>
         </div>

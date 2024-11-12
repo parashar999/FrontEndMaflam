@@ -33,38 +33,39 @@ const ContactUS = () => {
     error: homeError,
   } = useContext(ContactUsContext);
 
+  // Create a reference for the ContactInformation component
+  const contactInfoRef = useRef(null);
+
+  // Scroll to the ContactInformation component after the page loads
   useEffect(() => {
-    if (aboutusScreenDetails) {
-      if (contactUsContextDetails) {
-        if (containerRef.current) {
-          console.log("Attempting to focus...");
-          containerRef.current.focus();
-          console.log("navigating  to focus...");
-        }
-        console.log("About Us Screen Details:", aboutusScreenDetails);
+    // Delay the scroll to allow the page to fully load
+    setTimeout(() => {
+      if (contactInfoRef.current) {
+        // Use window.scrollTo to scroll to the element
+        contactInfoRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }
-  }, [aboutusScreenDetails, contactUsContextDetails]);
+    }, 500); // 500ms delay to ensure the page is loaded
+
+    // Cleanup the timeout to avoid memory leaks
+    return () => clearTimeout();
+  }, []);
 
   return (
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
           <ContactUsContextProvider>
-            <Navbar></Navbar>
-            <HeroContact></HeroContact>
-
-            <FocusLock returnFocus={false} disabled={false}>
-              <div ref={containerRef} className={styles.container}>
-                <ContactInformation></ContactInformation>
+            <Navbar />
+            <HeroContact />
+            <div className={styles.container}>
+              {/* Pass the ref to the ContactInformation component */}
+              <div ref={contactInfoRef}>
+                <ContactInformation />
               </div>
-
-              <div className={styles.container}>
-                <MaflanContent></MaflanContent>
-              </div>
-            </FocusLock>
-            <JoinUs></JoinUs>
-            <Footer></Footer>
+              <MaflanContent />
+            </div>
+            <JoinUs />
+            <Footer />
           </ContactUsContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>

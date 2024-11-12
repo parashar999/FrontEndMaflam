@@ -1,17 +1,19 @@
 .cointainer{
     margin-top: 52px;
     height: auto;
-    min-height: 900px;
+    min-height: 600px;
     width: 100vw;
     max-width: 1920px;
     margin: auto;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    margin-bottom: 100px;
     background: url("../../assets/socialimage.png");
     background-size: cover;
 }
 .btndiv a{
     text-decoration: none;
     color: white;
+    
 }
 
 .btndiv{

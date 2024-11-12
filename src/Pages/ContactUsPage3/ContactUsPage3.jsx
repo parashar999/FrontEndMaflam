@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HeroContact from "../../Component/HeroContact/HeroContact";
-import ContactForm from "../../Component/ContactForm/ContactForm";
 import ContactForm2 from "../../Component/ContactForm2/ContactForm2";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Footer from "../../Component/Footer/Footer";
@@ -38,27 +37,19 @@ const ContactUsPage3 = () => {
     error: homeError,
   } = useContext(ContactUsContext);
 
-  // useEffect(() => {
-  //   if (contactUsContextDetails) {
-  //     console.log("Home Screen Details:", contactUsContextDetails);
-  //   }
-  // }, [contactUsContextDetails]);
-
-  // const { contactUs2ContextDetails } = useContext(ContactUs2Context);
-
-  // useEffect(() => {
-  //   if (contactUs2ContextDetails) {
-  //     console.log("Home Screen Details:", contactUs2ContextDetails);
-  //   }
-  // }, [contactUs2ContextDetails]);
+  useEffect(() => {
+    if (contactUsContextDetails) {
+      console.log("Home Screen Details:", contactUsContextDetails);
+    }
+  }, [contactUsContextDetails]);
 
   const { ContactUs3ContextDetails } = useContext(ContactUs3Context);
 
-  // useEffect(() => {
-  //   if (ContactUs3ContextDetails) {
-  //     console.log("Home Screen Details:", ContactUs3ContextDetails);
-  //   }
-  // }, [ContactUs3ContextDetails]);
+  useEffect(() => {
+    if (ContactUs3ContextDetails) {
+      console.log("Home Screen Details:", ContactUs3ContextDetails);
+    }
+  }, [ContactUs3ContextDetails]);
   return (
     <div>
       <LanguageProvider>

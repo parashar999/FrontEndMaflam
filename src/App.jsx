@@ -55,6 +55,12 @@ import PageNotFoundPage from "./Pages/PageNotFoundPage/PageNotFoundPage.jsx";
 import ContentRequiredPage from "./Pages/ContentRequiredPage/ContentRequiredPage.jsx";
 import BlogEjsPage from "./Pages/BlogEjsPage/BlogEjsPage.jsx";
 import { ContactUs3ContextProvider } from "./store/ContactUs3Context.jsx";
+import PrivacyPolicy from "./Component/PrivacyPolicy/PrivacyPolicy.jsx";
+import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
+// import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
+// import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
+
 
 //import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 //import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
@@ -285,9 +291,11 @@ const App = () => {
         element={
           <LanguageProvider>
             <HomePageProvider>
-             {/* <PrivacyPolicyProvider>
-                <PrivacyPolicy />
-              </PrivacyPolicyProvider> */}
+             <PrivacyPolicyProvider>
+                {/* <PrivacyPolicy/> */}
+                <PrivacyPolicyPage></PrivacyPolicyPage>
+             
+              </PrivacyPolicyProvider>
             </HomePageProvider>
           </LanguageProvider>
         }

@@ -18,6 +18,7 @@ export default function SocialMediaHeroPage() {
     <button className={styles.btntiktok}> 
    <a target="_blank" href="https://www.tiktok.com/@maflam.com">TikTok</a>
     </button>
+
     <button className={styles.btninsta}> 
      <a target="_blank" href="https://www.instagram.com/maflam.com">Instagram</a>
     </button>

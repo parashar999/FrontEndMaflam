@@ -65,7 +65,9 @@ function Pricing() {
                 <Navbar></Navbar>
                 <PricingPage></PricingPage>
                 <Fundamental></Fundamental>
-                <VariousCourse style={{ backgroundimage: {} }}></VariousCourse>
+                <div id="Coursesgrid">
+                  <VariousCourse></VariousCourse>
+                </div>
                 {/* <Carousel></Carousel> */}
                 <MaflanContent />
                 <JoinUs />

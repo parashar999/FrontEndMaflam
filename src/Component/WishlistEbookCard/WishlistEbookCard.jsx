@@ -41,7 +41,6 @@ const WishlistEbookCard = () => {
             <img src={ebookItem.imgSrc} alt={ebookItem.title} className={styles.image} />
             <div className={styles.content}>
               <h3 className={styles.text}>{ebookItem.title}</h3>
-              
 
             </div>
           </div>
