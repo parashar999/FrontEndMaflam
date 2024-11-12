@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function MyProfileCertificate() {
 
-  // Sample array of courses data
+  
 const courses = [
   {
     id: 1,
@@ -65,9 +65,9 @@ const courses = [
             <img src={course.image} alt="Course" className={styles.courseImage} />
           </div>
 
-          <div className={styles.courseInfo} 
-          // style={{backgroundImage:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)),url(${course.image})}}
-          >
+          <div className={styles.courseInfo}  style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url(${course.image})`
+  }}>
             <p className={styles.courseCategory}>{course.category}</p>
             <h3 className={styles.courseTitle}>{course.title}</h3>
             <div className={styles.progress}>

@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HeroContact from "../../Component/HeroContact/HeroContact";
-import ContactForm from "../../Component/ContactForm/ContactForm";
 import ContactForm2 from "../../Component/ContactForm2/ContactForm2";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
 import Footer from "../../Component/Footer/Footer";
@@ -38,14 +37,6 @@ const ContactUsPage3 = () => {
     }
   }, [contactUsContextDetails]);
 
-  // const { contactUs2ContextDetails } = useContext(ContactUs2Context);
-
-  // useEffect(() => {
-  //   if (contactUs2ContextDetails) {
-  //     console.log("Home Screen Details:", contactUs2ContextDetails);
-  //   }
-  // }, [contactUs2ContextDetails]);
-  
   const { ContactUs3ContextDetails } = useContext(ContactUs3Context);
 
   useEffect(() => {
@@ -53,23 +44,41 @@ const ContactUsPage3 = () => {
       console.log("Home Screen Details:", ContactUs3ContextDetails);
     }
   }, [ContactUs3ContextDetails]);
+
+  // Create a reference for the ContactForm2 component
+  const contactForm2Ref = useRef(null);
+
+  // Scroll to the ContactForm2 component after the page loads
+  useEffect(() => {
+    // Delay the scroll to allow the page to fully load
+    setTimeout(() => {
+      if (contactForm2Ref.current) {
+        // Scroll the element into view with smooth behavior
+        contactForm2Ref.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500); // 500ms delay to ensure the page is loaded
+
+    // Cleanup the timeout to avoid memory leaks
+    return () => clearTimeout();
+  }, []);
+
   return (
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
-        <ContactUsContextProvider >
-          <Navbar></Navbar>
-          <HeroContact></HeroContact>
-          <div className={styles.cotainer}>
-          <div className={styles.contact3}>
-            <ContactForm2></ContactForm2>
-          </div>
-          </div>
-          <div className={styles.container}>
-            <MaflanContent></MaflanContent>
-            <JoinUs></JoinUs>
-          </div>
-          <Footer></Footer>
+          <ContactUsContextProvider>
+            <Navbar />
+            <HeroContact />
+            <div className={styles.cotainer}>
+              <div className={styles.contact3} ref={contactForm2Ref}>
+                <ContactForm2 />
+              </div>
+            </div>
+            <div className={styles.container}>
+              <MaflanContent />
+              <JoinUs />
+            </div>
+            <Footer />
           </ContactUsContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>
