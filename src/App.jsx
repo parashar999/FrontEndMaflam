@@ -62,8 +62,8 @@ import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
 // import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 
 
-// import Mycourses from "./Component/MyCourses/Mycourses.jsx";
-// import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
+//import Mycourses from "./Component/MyCourses/Mycourses.jsx";
+//import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 const App = () => {
   return (
     <Routes>

@@ -1,19 +1,26 @@
 .header{
-    margin-top: 200px;
+    width: 100vw;
+    max-width: 1920px;
+    padding-top: 150px;
     min-width: 1200px;
+    display:flex;
+justify-content: center;
+align-items: center;
     background-image: url("../../assets/MaflamBlog.png");
+    margin: auto;
+
 }
 
 .header h1 {
-    color: #FFF;
+color: #FFF;
 text-align: center;
-
 margin-left: 100px;
 margin-right: 100px;
 margin-bottom: 30px;
 /* Headlines/Headline 1 */
 font-family: "Noto Kufi Arabic";
 font-size: 65px;
+max-width: 1106px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%; 

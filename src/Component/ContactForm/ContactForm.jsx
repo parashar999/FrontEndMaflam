@@ -110,7 +110,7 @@ const ContactForm = () => {
             <label htmlFor="fullNameInEng">
               {fullNameTitle} <span>*</span>
             </label>
-            <input
+            <input autoFocus
               type="text"
               required
               id="fullNameInEng"

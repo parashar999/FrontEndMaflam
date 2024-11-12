@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styles from "./ContactInformation.module.css";
 import { ContactUsContext } from "../../store/ContactUsContext";
-
+import FocusLock from 'react-focus-lock';
 const ContactInformation = () => {
   const { contactUsContextDetails, loading, error } =
     useContext(ContactUsContext);
@@ -21,6 +21,7 @@ const ContactInformation = () => {
 
   return (
     <>
+   
       <div className={styles.bgimage}></div>
       <div className={styles.contactContainer}>
         <h2 className={styles.heading}>{title}</h2>
@@ -42,8 +43,10 @@ const ContactInformation = () => {
           <p>
             <span className={styles.blueText}>{locationDescription}</span>
           </p>
+          
         </div>
       </div>
+      
     </>
   );
 };

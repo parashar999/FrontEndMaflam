@@ -58,7 +58,7 @@ const CourseGrid = () => {
         <div className={styles.coursesGrid}>
           {specializedCoursesData.map((course, index) => (
             <div key={index} className={styles.coursesCard}>
-              <Link to="/coursedetails">
+              <Link to="/prc">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={course.videoUrl}
@@ -68,7 +68,7 @@ const CourseGrid = () => {
                 />
               </Link>
               <div style={{ position: 'absolute', bottom: '10px', zIndex: '10' }}>
-                <p><Link to="/coursedetails">{course.title}</Link></p>
+                <p><Link to="/prc">{course.title}</Link></p>
               </div>
               <div className={styles.overlay}></div>
             </div>

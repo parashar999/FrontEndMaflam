@@ -234,7 +234,7 @@ const sendbtn1 = contactDetailsSec3[21]?.title || "";
           <label htmlFor="fullNameInEng">
             {fullNameTitle}<span>*</span>
           </label>
-          <input
+          <input autoFocus
             type="text"
             id="fullNameInEng"  
             required
