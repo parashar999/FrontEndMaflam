@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 
 function MyProfileCertificate() {
 
-  
 const courses = [
   {
     id: 1,

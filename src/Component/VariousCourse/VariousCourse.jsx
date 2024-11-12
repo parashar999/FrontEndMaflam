@@ -25,14 +25,20 @@ const VariousCourse = () => {
           {courses.map((course) => (
             <div key={course.courseId} className={styles.card}>
               <img src={course.promoPhoto} alt={course.title} className={styles.cardImage} />
-              <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap', alignItems:'center', paddingRight:'10px', paddingLeft:'10px'}}>
-                <img src={course.promoPhoto} alt="" style={{width:'40px', height:'40px', margin:'10px', borderRadius:'20px'}} />
-              <p>Name</p>
+              
+              <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', paddingRight: '10px', paddingLeft: '10px' }}>
+                {course.instructors.map((instructor, index) => (
+                  <div key={index} style={{ display: 'flex', alignItems: 'center', margin: '10px' }}>
+                    <img src={instructor.photoUrl} alt={instructor.name} style={{ width: '40px', height: '40px', borderRadius: '20px', marginRight: '10px' }} />
+                    <p>{instructor.name}</p>
+                  </div>
+                ))}
               </div>
+              
               <div className={styles.cardContent}>
                 <h3 className={styles.title}>{course.title}</h3>
                 <p className={styles.description}>{course.description.split(" ").slice(0, 23).join(" ")}...</p>
-                <hr style={{color:'#39FFFB'}} />
+                <hr style={{ color: '#39FFFB' }} />
                 <div className={styles.footer}>
                   <span className={styles.para}>{course.para}</span>
                   &nbsp;
@@ -57,22 +63,13 @@ const VariousCourse = () => {
                   </svg>
                   &nbsp;
                   <p>{course.estimatedLearningTime?.time}</p>
-                  {/* <button className={styles.buyNow}>{buttonTitle}</button> */}
                   <button
-                  className={styles.buyNow}
-                  onClick={() => handleCourseClick(course._id)}
-                >
-                  {course.btnTitle}
-                </button>
+                    className={styles.buyNow}
+                    onClick={() => handleCourseClick(course._id)}
+                  >
+                    {course.btnTitle}
+                  </button>
                 </div>
-               
-               
-                {/* <button
-                  className={styles.buyNow}
-                  onClick={() => handleCourseClick(course._id)}
-                >
-                  {course.btnTitle}
-                </button> */}
               </div>
             </div>
           ))}
