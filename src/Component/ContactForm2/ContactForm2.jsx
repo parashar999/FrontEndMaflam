@@ -99,7 +99,7 @@ const resumetitle = contactDetailsSec3[19]?.title || "";
 const resumePlaceholder = contactDetailsSec3[19]?.description || "";
 const portfoliyo = contactDetailsSec3[20]?.title || "";
 const portfoliyoPlaceholder = contactDetailsSec3[20]?.description || "";
-const sendbtn1 = contactDetailsSec3[21]?.title || "";
+const sendbtn1 = contactDetailsSec3[22]?.title || "";
 
 
 
@@ -866,7 +866,7 @@ const sendbtn1 = contactDetailsSec3[21]?.title || "";
         {/* Submit Button */}
         <div className={styles.inputGroup} >
           <button type="submit" className={styles.submitButton} style={{width:'185px'}}>
-            Send
+           {sendbtn1}
           </button>
         </div>
       </form>
