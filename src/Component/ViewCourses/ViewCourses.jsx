@@ -39,7 +39,7 @@ const navigate = useNavigate()
               color: "white",
             }}
           >
-          <a href="/coursedetails">   {course.name}</a>
+          <a href="/prc">   {course.name}</a>
           </div>
         ))}
       </div>
