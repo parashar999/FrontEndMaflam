@@ -190,9 +190,9 @@ const Navbar = () => {
               {isProfileMenuOpen && (
                 <div className={styles.profileMenu}>
                   <ul>
-                    <li>
+                    <li className={styles.gapss}>
                       {" "}
-                      <FaRegUser /><Link to="/mycourses"> My Courses</Link>
+                      <MdLiveTv /><Link to="/mycourses"> My Courses</Link>
                     </li>
                     <li className={styles.iconstyle}>
                       {" "}
@@ -205,15 +205,15 @@ const Navbar = () => {
                     </li>
                     <li>
                       {" "}
-                      <FaRegHeart /> &nbsp; <Link to="/mywishlist"></Link> My Wishlist
+                      <FaRegHeart /> &nbsp; <Link to="/mywishlist">  My Wishlist</Link>
                     </li>
                     <li>
                       {" "}
-                      <CiFlag1 /> &nbsp; <Link to="/contentrequired"> </Link>My Subscriptions
+                      <CiFlag1 /> &nbsp; <Link to="/contentrequired"> My Subscriptions</Link>
                     </li>
                     <li>
                       {" "}
-                      <LuHelpCircle /> &nbsp; <Link to="/contentrequired"></Link> Help Center{" "}
+                      <LuHelpCircle /> &nbsp; <Link to="/contentrequired"> Help Center</Link> {" "}
                     </li>
                     <li onClick={handleLogoutClick}>
                       {" "}

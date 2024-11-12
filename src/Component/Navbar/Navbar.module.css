@@ -24,6 +24,9 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+.gapss a{
+  margin-left: 12px !important; 
+}
 
 .menuelements
 {

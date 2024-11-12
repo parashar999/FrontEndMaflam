@@ -14,7 +14,7 @@ const checkoutpage = async()=>{
   const token=userdetails.token;
   const requestBody={
     amount:750,
-    callback:"https://maflam.web.app/mycourses"
+    callback:"https://maflam.web.app/checkout"
 
   }
 
@@ -131,6 +131,7 @@ const PaymentForm = () => {
           </p>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
