@@ -31,11 +31,11 @@ const PurchaseCancellationPage = () => {
     error: aboutError,
   } = useContext(PurchaseCancellationContext);
 
-  useEffect(() => {
-    if (purchaseCancellationDetails) {
-      console.log("Purchase Screen Details:", purchaseCancellationDetails);
-    }
-  }, [purchaseCancellationDetails]);
+  // useEffect(() => {
+  //   if (purchaseCancellationDetails) {
+  //     console.log("Purchase Screen Details:", purchaseCancellationDetails);
+  //   }
+  // }, [purchaseCancellationDetails]);
 
   return (
     <div>

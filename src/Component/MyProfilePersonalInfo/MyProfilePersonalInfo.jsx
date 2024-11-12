@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import styles from "./MyProfilePersonalInfo.module.css";
 import { assests } from "../../assets/assests.js";
 import { Link } from "react-router-dom";
-
+import auth from "../../Auth/Auth.js";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function MyProfilePersonalInfo() {
+  const userDetails = auth.getAuthData();
+  const token = userDetails?.token;
+
   const [userImage, setUserImage] = useState("default-image-url.png");
   const [formData, setFormData] = useState({
     name: "",
@@ -65,8 +71,8 @@ function MyProfilePersonalInfo() {
     if (e.target.name === "skills" || e.target.name === "skillLevel") {
       const { skills, skillLevel, skillPreviews } = formData;
       if (formData.skills && formData.skillLevel) {
-        const newSkill = `${formData.skills} - ${formData.skillLevel}`;
-        if (!skillPreviews.includes(newSkill)) {
+        const newSkill = { name: formData.skills, parent: formData.skillLevel };
+        if (!skillPreviews.some((skill) => skill.name === newSkill.name)) {
           setFormData((prevState) => ({
             ...prevState,
             skillPreviews: [...prevState.skillPreviews, newSkill],
@@ -87,27 +93,79 @@ function MyProfilePersonalInfo() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+
+    const dateOfBirth = `${formData.dobYear}-${String(
+      formData.dobMonth
+    ).padStart(2, "0")}-${String(formData.dobDay).padStart(2, "0")}`;
+    const profileData = {
+      usernameInEng: formData.name,
+      gender: formData.gender,
+      dateofBirth: dateOfBirth,
+      profession: formData.profession,
+      emailId: formData.email,
+      phone: formData.phone,
+      skills: formData.skillPreviews,
+      interestedIn: formData.interestedInLearning,
+      socialMediaLinks: formData.links.join(", "),
+    };
+
+    try {
+      await axios.put(
+        "https://backend.maflam.com/maflam/update-profile",
+        profileData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      toast.success(response.data.message);
+    } catch (error) {
+      console.error("Error updating profile:", error);
+    }
   };
+  useEffect(() => {
+    axios
+      .get("https://backend.maflam.com/maflam/get-user-details?lang=1", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        const data = response.data.userProfile;
+        setFormData({
+          name: data.name || "",
+          gender: data.gender || "",
+          dobYear: data.dateofBirth ? data.dateofBirth.split("-")[0] : "",
+          dobMonth: data.dateofBirth ? data.dateofBirth.split("-")[1] : "",
+          dobDay: data.dateofBirth ? data.dateofBirth.split("-")[2] : "",
+          profession: data.profession || "",
+          email: data.email || "",
+          phone: data.phone || "",
+          links:
+            data.socialMediaLinks && data.socialMediaLinks.length > 0
+              ? data.socialMediaLinks[0].split(",")
+              : ["", "", ""],
+          skills: data.skills.map((skill) => ({
+            name: skill.name,
+            parent: skill.parent,
+          })),
+          interestedInLearning: data.interestedIn || "",
+          skillPreviews: data.skills.map(
+            (skill) => `${skill.name} - ${skill.parent}`
+          ),
+        });
+      })
+      .catch((error) => {
+        console.error("Error fetching user details:", error);
+      });
+  }, [token]);
 
   return (
     <div className={styles.profileContainer}>
       <header className={styles.profileHeader}>
         <h1>My Profile</h1>
       </header>
-
-      {/* <nav>
-                <ul className={styles.profileTabs}>
-                    <li className={styles.activeTab}>Personal Information</li>
-                    
-                    <li>My Courses</li>
-                    <li>My Certificates</li>
-                    <li>My Wishlist</li>
-                </ul>
-                <hr className={styles.footerHr} />
-            </nav> */}
       <nav>
         <ul className={styles.profileTabs}>
           <li className={styles.activeTab}>
@@ -130,7 +188,7 @@ function MyProfilePersonalInfo() {
         <div className={styles.imageUploadContainer}>
           <h2> Personal Information</h2>
           <div className={styles.imagePreview}>
-            <img src={userImage} alt=" " />
+            <img src={userImage} alt="User" />
             <div className={styles.editIconContainer}>
               <input
                 type="file"
@@ -306,7 +364,7 @@ function MyProfilePersonalInfo() {
         <div className={styles.skillPreviewContainer}>
           {formData.skillPreviews.map((skill, index) => (
             <div key={index} className={styles.skillPreview}>
-              {skill}
+              {skill.name} ({skill.parent})
               <FaTimes
                 className={styles.closeIcon}
                 onClick={() => handleSkillRemove(skill)}
@@ -331,7 +389,7 @@ function MyProfilePersonalInfo() {
         </div>
 
         <button type="submit" className={styles.submitButton}>
-          Save Changes
+          Save changes
         </button>
       </form>
     </div>

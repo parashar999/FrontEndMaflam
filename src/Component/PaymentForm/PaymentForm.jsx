@@ -30,7 +30,7 @@ const checkoutpage = async () => {
     toast.success(response.data.message);
     const data = response.data;
     if (data) {
-      console.log(response.data.data.redirect_url);
+      // console.log(response.data.data.redirect_url);
       window.open(response.data.data.redirect_url);
     } else {
       throw new Error("Invalid response from server");

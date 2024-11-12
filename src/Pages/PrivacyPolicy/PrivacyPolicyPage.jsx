@@ -37,11 +37,11 @@ const PrivacyPolicyPage = () => {
     error: aboutError,
   } = useContext(PrivacyPolicyContext);
 
-  useEffect(() => {
-    if (PrivacyPolicyDetails) {
-      console.log("TermsCondition Screen Details:", PrivacyPolicyDetails);
-    }
-  }, [PrivacyPolicyDetails]);
+  // useEffect(() => {
+  //   if (PrivacyPolicyDetails) {
+  //     console.log("TermsCondition Screen Details:", PrivacyPolicyDetails);
+  //   }
+  // }, [PrivacyPolicyDetails]);
 
   return (
     <div>

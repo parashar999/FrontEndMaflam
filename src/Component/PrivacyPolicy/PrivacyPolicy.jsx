@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
-import styles from './PrivacyPolicy.module.css';
+import React, { useContext } from "react";
+import styles from "./PrivacyPolicy.module.css";
 // import { TermsConditionContext } from '../../store/TermsConditionContext';
-import { PrivacyPolicyContext } from '../../store/PrivacyPolicy';
+import { PrivacyPolicyContext } from "../../store/PrivacyPolicy";
 
 const PrivacyPolicy = () => {
-  const  { PrivacyPolicyDetails, loading, error } = useContext(PrivacyPolicyContext); // Access the context
+  const { PrivacyPolicyDetails, loading, error } =
+    useContext(PrivacyPolicyContext); // Access the context
 
   // Handle loading and error states
   if (loading) {
@@ -18,7 +19,7 @@ const PrivacyPolicy = () => {
   // Check if termsConditionDetails exist and has TermsData
   const terms = PrivacyPolicyDetails || [];
 
-  console.log("terms data"+terms[0].title);
+  "terms data" + terms[0].title;
 
   return (
     <div className={styles.mainContainer}>
@@ -28,7 +29,9 @@ const PrivacyPolicy = () => {
         <h1 className={styles.title}>{terms[0].title}</h1>
 
         {terms[0].description?.map((desc, index) => (
-          <p key={index} className={styles.description}>{desc}</p>
+          <p key={index} className={styles.description}>
+            {desc}
+          </p>
         ))}
 
         {terms[0].sections?.map((section, index) => (
@@ -36,7 +39,9 @@ const PrivacyPolicy = () => {
             <h2 className={styles.sectionTitle}>{section.title}</h2>
             <ul className={styles.list}>
               {section.items.map((item, idx) => (
-                <li key={idx} className={styles.listItem}>{item}</li>
+                <li key={idx} className={styles.listItem}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

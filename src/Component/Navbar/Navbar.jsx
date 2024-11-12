@@ -29,7 +29,7 @@ import { CiFlag1 } from "react-icons/ci";
 import auth from "../../Auth/Auth.js";
 const Navbar = () => {
   const userDetails = auth.getAuthData();
-  console.log("from Navbar", userDetails);
+  // console.log("from Navbar", userDetails);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [navItems1, setNavItems1] = useState([]);
@@ -66,7 +66,7 @@ const Navbar = () => {
       // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setNavItems1(response.data);
       })
       .catch((error) => {
@@ -122,7 +122,7 @@ const Navbar = () => {
         </a>
         <div className={styles.menuelements}>
           <div className={styles.leftLinks}>
-            {console.log("check language", language)}
+            {/* {console.log("check language", language)} */}
             {navItems1.map((item, index) => (
               <div key={index} className={styles.dropdown}>
                 {item.hasDropdown ? (

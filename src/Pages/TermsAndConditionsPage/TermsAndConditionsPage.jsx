@@ -35,14 +35,14 @@ const TermsAndConditionsPage = () => {
     error: aboutError,
   } = useContext(TermsConditionContext);
 
-  useEffect(() => {
-    if (termsConditionScreenDetails) {
-      console.log(
-        "TermsCondition Screen Details:",
-        termsConditionScreenDetails
-      );
-    }
-  }, [termsConditionScreenDetails]);
+  // useEffect(() => {
+  //   if (termsConditionScreenDetails) {
+  //     console.log(
+  //       "TermsCondition Screen Details:",
+  //       termsConditionScreenDetails
+  //     );
+  //   }
+  // }, [termsConditionScreenDetails]);
 
   return (
     <div>
