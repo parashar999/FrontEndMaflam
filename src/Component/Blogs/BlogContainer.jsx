@@ -93,7 +93,7 @@ function BlogContainer() {
           <h2 style={{maxWidth:'80%'}}>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
           <p style={{maxWidth:'80%'}}>{blogData[1]?.description || "No description available."}</p>
           {/* <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div> */}
-          <div>  <h5> <a href="/blogDetails"> {blogData[2]?.title || "Read More"}</a>
+          <div>  <h5> <a href="/blogs"> {blogData[2]?.title || "Read More"}</a>
           {arrow}
           </h5></div>
         </div>
