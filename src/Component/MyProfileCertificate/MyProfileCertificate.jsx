@@ -43,7 +43,7 @@ const courses = [
 
       <nav>
         <ul className={styles.profileTabs}>
-          <li className={styles.activeTab1}><a href="#">Personal Information</a></li>
+          <li className={styles.activeTab1}><a href="/personalInformation">Personal Information</a></li>
           <li className={styles.activeTab1}><Link to="/mycourses">My Courses</Link></li>
           <li className={styles.activeTab}><a href="/mycertificate">My Certificates</a></li>
           <li className={styles.activeTab1}><a href="mywishlist">My Wishlist</a></li>

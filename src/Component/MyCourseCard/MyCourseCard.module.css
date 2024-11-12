@@ -17,6 +17,46 @@
     
   
     }
+
+    
+.CertificatePageData
+{
+    margin: auto;
+    max-width: 1300px;
+}
+.profileHeader h1{
+  color:  white;
+}
+.activeTab {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+.profileHeader {
+    max-width: 1300px;
+    text-align: start;
+    margin-bottom: 30px;
+}
+.profileHeader h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.activeTab a{
+    color: white;
+    text-decoration: none;
+}
+.activeTab1 a{
+    color: white;
+    text-decoration: none;
+}
+.profileTabs {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
     
     .container h2 {
       color: #fff;
@@ -25,6 +65,12 @@
       margin-bottom: 20px;
     }
     
+    .profileTabs li {
+      cursor: pointer;
+      font-size: 18px;
+      padding: 10px 20px;
+      color: white;
+  }
     .cardsGrid {
       display: grid;
   
@@ -43,7 +89,7 @@
       overflow: hidden;
       display: flex;
       height: 700px;
-      width: 450px;
+      width: 400px;
       gap: 60px;
       flex-direction: column;
       color: #fff;
