@@ -2,6 +2,7 @@
 
 import { assests } from '../../assets/assests';
 import styles from './FilmProduction.module.css';
+import { Link } from 'react-router-dom';
 
 const FilmProduction = () => {
 
@@ -17,7 +18,9 @@ const FilmProduction = () => {
         />
         <div className={styles.overlay}>
           <p> Subscribe To The Full Filmmaking Fundamentals Package.</p>
-          <button className={styles.subscribebutton}> Subscribe </button>
+          <Link to="/prc" className={styles.subscribebutton}>
+        Subscribe
+          </Link>
         </div>
       </div>
     </div>
