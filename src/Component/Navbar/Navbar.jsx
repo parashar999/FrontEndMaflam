@@ -116,9 +116,9 @@ const Navbar = () => {
             {language === "ar" ? "English" : "العربية"}
           </button>
         </div>
-        <a href="/">
+        <Link to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
-        </a>
+        </Link>
         <div className={styles.menuelements}>
           <div className={styles.leftLinks}>
             {/* {console.log("check language", language)} */}
@@ -188,7 +188,7 @@ const Navbar = () => {
                 {isProfileMenuOpen && (
                   <div className={styles.profileMenu}>
                     <ul>
-                      <li>
+                      <li className={styles.gappss}>
                         {" "}
                         <FaRegUser />
                         <Link to="/mycourses"> My Courses</Link>
@@ -205,8 +205,8 @@ const Navbar = () => {
                       </li>
                       <li>
                         {" "}
-                        <FaRegHeart /> &nbsp; <Link to="/mywishlist"></Link> My
-                        Wishlist
+                        <FaRegHeart /> &nbsp; <Link to="/mywishlist">  My
+                        Wishlist</Link>
                       </li>
                       <li>
                         {" "}
