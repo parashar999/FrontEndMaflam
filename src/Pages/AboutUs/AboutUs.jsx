@@ -18,6 +18,7 @@ import {
   AboutusPageContext,
   AboutusPageProvider,
 } from "../../store/AboutUsPageContext.jsx";
+import Podcost from "../../Component/Podcast/Podcost.jsx";
 
 export default function AboutUs() {
   const {
@@ -57,6 +58,7 @@ export default function AboutUs() {
             <MaflamImageOffer />
             <MaflamInstructors />
             <MaflamCard />
+         
             <MaflanContent />
             <JoinUs />
             <Footer />

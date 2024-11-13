@@ -118,9 +118,9 @@ const Navbar = () => {
             {language === "ar" ? "English" : "العربية"}
           </button>
         </div>
-        <a href="/">
+        <Link to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
-        </a>
+        </Link>
         <div className={styles.menuelements}>
         <div className={styles.leftLinks}>
           {console.log("check language", language)}
@@ -128,7 +128,7 @@ const Navbar = () => {
             <div key={index} className={styles.dropdown}>
               {item.hasDropdown ? (
                 <>
-                  <a href="#" onClick={() => toggleDropdown(item.name)}>
+                  <Link to="#" onClick={() => toggleDropdown(item.name)}>
                     {item.name}
                     <span
                       className={`${styles.arrow} ${
@@ -137,11 +137,11 @@ const Navbar = () => {
                     >
                       &#8595;
                     </span>
-                  </a>
+                  </Link>
                   {openDropdown === item.name && (
                     <div className={styles.submenu}>
                       {item.dropdownItems?.map((subItem, subIndex) => (
-                        <a href={subItem.href} key={subIndex}>
+                        <Link to={subItem.href} key={subIndex}>
                           &nbsp;&nbsp;
                           <img
                             className={
@@ -153,13 +153,13 @@ const Navbar = () => {
                             alt=""
                           />
                           {subItem.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </>
               ) : (
-                <a href={item.href}>{item.name}</a>
+                <Link to={item.href}>{item.name}</Link>
               )}
             </div>
           ))}
