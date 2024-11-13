@@ -103,7 +103,6 @@ const Navbar = () => {
     TfiMobile: <TfiMobile />,
     BiSolidBookAlt: <BiSolidBookAlt />,
   };
-
   return (
     <div
       className={styles.navmenu}

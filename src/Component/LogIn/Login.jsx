@@ -98,6 +98,7 @@ const Login = () => {
             <input
               type="text"
               required
+              maxLength={40}
               placeholder={emailLabel}
               className={styles.input}
               value={emailOrPhone}
@@ -110,6 +111,7 @@ const Login = () => {
                 placeholder={passwordLabel}
                 className={styles.input}
                 required
+                maxLength={20}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />

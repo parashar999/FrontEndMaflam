@@ -125,7 +125,7 @@ const SignUp = () => {
           <input
             type="email"
             required
-            maxLength={50}
+            maxLength={40}
             placeholder={emailLabel}
             className={stylesSelected.input}
             value={emailId}

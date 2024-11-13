@@ -96,7 +96,7 @@ const ContactForm2 = () => {
   const resumePlaceholder = contactDetailsSec3[19]?.description || "";
   const portfoliyo = contactDetailsSec3[20]?.title || "";
   const portfoliyoPlaceholder = contactDetailsSec3[20]?.description || "";
-  const sendbtn1 = contactDetailsSec3[21]?.title || "";
+  const sendbtn1 = contactDetailsSec3[22]?.title || "";
 
   const [formData, setFormData] = useState({
     fullNameInEng: "",
@@ -231,7 +231,8 @@ const ContactForm2 = () => {
             {fullNameTitle}
             <span>*</span>
           </label>
-          <input autoFocus
+          <input
+            autoFocus
             type="text"
             id="fullNameInEng"
             required
@@ -895,6 +896,28 @@ const ContactForm2 = () => {
           </div>
         </div>
 
+        {/* Portfolio Upload
+        <div className={styles.inputGroup}>
+          <label htmlFor="portfolioUpload">Portfolio</label>{" "}
+          <div className={styles.imgUpload}>
+            <button
+              type="button"
+              required
+              onClick={() => triggerFileUpload("portfolioUpload")}
+              className={styles.downloadIcon}
+            >
+              <img src={downloadIcon} alt="Upload Portfolio" />
+            </button>
+            <p>{btnText}</p>
+          </div>
+          <input
+            type="file"
+            id="portfolioUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, "portfolioFile")}
+          />
+        </div> */}
+
         {/* Submit Button */}
         <div className={styles.inputGroup}>
           <button
@@ -902,7 +925,7 @@ const ContactForm2 = () => {
             className={styles.submitButton}
             style={{ width: "185px" }}
           >
-            Send
+            {sendbtn1}
           </button>
         </div>
       </form>
