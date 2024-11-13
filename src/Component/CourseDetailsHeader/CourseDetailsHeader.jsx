@@ -20,7 +20,6 @@ function CourseDetailsHeader() {
   const navigate = useNavigate();
 
   const checkoutpage = () => {
-    console.log("Button was clicked");
     if (userDetails) {
       navigate("/checkout");
     } else {

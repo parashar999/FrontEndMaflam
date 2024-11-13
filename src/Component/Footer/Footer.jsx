@@ -24,8 +24,6 @@ const Footer = () => {
       .then((response) => {
         setFooterColumnData1(response.data);
         setFooterSubColumnData1(response.data[1]); // Set the fetched data in state
-        console.log("Footer data fetched successfully:", response.data);
-        console.log("SubFooter data fetched successfully:", response.data[1]);
       })
       .catch((error) => {
         console.error("Error fetching footer data:", error);
@@ -281,7 +279,7 @@ const Footer = () => {
           ))}
           <hr className={styles.footerHr} />
         </div>
-         <div></div>
+        <div></div>
         <div className={styles.footerLinks}>
           <div className={styles.footerBottom}>
             <p>{copyrighttext}</p>

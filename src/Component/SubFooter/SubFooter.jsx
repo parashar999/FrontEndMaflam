@@ -10,21 +10,20 @@ import { LanguageContext } from "../LanguageContext/LanguageContext";
 // const Footer = () => {
 
 const SubFooter = () => {
- 
   const [footerSubColumnData1, setFooterSubColumnData1] = useState([]);
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
   const SubFooterGetApi = (lang) => {
     // Fetch footer data based on the selected language
     // axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
-    axios.get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
-    // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
-    
+    axios
+      .get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
+      // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
+
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
       .then((response) => {
-
-        setFooterSubColumnData1(response.data);// Set the fetched data in state
-        console.log("Footer data fetched successfully:", response.data);
-        console.log("SubFooter data fetched successfully:", response.data[1]);
+        setFooterSubColumnData1(response.data); // Set the fetched data in state
+        // console.log("Footer data fetched successfully:", response.data);
+        // console.log("SubFooter data fetched successfully:", response.data[1]);
       })
       .catch((error) => {
         console.error("Error fetching footer data:", error);
@@ -267,9 +266,6 @@ const SubFooter = () => {
           <hr className={styles.footerHr} />
         </div>
 
-
-
-
         <div className={styles.footerLinks}>
           <div className={styles.footerBottom}>
             <p>All rights reserved © Maflam 2023</p>
@@ -291,14 +287,7 @@ const SubFooter = () => {
               <a href="/terms&condition">Terms and Conditions</a>
             </li>
           </ul>
-          
         </div>
-
-       
-
-
-
-
       </div>
     </footer>
   );

@@ -1,25 +1,28 @@
-
 import React, { useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import styles from "./EbooksCards.module.css";
 import { EbookPageContext } from "../../store/ebookPageContext";
 import auth from "../../Auth/Auth";
 
 const EbooksCards = () => {
-  const { ebookPageContextDetails, setEbookPageContextDetails, loading, error } = useContext(EbookPageContext);
-  const [displayCount, setDisplayCount] = useState(8); 
-  const navigate = useNavigate(); 
-  
+  const {
+    ebookPageContextDetails,
+    setEbookPageContextDetails,
+    loading,
+    error,
+  } = useContext(EbookPageContext);
+  const [displayCount, setDisplayCount] = useState(8);
+  const navigate = useNavigate();
+
   // Get user details from the auth object
   const userDetails = auth.getAuthData();
-  console.log("User Details: ", userDetails); 
 
   useEffect(() => {
     const fetchEbooks = async () => {
       try {
-        const response = await fetch("/api/ebookData"); 
+        const response = await fetch("/api/ebookData");
         const data = await response.json();
-        setEbookPageContextDetails(data); 
+        setEbookPageContextDetails(data);
       } catch (err) {
         console.error("Error fetching data", err);
       }
@@ -32,12 +35,10 @@ const EbooksCards = () => {
     // Check if userDetails has a valid token (indicating the user is logged in)
     if (!userDetails || !userDetails.token) {
       // If not logged in, redirect to the login page
-      console.log("User not logged in, redirecting to login...");
       navigate("/login");
     } else {
       // If logged in, proceed with the download
-      console.log("User logged in, downloading file...");
-      window.location.href = ebookUrl; 
+      window.location.href = ebookUrl;
     }
   };
 
@@ -54,13 +55,17 @@ const EbooksCards = () => {
   return (
     <div className={styles.container}>
       <div>
-        <h1 className={styles.containerHeader}>{title}</h1>    
-      </div>   
+        <h1 className={styles.containerHeader}>{title}</h1>
+      </div>
 
       <div className={styles.cardsContainer}>
         {ebook?.slice(0, displayCount).map((ebookItem) => (
           <div key={ebookItem.id} className={styles.card}>
-            <img src={ebookItem.imgSrc} alt={ebookItem.title} className={styles.image} />
+            <img
+              src={ebookItem.imgSrc}
+              alt={ebookItem.title}
+              className={styles.image}
+            />
             <div className={styles.content}>
               <p>{ebookItem.text}</p>
               <h3 className={styles.text}>{ebookItem.title}</h3>
@@ -69,21 +74,23 @@ const EbooksCards = () => {
                   <button className={styles.soonButton1}>Soon</button>
                 ) : (
                   <button
-                    onClick={() => handleDownloadClick(ebookItem.ebookPdfUrl)} 
+                    onClick={() => handleDownloadClick(ebookItem.ebookPdfUrl)}
                     className={styles.downloadButton}
                   >
-                    <span className={styles.downbtnspan}>{ebookItem.buttonText.text}</span>
-                    <img 
-                      src={ebookItem.buttonText.icon} 
-                      alt="Button Icon" 
-                      className={styles.downloadIcon} 
+                    <span className={styles.downbtnspan}>
+                      {ebookItem.buttonText.text}
+                    </span>
+                    <img
+                      src={ebookItem.buttonText.icon}
+                      alt="Button Icon"
+                      className={styles.downloadIcon}
                     />
                   </button>
                 )}
-                <img 
-                  src={ebookItem.icon2.icon} 
-                  alt="Arrow Icon" 
-                  className={styles.likeicon} 
+                <img
+                  src={ebookItem.icon2.icon}
+                  alt="Arrow Icon"
+                  className={styles.likeicon}
                 />
               </div>
             </div>

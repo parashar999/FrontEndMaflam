@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { LanguageContext } from "../Component/LanguageContext/LanguageContext";
@@ -13,28 +12,27 @@ export const FaqPageProvider = ({ children }) => {
 
   const fetchfaqScreenDetails = async (langParam) => {
     try {
-      setLoading(true); 
-      const response = await axios.get(`https://backend.maflam.com/maflam/get-faq?lang=${langParam}`
-
+      setLoading(true);
+      const response = await axios.get(
+        `https://backend.maflam.com/maflam/get-faq?lang=${langParam}`
 
         // `http://192.168.1.39:3001/maflam/get-faq?lang=${langParam}`
       );
-      console.log("API Response:", response.data);
+      // console.log("API Response:", response.data);
 
       setFaqScreenDetails(response.data);
-      setLoading(false); 
+      setLoading(false);
     } catch (err) {
       console.error("Error fetching FAQ data:", err);
       setError(err);
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    
     const langParam = language === "ar" ? 0 : 1;
-    console.log("Fetching FAQ data for language:", langParam); 
-    fetchfaqScreenDetails(langParam); 
+    console.log("Fetching FAQ data for language:", langParam);
+    fetchfaqScreenDetails(langParam);
   }, [language]);
 
   return (
@@ -43,6 +41,3 @@ export const FaqPageProvider = ({ children }) => {
     </FaqPageContext.Provider>
   );
 };
-
-
-

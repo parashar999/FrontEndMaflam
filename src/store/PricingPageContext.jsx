@@ -1,12 +1,12 @@
-import React, {  useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 import axios from "axios";
 import { LanguageContext } from "../Component/LanguageContext/LanguageContext";
 
-
-export const PricingPageContext= createContext();
+export const PricingPageContext = createContext();
 
 export const PricingPageContextProvider = ({ children }) => {
-  const [pricingPageContextDetails, setPricingPageContextDetails] = useState(null);
+  const [pricingPageContextDetails, setPricingPageContextDetails] =
+    useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,14 +14,11 @@ export const PricingPageContextProvider = ({ children }) => {
 
   const fetchPricingPageContextDetails = async (langParam) => {
     try {
-   
-   
-    // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
-       const response = await axios.get(`https://backend.maflam.com/maflam/get-pricing-course1-details?lang=${langParam}`
-
+      // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
+      const response = await axios.get(
+        `https://backend.maflam.com/maflam/get-pricing-course1-details?lang=${langParam}`
       );
-      console.log("API Response: pricing  ", response.data);
- 
+      // console.log("API Response: pricing  ", response.data);
 
       setPricingPageContextDetails(response.data);
       setLoading(false);
@@ -37,7 +34,9 @@ export const PricingPageContextProvider = ({ children }) => {
   }, [language]);
 
   return (
-    <PricingPageContext.Provider value={{ pricingPageContextDetails, loading, error }}>
+    <PricingPageContext.Provider
+      value={{ pricingPageContextDetails, loading, error }}
+    >
       {children}
     </PricingPageContext.Provider>
   );

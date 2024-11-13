@@ -1,4 +1,4 @@
-import React, { useContext, useEffect,useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HeroContact from "../../Component/HeroContact/HeroContact";
 import ContactForm from "../../Component/ContactForm/ContactForm";
@@ -9,7 +9,7 @@ import JoinUs from "../../Component/JoinUs/JoinUs";
 import styles from "./ContactUs.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import { HomePageProvider } from "../../store/HomePageContext";
-import FocusLock from 'react-focus-lock';
+import FocusLock from "react-focus-lock";
 import {
   AboutusPageContext,
   AboutusPageProvider,
@@ -21,7 +21,7 @@ import {
 
 const ContactUS = () => {
   const containerRef = useRef(null);
-  
+
   const {
     aboutusScreenDetails,
     loading: aboutLoading,
@@ -32,8 +32,6 @@ const ContactUS = () => {
     loading: homeLoading,
     error: homeError,
   } = useContext(ContactUsContext);
-
-  
 
   // Create a reference for the ContactInformation component
   const contactInfoRef = useRef(null);
