@@ -5,7 +5,8 @@ import { LanguageContext } from "../Component/LanguageContext/LanguageContext";
 export const CommunityGuidelinesContext = createContext();
 
 export const CommunityGuidelinesProvider = ({ children }) => {
-  const [CommunityGuidelinesDetails, setCommunityGuidelinesDetails] = useState(null);
+  const [CommunityGuidelinesDetails, setCommunityGuidelinesDetails] =
+    useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -16,7 +17,7 @@ export const CommunityGuidelinesProvider = ({ children }) => {
       const response = await axios.get(
         `https://backend.maflam.com/maflam/get-communityguidelines?lang=${langParam}`
       );
-      console.log("API Response for Community Guidelines: ", response.data);
+      // console.log("API Response for Community Guidelines: ", response.data);
 
       setCommunityGuidelinesDetails(response.data);
       setLoading(false);

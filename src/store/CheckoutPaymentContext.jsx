@@ -1,12 +1,12 @@
-import React, {  useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 import axios from "axios";
 import { LanguageContext } from "../Component/LanguageContext/LanguageContext";
-
 
 export const CheckoutPaymentContext = createContext();
 
 export const CheckoutPaymentContextProvider = ({ children }) => {
-  const [checkoutPaymentContextDetails, setCheckoutPaymentContextDetails] = useState(null);
+  const [checkoutPaymentContextDetails, setCheckoutPaymentContextDetails] =
+    useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,15 +14,11 @@ export const CheckoutPaymentContextProvider = ({ children }) => {
 
   const fetchPaymentContextDetails = async (langParam) => {
     try {
-   
-   
-    // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
-       const response = await axios.get(`https://backend.maflam.com/maflam/get-maflam-pricing-details?lang=${langParam}`
-
+      // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
+      const response = await axios.get(
+        `https://backend.maflam.com/maflam/get-maflam-pricing-details?lang=${langParam}`
       );
-      console.log("API Response: checkout  ", response.data);
-
-
+      // console.log("API Response: checkout  ", response.data);
 
       setCheckoutPaymentContextDetails(response.data);
       setLoading(false);
@@ -38,7 +34,9 @@ export const CheckoutPaymentContextProvider = ({ children }) => {
   }, [language]);
 
   return (
-    <CheckoutPaymentContext.Provider value={{ checkoutPaymentContextDetails, loading, error }}>
+    <CheckoutPaymentContext.Provider
+      value={{ checkoutPaymentContextDetails, loading, error }}
+    >
       {children}
     </CheckoutPaymentContext.Provider>
   );

@@ -61,9 +61,13 @@ import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
 // import { PrivacyPolicyProvider } from "./store/PrivacyPolicy.jsx";
 // import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicy.jsx";
 
-
 //import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 //import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
+import auth from "./Auth/Auth.js";
+const userDetails = auth.getAuthData();
+const PrivateRoute = ({ children }) => {
+  return userDetails ? children : <Navigate to="/login" />;
+};
 const App = () => {
   return (
     <Routes>
@@ -209,7 +213,14 @@ const App = () => {
       <Route path=" " element={<VegasProCourse />} />
       <Route path="/rep" element={<RepresentationCourseDetail />} />
       <Route path="/mycertificate" element={<MyCertificate />} />
-      <Route path="/personalinformation" element={<PersonalInformation />} />
+      <Route
+        path="/personalinformation"
+        element={
+          <PrivateRoute>
+            <PersonalInformation />
+          </PrivateRoute>
+        }
+      />
 
       <Route
         path="/pagenotfound"
@@ -255,15 +266,17 @@ const App = () => {
           </LanguageProvider>
         }
       />
-      <Route path="/blogs" element={
-            <LanguageProvider>
-                 <AboutusPageProvider>
-        <Blogs />
-        </AboutusPageProvider>
-        </LanguageProvider>
-
-        } />
-         <Route path="/blogDetails/:id" element={<BlogEjsPage />} />
+      <Route
+        path="/blogs"
+        element={
+          <LanguageProvider>
+            <AboutusPageProvider>
+              <Blogs />
+            </AboutusPageProvider>
+          </LanguageProvider>
+        }
+      />
+      <Route path="/blogDetails/:id" element={<BlogEjsPage />} />
       <Route
         path="/login"
         element={
@@ -291,10 +304,9 @@ const App = () => {
         element={
           <LanguageProvider>
             <HomePageProvider>
-             <PrivacyPolicyProvider>
+              <PrivacyPolicyProvider>
                 {/* <PrivacyPolicy/> */}
                 <PrivacyPolicyPage></PrivacyPolicyPage>
-             
               </PrivacyPolicyProvider>
             </HomePageProvider>
           </LanguageProvider>
@@ -335,8 +347,6 @@ const App = () => {
           </LanguageProvider>
         }
       />
-
-      
     </Routes>
   );
 };

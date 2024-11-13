@@ -7,7 +7,7 @@ import { LanguageContext } from "../../Component/LanguageContext/LanguageContext
 const HomeHero = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
-  console.log(language);
+  // console.log(language);
   const stylesSelected = language === "ar" ? styles : stylesArabic;
 
   if (loading) return <p>Loading...</p>;

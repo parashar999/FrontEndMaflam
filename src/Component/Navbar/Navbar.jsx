@@ -29,7 +29,7 @@ import { CiFlag1 } from "react-icons/ci";
 import auth from "../../Auth/Auth.js";
 const Navbar = () => {
   const userDetails = auth.getAuthData();
-  console.log("from Navbar", userDetails);
+  // console.log("from Navbar", userDetails);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [navItems1, setNavItems1] = useState([]);
@@ -66,8 +66,7 @@ const Navbar = () => {
       // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
-
-        console.log(response.data);
+        // console.log(response.data);
         setNavItems1(response.data);
       })
       .catch((error) => {
@@ -104,7 +103,6 @@ const Navbar = () => {
     TfiMobile: <TfiMobile />,
     BiSolidBookAlt: <BiSolidBookAlt />,
   };
-
   return (
     <div
       className={styles.navmenu}
@@ -118,139 +116,144 @@ const Navbar = () => {
             {language === "ar" ? "English" : "العربية"}
           </button>
         </div>
-        <a href="/">
+        <Link to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
-        </a>
+        </Link>
         <div className={styles.menuelements}>
-        <div className={styles.leftLinks}>
-          {console.log("check language", language)}
-          {navItems1.map((item, index) => (
-            <div key={index} className={styles.dropdown}>
-              {item.hasDropdown ? (
-                <>
-                  <a href="#" onClick={() => toggleDropdown(item.name)}>
-                    {item.name}
-                    <span
-                      className={`${styles.arrow} ${
-                        openDropdown === item.name ? styles.rotate : ""
-                      }`}
-                    >
-                      &#8595;
-                    </span>
-                  </a>
-                  {openDropdown === item.name && (
-                    <div className={styles.submenu}>
-                      {item.dropdownItems?.map((subItem, subIndex) => (
-                        <a href={subItem.href} key={subIndex}>
-                          &nbsp;&nbsp;
-                          <img
-                            className={
-                              language === "ar"
-                                ? styles.subIcon
-                                : styles.subIconArb
-                            }
-                            src={subItem.icon}
-                            alt=""
-                          />
-                          {subItem.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <a href={item.href}>{item.name}</a>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className={styles.searchContainer}>
-          <input type="text" placeholder={placeHolderTitle} />
-          <a href="/filmproduction">
-          <img src={assests.Magnifine} alt="Search Icon" />
-          </a>
-        </div>
-        {/* <div className={styles.searchContainerGlobe}>
+          <div className={styles.leftLinks}>
+            {/* {console.log("check language", language)} */}
+            {navItems1.map((item, index) => (
+              <div key={index} className={styles.dropdown}>
+                {item.hasDropdown ? (
+                  <>
+                    <a href="#" onClick={() => toggleDropdown(item.name)}>
+                      {item.name}
+                      <span
+                        className={`${styles.arrow} ${
+                          openDropdown === item.name ? styles.rotate : ""
+                        }`}
+                      >
+                        &#8595;
+                      </span>
+                    </a>
+                    {openDropdown === item.name && (
+                      <div className={styles.submenu}>
+                        {item.dropdownItems?.map((subItem, subIndex) => (
+                          <a href={subItem.href} key={subIndex}>
+                            &nbsp;&nbsp;
+                            <img
+                              className={
+                                language === "ar"
+                                  ? styles.subIcon
+                                  : styles.subIconArb
+                              }
+                              src={subItem.icon}
+                              alt=""
+                            />
+                            {subItem.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <a href={item.href}>{item.name}</a>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className={styles.searchContainer}>
+            <input type="text" placeholder={placeHolderTitle} />
+            <a href="/filmproduction">
+              <img src={assests.Magnifine} alt="Search Icon" />
+            </a>
+          </div>
+          {/* <div className={styles.searchContainerGlobe}>
         <img src={assests.Globe} alt="Globe Icon" />
       </div> */}
-        <div className={styles.rightLinks}>
-          {user ? (
-            <div className={styles.profileContainer}>
-              <div className={styles.profile} onClick={toggleProfileMenu}>
-                <img
-                  src={userDetails.userPhoto}
-                  alt="Profile"
-                  className={styles.profileImage}
-                />
-                <span className={styles.username}>{`${
-                  userDetails.usernameInEng || userDetails.usernameInArb
-                }`}</span>
-              </div>
-
-              {isProfileMenuOpen && (
-                <div className={styles.profileMenu}>
-                  <ul>
-                    <li className={styles.gapss}>
-                      {" "}
-                      <MdLiveTv /><Link to="/mycourses"> My Courses</Link>
-                    </li>
-                    <li className={styles.iconstyle}>
-                      {" "}
-                      <FaRegUser /> &nbsp; <Link to="/personalInformation"> My Profile</Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <PiCertificateBold /> &nbsp;{" "}
-                      <Link to="/mycertificate">My Certificates</Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <FaRegHeart /> &nbsp; <Link to="/mywishlist">  My Wishlist</Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <CiFlag1 /> &nbsp; <Link to="/contentrequired"> My Subscriptions</Link>
-                    </li>
-                    <li>
-                      {" "}
-                      <LuHelpCircle /> &nbsp; <Link to="/contentrequired"> Help Center</Link> {" "}
-                    </li>
-                    <li onClick={handleLogoutClick}>
-                      {" "}
-                      <CgLogOut /> &nbsp; Logout
-                    </li>
-                  </ul>
+          <div className={styles.rightLinks}>
+            {user ? (
+              <div className={styles.profileContainer}>
+                <div className={styles.profile} onClick={toggleProfileMenu}>
+                  <img
+                    src={userDetails.userPhoto}
+                    alt="Profile"
+                    className={styles.profileImage}
+                  />
+                  <span className={styles.username}>{`${
+                    userDetails.usernameInEng || userDetails.usernameInArb
+                  }`}</span>
                 </div>
-              )}
-            </div>
-          ) : (
-            <>
-              {navItems1.find((item) => item.createAccount) && (
-                <a
-                  href="#signup"
-                  className={`${styles.signupButton} ${styles.navButton}`}
-                  onClick={() => navigate("/signUp")}
-                >
-                  {
-                    navItems1.find((item) => item.createAccount).createAccount
-                      .name
-                  }
-                </a>
-              )}
-              {navItems1.find((item) => item.logIn) && (
-                <a
-                  href=""
-                  className={`${styles.loginButton} ${styles.navButton}`}
-                  onClick={() => navigate("/login")}
-                >
-                  <span style={{ marginLeft: "20px" }}>{arrow}</span>
 
-                  {navItems1.find((item) => item.logIn).logIn.name}
-                </a>
-              )}
-            </>
-          )}
-        </div>
+                {isProfileMenuOpen && (
+                  <div className={styles.profileMenu}>
+                    <ul>
+                      <li className={styles.gappss}>
+                        {" "}
+                        <FaRegUser />
+                        <Link to="/mycourses"> My Courses</Link>
+                      </li>
+                      <li className={styles.iconstyle}>
+                        {" "}
+                        <FaRegUser /> &nbsp;{" "}
+                        <Link to="/personalInformation"> My Profile</Link>
+                      </li>
+                      <li>
+                        {" "}
+                        <PiCertificateBold /> &nbsp;{" "}
+                        <Link to="/mycertificate">My Certificates</Link>
+                      </li>
+                      <li>
+                        {" "}
+                        <FaRegHeart /> &nbsp; <Link to="/mywishlist">  My
+                        Wishlist</Link>
+                      </li>
+                      <li>
+                        {" "}
+                        <CiFlag1 /> &nbsp;{" "}
+                        <Link to="/contentrequired">My Subscriptions </Link>
+                      </li>
+                      <li>
+                        {" "}
+                        <LuHelpCircle /> &nbsp;
+                        <Link to="/contentrequired">Help Center</Link>
+                      </li>
+                      <li onClick={handleLogoutClick}>
+                        {" "}
+                        <CgLogOut /> &nbsp; Logout
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <>
+                {navItems1.find((item) => item.createAccount) && (
+                  <a
+                    href="#signup"
+                    className={`${styles.signupButton} ${styles.navButton}`}
+                    onClick={() => navigate("/signUp")}
+                  >
+                    {
+                      navItems1.find((item) => item.createAccount).createAccount
+                        .name
+                    }
+                  </a>
+                )}
+                {navItems1.find((item) => item.logIn) && (
+                  <a
+                    href=""
+                    className={`${styles.loginButton} ${styles.navButton}`}
+                    onClick={() => navigate("/login")}
+                  >
+                    <span style={{ marginLeft: "20px" }}>{arrow}</span>
+
+                    {navItems1.find((item) => item.logIn).logIn.name}
+                  </a>
+                )}
+              </>
+            )}
+          </div>
         </div>
         <div className={styles.hamburger} onClick={toggleHamburger}>
           <div></div>
@@ -263,43 +266,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

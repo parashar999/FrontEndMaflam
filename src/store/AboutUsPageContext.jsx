@@ -14,17 +14,15 @@ export const AboutusPageProvider = ({ children }) => {
 
   const fetchAboutUsScreenDetails = async (langParam) => {
     try {
-    //   const response = await axios.get(`https://prominenttrades.in/maflam/get-Aboutus-screen-details?lang=${langParam}`
-    //     // 40.172.19.83
-    //     //   `http://3.29.25.216:3001/maflam/get-Aboutus-screen-details?lang=${langParam}`
-    //   );
-    const response = await axios.get(`https://backend.maflam.com/maflam/get-AboutUs-Details?lang=${langParam}`
-    // const response = await axios.get(`http://192.168.1.39:3001/maflam/get-AboutUs-Details?lang=${langParam}`
+      //   const response = await axios.get(`https://prominenttrades.in/maflam/get-Aboutus-screen-details?lang=${langParam}`
+      //     // 40.172.19.83
+      //     //   `http://3.29.25.216:3001/maflam/get-Aboutus-screen-details?lang=${langParam}`
+      //   );
+      const response = await axios.get(
+        `https://backend.maflam.com/maflam/get-AboutUs-Details?lang=${langParam}`
+        // const response = await axios.get(`http://192.168.1.39:3001/maflam/get-AboutUs-Details?lang=${langParam}`
         // 40.172.19.83
       );
-      console.log("API Response: for about ", response.data);
-
-
 
       setAboutusScreenDetails(response.data);
       setLoading(false);
@@ -40,7 +38,9 @@ export const AboutusPageProvider = ({ children }) => {
   }, [language]);
 
   return (
-    <AboutusPageContext.Provider value={{ aboutusScreenDetails, loading, error }}>
+    <AboutusPageContext.Provider
+      value={{ aboutusScreenDetails, loading, error }}
+    >
       {children}
     </AboutusPageContext.Provider>
   );
