@@ -7,19 +7,28 @@ import Footer from "../../Component/Footer/Footer.jsx";
 import PopularResources from "../../Component/PopularResources/PopularResources.jsx";
 import styles from "./Blogs.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext.jsx";
-import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext.jsx";
+import {
+  AboutusPageContext,
+  AboutusPageProvider,
+} from "../../store/AboutUsPageContext.jsx";
 import BlogPostHero1 from "../../Component/BlogPostHero1/BlogPostHero1.jsx";
-import { BlogsPageContent, BlogsPageContentProvider } from "../../store/BlogsPageContent.jsx";
+import {
+  BlogsPageContent,
+  BlogsPageContentProvider,
+} from "../../store/BlogsPageContent.jsx";
 
 const Blogs = () => {
-  const { aboutusScreenDetails, loading: aboutLoading, error: aboutError } =
-    useContext(AboutusPageContext);
+  const {
+    aboutusScreenDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(AboutusPageContext);
 
-  useEffect(() => {
-    if (aboutusScreenDetails) {
-      console.log("About Us Screen Details:", aboutusScreenDetails);
-    }
-  }, [aboutusScreenDetails]);
+  // useEffect(() => {
+  //   if (aboutusScreenDetails) {
+  //     console.log("About Us Screen Details:", aboutusScreenDetails);
+  //   }
+  // }, [aboutusScreenDetails]);
 
   const {
     blogsPageContentDetails,
@@ -27,11 +36,11 @@ const Blogs = () => {
     error: blogsError,
   } = useContext(BlogsPageContent) || {}; // Add a fallback here
 
-  useEffect(() => {
-    if (blogsPageContentDetails) {
-      console.log("Blog Page Content Details:", blogsPageContentDetails);
-    }
-  }, [blogsPageContentDetails]);
+  // useEffect(() => {
+  //   if (blogsPageContentDetails) {
+  //     console.log("Blog Page Content Details:", blogsPageContentDetails);
+  //   }
+  // }, [blogsPageContentDetails]);
 
   return (
     <div>

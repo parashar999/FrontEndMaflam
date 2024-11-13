@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { assests } from "../../assets/assests.js";
 import { LoginPageContext } from "../../store/LoginPageContext.jsx";
-import { ToastContainer, toast } from 'react-toastify';
-import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState("");
@@ -15,7 +15,11 @@ const Login = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const navigate = useNavigate();
 
-  const { loginPageContexttDetails, loading, error: apiError } = useContext(LoginPageContext);
+  const {
+    loginPageContexttDetails,
+    loading,
+    error: apiError,
+  } = useContext(LoginPageContext);
 
   if (loading) return <p>Loading...</p>;
   if (apiError) return <p>Error loading data</p>;
@@ -43,7 +47,7 @@ const Login = () => {
       );
       toast.success(response.data.message);
       auth.login(response.data);
-     
+
       setTimeout(() => {
         navigate("/");
       }, 2000);
@@ -70,7 +74,7 @@ const Login = () => {
     } catch (error) {
       console.error("Google Login Error:", error);
       // toast.error("Google Login failed. Please try again.");
-      const errorMessage = error.response?.data?.message ||error.message;
+      const errorMessage = error.response?.data?.message || error.message;
       toast.error(`Error: ${errorMessage}`);
     }
   };
@@ -80,81 +84,83 @@ const Login = () => {
   };
 
   return (
-      <div className={styles.container}>
-        <div className={styles.Subcontainer}>
-          <div className={styles.loginBox}>
-            <img
-              src={assests.logo1}
-              alt="resetlogo"
-              className={styles.resetlogo}
+    <div className={styles.container}>
+      <div className={styles.Subcontainer}>
+        <div className={styles.loginBox}>
+          <img
+            src={assests.logo1}
+            alt="resetlogo"
+            className={styles.resetlogo}
+          />
+          <h1 className={styles.title}>{title}</h1>
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <label htmlFor="email">{emailLabel}</label>
+            <input
+              type="text"
+              required
+              maxLength={40}
+              placeholder={emailLabel}
+              className={styles.input}
+              value={emailOrPhone}
+              onChange={(e) => setEmailOrPhone(e.target.value)}
             />
-            <h1 className={styles.title}>{title}</h1>
-            <form className={styles.form} onSubmit={handleSubmit}>
-              <label htmlFor="email">{emailLabel}</label>
+            <label htmlFor="password">{passwordLabel}</label>
+            <div className={styles.passwordContainer}>
               <input
-                type="text"
-                required
-                maxLength={40}
-                placeholder={emailLabel}
+                type={isPasswordVisible ? "text" : "password"}
+                placeholder={passwordLabel}
                 className={styles.input}
-                value={emailOrPhone}
-                onChange={(e) => setEmailOrPhone(e.target.value)}
+                required
+                maxLength={20}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <label htmlFor="password">{passwordLabel}</label>
-              <div className={styles.passwordContainer}>
-                <input
-                  type={isPasswordVisible ? "text" : "password"}
-                  placeholder={passwordLabel}
-                  className={styles.input}
-                  required
-                  maxLength={20}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <div
-                  className={styles.eyeIcon}
-                  onClick={togglePasswordVisibility}
-                  role="button"
-                  aria-label="Toggle password visibility"
-                />
-              </div>
-              <div className={styles.rememberMeContainer}>
-                <input type="checkbox" id="rememberMe" className={styles.checkbox} />
-                <label htmlFor="rememberMe" className={styles.checkboxLabel}>
-                  {rememberMeLabel}
-                </label>
-              </div>
-              <button type="submit" className={styles.loginButton}>
-                {loginButtonLabel}
-              </button>
-            </form>
-            <div className={styles.divider}>
-              <hr className={styles.hrLine} />
-              <span>or</span>
-              <hr className={styles.hrLine} />
-            </div>
-            <div className={styles.socialLogin}>
-              <GoogleLogin
-                onSuccess={handleGoogleLoginSuccess}
-                onError={() => toast.error("Google Login failed.")}
-                text={googleLoginText}
+              <div
+                className={styles.eyeIcon}
+                onClick={togglePasswordVisibility}
+                role="button"
+                aria-label="Toggle password visibility"
               />
             </div>
-            <div>
-           <a href="/signUp" className={styles.createAccount}>
-             Create an account
-           </a>
-        </div>
+            <div className={styles.rememberMeContainer}>
+              <input
+                type="checkbox"
+                id="rememberMe"
+                className={styles.checkbox}
+              />
+              <label htmlFor="rememberMe" className={styles.checkboxLabel}>
+                {rememberMeLabel}
+              </label>
+            </div>
+            <button type="submit" className={styles.loginButton}>
+              {loginButtonLabel}
+            </button>
+          </form>
+          <div className={styles.divider}>
+            <hr className={styles.hrLine} />
+            <span>or</span>
+            <hr className={styles.hrLine} />
+          </div>
+          <div className={styles.socialLogin}>
+            <GoogleLogin
+              onSuccess={handleGoogleLoginSuccess}
+              onError={() => toast.error("Google Login failed.")}
+              text={googleLoginText}
+            />
+          </div>
+          <div>
+            <a href="/signUp" className={styles.createAccount}>
+              Create an account
+            </a>
           </div>
         </div>
-        <ToastContainer />
       </div>
- 
+      <ToastContainer />
+    </div>
   );
 };
 
 export default Login;
-
 
 // import React, { useState } from "react";
 // import styles from "./Login.module.css";

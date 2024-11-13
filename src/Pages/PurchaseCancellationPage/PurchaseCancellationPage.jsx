@@ -19,11 +19,11 @@ const PurchaseCancellationPage = () => {
     error: homeError,
   } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
 
   const {
     purchaseCancellationDetails,
@@ -31,11 +31,11 @@ const PurchaseCancellationPage = () => {
     error: aboutError,
   } = useContext(PurchaseCancellationContext);
 
-  useEffect(() => {
-    if (purchaseCancellationDetails) {
-      console.log("Purchase Screen Details:", purchaseCancellationDetails);
-    }
-  }, [purchaseCancellationDetails]);
+  // useEffect(() => {
+  //   if (purchaseCancellationDetails) {
+  //     console.log("Purchase Screen Details:", purchaseCancellationDetails);
+  //   }
+  // }, [purchaseCancellationDetails]);
 
   return (
     <div>

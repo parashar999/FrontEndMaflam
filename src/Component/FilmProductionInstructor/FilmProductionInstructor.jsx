@@ -1,35 +1,41 @@
-import React, { useState, useContext } from 'react';
-import styles from './FilmProductionInstructor.module.css';
-import { FilmProductionContext } from '../../store/FilmProductionContext';
-import { LanguageContext } from '../LanguageContext/LanguageContext';
+import React, { useState, useContext } from "react";
+import styles from "./FilmProductionInstructor.module.css";
+import { FilmProductionContext } from "../../store/FilmProductionContext";
+import { LanguageContext } from "../LanguageContext/LanguageContext";
 
 const FilmProductionInstructor = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { filmproductionScreenDetails, loading, error } = useContext(FilmProductionContext);
+  const { filmproductionScreenDetails, loading, error } = useContext(
+    FilmProductionContext
+  );
   const { direction } = useContext(LanguageContext);
 
   const toggleContent = () => setIsOpen(!isOpen);
 
   // Access the instructor's data
-  const instructorData = filmproductionScreenDetails?.formattedCourseData.instructors?.[0] || {}; // Assuming the first instructor is selected
-  const instructorTitle = filmproductionScreenDetails?.formattedCourseData.instructors.nameInEng || [];
+  const instructorData =
+    filmproductionScreenDetails?.formattedCourseData.instructors?.[0] || {}; // Assuming the first instructor is selected
+  const instructorTitle =
+    filmproductionScreenDetails?.formattedCourseData.instructors.nameInEng ||
+    [];
 
-  const collapsibleClass = direction === 'rtl' ? styles.collapsibleRtl : styles.collapsibleLtr;
+  const collapsibleClass =
+    direction === "rtl" ? styles.collapsibleRtl : styles.collapsibleLtr;
 
-  console.log("Instructor Title:", instructorTitle);
+  // console.log("Instructor Title:", instructorTitle);
 
   return (
     <div className={styles.maincontainer}>
       <div className={styles.collapsibleLtr}>
         <div className={styles.header}>
-          <div 
-            onClick={toggleContent} 
-            className={styles.toggleButton} 
-            style={{ cursor: 'pointer', color: '#39FFFb' }}
+          <div
+            onClick={toggleContent}
+            className={styles.toggleButton}
+            style={{ cursor: "pointer", color: "#39FFFb" }}
           >
-            {isOpen ? '-' : '+'}
+            {isOpen ? "-" : "+"}
           </div>
-          
+
           {/* Render Instructor Title */}
           {Array.isArray(instructorTitle) && instructorTitle.length > 0 ? (
             instructorTitle.map((lesson, index) => (
@@ -48,7 +54,9 @@ const FilmProductionInstructor = () => {
         {isOpen && instructorData && (
           <div className={styles.instructorContent}>
             {/* Display instructor name and photo */}
-            {instructorData.name && <h6 className={styles.instructorName}>{instructorData.name}</h6>}
+            {instructorData.name && (
+              <h6 className={styles.instructorName}>{instructorData.name}</h6>
+            )}
             {instructorData.photoUrl && (
               <img
                 src={instructorData.photoUrl}
@@ -58,7 +66,8 @@ const FilmProductionInstructor = () => {
             )}
 
             {/* Display each description item */}
-            {Array.isArray(instructorData.description) && instructorData.description.length > 0 ? (
+            {Array.isArray(instructorData.description) &&
+            instructorData.description.length > 0 ? (
               instructorData.description.map((detail, index) => (
                 <p key={index} className={styles.paragraph}>
                   {detail}

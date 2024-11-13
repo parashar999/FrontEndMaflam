@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom";
 
 const FundamentalFilmProduction = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { filmproductionScreenDetails, loading, error } = useContext(FilmProductionContext);
+  const { filmproductionScreenDetails, loading, error } = useContext(
+    FilmProductionContext
+  );
   const userDetails = auth.getAuthData();
   const navigate = useNavigate();
 
@@ -17,7 +19,7 @@ const FundamentalFilmProduction = () => {
   };
 
   const checkoutpage = () => {
-    console.log("Button was clicked");
+    // console.log("Button was clicked");
     if (userDetails) {
       navigate("/checkout");
     } else {
@@ -29,12 +31,16 @@ const FundamentalFilmProduction = () => {
   if (error) return <p>Error loading data: {error.message}</p>;
 
   // Destructure required data from filmproductionScreenDetails
-  const courseData = filmproductionScreenDetails?.formattedCourseData?.description || {};
+  const courseData =
+    filmproductionScreenDetails?.formattedCourseData?.description || {};
   const courseImg = filmproductionScreenDetails?.formattedCourseData || {};
-  const buttonData = filmproductionScreenDetails?.getPricingCourse1DetailsSecButton || {};
-  const learningTitle = filmproductionScreenDetails?.formattedCourseData?.descriptio || "What you will learn";
+  const buttonData =
+    filmproductionScreenDetails?.getPricingCourse1DetailsSecButton || {};
+  const learningTitle =
+    filmproductionScreenDetails?.formattedCourseData?.descriptio ||
+    "What you will learn";
 
-  console.log("hello",courseData)
+  console.log("hello", courseData);
 
   return (
     <>
@@ -45,7 +51,9 @@ const FundamentalFilmProduction = () => {
             <p> {courseData} || "Course description not available."</p>
             <div className={styles.lessonsprice}>
               <div className={styles.riyals}>
-                {courseData.price ? `${courseData.price} ${courseData.para}` : "750 SAR"}
+                {courseData.price
+                  ? `${courseData.price} ${courseData.para}`
+                  : "750 SAR"}
                 <CiClock2 className={styles.icon} />
               </div>
               <div className={styles.time}>
@@ -68,9 +76,17 @@ const FundamentalFilmProduction = () => {
                 </div>
                 {isOpen && (
                   <div>
-                    <p  className={styles.answer} style={{ margin: "0", padding: "0", lineHeight: "145%", fontSize: "20px" }}>
-                    {courseData}
-                      </p>
+                    <p
+                      className={styles.answer}
+                      style={{
+                        margin: "0",
+                        padding: "0",
+                        lineHeight: "145%",
+                        fontSize: "20px",
+                      }}
+                    >
+                      {courseData}
+                    </p>
                   </div>
                 )}
               </div>
@@ -79,7 +95,10 @@ const FundamentalFilmProduction = () => {
           <div className={styles.courseVideo}>
             <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
             <div className={styles.videocontent}>
-              <p>{filmproductionScreenDetails.getPricingCourse1DetailsSec1?.description || "No summary available."}</p>
+              <p>
+                {filmproductionScreenDetails.getPricingCourse1DetailsSec1
+                  ?.description || "No summary available."}
+              </p>
               <button onClick={checkoutpage} className={styles.subcribebtn}>
                 <FaShoppingCart /> &nbsp;&nbsp;
                 {buttonData.title || "Subscribe"}
