@@ -1,8 +1,18 @@
 .cointainer{
     margin-top: 52px;
-    height: 900px;
-    margin-bottom: -250px;
+    height: auto;
+    min-height: 600px;
+    width: 100vw;
+    max-width: 1920px;
+    margin: auto;
+    padding-top: 50px;
+    margin-bottom: 100px;
     background: url("../../assets/socialimage.png");
+    background-size: cover;
+}
+.btndiv a{
+    text-decoration: none;
+    color: white;
     
 }
 
@@ -13,19 +23,8 @@
     gap: 20px; 
     align-items: center;
     justify-content: center;
+    margin-bottom: 0px;
     margin-top: 90px;
-
-
-
-
-    
-
-
-
-
-    
-  
- 
 }
 .vector-icon {
     position: absolute;
@@ -106,3 +105,22 @@ line-height: 150%;
     font-weight: 400;
     line-height: 180%; 
     }
+@media (max-width:1250px)
+{
+    .cointainer
+    {
+        zoom: 0.8;
+    }
+}
+@media (max-width:1250px)
+{
+    .cointainer
+    {
+        zoom: 0.7;
+    }
+    .btndiv
+    {
+        flex-direction: column;
+        padding-bottom: 150px;
+    }
+}

@@ -21,8 +21,7 @@ export const PricingPageContextProvider = ({ children }) => {
 
       );
       console.log("API Response: pricing  ", response.data);
-
-
+ 
 
       setPricingPageContextDetails(response.data);
       setLoading(false);

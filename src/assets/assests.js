@@ -175,14 +175,19 @@ import twobooklet from "./twobooklet.png"
 import threebooklet from "./threebooklet.png"
 import filmvideoimg from "./filmvideoimg.png"
 import subscribefundamentalpackage from "./subscribefundamentalpackage.png"
+import  transperency from "./transperency.png"
+
+import bagraoudcontac2 from "./bagraoudcontact.png"
 
 
 
 export const assests = {
   subscribefundamentalpackage,
-  
+  bagraoudcontac2,
+  transperency,
   filmvideoimg,
   threebooklet,
+
   twobooklet,
   onebooklet,
   showcase,

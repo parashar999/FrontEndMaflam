@@ -3,73 +3,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 70px;
-    height: 80vh    ;
-    
-    background: linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/Maflammac1.png') no-repeat center center;
-    
-    
+    flex-direction: column;
+        width: 100vw;
+    max-width: 1920px;
+    position: relative;
+   top: 100px;
+    margin: auto; 
+  }
 
-    background-color: #0b0d24; 
-  }
-  .hovercointainer{
-    background-image: linear-gradient(white, black);
-  }
   
   .imagewrapper {
     margin-top: 50px !important;
     position: relative;
     width: 100%;
-    margin-left:200px;
-    margin-right: 200px;
-    margin-top: -180px;
-  
-    max-width: 550px;
   }
   .imagewrapper img {
-
     /* background-image: linear-gradient(white, black); */
-    width: 900px;
-    height: 600px;
+    max-width: 1660px;
+    width: 100%;
     position: relative;
-    
     background: linear-gradient(130deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),no-repeat center center;
   }
   
-  .hoverimage {
-    width: 100%;
-    box-shadow: 0px 4px 20px rgba(22, 20, 20, 0.5);
-    transition: transform 0.3s ease-in-out;
-  }
+
   
   /* .imagewrapper:hover .hoverimage {
     transform: scale(.05); 
   } */
   
   .overlay {
-    position: absolute;
-    
-    left: 0;
-    right: 0;
+    position: absolute; 
     text-align: center;
     color: white;
     font-size: 1rem;
-    
+    bottom: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   .overlay p{
-  
-   
+   width: 1205px;
+   max-width: 100%;
 color: var(--Accent-Accent-50, #F6FFFF);
 text-align: center;
-margin-top: -250px;
-
-margin-left: 10px;
-
-margin-right: 50px;
 /* background-color: rgba(0, 0, 0, 0.6); */
 font-family: "Noto Kufi Arabic";
-font-size: 30px;
+font-size: 65px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%;
@@ -92,24 +74,88 @@ background: var(--Accent-Accent-400---Main, #39FFFB);
 box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
   }
   
-  .imagewrapper:hover .overlay {
-    
-    /* Move the text up when hovering */
-  }
-  
-  @media (max-width: 768px) {
-    .hoverimagecontainer {
-      padding: 10px;
+@media (max-width:1600px)
+{
 
+    .overlay
+    {
+      bottom: 350px;
     }
-  
-    .overlay {
+    .overlay p
+    {
+      width: 800px;
+        font-size: 45px;
+        zoom: 0.8;
+    }
+}
 
-      font-size: 1.2rem;
+@media (max-width:1250px)
+{
+    .overlay
+    {
+      bottom: 250px;
     }
-  
-    .subscribebutton {
-      padding: 8px 16px;
+    .overlay p
+    {
+      width: 600px;
+        font-size: 32px;
+        zoom: 0.8;
+    }
+    .imagewrapper
+    {
+      width: 100%;
+    }
+    .subscribebutton
+    {
+      zoom: 0.8;
+    }
+}
+@media (max-width:950px)
+{
+    .overlay
+    {
+      bottom: 200px;
     }
   }
- 
+@media (max-width:768px)
+{
+    .overlay
+    {
+      bottom: 400px;
+    }
+    .imagewrapper
+    {
+      width: 200%;
+    }
+    .overlay p
+    {
+      width: 600px;
+        font-size: 32px;
+        zoom: 0.7;
+    }
+    .subscribebutton
+    {
+      zoom: 0.7;
+    }
+}
+@media (max-width:600px)
+{
+    .overlay
+    {
+      bottom: 200px;
+    }
+}
+@media (max-width:450px)
+{
+    .overlay
+    {
+      padding: 40px;
+      padding-bottom: 0px;
+      bottom: 100px;
+    }
+    .overlay p
+    {
+      max-width: 80%;
+      font-size: 24px;
+    }
+}

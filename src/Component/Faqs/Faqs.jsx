@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import styles from "./Faqs.module.css";
+import stylesEnglish from "./Faqs.module.css";
+import stylesArabic from "./FaqsArabic.module.css"
 import { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 
 const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-
+  const { language } = useContext(LanguageContext);
+  console.log(language);
+  const styles = language === "ar" ? stylesArabic : stylesEnglish;
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 

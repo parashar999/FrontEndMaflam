@@ -35,26 +35,28 @@
   .pricingimg {
     background-image: url("../../assets/blogpricing.png");
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
+    width: 1227px;
+    margin: auto;
     margin-top: 130px;
+    margin-bottom: 250px;
   }
   .pricingimg  img{
-    opacity: 0.9;
     transform: scaleX(-1);
-    height:540px;
-    position: relative;
-    top: 20px;
+    position: absolute;
+    filter: blur(1px);
+    top: -100px;
   }
 
   .contentContainer{
-    position: relative ;
-    top: -280px;
-    right: 250px;
+    position: absolute ;
+    right: 200px;
     text-align: right;
   }
   .contentContainer h2 {
@@ -93,7 +95,7 @@
 
   @media (max-width:1500px)
   {
-    .MainContainer
+    .pricingimg
     {
       zoom: 0.9;
     }
@@ -101,22 +103,44 @@
 
   @media (max-width:1280px)
   {
+
     .MainContainer
     {
-      zoom: 0.75;
+      zoom: 0.8;
     }
     .contentContainer
     {
-      left: 150px;
+      right: 220px;
+    }
+  }
+  
+  @media (max-width:1000px)
+  {
+    .pricingimg
+    {
+      width: auto;
+    }
+
+    .MainContainer
+    {
+      zoom: 0.7;
+    }
+    .contentContainer
+    {
+      right:60px;
     }
   }
 
   @media (max-width:768px)
   {
+    .MainContainer
+    {
+      zoom: 0.9;
+    }
     .contentContainer
     {
-      zoom: 0.5;
-      width: 90vw;
-      font-size: larger;
+      right: 0px;
     }
   }
+
+ 

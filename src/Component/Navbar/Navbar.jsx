@@ -107,7 +107,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navmenu"
+      className={styles.navmenu}
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
       <nav
@@ -121,6 +121,7 @@ const Navbar = () => {
         <a href="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </a>
+        <div className={styles.menuelements}>
         <div className={styles.leftLinks}>
           {console.log("check language", language)}
           {navItems1.map((item, index) => (
@@ -189,13 +190,13 @@ const Navbar = () => {
               {isProfileMenuOpen && (
                 <div className={styles.profileMenu}>
                   <ul>
-                    <li>
+                    <li className={styles.gapss}>
                       {" "}
-                      <Link to="/mycourses "> My Courses</Link>
+                      <MdLiveTv /><Link to="/mycourses"> My Courses</Link>
                     </li>
                     <li className={styles.iconstyle}>
                       {" "}
-                      <FaRegUser /> &nbsp; <Link to="#"> My Profile</Link>
+                      <FaRegUser /> &nbsp; <Link to="/personalInformation"> My Profile</Link>
                     </li>
                     <li>
                       {" "}
@@ -204,15 +205,15 @@ const Navbar = () => {
                     </li>
                     <li>
                       {" "}
-                      <FaRegHeart /> &nbsp; My Wishlist
+                      <FaRegHeart /> &nbsp; <Link to="/mywishlist">  My Wishlist</Link>
                     </li>
                     <li>
                       {" "}
-                      <CiFlag1 /> &nbsp; My Subscriptions
+                      <CiFlag1 /> &nbsp; <Link to="/contentrequired"> My Subscriptions</Link>
                     </li>
                     <li>
                       {" "}
-                      <LuHelpCircle /> &nbsp; Help Center{" "}
+                      <LuHelpCircle /> &nbsp; <Link to="/contentrequired"> Help Center</Link> {" "}
                     </li>
                     <li onClick={handleLogoutClick}>
                       {" "}
@@ -250,7 +251,7 @@ const Navbar = () => {
             </>
           )}
         </div>
-
+        </div>
         <div className={styles.hamburger} onClick={toggleHamburger}>
           <div></div>
           <div></div>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect,useRef } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import HeroContact from "../../Component/HeroContact/HeroContact";
 import ContactForm from "../../Component/ContactForm/ContactForm";
@@ -9,6 +9,7 @@ import JoinUs from "../../Component/JoinUs/JoinUs";
 import styles from "./ContactUs.module.css";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import { HomePageProvider } from "../../store/HomePageContext";
+import FocusLock from 'react-focus-lock';
 import {
   AboutusPageContext,
   AboutusPageProvider,
@@ -19,43 +20,54 @@ import {
 } from "../../store/ContactUsContext";
 
 const ContactUS = () => {
+  const containerRef = useRef(null);
+  
   const {
     aboutusScreenDetails,
     loading: aboutLoading,
     error: aboutError,
   } = useContext(AboutusPageContext);
-
-  useEffect(() => {
-    if (aboutusScreenDetails) {
-      console.log("About Us Screen Details:", aboutusScreenDetails);
-    }
-  }, [aboutusScreenDetails]);
-
   const {
     contactUsContextDetails,
     loading: homeLoading,
     error: homeError,
   } = useContext(ContactUsContext);
 
+  
+
+  // Create a reference for the ContactInformation component
+  const contactInfoRef = useRef(null);
+
+  // Scroll to the ContactInformation component after the page loads
   useEffect(() => {
-    if (contactUsContextDetails) {
-      console.log("Home Screen Details:", contactUsContextDetails);
-    }
-  }, [contactUsContextDetails]);
+    // Delay the scroll to allow the page to fully load
+    setTimeout(() => {
+      if (contactInfoRef.current) {
+        // Use window.scrollTo to scroll to the element
+        contactInfoRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500); // 500ms delay to ensure the page is loaded
+
+    // Cleanup the timeout to avoid memory leaks
+    return () => clearTimeout();
+  }, []);
 
   return (
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
           <ContactUsContextProvider>
-            <Navbar></Navbar>
-            <HeroContact></HeroContact>
+            <Navbar />
+            <HeroContact />
             <div className={styles.container}>
-              <ContactInformation></ContactInformation>
-              <MaflanContent></MaflanContent>
+              {/* Pass the ref to the ContactInformation component */}
+              <div ref={contactInfoRef}>
+                <ContactInformation />
+              </div>
+              <MaflanContent />
             </div>
-            <JoinUs></JoinUs>
-            <Footer></Footer>
+            <JoinUs />
+            <Footer />
           </ContactUsContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>

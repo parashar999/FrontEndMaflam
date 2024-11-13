@@ -38,6 +38,7 @@ const WishlistSpecializedCourses = () => {
                  className={styles.coursesImage}
               />
               <p>{course.title}</p>
+              <div className={styles.overlay}></div>
             </div>
           ))}
         </div>

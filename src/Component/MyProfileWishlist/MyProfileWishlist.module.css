@@ -1,8 +1,9 @@
 .profileContainer {
-    max-width: 1500px; 
+    width: 100vw; 
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
+    max-width: 1300px;
     /* background-color: black;  */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin-top: 100px;
@@ -20,6 +21,8 @@
     font-size: 2em;
     color: #fff; 
   }
+
+  
   
   .profileTabs {
     display: flex;
@@ -48,15 +51,43 @@
   }
   
   .footerHr {
-    margin-top: 10px;
+  
     border: 0;
+    width: 100%;
     border-top: 1px solid #39FFFb;
     opacity: 0.2;
   }
   
-  
+  @media(max-width:1250px)
+  {
+    .profileContainer
+    {
+      zoom: 0.8;
+    }
+  }
  
 
+  @media(max-width:768px)
+  {
+    .profileContainer
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      zoom: 0.7;
+    }
+    nav ul
+    {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+  }
  
  
 

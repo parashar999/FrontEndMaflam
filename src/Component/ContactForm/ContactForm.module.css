@@ -1,17 +1,21 @@
 .container {
   /* background-color: #000; */
   padding: 20px;
+  margin-bottom: 50px;
 }
 
 .formContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 100px;
   border-radius: 10px;
+  height: 1200px;
   background: rgba(22, 38, 50, 0.70);
   backdrop-filter: blur(50px);
   padding: 50px 150px;
-  max-width: 900px;
+  max-width: 1400px;
+
   margin: 50px auto;
   color: white;
   font-family: Arial, sans-serif;
@@ -66,6 +70,7 @@ box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
   /* background-color: #1a374b; */
   color: white;
   font-size: 16px;
+  
   border-radius: 5px;
   border: 1px solid #5AFFFF;
   background: var(--Primary-Primary-300, #1A374B);
@@ -132,6 +137,38 @@ box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
   align-self: flex-start;
 }
 
+.deleteButtons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Increase width for a larger circle */
+  height: 50px; /* Increase height for a larger circle */
+  border-radius: 50%;
+  padding: 0; /* Remove padding to keep icon centered */
+  background-color: #00c9c9;
+  border: none; /* Optional: remove border for a cleaner look */
+  cursor: pointer;
+background: var(--Accent-Accent-400---Main, #39FFFB);
+box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
+}
+.imgUpload span {
+  background: #39FFFB;
+  border: solid 1px #39FFFB;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+.deleteButtons i {
+  margin-top: 10px;
+font-size: 30px;
+}
+.btnstyless{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
 .submitButton:hover {
   background-color: #00c9c9;
 }
@@ -139,6 +176,9 @@ box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.downloadIcon p{
+gap: 300px;
 }
 
 /* Responsive Styles */

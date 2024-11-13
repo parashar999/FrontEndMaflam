@@ -1,7 +1,22 @@
 .contact3{
 
         background-image: url("../../assets/cntct.png");
+        min-height: 600px;
+        width: 100vw;
+        max-width: 1980px;
+        background-position: center;
+        margin-left: 20px;
+        border-radius: 30px;
+        background-image: url("../../assets/bagraoudcontac2.png") ;
+        /* background-image: url("../../assets/cntct.png"); */
         background-position: center;
         background-repeat: no-repeat;
+        margin: auto;
     
 }
+
+/* 
+.cotainer{
+        background-image: url("../../assets/bagraoudcontac2.png") !important ;
+     
+} */

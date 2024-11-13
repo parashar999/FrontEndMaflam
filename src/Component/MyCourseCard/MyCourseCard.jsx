@@ -9,6 +9,7 @@ import styles from "./MyCourseCard.module.css"
 import { useEffect, useState } from "react";
 import { VariousCard } from "../../assets/assests";
 import MyCoursesFinishCourse from "./MyCoursesFinishCourse";
+import { Link } from "react-router-dom";
 
 export default function MyCourseCard() {
   const [deviceType, setDeviceType] = useState(null);
@@ -57,7 +58,27 @@ export default function MyCourseCard() {
   return (
     // <div className="container department ">
     //   <h1>You May Be Interested in the Following Courses</h1>
+
+
+    
     <div className={styles.maincontainer}>
+
+
+<div className={styles.CertificatePageData}>
+      <header className={styles.profileHeader}>
+        <h1>My Courses</h1>
+      </header>
+
+      <nav>
+        <ul className={styles.profileTabs}>
+          <li className={styles.activeTab1}><a href="/personalInformation">Personal Information</a></li>
+          <li className={styles.activeTab}><Link to="/mycourses">My Courses</Link></li>
+          <li className={styles.activeTab1}><a href="/mycertificate">My Certificates</a></li>
+          <li className={styles.activeTab1}><a href="/mywishlist">My Wishlist</a></li>
+        </ul>
+        <hr className={styles.footerHr} />
+      </nav>
+
          <MyCoursesFinishCourse></MyCoursesFinishCourse>
     <div className={styles.container}>
       <h2>You May Be Interested in the Following Courses</h2>
@@ -89,8 +110,10 @@ export default function MyCourseCard() {
                 </div>
               ))}
         {/* })} */}
+        
       </Carousel>
     </div>
+   </div>
     </div>
   );
 }

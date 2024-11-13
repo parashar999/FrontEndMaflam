@@ -145,7 +145,7 @@
 /* Media queries for responsiveness */
 
 /* Tablet and smaller devices (up to 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
     .footerColumns {
         flex-direction: column;
         align-items: center;
@@ -172,6 +172,17 @@
 
     .socialIcons {
         justify-content: center;
+    }
+    .footerBottom
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+    .footerBottom p
+    {
+        width: 100%;
     }
 }
 

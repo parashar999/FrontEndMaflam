@@ -1,347 +1,56 @@
-/* .coursedetailsheader {
-    width: 100%;
-    background-image: url("../../assets/corsedgirlbg.png"); 
-    background-size: cover; 
-    background-position: center; 
-    background-color: black;
-    margin-top: 50px;
-}
-
-.videoTheory{
-     display: flex;
-     flex-direction: row;
-     padding-right: 100px;
-     gap:80px;
-     margin-left: 100px;
-    
-
-}
-.courseVideo{
-    background-color: #030B11;
-    margin-top: 100px;
-    height: 560px;
-    width: 350px;
-}
-
-.videocontent{
-    padding: 20px;
-    width: 350px;
-    background-color: #030B11;
-    margin-top: 0px;
-
-
-}
-
-.courseVideo img{
-   width:350px;
-   margin-bottom: 0px;
-   
-
-}
-.courseVideo p{
-    color: white;
-}
-.subcribebtn{
-    display: block;
-    width: 300px;
-    height: 50px;
-    border-radius: 64px;
-    margin-bottom: 10px;
-    background-color: #39FFFb;
-    border: 1px solid #39FFFb;
-    margin-top: 20px;
-}
-.subcribebtn:hover {
-   background-color: black;
-   color:#39FFFb ;
-}
-.addtowishlist{
-    width: 300px;
-    height: 50px;
-    border-radius: 64px;
-    color: #39FFFb;
-    border: 1px solid #39FFFb;
-    background: none;
-    margin-top: 10px;
-
-}
-.addtowishlist:hover {
-    background-color: black;
-    color:#39FFFb ;
-}
-
-.headerText{
-    width: 600px;
-
-    
-}
-.headerText{
-    margin-top: 110px;
-}
-.headerText h6{
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 50px;
-    text-align: start;
-    color: white;
-}
-
-.headerText p{
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 39.6px;
-    text-align: start;
-    color: white;
-    width: 600px;
-}
-
-
-
-.lessonsprice {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    color: white; 
-    justify-content: start;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
-
-
-.icon {
-    color: #39fffb; 
-    vertical-align: middle;
-
-}
-
-.riyals,.lessons,.time {
-    background: linear-gradient(174.79deg, #030B11 17.67%, rgba(3, 11, 17, 0.5) 72.22%, rgba(3, 11, 17, 0) 90.55%);
-    padding: 2px 2px; 
-    border-radius: 20px; 
-}
-
-
-
-@media screen and (max-width: 1200px) {
-   
-
-    .videoTheory {
-        flex-direction: column;
-        padding-right: 0;
-        margin-left: 0;
-        gap: 30px;
-
-    }
-
-    .courseVideo img {
-        width: 100%;
-    }
-
-    .subcribebtn, .addtowishlist {
-        width: 100%;
-    }
-
-    .buttonOnTop {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .headerText h6 {
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .headerText p {
-        font-size: 18px;
-        line-height: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    
-    .videoTheory {
-        padding: 0 20px;
-        gap: 20px;
-    }
-.courseVideo{
-    order: -1;
-}
-    .courseVideo img {
-        width: 100%;
-    }
-
-    .headerText h6 {
-        font-size: 28px;
-        line-height: 38px;
-    }
-
-    .headerText p {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .subcribebtn, .addtowishlist {
-        width: 100%;
-    }
-
-    .buttonOnTop {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .coursedetailsheader {
-        padding: 0 10px;
-    }
-
-    .courseVideo{
-        order: -1;
-    }
-
-
-    .videoTheory {
-        padding-right: 0;
-        gap: 20px;
-        margin-left: 0;
-    }
-
-    .courseVideo img {
-        width: 100%;
-    }
-
-    .headerText h6 {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .headerText p {
-        font-size: 14px;
-        line-height: 24px;
-        text-align: left;
-    }
-
-    .subcribebtn, .addtowishlist {
-        width: 100%;
-    }
-
-    .buttonOnTop {
-        margin-left: 0;
-        width: 100%;
-    }
-}
-
-
-
-
-.maincontainer {
-    width: 100%;    
-    max-width: 800px;
-    padding-bottom: 20px; 
-    margin-top: 150px;
-  }
-  
-  .collapsible {
-    border: 1px solid gray;
-    width: 100%;   
-    border-radius: 10px;
-    color: white; 
-    box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 65px;
-    margin-left: 20px;
-  
-   }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-  }
-  
-  .line {
-    flex-grow: 1;
-    border: none;
-    height: 1px;
-    background-color: #39FFFb;
-    margin-left: 10px;
-  }
-
-  
-  .toggleButton {
-    margin-right: 10px;
-    color: #39FFFb;
-    font-size: 25px;
-  }
-  .toggle{
-    font-size: 24px;
-  }
-  
-  .content {
-    font-size: 11px;
-    color: white;
-  }
-  
-  .answer {
-    color: white;
-    font-size: 12.5px !important;
-    margin-bottom: 5px;
-    text-align: center;
-    padding-right: 20px !important;
-    line-height: 160%;
-    padding-left: 10px !important;
-     }
-   */
-
-
-   /* Global styles for course details */
 .coursedetailsheader {
     width: 100%;
-    background-image: url("../../assets/corsedgirlbg.png");
+    background-image: url("../../assets/MaflamPricingHeroSectionBg.png");
     background-size: cover;
     background-position: center;
+    max-width: 1920px;
+    margin: auto;
     background-color: black;
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 .videoTheory {
     display: flex;
     flex-direction: row;
-    padding-right: 100px;
+    justify-content: center;
+    align-items: center;
     gap: 80px;
-    margin-left: 100px;
 }
 
 .courseVideo {
-    background-color: #030B11;
+    
     margin-top: 100px;
-    height: 560px;
-    width: 350px;
+    height: 790px;
+    width: 527px;
+  
 }
 
 .videocontent {
-    padding: 20px;
-    width: 350px;
+    border-radius:20px ;
+    position: relative;
+    top: -20px;
+    padding: 40px;
+    width: 100%;
     background-color: #030B11;
     margin-top: 0px;
+    overflow: hidden;
 }
 
 .courseVideo img {
-    width: 350px;
-    margin-bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
 }
 
 .courseVideo p {
+    height: 160px;
+    font-size:22px ;
     color: white;
 }
 
 .subcribebtn {
     display: block;
-    width: 300px;
+    width: 100%;
     height: 50px;
     border-radius: 64px;
     margin-bottom: 10px;
@@ -356,7 +65,7 @@
 }
 
 .addtowishlist {
-    width: 300px;
+    width: 100%;
     height: 50px;
     border-radius: 64px;
     color: #39FFFb;
@@ -371,11 +80,12 @@
 }
 
 .headerText {
-    width: 600px;
-}
+    margin: 20px;
+    max-width: 768px;
+}   
 
 .headerText {
-    margin-top: 110px;
+    margin-top: 250px;
 }
 
 .headerText h6 {
@@ -384,15 +94,15 @@
     line-height: 50px;
     text-align: start;
     color: white;
+    margin-bottom: 20px;
 }
 
 .headerText p {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 39.6px;
     text-align: start;
     color: white;
-    width: 600px;
 }
 
 .lessonsprice {
@@ -414,28 +124,27 @@
 .lessons,
 .time {
     background: linear-gradient(174.79deg, #030B11 17.67%, rgba(3, 11, 17, 0.5) 72.22%, rgba(3, 11, 17, 0) 90.55%);
-    padding: 2px 2px;
+    padding: 5px;
     border-radius: 20px;
 }
 
 /* Collapsible section styling */
 .maincontainer {
-    width: 100%;
-    max-width: 800px;
+
     padding-bottom: 20px;
     margin-top: 150px;
 }
 
 .collapsible {
     border: 1px solid gray;
-    width: 100%;
+    min-width: 100%;
     border-radius: 10px;
     color: white;
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 65px;
-    margin-left: 20px;
+   
 }
 
 .header {
@@ -478,98 +187,37 @@
     padding-left: 10px !important;
 }
 
-/* Media Queries for responsiveness */
-
-/* For screens under 1200px (Tablets and medium screens) */
-@media screen and (max-width: 1200px) {
-    .videoTheory {
-        flex-direction: column;
-        padding-right: 0;
-        margin-left: 0;
-        gap: 30px;
-    }
-
-    .courseVideo img {
-        width: 100%;
-    }
-
-    .subcribebtn, .addtowishlist {
-        width: 100%;
-    }
-
-    .headerText h6 {
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .headerText p {
-        font-size: 18px;
-        line-height: 30px;
+@media (max-width:1600px)
+{
+    .videoTheory
+    {
+        zoom:0.8;
     }
 }
+@media (max-width:1250px)
+{
 
-/* For screens under 768px (Small Tablets and Small Laptops) */
-@media screen and (max-width: 768px) {
-    .videoTheory {
-        padding: 0 20px;
-        gap: 20px;
+
+    .headerText
+    {
+        margin-top: 0px;
     }
-
-    .courseVideo {
-        order: -1;
-    }
-
-    .courseVideo img {
-        width: 100%;
-    }
-
-    .headerText h6 {
-        font-size: 28px;
-        line-height: 38px;
-    }
-
-    .headerText p {
-        font-size: 16px;
-        line-height: 28px;
-    }
-
-    .subcribebtn, .addtowishlist {
-        width: 100%;
+    .videoTheory
+    {
+        flex-direction: column-reverse;
+        zoom:0.8;
     }
 }
-
-/* For screens under 480px (Mobile devices) */
-@media screen and (max-width: 480px) {
-    .coursedetailsheader {
-        padding: 0 10px;
+@media (max-width:768px)
+{
+    .videoTheory
+    {
+        flex-direction: column-reverse;
+        max-width: 100%;
+        zoom:0.7;
     }
-
-    .courseVideo {
-        order: -1;
-    }
-
-    .videoTheory {
-        padding-right: 0;
-        gap: 20px;
-        margin-left: 0;
-    }
-
-    .courseVideo img {
-        width: 100%;
-    }
-
-    .headerText h6 {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .headerText p {
-        font-size: 14px;
-        line-height: 24px;
-        text-align: left;
-    }
-
-    .subcribebtn, .addtowishlist {
-        width: 100%;
+    .collapsible
+    {
+        max-width: 100vw;
     }
 }

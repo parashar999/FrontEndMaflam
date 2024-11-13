@@ -16,16 +16,16 @@ function MyProfileWishlist() {
          <nav>
              <ul className={styles.profileTabs}>
                  <li>
-                     <Link to="/personal-info">Personal Information</Link>
+                     <Link to="/personalInformation">Personal Information</Link>
                   </li>
                   <li>
-                     <Link to="/my-courses">My Courses</Link>
+                     <Link to="/mycourses">My Courses</Link>
                   </li>
                    <li>
                       <Link to="/mycertificate">My Certificates</Link>
                     </li>
                    <li className={styles.activeTab}>
-                      <Link to="/my-wishlist">My Wishlist</Link>
+                      <Link to="/mywishlist">My Wishlist</Link>
                     </li>
               </ul>
              <hr className={styles.footerHr} />

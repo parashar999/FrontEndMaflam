@@ -35,7 +35,13 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
+.title
+{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 .coursesCard {
   display: flex;
   flex-direction: column;
@@ -90,17 +96,21 @@ line-height: 160%;
 {
   .courseContainer
   {
-    zoom: 0.8;
+    zoom: 0.9;
   }
 }
 
 @media (max-width:1280px) {
   .courseContainer
   {
-    zoom: 0.6;
+    zoom: 0.8;
   }
 }
 
-@media (max-width:1000px) {
+@media (max-width:768px) {
 
+  .courseContainer
+  {
+    zoom: 0.7;
+  }
 }

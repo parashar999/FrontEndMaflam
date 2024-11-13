@@ -1,32 +1,160 @@
-import React, { useState } from "react";
+
+
+import  { useState } from "react";
 import { useContext } from "react";
 import styles from "./ContactForm2.module.css";
 import downloadIcon from "../../assets/downloadIcon.png";
+
+import axios from "axios";
+import { toast } from "react-toastify";
+import { MdDelete } from "react-icons/md";
+import { ContactUs3Context } from "../../store/ContactUs3Context";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 
 const ContactForm2 = () => {
+
+  const { ContactUs3ContextDetails , loading, error } = useContext(ContactUs3Context);
+  const { language } = useContext(LanguageContext);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
+
+
+  const contactDetailsSec3 = ContactUs3ContextDetails?.contactDetails3Sec3 || [];
+  const title = contactDetailsSec3[0]?.title || "Apply for Maflam Training Program";
+  const fullNameDescription = contactDetailsSec3[1]?.description || "Full Name";
+  const fullNameTitle = contactDetailsSec3[1]?.title || "Full Name";
+
+  const maletitle = contactDetailsSec3[2]?.title || "Gender";
+const categoryMale = contactDetailsSec3[2]?.category[0] || "Male";
+const categoryFemale = contactDetailsSec3[2]?.category[1] || "Female";
+const age = contactDetailsSec3[3]?.title || "Age";
+const categoryage = contactDetailsSec3[3]?.category[0] || "Under 18";
+const categoryage1 = contactDetailsSec3[3]?.category[1] || "From 18 to 20";
+
+const categoryage2 = contactDetailsSec3[3]?.category[2] || "From 20 to 30";
+const categoryage3 = contactDetailsSec3[3]?.category[3] || "other";
+
+const Natinality = contactDetailsSec3[4]?.title || "";
+const categoryNatinality = contactDetailsSec3[4]?.category[0] || "";
+const categoryNatinality1 = contactDetailsSec3[4]?.category[1] || "";
+const categoryNatinality2 = contactDetailsSec3[4]?.category[2] || "";
+
+const city= contactDetailsSec3[5]?.title || "";
+const categorycity = contactDetailsSec3[5]?.category[0] || "";
+const categorycity1 = contactDetailsSec3[5]?.category[1] || "";
+const categorycity2 = contactDetailsSec3[5]?.category[2] || "";
+
+const Degree= contactDetailsSec3[6]?.title || "";
+const categoryDegree1 = contactDetailsSec3[6]?.category[0] || "";
+const categoryDegree2 = contactDetailsSec3[6]?.category[1] || "";
+const categoryDegree3 = contactDetailsSec3[6]?.category[2] || "";
+const categoryDegree4 = contactDetailsSec3[6]?.category[3] || "";
+const categoryDegree5= contactDetailsSec3[6]?.category[4] || "";
+
+  const emailTitle = contactDetailsSec3[7]?.title || "";
+  const emailPlaceholder = contactDetailsSec3[7]?.description || "";
+  const phoneTitle = contactDetailsSec3[8]?.title || "";
+  const phonePlaceholder = contactDetailsSec3[8]?.description || "";
+  const experianceTitle = contactDetailsSec3[9]?.title || "";
+  const experiancePlaceholder = contactDetailsSec3[9]?.description || "";
+
+ const Traning = contactDetailsSec3[10]?.title || "";
+const categoryTraning = contactDetailsSec3[10]?.category || "";
+
+
+const workingHoursTitle = contactDetailsSec3[11]?.title || "Current Working Hours";
+const workingHoursOptions = contactDetailsSec3[11]?.category || [
+  "Employed",
+  "I am Not Currently Working",
+  "About to Graduate (Training University)",
+  "Student"
+];
+
+const internship = contactDetailsSec3[12]?.title || "";
+const internshipPlaceholder = contactDetailsSec3[12]?.description || "";
+
+const university = contactDetailsSec3[13]?.title || "";
+const univercityPlaceholder = contactDetailsSec3[13]?.description || "";
+
+
+const TrainingHoursTitle = contactDetailsSec3[14]?.title || "";
+const TrainingHoursPlaceholder = contactDetailsSec3[14]?.description || "";
+
+const TrainingTitleDate = contactDetailsSec3[15]?.title || "";
+const TrainingDatePlaceholder = contactDetailsSec3[15]?.description || "";
+
+const TrainingWeekDate = contactDetailsSec3[16]?.title || "";
+const TrainingWeekPlaceholder = contactDetailsSec3[16]?.description || "";
+
+const TrainingDate = contactDetailsSec3[17]?.title || "";
+const TrainingPlaceholder = contactDetailsSec3[17]?.category[0] || "";
+const TrainingPlaceholder1= contactDetailsSec3[17]?.category[0] || "";
+const TrainingPlaceholder2= contactDetailsSec3[17]?.category[0] || "";
+// const TrainingPlaceholder = contactDetailsSec3[17]?.description || "";
+
+
+const About  = contactDetailsSec3[18]?.title || "";
+const AboutPlaceholder = contactDetailsSec3[18]?.description || "";
+const resumetitle = contactDetailsSec3[19]?.title || "";
+const resumePlaceholder = contactDetailsSec3[19]?.description || "";
+const portfoliyo = contactDetailsSec3[20]?.title || "";
+const portfoliyoPlaceholder = contactDetailsSec3[20]?.description || "";
+const sendbtn1 = contactDetailsSec3[22]?.title || "";
+
+
+
+
+
+
   const [formData, setFormData] = useState({
-    fullName: "",
-    gender: "",
+    fullNameInEng: "",
+     genderInEng: "",
     age: "",
-    nationality: "",
-    city: "",
-    degree: "",
+    nationalityInEng: "",
+    cityInEng: "",
+    degreeInEng: "",
     email: "",
-    phoneNumber: "",
-    experience: "",
-    trainingField: [],
-    workingHours: "",
-    reasonForInternship: "",
-    university: "",
-    trainingHoursRequired: "",
-    trainingCompletionDate: "",
-    trainingWeeks: "",
+    phoneNo: "",
+    hasPreviousExperienceInEng: "",
+    trainingFieldsInEng: [],
+    currentWorkingHoursInEng: "",
+    reasonForMaflamInEng: "",
+    universityInEng: "",
+    requiredTrainingHours: "",
+    dateForTraining: "",
+    weeksForTraining: "",
     startDate: { day: "", month: "", year: "" },
-    referralSource: "",
-    resumeFile: null,
-    portfolioFile: null,
+    howDidYouKnowMaflamInEng: "",
+    // resumeFile: null,
+    // portfolioFile: null,
   });
+  const [resume, setResume] = useState(null);
+  const [portfolio, setPortfolio] = useState(null);
+  
+
+  const handleDeleteFile = (setter) => {
+    setter(null);
+  };
+
+  const handlePhoneInput = (e) => {
+    e.target.value = e.target.value.replace(/\D/g, "");
+  };
+  const triggerFileUpload = (inputId) => {
+    document.getElementById(inputId).click();
+  };
+
+  const handleFileUpload = (e, setFileField) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFileField(file); // Update resume or portfolio state
+      setFormData((prevData) => ({
+        ...prevData,
+        [setFileField === setResume ? "resume" : "portfolio"]: file,
+      }));
+    }
+  };
+
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -35,66 +163,114 @@ const ContactForm2 = () => {
   };
 
   // Trigger file input by button click
-  const triggerFileUpload = (inputId) => {
-    document.getElementById(inputId).click();
-  };
+  // const triggerFileUpload = (inputId) => {
+  //   document.getElementById(inputId).click();
+  // };
 
-  // Handle file upload and set file in form data
-  const handleFileUpload = (e, setFileField) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [setFileField]: e.target.files[0],
-    }));
-  };
+  // // Handle file upload and set file in form data
+  // const handleFileUpload = (e, setFileField) => {
+  //   setFormData((prevData) => ({
+  //     ...prevData,
+  //     [setFileField]: e.target.files[0],
+  //   }));
+  // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    const payload = new FormData();
+    payload.append("fullNameInEng", formData.fullNameInEng);
+    payload.append("email", formData.email);
+    payload.append("phoneNo", formData.phoneNo);
+    payload.append("genderInEng", formData.genderInEng);
+    payload.append("ageInEng", formData.ageInEng);
+    payload.append("nationalityInEng", formData.nationalityInEng);
+    payload.append("cityInEng", formData.cityInEng);
+    payload.append("degreeInEng", formData.degreeInEng);
+    payload.append("email", formData.email);
+    payload.append("hasPreviousExperienceInEng", formData.hasPreviousExperienceInEng);
+    payload.append("trainingFieldsInEng", formData.trainingFieldsInEng);
+    payload.append("currentWorkingHoursInEng", formData.currentWorkingHoursInEng);
+    payload.append("reasonForMaflamInEng", formData.reasonForMaflamInEng);
+    payload.append("universityInEng", formData.universityInEng);
+    payload.append("requiredTrainingHours", formData.requiredTrainingHours);
+    payload.append("dateForTraining", formData.dateForTraining);
+    payload.append("weeksForTraining", formData.weeksForTraining);
+    payload.append("startDate", formData.startDate);
+    payload.append("howDidYouKnowMaflamInEng", formData.howDidYouKnowMaflamInEng);
+
+
+    // // Include files if present
+    // if (resume) payload.append("resume", resume);
+    // if (portfolio) payload.append("portfolio", portfolio);
+
+    try {
+       const res = await axios.post("https://backend.maflam.com/maflam/create-internship-form", payload);
+      // toast.success("Form submitted successfully!");
+      toast.success(res.data.message)
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    }
+      catch (err) {
+      const errorMessage = err.res?.data?.message || err.message;
+      toast.error(`Error: ${errorMessage}`);
+    }
   };
-  const { language, direction, toggleLanguage } = useContext(LanguageContext);
-  const btnText = language === "en" ? "Upload file" : "تحميل الملف";
+
+
+  
+
+  
+  // const { language, direction, toggleLanguage } = useContext(LanguageContext);
+  // const btnText = language === "en" ? "Upload file" : "تحميل الملف";
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Apply for Maflam Training Program</h2>
+      {/* <h2 className={styles.title}>Apply for Maflam Training Program</h2> */}
+      <h2 className={styles.title}>{title}</h2>
+      <hr style={{width:'100%', color:'#F1F2FA', height:'0.5px'}}/>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
-          <label htmlFor="fullName">
-            Full name<span>*</span>
+          <label htmlFor="fullNameInEng">
+            {fullNameTitle}<span>*</span>
           </label>
-          <input
+          <input autoFocus
             type="text"
-            id="fullName"
-            name="fullName"
-            value={formData.fullName}
+            id="fullNameInEng"  
+            required
+            maxLength={50}
+            name="fullNameInEng"
+            value={formData.fullNameInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Full name"
+            placeholder={fullNameDescription}
           />
         </div>
 
-        {/* Gender */}
+        {/*  genderInEng */}
         <div className={styles.inputGroup}>
           <label>
-            Gender<span>*</span>
+             {maletitle}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
+              required
               className={`${styles.optionButton} ${
-                formData.gender === "Male" ? styles.active : ""
+                formData. genderInEng === "Male" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, gender: "Male" })}
+              onClick={() => setFormData({ ...formData,  genderInEng: "Male" })}
             >
-              Male
+          {categoryMale}
             </button>
             <button
               type="button"
               className={`${styles.optionButton} ${
-                formData.gender === "Female" ? styles.active : ""
+                formData. genderInEng === "Female" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, gender: "Female" })}
+              onClick={() => setFormData({ ...formData,  genderInEng: "Female" })}
             >
-              Female
+            {categoryFemale}
             </button>
           </div>
         </div>
@@ -102,17 +278,18 @@ const ContactForm2 = () => {
         {/* Age */}
         <div className={styles.inputGroup}>
           <label>
-            Age<span>*</span>
+            {age}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
+              required
               className={`${styles.optionButton} ${
                 formData.age === "Under 18" ? styles.active : ""
               }`}
               onClick={() => setFormData({ ...formData, age: "Under 18" })}
             >
-              Under 18
+          {categoryage}
             </button>
             <button
               type="button"
@@ -121,7 +298,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "18 to 20" })}
             >
-              From 18 to 20
+             {categoryage1}
             </button>
             <button
               type="button"
@@ -130,7 +307,7 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "20 to 30" })}
             >
-              From 20 to 30
+              {categoryage2}
             </button>
             <button
               type="button"
@@ -139,205 +316,249 @@ const ContactForm2 = () => {
               }`}
               onClick={() => setFormData({ ...formData, age: "Over 30" })}
             >
-              Over 30
+          {categoryage3}
             </button>
           </div>
         </div>
 
-        {/* Nationality */}
+        {/* nationalityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            Nationality<span>*</span>
+            {Natinality}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
-              className={`${styles.optionButton} ${
-                formData.nationality === "Saudi" ? styles.active : ""
+              required
+              className={`${styles.optionButton2} ${
+                formData.nationalityInEng === "Saudi" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, nationality: "Saudi" })}
+              onClick={() => setFormData({ ...formData, nationalityInEng: "Saudi" })}
             >
-              Saudi
+             {categoryNatinality}
             </button>
             <button
               type="button"
-              className={`${styles.optionButton} ${
-                formData.nationality === "Non-Saudi" ? styles.active : ""
+              className={`${styles.optionButton2} ${
+                formData.nationalityInEng === "Non-Saudi" ? styles.active : ""
               }`}
               onClick={() =>
-                setFormData({ ...formData, nationality: "Non-Saudi" })
+                setFormData({ ...formData, nationalityInEng: "Non-Saudi" })
               }
             >
-              Non-Saudi resident in Saudi Arabia
+              {/* Non-Saudi resident in Saudi Arabia */}
+              {categoryNatinality1}
             </button>
             <input
               type="text"
-              name="nationality"
-              placeholder="Other"
-              className={styles.input}
+              name="nationalityInEng"
+              placeholder={categoryNatinality2}
+              className={styles.input2}
               onChange={handleInputChange}
             />
           </div>
         </div>
 
-        {/* City */}
+        {/* cityInEng */}
         <div className={styles.inputGroup}>
           <label>
-            City<span>*</span>
+            { city}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
-              className={`${styles.optionButton} ${
-                formData.city === "Jeddah" ? styles.active : ""
+              required
+              className={`${styles.optionButton2} ${
+                formData.cityInEng === "Jeddah" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, city: "Jeddah" })}
+              onClick={() => setFormData({ ...formData, cityInEng: "Jeddah" })}
             >
-              Jeddah
+           {categorycity1}
             </button>
             <button
               type="button"
-              className={`${styles.optionButton} ${
-                formData.city === "Riyadh" ? styles.active : ""
+              className={`${styles.optionButton2} ${
+                formData.cityInEng === "Riyadh" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, city: "Riyadh" })}
+              onClick={() => setFormData({ ...formData, cityInEng: "Riyadh" })}
             >
-              Riyadh
+          {categorycity}
             </button>
             <input
               type="text"
-              name="city"
-              placeholder="Other"
-              className={styles.input}
+              name="cityInEng"
+              placeholder= {categorycity2}
+              className={styles.input2}
               onChange={handleInputChange}
             />
           </div>
         </div>
 
-        {/* Your Degree */}
+        {/* Your degreeInEng */}
         <div className={styles.inputGroup}>
           <label>
-            Your Degree<span>*</span>
+           {Degree}<span>*</span>
           </label>
           <div className={styles.options}>
             <button
               type="button"
+              required
               className={`${styles.optionButton} ${
-                formData.degree === "Secondary" ? styles.active : ""
+                formData.degreeInEng === "Secondary" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, degree: "Secondary" })}
+              onClick={() => setFormData({ ...formData, degreeInEng: "Secondary" })}
             >
-              Secondary
+          {categoryDegree1}
+            </button>
+            <button
+              type="button"
+              required
+              className={`${styles.optionButton} ${
+                formData.degreeInEng === "Diploma" ? styles.active : ""
+              }`}
+              onClick={() => setFormData({ ...formData, degreeInEng: "Diploma" })}
+            >
+           {categoryDegree2}
             </button>
             <button
               type="button"
               className={`${styles.optionButton} ${
-                formData.degree === "Diploma" ? styles.active : ""
+                formData.degreeInEng === "Bachelor's" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, degree: "Diploma" })}
+              onClick={() => setFormData({ ...formData, degreeInEng: "Bachelor's" })}
             >
-              Diploma
+           {categoryDegree3}
             </button>
             <button
               type="button"
               className={`${styles.optionButton} ${
-                formData.degree === "Bachelor's" ? styles.active : ""
+                formData.degreeInEng === "Masters" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, degree: "Bachelor's" })}
+              onClick={() => setFormData({ ...formData, degreeInEng: "Masters" })}
             >
-              Bachelor's
+         {categoryDegree4}
             </button>
             <button
               type="button"
               className={`${styles.optionButton} ${
-                formData.degree === "Masters" ? styles.active : ""
+                formData.degreeInEng === "PhD" ? styles.active : ""
               }`}
-              onClick={() => setFormData({ ...formData, degree: "Masters" })}
+              onClick={() => setFormData({ ...formData, degreeInEng: "PhD" })}
             >
-              Masters
-            </button>
-            <button
-              type="button"
-              className={`${styles.optionButton} ${
-                formData.degree === "PhD" ? styles.active : ""
-              }`}
-              onClick={() => setFormData({ ...formData, degree: "PhD" })}
-            >
-              PhD
+          {categoryDegree5}
             </button>
           </div>
         </div>
 
-        {/* Email */}
+        {/* email */}
         <div className={styles.inputGroup}>
           <label htmlFor="email">
-            Email<span>*</span>
+            {emailTitle}<span>*</span>
           </label>
           <input
             type="email"
             id="email"
+            required
             name="email"
             value={formData.email}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Email"
+            placeholder={emailPlaceholder}
           />
         </div>
 
         {/* Phone Number */}
-        <div className={styles.inputGroup}>
-          <label htmlFor="phoneNumber">
+        {/* <div className={styles.inputGroup}>
+          <label htmlFor="phoneNo">
             Phone Number<span>*</span>
           </label>
           <input
-            type="number"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={formData.phoneNumber}
+           type="number"
+           id="phoneNo"
+           maxLength={16}
+        required
+            name="phoneNo"
+            value={formData.phoneNo}
             onChange={handleInputChange}
             className={styles.input}
             placeholder="Phone Number"
           />
-        </div>
+        </div> */}
+         <div className={styles.inputGroup}>
+         <label htmlFor="phoneNo">
+            {phoneTitle}<span>*</span>
+          </label>
+         <input
+    type="number"
+    id="phoneNo"
+    required
+    name="phoneNo"
+    value={formData.phoneNo}
+    onChange={(e) => {
+      const value = e.target.value.replace(/\D/g, ""); // Remove any non-numeric characters
+      if (value.length <= 16) {
+        setFormData({ ...formData, phoneNo: value });
+      }
+    }}
+    onInput={(e) => {
+      if (e.target.value.length > 10) e.target.value = e.target.value.slice(0, 16);
+    }}
+    className={styles.input}
+    placeholder={phonePlaceholder}
+    maxLength={16}
+    pattern="\d{10}"
+    title="Phone number should be 10 digits"
+  />
+  </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="experience">
-            Do you have previous experience in your chosen field?<span>*</span>
+          <label htmlFor="hasPreviousExperienceInEng">
+        { experianceTitle}<span>*</span>
           </label>
           <input
             type="text"
-            id="experience"
-            name="experience"
-            value={formData.experience}
+            id="hasPreviousExperienceInEng"
+            name="hasPreviousExperienceInEng"
+            value={formData.hasPreviousExperienceInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Answer"
+            placeholder={experiancePlaceholder}
           />
         </div>
         <div className={styles.inputGroup}>
           <label>
-            Required Training Field<span>*</span>
+         { Traning}<span>*</span>
           </label>
-          <div className={styles.options}>
-            {[
-              "Camera Department",
-              "Editing Department",
-              "Production Department",
-              "Content Writing Department",
-              "Sound Department",
-              "Directing Department",
-              "Acting Department",
-              "Voiceover Department",
-              "Research Department",
-              "Marketing Department",
-              "Design/Graphics Department",
-            ].map((field) => (
+          <div className={styles.options2}>
+            {
+            // [
+            //   "Camera Department",
+            //   "Editing Department",
+            //   "Production Department",
+            //   "Content Writing Department",
+            //   "Sound Department",
+            //   "Directing Department",
+            //   "Acting Department",
+            //   "Voiceover Department",
+            //   "Research Department",
+            //   "Marketing Department",
+            //   "Design/Graphics Department",
+        
+            // ]
+            categoryTraning.map((field) => (
               <button
                 type="button"
                 key={field}
-                className={`${styles.optionButton} ${
-                  formData.trainingField.includes(field) ? styles.active : ""
+                required
+                className={`${styles.optionButton2} ${
+                  formData.trainingFieldsInEng.includes(field) ? styles.active : ""
                 }`}
-                onClick={() => handleTrainingFieldChange(field)}
+                // onClick={() =>
+                  
+                //   //  handletrainingFieldsInEngChange(field)
+                //   }
+                onClick={() =>
+                  setFormData({ ...formData, trainingFieldsInEng: field })
+                }
               >
                 {field}
               </button>
@@ -348,23 +569,25 @@ const ContactForm2 = () => {
         {/* Current Working Hours */}
         <div className={styles.inputGroup}>
           <label>
-            Current Working Hours<span>*</span>
+        { workingHoursTitle}<span>*</span>
           </label>
-          <div className={styles.options}>
-            {[
-              "Employed",
-              "I am Not Currently Working",
-              "About to Graduate",
-              "Student",
-            ].map((status) => (
+          <div className={styles.options1}>
+            {
+            // [
+            //   "Employed",
+            //   "I am Not Currently Working",
+            //   "About to Graduate",
+            //   "Student",
+            // ]
+            workingHoursOptions.map((status) => (
               <button
                 type="button"
                 key={status}
-                className={`${styles.optionButton} ${
-                  formData.workingHours === status ? styles.active : ""
+                className={`${styles.optionButton1} ${
+                  formData.currentWorkingHoursInEng === status ? styles.active : ""
                 }`}
                 onClick={() =>
-                  setFormData({ ...formData, workingHours: status })
+                  setFormData({ ...formData, currentWorkingHoursInEng: status })
                 }
               >
                 {status}
@@ -375,92 +598,96 @@ const ContactForm2 = () => {
 
         {/* Reason for Internship */}
         <div className={styles.inputGroup}>
-          <label htmlFor="reasonForInternship">
-            Why would you like to have an internship opportunity at Maflam?
+          <label htmlFor="reasonForMaflamInEng">
+ {internship}
             <span>*</span>
           </label>
           <input
             type="text"
-            id="reasonForInternship"
-            name="reasonForInternship"
-            value={formData.reasonForInternship}
+            id="reasonForMaflamInEng"
+            required
+            name="reasonForMaflamInEng"
+            value={formData.reasonForMaflamInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Reason"
+            placeholder={internshipPlaceholder}
           />
         </div>
 
-        {/* University */}
+        {/* universityInEng */}
         <div className={styles.inputGroup}>
-          <label htmlFor="university">
-            University<span>*</span>
+          <label htmlFor="universityInEng">
+            { university}<span>*</span>
           </label>
           <input
             type="text"
-            id="university"
-            name="university"
-            value={formData.university}
+            id="universityInEng"
+            required
+            maxLength={70}
+            name="universityInEng"
+            value={formData.universityInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="University"
+            placeholder={univercityPlaceholder}
           />
         </div>
 
         {/* Number of Training Hours Required */}
         <div className={styles.inputGroup}>
-          <label htmlFor="trainingHoursRequired">
-            Number of Training Hours Required<span>*</span>
+          <label htmlFor="requiredTrainingHours">
+            { TrainingHoursTitle}<span>*</span>
           </label>
           <input
             type="number"
-            id="trainingHoursRequired"
-            name="trainingHoursRequired"
-            value={formData.trainingHoursRequired}
+            id="requiredTrainingHours"
+            name="requiredTrainingHours"
+            value={formData.requiredTrainingHours}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Enter hours"
+            placeholder={TrainingHoursPlaceholder}
           />
         </div>
 
         {/* Specific Date for Training Completion */}
         <div className={styles.inputGroup}>
           <label>
-            Is There a Specific Date by Which You Need to Complete the Training
-            Hours?
+      {TrainingTitleDate}
           </label>
           <input
             type="date"
-            name="trainingCompletionDate"
-            value={formData.trainingCompletionDate}
+            name="dateForTraining"
+            value={formData.dateForTraining}
             onChange={handleInputChange}
             className={styles.input}
+            placeholder={TrainingDatePlaceholder}
           />
         </div>
 
         <div className={styles.inputGroup}>
-          <label htmlFor="trainingWeeks">
-            How many weeks do you want to train?<span>*</span>
+          <label htmlFor="weeksForTraining">
+           {TrainingWeekDate}<span>*</span>
           </label>
           <input
             type="number"
-            id="trainingWeeks"
-            name="trainingWeeks"
-            value={formData.trainingWeeks}
+            id="weeksForTraining"
+            name="weeksForTraining"
+            value={formData.weeksForTraining}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Enter number of weeks"
+            placeholder={TrainingWeekPlaceholder}
           />
         </div>
 
         {/* Start Date */}
         <div className={styles.inputGroup}>
           <label>
-            When will you be able to start?<span>*</span>
+ { TrainingDate}<span>*</span>
           </label>
           <div className={styles.dateInputs}>
-            <input
+            <input style={{width:'153px', background:'#1A374B', textAlign:'right'}}
               type="number"
               name="day"
+              required
               value={formData.startDate.day}
               onChange={(e) =>
                 setFormData({
@@ -469,9 +696,9 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder="Day"
+              placeholder={TrainingPlaceholder}
             />
-            <input
+            <input style={{width:'153px', backgroundColor:'#1A374B', color:'white', textAlign:'right'}}
               type="number"
               name="month"
               value={formData.startDate.month}
@@ -482,9 +709,9 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder="Month"
+              placeholder={TrainingPlaceholder1}
             />
-            <input
+            <input style={{width:'200px', background:'#1A374B', textAlign:'right'}}
               type="number"
               name="year"
               value={formData.startDate.year}
@@ -495,35 +722,36 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder="Year"
+              placeholder={TrainingPlaceholder2}
             />
           </div>
         </div>
 
         {/* Referral Source */}
         <div className={styles.inputGroup}>
-          <label htmlFor="referralSource">
-            How did you know about Maflam?<span>*</span>
+          <label htmlFor="howDidYouKnowMaflamInEng">
+            { About }<span>*</span>
           </label>
           <input
             type="text"
-            id="referralSource"
-            name="referralSource"
-            value={formData.referralSource}
+            id="howDidYouKnowMaflamInEng"
+            name="howDidYouKnowMaflamInEng"
+            value={formData.howDidYouKnowMaflamInEng}
             onChange={handleInputChange}
             className={styles.input}
-            placeholder="Answer"
+            placeholder={AboutPlaceholder}
           />
         </div>
 
         {/* Resume Upload */}
-        <div className={styles.inputGroup}>
+        {/* <div className={styles.inputGroup}>
           <label htmlFor="resumeUpload">
             Resume<span>*</span>
           </label>
           <div className={styles.imgUpload}>
             <button
               type="button"
+              required
               onClick={() => triggerFileUpload("resumeUpload")}
               className={styles.downloadIcon}
             >
@@ -537,14 +765,89 @@ const ContactForm2 = () => {
             style={{ display: "none" }}
             onChange={(e) => handleFileUpload(e, "resumeFile")}
           />
-        </div>
+        </div> */}
 
-        {/* Portfolio Upload */}
+<div className={styles.inputGroup}>
+        <label htmlFor="resumeUpload">
+         {resumetitle}<span>*</span>
+        </label>
+        <div className={styles.imgUpload}>
+          {resume ? (
+            <>
+              <span>{resume.name}</span>
+              <button
+                type="button"
+                onClick={() => handleDeleteFile(setResume)}
+                className={styles.deleteButton}
+              >
+         <i> <MdDelete /></i>
+              </button>
+            </>
+          ) : (
+            <div className={styles.btnstyles}>
+              <button
+                type="button"
+                onClick={() => triggerFileUpload("resumeUpload")}
+                className={styles.downloadIcon}
+              >
+                <img src={downloadIcon} alt="Upload Resume" />
+              </button>
+              <p className="uploadFile">{ resumePlaceholder}</p>
+            </div>
+          )}
+          <input
+            type="file"
+            id="resumeUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, setResume)}
+          />
+        </div>
+      </div>
+
+      {/* Portfolio Upload */}
+      <div className={styles.inputGroup}>
+        <label htmlFor="portfolioUpload">{portfoliyo}</label>
+        <div className={styles.imgUpload}>
+          {portfolio ? (
+            <>
+              <span>{portfolio.name}</span>
+              <button
+                type="button"
+                onClick={() => handleDeleteFile(setPortfolio)}
+                className={styles.deleteButton}
+              >
+     <i> <MdDelete /></i>
+              </button>
+            </>
+          ) : (
+            <div className={styles.btnstyles}>
+              <button 
+                type="button"
+                onClick={() => triggerFileUpload("portfolioUpload")}
+                className={styles.downloadIcon}
+              >
+                <img src={downloadIcon} alt="Upload Portfolio" />
+              </button>
+              <p className="uploadFile">{ portfoliyoPlaceholder}</p>
+            </div>
+          )}
+          <input
+            type="file"
+            id="portfolioUpload"
+            style={{ display: "none" }}
+            onChange={(e) => handleFileUpload(e, setPortfolio)}
+          />
+        </div>
+      </div>
+
+
+        {/* Portfolio Upload
         <div className={styles.inputGroup}>
           <label htmlFor="portfolioUpload">Portfolio</label>{" "}
           <div className={styles.imgUpload}>
             <button
               type="button"
+              required
               onClick={() => triggerFileUpload("portfolioUpload")}
               className={styles.downloadIcon}
             >
@@ -558,12 +861,12 @@ const ContactForm2 = () => {
             style={{ display: "none" }}
             onChange={(e) => handleFileUpload(e, "portfolioFile")}
           />
-        </div>
+        </div> */}
 
         {/* Submit Button */}
-        <div className={styles.inputGroup}>
-          <button type="submit" className={styles.submitButton}>
-            Send
+        <div className={styles.inputGroup} >
+          <button type="submit" className={styles.submitButton} style={{width:'185px'}}>
+           {sendbtn1}
           </button>
         </div>
       </form>
@@ -572,3 +875,614 @@ const ContactForm2 = () => {
 };
 
 export default ContactForm2;
+
+
+
+
+
+// import React, { useState } from "react";
+// import { useContext } from "react";
+// import styles from "./ContactForm2.module.css";
+// import downloadIcon from "../../assets/downloadIcon.png";
+// import { LanguageContext } from "../LanguageContext/LanguageContext";
+// import { MdDelete } from "react-icons/md";
+
+// const ContactForm2 = () => {
+//   const [formData, setFormData] = useState({
+//     fullNameInEng: "",
+//      genderInEng: "",
+//     age: "",
+//     nationalityInEng: "",
+//     cityInEng: "",
+//     degreeInEng: "",
+//     email: "",
+//     phoneNo: "",
+//     hasPreviousExperienceInEng: "",
+//     trainingFieldsInEng: [],
+//     currentWorkingHoursInEng: "",
+//     reasonForMaflamInEng: "",
+//     universityInEng: "",
+//     requiredTrainingHours: "",
+//     dateForTraining: "",
+//     weeksForTraining: "",
+//     startDate: { day: "", month: "", year: "" },
+//     howDidYouKnowMaflamInEng: "",
+//     resumeFile: null,
+//     portfolioFile: null,
+//   });
+//   const handleInputChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+
+
+//   const [resume , setResume ] = useState(null)
+//   // Trigger file input by button click
+//   const triggerFileUpload = (inputId) => {
+//     document.getElementById(inputId).click();
+//   };
+
+
+//   const handleDeleteFile = (setter) => {
+//     setter(null); // Clear the selected file
+//   };
+
+//   // Handle file upload and set file in form data
+//   const handleFileUpload = (e, setFileField) => {
+//     setFormData((prevData) => ({
+//       ...prevData,
+//       [setFileField]: e.target.files[0],
+//     }));
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log(formData);
+//   };
+//   const { language, direction, toggleLanguage } = useContext(LanguageContext);
+//   const btnText = language === "en" ? "Upload file" : "تحميل الملف";
+//   return (
+//     <div className={styles.container}>
+//       <h2 className={styles.title}>Apply for Maflam Training Program</h2>
+//       <form onSubmit={handleSubmit}>
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="fullNameInEng">
+//             Full name<span>*</span>
+//           </label>
+//           <input
+//             type="text"
+//             id="fullNameInEng"
+//             name="fullNameInEng"
+//             value={formData.fullNameInEng}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Full name"
+//           />
+//         </div>
+
+//         {/*  genderInEng */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//              genderInEng<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData. genderInEng === "Male" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData,  genderInEng: "Male" })}
+//             >
+//               Male
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData. genderInEng === "Female" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData,  genderInEng: "Female" })}
+//             >
+//               Female
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Age */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             Age<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.age === "Under 18" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, age: "Under 18" })}
+//             >
+//               Under 18
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.age === "18 to 20" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, age: "18 to 20" })}
+//             >
+//               From 18 to 20
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.age === "20 to 30" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, age: "20 to 30" })}
+//             >
+//               From 20 to 30
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.age === "Over 30" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, age: "Over 30" })}
+//             >
+//               Over 30
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* nationalityInEng */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             nationalityInEng<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.nationalityInEng === "Saudi" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, nationalityInEng: "Saudi" })}
+//             >
+//               Saudi
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.nationalityInEng === "Non-Saudi" ? styles.active : ""
+//               }`}
+//               onClick={() =>
+//                 setFormData({ ...formData, nationalityInEng: "Non-Saudi" })
+//               }
+//             >
+//               Non-Saudi resident in Saudi Arabia
+//             </button>
+//             <input
+//               type="text"
+//               name="nationalityInEng"
+//               placeholder="Other"
+//               className={styles.input}
+//               onChange={handleInputChange}
+//             />
+//           </div>
+//         </div>
+
+//         {/* cityInEng */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             cityInEng<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.cityInEng === "Jeddah" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, cityInEng: "Jeddah" })}
+//             >
+//               Jeddah
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.cityInEng === "Riyadh" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, cityInEng: "Riyadh" })}
+//             >
+//               Riyadh
+//             </button>
+//             <input
+//               type="text"
+//               name="cityInEng"
+//               placeholder="Other"
+//               className={styles.input}
+//               onChange={handleInputChange}
+//             />
+//           </div>
+//         </div>
+
+//         {/* Your degreeInEng */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             Your degreeInEng<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.degreeInEng === "Secondary" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, degreeInEng: "Secondary" })}
+//             >
+//               Secondary
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.degreeInEng === "Diploma" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, degreeInEng: "Diploma" })}
+//             >
+//               Diploma
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.degreeInEng === "Bachelor's" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, degreeInEng: "Bachelor's" })}
+//             >
+//               Bachelor's
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.degreeInEng === "Masters" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, degreeInEng: "Masters" })}
+//             >
+//               Masters
+//             </button>
+//             <button
+//               type="button"
+//               className={`${styles.optionButton} ${
+//                 formData.degreeInEng === "PhD" ? styles.active : ""
+//               }`}
+//               onClick={() => setFormData({ ...formData, degreeInEng: "PhD" })}
+//             >
+//               PhD
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* email */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="email">
+//             email<span>*</span>
+//           </label>
+//           <input
+//             type="email"
+//             id="email"
+//             name="email"
+//             value={formData.email}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="email"
+//           />
+//         </div>
+
+//         {/* Phone Number */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="phoneNo">
+//             Phone Number<span>*</span>
+//           </label>
+//           <input
+//             type="number"
+//             id="phoneNo"
+//             name="phoneNo"
+//             value={formData.phoneNo}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Phone Number"
+//           />
+//         </div>
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="hasPreviousExperienceInEng">
+//             Do you have previous hasPreviousExperienceInEng in your chosen field?<span>*</span>
+//           </label>
+//           <input
+//             type="text"
+//             id="hasPreviousExperienceInEng"
+//             name="hasPreviousExperienceInEng"
+//             value={formData.hasPreviousExperienceInEng}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Answer"
+//           />
+//         </div>
+//         <div className={styles.inputGroup}>
+//           <label>
+//             Required Training Field<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             {[
+//               "Camera Department",
+//               "Editing Department",
+//               "Production Department",
+//               "Content Writing Department",
+//               "Sound Department",
+//               "Directing Department",
+//               "Acting Department",
+//               "Voiceover Department",
+//               "Research Department",
+//               "Marketing Department",
+//               "Design/Graphics Department",
+//             ].map((field) => (
+//               <button
+//                 type="button"
+//                 key={field}
+//                 className={`${styles.optionButton} ${
+//                   formData.trainingFieldsInEng.includes(field) ? styles.active : ""
+//                 }`}
+//                 onClick={() => handletrainingFieldsInEngChange(field)}
+//               >
+//                 {field}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Current Working Hours */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             Current Working Hours<span>*</span>
+//           </label>
+//           <div className={styles.options}>
+//             {[
+//               "Employed",
+//               "I am Not Currently Working",
+//               "About to Graduate",
+//               "Student",
+//             ].map((status) => (
+//               <button
+//                 type="button"
+//                 key={status}
+//                 className={`${styles.optionButton} ${
+//                   formData.currentWorkingHoursInEng === status ? styles.active : ""
+//                 }`}
+//                 onClick={() =>
+//                   setFormData({ ...formData, currentWorkingHoursInEng: status })
+//                 }
+//               >
+//                 {status}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Reason for Internship */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="reasonForMaflamInEng">
+//             Why would you like to have an internship opportunity at Maflam?
+//             <span>*</span>
+//           </label>
+//           <input
+//             type="text"
+//             id="reasonForMaflamInEng"
+//             name="reasonForMaflamInEng"
+//             value={formData.reasonForMaflamInEng}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Reason"
+//           />
+//         </div>
+
+//         {/* universityInEng */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="universityInEng">
+//             universityInEng<span>*</span>
+//           </label>
+//           <input
+//             type="text"
+//             id="universityInEng"
+//             name="universityInEng"
+//             value={formData.universityInEng}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="universityInEng"
+//           />
+//         </div>
+
+//         {/* Number of Training Hours Required */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="requiredTrainingHours">
+//             Number of Training Hours Required<span>*</span>
+//           </label>
+//           <input
+//             type="number"
+//             id="requiredTrainingHours"
+//             name="requiredTrainingHours"
+//             value={formData.requiredTrainingHours}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Enter hours"
+//           />
+//         </div>
+
+//         {/* Specific Date for Training Completion */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             Is There a Specific Date by Which You Need to Complete the Training
+//             Hours?
+//           </label>
+//           <input
+//             type="date"
+//             name="dateForTraining"
+//             value={formData.dateForTraining}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//           />
+//         </div>
+
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="weeksForTraining">
+//             How many weeks do you want to train?<span>*</span>
+//           </label>
+//           <input
+//             type="number"
+//             id="weeksForTraining"
+//             name="weeksForTraining"
+//             value={formData.weeksForTraining}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Enter number of weeks"
+//           />
+//         </div>
+
+//         {/* Start Date */}
+//         <div className={styles.inputGroup}>
+//           <label>
+//             When will you be able to start?<span>*</span>
+//           </label>
+//           <div className={styles.dateInputs}>
+//             <input
+//               type="number"
+//               name="day"
+//               value={formData.startDate.day}
+//               onChange={(e) =>
+//                 setFormData({
+//                   ...formData,
+//                   startDate: { ...formData.startDate, day: e.target.value },
+//                 })
+//               }
+//               className={styles.input}
+//               placeholder="Day"
+//             />
+//             <input
+//               type="number"
+//               name="month"
+//               value={formData.startDate.month}
+//               onChange={(e) =>
+//                 setFormData({
+//                   ...formData,
+//                   startDate: { ...formData.startDate, month: e.target.value },
+//                 })
+//               }
+//               className={styles.input}
+//               placeholder="Month"
+//             />
+//             <input
+//               type="number"
+//               name="year"
+//               value={formData.startDate.year}
+//               onChange={(e) =>
+//                 setFormData({
+//                   ...formData,
+//                   startDate: { ...formData.startDate, year: e.target.value },
+//                 })
+//               }
+//               className={styles.input}
+//               placeholder="Year"
+//             />
+//           </div>
+//         </div>
+
+//         {/* Referral Source */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="howDidYouKnowMaflamInEng">
+//             How did you know about Maflam?<span>*</span>
+//           </label>
+//           <input
+//             type="text"
+//             id="howDidYouKnowMaflamInEng"
+//             name="howDidYouKnowMaflamInEng"
+//             value={formData.howDidYouKnowMaflamInEng}
+//             onChange={handleInputChange}
+//             className={styles.input}
+//             placeholder="Answer"
+//           />
+//         </div>
+
+//         {/* Resume Upload */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="resumeUpload">
+//             resume<span>*</span>
+//           </label>
+//           <div className={styles.imgUpload}>
+//             {/* <button
+//               type="button"
+//               onClick={() => triggerFileUpload("resumeUpload")}
+//               className={styles.downloadIcon}
+//             >
+//               <img src={downloadIcon} alt="Upload Resume" />
+//             </button>
+//             <p>{btnText}</p> */}
+//             {resume ? (
+//                 <>
+//                   <span>{resume.name}</span>
+//                   <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButton}>
+//                   <MdDelete />
+//                   </button>
+//                 </>
+//               ) : ( 
+//                 <div className={styles.btnstyles}>
+//                 <button
+//                   type="button"
+//                   onClick={() => triggerFileUpload("resumeUpload")}
+//                   className={styles.downloadIcon}
+//                 >
+//                   <img src={downloadIcon} alt="Upload Resume" />
+               
+//                 </button>
+//                     <p className="uploadFile">{btnText}</p>
+//                     </div>
+//               )}
+//           </div>
+//           <input
+//             type="file"
+//             id="resumeUpload"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleFileUpload(e, "resumeUpload")}
+//           />
+//         </div>
+
+//         {/* Portfolio Upload */}
+//         <div className={styles.inputGroup}>
+//           <label htmlFor="portfolioUpload">Portfolio</label>{" "}
+//           <div className={styles.imgUpload}>
+//             <button
+//               type="button"
+//               onClick={() => triggerFileUpload("portfolioUpload")}
+//               className={styles.downloadIcon}
+//             >
+//               <img src={downloadIcon} alt="Upload Portfolio" />
+//             </button>
+//             <p>{btnText}</p>
+//           </div>
+//           <input
+//             type="file"
+//             id="portfolioUpload"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleFileUpload(e, "portfolioFile")}
+//           />
+//         </div>
+
+//         {/* Submit Button */}
+//         <div className={styles.inputGroup}>
+//           <button type="submit" className={styles.submitButton}>
+//             Send
+//           </button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default ContactForm2;
+
+
+

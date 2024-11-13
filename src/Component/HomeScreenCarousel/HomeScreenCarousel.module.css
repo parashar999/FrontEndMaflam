@@ -6,8 +6,8 @@
   background-size: cover;
   /* height: 500px; */
   width: 100%; 
-  max-width: 1900px; 
-  margin: -85px auto;
+  max-width: 1400px; 
+  margin: 85px auto;
   /* margin-bottom: 100px; */
 }
 
@@ -48,7 +48,7 @@
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1245px;
   margin: auto;
   /* padding: 20px 90px; */
 }
@@ -56,14 +56,10 @@
 .sliderContainer {
   display: flex;
   width: 100%;
-
-  overflow-y: hidden;
+  overflow-x: hidden;
   scrollbar-width: none;
 }
 
-.sliderContainer .card:nth-child(2){
-  height: 50%;
-}
 
 
 
@@ -77,46 +73,44 @@
 }
 
 .card {
-  
   flex: 0 0 auto;
   margin: 5px;
   box-sizing: border-box;
   text-align: center;
   border-radius: 5px;
-  height: 614.67px;
+  position: relative;
+  left: 10px;
+  height: 670px;
   color: #fff;
-  width: 370px;
+  overflow-y: hidden;
+  padding: 5px;
+  padding-top: 50px;
+  width: 405px;
 }
-.cardL {
-  
-  flex: 0 0 auto;
-  margin: 5px;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 5px;
-  height: 500px !important;
-  color: #fff;
-  width: 370px;
+
+.card:hover
+{
+  height: 700px;
 }
 
 .overlay {
   position: absolute;
-  right: -200px;
+  right: 0px;
   bottom: 0;
-  width: 40%;
-  height: 140%;
-  filter: blur(40px);
+  width: 420px;
+  height: 100%;
+  filter: blur(10px);
   background: var(--Neutral-Website-Bakground---Dark, #030B11);
   opacity: 0.8;
   z-index: 1; /* Make sure overlay is above the video */
 }
 .roverlay {
   position: absolute;
-  left: -200px;
+  left: 0px;
   bottom: 0;
-  width: 40%;
-  height: 140%;
-  filter: blur(40px);
+  width: 420px;
+  height: 100%;
+  filter: blur(10px);
   background: var(--Neutral-Website-Bakground---Dark, #030B11);
   opacity: 0.9;
   z-index: 1; /* Make sure overlay is above the video */
@@ -126,23 +120,18 @@
   zoom: 1.1;
 } */
 
-.card video{
 
-  width: 100%;
-  height: 788px;
+
+.card videobook{
+  width: 395px;
+
 }
-
-.cardL video{
-
-  height: 750px;
-  margin:10% auto;
-  width: 100%;
-}
-
-/* .card video:hover
+.card video:hover
 {
-  zoom: 1.1;
-} */
+  transform: scaleY(1.01) translateY(-20px);
+  transition: transform 0.3s ease;
+  
+} 
 .card h2 {
   font-size: 17px;
   text-align: right;
@@ -161,7 +150,7 @@
 
 .arrowLeft, .arrowRight {
   position: absolute;
-  top: 50%;
+  bottom: 100px;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
@@ -173,7 +162,8 @@
 }
 
 .arrowLeft {
-  left: 20px;
+  transform: scaleX(-1);
+  left: -50px;
   border-radius: 50%;
   background-color: #4444;
   display: flex;
@@ -185,8 +175,8 @@ flex-shrink: 0;
 }
 
 .arrowRight {
-  right: 20px;
-
+  right: -60px;
+  bottom: 80px;
   border-radius: 50%;
   width: 60px; 
   height: 60px;
@@ -207,48 +197,48 @@ font-size: 20px;
 font-style: normal;
 font-weight: 400;
 line-height: 160%; 
-padding: 10px 200px;
-width: 83%;
+padding: 10px 20px;
 margin: 0 auto;
-
+margin-top: 50px;
+padding-bottom: 120px;
+max-width: 800px;
+}
+@media (max-width:1500px)
+{
+  .carouselcontainer
+  {
+    zoom: 0.8;
+  }
 }
 
-@media (max-width: 768px) {
-  .card {
-    flex: 0 0 100%;
-    width: 275px;
+@media (max-width:1250px)
+{
+  .carouselcontainer
+  {
+    zoom: 0.8;
   }
-  .linking {
-    padding-left: 500px !important;
-    
-    margin-right: 750px;
-    text-align: right;
-  }
+}
 
-  .arrowLeft, .arrowRight {
-    font-size: 24px;
-  }
-  .contentpara p{
-    color: #FFF;
-    text-align: start;
-    font-family: "Noto Kufi Arabic";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%; 
-    padding: 10px 10px;
-    
+@media (max-width:1024)
+{
+    .carouselcontainer
+    {
+      zoom: 0.7;
     }
-    .carouselcontainer a {
-      color: #FFF;
-      text-align: center;
-    
-    
-      text-decoration: none;
-      font-family: "Noto Kufi Arabic";
-      font-size: 23px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 160%; 
+}
+
+@media (max-width:1100px)
+{
+    .carousel
+    {
+      max-width: 415px;
     }
-  }
+    .overlay
+    {
+      display: none;
+    }
+    .roverlay
+    {
+      display: none;
+    }
+}
