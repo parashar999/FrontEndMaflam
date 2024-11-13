@@ -19,7 +19,7 @@ function MyProfilePersonalInfo() {
     dobMonth: "",
     dobDay: "",
     profession: "",
-    email: "",
+    emailId: "",
     phone: "",
     links: ["", "", ""],
     skills: "",
@@ -104,7 +104,7 @@ function MyProfilePersonalInfo() {
       gender: formData.gender,
       dateofBirth: dateOfBirth,
       profession: formData.profession,
-      emailId: formData.email,
+      emailId: formData.emailId,
       phone: formData.phone,
       skills: formData.skillPreviews,
       interestedIn: formData.interestedInLearning,
@@ -140,7 +140,7 @@ function MyProfilePersonalInfo() {
           dobMonth: data.dateofBirth ? data.dateofBirth.split("-")[1] : "",
           dobDay: data.dateofBirth ? data.dateofBirth.split("-")[2] : "",
           profession: data.profession || "",
-          email: data.email || "",
+          emailId: data.emailId || "",
           phone: data.phone || "",
           links:
             data.socialMediaLinks && data.socialMediaLinks.length > 0
@@ -304,7 +304,7 @@ function MyProfilePersonalInfo() {
             type="email"
             name="email"
             placeholder="email"
-            value={formData.email}
+            value={formData.emailId}
             onChange={handleChange}
           />
         </div>

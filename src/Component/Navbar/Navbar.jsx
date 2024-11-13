@@ -211,13 +211,13 @@ const Navbar = () => {
                       </li>
                       <li>
                         {" "}
-                        <CiFlag1 /> &nbsp; <Link to="/contentrequired"> </Link>
-                        My Subscriptions
+                        <CiFlag1 /> &nbsp;{" "}
+                        <Link to="/contentrequired">My Subscriptions </Link>
                       </li>
                       <li>
                         {" "}
-                        <LuHelpCircle /> &nbsp;{" "}
-                        <Link to="/contentrequired"></Link> Help Center{" "}
+                        <LuHelpCircle /> &nbsp;
+                        <Link to="/contentrequired">Help Center</Link>
                       </li>
                       <li onClick={handleLogoutClick}>
                         {" "}
