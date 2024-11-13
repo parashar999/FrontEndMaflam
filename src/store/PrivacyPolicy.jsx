@@ -15,9 +15,9 @@ export const PrivacyPolicyProvider = ({ children }) => {
     try {
       const response = await axios.get(
         // `https://prominenttrades.in/maflam/get-TermsAndCondition?lang=${langParam}`
-        (`https://backend.maflam.com/maflam/get-policy?lang=${langParam}`)
+        `https://backend.maflam.com/maflam/get-policy?lang=${langParam}`
       );
-      console.log("API Response for Privacy Policy: ", response.data);
+      // console.log("API Response for Privacy Policy: ", response.data);
 
       setPrivacyPolicyDetails(response.data);
       setLoading(false);

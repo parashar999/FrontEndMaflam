@@ -2,7 +2,6 @@ const auth = {
   login: (data) => {
     try {
       localStorage.setItem("authData", JSON.stringify(data));
-      console.log("Data saved in localStorage:", data);
     } catch (error) {
       console.error("Error saving to localStorage:", error);
     }

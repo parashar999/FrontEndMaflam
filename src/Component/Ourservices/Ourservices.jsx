@@ -8,7 +8,6 @@ import { LanguageContext } from "../../Component/LanguageContext/LanguageContext
 function Ourservices() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
-  console.log(language);
   const stylesSelected = language === "ar" ? styles : stylesEng;
   const quoteimage = language === "ar" ? assests.quotesArabic : assests.quotes;
 

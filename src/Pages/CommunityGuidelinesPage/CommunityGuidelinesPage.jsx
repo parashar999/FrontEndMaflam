@@ -6,20 +6,30 @@ import {
   HomePageContext,
   HomePageProvider,
 } from "../../store/HomePageContext.jsx";
-import { CommunityGuidelinesContext, CommunityGuidelinesProvider } from "../../store/CommunityGuidelinesPageContext.jsx";
+import {
+  CommunityGuidelinesContext,
+  CommunityGuidelinesProvider,
+} from "../../store/CommunityGuidelinesPageContext.jsx";
 import CommunityGuidelines from "../../Component/CommunityGuidelines/CommunityGuidelines.jsx";
 
-const CommunityGuidelinesPage  = () => {
-  
-  const { homeScreenDetails, loading: homeLoading, error: homeError } = useContext(HomePageContext);
+const CommunityGuidelinesPage = () => {
+  const {
+    homeScreenDetails,
+    loading: homeLoading,
+    error: homeError,
+  } = useContext(HomePageContext);
 
-  useEffect(() => {
-    if (homeScreenDetails) {
-      console.log("Home Screen Details:", homeScreenDetails);
-    }
-  }, [homeScreenDetails]);
-  
-  const { CommunityGuidelinesDetails, loading: aboutLoading, error: aboutError } = useContext(CommunityGuidelinesContext);
+  // useEffect(() => {
+  //   if (homeScreenDetails) {
+  //     console.log("Home Screen Details:", homeScreenDetails);
+  //   }
+  // }, [homeScreenDetails]);
+
+  const {
+    CommunityGuidelinesDetails,
+    loading: aboutLoading,
+    error: aboutError,
+  } = useContext(CommunityGuidelinesContext);
 
   useEffect(() => {
     if (CommunityGuidelinesDetails) {
@@ -30,16 +40,16 @@ const CommunityGuidelinesPage  = () => {
   return (
     <div>
       <LanguageProvider>
-       <HomePageProvider> 
-        <CommunityGuidelinesProvider>        
-         <Navbar></Navbar>
-         <CommunityGuidelines></CommunityGuidelines>
-         <Footer></Footer>
-         </CommunityGuidelinesProvider>
-       </HomePageProvider>
+        <HomePageProvider>
+          <CommunityGuidelinesProvider>
+            <Navbar></Navbar>
+            <CommunityGuidelines></CommunityGuidelines>
+            <Footer></Footer>
+          </CommunityGuidelinesProvider>
+        </HomePageProvider>
       </LanguageProvider>
     </div>
   );
 };
 
-export default CommunityGuidelinesPage ;
+export default CommunityGuidelinesPage;

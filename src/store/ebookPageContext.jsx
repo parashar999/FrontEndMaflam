@@ -1,4 +1,4 @@
-import React, {  useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 import axios from "axios";
 import { LanguageContext } from "../Component/LanguageContext/LanguageContext";
 // import { LanguageContext } from "../Component/LanguageContext/LanguageContext.jsx";
@@ -14,15 +14,11 @@ export const EbookPageContextProvider = ({ children }) => {
 
   const fetchebookPageContextDetails = async (langParam) => {
     try {
-   
-   
-    // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
-       const response = await axios.get(`https://backend.maflam.com/maflam/getEBooks?lang=${langParam}`
-
+      // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
+      const response = await axios.get(
+        `https://backend.maflam.com/maflam/getEBooks?lang=${langParam}`
       );
-      console.log("API Response: ebooks  ", response.data);
-
-
+      // console.log("API Response: ebooks  ", response.data);
 
       setEbookPageContextDetails(response.data);
       setLoading(false);
@@ -38,7 +34,9 @@ export const EbookPageContextProvider = ({ children }) => {
   }, [language]);
 
   return (
-    <EbookPageContext.Provider value={{ ebookPageContextDetails, loading, error }}>
+    <EbookPageContext.Provider
+      value={{ ebookPageContextDetails, loading, error }}
+    >
       {children}
     </EbookPageContext.Provider>
   );
