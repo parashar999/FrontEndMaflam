@@ -165,7 +165,7 @@ button:hover {
 .loadMoreButton {
   font-family: 'Noto Kufi Arabic';
   display: block;
-  margin: 20px auto; /* Centers the button */
+  margin: 20px auto; 
   padding: 12px 24px;
   box-sizing: border-box;
   font-size: 17px;
@@ -203,4 +203,14 @@ button:hover {
    {
     zoom: 0.7;
    }
+}
+
+.container.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  overflow: hidden; 
+  z-index: 999;
 }

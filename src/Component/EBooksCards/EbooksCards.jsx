@@ -1,19 +1,18 @@
+
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./EbooksCards.module.css";
 import { EbookPageContext } from "../../store/ebookPageContext";
+import Popup from '../Popup/Popup'; 
 import auth from "../../Auth/Auth";
 
 const EbooksCards = () => {
-  const {
-    ebookPageContextDetails,
-    setEbookPageContextDetails,
-    loading,
-    error,
-  } = useContext(EbookPageContext);
+  const { ebookPageContextDetails, setEbookPageContextDetails, loading, error } = useContext(EbookPageContext);
   const [displayCount, setDisplayCount] = useState(8);
-  const navigate = useNavigate();
-
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
+  const [selectedEbook, setSelectedEbook] = useState(null); 
+  const navigate = useNavigate(); 
+  
   // Get user details from the auth object
   const userDetails = auth.getAuthData();
 
@@ -30,16 +29,24 @@ const EbooksCards = () => {
     fetchEbooks();
   }, [setEbookPageContextDetails]);
 
-  // Function to handle download button click
   const handleDownloadClick = (ebookUrl) => {
-    // Check if userDetails has a valid token (indicating the user is logged in)
     if (!userDetails || !userDetails.token) {
-      // If not logged in, redirect to the login page
+      console.log("User not logged in, redirecting to login...");
       navigate("/login");
     } else {
-      // If logged in, proceed with the download
-      window.location.href = ebookUrl;
+      console.log("User logged in, downloading file...");
+      window.location.href = ebookUrl; 
     }
+  };
+
+  const openPopup = (ebook) => {
+    setSelectedEbook(ebook); 
+    setIsPopupOpen(true); 
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false); 
+    setSelectedEbook(null); 
   };
 
   if (loading) return <p>Loading...</p>;
@@ -53,7 +60,7 @@ const EbooksCards = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${isPopupOpen ? styles.fixed : ""}`}>
       <div>
         <h1 className={styles.containerHeader}>{title}</h1>
       </div>
@@ -74,7 +81,7 @@ const EbooksCards = () => {
                   <button className={styles.soonButton1}>Soon</button>
                 ) : (
                   <button
-                    onClick={() => handleDownloadClick(ebookItem.ebookPdfUrl)}
+                    onClick={() => openPopup(ebookItem)} 
                     className={styles.downloadButton}
                   >
                     <span className={styles.downbtnspan}>
@@ -103,6 +110,14 @@ const EbooksCards = () => {
           Load More ({displayCount}/{ebook.length})
         </button>
       )}
+
+      {/* Render Popup and pass props */}
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={closePopup}
+        ebookData={selectedEbook}
+        onDownload={() => handleDownloadClick(selectedEbook?.ebookPdfUrl)} 
+      />
     </div>
   );
 };
