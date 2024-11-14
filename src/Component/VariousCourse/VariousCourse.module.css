@@ -83,13 +83,12 @@ text-align: start;
   }
   .cardContent p{
     color: var(--Accent-Accent-50, #F6FFFF);
-
-font-family: "Noto Kufi Arabic";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 160%; 
-text-align: start;
+    font-family: "Noto Kufi Arabic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+    text-align: start;
 
   }
   .footer span{
