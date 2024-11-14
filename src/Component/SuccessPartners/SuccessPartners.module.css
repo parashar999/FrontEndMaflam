@@ -1,43 +1,54 @@
 .successPartnersSection {
   max-width: 1980px; 
+  display: block;
   margin: 0 auto; 
   color: #fff;
   text-align: center;
   min-height: 1100px;
-  padding: 0px 90px;
-  background: linear-gradient(0deg, #030B11 6.41%, rgba(3, 11, 17, 0.50) 22.94%), linear-gradient(180deg, #030B11 0%, rgba(3, 11, 17, 0.50) 39.16%), url("../../assets/Rectangle1.png") lightgray 50% / cover no-repeat;
+  padding-top: 100px;
   background-size: cover;
-
+  background: url('../../assets/PartnersBg.png');
+  background-size: cover;
   background-position: center;
   filter: blur(0px);
+  position: relative;
+}
+
+.overlay
+{
+  background:#030B11;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: -100px;
+  filter: blur(80px);
+  height: 20%;
 }
 
 .successPartnersSection h2{
 
   color: #FFF;
-padding-top: 200px;
-
   text-align: center;
   font-family: "Noto Kufi Arabic";
-
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 160%; 
+  line-height: 160%; /* 57.6px */
 }
 .partnersLogos {
   display: grid;
-  padding-top: 50px;
+  padding-top: 150px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
   max-width: 1000px; 
   margin: 0 auto; 
 }
 
-.partnerLogo img {
-  width: 220px;
-  height: 220px;
+.partnerLogo{
+  width: 300.783px;
+  height: 100px;
   flex-shrink: 0;
 }
 

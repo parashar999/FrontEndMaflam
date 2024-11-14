@@ -17,6 +17,7 @@ import Faqs from "../../Component/Faqs/Faqs";
 import Footer from "../../Component/Footer/Footer";
 import SubFooter from "../../Component/SubFooter/SubFooter.jsx";
 import Styles from "./Home.module.css";
+import Carou from "../../Component/Carou/Carou.jsx"
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
   HomePageContext,
@@ -54,8 +55,8 @@ const Home = () => {
           <CarouselCommunity />
           <div className={Styles.Footer}>
             <Faqs />
+            </div>
             <Footer />
-          </div>
           {/* <SubFooter/> */}
         </div>
       </HomePageProvider>

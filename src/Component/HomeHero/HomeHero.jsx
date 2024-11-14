@@ -39,7 +39,7 @@ const HomeHero = () => {
         <div className={stylesSelected.leftoverlay}></div>
         <div className={stylesSelected.bottomoverlay}></div>
         <div className={stylesSelected.content}>
-          <h1 className={stylesSelected.title} style={{ fontSize: 45 }}>
+          <h1 className={stylesSelected.title} >
             {title}
           </h1>
           <p className={stylesSelected.description}>{description}</p>

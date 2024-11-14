@@ -34,7 +34,7 @@ const Faqs = () => {
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={styles.question}> + {item.title}</div>
+            <div className={styles.question}> {item.title}</div>
             <div
               className={`${styles.answer} ${
                 activeIndex === index ? styles.showAnswer : ""
@@ -44,10 +44,11 @@ const Faqs = () => {
             </div>
           </div>
         ))}
-
+        <div className={styles.arrowcontainer}>
         <button className={styles.arrowButton}>
-          <AiOutlineArrowDown size={20} />
+          <AiOutlineArrowDown size={40} />
         </button>
+        </div>
       </div>
     </div>
   );

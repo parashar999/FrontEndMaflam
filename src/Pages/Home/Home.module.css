@@ -1,19 +1,28 @@
 
 
 .Home{
-    background-color: #030b11;
+  border: 1px solid #000;
+  background: #030B11;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .Footer{
-  background-image: url("../../assets/Faqsbg.png");
-  background: linear-gradient(0deg, #030B11 6.41%, rgba(3, 11, 17, 0.50) 22.94%), linear-gradient(180deg, #030B11 0%, rgba(3, 11, 17, 0.50) 39.16%), url("../../assets/Rectangle1.png") lightgray 50% / cover no-repeat;
+ 
+  width: 1920px;
+  height: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: url('../../assets/FooterBg.png');
 }
 
 .BlogContainer{
+
   background-image: url("../../assets//blg.png");
   background-repeat: no-repeat;
   background-attachment: cover;
-  background-position: center;
+  background-position: top;
 }
 
 

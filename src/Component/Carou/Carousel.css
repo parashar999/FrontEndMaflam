@@ -1,0 +1,54 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0px;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-item {
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
+  opacity: 0.6; /* Default opacity for non-centered items */
+}
+
+.carousel-center {
+  pointer-events: all;
+  z-index: 1; /* Emphasize center item */
+  opacity: 1; /* Full opacity for the centered item */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 60%;
+  background: none;
+  border: none;
+  font-size: 20px;
+  height: 40px;
+opacity: 1;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.carousel-btn.left img {
+  left:0px;
+  position: relative;
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+}
+
+.carousel-btn.right {
+  right: 20px;
+  transform: scaleX(-1);
+  color: white;
+  height: 30px;
+  width: 30px;
+  z-index: 10;
+}

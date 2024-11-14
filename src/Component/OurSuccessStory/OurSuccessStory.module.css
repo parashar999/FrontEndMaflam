@@ -3,18 +3,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
-  max-width: 1250px;
+  max-width: 1600px;
   margin: 0 auto;
-  margin-bottom: 120px;
+
 }
 
 .carouselWrapper h2 {
   color: #FFF;
-  padding-top: 130px;
   text-align: center;
   font-family: "Noto Kufi Arabic";
   font-size: 36px;
+  margin-top: 150px;
+  margin-bottom: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
@@ -45,7 +45,7 @@
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1447px;
   margin: auto;
   /* padding: 20px 0px; */
 }

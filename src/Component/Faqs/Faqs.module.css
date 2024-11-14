@@ -10,6 +10,8 @@
   padding:0 20px;
   text-align: center;
   margin: 0 auto;
+  position: relative;
+  font-family: 'work Sans', sans-serif;
   width: 100%;
 
   max-width: 1900px !important;
@@ -17,7 +19,6 @@
 
 
 .faqContainer a {
-  padding-top: 100px;
   padding-bottom: 50px;
   text-decoration: none;
   /* margin-bottom: 40px; */
@@ -27,9 +28,11 @@
 
 .faqList {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
 }
 
 .faqItem {
@@ -46,19 +49,20 @@
   box-sizing: border-box; 
   border-radius: 10px;
   overflow: hidden;
+  line-height: 160%;
   cursor: pointer;
   color: #39FFFb;
+  background: transparent;
   transition: background-color 0.3s ease;
-
+  opacity: 0.4;
   }
 
 .faqItem.active {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px -0.5px 2px 1px rgba(255, 255, 255, 0.25) inset;
-  backdrop-filter: blur(40px);  
+  border-radius: 40px;
+  background: transparent;
+  box-shadow: 0px -0.5px 2px 1px rgba(255, 255, 255, 0.25) inset; 
   border: 1px solid #5AFFFF;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .question {
@@ -68,15 +72,26 @@ font-family: "Noto Kufi Arabic";
 font-size: 24px;
 width: 724px;
 font-style: normal;
-font-weight: 300;
+font-weight: 700;
 text-align: left;
 line-height: 160%; /* 38.4px */
 
  
 }
 
+.faqContainer a
+{
+  color: #FFF;
+text-align: center;
+font-family: "Work Sans";
+font-size: 42px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%; /* 67.2px */
+}
+
 .answer {
-  color: white;
+  color: #FFF;
   /* text-align: right; */
   display: none; 
   text-align: left;
@@ -89,6 +104,12 @@ line-height: 160%; /* 38.4px */
   font-style: normal;
   font-weight: 100;
   line-height: 140%; 
+ opacity: 0.7;
+font-family: "Work Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 300;
+line-height: 160%;
 }
 
 .showAnswer {
@@ -96,17 +117,26 @@ line-height: 160%; /* 38.4px */
   margin-top: 10px;
 }
 
+.arrowcontainer
+{
+  width: 1215px ;
+  position: relative;
+}
 .arrowButton {
   background-color: transparent;
-  padding: 10px;
+  padding: 15px;
   border: none;
+  height: 66px;
+  width: 66px;
   cursor: pointer;
   margin-top: 40px;
   color: white;
   display: flex;
-  margin-left: 60%;
-  background-color: gray;
-  border-radius: 20px;
+  bottom: -75x;
+  position: absolute;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.20);
+  border-radius: 33px;
   font-size: 24px;
   transition: transform 0.3s ease;
 }
