@@ -1,4 +1,8 @@
-/* Base styling */
+
+.blogDetails{
+  /* margin-top: 300px; */
+  /* background-image: url("../../assets/MaflamBlog.png"); */
+}
 .heroSection {
     margin-top: 60px;
     height: 90vh;
@@ -7,19 +11,22 @@
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
-    background-color: #0f1624;
+    /* background-color: #0f1624; */
+  }
+  .blogSubtitle{
+    color: #ffffff;
   }
   
   .featuredBlog {
     display: flex;
-    background-color: #1c2537;
+    /* background-color: #1c2537; */
     overflow: hidden;
     flex: 1.5;
   }
   
   .featuredImage {
-    width: 100%;
-    height: 250px;
+    width: 672px;
+    height: 450px;
     object-fit: cover;
   }
   
@@ -66,7 +73,7 @@
   
   .blogCard {
     display: flex;
-    background-color: #1c2537;
+    /* background-color: #1c2537; */
     line-height: 2;
     border-radius: 8px;
     overflow: hidden;
@@ -74,8 +81,8 @@
   }
   
   .blogImage {
-    height: 160px;
-    width: 160px;
+    height: 230px;
+    width: 260px;
     object-fit: cover;
   }
   
@@ -102,17 +109,17 @@
     color: var(--Accent-Accent-400---Main, #39FFFB);
     font-size: 14px;
     text-decoration: none;
+    cursor: pointer;
   }
   
-  /* Responsive Design */
-  /* For Large Screens */
+
   @media (min-width: 1200px) {
     .heroSection {
-      height: auto; /* Prevents stretching */
+      height: auto;
     }
   
     .featuredContent {
-      margin-left: 250px; /* Adjust margins for larger screens */
+      margin-left: 250px;
     }
   
     .featuredTitle {
@@ -124,7 +131,7 @@
     }
   }
   
-  /* For Medium Screens */
+
   @media (max-width: 1024px) {
     .featuredContent {
       margin-left: 150px;
@@ -138,8 +145,7 @@
       font-size: 14px;
     }
   }
-  
-  /* For Tablets and Small Laptops */
+
   @media (max-width: 768px) {
     .heroSection {
       flex-direction: column;
@@ -157,16 +163,15 @@
   
     .featuredImage {
       width: 100%;
-      height: 300px; /* Adjust image height */
+      height: 300px; 
     }
-  
     .blogCard {
       flex-direction: column;
     }
   
     .blogImage {
       width: 100%;
-      height: 200px; /* Adjust image height */
+      height: 200px; 
     }
   
     .blogContent {
@@ -174,7 +179,7 @@
     }
   }
   
-  /* For Mobile Phones */
+
   @media (max-width: 480px) {
     .heroSection {
       padding: 10px;

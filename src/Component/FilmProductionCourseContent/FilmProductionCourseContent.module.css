@@ -1,0 +1,115 @@
+
+.maincontainer {
+  width: 100%;
+  margin: auto;
+  max-width: 1397px;
+  justify-content: baseline;
+  align-items: baseline;
+  padding: 10px;
+}
+
+/* Collapsible for LTR */
+.collapsibleLtr {
+  margin: 10px 0;
+  border: 1px solid gray;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+  width: 768px;
+  max-width: 768px;
+  border-radius: 10px;
+  /* background-image: url("../../assets/aboutinstbg.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  max-width: 768px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.toggle {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.line {
+  flex-grow: 1;
+  border: none;
+  margin: 10px;
+  height: 1px;
+  background-color: #39FFFb;
+}
+
+.toggleButton {
+  margin-right: 10px;
+  color: #39FFFb;
+  font-size: 25px;
+}
+
+.content {
+  text-align: justify;
+  font-size: 11px;
+  color: white;
+}
+
+.mainAnsTab {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.questionItem {
+  margin: 10px 0;
+}
+
+.questionHeader {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.question {
+  margin-left: 10px;
+  color: #39FFFb;
+}
+
+.answer {
+  color: white;
+  text-align: justify;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+@media (max-width:1600px)
+{
+    .maincontainer
+    {
+      zoom: 0.8;
+    }
+}
+@media (max-width:1250px)
+{
+
+}
+
+@media (max-width:768px)
+{
+  .collapsibleLtr
+  {
+    max-width: 500px;
+  }
+  .maincontainer
+  {
+    zoom: 0.7;
+    max-width: 780px;
+  }
+  .collapsibleLtr
+  {
+    max-width: 100%;
+  }
+}

@@ -1,68 +1,68 @@
+.coursecontainermain {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: url("../../assets/learnAbt.png") bottom / 140% cover;
+  padding: 75px 0 150px;
+  position: relative;
+}
+
 .coursesContainer {
-  margin-top: 100px;
-  padding: 20px;
-  min-height: 700px;
+  width: 90%;
+  max-width: 1920px;
   border-radius: 8px;
-  max-width: 90%;
-  margin: auto;
   text-align: center;
 }
 
-.courseContainer {
-  background: #030B11;
+.loverlay, .boverlay {
+  position: absolute;
+  width: 100%;
+  filter: blur(60px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.loverlay {
+  top: -75px;
+  height: 16%;
+}
+
+.boverlay {
+  top: -75px;
+  height: 10%;
 }
 
 .coursesContainer h2 {
   margin-top: 30px;
   color: #FFF;
-  text-align: center;
-  font-family: "Noto Kufi Arabic";
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 160%;
 }
 
-.LearnMaflam img {
-  width: 100%; 
-  max-width: 650px; 
+.LearnMaflam {
+  margin-top: 20px;
+}
+
+.LearnMaflam video {
+  width: 100%;
+  max-width: 1195px;
   height: auto;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-/* Responsive adjustments for tablets */
+@media (max-width: 1220px) {
+  .learnMaflamTitle {
+    zoom: 0.8;
+  }
+}
+
 @media (max-width: 768px) {
-  .coursesContainer {
-    margin-top: 100px;
-    padding: 15px;
-    min-height: 600px;
+  .coursecontainermain {
+    padding: 50px;
   }
-
-  .coursesContainer h2 {
-    font-size: 2rem; /* Reduce font size for smaller screens */
-  }
-
-  .LearnMaflam img {
-    width: 90%; /* Adjust image width for tablets */
-    height: auto;
-  }
-}
-
-/* Responsive adjustments for mobile screens */
-@media (max-width: 480px) {
-  .coursesContainer {
-    margin-top: 50px;
-    padding: 10px;
-    min-height: 500px;
-  }
-
-  .coursesContainer h2 {
-    font-size: 1.5rem; /* Further reduce font size for mobile */
-  }
-
-  .LearnMaflam img {
-    width: 100%; /* Full width for mobile screens */
-    height: auto;
-    margin-top: 20px; /* Reduce top margin for mobile */
+  .learnMaflamTitle {
+    zoom: 0.7;
   }
 }

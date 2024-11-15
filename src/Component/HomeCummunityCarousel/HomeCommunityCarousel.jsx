@@ -1,64 +1,135 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef, useEffect, useState } from "react";
 import styles from "./HomeCommunityCarousel.module.css";
-import { assests } from "../../assets/assests";
+import { HomePageContext } from "../../store/HomePageContext";
+import { Link } from "react-router-dom";
 
 const HomeCommunityCarousel = () => {
-  // Updated items array with different images for each card
-  const items = [
-    { id: 1, imgSrc: assests.Reactangle49, logoSrc:assests.logo14   },
-    { id: 2, imgSrc: assests.Reactangle48, logoSrc:assests.logo15 },
-    { id: 3, imgSrc: assests.Reactangle50,  logoSrc:assests.logo16 },
-    { id: 4, imgSrc: assests.Reactangle51, logoSrc:assests.logo19 },
-    { id: 5, imgSrc: assests.Reactangle49,  logoSrc:assests.logo15 },
-    { id: 6, imgSrc: assests.Reactangle48, logoSrc:assests.logo16 },
-  ];
-
+  const { homeScreenDetails } = useContext(HomePageContext);
   const sliderRef = useRef(null);
+  const [cardWidth, setCardWidth] = useState(340); // Default value, to be updated
+  const [currentIndex, setCurrentIndex] = useState(0); // Track current scroll index
+  const [isScrolling, setIsScrolling] = useState(false); // Track if scrolling is in progress
 
-  // Function to scroll the slider to the left
+  const maflamShowsData = homeScreenDetails?.maflamShowsData || [];
+  const maflamShowsDataTitle = homeScreenDetails?.maflamShowsTitle || [];
+
+  // Dynamically set card width based on an element's width
+  useEffect(() => {
+    if (sliderRef.current) {
+      const firstCard = sliderRef.current.querySelector(`.${styles.card}`);
+      if (firstCard) {
+        setCardWidth(firstCard.offsetWidth);
+      }
+    }
+  }, [maflamShowsData]);
+
+  // Scroll left, ensuring it doesn’t go beyond the start
   const scrollLeft = () => {
-    sliderRef.current.scrollBy({
-      top: 0,
-      left: -375, // Adjust this value based on your card width
-      behavior: "smooth", // Smooth scroll effect
-    });
+    if (!isScrolling && currentIndex > 0) {
+      setIsScrolling(true); // Start scrolling
+      sliderRef.current.scrollBy({
+        top: 0,
+        left: -cardWidth,
+        behavior: "smooth",
+      });
+      setCurrentIndex(currentIndex - 1);
+
+      // Timeout to detect when the scroll has finished
+      setTimeout(() => {
+        setIsScrolling(false); // End scrolling
+      }, 500); // Adjust the timeout as needed to match scroll duration
+    }
   };
 
-  // Function to scroll the slider to the right
+  // Scroll right, ensuring it doesn’t exceed the max index
   const scrollRight = () => {
-    sliderRef.current.scrollBy({
-      top: 0,
-      left: 375, // Adjust this value based on your card width
-      behavior: "smooth", // Smooth scroll effect
-    });
+    if (!isScrolling && currentIndex < maflamShowsData.length - 1) {
+      setIsScrolling(true); // Start scrolling
+      sliderRef.current.scrollBy({
+        top: 0,
+        left: cardWidth,
+        behavior: "smooth",
+      });
+      setCurrentIndex(currentIndex + 1);
+
+      // Timeout to detect when the scroll has finished
+      setTimeout(() => {
+        setIsScrolling(false); // End scrolling
+      }, 500); // Adjust the timeout as needed to match scroll duration
+    }
   };
 
   return (
-    <div className={styles.carouselcontainer}>
-      <h2>Maflam Shows</h2>
-      <div className={styles.carousel}>
-        {/* Left Arrow */}
-        <button className={styles.arrowLeft} onClick={scrollLeft}>
-          &larr;
-        </button>
+    <div className={styles.parent}>
+      <div className={styles.carouselcontainer}>
+        <div className={styles.croverlay}></div>
+        <div className={styles.coverlay}></div>
+        <Link to="/socialmedia">{maflamShowsDataTitle.title}</Link>
+        <div className={styles.carousel}>
+          {/* Left Arrow */}
+          <button
+            className={styles.arrowLeft}
+            onClick={scrollLeft}
+            disabled={currentIndex === 0 || isScrolling} // Disable when at the first element or during scrolling
+          >
+            &larr;
+          </button>
 
-        <div className={styles.sliderContainer} ref={sliderRef}>
-          <div className={styles.slider}>
-            {items.map((item) => (
-              <div key={item.id} className={styles.card}>
-                {/* Different image for each card */}
-                <img src={item.logoSrc} alt={`Ebook card ${item.id}`} className={styles.logo89}></img>
-               
-                <img src={item.imgSrc} alt={`Ebook Card ${item.id}`}  className={styles.img89}  />
-              </div>
-            ))}
+          <div className={styles.sliderContainer} ref={sliderRef}>
+            <div className={styles.slider}>
+              {maflamShowsData.map((item, index) => (
+                <div key={index} className={styles.card}>
+                  <img
+                    src={item.logoUrl}
+                    alt={`Show logo ${index + 1}`}
+                    className={styles.logo89}
+                  />
+                  <video
+                    src={item.videoUrl}
+                    className={styles.img89}
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    poster={item.thumbNailUrl}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              ))}
+              {/* Optionally, duplicate content to create a continuous scrolling effect */}
+              {maflamShowsData.map((item, index) => (
+                <div key={index} className={styles.card}>
+                  <img
+                    src={item.logoUrl}
+                    alt={`Show logo ${index + 1}`}
+                    className={styles.logo89}
+                  />
+                  <video
+                    src={item.videoUrl}
+                    className={styles.img89}
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    poster={item.thumbNailUrl}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Right Arrow */}
-        <button className={styles.arrowRight} onClick={scrollRight}>
-        &rarr;
-        </button>
+          {/* Right Arrow */}
+          <button
+            className={styles.arrowRight}
+            onClick={scrollRight}
+            disabled={currentIndex === maflamShowsData.length - 1 || isScrolling} // Disable when at the last element or during scrolling
+          >
+            &rarr;
+          </button>
+        </div>
       </div>
     </div>
   );

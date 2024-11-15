@@ -1,9 +1,10 @@
-.maincontainer {
+/* .maincontainer {
     width: 100%;
     background-image: url("../../assets/whatwelearnbg.png");
     background-size: cover;
     background-position: center;
     background-color: black;
+    
   }
   
   .collapsible {
@@ -13,7 +14,6 @@
     padding-right: 50px;
     display: inline-block;
     width: 500px;
-    /* margin-left: 35%; */
     border-radius: 10px;
     margin-left: 10%;
   }
@@ -60,25 +60,17 @@
   
   .question {
     margin-left: 10px;
-    /* color: #39FFFb; */
     color: white;
   }
   
-  /* .answer {
-    color: white;
-    text-align: justify;
-    font-size: 11px;
-    margin-left: 20px;
-  } */
   .answer {
     color: white;
     text-align: justify;
-    font-size: 14px; /* Slightly larger font for readability */
-    margin-bottom: 20px; /* Adds space between paragraphs */
+    font-size: 14px; 
+    margin-bottom: 20px; 
   }
 
 
-/* Responsive CSS */
 @media screen and (max-width: 1200px) {
     .collapsible {
         width: 400px;
@@ -135,4 +127,137 @@
     .content, .answer {
         font-size: 9px;
     }
+} */
+
+
+
+
+
+
+/* Global reset for box-sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  width: 100%;
+  background-color: #030b11;
+}
+
+.maincontainer {
+  width: 100%;
+  background-image: url("../../assets/keytopicbgg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black; 
+  margin: 0 auto;
+  max-width: 1500px;
+  padding-bottom: 20px; 
+}
+
+.collapsible {
+  border: 1px solid gray;
+  padding: 20px 50px;
+  width: 90%;   
+  max-width: 500px; 
+  border-radius: 10px;
+  color: white; 
+  box-sizing: border-box;
+  margin-left: 10%;
+
+ }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.line {
+  flex-grow: 1;
+  border: none;
+  height: 1px;
+  background-color: #39FFFb;
+  margin-left: 10px;
+}
+
+.toggleButton {
+  margin-right: 10px;
+  color: #39FFFb;
+  font-size: 25px;
+}
+
+.content {
+  text-align: justify;
+  font-size: 11px;
+  color: white;
+}
+
+.answer {
+  color: white;
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .collapsible {
+    width: 80%; 
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .collapsible {
+    width: 70%; 
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collapsible {
+    width: 95%; 
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .collapsible {
+    width: 100%; 
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0; 
+    margin-right: 0;
+  }
+
+  .toggleButton {
+    font-size: 18px;
+  }
+
+  .content, .answer {
+    font-size: 9px;
+  }
 }

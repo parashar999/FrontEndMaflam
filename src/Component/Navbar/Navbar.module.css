@@ -1,23 +1,54 @@
+.navmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+  width: 100vw;
+}
+
 .navbar {
   display: flex;
+  height: 78.4px;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 10px 50px;
   backdrop-filter: blur(30px);
   background-size: cover;
   background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 1000;
+  box-sizing: border-box;
+  max-width: 1920px;
+  position: fixed;
+  top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.gappss a{
+  margin-left: 12px !important; 
+}
+
+.menuelements
+{
+  display: flex;
+}
+.langbtn {
+  border: solid rgba(26, 34, 40, 0.9) 1px;
+  padding: 15px;
+  font-size: 17px;
+  border-radius: 10px;
+  /* background: #000; */
+  background-color: rgba(26, 34, 40, 0.9) !important;
+  color: #ccc;
 }
 
 .logo {
-  height: 40px;
+  margin-top: 10px;
+  height: 56px;
+  width: 100px;
 }
+
 .leftLinks {
-  padding: 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +57,7 @@
 
 .leftLinks a {
   color: #fff;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
   text-decoration: none;
   transition: 0.3s ease;
@@ -34,41 +65,41 @@
 
 .leftLinks a:hover {
   color: #0ccac4;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
+
 .searchContainer {
-  height: 37px;
-  max-width: 250px;
-  font-size: 20px;
-  color: #f6fffe !important;
+  height: 48px;
+  max-width: 294px;
+  font-size: 17px;
+  color: #F6FFFE !important;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  padding: 5px;
-  border-radius: 20px;
-  border-color: #0ccac4;
-  outline: #0ccac4;
+  padding-left: 12px;
+  border-radius: 24px;
+  padding-left: 8px;
+  padding-right:8px;
+  border: 1px solid #0ccac4;
+
 }
+
 .searchContainer input {
+  padding-right: 30px;
   border: none;
   background: transparent;
-  color: #f6fffe !important;
-  font-size: 14px;
+  color: #F6FFFE !important;
+  font-size: 17px;
   outline: none;
-  margin-left: 5px;
+
 }
-.searchContainer img{
-  margin-right: 15px;
-  width: 16px;
-height: 16px;
-flex-shrink: 0;
+
+.subIcon {
+  margin-left: 10px;
 }
-.searchContainerGlobe img{
-  margin-right: 130px;
-  margin-top: 10px;
-  width: 24.06px;
-height: 24px;
-flex-shrink: 0;
+
+.subIconArb {
+  margin-right: 10px;
 }
 
 .searchButton {
@@ -77,64 +108,69 @@ flex-shrink: 0;
   color: #ccc;
   cursor: pointer;
 }
+
 .rightLinks {
-  margin-left: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 15px;
-  margin-right: 100px;
+  justify-content: space-between;
 }
 
 .rightLinks a {
   color: #0ccac4;
   text-decoration: none;
 }
+
 .signupButton {
   border-radius: 64px;
   background: var(--Primary-Primary-300, #1A374B);
   padding: 5px 24px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: #39FFFB;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
 }
 
 
-.submenu a:hover {
-  background-color: #444; /* Adjust hover effect */
-}
 .dropdown {
   position: relative;
 }
+
 .submenu {
-  background-color: #333;
+  background-color: #1A2228;
   padding: 10px;
   border-radius: 5px;
   position: absolute;
-  top: 100%; 
-  left: 0; 
+  top: 60px;
+  left: 0px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 999;
-  min-width: 150px;
+  min-width: 280px;
+  align-items: start;
 }
 
 .submenu a {
 
   color: white;
-  padding: 8px 15px; /* Increase padding for better clickability */
+  /* padding: 8px 15px; */
+  padding: 5px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.submenu a:hover {
-  background-color: #444; /* Adjust hover effect */
+.submenu:hover {
+  color: #39FFFB;
 }
 
 .navbar {
   z-index: 1000;
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -148,114 +184,189 @@ flex-shrink: 0;
   background-color: #fff;
   transition: 0.3s ease;
 }
-@media (max-width: 768px) {
-  .leftLinks, .rightLinks, .searchContainer {
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(-45deg);
+}
+
+.rotate1 {
+  transform: rotate(-45deg);
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.username {
+  color: white;
+  font-size: 17px;
+}
+
+.profileContainer {
+  position: relative;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.username {
+  font-size: 17px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.profileMenu {
+  width: 220px;
+  /* background-color: black; */
+  border-radius: 10px;
+  background: rgba(26, 34, 40, 1.0);
+  position: absolute;
+  top: 60px;
+  right: -70px;
+  position: absolute;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--Accent-Accent-50, #F6FFFF);
+  font-family: "Noto Kufi Arabic";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+
+.profileMenu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profileMenu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.iconstyle {
+  margin-top: 3px;
+}
+
+@media (max-width:1600px) {
+  .navbar {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 1200px) {
+
+
+  .menuelements {
     display: none;
+    text-align: center;
   }
 
   .hamburger {
     display: flex;
   }
 
-  .navbar.active .leftLinks,
-  .navbar.active .rightLinks {
+
+ .navbar.active .menuelements {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 78px;
     right: 0;
     background-color: rgba(26, 34, 40, 0.9);
     width: 100%;
-    padding: 20px;
+    height: 130vh;
+    padding-top: 100px;
+  }
+  .leftLinks , .rightLinks, .searchContainer
+  {
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .leftLinks
+  {
+    gap: 10px;
+  }
+  .searchContainer
+  {
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
-  .leftLinks a, .rightLinks a {
-    margin: 10px 0;
+  .searchContainer img
+  {
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
 
+  .submenu
+  {
+    position: static;
+    left: -100px;
+  }
   .signupButton {
     width: 100%;
     text-align: center;
     padding: 10px 0;
   }
-}
-@media (max-width: 576px) {
-  .navbar {
-    padding: 15px 30px;
+
+  .rightLinks
+  {
+    display: flex;
+    width: auto;
+    min-width: 100%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .logo {
-    height: 35px;
+  .searchContainer input
+  {
+    padding-bottom: 10px;
   }
-
-  .signupButton {
-    font-size: 14px;
-    padding: 8px 20px;
-  }
-}
-@media (max-width: 425px) {
-  .navbar {
-    padding: 15px 20px;
-  }
-
-  .logo {
-    height: 30px; /* Further reduced logo size */
-  }
-
-  .hamburger div {
-    width: 20px;
-    height: 2px; /* Smaller hamburger icon */
-  }
-
-  .signupButton {
-    font-size: 12px; /* Further reduced button text size */
-    padding: 7px 16px;
-  }
-}
-
-/* Ultra small devices (375px and below) */
-@media (max-width: 390px) {
-  .navbar {
-    width: 100%;
-    padding: 10px 15px;
-  }
-
-  .signupButton {
-    text-align: right;
-    font-size: 12px;
-    padding: 6px 14px;
-  }
-}
-
-
-@media (min-width: 820px) and (max-width: 1180px) {
-  .leftLinks, .rightLinks, .searchContainer {
+  .searchContainerGlobe img {
     display: none;
   }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar.active .leftLinks,
-  .navbar.active .rightLinks {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgba(26, 34, 40, 0.9);
-    width: 100%;
-    padding: 20px;
-  }
-
-  .leftLinks a, .rightLinks a {
-    margin: 10px 0;
-  }
-
-  .signupButton {
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+  .navbar
+  {
+    top: 0px;
   }
 }
+
+
+
+

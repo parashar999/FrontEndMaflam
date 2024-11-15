@@ -1,9 +1,32 @@
+   
+   /* Global reset for box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  width: 100%;
+  /* background-color: bl;  */
+}
+
+   
+   
    .maincontainer {
     width: 100%;
     background-image: url("../../assets/keytopicbgg.jpg");
     background-size: cover;
     background-position: center;
     background-color: black;
+    margin: 0 auto;
+    max-width: 1500px;
+
+
+    
   }
   
   .collapsible {

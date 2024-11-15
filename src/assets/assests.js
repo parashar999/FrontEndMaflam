@@ -42,8 +42,8 @@ import course7 from "./course7.png";
 import course8 from "./course8.png";
 import course9 from "./course9.png";
 import filmaker from "./filmaker.png";
-import rectangle21 from "./rectangle21.png";
-import rectangle22 from "./rectangle22.png";
+import rectangle21 from "./Rectangle21.png";
+import rectangle22 from "./Rectangle22.png";
 import Google from "./Google.png";
 import Email from "./Email.png";
 import LinkedIn from "./LinkedIn.png";
@@ -57,6 +57,7 @@ import variousCourse6 from "./variousCourse6.png";
 import variousCourse7 from "./variousCourse7.png";
 import variousCourse8 from "./variousCourse8.png";
 import Visa from "./Visa.png";
+import filter from "./filter.png";
 import MasterCard from "./MasterCard.png";
 import Mada from "./Mada.png";
 import Checkoutbg from "./Checkoutbg.png";
@@ -75,7 +76,7 @@ import Blog3 from "./Blog3.png";
 import mainBlog from "./mainBlog.png";
 import Insights1 from "./Insights1.png";
 import Insights2 from "./Insights2.png";
-import Insights3 from "./insighs3.png";
+import Insights3 from "./Insighs3.png";
 import Popular1 from "./Popular1.png";
 import Popular2 from "./Popular2.png";
 import Popular3 from "./Popular3.png";
@@ -103,6 +104,8 @@ import carouselcard1 from "./CarouselCard1.png";
 import carouselcard2 from "./CarouselCard2.png";
 import carouselcard3 from "./CarouselCard3.png";
 import quotes from "./quotes icon.png";
+import quotesArabic from "./quotes iconar.png";
+import LearnMaflamImage from "./LearnMaflamImage.png";
 
 import maflamScreen from "./Maflam-Screen.png";
 import Subscribee from "./Subscribee.png";
@@ -118,11 +121,100 @@ import FrameDiv4 from "./FrameDiv4.png";
 import FrameDiv5 from "./FrameDiv5.png";
 import FrameDiv6 from "./FrameDiv6.png";
 import FrameDiv7 from "./FrameDiv7.png";
-import logo1 from "./Logo1.png";
+import logo1 from "./logo1.png";
 import Footerlogo1 from "./footerlogo.png";
 import Magnifine from "./magnifine.png";
 import Globe from "./globe.png";
+import ContactInfoLogo from "./ContactInfoLogo.png";
+import joinOurTeam from "./joinOurTeam.png";
+import TraningProgramLogo from "./TraningProgramLogo.png";
+import  FullCourse from "./FullCourse.png"
+import  ScriptingWriting from "./ScriptingWriting.png"
+import  Production from "./Production.png"
+import  Directing from "./Directing.png"
+import  Cinematography from "./Cinematography.png"
+import  RecordingCourse from "./RecordingCourse.png"
+import  ActingCourse from "./ActingCourse.png"
+import  EditingCourse from "./EditingCourse.png"
+import  MaflamBlog from "./MaflamBlog.png"
+import  SocialMedia from "./SocialMedia.png"
+import  ebook from "./ebook.png"
+import  MaflamBlog1 from "./MaflamBlog.png"
+import  Facebooklogin from "./Facebooklogin.png"
+import  applelogin from "./applelogin.png"
+import  googlelogin from "./googlelogin.png"
+import  eyeicon from "./eyeicon.png"
+import  successtickmark from "./successtickmark.png"
+import  Arrow from "./Arrow.png"
+import  colorArrow from "./rightNavArrow.png"
+import  leftArrow from "./leftNavArrow.png"
+import  profilecourse from "./profilecourse.png"
+import  profilecoursefirst from "./profilecoursefirst.png"
+
+import instagram from "./instaram.png"
+import youtube from "./youtube.png"
+import tiktok from "./tiktok.png"
+import socialimage from "./socialimage.png"
+import channel1 from "./channel1.png"
+import channel2 from "./channel2.png"
+
+import youtubeicon from "./youtubeicon.png"
+import education1 from "./education1.png"
+import education2 from "./education2.png"
+
+import education3 from "./education3.png"
+import eventpic from "./eventpic.png"
+import instagramlogo from "./instagraplogo.png"
+import posdcost from "./podcost.png"
+import Maflammac from "./Maflammac.png"
+import heartlogo from "./heartlogo.png"
+import downarrow from "./downarrow.png"
+import showcase from "./showcase.png"
+import onebooklet from "./onebooklet.png"
+import twobooklet from "./twobooklet.png"
+import threebooklet from "./threebooklet.png"
+import filmvideoimg from "./filmvideoimg.png"
+import subscribefundamentalpackage from "./subscribefundamentalpackage.png"
+import  transperency from "./transperency.png"
+
+import bagraoudcontac2 from "./bagraoudcontact.png"
+
+
+
 export const assests = {
+  subscribefundamentalpackage,
+  bagraoudcontac2,
+  transperency,
+  filmvideoimg,
+  threebooklet,
+
+  twobooklet,
+  onebooklet,
+  showcase,
+  downarrow,
+  instagram ,
+  heartlogo,
+  instagramlogo,
+  youtube,
+  tiktok,
+  channel1 ,
+  channel2 ,
+  youtubeicon,
+  socialimage,
+  education1,
+  education2,
+  education3,
+  eventpic,
+  posdcost ,
+  Maflammac,
+  profilecoursefirst,
+  profilecourse,
+  Arrow,
+  successtickmark,
+  eyeicon,
+  googlelogin,
+  applelogin,
+  Facebooklogin,
   Magnifine,
   Globe,
   youtubeImage,
@@ -131,6 +223,7 @@ export const assests = {
   caraImg,
   Popular1,
   Popular2,
+  filter,
   logo1,
   Popular3,
   Popular4,
@@ -153,6 +246,8 @@ export const assests = {
   Rectangle42,
   Rectangle43,
   instructiobg,
+  colorArrow,
+  leftArrow,
   film,
   netflix,
   srmg,
@@ -169,6 +264,7 @@ export const assests = {
   Frame63,
   pricing,
   Rectangle13,
+  LearnMaflamImage,
   Rectangl13,
   Rectangl14,
   Rectangl15,
@@ -223,13 +319,64 @@ export const assests = {
   carouselcard2,
   carouselcard3,
   quotes,
+  quotesArabic,
 
   videocrc,
   videocrc1,
   maflamScreen,
   Subscribee,
   Footerlogo1,
+  ContactInfoLogo,
+  joinOurTeam,
+  TraningProgramLogo,
+  ActingCourse,
+  Cinematography,
+  Directing,
+  EditingCourse,
+  FullCourse,
+  Production,
+  RecordingCourse,
+  ScriptingWriting,
+  MaflamBlog,
+  ebook,
+  SocialMedia,
+  MaflamBlog1,
+  
 };
+
+
+export const youtubeChannel =[
+  {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+episode :"For more episodes",
+imageurl : channel1 ,
+imagelogo :logo14  ,
+icon : youtubeicon
+   },
+   {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+    episode :"For more episodes",
+    imageurl :channel2  ,
+    imagelogo :logo19 ,
+    icon : youtubeicon
+       },
+] 
+
+export const EducationPost =[
+  {title: "Educational content that reveals secrets of the filmmaking profession and explains why it is so important.",
+episode :"More",
+imageurl : education1,
+
+   },
+   {title : "Motivational quotes from world-renowned filmmakers based on their experiences in the field.",
+    episode :"More",
+    imageurl :education2,
+   
+       },
+       {title : "Fun posts to engage with filmmakers.",
+        episode :"More",
+        imageurl :education3 
+       
+           },
+]
 
 export const instructors = [
   { name: "Ayman Khoja", image: Rectangle2 },
@@ -239,7 +386,6 @@ export const instructors = [
   { name: "Odai Abed", image: Rectangle42 },
   { name: "Khalid Yaslam", image: Rectangle43 },
 ];
-//importing bloghero component content
 export const blogPosts = [
   {
     id: 1,
@@ -284,18 +430,28 @@ export const CoursesData = [
   { name: "Acting", backgroundImage: `url(${FrameDiv2})` },
   { name: "Editing", backgroundImage: `url(${FrameDiv1})` },
 ];
+
 export const questionsData = [
   {
     question: "Scriptwriting Introduction",
     answers: [
-      "The Importance of Filmmaking - 3:59",
-      "Stages of Film Production - 2:49",
-      "Film Crew Departments - 3:20 ",
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
       "Understanding the Hierarchical",
-      "Structure of the Production Team - 2:39",
-      "About Maflam Platform - 1:39",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
     ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
   },
+  
   {
     question: "From Idea to Story",
     answers: [
@@ -341,30 +497,132 @@ export const questionsData = [
   },
 ];
 
-export default questionsData;
+
+
+
+export const CourseContentData = [
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  {
+    question: "Scriptwriting Introduction",
+    answers: [
+      "The Importance of Filmmaking ",
+      "Stages of Film Production ",
+      "Film Crew Departments ",
+      "Understanding the Hierarchical",
+      "Structure of the Production Team  ",
+      "About Maflam Platform ",
+    ],
+    timeStamp: [
+          "3:59",
+          "2:49",
+          "3:20",
+          "2:39",
+          "1:39",
+
+    ]
+  },
+  
+  
+];
+
+
 
 //import latest insights
 export const insights = [
   {
     id: 1,
     title: "Our mission is to deliver top-quality educational content.",
-    imageUrl: Insights1, // Replace with your image paths
+    imageUrl: Insights1,
     category: "GL18",
   },
   {
     id: 2,
     title: "Our mission is to deliver top-quality educational content.",
-    imageUrl: Insights2, // Replace with your image paths
+    imageUrl: Insights2,
     category: "GL18",
   },
   {
     id: 3,
     title: "Our mission is to deliver top-quality educational content.",
-    imageUrl: Insights3, // Replace with your image paths
+    imageUrl: Insights3,
     category: "GL18",
   },
 ];
-//import popular resources content
 export const resources = [
   {
     id: 1,
@@ -392,33 +650,18 @@ export const resources = [
   },
 ];
 
-// export const featuresData = [
-//   {
-//     title: "Get certified",
-//     description: "Earn a certificate on completing the courses.",
-//   },
-//   {
-//     title: "Lifetime Access to Material",
-//     description: "Access all the learning material anytime.",
-//   },
-//   { title: "Ask your instructors", description: "Get support from experts." },
-//   {
-//     title: "Learn Anytime, Anywhere",
-//     description: "Access from any device at your convenience.",
-//   },
-// ];
 export const featuresData = [
   {
     title: "A Community of Aspiring Filmmakers",
-    description: "Earn a certificate on completing the courses.",
+
   },
   {
     title: "A Passion for Empowering Cinematic Talents",
-    description: "Access all the learning material anytime.",
+
   },
   {
     title: "A Comprehensive Educational Experience in Arabic",
-    description: "Get support from experts.",
+
   },
 ];
 
@@ -500,40 +743,6 @@ export const courses = [
   { title: "Introduction to Premiere Pro", img: course2 },
 ];
 
-export const footerColumnData = [
-  {
-    title: "Subscriptions",
-    links: [
-      { text: "Subscription prices", href: "#" },
-      { text: "Full courses", href: "#" },
-      { text: "Specialized courses", href: "#" },
-    ],
-  },
-  {
-    title: "Free education materials",
-    links: [
-      { text: "Blog", href: "#" },
-      { text: "E-book", href: "#" },
-      { text: "Join the mailing list", href: "#" },
-    ],
-  },
-  {
-    title: "Get to know Maflam",
-    links: [
-      { text: "About Maflam", href: "#" },
-      { text: "Our programs", href: "#" },
-      { text: "Our services", href: "#" },
-    ],
-  },
-  {
-    title: "Contact Us",
-    links: [
-      { text: "Join the Maflam world", href: "#" },
-      { text: "FAQs", href: "#" },
-      { text: "Contact information", href: "#" },
-    ],
-  },
-];
 export const faqData = [
   {
     question: "When doese my course subscription end?",
@@ -594,6 +803,7 @@ export const VariousCard = [
     para: "SAR ",
     price: "750",
     image: Ellipse1,
+    button: "Buy Now",
 
     duration: "5 hours of viewing",
     icon: Groups,
@@ -664,44 +874,75 @@ export const VariousCard = [
     icon: Groups,
     imageUrl: variousCourse5,
   },
-  {
-    id: 7,
-    instructor: "Ayman Khoja",
-    title: "Introduction to Vegas Pro",
-    description:
-      "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
-    price: "750",
-    para: "SAR ",
+  // {
+  //   id: 7,
+  //   instructor: "Ayman Khoja",
+  //   title: "Introduction to Vegas Pro",
+  //   description:
+  //     "In this course, we will explore the challenges filmmakers face, how to manage and overcome them. We will also discuss how they create a balance between their work and personal life, set their pricing, and engage with the community.",
+  //   price: "750",
+  //   para: "SAR ",
 
-    duration: "5 hours of viewing",
-    icon: Groups,
-    imageUrl: variousCourse6,
-  },
-  {
-    id: 8,
-    instructor: "Ayman Khoja",
-    title: "Introduction to DaVinci Resolve",
-    description:
-      "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
-    price: "750",
-    para: "SAR ",
-    duration: "5 hours of viewing",
-    icon: Groups,
-    imageUrl: variousCourse7,
-  },
-  {
-    id: 9,
-    instructor: "Ayman Khoja",
-    title: "Introduction to Premiere Pro",
-    description:
-      "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
-    price: "750",
-    para: "SAR ",
-    duration: "5 hours of viewing",
-    icon: Groups,
-    imageUrl: variousCourse8,
-  },
+  //   duration: "5 hours of viewing",
+  //   icon: Groups,
+  //   imageUrl: variousCourse6,
+  // },
+  // {
+  //   id: 8,
+  //   instructor: "Ayman Khoja",
+  //   title: "Introduction to DaVinci Resolve",
+  //   description:
+  //     "In this course, we will explore the challenges filmmakers face and how to address and overcome them. We will also discuss how they balance their work and personal life, set their rates, and interact with the community.",
+  //   price: "750",
+  //   para: "SAR ",
+  //   duration: "5 hours of viewing",
+  //   icon: Groups,
+  //   imageUrl: variousCourse7,
+  // },
+  // {
+  //   id: 9,
+  //   instructor: "Ayman Khoja",
+  //   title: "Introduction to Premiere Pro",
+  //   description:
+  //     "In this course, you will master the use of Premiere, how to start a project and use all the available tools and effects, in addition to extracting files in different formats, adjusting color and sound intensity, and other details of professional editing.",
+  //   price: "750",
+  //   para: "SAR ",
+  //   duration: "5 hours of viewing",
+  //   icon: Groups,
+  //   imageUrl: variousCourse8,
+  // },
 ];
+
+export const articles =
+ [
+    {
+      "title": "How does a professional Director Manage the Crew on Set?",
+      "description": "Educational, Entertaining, Research-Based, Critical",
+      "category": "Educational",
+      "imageUrl": "image1_url",
+      "readMoreLink": "#"
+    },
+    {
+      "title": "What does a film producer do?",
+      "category": "Category",
+      "imageUrl": "image2_url",
+      "readMoreLink": "#"
+    },
+    {
+      "title": "How do you showcase your unique writing style?",
+      "category": "Category",
+      "imageUrl": "image3_url",
+      "readMoreLink": "#"
+    },
+    {
+      "title": "The Significance of Storytelling",
+      "category": "Category",
+      "imageUrl": "image4_url",
+      "readMoreLink": "#"
+    }
+  ]
+
+
 
 export const cardDetails = {
   title: "Fundamentals of acting",
@@ -714,7 +955,7 @@ export const cardDetails = {
   imageSrc: Checkout,
   para: "Checkout تواصل معنا",
 
-  termcondition:
+  termcondition: 
     "Your subscription wil  l automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
   termcondition1: "By clicking the 'Pay' button above, you agree to the  ",
   termcondition2: " and acknowledge that you have read our .",
@@ -813,37 +1054,75 @@ export const TermsData = [
   },
 ];
 
+// export const faqDataPage = [
+//   {
+//     faq: [
+
+//       {question: "What is Maflam?",
+//         answer: " "
+//       },
+
+//       {
+//         question: "What is Maflam's platform?",
+//         answer:
+//           "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic.",
+//       },
+//       {
+//         question: "When does my course subscription end?",
+//         answer:
+//           "At Maflam, we are committed to providing lifetime access to our filmmaking content...",
+//       },
+//       {
+//         question: "How do you select instructors on Maflam’s platform?",
+//         answer:
+//           "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best.",
+//       },
+//       {
+//         question: "Is there practical content on the platform?",
+//         answer:
+//           "Yes, the platform integrates both theoretical and practical content. It includes exercises...",
+//       },
+//       {
+//         question:
+//           "Will I receive a completion certificate after finishing a course?",
+//         answer: "Currently, all courses offer completion certificates...",
+//       },
+//     ],
+//   }, 
+// ];
+
 export const faqDataPage = [
   {
+    title: "About the Platform",
     faq: [
       {
-        question: "What is Maflam's platform?",
-        answer:
-          "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic.",
+        question: "What is Maflam?",
+        answer: "Maflam is a SaaS online platform offering exclusive and comprehensive filmmaking content in Arabic."
       },
       {
         question: "When does my course subscription end?",
-        answer:
-          "At Maflam, we are committed to providing lifetime access to our filmmaking content...",
+        answer: "At Maflam, we are committed to providing lifetime access to our filmmaking content..."
       },
+    ]
+  },
+  {
+    title: "About Our Courses",
+    faq: [
       {
         question: "How do you select instructors on Maflam’s platform?",
-        answer:
-          "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best.",
+        answer: "We carefully select industry professionals with a track record in filmmaking, ensuring students learn from the best."
       },
       {
-        question: "Is there practical content on the platform?",
-        answer:
-          "Yes, the platform integrates both theoretical and practical content. It includes exercises...",
+        question: "Will I receive a completion certificate after finishing a course?",
+        answer: "Currently, all courses offer completion certificates..."
       },
-      {
-        question:
-          "Will I receive a completion certificate after finishing a course?",
-        answer: "Currently, all courses offer completion certificates...",
-      },
-    ],
-  },
+    ]
+  }
 ];
+
+
+
+
 export const learnData = [
   "In this course, you will learn how to become a director and manage a film set, as well as the key points to consider when choosing a script. You’ll also understand what to focus on during the preparation phase, how to select and work with actors, and how to interact with them effectively.",
   " You will dive deep into camera techniques, understanding the meaning behind camera movements, how to establish a scene, manage production, and make the most of each shooting day until the film reaches the editing room. Together, we will explore essential directing rules you must follow to professionally direct your first film.",
@@ -857,3 +1136,16 @@ export const aboutInstructorData = {
     " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
   ],
 };
+
+export const FilmProductionInstructorData = {
+  name: "Ayman khoja",
+  details: [
+    "A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017.",
+    "  Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments.",
+    " Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses.",
+  ],
+};
+
+export const FilmProductionlearnData = [
+  "In this course, you will learn the fundamentals of production and the role of producers in filmmaking. You'll master financial aspects through effective planning and budgeting, as well as creating precise schedules. Additionally, you'll develop crucial skills for overseeing the film at every stage, working with distributors, and protecting the film's intellectual property rights. You’ll also cover other important details, and you'll have access to downloadable files and worksheets for practical exercises to enhance your skills.",
+];

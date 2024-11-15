@@ -1,37 +1,59 @@
 .carouselWrapper {
-  background-color: #030b11;
+  background: #030B11;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  /* border: 2px solid bisque; */
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-bottom: 120px;
 }
 
 .carouselWrapper h2 {
-  /* color: #fff;
-  padding-top: 100px;
-  text-align: center; */
   color: #FFF;
-
-text-align: center;
-font-family: "Noto Kufi Arabic";
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%;
+  padding-top: 130px;
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
 }
 
+.overlay {
+  position: absolute;
+  right: -400px;
+  bottom: 0;
+  width: 50%;
+  height: 140%;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.8;
+  z-index: 1; /* Make sure overlay is above the video */
+}
+.roverlay {
+  position: absolute;
+  left: -400px;
+  bottom: 0;
+  width: 50%;
+  height: 140%;
+  filter: blur(50px);
+  background: var(--Neutral-Website-Bakground---Dark, #030B11);
+  opacity: 0.9;
+  z-index: 1; /* Make sure overlay is above the video */
+}
 .carousel {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
 }
 
 .carouselSliderContainer {
   width: 100%;
-  overflow-x: scroll;
+  /* margin-top: 20px; */
+  overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-width: none;
 }
@@ -46,19 +68,26 @@ line-height: 160%;
 }
 
 .carouselCard {
-  flex: 0 0 auto;
   margin: 10px;
   box-sizing: border-box;
   text-align: center;
   border-radius: 5px;
-  height: auto;
+  height: 483px;
+  right: 350px;
+  min-width:609px !important;
   color: #fff;
-  width: 385px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
-.carouselCard img {
-  height: 300px;
-  width: 100%;
+.carouselCard video {
+  
+  position: relative;
+  width: 600px;
+  margin-top: 100px;
+  /* Full width of the card */
+  border-radius: 5px; /* Optional: To match the card's border radius */
 }
 
 .carouselArrowLeft,
@@ -72,27 +101,24 @@ line-height: 160%;
   font-size: 30px;
   cursor: pointer;
   padding: 10px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .carouselArrowLeft {
   left: 10px;
-  /* border: 1px solid aliceblue; */
   border-radius: 50%;
-  width: 60px; /* Ensure width and height are equal */
+  width: 60px; 
   height: 60px;
   background-color: #4444;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .carouselArrowRight {
-  right: 10px;
-  /* border: 1px solid #7777; */
+  right: 20px;
   border-radius: 50%;
-  width: 60px; /* Ensure width and height are equal */
+  width: 60px; 
   height: 60px;
   background-color: #4444;
   display: flex;
@@ -105,14 +131,41 @@ line-height: 160%;
   background-color: #4444;
 }
 
-@media (max-width: 768px) {
-  .carouselCard {
-    flex: 0 0 100%;
-    width: 275px;
+@media (max-width:1500px)
+{
+  .carouselWrapper{
+    zoom:0.8;
+  }
+}
+
+@media (max-width:1280px)
+{
+   .carouselWrapper{
+    zoom:0.7;
+   }
+}
+
+@media (max-width:900px)
+{
+  .carouselWrapper
+  {
+    zoom: 0.6;
+  }
+}
+
+@media (max-width:768px)
+{
+  .carousel
+  {
+    max-width: 629px;
+  }
+  .carouselCard
+  {
+    right:0px;
+  }
+  .carouselWrapper
+  {
+    zoom:0.5;
   }
 
-  .carouselArrowLeft,
-  .carouselArrowRight {
-    font-size: 24px;
-  }
 }

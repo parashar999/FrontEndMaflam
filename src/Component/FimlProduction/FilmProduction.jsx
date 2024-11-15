@@ -1,23 +1,26 @@
 
 
-import { assests } from '../../assets/Assests';
+import { assests } from '../../assets/assests';
 import styles from './FilmProduction.module.css';
+import { Link } from 'react-router-dom';
 
 const FilmProduction = () => {
 
-
+// film 
   return (
     <div className={styles.hovercointainer}>
     <div className={styles.hoverimagecontainer}>
       <div className={styles.imagewrapper}>
         <img 
-          src={assests.maflamScreen}
+          src={assests.Maflammac}
           alt="Description"
           className={styles.hoverimage}
         />
         <div className={styles.overlay}>
-          <p> Subscribe to the complete package for film production essentials.</p>
-          <button className={styles.subscribebutton}> Sign Up Now </button>
+          <p> Subscribe To The Full Filmmaking Fundamentals Package.</p>
+          <Link to="/prc" className={styles.subscribebutton}>
+        Subscribe
+          </Link>
         </div>
       </div>
     </div>

@@ -4,15 +4,30 @@ import CourseDetailsHeader from '../../Component/CourseDetailsHeader/CourseDetai
 import WhatWeLearn from '../../Component/WhatWeLearn/WhatWeLearn'
 import KeyTopic from '../../Component/KeyTopic/KeyTopic'
 import Footer from '../../Component/Footer/Footer'
+import { LanguageProvider } from '../../Component/LanguageContext/LanguageContext'
+import CourseContent from '../../Component/CourseContent/CourseContent'
+import ResetPassword from '../../Component/ResetPassword/ResetPassword'
+import FailureMessage from '../../Component/FailureMessage/FailureMessage'
+import SuccessMessage from '../../Component/SuccessMessage/SuccessMessage'
 
 function VegasProCourse() {
   return (
     <div>
+      <LanguageProvider >
+
+
         <Navbar />
         <CourseDetailsHeader />
         <WhatWeLearn />
         <KeyTopic />
+        <CourseContent />
+        <ResetPassword />
+        <FailureMessage />
+        <SuccessMessage />
         <Footer />
+        
+        </LanguageProvider>
+
 
     </div>
   )

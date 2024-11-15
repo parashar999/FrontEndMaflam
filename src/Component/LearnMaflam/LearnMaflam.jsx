@@ -1,14 +1,30 @@
 import styles from "./LearnMaflam.module.css";
-import LearnMaflamImage from "../../assets/LearnMaflamImage.jpg";
+import { useContext } from "react";
+import { HomePageContext } from "../../store/HomePageContext.jsx";
 
 const LearnMaflam = () => {
+  const { homeScreenDetails, loading, error } = useContext(HomePageContext);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading data</p>;
+
+  // Extracting title and video URL from the API response
+  const title =
+    homeScreenDetails?.homeScreenDetailsSec2?.title || "Default Title";
+  const videoUrl = homeScreenDetails?.homeScreenDetailsSec2?.videoUrl || "";
+
   return (
-    <div className={styles.courseContainer}>
+    <div className={styles.coursecontainermain}>
+      <div className={styles.loverlay}></div>
       <div className={styles.coursesContainer}>
-        <h2>Learn About Maflam World</h2>
+        <span className={styles.learnMaflamTitle}>
+          <h2>{title}</h2>
+        </span>
+
         <div className={styles.LearnMaflam}>
-          <img src={LearnMaflamImage} alt="Learn Maflam" />
+          {videoUrl && <video src={videoUrl} controls unmuted />}
         </div>
+        <div className={styles.boverlay}></div>
       </div>
     </div>
   );

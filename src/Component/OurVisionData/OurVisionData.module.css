@@ -1,13 +1,15 @@
 .container {
   /* background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../assets/mafamvisual.png') no-repeat center center; */
   background-size: cover;
-  background-color: #030B11;
+  /* background-color: #030B11; */
   color: white;
-  min-height: 900px;
+  min-height: 800px;
   padding: 40px;
   max-width: 1500px;
   margin: 0 auto;
   text-align: center;
+  margin-top: -50px;
+  z-index: 999;
 }
 
 .headingSection h1 {
@@ -17,8 +19,6 @@
   font-family: "Noto Kufi Arabic";
   font-size: 28px;
   font-style: normal;
-  padding-left: 90px;
-
   padding-top: 70px;
   font-weight: 700;
   line-height: 160%;
@@ -28,15 +28,15 @@
 .headingSection p {
   color: #FFF;
   padding-top: 20px;
-  padding-left: 90px;
-
-  font-family: "Noto Kufi Arabic";
+font-family: "Noto Kufi Arabic";
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
   text-align: start;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  width: 552px;
+  max-width: 100vw;
 }
 
 .underline {
@@ -49,7 +49,6 @@
   stroke-width: 4px;
 stroke: #5AFFFF;
 stroke: #5AFFFF;
-margin-left:90px;
 width: 380px;
 background-color: #5AFFFF;
 height: 1px;
@@ -61,18 +60,17 @@ flex-shrink: 0;
   justify-content: center;
   gap: 90px;
   margin-top:80px;
-  
   flex-wrap: wrap;
+  /* padding: 100px; */
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffffff1a;
   border-radius: 8px;
-  padding: 20px;
-  width: 400px;
+  padding: 50px;
+  width: 580px;
   text-align: center;
   backdrop-filter: blur(10px);
-
 }
 
 .card h3 {
@@ -90,11 +88,12 @@ flex-shrink: 0;
 .card p {
   color: #FFF;
   font-family: "Noto Kufi Arabic";
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   text-align: start;
-  font-weight: 400;
-  line-height: 160%; 
+  font-weight: 300;
+  margin:auto;
+  /* line-height: 160%;  */
 /*  
   text-align: start;
   color: #FFF;
@@ -106,33 +105,31 @@ font-weight: 400;
 line-height: 160%; */
 }
 
-@media (max-width: 768px) {
-  .headingSection h1 {
-      font-size: 2rem;
-      text-align: left;
-      margin-left: -100px;
+@media (max-width:1250px)
+{
+  .headingSection
+  {
+    zoom: 0.8;
   }
-  
-  .headingSection p {
-      font-size: 1rem;
-      margin-left: -100px;
-      text-align: left;
+  .cards h3, .cards p
+  {
+      font-size: smaller;
   }
-  .underline {
-    margin-left: -100px;
-   
-    stroke-width: 4px;
-    margin-top: 40px ;
-  stroke: #5AFFFF;
-  margin-left:90px;
-  width: 200px;
-  background-color: #5AFFFF;
-  height: 1px;
-  flex-shrink: 0;
-  }
+}
 
-  .card {
-      width: 100%;
-      margin-bottom: 20px;
+@media (max-width:768px)
+{
+  .headingSection
+  {
+    zoom: 0.7;
+  }
+  .cards h3, .cards p
+  {
+      font-size: smaller;
+  }
+  .cards p
+  {
+    max-width: 100%;
+    padding: 0px;
   }
 }

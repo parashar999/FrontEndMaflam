@@ -1,44 +1,67 @@
+.parentcont
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .MainContainer {
     height: auto;
-    background-color: #030b11;
-    padding: 30px 0px 50px 0px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    max-width: 1341px !important;
+    /* background-color: #030b11; */
+    font-family: sans-serif;
+    font-size: 36px;
+    color: white;
+    font-weight: 700;
+    padding-top: 20px;
     /* border: 1px solid rebeccapurple; */
   }
   
-  .MainContainer h1 {
-    color: #FFF;
-    text-align: center;
-    font-family: "Noto Kufi Arabic";
+  .MainContainer a
+  {
+    font-family: sans-serif;
     font-size: 36px;
-    font-style: normal;
+    text-decoration: none;
+    color: white;
     font-weight: 700;
-    line-height: 160%; /* 57.6px */
   }
   /* Responsive font size using viewport width */
   
   .pricingimg {
     background-image: url("../../assets/blogpricing.png");
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 300px;
-    margin-top: 100px;
+    width: 1227px;
+    margin: auto;
+    margin-top: 130px;
+    margin-bottom: 250px;
   }
-  
-  .Rectangle {
-    background-image: url("../../assets/maflamhomeimg.png");
-    height: 400px;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-top: -360px;
+  .pricingimg  img{
+    transform: scaleX(-1);
+    position: absolute;
+    filter: blur(1px);
+    top: -100px;
   }
+
   .contentContainer{
-    margin: -330px auto 200px auto;
-    max-width: 650px;
+    position: absolute ;
+    right: 200px;
+    text-align: right;
   }
   .contentContainer h2 {
+    width: 350px;
+    position: relative;
     color: #EBF5F4;
     font-family: "Noto Kufi Arabic";
     font-size: 36px;
@@ -47,117 +70,77 @@
     line-height: 150%; /* 54px */
   }
   .contentContainer p {
+    width: 440px;
+    margin-top: 40px;
     color: #FFF;
+    position: relative;
     font-family: "Noto Kufi Arabic";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 38.4px */
   }
-  .contentContainer a {
+  .contentContainer h5  a{
     color: var(--Accent-Accent-400---Main, #39FFFB);
     font-family: "Noto Kufi Arabic";
-    font-size: 17px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 94.1%; /* 15.997px */
     letter-spacing: -0.34px;
     text-decoration: none;
   }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .MainContainer {
-      height: auto;
-      background-color: #030b11;
-      height: auto;
-      padding: 30px 0px 50px 0px;
-    }
-    .pricingimg {
-      margin-top: -30px;
-      height: 200px;
-      width: auto;
-      margin: 0px 20px;
-    }
-    .Rectangle {
-      margin-top: -200px;
-      height: 200px;
-      width: auto;
-    }
-    .pricingimg {
-      background-image: url("../../assets/blogpricing.png");
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 300px;
-      margin-top: 50px;
-    }
-    .Rectangle {
-      background-image: url("../../assets/maflamhomeimg.png");
-      height: 320px;
-      width: auto;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      margin-top: -320px;
-    }
 
-    .contentContainer{
-        margin: -270px auto 200px auto;
-        max-width: 570px;
-      }
-  
-    .contentContainer h2 {
-        color: #fff;
-        font-size: 30px;
-        line-height: 40px;
-      
-      }
-    .contentContainer p {
-      color: #fff;
-     padding-top: 10px;
-      font-size: 25px;
-      line-height: 35px;
-    }
-    .contentContainer a {
-      font-size: 25px;
+  @media (max-width:1500px)
+  {
+    .pricingimg
+    {
+      zoom: 0.9;
     }
   }
-  @media screen and (max-width: 768px) {
-    .pricingimg {
-      margin-top: -30px;
-      height: 200px;
-      width: auto;
-      margin: 0px 20px;
+
+  @media (max-width:1280px)
+  {
+
+    .MainContainer
+    {
+      zoom: 0.8;
     }
-    .Rectangle {
-        background-image: url("../../assets/maflamhomeimg.png");
-        height: 400px;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin-top: -270px;
-      }
-    .contentContainer{
-        margin: -290px auto 200px auto;
-        max-width: 570px;
-      }
+    .contentContainer
+    {
+      right: 220px;
+    }
+  }
   
-    .contentContainer h2 {
-        color: #fff;
-        font-size: 20px;
-        line-height: 30px;
-        padding: 0px 10px;
-      
-      }
-    .contentContainer p {
-      color: #fff;
-     padding-top: 10px;
-      font-size: 20px;
-      line-height: 25px;
-      padding: 10px 10px;
+  @media (max-width:1000px)
+  {
+    .pricingimg
+    {
+      width: auto;
     }
-    .contentContainer a {
-      font-size: 20px;
-      padding: 10px 10px;
+
+    .MainContainer
+    {
+      zoom: 0.7;
     }
-  } 
+    .contentContainer
+    {
+      right:60px;
+    }
+  }
+
+  @media (max-width:768px)
+  {
+    .MainContainer
+    {
+      zoom: 0.9;
+    }
+    .contentContainer
+    {
+      right: 0px;
+    }
+  }
+
+ 

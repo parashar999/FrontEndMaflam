@@ -1,0 +1,189 @@
+.OurservicesContainer {
+   
+  background-image: url('../../assets/Ourservicesbanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15x;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 50px;
+  width: 100%;
+  max-width: 1900px;
+}
+
+.text {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+
+.ourservicesvector p{
+  margin-top: 60px !important;
+
+}
+.ourservicesvector {
+  background-image: url('../../assets/ourservicevector.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+  margin-top: 30px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  
+}
+
+.frane64 {
+  display: flex;
+  background-image: url('../../assets/Frame 64.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  max-width: 1433px;
+  margin-top: 200px;
+  position: relative;
+  /* border: 1px solid red; */
+ 
+
+}
+
+.frane64 .quotesIcon {
+  position: absolute;
+  left: 20px;
+  top: -60px;
+  padding-left: 20px;
+  height: auto;
+}
+
+.frane64 p {
+  font-size:36px;
+  padding: 40px;
+  text-align: center;
+  line-height: 1.5;
+  width: 80%;
+  /* flex: 1; */
+}
+
+.text2 {
+  display: flex;
+ 
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 20px;
+}
+.flexx{
+  display: flex;
+flex-direction: column;
+}
+
+.text2 h1 {
+  font-size: 2rem;
+  color: #5affff;
+  text-align: center;
+}
+
+.text2 p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+.para
+{
+  margin-top: 6px;
+  color: #FFF;
+text-align: center;
+font-family: "Noto Kufi Arabic";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
+}
+
+.text2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center; 
+}
+
+.text2 h1 {
+  margin: 0; 
+  font-size: 40px;
+}
+
+.text2 p {
+  margin: 0;
+  flex-grow: 1; 
+}
+
+
+
+@media (max-width:1280px)
+{
+  .text
+  {
+    zoom: 0.8;
+  }
+  .text2
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media (max-width:768px)
+{
+  .text
+  {
+    zoom: 0.7;
+  }
+  .frane64 p
+  {
+    font-size: 24px;
+  }
+  .text2
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .OurservicesContainer
+  {
+    padding-top: 0px;
+  }
+  
+  .quotesIcon
+  {
+    top: 0px;
+    height: 80px !important;
+  }
+}
+
+@media (max-width:440px)
+{
+  .quotesIcon
+  {
+    top: 60px;
+    height: 40px !important;
+  }
+  
+  .frane64 p
+  {
+    font-size: 16px;
+  }
+}
