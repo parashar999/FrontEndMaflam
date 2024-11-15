@@ -108,8 +108,8 @@ function LearnAbout() {
 
   return (
     <div>
-      <div className={stylesSelected.mainConatiner}>
-        <h1>{packageData[0]?.title || "Default Title"}</h1>
+      <div className={stylesSelected.mainConatiner} >
+        <h1 style={{zIndex:'1'}}>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Title"}</h2>
         <p>
           {packageData[1]?.description.substring(0, 39) ||

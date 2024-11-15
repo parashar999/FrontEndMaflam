@@ -11,9 +11,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
     position: relative;
-    max-width: 1900px;    
+    max-width: 1300px;    
   }
   
   .carouselcontainer a {
@@ -147,38 +146,10 @@ flex-shrink: 0; */
     justify-content: center;
   }
   
-@media (max-width:1500px)
-{
-  .carouselcontainer{
-
-      zoom: 0.8;
-  }
-}
-
-@media (max-width:1280px)
-{
-  .carouselcontainer{
-
-      zoom: 0.7;
-  }
-  .sliderContainer
+  @media (max-width:1250px)
   {
-    overflow: hidden;
-    width: 340px;
+    .carouselcontainer a
+    {
+      font-size: x-large;
+    }
   }
-  .card
-  {
-    position: relative;
-    left: 0px;
-  }
-  .coverlay
-  {
-    display: none;
-  }
-  .croverlay
-  {
-    display: none;
-  }
-  
-}
-

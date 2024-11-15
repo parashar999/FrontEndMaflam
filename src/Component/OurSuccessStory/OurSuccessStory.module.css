@@ -5,16 +5,15 @@
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
-
+  margin-bottom: 120px;
 }
 
 .carouselWrapper h2 {
   color: #FFF;
+  padding-top: 130px;
   text-align: center;
   font-family: "Noto Kufi Arabic";
   font-size: 36px;
-  margin-top: 150px;
-  margin-bottom: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
@@ -45,7 +44,7 @@
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 1447px;
+  max-width: 1200px;
   margin: auto;
   /* padding: 20px 0px; */
 }
@@ -130,42 +129,10 @@
 .carouselArrowRight:hover {
   background-color: #4444;
 }
-
-@media (max-width:1500px)
-{
-  .carouselWrapper{
-    zoom:0.8;
-  }
-}
-
-@media (max-width:1280px)
-{
-   .carouselWrapper{
-    zoom:0.7;
-   }
-}
-
-@media (max-width:900px)
+@media (max-width:1250px)
 {
   .carouselWrapper
   {
     zoom: 0.6;
   }
-}
-
-@media (max-width:768px)
-{
-  .carousel
-  {
-    max-width: 629px;
-  }
-  .carouselCard
-  {
-    right:0px;
-  }
-  .carouselWrapper
-  {
-    zoom:0.5;
-  }
-
 }

@@ -247,4 +247,8 @@ max-width: 1000px;
     {
       display: none;
     }
+    .contentpara p
+    {
+        font-size: small;
+    }
 }

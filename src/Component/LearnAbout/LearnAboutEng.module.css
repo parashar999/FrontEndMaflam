@@ -20,7 +20,7 @@
   padding: 20px 0px;
 }
 .mainConatiner h1{
-  background: linear-gradient(266deg, #0FF -33.31%, #7C2D98 114.78%);
+ 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -340,6 +340,27 @@ line-height: 180%; /* 25.2px */
   {
     zoom: 0.7;
   }
+  .mainConatiner h1 
+  {
+    font-size: xx-large;
+  }
+  .mainConatiner h2
+  {
+    font-size: large;
+  }
+  .mainConatiner p
+  {
+    font-size: small;
+  }
+  .mainConatiner .para1
+  {
+    font-size: small;
+  }
 
+  .firstcard , .secondcard 
+  {
+    padding: 0px;
+    width: auto;
+  }
   
 }

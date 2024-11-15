@@ -96,7 +96,7 @@
   font-weight: 700;
   color: white;
   font-size: 30px;
-  max-width: 600px;
+  max-width:460px;
   line-height: 57.6px;
 }
 
@@ -116,10 +116,18 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .fullWidthButton
+  {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     zoom: 0.7;
   }
+  
+.infoText {
+    padding: 20px;
+}
 }

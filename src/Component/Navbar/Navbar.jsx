@@ -111,11 +111,11 @@ const Navbar = () => {
       <nav
         className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       >
-
-<div className={styles.menuelements}>
-        <Link to="/">
+      <Link to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </Link>
+
+<div className={styles.menuelements}>
         
           <div className={styles.leftLinks}>
             {/* {console.log("check language", language)} */}
@@ -169,9 +169,6 @@ const Navbar = () => {
         <img src={assests.Globe} alt="Globe Icon" />
       </div> */}
               <div>
-          <button className={styles.langbtn} onClick={toggleLanguage}>
-            {language === "ar" ? "English" : "العربية"}
-          </button>
         </div>
           <div className={styles.rightLinks}>
             {user ? (
@@ -257,6 +254,9 @@ const Navbar = () => {
             )}
           </div>
         </div>
+        <button className={styles.langbtn} onClick={toggleLanguage}>
+            {language === "ar" ? "English" : "العربية"}
+          </button>
         <div className={styles.hamburger} onClick={toggleHamburger}>
           <div></div>
           <div></div>

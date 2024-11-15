@@ -28,6 +28,7 @@
 .menuelements
 {
   display: flex;
+  justify-content: space between;
 }
 .langbtn {
   border: solid rgba(26, 34, 40, 0.9) 1px;
@@ -35,9 +36,9 @@
   font-size: 17px;
   border-radius: 20px;
   width: 80px;
-  margin: auto;
-  margin: 10px;
-  background-color:black;
+  margin-left: 20px;
+  margin-right: 20px;
+  background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
   color: #ccc;
 }
 
@@ -95,7 +96,7 @@
 }
 
 .subIcon {
-  margin-left: 10px;
+  margin-left:10px;
 }
 
 .subIconArb {
@@ -140,6 +141,7 @@
     padding-right: 5px;
     text-align: center;
     align-items: center;
+    z-index: 10;
     height: 100%;
 }
 
@@ -163,10 +165,10 @@ backdrop-filter: blur(120px);
 .submenu a {
 
   display: flex;
+  gap: 5px;
   width: 310px;
   height: 38px;
-  
-  padding: 6px 36px 6px 24px;
+  padding: 8px;
   align-items: center;
 }
 .activeLink {
@@ -204,6 +206,8 @@ background: #18232C;
 
 .arrow {
   display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
   transition: transform 0.3s ease;
 }
 
@@ -299,9 +303,18 @@ background: #18232C;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
+  .navmenu
+  {
+    justify-content: space-between;
+  }
 
+   .dropdown
+   {
+    flex-direction: column;
+    height: auto;
+   }
   .menuelements {
     display: none;
     text-align: center;
@@ -311,17 +324,24 @@ background: #18232C;
     display: flex;
   }
 
+ 
 
  .navbar.active .menuelements {
     display: flex;
-    flex-direction: column;
     position: absolute;
+    flex-direction: column;
     top: 78px;
     right: 0;
     background-color: rgba(26, 34, 40, 0.9);
     width: 100%;
-    height: 130vh;
+    height: 120vh;
     padding-top: 100px;
+  }
+  .navbar
+  {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
   }
   .leftLinks , .rightLinks, .searchContainer
   {
@@ -332,7 +352,6 @@ background: #18232C;
   }
   .leftLinks
   {
-    height: 100%;
     gap: 10px;
   }
 

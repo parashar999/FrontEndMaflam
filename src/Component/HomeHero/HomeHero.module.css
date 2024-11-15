@@ -107,14 +107,17 @@
   
   .content
   {
-    zoom: 0.8
+    padding-right: 40px;
+    zoom: 0.7
+  }
+  .title
+  {
+     font-size: 45px;
+  }
+  .content p
+  {
+      width: auto;
+      font-size: small;
   }
 }
 
-@media (max-width:768px)
-{
-  .content 
-  {
-    zoom: 0.8;
-  }
-}

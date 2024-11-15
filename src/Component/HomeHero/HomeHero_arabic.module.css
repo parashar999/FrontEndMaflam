@@ -109,34 +109,27 @@
   z-index: 0; /* Below the overlay */
 }
 
+
 @media (max-width:1220px)
 {
   
   .content
   {
-    zoom: 0.8
+    padding-left: 40px;
+    zoom: 0.7
   }
 }
 
 @media (max-width:768px)
 {
-  .content 
+  
+  .title
   {
-    zoom: 0.8;
+     font-size: 40px;
   }
-  .content
+  .content p
   {
-    margin-left: 0px;
-    margin-right: 40px;
-  }
-}
-
-@media(max-width:470px)
-{
-  .content
-  {
-    margin-left: 0px;
-    margin-right: 20px;
-    zoom: 0.65;
+      width: auto;
+      font-size: small;
   }
 }

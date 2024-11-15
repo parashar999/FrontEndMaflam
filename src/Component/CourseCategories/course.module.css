@@ -106,6 +106,8 @@ line-height: 160%;
   .courseContainer
   {
     zoom: 0.8;
+    position: relative;
+    top: 150px;
   }
 }
 
@@ -113,6 +115,20 @@ line-height: 160%;
 
   .courseContainer
   {
+    top: 400px;
     zoom: 0.7;
+  }
+  .courseContainer h2
+  {
+    padding-top: 100px;
+    font-size: x-large;
+  }
+}
+
+@media (max-width:500)
+{
+  .courseContainer
+  {
+      top: 600;
   }
 }

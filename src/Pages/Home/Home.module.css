@@ -7,9 +7,9 @@
 }
 
 .Footer{
- 
-  width: 1920px;
   height: 1400px;
+  width: 100vw;
+  max-width: 1920px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,17 @@
   background-image: url("../../assets//blg.png");
   background-repeat: no-repeat;
   background-attachment: cover;
+  height: auto;
   background-position: top;
+}
+
+@media (max-width:1250px)
+{
+  .Footer
+  {
+    height: 1000px;
+    min-height: 600px;
+  }
 }
 
 
