@@ -17,7 +17,7 @@
  .paracontainer {
     width: 100%; /* Use percentage for better responsiveness */
     max-width: 860px; /* Set a max-width for larger screens */
- /* Let the height adjust automatically */
+    height: auto; /* Let the height adjust automatically */
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -27,18 +27,31 @@
  }
  
  .paracontainer h2 {
-     font-size: 50px;
-     color: #fff;
-     line-height: 60px;
-     text-align: center;
+    color: #EBF5F4;
+    text-align: center;
+    
+    /* Headlines/Headline 1 */
+    font-family: "Noto Kufi Arabic";
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 97.5px */
+ }
+ .paracontainer2{
+     width: 684px;
+     margin: 0 auto;
  }
  
- .paracontainer p {
-     color: #fff;
-     line-height: 40px;
-     font-size: 20px;
-     text-align: center;
-     padding: 12px 17%; /* Use percentage for padding */
+ .paracontainer2 p {
+    color: #EBF5F4;
+text-align: center;
+
+/* Subheadline/Subheadline 1 */
+font-family: "Noto Kufi Arabic";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 43.2px */
  }
  
 @media (max-width:1250px)

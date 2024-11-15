@@ -3,14 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 
 
 .Fundamental {
   background-color: #030b11;
   height: auto;
-
+  width: 100vw;
+  max-width: 1500px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the Fundamental container */
+  margin-top: 125px;
+  margin-bottom: 100px;
 }
 
 .secondcontainer {
@@ -25,7 +28,7 @@
   width: 100%;
   text-align: left;
   margin:50px;
-  padding-right:50px ;
+  padding-left:50px ;
   position: relative;
   margin-bottom: 30px;
 }
@@ -34,7 +37,7 @@
   width: 620px;
   color: #fff;
   line-height: 45px;
-  text-align: right;
+  text-align: left;
 padding-top: 100px;
 padding-bottom: 50px;
   font-size: 36px;
@@ -58,22 +61,21 @@ padding-bottom: 50px;
 .imgcontainer  {
   width: 549px;
     position: absolute;
-    top: -30px;
-    left: 20px;
+    right: 0px;
+    top: -60px;
     z-index: 1;
   }
 
 .ctn {
  
- 
   height: auto;
-  margin-right: 50px;
+  margin-left: 50px;
 
   
 }
 .item {
   display: flex;
-  align-items: center;
+  flex-direction: row;
 }
 .checkico {
   margin-right: 10px;
@@ -86,15 +88,14 @@ padding-bottom: 50px;
 .ctn p {
   font-size: 24px;
   color: #fff;
-  font-weight: 100;
-
- 
+  font-weight: 100; 
 }
 .checkicobuttun {
   position: relative;
   box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
   border-radius: 64px;
   background-color: #39fffb;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -108,7 +109,6 @@ padding-bottom: 50px;
   font-weight: 500;
   border: none;
   margin: 10px;
-
 }
 .item b {
   margin-right: 2px;
@@ -161,14 +161,11 @@ padding-bottom: 50px;
   }
   .subscribe
   {
-    padding-right:0px;
+    padding-left: 0px;
     position: relative;
     top: -250px;
   }
-  .imgcontainer
-  {
-    padding-bottom: 100px;
-  }
+
   .content p{
     font-size: xx-large;
     line-height: 75px;
@@ -177,9 +174,8 @@ padding-bottom: 50px;
 }
 @media (max-width:768px)
 {
-  .content p
+  .content
   {
-    font-size: 40px !important;
     padding-left: 0px;
   }
   .Fundamental
@@ -194,28 +190,27 @@ padding-bottom: 50px;
 
 @media (max-width:542px)
 {
-  .subscribe
-  {
-    font-size: 10px;
-  }
 
   .content p{
     font-size: x-large;
     line-height: 75px;
 
 }
+  .subscribe
+  {
+    font-size: 10px;
+  }
 
   .imgcontainer{
     left: 20px;    
   }
 }
-
+.checkico
+{
+  top: 25px !;
+}
 p b
 {
     position: relative;
     top: 12px;
-}
-.checkico
-{
-  top: 25px !;
 }

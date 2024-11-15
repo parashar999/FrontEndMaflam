@@ -1,46 +1,15 @@
-.carouselWrapper {
-  background: #030B11;
+.carouselcontainer {
+  background-color: #030b11;
+  /* border: 2px solid yellow; */
+  background-image: url("../../assets/carouselvector.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
-  max-width: 1250px;
-  margin: 0 auto;
-  margin-bottom: 120px;
+  height: 430px;
 }
-
-.carouselWrapper h2 {
-  color: #FFF;
-  padding-top: 130px;
+.carouselcontainer h2 {
+  color: #fff;
   text-align: center;
-  font-family: "Noto Kufi Arabic";
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 160%;
-}
-
-.overlay {
-  position: absolute;
-  right: -400px;
-  bottom: 0;
-  width: 50%;
-  height: 140%;
-  filter: blur(50px);
-  background: var(--Neutral-Website-Bakground---Dark, #030B11);
-  opacity: 0.8;
-  z-index: 1; /* Make sure overlay is above the video */
-}
-.roverlay {
-  position: absolute;
-  left: -400px;
-  bottom: 0;
-  width: 50%;
-  height: 140%;
-  filter: blur(50px);
-  background: var(--Neutral-Website-Bakground---Dark, #030B11);
-  opacity: 0.9;
-  z-index: 1; /* Make sure overlay is above the video */
 }
 .carousel {
   position: relative;
@@ -52,14 +21,7 @@
 
 .carouselSliderContainer {
   width: 100%;
-  /* margin-top: 20px; */
-  overflow-x: hidden;
-  overflow-y: hidden;
-  scrollbar-width: none;
-}
-
-.carouselSliderContainer::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 .carouselSlider {
@@ -71,23 +33,23 @@
   margin: 0 10px; /* Margin to create space between cards */
   box-sizing: border-box;
   text-align: center;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  height: 483px;
-  right: 30%;
-  min-width:609px !important;
+  height: 280px;
   color: #fff;
-  margin-top: 10px;
-  overflow: hidden;
-  position: relative;
 }
-
-.carouselCard video {
-  margin-top: 50px;
-  position: relative;
-  height: 483px;
-  right: 25%;
-  /* Full width of the card */
-  border-radius: 5px; /* Optional: To match the card's border radius */
+.card h2 {
+  font-size: 17px;
+  text-align: right;
+}
+.contentimg p {
+  font-size: 11px;
+  width: 100px;
+}
+.contentimg {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px 20px 170px;
 }
 
 .carouselArrowLeft,
@@ -104,56 +66,16 @@
   z-index: 100;
 }
 
-.carouselArrowLeft {
-  left: 10px;
-  border-radius: 50%;
-  width: 60px; 
-  height: 60px;
-  background-color: #4444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.left {
+  left: 0px;
 }
 
-.carouselArrowRight {
-  right: 10px;
-  border-radius: 50%;
-  width: 60px; 
-  height: 60px;
-  background-color: #4444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.right {
+  right: 0;
 }
 
-.carouselArrowLeft:hover,
-.carouselArrowRight:hover {
-  background-color: #4444;
-}
-
-@media (max-width:1500px)
-{
-  .carouselWrapper{
-    zoom:0.8;
-  }
-}
-
-@media (max-width:1280px)
-{
-   .carouselWrapper{
-    zoom:0.7;
-   }
-}
-
-@media (max-width:900px)
-{
-  .carouselWrapper
-  {
-    max-width: 800px;
-    zoom: 0.5;
-  }
-  .carouselCard
-  {
-    right: 70%;
+@media (max-width: 768px) {
+  .card {
+    flex: 1 0 100%; /* On mobile, show one card at a time */
   }
 }

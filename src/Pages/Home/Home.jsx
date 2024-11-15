@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
+import ShowsPodcast from "../../Component/ShowsPodcast/ShowsPodcast";
 import HomeHero from "../../Component/HomeHero/HomeHero";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
 import ViewCourses from "../../Component/ViewCourses/ViewCourses";
@@ -42,6 +43,7 @@ const Home = () => {
           <ViewCourses />
           <CourseGrid />
           <Fundamental />
+          <ShowsPodcast></ShowsPodcast>
           <Ourservices />
           <SuccessPartners />
           <LearnAbout />
