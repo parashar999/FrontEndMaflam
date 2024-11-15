@@ -52,7 +52,7 @@
   background-repeat: no-repeat;
   width: 100%;
   padding: 40px;
-  padding-right: 60px;
+  padding-left: 60px;
   max-width: 1427.255px;
   border-radius: 20px;
   position: relative;
@@ -61,7 +61,7 @@
 .imgcontainer  {
   width: 549px;
     position: absolute;
-    left: 150px;
+    left: 50px;
     top: -120px;
     z-index: 1;
   }
@@ -103,7 +103,7 @@
   justify-content: center;
   padding: 5px 7px;
   box-sizing: border-box;
-  text-align: right;
+  text-align: left;
   font-size: 17px;
   width: 160px;
   color: #000;
@@ -113,7 +113,7 @@
   margin: 10px;
 }
 .item b {
-  margin-right: 2px;
+  margin-left: 2px;
   color: aqua;
   font-size: 25px;
 }
@@ -132,7 +132,7 @@
   }
   .imgcontainer
   {
-    left: 0px;
+    left: 5px;
   }
 }
 
@@ -140,7 +140,11 @@
 {
   .Fundamental
   {
-    zoom: 0.7;
+    zoom: 0.8;
+  }
+  .imgcontainer
+  {
+    left: -35px;
   }
 }
 @media (max-width:1250px)
@@ -151,6 +155,7 @@
   }
   .content
   {
+    padding-top: 150px;
     zoom: 0.8;
     display: flex;
     flex-direction: column;
@@ -174,17 +179,21 @@
   }
 
   .content p{
-    font-size: x-large;
+    font-size: xx-large;
     line-height: 75px;
 
 }
 }
 @media (max-width:768px)
 {
-  .contntet p
+  .content p
   {
+    
     padding-top: 150px;
     font-size: x-large;
+    margin-inline-start: 0px;
+    padding-bottom: 40px;
+    text-align: center;
   }
   .content
   {
@@ -209,9 +218,8 @@
 {
 
   .content p{
+    font-size: 45px;
     margin: 0px;
-    line-height: 75px;
-
 }
   .subscribe
   {

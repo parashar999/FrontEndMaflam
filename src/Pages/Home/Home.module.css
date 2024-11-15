@@ -15,6 +15,7 @@
   align-items: center;
   margin: auto;
   background: url('../../assets/FooterBg.png');
+  background-position: bottom;
 }
 
 .BlogContainer{
@@ -24,6 +25,7 @@
   background-attachment: cover;
   height: auto;
   background-position: top;
+  background-size: auto;
 }
 
 @media (max-width:1250px)

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Faqs.module.css";
 
+
 import { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { AiOutlineArrowDown } from "react-icons/ai";
@@ -34,7 +35,7 @@ const Faqs = () => {
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={styles.question}> {item.title}</div>
+            <div className={styles.question}> + {item.title}</div>
             <div
               className={`${styles.answer} ${
                 activeIndex === index ? styles.showAnswer : ""

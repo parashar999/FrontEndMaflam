@@ -107,9 +107,9 @@
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1400px) {
   .container {
-    zoom: 0.8;
+    zoom: 0.7;
   }
   .courseGrid {
     max-width: 80%;

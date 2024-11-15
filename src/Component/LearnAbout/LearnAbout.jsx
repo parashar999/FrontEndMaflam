@@ -107,7 +107,7 @@ function LearnAbout() {
   };
 
   return (
-    <div>
+    <div className={stylesSelected.parentmain}>
       <div className={stylesSelected.mainConatiner} >
         <h1 style={{zIndex:'1'}}>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Title"}</h2>
@@ -124,7 +124,7 @@ function LearnAbout() {
             <h4>{packageData[2]?.title || "Default Title"}</h4>
             <div className={stylesSelected.breakline}></div>
             <p>
-              {packageData[3]?.title} <span>{currencyText}</span>
+              {packageData[3]?.title} <span className={stylesSelected.currencyText}>{currencyText}</span>
             </p>
 
             <button className={stylesSelected.subscribebutton}>
@@ -141,7 +141,7 @@ function LearnAbout() {
             <h4>{packageData[5]?.title || "Traditional Education"}</h4>
             <div className={stylesSelected.breakline}></div>
             <p>
-              {packageData[6]?.title} <span>{currencyText}</span>
+              {packageData[6]?.title} <span className={stylesSelected.currencyText}>{currencyText}</span>
             </p>
 
             <div className={stylesSelected.buttondiv}>

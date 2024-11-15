@@ -10,7 +10,8 @@
   text-align: center;
   margin: auto;
   position: relative;
-  font-family: 'work Sans', sans-serif;
+  font-family: "Noto Kufi Arabic";
+
   width: 100%;
   max-width: 1900px;
 }
@@ -63,16 +64,16 @@
 }
 
 .question {
-color: #5affff;
-/* text-align: right; */
-font-family: "Noto Kufi Arabic";
+
 font-size: 24px;
 width: 724px;
 max-width: 90%;
-text-wrap: wrap;
+color: #5AFFFF;
+text-align: start;
+font-family: "Noto Kufi Arabic";
+font-size: 24px;
 font-style: normal;
 font-weight: 700;
-text-align: start;
 line-height: 160%; /* 38.4px */
 
  
@@ -82,7 +83,8 @@ line-height: 160%; /* 38.4px */
 {
   color: #FFF;
 text-align: center;
-font-family: "Work Sans";
+font-family: "Noto Kufi Arabic";
+
 font-size: 42px;
 font-style: normal;
 font-weight: 700;
@@ -91,26 +93,21 @@ line-height: 160%; /* 67.2px */
 }
 
 .answer {
-  color: #FFF;
+  color: white;
   /* text-align: right; */
   display: none; 
-  text-align: start;
-  width: 724px;
+  text-align:start;
+  max-width: 724px;
   margin: 0 auto;
+ 
   text-wrap: wrap;
   position: relative;
-  font-family: Inter;
+  color: #FFF;
+  font-family: "Noto Kufi Arabic";
   font-size: 24px;
   font-style: normal;
-  font-weight: 100;
-  line-height: 140%; 
-  max-width: 90%;
- opacity: 0.7;
-font-family: "Work Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 300;
-line-height: 160%;
+  font-weight: 300;
+  line-height: 160%;
 }
 
 .showAnswer {
@@ -168,6 +165,13 @@ line-height: 160%;
 @media (max-width:768px)
 {
   .faqContainer .answer
+  {
+    padding-left: 10px;
+    padding-right:10px ;
+    font-size: small;
+    margin-top: 0px;
+  }
+  .faqContainer .question
   {
     font-size: small;
   }
