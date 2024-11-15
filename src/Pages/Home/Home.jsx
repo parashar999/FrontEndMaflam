@@ -44,7 +44,7 @@ const Home = () => {
           <ViewCourses />
           <CourseGrid />
           <Fundamental />
-          <ShowsPodcast></ShowsPodcast>
+          {/* <ShowsPodcast></ShowsPodcast> */}
           <Ourservices />
           <SuccessPartners />
           <LearnAbout />

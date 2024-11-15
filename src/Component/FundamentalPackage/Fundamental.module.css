@@ -9,7 +9,11 @@
 .Fundamental {
   background-color: #030b11;
   height: auto;
-
+  width: 100vw;
+  max-width: 1500px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the Fundamental container */
+  margin-top: 125px;
+  margin-bottom: 100px;
 }
 
 .secondcontainer {
