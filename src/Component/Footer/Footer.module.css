@@ -197,6 +197,13 @@
         text-align: center;
         padding: 10px;
     }
+    .footerColumn h4
+    {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        text-decoration: underline;
+    }
     .footerLinks a
     {
         margin-left: 0px !important;
