@@ -6,26 +6,21 @@
    margin: 0 auto; 
     min-height:700px;
     padding: 0px 60px;
-     background-size: cover;
-
-  background-position: center;
+     background-size: contain;
+    display: flex;
+    flex-direction: column;
+  background-position:center;
   background-image: url('../../assets/AboutBackground.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   align-items: center;
-  
   line-height: 35px;
-  
   padding: 20px 0px;
-  
-  
- 
- 
 }
 .mainConatiner h1{
-  background: linear-gradient(266deg, #0FF -33.31%, #7C2D98 114.78%);
+ 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -40,7 +35,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 150%;
 font-family: "Noto Kufi Arabic";
-font-size: 40px;
+font-size: 65px;
 font-style: normal;
 font-weight: 700;
 line-height: 150%;
@@ -91,40 +86,35 @@ color: #EBF5F4;
   line-height: 180%;
 }
 .contentConatiner {
-  height: auto;
-  /* border: 2px solid red; */
-  margin: 10px 200px;   
+  height: auto; 
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin: 0px 0px;
 
 }
-.firstcard{
-  height: 500px;
-  border: 0.2px solid #00FFFF;
-  width: 420px;
-  height: auto;
-  border: 0.2px solid #00FFFF;
-  width: 390px;
+.firstcard,  .secondcard{
+  height: 544px;
+  border: 1px solid #00FFFF;
+  width: 470px;
   border-radius: 20px;
-  margin: 40px 0px;
- 
-  
+  margin: 20px;
+  border-radius: 40px;
+  padding: 40px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  opacity: 0.6;
 }
-.firstcard h4{
-  /* color: #fff;
-  font-size: 25px;
-  text-align: left;
-  padding: 10px 25px; */
+.firstcard h4 , .secondcard h4{
   color: var(--Accent-Accent-50, #F6FFFF);
 font-family: "Noto Kufi Arabic";
 font-size: 28px;
 font-style: normal;
-text-align: left;
+text-align: start;
 margin-left: 30px;
-margin-bottom: 20px;
+margin-bottom: 30px;
 font-weight: 700;
 line-height: 160%;
 display: flex;
@@ -137,32 +127,31 @@ align-self: stretch;
 .firstcard p{
   color: var(--Accent-Accent-50, #F6FFFF);
 font-family: "Noto Kufi Arabic";
-font-size: 25px;
+font-size: 24px;
 font-style: normal;
-font-weight: 700;
 line-height: 160%; /* 57.6px */
 text-align: left;
 padding: 30px 25px 0px 25px;
 }
-.firstcard  .breakline{
-  width: 80%;
-  margin: 0px 25px;
-  height: 2px;
-  color: #000;
-  background-color: aqua;
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+
+.firstcard:hover , .secondcard:hover
+{
+  transform: scale(1.12) translateY(-20px);
+  opacity: 1;
 }
-.firstcard p{
+.firstcard p, .secondcard p{
+  display: flex;
+  width: 100%;
   font-size: 28px;
   padding: 10px 25px;
+  font-weight: 700;
   color: #00FFFF;
-  text-align: left;
-  
+  text-align: start;
 }
-.firstcard span{
+.firstcard span, .secondcard span{
   color: #fff;
-  font-size: 22px;
+  margin: 10px;
+  font-size: 12px;
 }
 .firstcard h2{
   color: var(--Accent-Accent-400---Main, #39FFFB);
@@ -196,6 +185,8 @@ padding: 30px 25px 0px 25px;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  font-weight: 800;
+  font-size: 17px;
   border-radius: 64px;
 background: var(--Accent-Accent-400---Main, #39FFFB);
 box-shadow: 0px 10px 30px 0px rgba(90, 255, 234, 0.30);
@@ -228,53 +219,24 @@ height: 20px;
   /* border: 1px solid beige; */
   height: 200px;
   line-height: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   margin-top: 0px;
+  align-items: start;
 }
 
 
-
-
-.secondcard{
-  height: 450px;
-  border: 1px solid #00FFFF;
-  width: 400px;
-  height: 460px;
-  border: 1px solid #00FFFF;
-  width: 370px;
-  margin-top:80px;
-  border-radius: 20px;
- 
-}
-.secondcard h4{
-  color: var(--Accent-Accent-50, #F6FFFF);
-text-align: left;
-
-/* Headlines/Healdine 5 */
-font-family: "Noto Kufi Arabic";
-font-size: 25px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%; /* 44.8px */
-padding: 50px 25px 0px 25px;
-/* margin-top: 20px; */
-margin-bottom: 20px;
-
-}
-.secondcard  .breakline{
+.secondcard  .breakline, .firstcard .breakline{
   width: 85%;
   margin: 0px 25px;
-  height: 2px;
+  height: 3px;
   color: #000;
   background-color: aqua;
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 }
-.secondcard p{
-  font-size: 28px;
-  padding: 10px 28px;
-  color: #00FFFF;
-  text-align: left;
-}
+
 .secondcard span{
   color: #fff;
   font-size: 20px;
@@ -330,7 +292,7 @@ line-height: 180%; /* 25.2px */
   color: #fff;color: #FFF;
   text-align: center;
   font-family: "Noto Kufi Arabic";
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 180%; /* 36px */}
@@ -378,6 +340,27 @@ line-height: 180%; /* 25.2px */
   {
     zoom: 0.7;
   }
+  .mainConatiner h1 
+  {
+    font-size: xx-large;
+  }
+  .mainConatiner h2
+  {
+    font-size: large;
+  }
+  .mainConatiner p
+  {
+    font-size: small;
+  }
+  .mainConatiner .para1
+  {
+    font-size: small;
+  }
 
+  .firstcard , .secondcard 
+  {
+    padding: 0px;
+    width: auto;
+  }
   
 }

@@ -84,15 +84,15 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
-import styles from "./LearnAbout.module.css";
-import stylesEng from "./LearnAboutEng.module.css";
+import stylesSelected from "./LearnAboutEng.module.css";
+
 
 function LearnAbout() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
-  const stylesSelected = language === "ar" ? styles : stylesEng;
+
   const packageData = homeScreenDetails?.packageData || [];
   const termsText =
     language === "ar" ? "الشروط والأحكام  " : " terms and condition";
@@ -108,8 +108,8 @@ function LearnAbout() {
 
   return (
     <div>
-      <div className={stylesSelected.mainConatiner}>
-        <h1>{packageData[0]?.title || "Default Title"}</h1>
+      <div className={stylesSelected.mainConatiner} >
+        <h1 style={{zIndex:'1'}}>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Title"}</h2>
         <p>
           {packageData[1]?.description.substring(0, 39) ||

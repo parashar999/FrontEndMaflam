@@ -33,7 +33,7 @@ function Fundamental() {
       <div className={stylesSelected.Fundamental}>
         <div className={stylesSelected.secondcontainer}>
           <div className={stylesSelected.content}>
-            <p style={{ maxWidth: "100%", textAlign: "center" }}>{title}</p>
+            <p style={{ maxWidth: "100%"}}>{title}</p>
             <div className={stylesSelected.imgcontainer}>
               <img
                 src={imageUrl}
