@@ -8,11 +8,12 @@ import { ContactUs2Context } from "../../store/ContactUs2Context";
 import downloadIcon from "../../assets/downloadIcon.png";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import { MdDelete } from "react-icons/md";
+// import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const { contactUs2ContextDetails, loading, error } = useContext(ContactUs2Context);
   const { language } = useContext(LanguageContext);
-
+  // const navigate  = useNavigate()
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
@@ -45,6 +46,7 @@ const ContactForm = () => {
     jobTitleInEng: "",
     coverLetterInEng: "",
   });
+ 
 
   const handleFileUpload = (e, setter) => {
     setter(e.target.files[0]);
@@ -70,6 +72,9 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 1000, behavior: "smooth" });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -91,7 +96,7 @@ const ContactForm = () => {
       // toast.success("Form submitted successfully!");
       toast.success(res.data.message);
       setTimeout(() => {
-        window.location.reload();
+        scrollToTop();
       }, 2000);
     } catch (err) {
       const errorMessage = err.res?.data?.message || err.message;
