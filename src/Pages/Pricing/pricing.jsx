@@ -4,8 +4,20 @@ import Footer from "../../Component/Footer/Footer";
 import Navbar from "../../Component/Navbar/Navbar";
 import Carousel from "../../Component/CarouselCard/Carousel";
 import VariousCourse from "../../Component/VariousCourse/VariousCourse";
-
-
+import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
+import { HomePageContext, HomePageProvider } from "../../store/HomePageContext";
+import MaflanContent from "../../Component/MaflanContent/MaflanContent";
+import JoinUs from "../../Component/JoinUs/JoinUs";
+import bggradient from "../../assets/PricingPageVector.png"
+import {
+  AboutusPageContext,
+  AboutusPageProvider,
+} from "../../store/AboutUsPageContext";
+import {
+  PricingPageContext,
+  PricingPageContextProvider,
+} from "../../store/PricingPageContext";
+import { useContext, useEffect } from "react";
 
 function Pricing() {
   const {
@@ -14,11 +26,11 @@ function Pricing() {
     error: homeError,
   } = useContext(HomePageContext);
 
-  // useEffect(() => {
-  //   if (homeScreenDetails) {
-  //     console.log("Home Screen Details:", homeScreenDetails);
-  //   }
-  // }, [homeScreenDetails]);
+  useEffect(() => {
+    if (homeScreenDetails) {
+      console.log("Home Screen Details:", homeScreenDetails);
+    }
+  }, [homeScreenDetails]);
 
   const {
     aboutusScreenDetails,
@@ -26,11 +38,11 @@ function Pricing() {
     error: aboutError,
   } = useContext(AboutusPageContext);
 
-  // useEffect(() => {
-  //   if (aboutusScreenDetails) {
-  //     console.log("About Us Screen Details:", aboutusScreenDetails);
-  //   }
-  // }, [aboutusScreenDetails]);
+  useEffect(() => {
+    if (aboutusScreenDetails) {
+      console.log("About Us Screen Details:", aboutusScreenDetails);
+    }
+  }, [aboutusScreenDetails]);
 
   const {
     pricingPageContextDetails,
@@ -38,20 +50,32 @@ function Pricing() {
     error: pricingerror,
   } = useContext(PricingPageContext);
 
-  // useEffect(() => {
-  //   if (pricingPageContextDetails) {
-  //     console.log("Home Screen Details:", pricingPageContextDetails);
-  //   }
-  // }, [pricingPageContextDetails]);
+  useEffect(() => {
+    if (pricingPageContextDetails) {
+      console.log("Home Screen Details:", pricingPageContextDetails);
+    }
+  }, [pricingPageContextDetails]);
   return (
     <>
       <div>
-        <Navbar></Navbar>
-        <PricingPage></PricingPage>
-        <Fundamental></Fundamental>
-        <VariousCourse></VariousCourse>
-        <Carousel></Carousel>
-         <Footer></Footer>
+        <LanguageProvider>
+          <HomePageProvider>
+            <AboutusPageProvider>
+              <PricingPageContextProvider>
+                <Navbar></Navbar>
+                <PricingPage></PricingPage>
+                <Fundamental></Fundamental>
+                <div id="Coursesgrid">
+                <VariousCourse></VariousCourse>
+                </div>
+                {/* <Carousel></Carousel> */}
+                <MaflanContent />
+                <JoinUs />
+                <Footer></Footer>
+              </PricingPageContextProvider>
+            </AboutusPageProvider>
+          </HomePageProvider>
+        </LanguageProvider>
       </div>
     </>
   );
