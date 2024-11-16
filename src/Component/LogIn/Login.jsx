@@ -104,7 +104,7 @@ const Login = () => {
               value={emailOrPhone}
               onChange={(e) => setEmailOrPhone(e.target.value)}
             />
-            <label htmlFor="password">{passwordLabel}</label>
+            <label style={{marginTop:'15px'}} htmlFor="password">{passwordLabel}</label>
             <div className={styles.passwordContainer}>
               <input
                 type={isPasswordVisible ? "text" : "password"}
@@ -115,7 +115,7 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <div
+                            <div
                 className={styles.eyeIcon}
                 onClick={togglePasswordVisibility}
                 role="button"
@@ -138,7 +138,7 @@ const Login = () => {
           </form>
           <div className={styles.divider}>
             <hr className={styles.hrLine} />
-            <span>or</span>
+            <span style={{fontSize:'22px'}} >or</span>
             <hr className={styles.hrLine} />
           </div>
           <div className={styles.socialLogin}>
@@ -148,7 +148,7 @@ const Login = () => {
               text={googleLoginText}
             />
           </div>
-          <div>
+          <div style={{width:'100%'}}>
             <a href="/signUp" className={styles.createAccount}>
               Create an account
             </a>
