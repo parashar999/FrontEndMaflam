@@ -202,6 +202,7 @@
         text-align: center;
         padding-top: 20px;
         padding-bottom: 5px;
+        min-width: 400px;
         text-decoration: underline;
     }
     .footerLinks a
@@ -211,5 +212,10 @@
     .footerLink
     {
         padding-inline-end: 0px;
+    }
+    .footerColumn ul li
+    {
+        margin-bottom: 0px;
+        min-width: 400px;
     }
 }

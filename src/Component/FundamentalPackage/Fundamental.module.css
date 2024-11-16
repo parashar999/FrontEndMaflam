@@ -169,7 +169,9 @@
   }
   .content p
   {
+    margin-inline-start: 0px;
     width: auto;
+    text-align: center;
   }
   .subscribe
   {
@@ -191,7 +193,7 @@
     
     padding-top: 150px;
     font-size: x-large;
-    margin-inline-start: 0px;
+
     padding-bottom: 40px;
     text-align: center;
   }
