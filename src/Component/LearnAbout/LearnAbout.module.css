@@ -407,6 +407,11 @@ line-height: 180%; /* 25.2px */
     font-size: 45px;
 
   }
+
+  .mainConatiner p
+  {
+    padding-top: 50px;
+  }
   
 }
 

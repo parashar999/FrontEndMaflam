@@ -144,6 +144,7 @@ padding: 30px 25px 0px 25px;
   transform: scale(1.12) translateY(-20px);
   opacity: 1;
 }
+
 .firstcard p, .secondcard p{
   display: flex;
   width: 100%;
@@ -205,6 +206,10 @@ border: none;
   padding: 2px 10px;
   border: none;
   float: left;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
   margin: 5px 25px 5px 25px;
   line-height: 20px;
   font-family: "Noto Kufi Arabic";
@@ -282,6 +287,10 @@ padding: 0px 25px;
   border-radius: 20px;
   padding: 2px 10px;
   border: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
   float: left;
   margin: 5px 20px 5px 20px;
   line-height: 20px;
@@ -373,5 +382,20 @@ line-height: 180%; /* 25.2px */
     top: 50px !important;
     max-width: 80%;
   }
+  .secondcard .rigthcheck{
+    padding: 0px;
+  }
+
+  .secondcard
+  {
+    margin-bottom: 50px;
+  }
+  .secondcard:hover
+{
+  margin-top: 70px ;
+}
   
+}
+.flipLine {
+  transform: scaleX(-1);
 }

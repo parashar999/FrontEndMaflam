@@ -208,4 +208,8 @@
     {
         margin-left: 0px !important;
     }
+    .footerLink
+    {
+        padding-inline-end: 0px;
+    }
 }
