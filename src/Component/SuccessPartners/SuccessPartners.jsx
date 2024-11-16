@@ -62,17 +62,28 @@ const SuccessPartners = () => {
       <div className={styles.success}>
         <OurSuccessStory />
       </div>
-
+      <div className={styles.rverlay}></div>
       <div className={styles.successPartnersSection}>
-        <h2 className={styles.successPartnersTitle}>
+   
+      <div className={styles.overlay}></div>
+        <h2 className={styles.successPartnersTitle} >
           {successPartnersData1.title}
         </h2>
         <div className={styles.partnersLogos}>
           {successPartnersData.map((partner, index) => (
-            <div key={index} className={styles.partnerLogo}>
-              <img src={partner.logoUrl} alt="Image Not Found " />
-              {/* <p>{partner.title}</p> */}
-            </div>
+            <div
+  key={index}
+  className={styles.partnerLogo}
+  style={{
+    backgroundImage: `url(${partner.logoUrl})`, // Set the logo image as the background
+    backgroundPosition: 'center', // Center the image
+    backgroundSize: 'cover', 
+    width:'282.783px', height:'160px',// Make sure the image covers the entire container (may crop)
+    backgroundRepeat: 'no-repeat', // Prevent the image from repeating
+  }}
+>
+  {/* <p>{partner.title}</p> */}
+</div>
           ))}
         </div>
       </div>

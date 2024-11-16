@@ -11,9 +11,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
     position: relative;
-    max-width: 1900px;    
+    max-width: 1300px;    
   }
   
   .carouselcontainer a {
@@ -22,13 +21,14 @@
     text-decoration: none;
 
     text-align: center;
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: 700;
   }
   
   .carousel {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1360px;
     margin: auto;
     padding: 20px 0px;
   }
@@ -79,7 +79,6 @@ height: 100%;
     box-sizing: border-box;
     text-align: center;
    position:relative;
-   right: 240px;
     border-radius: 5px;
     height: 850px;
     color: #fff;
@@ -147,38 +146,10 @@ flex-shrink: 0; */
     justify-content: center;
   }
   
-@media (max-width:1500px)
-{
-  .carouselcontainer{
-
-      zoom: 0.8;
-  }
-}
-
-@media (max-width:1280px)
-{
-  .carouselcontainer{
-
-      zoom: 0.7;
-  }
-  .sliderContainer
+  @media (max-width:1250px)
   {
-    overflow: hidden;
-    width: 340px;
+    .carouselcontainer a
+    {
+      font-size: x-large;
+    }
   }
-  .card
-  {
-    position: relative;
-    left: 0px;
-  }
-  .coverlay
-  {
-    display: none;
-  }
-  .croverlay
-  {
-    display: none;
-  }
-  
-}
-

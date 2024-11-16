@@ -7,7 +7,7 @@ import MaflamCard from "../../Component/MaflamCard/MaflamCard";
 import MaflamImageOffer from "../../Component/MaflamImageOffer/MaflamImageOffer";
 import MaflamInstructors from "../../Component/MaflamInstructors/MaflamInstructors";
 import MaflanContent from "../../Component/MaflanContent/MaflanContent";
-import Navbar from "../../Component/Navbar/Navbar";
+
 import OurVisionData from "../../Component/OurVisionData/OurVisionData";
 import styles from "./AboutUs.module.css";
 import {
@@ -19,6 +19,7 @@ import {
   AboutusPageProvider,
 } from "../../store/AboutUsPageContext.jsx";
 import Podcost from "../../Component/Podcast/Podcost.jsx";
+import Navbar from "../../Component/Navbar/Navbar.jsx";
 
 export default function AboutUs() {
   const {
@@ -52,8 +53,9 @@ export default function AboutUs() {
           <div className={styles.container}>
             <Navbar />
             <div className={styles.AboutUsbg}>
-              <Filmmaker />
+            <Filmmaker />
               <OurVisionData />
+              <Filmmaker />
             </div>
             <MaflamImageOffer />
             <MaflamInstructors />

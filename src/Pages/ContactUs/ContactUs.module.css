@@ -7,7 +7,10 @@
     width:100vw;
     max-width: 1920px;
     margin: auto;
-    background-image: url("../../assets/cntct.png");
+    height: 1182px;
+    /* margin-bottom: -300px !important; */
+    /* background-image: url("../../assets/cntct.png"); */
+    /* background-image: url("../../assets/contactInformation.png"); */
     background-position: center;
 }
 

@@ -13,13 +13,14 @@
     background-size: cover; 
     background-position: center;
     padding: 0 20px;
-    margin-bottom: 30px;
+    margin-bottom: -350px !important;
     margin: auto;
     /* margin-top: 60px; */
     
     box-sizing: border-box;
   }
 
+  
   
   .content {
     position: relative;

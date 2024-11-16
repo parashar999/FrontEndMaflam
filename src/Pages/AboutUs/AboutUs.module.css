@@ -10,5 +10,5 @@
   background-attachment: cover;
   background-position: center;
   position: relative;
-  z-index:999;
+  /* z-index:999; */
 }

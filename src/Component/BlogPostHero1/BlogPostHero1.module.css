@@ -54,3 +54,16 @@ justify-content: space-between;
 align-items: center;
 
 }
+
+
+
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Ensure it takes up the full viewport */
+    overflow: hidden; /* Prevent scrolling */
+    z-index: 999; /* Make sure it stays above the content */
+}

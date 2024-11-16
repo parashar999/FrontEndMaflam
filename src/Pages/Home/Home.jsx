@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
+import ShowsPodcast from "../../Component/ShowsPodcast/ShowsPodcast";
 import HomeHero from "../../Component/HomeHero/HomeHero";
 import LearnMaflam from "../../Component/LearnMaflam/LearnMaflam";
 import ViewCourses from "../../Component/ViewCourses/ViewCourses";
@@ -17,6 +18,7 @@ import Faqs from "../../Component/Faqs/Faqs";
 import Footer from "../../Component/Footer/Footer";
 import SubFooter from "../../Component/SubFooter/SubFooter.jsx";
 import Styles from "./Home.module.css";
+import Carou from "../../Component/Carou/Carou.jsx"
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
   HomePageContext,
@@ -42,6 +44,7 @@ const Home = () => {
           <ViewCourses />
           <CourseGrid />
           <Fundamental />
+          {/* <ShowsPodcast></ShowsPodcast> */}
           <Ourservices />
           <SuccessPartners />
           <LearnAbout />
@@ -54,8 +57,8 @@ const Home = () => {
           <CarouselCommunity />
           <div className={Styles.Footer}>
             <Faqs />
+            </div>
             <Footer />
-          </div>
           {/* <SubFooter/> */}
         </div>
       </HomePageProvider>

@@ -3,8 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
-  max-width: 1250px;
+  max-width: 1600px;
   margin: 0 auto;
   margin-bottom: 120px;
 }
@@ -131,41 +130,10 @@
   background-color: #4444;
 }
 
-@media (max-width:1500px)
-{
-  .carouselWrapper{
-    zoom:0.8;
-  }
-}
-
-@media (max-width:1280px)
-{
-   .carouselWrapper{
-    zoom:0.7;
-   }
-}
-
-@media (max-width:900px)
+@media (max-width:1250px)
 {
   .carouselWrapper
   {
     zoom: 0.6;
   }
-}
-
-@media (max-width:768px)
-{
-  .carousel
-  {
-    max-width: 629px;
-  }
-  .carouselCard
-  {
-    right:0px;
-  }
-  .carouselWrapper
-  {
-    zoom:0.5;
-  }
-
 }

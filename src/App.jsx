@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Home from "./Pages/Home/Home";
 import CourseDetail from "./Pages/CourseDetail/CourseDetail";
@@ -64,6 +64,7 @@ import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
 //import Mycourses from "./Component/MyCourses/Mycourses.jsx";
 //import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 import auth from "./Auth/Auth.js";
+import Podcost from "./Component/Podcast/Podcost.jsx";
 const userDetails = auth.getAuthData();
 const PrivateRoute = ({ children }) => {
   return userDetails ? children : <Navigate to="/login" />;
@@ -119,6 +120,7 @@ const App = () => {
           </LanguageProvider>
         }
       />
+     
       <Route
         path="/CommunityGuidelines"
         element={
@@ -158,6 +160,7 @@ const App = () => {
           </LanguageProvider>
         }
       />
+     
       <Route
         path="/coursedetails"
         element={
@@ -352,4 +355,3 @@ const App = () => {
 };
 
 export default App;
-
