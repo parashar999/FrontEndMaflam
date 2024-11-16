@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "./SignUp.module.css";
-import stylesArabic from "./SignUpArabic.module.css";
+import stylesSelected from "./SignUp.module.css";
+
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,7 +16,7 @@ const SignUp = () => {
   
   const navigate = useNavigate();
   
-  const stylesSelected = language === "ar" ? stylesArabic : styles;
+
   
   const signUpData = singupPageContextDetails?.signUpData || [];
   const welcomeTitle = signUpData[0]?.title || "Welcome";
