@@ -62,7 +62,7 @@ const ContactUS = () => {
               <div ref={contactInfoRef}>
                 <ContactInformation />
               </div>
-              <MaflanContent />
+              {/* <MaflanContent /> */}
             </div>
             <JoinUs />
             <Footer />

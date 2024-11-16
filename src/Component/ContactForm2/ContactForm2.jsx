@@ -224,7 +224,7 @@ const ContactForm2 = () => {
     <div className={styles.container}>
       {/* <h2 className={styles.title}>Apply for Maflam Training Program</h2> */}
       <h2 className={styles.title}>{title}</h2>
-      <hr style={{ width: "100%", color: "#F1F2FA", height: "0.5px" }} />
+      {/* <hr style={{ width: "100%", color: "#F1F2FA", height: "0.1px" }} /> */}
       <form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <label htmlFor="fullNameInEng">
@@ -722,8 +722,9 @@ const ContactForm2 = () => {
                 background: "#1A374B",
                 textAlign: "right",
               }}
-              type="number"
+              type="text"
               name="day"
+              maxLength={15}
               required
               value={formData.startDate.day}
               onChange={(e) =>
@@ -733,8 +734,10 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder={TrainingPlaceholder}
+              // placeholder={TrainingPlaceholder}
+              placeholder="Day"
             />
+
             <input
               style={{
                 width: "153px",
@@ -742,8 +745,10 @@ const ContactForm2 = () => {
                 color: "white",
                 textAlign: "right",
               }}
-              type="number"
+              type="text"
               name="month"
+              maxLength={15}
+          
               value={formData.startDate.month}
               onChange={(e) =>
                 setFormData({
@@ -752,7 +757,8 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder={TrainingPlaceholder1}
+              // placeholder={TrainingPlaceholder1}
+                 placeholder="Month"
             />
             <input
               style={{
@@ -760,7 +766,8 @@ const ContactForm2 = () => {
                 background: "#1A374B",
                 textAlign: "right",
               }}
-              type="number"
+              type="text"
+              maxLength={15}
               name="year"
               value={formData.startDate.year}
               onChange={(e) =>
@@ -770,7 +777,8 @@ const ContactForm2 = () => {
                 })
               }
               className={styles.input}
-              placeholder={TrainingPlaceholder2}
+              // placeholder={TrainingPlaceholder2}
+                 placeholder="Year"
             />
           </div>
         </div>

@@ -1,13 +1,17 @@
 .contact2{
-    background-image: url("../../assets/cntct.png"); 
+    /* background-image: url("../../assets/cntct.png");  */
+    background-image: url("../../assets/contactform2.png");
      background-position: center;
     background-repeat: no-repeat;
     background-color: #030b11;
 
-    min-height: 600px;
+    min-height: 800px;
     width: 100vw;
+    height: 1183px;
     max-width: 1980px;
     background-position: center;
     margin: auto;
+    border: 30px;
+   
 
 }
