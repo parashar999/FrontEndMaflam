@@ -64,6 +64,8 @@
   transition: 0.3s ease;
 }
 
+.gappss a {padding-left: 10px;
+}
 .leftLinks a:hover , .langbtn:hover , .leftlinks:hover img{
   color: #0ccac4;
   /* font-weight: 500; */
