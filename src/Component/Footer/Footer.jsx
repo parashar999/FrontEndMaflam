@@ -70,16 +70,15 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <hr style={{maxWidth:'1580px', margin:'auto', marginBottom:'50px', opacity:'0.2'}} />
-
+      <hr style={{opacity:'0.2', marginBottom:'50px'}} className={styles.footerHr} />
       <div className={styles.container}>
-      <div className={styles.footerColumn}>
-            <img
-              src={assests.Footerlogo1}
-              alt="Footer Logo"
-              className={styles.footerLogo}
-            />
-          </div>
+        <div className={styles.footerColumn}>
+          <img
+            src={assests.Footerlogo1}
+            alt="Footer Logo"
+            className={styles.footerLogo}
+          />
+        </div>
         <div className={styles.footerColumns}>
           {footerColumnData1.map((column, index) => (
             <div key={index} className={styles.footerColumn}>
@@ -96,31 +95,31 @@ const Footer = () => {
         </div>
       </div>
 
-          <hr style={{maxWidth:'1580px', margin:'auto', marginTop:'20px', opacity:'0.2'}} />
+      <hr className={styles.footerHr} style={{opacity:'0.2', marginTop:'30px'}} />
 
-      <div className={styles.footerLinks}>
-     
-     <ul className={styles.footerLinks}>
-       <li>
-         <a href="/purchaseCancellation">{purchasePolicy}</a>
-       </li>
-       <li>
-         <a href="/contentrequired">{helpCenter}</a>
-       </li>
-       <li>
-         <a href="/CommunityGuidelines">{Community}</a>
-       </li>
-       <li>
-         <a href="/privacypolicy">{PrivacyPolicy}</a>
-       </li>
-       <li>
-         <a href="/terms&condition">{termsandcondition}</a>
-       </li>
-     </ul>
-     <div className={styles.footerBottom}>
-       <p>{copyrighttext}</p>
-     </div>
-   </div>
+      <div className={styles.footerLink}>
+      <div className={styles.footerBottom}>
+          <p>{copyrighttext}</p>
+        </div>
+        <ul className={styles.footerLinks}>
+          <li>
+            <a href="/purchaseCancellation">{purchasePolicy}</a>
+          </li>
+          <li>
+            <a href="/contentrequired">{helpCenter}</a>
+          </li>
+          <li>
+            <a href="/CommunityGuidelines">{Community}</a>
+          </li>
+          <li>
+            <a href="/privacypolicy">{PrivacyPolicy}</a>
+          </li>
+          <li>
+            <a href="/terms&condition">{termsandcondition}</a>
+          </li>
+        </ul>
+   
+      </div>
     </footer>
   );
 };

@@ -132,7 +132,7 @@
   }
   .imgcontainer
   {
-    right: -50px;
+    right: 5px;
   }
 }
 
@@ -141,6 +141,10 @@
   .Fundamental
   {
     zoom: 0.8;
+  }
+  .imgcontainer
+  {
+    right: -35px;
   }
 }
 @media (max-width:1250px)
@@ -165,7 +169,9 @@
   }
   .content p
   {
+    margin-inline-start: 0px;
     width: auto;
+    text-align: center;
   }
   .subscribe
   {
@@ -182,9 +188,14 @@
 }
 @media (max-width:768px)
 {
-  .contntet p
+  .content p
   {
-    font-size: small;
+    
+    padding-top: 150px;
+    font-size: x-large;
+ 
+    padding-bottom: 40px;
+    
   }
   .content
   {
@@ -209,10 +220,8 @@
 {
 
   .content p{
-    font-size: x-large;
+    font-size: 45px;
     margin: 0px;
-    line-height: 75px;
-
 }
   .subscribe
   {

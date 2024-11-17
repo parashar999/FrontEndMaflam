@@ -6,7 +6,7 @@ import navbarBackground from "../../assets/NavbarBackground.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrGroup } from "react-icons/gr";
 import { MdLiveTv } from "react-icons/md";
-import { BiSolidMoviePlay } from "react-icons/bi";
+import { BiBorderLeft, BiSolidMoviePlay } from "react-icons/bi";
 import { MdInsertPhoto } from "react-icons/md";
 import { PiDiscDuotone } from "react-icons/pi";
 import { ImVideoCamera } from "react-icons/im";

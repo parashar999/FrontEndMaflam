@@ -7,35 +7,31 @@
     background-size: cover;
     color: #fff;
     padding: 40px 0;
-    width: 100%;
+    width: 100vw;
     max-width: 1920px;
     font-size: 14px;
     margin: auto;
 }
 .footerHr{
-  border: none;
-  
-  background: #414A4C;
-  /* color:#F6FFFF ; */
-  margin: 0 auto;
-  width: 100vw;
-  max-width: 1580px; 
-  margin-bottom: 25px;
-  opacity: 1;
-  /* text-decoration: none; */
+    width: 100vw;
+    max-width: 1379px;
+    margin: auto;
 }
 
 .container {
-    max-width: 1580px;
-    display: flex;flex-direction: row;
+    max-width: 1379px;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .footerColumns {
     display: flex;
-    width: 1280px;
+    width: 900px;
     justify-content: space-between;
     flex-wrap: wrap;
   
@@ -46,8 +42,8 @@
 }
 
 .footerLogo {
-    width: 39px;
-    height: 58px;
+    width: 53.114px;
+    height: 79.027px;
 }
 
 .visionText {
@@ -59,7 +55,8 @@
 
 .footerColumn h4 {
     color: var(--Accent-Accent-400---Main, #39FFFB);
-    font-family: "Work Sans";
+    text-align: start;
+    font-family: "Noto Kufi Arabic";
     font-size: 17px;
     font-style: normal;
     margin-bottom: 20px;
@@ -77,9 +74,14 @@
 }
 
 .footerColumn ul li a {
-    color: #b0b0b0;
+    color: #EBF5F4;
+    text-align: start;
+    font-family: "Noto Kufi Arabic";
+    font-size: 17px;
+    font-style: normal;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: 300;
+    line-height: 280%; /* 47.6px */
 }
 
 .footerColumn ul li a:hover {
@@ -91,16 +93,27 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    width: 1580px;
-    margin: auto;
     margin-top: 10px;
     gap: 6px;
     padding: 20px 0;
+    align-items: baseline;
+    width: 900px;
     justify-content: space-between;
     /* border-top: 1px solid #333; */
 }
 
-
+.footerLink {
+    display: flex;
+    flex-direction: row;
+    max-width: 1379px;
+    width: 100vw;
+    margin: auto;
+    margin-top: 10px;
+    gap: 6px;
+    padding-inline-end: 30px;
+    justify-content: space-between;
+    /* border-top: 1px solid #333; */
+}
 
 .footerLinks li {
     margin: 0;
@@ -127,8 +140,6 @@
     text-align: end;
     margin: 0;
     margin-top: 20px;
-    width: 100vw;
-    max-width: 700px;
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -157,70 +168,54 @@
     font-weight: 400;
 }
 
-/* Media queries for responsiveness */
+@media (max-width:1600px)
+{
+    .footer
+    {
+        zoom: 0.9;
+    }
+}
 
-/* Tablet and smaller devices (up to 768px) */
-@media (max-width: 1600px) {
-    .footer{
+@media (max-width:1400px)
+{
+    .footer
+    {
         zoom: 0.8;
     }
 }
 
-
-@media(max-width:1400px)
+@media (max-width:1250px)
 {
-    .footer
+    .footerColumns, .footerLink, .container, .footerLinks
     {
-        zoom: 0.7;
-    }
-}
-
-
-@media(max-width:1250px)
-{
-    .footer
-    {
-        zoom: 1;
-    }
-    .footer
-    {
-        display: flex;
         flex-direction: column;
-    }
-    .container
-    {
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .footerColumns
-    {
         justify-content: center;
-        align-items: start;
-        flex-direction: column;
+        align-items: center;
     }
     .footerColumn
     {
-        justify-content: start;
-        padding: 15px;
+        text-align: center;
+        padding: 10px;
     }
-    .footerLinks
+    .footerColumn h4
     {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid white;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        min-width: 400px;
+        text-decoration: underline;
     }
-    .footerBottom 
+    .footerLinks a
     {
-        padding: 0px;
-        margin: 0px;
-        justify-content: flex-end;
-        
+        margin-left: 0px !important;
+    }
+    .footerLink
+    {
+        padding-inline-end: 0px;
+    }
+    .footerColumn ul li
+    {
+        margin-bottom: 0px;
+        min-width: 400px;
     }
 }
-
-
-
-
-

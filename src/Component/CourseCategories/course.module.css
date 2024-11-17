@@ -102,7 +102,7 @@ line-height: 160%;
   }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1400px) {
   .courseContainer
   {
     zoom: 0.8;

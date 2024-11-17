@@ -1,15 +1,10 @@
 import React, { useRef, useContext, useEffect, useState } from "react";
-import styles from "./CarouselCommunity.module.css";
-import stylesArabic from "./CarouselCommunityArabic.module.css";
+import stylesSelected from "./CarouselCommunity.module.css";
 import { HomePageContext } from "../../store/HomePageContext";
 import Carou from "./../../Component/Carou/Carou.jsx";
-import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 
 const CarouselCommunity = () => {
   const { homeScreenDetails } = useContext(HomePageContext);
-  const { language } = useContext(LanguageContext);
-  const stylesSelected = language === "ar" ? stylesArabic : styles;
-
   const successStoriesArray = homeScreenDetails?.maflamCommunity || [];
   const videoItems = successStoriesArray.map((story, index) => ({
     id: index,

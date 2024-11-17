@@ -11,6 +11,7 @@
   text-align: center;
   margin: 0 auto;
   width: 100%;
+  
 
   max-width: 1900px !important;
 }
@@ -84,13 +85,13 @@ line-height: 160%; /* 38.4px */
   margin: 0 auto;
   text-wrap: wrap;
   position: relative;
-  font-family: Inter;
+  color: #FFF;
+  font-family: "Noto Kufi Arabic";
   font-size: 24px;
   font-style: normal;
-  font-weight: 100;
-  line-height: 140%; 
+  font-weight: 300;
+  line-height: 160%;
 }
-
 .showAnswer {
   display: block; 
   margin-top: 10px;

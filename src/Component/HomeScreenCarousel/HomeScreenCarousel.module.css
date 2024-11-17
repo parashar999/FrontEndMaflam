@@ -198,11 +198,13 @@ flex-shrink: 0;
 .contentpara p{
 color: #FFF;
 text-align: center;
-font-family: "Work Sans";
+color: #FFF;
+text-align: center;
+font-family: "Noto Kufi Arabic";
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
-line-height: 160%; 
+line-height: 160%; /* 38.4px */
 padding: 10px 20px;
 margin: 0 auto;
 margin-top: 100px;
