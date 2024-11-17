@@ -12,7 +12,7 @@
     color: white;
   }
   .profileHeader {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 20px;
   }
   
@@ -243,10 +243,14 @@
   }
   
   .submitButton {
+    height: 64px;
     padding: 10px 20px;
     background-color: #39FFFB;
     box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
-    color: white;
+    color: #061C2b;
+    font-size: 17;
+    font-weight: bold;
+    font-family:'Work Sans';
     border: none;
     border-radius: 64px;
     cursor: pointer;
