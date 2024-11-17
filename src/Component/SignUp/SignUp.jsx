@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "./SignUp.module.css";
-import stylesArabic from "./SignUpArabic.module.css";
+import stylesSelected from "./SignUp.module.css";
+
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
 import { ToastContainer, toast } from 'react-toastify';
@@ -16,7 +16,7 @@ const SignUp = () => {
   
   const navigate = useNavigate();
   
-  const stylesSelected = language === "ar" ? stylesArabic : styles;
+
   
   const signUpData = singupPageContextDetails?.signUpData || [];
   const welcomeTitle = signUpData[0]?.title || "Welcome";
@@ -219,7 +219,7 @@ const SignUp = () => {
             render={({ onClick }) => (
               <button onClick={onClick} className={stylesSelected.socialButton}>
                 <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
-                <span style={{width:'100%', textAlign:'center'}}> &nbsp; {googleLoginText} </span>
+                <span style={{width:'100%', textAlign:'center'}}>  {googleLoginText} </span>
               </button>
             )}
           />
@@ -242,7 +242,7 @@ const SignUp = () => {
 
         <div className={stylesSelected.signInLink}>
           <span>{signInPrompt}</span>
-          
+          &nbsp;
           <a href="/login">{signInText}</a>
           
          

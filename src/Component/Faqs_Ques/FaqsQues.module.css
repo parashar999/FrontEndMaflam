@@ -1,4 +1,3 @@
-
 .mainContainers {
   background-color: black;
   background-image: url('../../assets/faqback.png');
@@ -28,13 +27,19 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 0;
+  padding: 10px 0;
 }
 
 .sectionTitle {
   font-size: 24px;
   font-weight: bold;
   color: #00ffff;
+}
+
+.sectionToggleSign {
+  font-size: 1.5rem;
+  color: #00ffff;
+  margin-right: 8px;
 }
 
 .questionContainer {
@@ -50,15 +55,9 @@
   color: #e0e0e0;
 }
 
-.sectionToggleSign {
-  font-size: 1.5rem;
-  color: #00ffff; 
-  margin-right: 8px;
-}
-
 .questionToggleSign {
   font-size: 1.5rem;
-  color: #e0e0e0; 
+  color: #e0e0e0;
   margin-right: 8px;
 }
 
@@ -67,11 +66,14 @@
   color: #ccc;
   padding: 10px 0;
   transition: max-height 0.3s ease-in-out;
-}
-.answer[style*="max-height: 0px"] {
-  display: none; 
+  overflow: hidden;
 }
 
+.answer[style*="max-height: 0px"] {
+  display: none;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 1024px) {
   .faqContainer {
     padding: 30px 10px;
@@ -106,15 +108,11 @@
 
   .sectionTitle,
   .question {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .answer {
     font-size: 14px;
-  }
-
-  .toggleSign {
-    font-size: 1.3rem;
   }
 }
 
@@ -136,9 +134,5 @@
 
   .answer {
     font-size: 12px;
-  }
-
-  .toggleSign {
-    font-size: 1.2rem;
   }
 }

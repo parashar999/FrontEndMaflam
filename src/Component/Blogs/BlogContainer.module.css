@@ -1,11 +1,13 @@
 .parentcont
 {
+  font-family: "Noto Kufi Arabic";
   display: flex;
   justify-content: center;
   align-items: center;
-  
+ 
 }
 .MainContainer {
+  
     height: auto;
     margin: auto;
     justify-content: center;
@@ -17,26 +19,28 @@
     font-family: sans-serif;
     font-size: 36px;
     color: white;
+    padding-bottom: 20px;
     font-weight: 700;
-    padding-top: 20px;
     /* border: 1px solid rebeccapurple; */
   }
   
   .MainContainer a
   {
-    font-family: sans-serif;
     font-size: 36px;
     text-decoration: none;
     color: white;
+    padding-bottom: 50px;
     font-weight: 700;
   }
   /* Responsive font size using viewport width */
   
   .pricingimg {
     background-image: url("../../assets/blogpricing.png");
+    border-radius: 10px;
     display: flex;
     position: relative;
     align-items: center;
+    text-align: left;
     justify-content: center;
     background-position: center;
     background-size: contain;
@@ -48,34 +52,37 @@
     margin-bottom: 250px;
   }
   .pricingimg  img{
-    transform: scaleX(-1);
-    position: absolute;
     filter: blur(1px);
-    top: -100px;
   }
 
   .contentContainer{
     position: absolute ;
-    right: 200px;
-    text-align: right;
+    text-align: left;
   }
   .contentContainer h2 {
-    width: 350px;
-    position: relative;
+    max-width:600px;
     color: #EBF5F4;
-    font-family: "Noto Kufi Arabic";
+    text-align: right;
+    font-family: ABeeZee;
     font-size: 36px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 150%; /* 54px */
   }
+
+  .continuereadingarrow
+  {
+    transform: rotate(90deg);
+  }
+
   .contentContainer p {
-    width: 440px;
+    max-width:647px;
     margin-top: 40px;
     color: #FFF;
-    position: relative;
+    color: #FFF;
+    text-align: right;
     font-family: "Noto Kufi Arabic";
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 38.4px */
@@ -85,6 +92,7 @@
     font-family: "Noto Kufi Arabic";
     text-align: left;
     margin-top: 10px;
+    position: relative;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -92,9 +100,19 @@
     letter-spacing: -0.34px;
     text-decoration: none;
   }
+  .contentContainer h5
+  {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
 
   @media (max-width:1500px)
   {
+    .MainContainer a
+    {
+      padding-bottom: 50px;
+    }
     .pricingimg
     {
       zoom: 0.9;
@@ -104,13 +122,19 @@
   @media (max-width:1280px)
   {
 
+     .MainContainer a
+     {
+      padding-bottom: 50px;
+     }
+    
     .MainContainer
     {
       zoom: 0.8;
     }
     .contentContainer
     {
-      right: 220px;
+
+      left: 220px;
     }
   }
   
@@ -127,20 +151,33 @@
     }
     .contentContainer
     {
-      right:60px;
+      left:60px;
+    }
+    .contentContainer h2
+    {
+      width: auto;
     }
   }
 
   @media (max-width:768px)
   {
-    .MainContainer
-    {
-      zoom: 0.9;
-    }
     .contentContainer
     {
-      right: 0px;
+      zoom: 0.9;
+      left: 0px;
     }
+
   }
 
- 
+  @media (max-width:500px)
+  {
+
+    .contentContainer
+    {
+      left: -20px;
+    }
+    .contentContainer h2 , p
+    {
+    
+    }
+  }

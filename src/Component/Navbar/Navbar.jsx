@@ -6,7 +6,7 @@ import navbarBackground from "../../assets/NavbarBackground.png";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrGroup } from "react-icons/gr";
 import { MdLiveTv } from "react-icons/md";
-import { BiSolidMoviePlay } from "react-icons/bi";
+import { BiBorderLeft, BiSolidMoviePlay } from "react-icons/bi";
 import { MdInsertPhoto } from "react-icons/md";
 import { PiDiscDuotone } from "react-icons/pi";
 import { ImVideoCamera } from "react-icons/im";
@@ -111,35 +111,32 @@ const Navbar = () => {
       <nav
         className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       >
-        <div>
-          <button className={styles.langbtn} onClick={toggleLanguage}>
-            {language === "ar" ? "English" : "العربية"}
-          </button>
-        </div>
-        <Link to="/">
+      <Link to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </Link>
-        <div className={styles.menuelements}>
+
+<div className={styles.menuelements}>
+        
           <div className={styles.leftLinks}>
             {/* {console.log("check language", language)} */}
             {navItems1.map((item, index) => (
-              <div key={index} className={styles.dropdown}>
+              <div key={index} className={styles.dropdown}  >
                 {item.hasDropdown ? (
                   <>
-                    <a href="#" onClick={() => toggleDropdown(item.name)}>
+                    <a style={{height:'100%', display:'flex', flexDirection:'row', alignItems:'center'}}href="#" onClick={() => toggleDropdown(item.name)} className={openDropdown === item.name ? styles.activeLink : ""}  >
                       {item.name}
                       <span
                         className={`${styles.arrow} ${
-                          openDropdown === item.name ? styles.rotate : ""
+                          openDropdown === item.name ? language==="ar" ? styles.rotate : styles.rotate1:""
                         }`}
-                      >
+                            >
                         &#8595;
                       </span>
                     </a>
                     {openDropdown === item.name && (
                       <div className={styles.submenu}>
                         {item.dropdownItems?.map((subItem, subIndex) => (
-                          <a href={subItem.href} key={subIndex}>
+                          <a href={subItem.href} key={subIndex} className={styles.dropdownitems}>
                             &nbsp;&nbsp;
                             <img
                               className={
@@ -171,6 +168,8 @@ const Navbar = () => {
           {/* <div className={styles.searchContainerGlobe}>
         <img src={assests.Globe} alt="Globe Icon" />
       </div> */}
+              <div>
+        </div>
           <div className={styles.rightLinks}>
             {user ? (
               <div className={styles.profileContainer}>
@@ -190,7 +189,7 @@ const Navbar = () => {
                     <ul>
                       <li className={styles.gappss}>
                         {" "}
-                        <FaRegUser />
+                        <MdLiveTv />
                         <Link to="/mycourses"> My Courses</Link>
                       </li>
                       <li className={styles.iconstyle}>
@@ -255,6 +254,9 @@ const Navbar = () => {
             )}
           </div>
         </div>
+        <button className={styles.langbtn} onClick={toggleLanguage}>
+            {language === "ar" ? "English" : "العربية"}
+          </button>
         <div className={styles.hamburger} onClick={toggleHamburger}>
           <div></div>
           <div></div>

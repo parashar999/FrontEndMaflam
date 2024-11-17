@@ -35,6 +35,8 @@
     color: #FFF;
     font-family: 'Inter', sans-serif;
     font-size: 42px;
+    margin-left: -100px !important;
+    /* width: 100%; */
     font-weight: 700;
     margin-bottom: 0px;
   }

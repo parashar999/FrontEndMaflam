@@ -3,14 +3,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
 
 
 .Fundamental {
   background-color: #030b11;
   height: auto;
-
+  width: 100vw;
+  max-width: 1500px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the Fundamental container */
+  margin-top: 125px;
+  margin-bottom: 100px;
 }
 
 .secondcontainer {
@@ -23,22 +26,21 @@
 
 .content {
   width: 100%;
-  text-align: left;
+  text-align: start;
   margin:50px;
-  padding-right:50px ;
+  padding-left:50px ;
   position: relative;
   margin-bottom: 30px;
 }
 
 .content p {
   width: 620px;
-  color: #fff;
-  line-height: 45px;
-  text-align: right;
-padding-top: 100px;
-padding-bottom: 50px;
+  margin-inline-start: 100px;
+  color: #FFF;
   font-size: 36px;
+  font-style: normal;
   font-weight: 700;
+  line-height: 160%; /* 57.6px */
   
 }
 
@@ -49,46 +51,46 @@ padding-bottom: 50px;
   position: relative;
   background-repeat: no-repeat;
   width: 100%;
-  padding: 50px;
-  padding-right: 60px;
+  padding: 40px;
+  padding-left: 60px;
   max-width: 1427.255px;
   border-radius: 20px;
   position: relative;
+  height: 328px;
 }
 .imgcontainer  {
   width: 549px;
     position: absolute;
-    top: -30px;
-    left: 20px;
+    left: 50px;
+    top: -120px;
     z-index: 1;
   }
 
 .ctn {
  
- 
   height: auto;
-  margin-right: 50px;
+  margin-left: 50px;
 
   
 }
 .item {
   display: flex;
-  align-items: center;
+  flex-direction: row;
 }
 .checkico {
   margin-right: 10px;
   margin-left: 10px;
   color: rgb(46, 202, 202);
-  font-size: 25px;
+  font-size: 28px;
   position: relative;
   top: 10px;
 }
 .ctn p {
   font-size: 24px;
-  color: #fff;
-  font-weight: 100;
-
- 
+  font-style: normal;
+  color: var(--Accent-Accent-50, #F6FFFF);
+  font-weight: 400; 
+  line-height: 180%; /* 43.2px */
 }
 .checkicobuttun {
   position: relative;
@@ -101,17 +103,17 @@ padding-bottom: 50px;
   justify-content: center;
   padding: 5px 7px;
   box-sizing: border-box;
-  text-align: right;
-  font-size: 24px;
+  text-align: left;
+  font-size: 17px;
+  width: 160px;
   color: #000;
   font-family: 'Noto Kufi Arabic';
-  font-weight: 500;
+  font-weight: 600;
   border: none;
   margin: 10px;
-
 }
 .item b {
-  margin-right: 2px;
+  margin-left: 2px;
   color: aqua;
   font-size: 25px;
 }
@@ -126,7 +128,11 @@ padding-bottom: 50px;
 {
   .Fundamental
   {
-    zoom: 0.9;
+    zoom: 0.8;
+  }
+  .imgcontainer
+  {
+    left: 5px;
   }
 }
 
@@ -136,8 +142,12 @@ padding-bottom: 50px;
   {
     zoom: 0.8;
   }
+  .imgcontainer
+  {
+    left: -35px;
+  }
 }
-@media (max-width:1280px)
+@media (max-width:1250px)
 {
   .secondcontainer
   {
@@ -145,6 +155,7 @@ padding-bottom: 50px;
   }
   .content
   {
+    padding-top: 150px;
     zoom: 0.8;
     display: flex;
     flex-direction: column;
@@ -154,21 +165,21 @@ padding-bottom: 50px;
   .imgcontainer
   {
     position: relative;
+    top: -60px;
   }
   .content p
   {
+    margin-inline-start: 0px;
     width: auto;
+    text-align: center;
   }
   .subscribe
   {
-    padding-right:0px;
+    padding-left: 0px;
     position: relative;
     top: -250px;
   }
-  .imgcontainer
-  {
-    padding-bottom: 100px;
-  }
+
   .content p{
     font-size: xx-large;
     line-height: 75px;
@@ -179,43 +190,54 @@ padding-bottom: 50px;
 {
   .content p
   {
-    font-size: 40px !important;
+    
+    padding-top: 150px;
+    font-size: x-large;
+
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .content
+  {
     padding-left: 0px;
   }
   .Fundamental
   {
+    margin-top: 350px;
     margin-bottom: 0px;
   }
     .secondcontainer
     {
       zoom:0.7;
     }
+    .subscribe
+    {
+      height: auto;
+    }
 }
 
 @media (max-width:542px)
 {
+
+  .content p{
+    font-size: 45px;
+    margin: 0px;
+}
   .subscribe
   {
     font-size: 10px;
   }
 
-  .content p{
-    font-size: x-large;
-    line-height: 75px;
-
-}
-
   .imgcontainer{
     left: 20px;    
   }
 }
-
+.checkico
+{
+  top: 25px !;
+}
 p b
 {
     position: relative;
     top: 12px;
-}
-.checkico
-{
-  top: 25px !;
 }

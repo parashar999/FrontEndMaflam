@@ -1,6 +1,5 @@
-
-
 .OurservicesContainer {
+   
   background-image: url('../../assets/Ourservicesbanner.png');
   background-size: cover;
   background-position: center;
@@ -15,22 +14,25 @@
   padding-bottom: 50px;
   width: 100%;
   max-width: 1900px;
-  
 }
 
 .text {
-  font-size: 2rem;
+  background: url('../../assets/OurServicesGradient.png');
+   background-size: cover;
+   background-position: top;
+   background-position: -40%;
   text-align: center;
   color: #fff;
 }
 
 
 .ourservicesvector p{
+  font-size:36px ;
+  font-weight: 800;
   margin-top: 60px !important;
 
 }
 .ourservicesvector {
-  /* background-image: url('../../assets/ourservicevector.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,9 +73,8 @@
 }
 
 .frane64 p {
-  
   font-size:36px;
-   padding: 40px;
+  padding: 40px;
   text-align: center;
   line-height: 1.5;
   width: 80%;
@@ -82,27 +83,25 @@
 
 .text2 {
   display: flex;
-  /* flex: 1; */
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   padding: 0 5%;
-  margin-top: 20px;
+  padding: 40px;
 }
 .flexx{
   display: flex;
 flex-direction: column;
 }
 
-.text2 h1 {
-  font-size: 2rem;
-  color: #5affff;
+.flexx h1 {
+  font-size: 65px;
+  font-weight: 700;
+  color: linear-gradient(214deg, #5AFFFF 5.05%, #007A7A 98.36%);
+  background-clip: text;
   text-align: center;
 }
 
-.text2 p {
-  font-size: 1rem;
-  text-align: center;
-}
+
 
 
 .para
@@ -127,12 +126,31 @@ line-height: 160%;
 
 .text2 h1 {
   margin: 0; 
-  font-size: 40px;
+  background: linear-gradient(214deg, #5AFFFF 5.05%, #007A7A 98.36%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-size: 65px;
+  line-height: 1.2;
+
 }
 
 .text2 p {
-  margin: 0;
-  flex-grow: 1; 
+  color: var(--Accent-Accent-50, #F6FFFF);
+  text-align: center;
+  font-family: "Noto Kufi Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%; /* 43.2px */
+}
+
+@media (max-width:1600px)
+{
+    .text
+    {
+      zoom: 0.7;
+    }
 }
 
 
@@ -155,21 +173,31 @@ line-height: 160%;
   {
     zoom: 0.7;
   }
+  .frane64 p
+  {
+    font-size: 24px;
+  }
   .text2
   {
     display: flex;
     flex-direction: column;
   }
-
-  
+  .para
+  {
+    font-size:x-large ;
+  }
+  .OurservicesContainer
+  {
+    padding-top: 0px;
+  }
+  .flexx p
+  {
+    font-size: small;
+  }
   .quotesIcon
   {
     top: 0px;
     height: 80px !important;
-  }
-  .frane64 p
-  {
-    font-size: 24px;
   }
 }
 
@@ -177,14 +205,10 @@ line-height: 160%;
 {
   .quotesIcon
   {
-    top: 0px;
+    top: 60px;
     height: 40px !important;
   }
-  .quotesIcon img
-  {
-    position:  relative;
-    top: 60px;
-  }
+  
   .frane64 p
   {
     font-size: 16px;

@@ -24,12 +24,16 @@ export default function BlogPostHero1() {
   return (
     <div className={`${styles.header} ${isPopupOpen ? styles.fixed : ""}`}>
       <div>
-        <h1>{blogTitle[0]?.title || "Read and Explore Various Articles in the Film Industry"}</h1>
-        
+        <h1>
+          {blogTitle[0]?.title ||
+            ""
+            }
+        </h1>
+
         <div className={styles.searchBar}>
-          <input type="text" placeholder={blogTitle[1]?.title || "Search"} />
-          <button className={styles.categoryButton} onClick={handleCategoryClick}>
-            {blogTitle[2]?.title || "Category"}
+          <input type="text" placeholder={blogTitle[1]?.title || ""} />
+          <button className={styles.categoryButton}>
+            {blogTitle[2]?.title || ""}
             <span style={{ width: "10px" }}></span>
             <img src={assests.filter} alt="Search Icon" />
           </button>

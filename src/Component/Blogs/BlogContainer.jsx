@@ -87,14 +87,14 @@ function BlogContainer() {
     <div className="parentcont" style={{marginTop:"150px"}}>
       <div className={stylesSelected.MainContainer}>
         <Link style={{marginbottom:'20px', textAlign:'center', display:'block'}} to="/blogs">{blogData[0]?.title || "Default Blog Title"}</Link>
-        <div className={stylesSelected.pricingimg}>
+        <div className={stylesSelected.pricingimg} >
           <img src={blogData[0]?.imageUrl || ""} alt="Blog" />
           <div className={stylesSelected.contentContainer}>
-          <h2 style={{maxWidth:'80%'}}>{blogData[1]?.title || "Default Blog Subtitle"}</h2>
-          <p style={{maxWidth:'80%'}}>{blogData[1]?.description || "No description available."}</p>
+          <h2 >{blogData[1]?.title || "Default Blog Subtitle"}</h2>
+          <p >{blogData[1]?.description || "No description available."}</p>
           {/* <div>  <Link to='/blogDetails'>{blogData[2]?.title || "Read More"}</Link></div> */}
-          <div>  <h5> <a href="/blogs"> {blogData[2]?.title || "Read More"}</a>
-          {arrow}
+          <div>  <h5> <a href="/blogs"> {blogData[2]?.title || "Read More"} <span className={stylesSelected.continuereadingarrow}> → </span></a>
+        
           </h5></div>
         </div>
         </div> 

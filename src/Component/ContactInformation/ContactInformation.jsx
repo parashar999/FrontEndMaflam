@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";  // Import to detect route chang
 import styles from "./ContactInformation.module.css";
 import { ContactUsContext } from "../../store/ContactUsContext";
 import FocusLock from 'react-focus-lock';
+import MaflanContent from "../MaflanContent/MaflanContent";
+import JoinUs from "../JoinUs/JoinUs";
 const ContactInformation = () => {
   const { contactUsContextDetails, loading, error } = useContext(ContactUsContext);
   const location = useLocation();  // Hook to detect route changes
@@ -31,7 +33,7 @@ const ContactInformation = () => {
 
   return (
     <>
-   
+   <div className={styles.maincontainer}>
       <div className={styles.bgimage}></div>
       <div className={styles.contactContainer}>
         <h2 className={styles.heading}>{title}</h2>
@@ -56,6 +58,10 @@ const ContactInformation = () => {
           
         </div>
       </div>
+      <MaflanContent />
+    
+      </div>
+
       
     </>
   );
