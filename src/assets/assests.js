@@ -180,7 +180,6 @@ import  transperency from "./transperency.png"
 import bagraoudcontac2 from "./bagraoudcontact.png"
 
 
-
 export const assests = {
   subscribefundamentalpackage,
   bagraoudcontac2,

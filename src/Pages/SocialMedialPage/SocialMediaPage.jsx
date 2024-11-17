@@ -11,9 +11,10 @@ import EducationaPost from '../../Component/EducationalPost/EducationaPost'
 import JoinUs from '../../Component/JoinUs/JoinUs'
 import { AboutusPageProvider } from '../../store/AboutUsPageContext'
 import FilmProduction from '../../Component/FimlProduction/FilmProduction'
-import Podcost from '../../Component/Podcast/Podcost'
+// import Podcost from '../../Component/Podcast/Podcost'
 import OSPCarousel from '../../Component/OSPCarousel/OSPCarousel'
 import BTSCarousel from '../../Component/BTSCarousel/BTSCarousel'
+import ShowsPodcast from "../../Component/ShowsPodcast/ShowsPodcast"
 
 export default function SocialMediaPage() {
   return (
@@ -24,8 +25,9 @@ export default function SocialMediaPage() {
         <Navbar></Navbar>
         <SocialMediaHeroPage></SocialMediaHeroPage>
         <OSPCarousel/>
+        <ShowsPodcast></ShowsPodcast>
         <YouTubeChannel></YouTubeChannel>
-        {/*<Podcost></Podcost>*/}
+        {/* <Podcost></Podcost> */}
         <EducationaPost></EducationaPost>
         <BTSCarousel/>
         <FilmProduction></FilmProduction> 
