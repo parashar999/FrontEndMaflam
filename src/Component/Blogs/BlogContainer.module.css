@@ -53,6 +53,7 @@
   }
   .pricingimg  img{
     filter: blur(1px);
+    transform: scaleX(-1);
   }
 
   .contentContainer{
@@ -72,7 +73,9 @@
 
   .continuereadingarrow
   {
-    transform: rotate(90deg);
+ 
+    transform: rotate(180deg);
+    display: inline-block;
   }
 
   .contentContainer p {

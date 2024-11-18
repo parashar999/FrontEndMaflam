@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useContext } from "react";
 import styles from "./ContactForm2.module.css";
 import downloadIcon from "../../assets/downloadIcon.png";
-
 import axios from "axios";
 import { toast } from "react-toastify";
 import { MdDelete } from "react-icons/md";
