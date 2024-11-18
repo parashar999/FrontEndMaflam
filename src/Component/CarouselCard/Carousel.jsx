@@ -2,6 +2,7 @@
 import React, { useContext, useState } from "react";
 import styles from "./Carousel.module.css";
 import { PricingPageContext } from "../../store/PricingPageContext";
+import { assests } from "../../assets/assests";
 
 const Carousel = () => {
   const { pricingPageContextDetails, loading, error } = useContext(PricingPageContext);
@@ -43,13 +44,13 @@ const Carousel = () => {
   return (
     <>
       <div className={styles.carouselcontainer}>
-        <h2>كيف يحقق المتعلمون مثلك أهدافهم</h2>
+        <h2>Our Success Stories</h2>
         <div className={styles.carousel}>
           <button
             className={`${styles.arrow} ${styles.left}`}
             onClick={prevSlide}
           >
-            ◀
+            <img src="/src/assets/CarouselLeftArrow.png" alt=""></img>
           </button>
           <div className={styles.sliderContainer}>
             <div
@@ -59,12 +60,12 @@ const Carousel = () => {
               {items.map((item) => (
                 <div key={item.id} className={styles.card}>
                   <h2>
-                    نتعاون مع أكثر من 300 جامعة وشركة رائدةنتعاون مع أكثر من 300
-                    جامعة وشركة رائدةنتعاون مع أكثر من 300 جامعة وشركة رائدة
+                  {successStories[currentIndex].title}
                   </h2>
                   <span className={styles.contentimg}>
-                    <p>نتعاون مع أكثر من 300 جامعة وشركة</p>
-                    <img src={assests.caraImg} alt="Carousel" />
+                  <img src={assests.caraImg} alt="Carousel" />
+                    <p>{successStories[currentIndex].description}</p>
+                  
                   </span>
                 </div>
               ))}
@@ -74,7 +75,7 @@ const Carousel = () => {
             className={`${styles.arrow} ${styles.right}`}
             onClick={nextSlide}
           >
-            ▶
+           <img src="/src/assets/CarouselLeftArrow.png" alt=""></img>
           </button>
         </div>
       </div>

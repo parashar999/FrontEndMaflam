@@ -190,7 +190,7 @@ const Navbar = () => {
                       <li className={styles.gappss}>
                         {" "}
                         <MdLiveTv />
-                        <Link to="/mycourses"> My Courses</Link>
+                        <Link to="https://learn.maflam.com/my"> My Courses</Link>
                       </li>
                       <li className={styles.iconstyle}>
                         {" "}

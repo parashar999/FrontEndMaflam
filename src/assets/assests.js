@@ -181,10 +181,12 @@ import bagraoudcontac2 from "./bagraoudcontact.png"
 import contactInformation from "./contactInformation.png"
 import contactform2 from "./contactform2.png"
 import contactinformation2 from "./contactinformation2.png"
+import detailsbg from "./detailsbg.png"
 
 
 export const assests = {
   subscribefundamentalpackage,
+  detailsbg,
   contactinformation2,
   contactform2,
   contactInformation,

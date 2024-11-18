@@ -158,8 +158,9 @@
     flex-grow: 1;
     border: none;
     height: 1px;
-    background-color: #39FFFb;
+    background-color: #39fffcc7;
     margin-left: 10px;
+    opacity: 0.5px !important;
 }
 
 .toggleButton {
@@ -169,7 +170,7 @@
 }
 
 .toggle {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .content {

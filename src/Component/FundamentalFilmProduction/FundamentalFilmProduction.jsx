@@ -48,7 +48,7 @@ const FundamentalFilmProduction = () => {
         <div className={styles.videoTheory}>
           <div className={styles.headerText}>
             <h6>{courseImg.title || "Fundamentals of Film Production"}</h6>
-            <p> {courseData} || "Course description not available."</p>
+            <p> {courseData || "Course description not available."}</p>
             <div className={styles.lessonsprice}>
               <div className={styles.riyals}>
                 {courseData.price
@@ -94,6 +94,7 @@ const FundamentalFilmProduction = () => {
           </div>
           <div className={styles.courseVideo}>
             <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
+            {/* <video src={courseImg.promoVedio } alt="Course Preview" /> */}
             <div className={styles.videocontent}>
               <p>
                 {filmproductionScreenDetails.getPricingCourse1DetailsSec1

@@ -41,12 +41,12 @@
 
 .content p {
   width: 620px;
-  color: #fff;
+  color: #FFFFFF;
   line-height: 45px;
-  text-align: left;
+  /* text-align: left; */
 padding-top: 100px;
 padding-bottom: 50px;
-  font-size: 36px;
+  font-size: 17px;
   font-weight: 700;
   
 }
@@ -63,7 +63,7 @@ padding-bottom: 50px;
   max-width: 1127.255px;
   border-radius: 20px;
   position: relative;
-  opacity: 0.5;
+  opacity: 1;
   height: 400px;
 }
 .imgcontainer  {

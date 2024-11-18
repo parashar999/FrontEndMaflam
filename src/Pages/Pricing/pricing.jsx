@@ -68,7 +68,7 @@ function Pricing() {
                 <div id="Coursesgrid">
                 <VariousCourse></VariousCourse>
                 </div>
-                {/* <Carousel></Carousel> */}
+                <Carousel></Carousel>
                 <MaflanContent />
                 <JoinUs />
                 <Footer></Footer>

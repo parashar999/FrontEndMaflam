@@ -7,14 +7,17 @@ import { assests } from "../../assets/assests.js";
 import { LoginPageContext } from "../../store/LoginPageContext.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 import "react-toastify/dist/ReactToastify.css";
+
 
 const Login = () => {
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const { language} = useContext(LanguageContext);
   const navigate = useNavigate();
-
+  const signupText = language === "ar"?"انشئ حساب":"Create an Account";
   const {
     loginPageContexttDetails,
     loading,
@@ -150,7 +153,7 @@ const Login = () => {
           </div>
           <div style={{width:'100%'}}>
             <a href="/signUp" className={styles.createAccount}>
-              Create an account
+            {signupText}
             </a>
           </div>
         </div>
