@@ -183,7 +183,6 @@ import contactform2 from "./contactform2.png"
 import contactinformation2 from "./contactinformation2.png"
 
 
-
 export const assests = {
   subscribefundamentalpackage,
   contactinformation2,

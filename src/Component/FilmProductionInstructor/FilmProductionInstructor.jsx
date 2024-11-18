@@ -42,7 +42,7 @@ const FilmProductionInstructor = () => {
               <h5 key={index}>{lesson.name}</h5>
             ))
           ) : (
-            <h5>About the Instructor</h5>
+            <h5 className={styles.toggle}>About the Instructor</h5>
           )}
 
           <hr className={styles.line} />
