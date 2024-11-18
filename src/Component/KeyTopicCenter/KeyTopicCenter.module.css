@@ -39,7 +39,8 @@
   .toggleButton {
     margin-right: 10px;
     color: #39FFFb;
-    font-size: 25px;
+    font-size: 28px;
+    font-weight: bold;
   }
   
   .content {

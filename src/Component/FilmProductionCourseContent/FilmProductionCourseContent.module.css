@@ -29,11 +29,15 @@
   display: flex;
   align-items: center;
   color: white;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .toggle {
   margin: 0;
   padding-bottom: 0;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .line {
@@ -47,7 +51,8 @@
 .toggleButton {
   margin-right: 10px;
   color: #39FFFb;
-  font-size: 25px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .content {
@@ -70,17 +75,24 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Work Sans';
 }
 
 .question {
   margin-left: 10px;
   color: #39FFFb;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Work Sans';
+
 }
 
 .answer {
   color: white;
   text-align: justify;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 20px;
   margin-bottom: 10px;
 }
