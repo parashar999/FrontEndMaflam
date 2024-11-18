@@ -6,7 +6,8 @@ import { FilmProductionContext } from "../../store/FilmProductionContext";
 import auth from "../../Auth/Auth";
 import { useNavigate } from "react-router-dom";
 
-const FundamentalFilmProduction = () => {
+const 
+FundamentalFilmProduction = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { filmproductionScreenDetails, loading, error } = useContext(
     FilmProductionContext
@@ -93,8 +94,16 @@ const FundamentalFilmProduction = () => {
             </div>
           </div>
           <div className={styles.courseVideo}>
-            <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
-            {/* <video src={courseImg.promoVedio } alt="Course Preview" /> */}
+            {/* <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
+            <div className={styles.videofixed}> <video src={courseImg.promoVideo } controls alt="Course Preview" /></div> */}
+            {courseImg.promoVideo ? (
+  <div className={styles.videofixed}>
+    <video src={courseImg.promoVideo} controls alt="Course Preview" />
+  </div>
+) : (
+  <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
+)}
+
             <div className={styles.videocontent}>
               <p>
                 {filmproductionScreenDetails.getPricingCourse1DetailsSec1
