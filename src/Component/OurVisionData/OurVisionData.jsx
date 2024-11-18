@@ -23,7 +23,32 @@ const OurVisionData = () => {
                         <br />
                     </span>
                 )) || 'Default Description'}</p>
-                <div className={styles.underline}></div>
+                
+                <div className='lin' style={{display:'flex', justifyContent:'flex-start', paddingTop:'40px'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="584" height="4" viewBox="0 0 584 4" fill="none">
+  <path
+    d="M2.00002 1.99995L582 2"
+    stroke="url(#paint0_linear_9427_9569)"
+    strokeWidth="4"
+    strokeLinecap="round"
+  />
+  <defs>
+    <linearGradient
+      id="paint0_linear_9427_9569"
+      x1="2"
+      y1="2.00002"
+      x2="575.556"
+      y2="2.00003"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stopColor="#5AFFFF" />
+      <stop offset="1" stopColor="#5AFFFF" stopOpacity="0" />
+    </linearGradient>
+  </defs>
+</svg>
+
+                </div>
+
             </div>
 
             {/* Cards Section */}

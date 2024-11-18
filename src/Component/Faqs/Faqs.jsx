@@ -12,6 +12,10 @@ const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleContent = () => {
+    setIsOpen(!isOpen);
+  };
  
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
@@ -35,7 +39,7 @@ const Faqs = () => {
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={styles.question}> + {item.title}</div>
+            <div className={styles.question}>  {isOpen ? "-" : "+"} {item.title}</div>
             <div
               className={`${styles.answer} ${
                 activeIndex === index ? styles.showAnswer : ""

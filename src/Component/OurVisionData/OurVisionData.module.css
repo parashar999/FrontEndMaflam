@@ -58,14 +58,18 @@ flex-shrink: 0;
 .cards {
   display: flex;
   justify-content: center;
-  gap: 90px;
+  gap: 50px;
   margin-top:80px;
   flex-wrap: wrap;
+  
   /* padding: 100px; */
 }
 
 .card {
-  background-color: #ffffff1a;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px -0.5px 2px 1px rgba(255, 255, 255, 0.25) inset;
+  backdrop-filter: blur(40px);
   border-radius: 8px;
   padding: 50px;
   width: 580px;
