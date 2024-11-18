@@ -55,7 +55,7 @@ export default function AboutUs() {
             <div className={styles.AboutUsbg}>
             <Filmmaker />
               <OurVisionData />
-              <Filmmaker />
+              {/* <Filmmaker /> */}
             </div>
             <MaflamImageOffer />
             <MaflamInstructors />
