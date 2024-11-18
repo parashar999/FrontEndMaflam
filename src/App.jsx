@@ -249,7 +249,7 @@ const App = () => {
           <LanguageProvider>
             <FilmProductionProvider>
               <AboutusPageProvider>
-                <FilmProduction />
+                <FilmProduction/>
               </AboutusPageProvider>
             </FilmProductionProvider>
           </LanguageProvider>

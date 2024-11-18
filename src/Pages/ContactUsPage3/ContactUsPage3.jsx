@@ -51,11 +51,8 @@ const ContactUsPage3 = () => {
     }
   }, [ContactUs3ContextDetails]);
   return (
-    <div>
-      <LanguageProvider>
-        <AboutusPageProvider>
-          <ContactUsContextProvider>
-            <Navbar></Navbar>
+      <div>
+            <Navbar/>
             <HeroContact></HeroContact>
             <div className={styles.cotainer}>
               <div className={styles.contact3}>
@@ -67,10 +64,8 @@ const ContactUsPage3 = () => {
               <JoinUs></JoinUs>
             </div>
             <Footer></Footer>
-          </ContactUsContextProvider>
-        </AboutusPageProvider>
-      </LanguageProvider>
-    </div>
+    
+      </div>
   );
 };
 

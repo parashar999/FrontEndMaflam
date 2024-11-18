@@ -40,21 +40,17 @@ function FilmProduction() {
     error: aboutError,
   } = useContext(AboutusPageContext);
 
-  // useEffect(() => {
-  //   if (aboutusScreenDetails) {
-  //     console.log("About Us Screen Details:", aboutusScreenDetails);
-  //   }
-  // }, [aboutusScreenDetails]);
+
 
   return (
     <div>
-      <Navbar />
+     
       <div className="elements">
         <LanguageProvider>
           <FilmProductionProvider>
             <AboutusPageProvider>
+            <Navbar />
               <FundamentalFilmProduction />
-
               <FilmProductionInstructor />
               <FilmProductionCourseContent />
               {/* <SubscribeFundamentalPackage /> */}
