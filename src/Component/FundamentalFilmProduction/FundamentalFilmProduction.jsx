@@ -94,6 +94,7 @@ const FundamentalFilmProduction = () => {
           </div>
           <div className={styles.courseVideo}>
             <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
+            {/* <video src={courseImg.promoVedio } alt="Course Preview" /> */}
             <div className={styles.videocontent}>
               <p>
                 {filmproductionScreenDetails.getPricingCourse1DetailsSec1

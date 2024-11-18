@@ -2,11 +2,14 @@
     width: 100vw;
     max-width: 1920px;
     padding-top: 150px;
-    min-width: 1200px;
+    min-width: 1800px;
     display:flex;
+    height: 1593px;
+margin-top: -150px !important;
 justify-content: center;
 align-items: center;
-    background-image: url("../../assets/MaflamBlog.png");
+    /* background-image: url("../../assets/MaflamBlog.png"); */
+    background-image: url("../../assets/blogsBgImage.png");
     margin: auto;
 
 }

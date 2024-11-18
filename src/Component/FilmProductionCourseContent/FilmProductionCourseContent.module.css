@@ -1,7 +1,9 @@
 
 .maincontainer {
   width: 100%;
+  background-image:url("../../assets/detailsbg.png") ;
   margin: auto;
+  background-repeat: no-repeat;
   max-width: 1397px;
   justify-content: baseline;
   align-items: baseline;
@@ -44,8 +46,9 @@
   flex-grow: 1;
   border: none;
   margin: 10px;
-  height: 1px;
+  height: 0.5px !important;
   background-color: #39FFFb;
+  opacity: 0.5px !important;
 }
 
 .toggleButton {
