@@ -81,7 +81,7 @@ flex-shrink: 0;
   color: var(--Accent-Accent-400---Main, #39FFFB);
   /* Headlines/HEadline 4 */
   font-family: "Noto Kufi Arabic";
-  font-size: 35px;
+  font-size: 36px;
   text-align: left;
   font-style: normal;
   font-weight: 700;
@@ -92,7 +92,7 @@ flex-shrink: 0;
 .card p {
   color: #FFF;
   font-family: "Noto Kufi Arabic";
-  font-size: 18px;
+  font-size: 24px;
   font-style: normal;
   text-align: start;
   font-weight: 300;
@@ -109,6 +109,13 @@ font-weight: 400;
 line-height: 160%; */
 }
 
+
+.linehr{
+  align-items: end;
+  display: flex;
+  justify-self:start;
+  padding-top:40px ;
+}
 @media (max-width:1250px)
 {
   .headingSection
