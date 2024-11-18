@@ -24,7 +24,24 @@ const VariousCourse = () => {
         <div className={styles.cardsContainer}>
           {courses.map((course) => (
             <div key={course.courseId} className={styles.card}>
-              <video src={course.promoVedio}  loop playsInline controls alt={course.title} className={styles.cardImage} />
+              {/* <video src={course.promoVedio}  loop playsInline controls alt={course.title} className={styles.cardImage} /> */}
+              {course.promoVedio ? (
+  <video 
+    src={course.promoVedio} 
+    loop 
+    playsInline 
+    controls 
+    alt={course.title} 
+    className={styles.cardImage} 
+  />
+) : (
+  <img 
+    src={course.promoPhoto || ""} 
+    alt={course.title} 
+    className={styles.cardImage} 
+  />
+)}
+
               
               <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', paddingRight: '10px', paddingLeft: '10px' }}>
                 {course.instructors.map((instructor, index) => (

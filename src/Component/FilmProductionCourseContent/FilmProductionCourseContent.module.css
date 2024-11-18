@@ -1,7 +1,7 @@
 
 .maincontainer {
   width: 100%;
-  background-image:url("../../assets/detailsbg.png") ;
+  /* background-image:url("../../assets/detailsbg.png") ; */
   margin: auto;
   background-repeat: no-repeat;
   max-width: 1397px;
@@ -12,6 +12,7 @@
 
 /* Collapsible for LTR */
 .collapsibleLtr {
+  background-image:url("../../assets/detailsbg.png") ;
   margin: 10px 0;
   border: 1px solid gray;
   padding-left: 20px;
