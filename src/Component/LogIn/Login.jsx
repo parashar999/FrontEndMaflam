@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import styles from "./Login.module.css";
 import auth from "../../Auth/Auth.js";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { assests } from "../../assets/assests.js";
 import { LoginPageContext } from "../../store/LoginPageContext.jsx";
@@ -33,6 +33,7 @@ const Login = () => {
   const passwordLabel = loginData[2]?.title || "Password";
   const rememberMeLabel = loginData[3]?.title || "Remember me";
   const loginButtonLabel = loginData[4]?.title || "Log in";
+  const reset = loginData[5]?.title || "Forget Password";
   const googleLoginText = loginData[7]?.title || "Continue with Google";
 
   const handleSubmit = async (e) => {
@@ -139,6 +140,9 @@ const Login = () => {
               {loginButtonLabel}
             </button>
           </form>
+          <div className={styles.forgotpassword}>
+           <p>  <Link to="/reset">  {reset}</Link></p>
+          </div>
           <div className={styles.divider}>
             <hr className={styles.hrLine} />
             <span style={{fontSize:'22px'}} >or</span>
