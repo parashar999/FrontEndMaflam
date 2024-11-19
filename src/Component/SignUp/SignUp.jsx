@@ -20,12 +20,16 @@ const SignUp = () => {
 
   
   const signUpData = singupPageContextDetails?.signUpData || [];
+
   const welcomeTitle = signUpData[0]?.title || "Welcome";
   const subtitleText = signUpData[0]?.description || "Start your journey now and learn filmmaking.";
   const fullNameLabel = signUpData[1]?.title || "Full name";
   const emailLabel = signUpData[2]?.title || "Email";
   const passwordLabel = signUpData[3]?.title || "Password";
   const confirmPasswordLabel = signUpData[4]?.title || "Confirm Password";
+  const year = signUpData[5]?.Category[0] || "";
+  const month = signUpData[5]?.Category[1] || "";
+  const day = signUpData[5]?.Category[2] || "";
   const dobLabel = signUpData[5]?.title || "Date of birth";
   const continueButtonLabel = signUpData[6]?.title || "Continue";
   const orText = signUpData[7]?.title || "or";
@@ -189,10 +193,10 @@ const SignUp = () => {
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Day</option>
-                {[...Array(31)].map((_, index) => (
-                  <option key={index + 1} value={index + 1}>
-                    {index + 1}
+                <option value="">Year</option>
+                {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
+                  <option key={year} value={year}>
+                    {year}
                   </option>
                 ))}
               </select>
@@ -205,7 +209,7 @@ const SignUp = () => {
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Month</option>
+                <option value="">{month}</option>
                 {[...Array(12)].map((_, index) => (
                   <option key={index + 1} value={index + 1}>
                     {index + 1}
@@ -220,10 +224,10 @@ const SignUp = () => {
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Year</option>
-                {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
-                  <option key={year} value={year}>
-                    {year}
+                <option value="">Day</option>
+                {[...Array(31)].map((_, index) => (
+                  <option key={index + 1} value={index + 1}>
+                    {index + 1}
                   </option>
                 ))}
               </select>

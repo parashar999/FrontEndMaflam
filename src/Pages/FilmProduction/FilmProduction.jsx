@@ -17,6 +17,7 @@ import {
   AboutusPageContext,
   AboutusPageProvider,
 } from "../../store/AboutUsPageContext";
+import { PricingPageContext, PricingPageContextProvider } from "../../store/PricingPageContext";
 
 function FilmProduction() {
   const {
@@ -41,14 +42,29 @@ function FilmProduction() {
   } = useContext(AboutusPageContext);
 
 
+  
+  // const {
+  //   pricingPageContextDetails,
+  //   loading: pricingLoading,
+  //   error: pricingerror,
+  // } = useContext(PricingPageContext);
+
+  // useEffect(() => {
+  //   if (pricingPageContextDetails) {
+  //     console.log("Home Screen Details:", pricingPageContextDetails);
+  //   }
+  // }, [pricingPageContextDetails]);
+
 
   return (
     <div>
      
       <div className="elements">
         <LanguageProvider>
+      
           <FilmProductionProvider>
             <AboutusPageProvider>
+          
             <Navbar />
               <FundamentalFilmProduction />
               <FilmProductionInstructor />
@@ -56,8 +72,10 @@ function FilmProduction() {
               {/* <SubscribeFundamentalPackage /> */}
               <JoinUs />
               <Footer />
+             
             </AboutusPageProvider>
           </FilmProductionProvider>
+        
         </LanguageProvider>
       </div>
     </div>
