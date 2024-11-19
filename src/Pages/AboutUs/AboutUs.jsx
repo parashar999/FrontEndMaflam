@@ -62,8 +62,12 @@ export default function AboutUs() {
             <MaflamCard />
          
             <MaflanContent />
-            <JoinUs />
+            <div className={styles.newsleterabout}>           
+               <JoinUs />
+         
+
             <Footer />
+            </div>
           </div>
         </AboutusPageProvider>
       </HomePageProvider>
