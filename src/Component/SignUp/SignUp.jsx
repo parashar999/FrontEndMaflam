@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import stylesSelected from "./SignUp.module.css";
+import pweye from "../../assets/PWeye.png"
 
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
@@ -143,9 +144,20 @@ const SignUp = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
+           <button
+    type="button"
+    onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+    className={stylesSelected.visibilityToggle}
+    aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+  >
+<img src={pweye} style={{height:'26px', position:'relative'}} alt="" />
+  </button>
+            
 
+          </div>
+         
           <label htmlFor="Confirm Password">{confirmPasswordLabel}</label>
+          <div className={stylesSelected.passwordContainer}>
           <input
             type={isPasswordVisible ? "text" : "password"}
             placeholder={confirmPasswordLabel}
@@ -155,22 +167,37 @@ const SignUp = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
 
+<button
+    type="button"
+    onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+    className={stylesSelected.visibilityToggle}
+    aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+  >
+        <img src={pweye} style={{height:'26px', position:'relative'}} alt="" />
+  </button>
+            
+      </div>
+          
+
           <div className={stylesSelected.dobWrapper}>
             <label htmlFor="dob">{dobLabel}</label>
             <div className={stylesSelected.dobInputs}>
-              <select
-                name="year"
-                value={dateofBirth.year}
+              <div className={stylesSelected.dobInputsitem}>
+            <select
+                name="day"
+                value={dateofBirth.day}
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Year</option>
-                {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
-                  <option key={year} value={year}>
-                    {year}
+                <option value="">Day</option>
+                {[...Array(31)].map((_, index) => (
+                  <option key={index + 1} value={index + 1}>
+                    {index + 1}
                   </option>
                 ))}
               </select>
+              </div>
+              <div className={stylesSelected.dobInputsitem}>
               <select
                 name="month"
                 // required
@@ -185,19 +212,22 @@ const SignUp = () => {
                   </option>
                 ))}
               </select>
+            </div>
+            <div className={stylesSelected.dobInputsitem}>
               <select
-                name="day"
-                value={dateofBirth.day}
+                name="year"
+                value={dateofBirth.year}
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Day</option>
-                {[...Array(31)].map((_, index) => (
-                  <option key={index + 1} value={index + 1}>
-                    {index + 1}
+                <option value="">Year</option>
+                {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
+                  <option key={year} value={year}>
+                    {year}
                   </option>
                 ))}
               </select>
+              </div>
             </div>
           </div>
 
@@ -218,7 +248,7 @@ const SignUp = () => {
             onError={handleGoogleLoginError}
             render={({ onClick }) => (
               <button onClick={onClick} className={stylesSelected.socialButton}>
-                <img src={assests.googlelogin} alt="Google" className={stylesSelected.socialIconImage} />
+                <img src={assests.googlelogin} alt="Google"  className={stylesSelected.socialIconImage} />
                 <span style={{width:'100%', textAlign:'center'}}>  {googleLoginText} </span>
               </button>
             )}
