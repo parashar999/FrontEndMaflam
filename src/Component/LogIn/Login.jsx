@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import styles from "./Login.module.css";
 import auth from "../../Auth/Auth.js";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { assests } from "../../assets/assests.js";
 import { LoginPageContext } from "../../store/LoginPageContext.jsx";
@@ -139,6 +139,9 @@ const Login = () => {
               {loginButtonLabel}
             </button>
           </form>
+          <div className={styles.forgotpassword}>
+           <p>  <Link to="/reset">  Forgot Password?</Link></p>
+          </div>
           <div className={styles.divider}>
             <hr className={styles.hrLine} />
             <span style={{fontSize:'22px'}} >or</span>
