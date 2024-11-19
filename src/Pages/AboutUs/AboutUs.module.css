@@ -1,14 +1,22 @@
 .container{
-        background-color:#030B11;
-    
+
     
 }
 
 .AboutUsbg{
-        background-image: url("../../assets/aboutbg1.png");
-          background-repeat: no-repeat;
-  background-attachment: cover;
-  background-position: center;
+width: 100%;
+max-width: 1920px;
+margin: auto;
+        background-image: url("../../assets/AboutUsBg.png");
+        background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   /* z-index:999; */
+}
+.newsleterabout
+{
+        background-image: url('../../assets/JoinUsNewsGrad.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        
 }

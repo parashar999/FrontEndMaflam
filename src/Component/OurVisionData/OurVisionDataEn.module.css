@@ -1,15 +1,14 @@
 .container {
-  /* background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../../assets/mafamvisual.png') no-repeat center center; */
   background-size: cover;
-  /* background-color: #030B11; */
   color: white;
   min-height: 800px;
   padding: 40px;
   max-width: 1500px;
   margin: 0 auto;
+  padding-top: 100px;
   text-align: center;
   margin-top: -50px;
-  z-index: 999;
+  padding: 4rem;
 }
 
 .headingSection h1 {
@@ -56,12 +55,13 @@ flex-shrink: 0;
 }
 
 .cards {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-top:80px;
   flex-wrap: wrap;
-  
+  padding-bottom: 50px;
   /* padding: 100px; */
 }
 
@@ -72,7 +72,7 @@ flex-shrink: 0;
   backdrop-filter: blur(40px);
   border-radius: 8px;
   padding: 50px;
-  width: 580px;
+  width: 646px;
   text-align: center;
   backdrop-filter: blur(10px);
 }
@@ -138,6 +138,7 @@ line-height: 160%; */
   {
       font-size: smaller;
   }
+
   .cards p
   {
     max-width: 100%;

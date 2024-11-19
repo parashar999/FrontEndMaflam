@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+
+
+
+import React, { useState, useContext } from "react";
 import styles from "./Faqs.module.css";
-
-
-import { useContext } from "react";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -12,11 +12,7 @@ const Faqs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleContent = () => {
-    setIsOpen(!isOpen);
-  };
- 
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
@@ -39,7 +35,9 @@ const Faqs = () => {
             }`}
             onClick={() => handleToggle(index)}
           >
-            <div className={styles.question}>  {isOpen ? "-" : "+"} {item.title}</div>
+            <div className={styles.question}>
+              {activeIndex === index ? "-" : "+"} {item.title}
+            </div>
             <div
               className={`${styles.answer} ${
                 activeIndex === index ? styles.showAnswer : ""
@@ -50,9 +48,9 @@ const Faqs = () => {
           </div>
         ))}
         <div className={styles.arrowcontainer}>
-        <button className={styles.arrowButton}>
-          <AiOutlineArrowDown size={40} />
-        </button>
+          <button className={styles.arrowButton}>
+            <AiOutlineArrowDown size={40} />
+          </button>
         </div>
       </div>
     </div>
