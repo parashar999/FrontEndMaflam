@@ -27,15 +27,14 @@
   .container {
     text-align: center;
     /* background-color: rgba(0, 0, 0, 0.6);  */
-    max-width: 600px;
+    max-width: 800px;
     color: white;
   }
   
   .heading {
     color: #FFF;
-    font-family: 'Inter', sans-serif;
+    font-family: "Noto Kufi Arabic";
     font-size: 42px;
-    margin-left: -100px !important;
     /* width: 100%; */
     margin-bottom: 30px !important;
     font-weight: 700;
