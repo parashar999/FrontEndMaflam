@@ -54,7 +54,8 @@ const VariousCourse = () => {
               
               <div className={styles.cardContent}>
                 <h3 className={styles.title}>{course.title}</h3>
-                <p className={styles.description}>{course.description.split(" ").slice(0, 23).join(" ")}...</p>
+                {/* <p className={styles.description}>{course.description.split("").slice(0, 23).join(" ")}...</p> */}
+                <p className={styles.description}>{course.description}...</p>
                 <hr style={{ color: '#39FFFB' }} />
                 <div className={styles.footer}>
                   <span className={styles.para}>{course.para}</span>
