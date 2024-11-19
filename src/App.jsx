@@ -319,7 +319,8 @@ const App = () => {
       />
       <Route path="/faqs" element={<FaqPage />} />
       <Route
-        path="/checkout"
+        path="/checkout/:paymentId"
+        // path="/checkout"
         element={
           <LanguageProvider>
             <CheckoutPaymentContextProvider>
