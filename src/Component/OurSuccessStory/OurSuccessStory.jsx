@@ -32,7 +32,7 @@ const OurSuccessStory = () => {
         itemWidth={619}
         itemHeight={417}
         items={videoItems} 
-        scalingRatio={1.05} 
+        scalingRatio={1.02} 
         margin={0}// ass video items array to Carou
       />
     </div>

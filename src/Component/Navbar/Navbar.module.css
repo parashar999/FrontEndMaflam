@@ -121,10 +121,19 @@
 }
 
 .rightLinks a {
-  color: #0ccac4;
+  color: white;
   text-decoration: none;
 }
 
+.rightLinks a:hover {
+  color: #5AFFEA;
+  text-decoration: none;
+}
+
+/* .subIcon:hover
+{
+  color: #5AFFEA;
+} */
 .signupButton {
   border-radius: 64px;
   background: var(--Primary-Primary-300, #1A374B);
@@ -179,7 +188,7 @@ backdrop-filter: blur(120px);
   border-bottom: 4px solid #5AFFFF ; /* Adjust color as needed */
 }
 
-.submenu :hover a {
+.submenu:hover a {
   color: #39FFFB;
   border-radius: 2px;
 background: #18232C;
@@ -287,6 +296,7 @@ background: #18232C;
 
 
 .profileMenu ul {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -297,8 +307,12 @@ background: #18232C;
 }
 
 .profileMenu li {
+  width: 100%;
+  display: flex;
   padding: 10px 20px;
   cursor: pointer;
+  justify-content: baseline;
+  align-items: baseline;
 }
 
 .iconstyle {
