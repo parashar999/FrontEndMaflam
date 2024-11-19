@@ -189,37 +189,37 @@ const Navbar = () => {
                     <ul>
                       <li className={styles.gappss}>
                         {" "}
-                        <MdLiveTv />
+                        <MdLiveTv className={styles.subIcon}/>
                         <Link to="https://learn.maflam.com/my"> My Courses</Link>
                       </li>
                       <li className={styles.iconstyle}>
                         {" "}
-                        <FaRegUser /> &nbsp;{" "}
+                        <FaRegUser className={styles.subIcon} /> &nbsp;{" "}
                         <Link to="/personalInformation"> My Profile</Link>
                       </li>
                       <li>
                         {" "}
-                        <PiCertificateBold /> &nbsp;{" "}
+                        <PiCertificateBold className={styles.subIcon} /> &nbsp;{" "}
                         <Link to="/mycertificate">My Certificates</Link>
                       </li>
                       <li>
                         {" "}
-                        <FaRegHeart /> &nbsp; <Link to="/mywishlist">  My
+                        <FaRegHeart className={styles.subIcon} /> &nbsp; <Link to="/mywishlist">  My
                         Wishlist</Link>
                       </li>
                       <li>
                         {" "}
-                        <CiFlag1 /> &nbsp;{" "}
+                        <CiFlag1 className={styles.subIcon} /> &nbsp;{" "}
                         <Link to="/contentrequired">My Subscriptions </Link>
                       </li>
                       <li>
                         {" "}
-                        <LuHelpCircle /> &nbsp;
+                        <LuHelpCircle className={styles.subIcon} /> &nbsp;
                         <Link to="/contentrequired">Help Center</Link>
                       </li>
                       <li onClick={handleLogoutClick}>
                         {" "}
-                        <CgLogOut /> &nbsp; Logout
+                        <CgLogOut className={styles.subIcon} /> &nbsp; Logout
                       </li>
                     </ul>
                   </div>

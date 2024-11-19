@@ -3,7 +3,6 @@
   background-image: url('../../assets/JoinUsNewsGrad.png');
   width: 100vw;
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -11,27 +10,32 @@
   padding-top: 100px;
   background-size: cover;
   padding-bottom: 50px;
-  background-position-y: bottom;
+  background-position-y: center;
   max-width: 1920px;
   overflow: visible;
+  /* z-index: 1; */
 }
 
+/* .joinBackground{
+  background-image: url("../../assets/aboutJoinus.png");
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+} */
+
 .maincontainer{
-
-  margin-left: 450px !important;
+  /* background-color: #10171D; */
+  /* height: ; */
   padding-top: 20px;
-  
   padding-bottom: 20px;
-  max-width: 1400px;
-
+  width: 100vw;
+  max-width: 960px;
   margin: 0 auto; 
-  width: 70%;
   background-repeat: no-repeat;
 }
 .container {
   display: flex;
   height: 250px;
-  /* margin-left: -200px; */
   margin-bottom: 30px;
   /* background-image: url("../../assets/Frame259.png"); */
   background-size: cover;
@@ -40,8 +44,8 @@
   padding: 40px;
   padding-top: 60px;
   max-width: 800px;
-  margin-left:50px;
-  margin-right: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .JoinUsBox {

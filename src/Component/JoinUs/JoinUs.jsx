@@ -62,6 +62,8 @@ const JoinUs = () => {
   };
 
   return (
+    <div>
+          <div className={styles.joinBackground}></div>
     <div className={styles.joinUsParent}>
       <div
         className={styles.maincontainer}
@@ -102,6 +104,7 @@ const JoinUs = () => {
         </div>
         <ToastContainer />
       </div>
+    </div>
     </div>
   );
 };
