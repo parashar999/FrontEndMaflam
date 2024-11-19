@@ -154,7 +154,11 @@ const SignUp = () => {
     className={stylesSelected.visibilityToggle}
     aria-label={isPasswordVisible ? "Hide password" : "Show password"}
   >
-<img src={pweye} style={{height:'26px', position:'relative'}} alt="" />
+
+    <div style={{height:"100%", width:"36px"}}>
+    <img src={pweye} style={{height:'26px', position:'relative'}} alt="" />
+    </div>
+
   </button>
             
 
@@ -177,7 +181,10 @@ const SignUp = () => {
     className={stylesSelected.visibilityToggle}
     aria-label={isPasswordVisible ? "Hide password" : "Show password"}
   >
-        <img src={pweye} style={{height:'26px', position:'relative'}} alt="" />
+     <div style={{height:"100%", width:"36px"}}>
+     <img src={pweye} style={{height:'26px', position:'relative'}} alt="" />
+     </div>
+        
   </button>
             
       </div>

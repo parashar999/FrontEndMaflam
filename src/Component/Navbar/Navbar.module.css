@@ -188,7 +188,7 @@ backdrop-filter: blur(120px);
   border-bottom: 4px solid #5AFFFF ; /* Adjust color as needed */
 }
 
-.submenu:hover a {
+.submenu :hover a {
   color: #39FFFB;
   border-radius: 2px;
 background: #18232C;
@@ -197,8 +197,9 @@ background: #18232C;
 .navbar {
   z-index: 1000;
 }
-.dropdownitems:hover
+.dropdownitems :hover
 {
+
   border-radius: 2px;
   background: #18232C;
 }
@@ -277,7 +278,7 @@ background: #18232C;
   width: 220px;
   /* background-color: black; */
   border-radius: 10px;
-  background: rgba(26, 34, 40, 1.0);
+  background: rgba(26, 34, 40, 0.9);
   position: absolute;
   top: 60px;
   right: -70px;
@@ -294,7 +295,6 @@ background: #18232C;
   z-index: 10;
 }
 
-
 .profileMenu ul {
   width: 100%;
   display: flex;
@@ -309,11 +309,19 @@ background: #18232C;
 .profileMenu li {
   width: 100%;
   display: flex;
+  flex-direction: row;
   padding: 10px 20px;
   cursor: pointer;
   justify-content: baseline;
   align-items: baseline;
 }
+
+.profileMenu ul li:hover 
+{
+  width: 100%;
+    background-color:#18232C ;
+}
+
 
 .iconstyle {
   margin-top: 3px;
