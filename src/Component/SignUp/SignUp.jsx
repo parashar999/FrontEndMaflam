@@ -193,7 +193,7 @@ const SignUp = () => {
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Year</option>
+                <option value="">{year}</option>
                 {Array.from({ length: 120 }, (_, i) => new Date().getFullYear() - i).map((year) => (
                   <option key={year} value={year}>
                     {year}
@@ -224,7 +224,7 @@ const SignUp = () => {
                 onChange={handleDOBChange}
                 className={stylesSelected.dobSelect}
               >
-                <option value="">Day</option>
+                <option value="">{day}</option>
                 {[...Array(31)].map((_, index) => (
                   <option key={index + 1} value={index + 1}>
                     {index + 1}
