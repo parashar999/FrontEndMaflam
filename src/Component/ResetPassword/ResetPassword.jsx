@@ -3,8 +3,11 @@ import React from 'react';
 import styles from './ResetPassword.module.css';
 import logo1 from "../../assets/logo1.png";
 
+
 function ResetPassword() {
   return (
+    <>
+  
     <div className={styles.maincontainer}>
       <div className={styles.secondcontainer}> 
         <header className={styles.header}>
@@ -18,6 +21,8 @@ function ResetPassword() {
         </form>
       </div>
     </div>
+ 
+    </>
   );
 }
 

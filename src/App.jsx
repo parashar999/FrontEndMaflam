@@ -65,7 +65,8 @@ import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
 //import Mycourses from "./Pages/MyCourses/Mycourses1.jsx";
 import auth from "./Auth/Auth.js";
 import Podcost from "./Component/Podcast/Podcost.jsx";
-import ResetPassword from "./Component/ResetPassword/ResetPassword.jsx";
+import ResetPasswordPage from "./Pages/ResetPasswordPage/ResetPasswordPage.jsx";
+
 const userDetails = auth.getAuthData();
 const PrivateRoute = ({ children }) => {
   return userDetails ? children : <Navigate to="/login" />;
@@ -336,7 +337,12 @@ const App = () => {
       <Route path="/paymentgateway" element={<PaymentGateWayApi />} />
       <Route path="/mycourses" element={<MyCousesPages />} />
       <Route path="/pricing" element={<PricingDetails />} />
-      <Route path="/reset" element={<ResetPassword />} />
+      <Route path="/reset" element={
+    <LanguageProvider>
+        <ResetPasswordPage/>
+        </LanguageProvider>
+      
+        } />
 
       <Route
         path="/mywishlist"

@@ -33,6 +33,7 @@ const Login = () => {
   const passwordLabel = loginData[2]?.title || "Password";
   const rememberMeLabel = loginData[3]?.title || "Remember me";
   const loginButtonLabel = loginData[4]?.title || "Log in";
+  const reset = loginData[5]?.title || "Forget Password";
   const googleLoginText = loginData[7]?.title || "Continue with Google";
 
   const handleSubmit = async (e) => {
@@ -140,7 +141,7 @@ const Login = () => {
             </button>
           </form>
           <div className={styles.forgotpassword}>
-           <p>  <Link to="/reset">  Forgot Password?</Link></p>
+           <p>  <Link to="/reset">  {reset}</Link></p>
           </div>
           <div className={styles.divider}>
             <hr className={styles.hrLine} />
