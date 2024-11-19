@@ -154,7 +154,7 @@ const checkoutpage = async () => {
   const token = userdetails?.token; // Ensure token is available
   const requestBody = {
     amount: 750,
-    courseId: "672c5ee7da73549420503e9c",
+    courseId: "672c6cb662d002aa55e9229c",
     callback: "https://maflam.web.app/mycourses",
   };
 
