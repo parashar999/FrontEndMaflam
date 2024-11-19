@@ -225,6 +225,9 @@ font-family: "Noto Kufi Arabic";
 height: 20px;
   
 }
+.currencyText{
+  margin-top: 0px !important;
+}
 .buttondiv{
   /* border: 1px solid beige; */
   height: 200px;

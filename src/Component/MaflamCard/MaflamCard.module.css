@@ -15,7 +15,7 @@
     color: #FFF;
     text-align: center;
     /* font-family: Inter; */
-    font-size: 36px;
+    font-size: 36px !important;
     font-style: normal;
     font-weight: 700;
     line-height: 160%;
@@ -44,7 +44,9 @@
   
   .image {
     /* border-radius: 10px; */
-    max-width: 100%;
+    /* max-width: 100%; */
+    max-width: 428px !important;
+    max-height: 421px;
     transition: transform 0.3s ease;
   }
   

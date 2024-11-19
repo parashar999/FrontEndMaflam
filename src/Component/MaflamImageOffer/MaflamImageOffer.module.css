@@ -27,7 +27,7 @@ font-size: 36px;
 font-style: normal;
 font-weight: 700;
 line-height: 160%;
-margin-bottom:50px;
+margin-bottom:20px;
 }
 
 .offersHeader p {
@@ -84,6 +84,7 @@ margin-bottom:50px;
 .offerTitle p {
   position: relative;
   bottom: 50px;
+  font-size: 24px;
 }
 
  @media (max-width:1250px)

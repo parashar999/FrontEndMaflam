@@ -24,8 +24,9 @@ const MaflamImageOffer = () => {
   return (
     <div className={styles.offersContainer}>
       <div className={styles.offersHeader}>
-      <p>{maflamOffersTitle.description}</p>
+      {/* <p>{maflamOffersTitle.description}</p> */}
         <h2>{maflamOffersTitle.title}</h2>
+        <p>{maflamOffersTitle.description}</p>
       </div>
 
       <div className={styles.offersGrid}>
