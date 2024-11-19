@@ -118,7 +118,7 @@ font-family: "Noto Kufi Arabic";
 font-size: 28px;
 font-style: normal;
 text-align: start;
-margin-left: 30px;
+margin-inline-start: 30px;
 margin-bottom: 30px;
 font-weight: 700;
 line-height: 160%;
@@ -226,7 +226,8 @@ height: 20px;
   
 }
 .currencyText{
-  margin-top: 0px !important;
+  margin-top:8px !important;
+
 }
 .buttondiv{
   /* border: 1px solid beige; */
