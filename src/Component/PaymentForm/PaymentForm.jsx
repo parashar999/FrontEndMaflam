@@ -181,6 +181,7 @@ const PaymentForm = () => {
       amount: 750,
       courseId: paymentID,
       callback: "https://maflam.web.app/mycourses",
+      // callback: `https://maflam.web.app/checkout/${courseId}`,
       token
     };
   
