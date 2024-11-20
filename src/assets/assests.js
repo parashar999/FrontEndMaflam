@@ -354,20 +354,43 @@ export const assests = {
 };
 
 
-export const youtubeChannel =[
-  {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
-episode :"For more episodes",
-imageurl : channel1 ,
-imagelogo :logo14  ,
-icon : youtubeicon
-   },
-   {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
-    episode :"For more episodes",
-    imageurl :channel2  ,
+
+// export const  youtubeChannel =[
+//   {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+// episode :"For more episodes",
+// imageurl : channel1 ,
+// videoId: "https://www.youtube.com/watch?v=uzU-S7_XMXc",
+// imagelogo :logo14  ,
+// icon : youtubeicon
+//    },
+//    {title : "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+//     episode :"For more episodes",
+//     imageurl :channel2  ,
+//     videoId: "https://www.youtube.com/watch?v=uzU-S7_XMXc",
+    // imagelogo :logo19 ,
+    // icon : youtubeicon
+//        },
+// ] 
+export const youtubeChannel = [
+  {
+    title: "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+    episode: "For more episodes",
+    imageurl: "path/to/channel1-image.jpg", // Replace with actual image path
+    videoId: "uzU-S7_XMXc",
+    imagelogo :logo14  ,
+    icon : youtubeicon
+  },
+  {
+    title: "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
+    episode: "For more episodes",
+    imageurl: "path/to/channel2-image.jpg", // Replace with actual image path
+    videoId: "-KKH3t_h9pA",
     imagelogo :logo19 ,
     icon : youtubeicon
-       },
-] 
+  }
+];
+
+
 
 export const EducationPost =[
   {title: "Educational content that reveals secrets of the filmmaking profession and explains why it is so important.",

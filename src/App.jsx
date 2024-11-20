@@ -66,6 +66,8 @@ import PrivacyPolicyPage from "./Pages/PrivacyPolicy/PrivacyPolicyPage.jsx";
 import auth from "./Auth/Auth.js";
 import Podcost from "./Component/Podcast/Podcost.jsx";
 import ResetPasswordPage from "./Pages/ResetPasswordPage/ResetPasswordPage.jsx";
+import { SocialMediaPageProvider } from "./store/SocilaMediaPageContext.jsx";
+
 
 const userDetails = auth.getAuthData();
 const PrivateRoute = ({ children }) => {
@@ -332,7 +334,15 @@ const App = () => {
 
       <Route
         path="/socialmedia"
-        element={<SocialMediaPage></SocialMediaPage>}
+        element={<LanguageProvider>
+          <AboutusPageProvider>
+            <SocialMediaPageProvider>
+          <SocialMediaPage></SocialMediaPage>
+          </SocialMediaPageProvider>
+         
+          </AboutusPageProvider>
+          </LanguageProvider>
+          }
       />
 
       <Route path="/paymentgateway" element={<PaymentGateWayApi />} />
