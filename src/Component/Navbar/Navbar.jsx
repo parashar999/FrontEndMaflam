@@ -20,21 +20,16 @@ import { assests } from "../../assets/assests";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
 import loginarrow from "../../assets/Arrow.png";
-import { LuHelpCircle } from "react-icons/lu";
-import { FaRegHeart } from "react-icons/fa";
-import { CgLogOut } from "react-icons/cg";
-import { FaRegUser } from "react-icons/fa";
-import { PiCertificateBold } from "react-icons/pi";
-import { CiFlag1 } from "react-icons/ci";
 import auth from "../../Auth/Auth.js";
+
 const Navbar = () => {
   const userDetails = auth.getAuthData();
-  // console.log("from Navbar", userDetails);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [navItems1, setNavItems1] = useState([]);
   const [user, setUser] = useState(null);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  const [profileMenuItems, setProfileMenuItems] = useState([]);
   const navigate = useNavigate();
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
 
@@ -62,12 +57,16 @@ const Navbar = () => {
 
   const FooterGetApi = (lang) => {
     axios
-      // .get(`http://192.168.1.39:3001/maflam/fetch-nav-item?lang=${lang}`)
-      // .get(`https://prominenttrades.in/maflam/fetch-nav-item?lang=${lang}`)
       .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
-        // console.log(response.data);
         setNavItems1(response.data);
+        console.log(response.data, "nav")
+        const profileData = response.data.find(
+          (item) => item.headerSubCategory
+        );
+        if (profileData) {
+          setProfileMenuItems(profileData.headerSubCategory);
+        }
       })
       .catch((error) => {
         console.error("Error fetching footer data:", error);
@@ -76,7 +75,6 @@ const Navbar = () => {
 
   useEffect(() => {
     FooterGetApi(language === "ar" ? 0 : 1);
-
     const loggedInUser = auth.getAuthData();
     setUser(loggedInUser);
   }, [language]);
@@ -88,21 +86,6 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  const iconMap = {
-    FaPhoneAlt: <FaPhoneAlt />,
-    GrGroup: <GrGroup />,
-    MdLiveTv: <MdLiveTv />,
-    BiSolidMoviePlay: <BiSolidMoviePlay />,
-    MdInsertPhoto: <MdInsertPhoto />,
-    PiDiscDuotone: <PiDiscDuotone />,
-    ImVideoCamera: <ImVideoCamera />,
-    BiSolidMovie: <BiSolidMovie />,
-    RiMovie2Line: <RiMovie2Line />,
-    PiSuitcaseSimpleFill: <PiSuitcaseSimpleFill />,
-    HiOutlineClipboardDocumentList: <HiOutlineClipboardDocumentList />,
-    TfiMobile: <TfiMobile />,
-    BiSolidBookAlt: <BiSolidBookAlt />,
-  };
   return (
     <div
       className={styles.navmenu}
@@ -111,32 +94,49 @@ const Navbar = () => {
       <nav
         className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       >
-      <Link to="/">
+        <Link to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </Link>
-
-<div className={styles.menuelements}>
-        
+        <div className={styles.menuelements}>
           <div className={styles.leftLinks}>
-            {/* {console.log("check language", language)} */}
             {navItems1.map((item, index) => (
-              <div key={index} className={styles.dropdown}  >
+              <div key={index} className={styles.dropdown}>
                 {item.hasDropdown ? (
                   <>
-                    <a style={{height:'100%', display:'flex', flexDirection:'row', alignItems:'center'}}href="#" onClick={() => toggleDropdown(item.name)} className={openDropdown === item.name ? styles.activeLink : ""}  >
+                    <a
+                      style={{
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}
+                      href="#"
+                      onClick={() => toggleDropdown(item.name)}
+                      className={
+                        openDropdown === item.name ? styles.activeLink : ""
+                      }
+                    >
                       {item.name}
                       <span
                         className={`${styles.arrow} ${
-                          openDropdown === item.name ? language==="ar" ? styles.rotate : styles.rotate1:""
+                          openDropdown === item.name
+                            ? language === "ar"
+                              ? styles.rotate
+                              : styles.rotate1
+                            : ""
                         }`}
-                            >
+                      >
                         &#8595;
                       </span>
                     </a>
                     {openDropdown === item.name && (
                       <div className={styles.submenu}>
                         {item.dropdownItems?.map((subItem, subIndex) => (
-                          <a href={subItem.href} key={subIndex} className={styles.dropdownitems}>
+                          <a
+                            href={subItem.href}
+                            key={subIndex}
+                            className={styles.dropdownitems}
+                          >
                             &nbsp;&nbsp;
                             <img
                               className={
@@ -165,11 +165,6 @@ const Navbar = () => {
               <img src={assests.Magnifine} alt="Search Icon" />
             </a>
           </div>
-          {/* <div className={styles.searchContainerGlobe}>
-        <img src={assests.Globe} alt="Globe Icon" />
-      </div> */}
-              <div>
-        </div>
           <div className={styles.rightLinks}>
             {user ? (
               <div className={styles.profileContainer}>
@@ -183,44 +178,24 @@ const Navbar = () => {
                     userDetails.usernameInEng || userDetails.usernameInArb
                   }`}</span>
                 </div>
-
                 {isProfileMenuOpen && (
                   <div className={styles.profileMenu}>
                     <ul>
-                      <li className={styles.gappss}>
-                        {" "}
-                        <MdLiveTv className={styles.subIcon}/>
-                        <Link to="https://learn.maflam.com/my"> My Courses</Link>
-                      </li>
-                      <li className={styles.iconstyle}>
-                        {" "}
-                        <FaRegUser className={styles.subIcon} /> &nbsp;{" "}
-                        <Link to="/personalInformation"> My Profile</Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <PiCertificateBold className={styles.subIcon} /> &nbsp;{" "}
-                        <Link to="/mycertificate">My Certificates</Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <FaRegHeart className={styles.subIcon} /> &nbsp; <Link to="/mywishlist">  My
-                        Wishlist</Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <CiFlag1 className={styles.subIcon} /> &nbsp;{" "}
-                        <Link to="/contentrequired">My Subscriptions </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <LuHelpCircle className={styles.subIcon} /> &nbsp;
-                        <Link to="/contentrequired">Help Center</Link>
-                      </li>
-                      <li onClick={handleLogoutClick}>
-                        {" "}
-                        <CgLogOut className={styles.subIcon} /> &nbsp; Logout
-                      </li>
+                      {profileMenuItems.map((item, index) => (
+                        <li key={index}>
+                          <img
+                            src={item.icon}
+                            alt={item.name}
+                            className={styles.subIcon}
+                          />
+                          &nbsp;
+                          {item.name === "Log out" || "تسجيل الخروج" ? (
+                            <span onClick={handleLogoutClick}>{item.name}</span>
+                          ) : (
+                            <Link to={item.href || "#"} >{item.name}</Link>
+                          )}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 )}
@@ -246,7 +221,6 @@ const Navbar = () => {
                     onClick={() => navigate("/login")}
                   >
                     <span style={{ marginLeft: "20px" }}>{arrow}</span>
-
                     {navItems1.find((item) => item.logIn).logIn.name}
                   </a>
                 )}
@@ -255,8 +229,8 @@ const Navbar = () => {
           </div>
         </div>
         <button className={styles.langbtn} onClick={toggleLanguage}>
-            {language === "ar" ? "English" : "العربية"}
-          </button>
+          {language === "ar" ? "English" : "العربية"}
+        </button>
         <div className={styles.hamburger} onClick={toggleHamburger}>
           <div></div>
           <div></div>
