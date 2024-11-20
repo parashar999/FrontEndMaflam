@@ -2,6 +2,10 @@ import React, { useContext, useState } from "react";
 import styles from "./Carousel.module.css";
 import { PricingPageContext } from "../../store/PricingPageContext";
 import { assests } from "../../assets/assests";
+// import { assests } from "../../assets/assests";
+import ar from "../../assets/Ar.png"
+import al from "../../assets/CarouselLeftArrow.png"
+
 
 const Carousel = () => {
   const { pricingPageContextDetails, loading, error } = useContext(PricingPageContext);
@@ -52,7 +56,7 @@ const Carousel = () => {
           className={`${styles.arrow} ${styles.left}`}
           onClick={prevSlide}
         >
-          <img src="/src/assets/CarouselLeftArrow.png" alt="Left Arrow" />
+          <img src={al} alt="Left Arrow" />
         </button>
         
         <div className={styles.sliderContainer}>
@@ -80,7 +84,7 @@ const Carousel = () => {
           className={`${styles.arrow} ${styles.right}`}
           onClick={nextSlide}
         >
-          <img src="/src/assets/CarouselLeftArrow.png" alt="Right Arrow" />
+          <img src={al} alt="Right Arrow" />
         </button>
       </div>
     </div>

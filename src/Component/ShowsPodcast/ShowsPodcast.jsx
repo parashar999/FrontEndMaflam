@@ -7,32 +7,45 @@ import { LanguageContext } from "../../Component/LanguageContext/LanguageContext
 import { useNavigate } from "react-router-dom";
 import podcastImg from "../../assets/podcast.png"
 import pdlogo from "../../assets/pdlogo.png"
+import { SocialMediaPageContext } from "../../store/SocilaMediaPageContext.jsx";
 
 function Podcast() {
-  const { homeScreenDetails, loading, error } = useContext(HomePageContext);
+  // const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
   const stylesSelected = language === "ar" ? stylesArabic : styles;
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error loading data</p>;
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error loading data</p>;
 
-  // Extract the relevant data from homeScreenDetailsSec7
-  const sectionData = homeScreenDetails?.homeScreenDetailsSec7 || [];
-  const title =
-    sectionData[0]?.title ||
-    "Subscribe 60 The Full Filmmaking Fundamentals Package";
-  const imageUrl = sectionData[0]?.imageUrl || ""; // Use context imageUrl or a fallback
-  const categories = sectionData[0]?.category || [];
-  const subscribeText = sectionData[1]?.title || "Subscribe";
-  const price = sectionData[2]?.title || "2.200 SAR";
+  // // Extract the relevant data from homeScreenDetailsSec7
+  // const sectionData = homeScreenDetails?.homeScreenDetailsSec7 || [];
+  // const title =
+  //   sectionData[0]?.title ||
+  //   "Subscribe 60 The Full Filmmaking Fundamentals Package";
+  // const imageUrl = sectionData[0]?.imageUrl || ""; // Use context imageUrl or a fallback
+  // const categories = sectionData[0]?.category || [];
+  // const subscribeText = sectionData[1]?.title || "Subscribe";
+  // const price = sectionData[2]?.title || "2.200 SAR";
+  
+  const { socialMediaPageDetails, loading, error } = useContext(SocialMediaPageContext);
+
+  if (loading) return <p>Loading...</p>; // Handle loading state
+  if (error) return <p>Error loading data</p>; // Handle error state
+
+  // Extract data from the context
+  const title = socialMediaPageDetails?.pageDataTitle3?.title || "";
+  const description = socialMediaPageDetails?.pageDatades3?.description || "";
+  const text = socialMediaPageDetails?.pageDatades3?.text || "";
+
   const Subscribe = () => {
+
     navigate("/prc");
   };
 
   return (
     <>
-    <h1 className={stylesSelected.title}>Maflam Podcast</h1>
+    <h1 className={stylesSelected.title}>{title}</h1>
     <div className={stylesSelected.parentfundamental}>
       <div className={stylesSelected.Fundamental}>
         <div className={stylesSelected.secondcontainer}>
@@ -51,9 +64,10 @@ function Podcast() {
             <div className={stylesSelected.ctn}>
             <img src={pdlogo} alt="" />
              <p>
-             Maflam Podcast is hosted by Khairia Abu Laban, featuring discussions with influential figures in the Saudi film industry, such as Faris Qudus, Fatima Al Banawi, Ahmed Al Mulla, and Imad Iskandar. The podcast delves into the details of the industry, behind-the-scenes secrets of films and festivals, and the future of cinema in the Kingdom. 
+              {description}
+             {/* Maflam Podcast is hosted by Khairia Abu Laban, featuring discussions with influential figures in the Saudi film industry, such as Faris Qudus, Fatima Al Banawi, Ahmed Al Mulla, and Imad Iskandar. The podcast delves into the details of the industry, behind-the-scenes secrets of films and festivals, and the future of cinema in the Kingdom.  */}
               </p> 
-              <h6>Watch the full episodes</h6>
+              <h6>{text}</h6>
               <div>
               <svg width="118" height="33" viewBox="0 0 118 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="33" height="33" rx="16.5" fill="#39FFFB"/>

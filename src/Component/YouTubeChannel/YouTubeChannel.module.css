@@ -10,6 +10,11 @@
     height: auto;
     margin: 10px;
 }
+.card iframe{
+    width: 679px;
+    height: 500px;
+    margin: 10px;
+}
 
 .bgcontainer{
     padding-top: 20px;
