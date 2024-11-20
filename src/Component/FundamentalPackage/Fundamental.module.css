@@ -34,7 +34,7 @@
 }
 
 .content p {
-  width: 620px;
+  width: 500px;
   margin-inline-start: 100px;
   color: #FFF;
   font-size: 36px;
@@ -61,7 +61,7 @@
 .imgcontainer  {
   width: 549px;
     position: absolute;
-    left: 50px;
+    left: 150px;
     top: -120px;
     z-index: 1;
   }
