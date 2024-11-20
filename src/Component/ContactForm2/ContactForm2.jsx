@@ -95,7 +95,7 @@ const ContactForm2 = () => {
   const resumePlaceholder = contactDetailsSec3[19]?.description || "";
   const portfoliyo = contactDetailsSec3[20]?.title || "";
   const portfoliyoPlaceholder = contactDetailsSec3[20]?.description || "";
-  const sendbtn1 = contactDetailsSec3[22]?.title || "";
+  const sendbtn1 = contactDetailsSec3[21]?.title || "";
 
   const [formData, setFormData] = useState({
     fullNameInEng: "",

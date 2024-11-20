@@ -182,10 +182,12 @@ import contactInformation from "./contactInformation.png"
 import contactform2 from "./contactform2.png"
 import contactinformation2 from "./contactinformation2.png"
 import detailsbg from "./detailsbg.png"
+import CarouselLeftArrow from "./CarouselLeftArrow.png"
 
 
 export const assests = {
   subscribefundamentalpackage,
+  CarouselLeftArrow,
   detailsbg,
   contactinformation2,
   contactform2,
