@@ -219,12 +219,14 @@ const PaymentForm = () => {
     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
     "/path/to/default-image.jpg"; // Fallback image
 
+    console.log("pricing _>>>>> " , cardDetails)
+
   return (
     <div className={styles.maincontainer}>
       <div className={styles.container}>
         <div className={styles.card}>
           <img src={imageSrc} alt="Course" className={styles.image} />
-          <h2 className={styles.price}>{cardDetails[0]?.title || "N/A"}</h2>
+          <h2 className={styles.price}> SAR {cardDetails[0]?.title || "N/A"} </h2>
           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
           <hr />
           <div className={styles.paymentCard}>
@@ -239,12 +241,12 @@ const PaymentForm = () => {
             onClick={checkoutpage}
             className={styles.payBtn}
           >
-            {cardDetails[11]?.title || "Pay Now"}
+            {cardDetails[12]?.title || "Pay Now"}
           </button>
         </div>
 
         <div>
-          <p className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
+          <p className=  {styles.termconditions}> {termsDetails[0]?.title || ""} </p>
         </div>
         <div>
           <p className={styles.termconditions1}>
