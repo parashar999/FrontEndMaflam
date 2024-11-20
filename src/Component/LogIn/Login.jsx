@@ -18,6 +18,7 @@ const Login = () => {
   const { language} = useContext(LanguageContext);
   const navigate = useNavigate();
   const signupText = language === "ar"?"انشئ حساب":"Create an Account";
+  const orText = language === "ar"? "أو":"or";
   const {
     loginPageContexttDetails,
     loading,
@@ -51,6 +52,7 @@ const Login = () => {
       );
       toast.success(response.data.message);
       auth.login(response.data);
+      // console.log(response.data)
 
       setTimeout(() => {
         navigate("/");
@@ -145,7 +147,7 @@ const Login = () => {
           </div>
           <div className={styles.divider}>
             <hr className={styles.hrLine} />
-            <span style={{fontSize:'22px'}} >or</span>
+            <span style={{fontSize:'22px'}} >{orText}</span>
             <hr className={styles.hrLine} />
           </div>
           <div className={styles.socialLogin}>
