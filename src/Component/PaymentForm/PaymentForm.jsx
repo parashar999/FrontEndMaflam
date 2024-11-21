@@ -180,9 +180,12 @@ const PaymentForm = () => {
     const requestBody = {
       amount: 750,
       courseId: paymentID,
-      callback: "https://maflam.web.app/mycourses",
+      callback: "https://maflam.web.app/success",
+      // callback: "https://maflam.web.app/success",
+      return: "https://maflam.web.app/failuremessage",
+      token,
+      //  callback: "http://localhost:5173/success",
       // callback: `https://maflam.web.app/checkout/${courseId}`,
-      token
     };
   
     try {
