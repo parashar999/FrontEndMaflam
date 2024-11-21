@@ -1,4 +1,4 @@
-import PricingPage from "../../Component/PricingPage/PricingPage";
+  import PricingPage from "../../Component/PricingPage/PricingPage";
 import Fundamental from "../../Component/FundamentalPackage/Fundamental";
 import Footer from "../../Component/Footer/Footer";
 import Navbar from "../../Component/Navbar/Navbar";
@@ -18,7 +18,7 @@ import {
   PricingPageContext,
   PricingPageContextProvider,
 } from "../../store/PricingPageContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect,useRef } from "react";
 
 function Pricing() {
   const {
@@ -56,6 +56,25 @@ function Pricing() {
       console.log("Home Screen Details:", pricingPageContextDetails);
     }
   }, [pricingPageContextDetails]);
+
+  
+  // Create a reference for the ContactInformation component
+  const contactInfoRef = useRef(null);
+
+  // Scroll to the ContactInformation component after the page loads
+  useEffect(() => {
+    // Delay the scroll to allow the page to fully load
+    setTimeout(() => {
+      if (contactInfoRef.current) {
+        // Use window.scrollTo to scroll to the element
+        contactInfoRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500); // 500ms delay to ensure the page is loaded
+
+    // Cleanup the timeout to avoid memory leaks
+    return () => clearTimeout();
+  }, []);
+
   return (
     <>
       <div>
@@ -67,7 +86,9 @@ function Pricing() {
                 <PricingPage></PricingPage>
                 <Fundamental></Fundamental>
                 <div className={styles.CarouselGradient}>
+                <div ref={contactInfoRef}>
                 <VariousCourse></VariousCourse>
+                </div>
                 <Carousel></Carousel>
                 <MaflanContent />
                 <JoinUs />
