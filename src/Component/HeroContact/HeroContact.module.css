@@ -13,7 +13,7 @@
     background-size: cover; 
     background-position: center;
     padding: 0 20px;
-    margin-bottom: -350px !important;
+    margin-bottom: -300px !important;
     margin: auto;
     /* margin-top: 60px; */
     
@@ -31,13 +31,23 @@
   }
   
   .title {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 64px;
+
     margin-bottom: 20px;
+    color: #FFF;
+text-align: center;
+font-size: 65px;
+font-style: normal;
+font-weight: 700;
+line-height: 160%;
   }
   
   .description {
-    font-size: 18px;
+    font-size: 24px;
+    max-width: 630px;
+    margin-left: 300px;
+    margin-right: 300px;
+  
     margin-bottom: 40px;
     color: #b0b0b0;
   }
@@ -53,6 +63,7 @@
 
   .cardText a{
     color: white;
+    
     text-decoration: none;
   }
   
@@ -60,8 +71,8 @@
     /* background-image: url("../../assets/googleBackground.png"); */
     background-size: cover;
     padding: 40px;
-    width: 330px;
-    height: 220px;
+    width: 370px;
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +98,8 @@
   }
   
   .cardText {
-    font-size: 16px;
+    font-size: 25px;
+    max-width: 500px;
     color: white;
   }
   
