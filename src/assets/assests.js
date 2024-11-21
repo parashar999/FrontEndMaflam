@@ -373,16 +373,16 @@ export const assests = {
 // ] 
 export const youtubeChannel = [
   {
-    title: "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
-    episode: "For more episodes",
+    title: "برنامج يقدمه مدير التصوير أسامة ربيحان، ليشرح بالتفصيل معدات التصوير المختلفة، وكيفية استخدامها بشكل يتناسب مع فيلمك.",
+    episode: "المزيد من الحلقات",
     imageurl: "path/to/channel1-image.jpg", // Replace with actual image path
     videoId: "uzU-S7_XMXc",
     imagelogo :logo14  ,
     icon : youtubeicon
   },
   {
-    title: "A program presented by cinematographer Osama Rabihan, explaining in detail various filming equipment and how to use it to fit your film.",
-    episode: "For more episodes",
+    title: "برنامج يستضيف صنّاع أفلام شباب، ليقدموا لنا نظرة تفصيلية عن دورهم في عملية صناعة الفيلم، والتحديات التي مروا بها.",
+    episode: "المزيد من الحلقات",
     imageurl: "path/to/channel2-image.jpg", // Replace with actual image path
     videoId: "-KKH3t_h9pA",
     imagelogo :logo19 ,
