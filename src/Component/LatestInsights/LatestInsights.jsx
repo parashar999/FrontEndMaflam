@@ -1,42 +1,43 @@
 import React, { useContext, useState } from "react";
 import styles from "./LatestInsights.module.css";
 import { BlogsPageContent } from "../../store/BlogsPageContent.jsx";
-import { LanguageContext } from "../LanguageContext/LanguageContext.jsx"; // Assume this provides language state
+import { LanguageContext } from "../LanguageContext/LanguageContext.jsx";
 
 const LatestInsights = () => {
   const { blogsPageContentDetails, loading, error } = useContext(BlogsPageContent);
-  const { language } = useContext(LanguageContext); // Get the current language from context
-  const [visibleBlogs, setVisibleBlogs] = useState(2); // Show 2 blogs initially
+  const [visibleCount, setVisibleCount] = useState(2); // Initial insights to display
+  const [showAll, setShowAll] = useState(false); // Toggle between showing all and minimum
+  const { language } = useContext(LanguageContext); // Assuming LanguageContext provides language info (like "en" or "ar")
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
+  // Destructure otherBlogDataforbody from context
   const { otherBlogDataforbody = [] } = blogsPageContentDetails || {};
 
-  // Function to load more blogs
-  const loadMoreBlogs = () => {
-    setVisibleBlogs((prevVisible) => prevVisible + 2); // Load 2 more blogs each time
+  // Function to handle toggling between load more and show less
+  const toggleInsights = () => {
+    if (showAll) {
+      setVisibleCount(2); // Show minimum if toggling back
+    } else {
+      setVisibleCount(otherBlogDataforbody.length); // Show all
+    }
+    setShowAll(!showAll); // Toggle the showAll state
   };
 
-  // Translation handling
-  const translations = {
-    en: {
-      loadMore: "Load more",
-      latestInsights: "Latest Insights from Maflam",
-    },
-    ar: {
-      loadMore: "تحميل المزيد",
-      latestInsights: "أحدث الأفكار من مافلام",
-    },
+  const isRTL = language === "ar"; // Check if the language is Arabic or RTL
+  const arrowStyle = {
+    transform: isRTL ? "scaleX(-1)" : "none",
+    display: "inline-block",
   };
-
-  const t = translations[language] || translations.en;
 
   return (
     <section className={styles.insightsSection}>
-      <h2 className={styles.heading}>{t.latestInsights}</h2>
+      <hr style={{ opacity: "0.2" }} />
+      <h2 className={styles.heading}>Latest Insights from Maflam</h2>
       <div className={styles.insightsContainer}>
-        {otherBlogDataforbody.slice(0, visibleBlogs).map((blog, index) => (
+        {/* Render otherBlogDataforbody data */}
+        {otherBlogDataforbody.slice(0, visibleCount).map((blog, index) => (
           <div key={index} className={styles.insightCard}>
             <img
               src={blog.blogImage}
@@ -44,18 +45,43 @@ const LatestInsights = () => {
               className={styles.insightImage}
             />
             <div className={styles.cardContent}>
+              <h4>Category</h4>
               <p className={styles.title}>{blog.title}</p>
               <a href="/blogDetails" className={styles.readMore}>
-                ← {blog.btnTitle}
+                {blog.btnTitle}{" "}
+                <span
+                  style={{
+                    color: "white",
+                    fontWeight: "700",
+                    transform: isRTL ? "none" : "scaleX(-1)",
+                    display: "inline-block",
+                  }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+                    <path d="M13.9995 6L1.14237 6M1.14237 6L6.14237 11M1.14237 6L6.14237 0.999999" stroke="#F7FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
         ))}
       </div>
-      {/* Show the "Load more" button only if there are more blogs to load */}
-      {visibleBlogs < otherBlogDataforbody.length && (
-        <button className={styles.loadMoreBtn} onClick={loadMoreBlogs}>
-          {t.loadMore} ({otherBlogDataforbody.length - visibleBlogs})
+
+      {/* Conditionally render the "Load More" or "Show Less" button */}
+      {otherBlogDataforbody.length > 2 && (
+        <button
+          onClick={toggleInsights}
+          className={styles.loadMoreBtn}
+          style={{
+            backgroundColor: "#39FFFB",
+            color: "black",
+            height: "64px",
+            borderRadius: "32px",
+            fontSize: "17px",
+            fontWeight: "700",
+          }}
+        >
+          {showAll ? "Show Less" : `Load more (${otherBlogDataforbody.length - visibleCount})`}
         </button>
       )}
     </section>
@@ -63,45 +89,3 @@ const LatestInsights = () => {
 };
 
 export default LatestInsights;
-
-
-// import React, { useContext } from "react";
-// import styles from "./LatestInsights.module.css";
-// import { BlogsPageContent } from "../../store/BlogsPageContent.jsx";
-
-// const LatestInsights = () => {
-//   const { blogsPageContentDetailsEjs, loading, error } = useContext(BlogsPageContent);
-
-//   if (loading) return <p>Loading...</p>; // Handle loading state
-//   if (error) return <p>Error loading data</p>; // Handle error state
-
-//   // Ensure data is available
-//   const insights = blogsPageContentDetailsEjs?.blogTitle || [];
-
-//   return (
-//     <section className={styles.insightsSection}>
-//       <h2 className={styles.heading}>Latest Insights from Maflam</h2>
-//       <div className={styles.insightsContainer}>
-//         {insights.map((insight) => (
-//           <div key={insight.id} className={styles.insightCard}>
-//             <img
-//               src={insight.imageUrl} // Ensure this field exists in blogsPageContentDetailsEjs
-//               alt={insight.title}
-//               className={styles.insightImage}
-//             />
-//             <div className={styles.cardContent}>
-//               <span className={styles.category}>{insight.category}</span>
-//               <p className={styles.title}>{insight.title}</p>
-//               <a href={`/blogDetails/${insight.id}`} className={styles.readMore}>
-//                 ← Continue reading
-//               </a>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//       <button className={styles.loadMoreBtn}>Load more (58)</button>
-//     </section>
-//   );
-// };
-
-// export default LatestInsights;
