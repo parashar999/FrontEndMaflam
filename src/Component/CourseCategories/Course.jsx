@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { HomePageContext } from "../../store/HomePageContext";
 import styles from "./course.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CourseGrid = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
@@ -9,9 +9,13 @@ const CourseGrid = () => {
   // Assuming homeScreenDetails contains an array called "specializedCoursesData"
   const specializedCoursesData = homeScreenDetails?.specializedCoursesData || [];
   const specializedCoursesDataTitle = homeScreenDetails?.specializedCoursesDataTitle || {};
-
+const navigate = useNavigate()
   // Initialize refs for each video only once
   const videoRefs = useRef([]);
+
+  const handleCourseClick = (courseId) => {
+    navigate(`/filmproduction/${courseId}`);
+  };
 
   useEffect(() => {
     videoRefs.current = videoRefs.current.slice(0, specializedCoursesData.length);
@@ -68,7 +72,9 @@ const CourseGrid = () => {
                 />
               </Link>
               <div style={{ position: 'absolute', bottom: '10px', zIndex: '10' }}>
-                <p><Link to="/prc">{course.title}</Link></p>
+                <p onClick={() => handleCourseClick(course._id)}><Link  >{course.name}</Link></p>
+
+                {/* <button className={styles.btns}  onClick={() => handleCourseClick(course._id)}  > <p>  {course.title}</p></button> */}
               </div>
               <div className={styles.overlay}></div>
             </div>
