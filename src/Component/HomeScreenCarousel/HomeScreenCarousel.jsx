@@ -1,75 +1,3 @@
-// import React, { useRef, useContext, useState } from "react";
-// import styles from "./HomeScreenCarousel.module.css";
-// import { HomePageContext } from "../../store/HomePageContext"; // Import the context
-// import { Link } from "react-router-dom";
-// import Carou from "../Carou/Carou"; // Import the Carou component
-
-// const HomeScreenCarousel = () => {
-//   const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
-
-//   // Handle loading and error states
-//   if (loading) {
-//     return <p>Loading...</p>;
-//   }
-
-//   if (error) {
-//     return <p>Error loading eBooklets: {error.message}</p>;
-//   }
-
-//   // Access eBooklet data
-//   const eBookletData = homeScreenDetails?.eBookletData || {};
-  
-//   // Modify the video URLs to loop through
-//   const modifiedVideoUrls = [
-//     eBookletData.ebookVideoUrl?.[eBookletData.ebookVideoUrl.length - 1],
-//     ...eBookletData.ebookVideoUrl,
-//     eBookletData.ebookVideoUrl?.[0]
-//   ];
-
-//   // Create an array of items that Carou can use
-//   const items = modifiedVideoUrls.map((videoUrl, index) => ({
-//     id: index,
-//     videoSrc: videoUrl,
-//     content: (
-//       <video
-//         src={videoUrl}
-//         muted
-//         loop
-//         playsInline
-//         className={styles.videobook}
-//         alt={`Ebook Video ${index + 1}`}
-//       />
-//     )
-//   }));
-
-//   return (
-//     <div className={styles.carouselcontainer}>
-//       <h2 style={{marginBottom:'150px'}}>
-//         <Link className={styles.linking} to="/ebooks" >
-//           {eBookletData.title}
-//         </Link>
-//       </h2>
-
-//       {/* Use Carou Component to handle the video carousel */}
-//       <Carou 
-//         itemWidth={390} // Adjust the width of the video items
-//         itemHeight={670} // Adjust the height of the video items
-//         items={items} // Pass the video items
-//         scalingRatio={1.1}
-//         margin={10}
-//       />
-
-//       <div className={styles.contentpara}>
-//         <p>{eBookletData.description}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomeScreenCarousel;
-
-
-
 import React, { useContext } from "react";
 import styles from "./HomeScreenCarousel.module.css";
 import { HomePageContext } from "../../store/HomePageContext"; // Import the context
@@ -79,65 +7,58 @@ import Carou from "../Carou/Carou"; // Import the Carou component
 const HomeScreenCarousel = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
 
-  // Handle loading and error states
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading eBooklets: {error.message}</p>;
 
-  if (error) {
-    return <p>Error loading eBooklets: {error.message}</p>;
-  }
-
-  // Access eBooklet data
   const eBookletData = homeScreenDetails?.eBookletData || {};
-  const eBookletVideos = homeScreenDetails?.eBookletVideo || [];
+  const eBookletImages = homeScreenDetails?.eBookletVideo || []; // Assuming these are images
+  const imageUrls = eBookletImages.map((image) => image.ebookVideoUrl); // Extract URLs
 
-  // Extract video URLs from eBookletVideo array
-  const videoUrls = eBookletVideos.map(video => video.ebookVideoUrl);
+  if (!imageUrls || imageUrls.length === 0) {
+    return <p>No images available to display.</p>;
+  }
 
-  // Modify the video URLs to loop through
-  const modifiedVideoUrls = [
-    videoUrls[videoUrls.length - 1], // Add the last video at the beginning
-    ...videoUrls, // Include all videos
-    videoUrls[0] // Add the first video at the end
+  // Modify the image URLs for looping
+  const modifiedImageUrls = [
+    imageUrls[imageUrls.length - 1], // Add the last image at the beginning
+    ...imageUrls, // Include all images
+    imageUrls[0], // Add the first image at the end
   ];
 
-  // Create an array of items that Carou can use
-  const items = modifiedVideoUrls.map((videoUrl, index) => ({
+  // Create an array of items for the carousel
+  const items = modifiedImageUrls.map((imageUrl, index) => ({
     id: index,
-    videoSrc: videoUrl,
+    imageSrc: imageUrl,
     content: (
-      <video
+      <img
         key={index}
-        src={videoUrl}
-        muted
-        loop
-        playsInline
-        className={styles.videobook}
-        alt={`Ebook Video ${index + 1}`}
+        src={imageUrl}
+        alt={`Ebook Image ${index + 1}`}
+        className={styles.imagebook}
+        onError={() => console.error(`Error loading image: ${imageUrl}`)}
       />
-    )
+    ),
   }));
 
   return (
     <div className={styles.carouselcontainer}>
       <h2 style={{ marginBottom: "150px" }}>
         <Link className={styles.linking} to="/ebooks">
-          {eBookletData.title}
+          {eBookletData.title || "Ebook Title"}
         </Link>
       </h2>
 
-      {/* Use Carou Component to handle the video carousel */}
+      {/* Use Carou Component to handle the image carousel */}
       <Carou
-        itemWidth={390} // Adjust the width of the video items
-        itemHeight={670} // Adjust the height of the video items
-        items={items} // Pass the video items
+        itemWidth={390} // Adjust the width of the image items
+        itemHeight={670} // Adjust the height of the image items
+        items={items} // Pass the image items
         scalingRatio={1.1}
         margin={10}
       />
 
       <div className={styles.contentpara}>
-        <p>{eBookletData.description}</p>
+        <p>{eBookletData.description || "No description available."}</p>
       </div>
     </div>
   );
