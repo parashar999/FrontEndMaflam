@@ -67,6 +67,8 @@ import auth from "./Auth/Auth.js";
 import Podcost from "./Component/Podcast/Podcost.jsx";
 import ResetPasswordPage from "./Pages/ResetPasswordPage/ResetPasswordPage.jsx";
 import { SocialMediaPageProvider } from "./store/SocilaMediaPageContext.jsx";
+import SuccessMessagePage from "./Pages/SuccessMessagePage/SuccessMessagePage.jsx";
+import FalioursMassagePage from "./Pages/FalioursMassagePage/FalioursMassagePage.jsx";
 
 
 const userDetails = auth.getAuthData();
@@ -351,6 +353,20 @@ const App = () => {
       <Route path="/reset" element={
     <LanguageProvider>
         <ResetPasswordPage/>
+        </LanguageProvider>
+      
+        } />
+
+<Route path="/success" element={
+    <LanguageProvider>
+        <SuccessMessagePage/>
+        </LanguageProvider>
+      
+        } />
+        
+<Route path="/failuremessage" element={
+    <LanguageProvider>
+     <FalioursMassagePage></FalioursMassagePage>
         </LanguageProvider>
       
         } />

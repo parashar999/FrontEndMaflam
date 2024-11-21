@@ -16,6 +16,20 @@
     height: 100vh;
     padding: 20px; /* Added padding for smaller screens */
 }
+.btn {
+    margin-top: 30px !important;
+        border:  1px solid green !important;
+        padding: 15px;
+        text-decoration: none;
+        border-radius: 10px;
+        color: black;
+        font-size: 20PX;
+        background-color: #39FFFB;
+    }
+    .btn a{
+        text-decoration: none;
+        color: black;
+    }
 
 .secondcontainer {
     display: block;
