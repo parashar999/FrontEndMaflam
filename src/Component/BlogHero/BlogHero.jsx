@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./BlogHero.module.css";
 import { BlogsPageContent } from "../../store/BlogsPageContent.jsx";
+import { LanguageContext } from "../LanguageContext/LanguageContext.jsx"; // Context providing language info
 
 const BlogHero = () => {
   const { blogsPageContentDetails, loading, error } = useContext(BlogsPageContent);
+  const { direction } = useContext(LanguageContext); // Assuming this provides 'ltr' or 'rtl'
   const navigate = useNavigate();
 
   if (loading) return <p>Loading...</p>;
@@ -21,6 +23,7 @@ const BlogHero = () => {
 
   return (
     <div className={styles.blogDetails}>
+      <h2>Heading Here</h2>
       <div className={styles.heroSection}>
         <div className={styles.featuredBlog}>
           <div className={styles.featuredContent}>
@@ -29,6 +32,9 @@ const BlogHero = () => {
               alt="Featured Blog"
               className={styles.featuredImage}
             />
+            <p style={{ paddingLeft: "20px", paddingRight: "20px" }} className={styles.categorybox}>
+              Category
+            </p>
             <h2 className={styles.featuredTitle}>
               {formattedBlogDataforheader[0].title}
             </h2>
@@ -40,6 +46,19 @@ const BlogHero = () => {
               className={styles.readMoreBtn}
             >
               {formattedBlogDataforheader[0].btnTitle}
+              &nbsp;
+              <span
+                style={{
+                  color: "white",
+                  fontWeight: "700",
+                  transform: direction === "rtl" ? "none" : "scaleX(-1)",
+                  display: "inline-block",
+                }}
+              >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+<path d="M14 6L1.14286 6M1.14286 6L6.14286 11M1.14286 6L6.14286 0.999999" stroke="#F7FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </span>
             </button>
           </div>
         </div>
@@ -53,12 +72,29 @@ const BlogHero = () => {
                 className={styles.blogImage}
               />
               <div className={styles.blogContent}>
+                <p className={styles.categorybox}>
+                  Category
+                </p>
                 <h3 className={styles.title}>{post.title}</h3>
                 <a
                   onClick={() => handleContinueReading(post.id)}
                   className={styles.readMore}
                 >
                   {post.btnTitle}
+                  <span
+                    style={{
+                      color: "white",
+                      fontWeight: "700",
+                      marginLeft:"10px",
+                      marginRight:"10px",
+                      transform: direction === "rtl" ? "none" : "scaleX(-1)",
+                      display: "inline-block",
+                    }}
+                  >
+                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+<path d="M14 6L1.14286 6M1.14286 6L6.14286 11M1.14286 6L6.14286 0.999999" stroke="#F7FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </span>
                 </a>
               </div>
             </div>

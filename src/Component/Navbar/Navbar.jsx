@@ -189,7 +189,7 @@ const Navbar = () => {
                             className={styles.subIcon}
                           />
                           &nbsp;
-                          {item.name === "Log out" || "تسجيل الخروج" ? (
+                          {item.name === "Log out" || item.name === "تسجيل الخروج" ? (
                             <span onClick={handleLogoutClick}>{item.name}</span>
                           ) : (
                             <Link to={item.href || "#"} >{item.name}</Link>
