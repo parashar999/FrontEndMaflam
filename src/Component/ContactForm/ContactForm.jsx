@@ -5,10 +5,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from "./ContactForm.module.css";
 import { ContactUs2Context } from "../../store/ContactUs2Context";
-import downloadIcon from "../../assets/downloadIcon.png";
+import downloadIcon from "../../assets/ContactFormUploadPng.png";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import { MdDelete } from "react-icons/md";
 // import { useNavigate } from "react-router-dom";
+
+const RequiredAsteriskIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.49489 7C5.42742 7 7 5.43707 7 3.50383C7 1.57059 5.42487 0 3.49489 0C1.56492 0 0 1.57315 0 3.50383C0 5.43451 1.56236 7 3.49489 7ZM0.857768 3.35826L1.22794 2.22437C2.07039 2.52317 2.68308 2.77855 3.06601 2.99818C2.96645 2.03028 2.91284 1.37395 2.90518 1.01386H4.06929C4.05398 1.53484 3.99271 2.19373 3.88549 2.99051C4.43691 2.71215 5.06492 2.45677 5.77206 2.22437L6.13968 3.35826C5.46572 3.583 4.79942 3.72601 4.14843 3.80263C4.47775 4.0861 4.93217 4.59175 5.52188 5.31448L4.57221 5.9938C4.25821 5.57242 3.8957 5.00037 3.47702 4.28019C3.07877 5.02846 2.73414 5.60306 2.4329 5.9938L1.49088 5.31448C2.10357 4.55345 2.55033 4.04779 2.81583 3.80263C2.12655 3.67494 1.47557 3.51915 0.860321 3.35826H0.857768Z" fill="#5AFFFF"/>
+  </svg>
+);
 
 const ContactForm = () => {
   const { contactUs2ContextDetails, loading, error } = useContext(ContactUs2Context);
@@ -109,11 +115,15 @@ const ContactForm = () => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
+        <div className={styles.formcontact}>
         <h2 className={styles.title}>{title}</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="963" height="3" viewBox="0 0 963 3" fill="none">
+  <path opacity="0.1" d="M1 2L962 1.00008" stroke="#F1F2FA" stroke-width="2" stroke-linecap="round"/>
+</svg>
         <form className={styles.contactForm} onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="fullNameInEng">
-              {fullNameTitle} <span>*</span>
+              {fullNameTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input autoFocus
               type="text"
@@ -128,7 +138,7 @@ const ContactForm = () => {
 
           <div className={styles.inputGroup}>
             <label htmlFor="email">
-              {emailTitle} <span>*</span>
+              {emailTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input 
               type="email"
@@ -142,7 +152,7 @@ const ContactForm = () => {
 
           <div className={styles.inputGroup}>
             <label htmlFor="phoneNo">
-              {phoneTitle} <span>*</span>
+              {phoneTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input
               type="text"
@@ -157,7 +167,7 @@ const ContactForm = () => {
           </div>
 
           <div className={styles.inputGroup}>
-            <label>{jobRoleTitle} <span>*</span></label>
+            <label>{jobRoleTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span></label>
             <div className={styles.radioGroup}>
               {jobRoleCategories.map((role, index) => (
                 <button
@@ -175,7 +185,7 @@ const ContactForm = () => {
 
           <div className={styles.inputGroup}>
             <label htmlFor="jobTitleInEng">
-              {currentJobTitle} <span>*</span>
+              {currentJobTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input
               type="text"
@@ -206,7 +216,7 @@ const ContactForm = () => {
 
           <div className={styles.inputGroup}>
             <label htmlFor="coverLetterInEng">
-              {coverLetterTitle} <span>*</span>
+              {coverLetterTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <textarea
               id="coverLetterInEng"
@@ -219,12 +229,13 @@ const ContactForm = () => {
 
           <div className={styles.inputGroup}>
             <label htmlFor="resumeUpload">
-              {resumeTitle} <span>*</span>
+              {resumeTitle} 
+              <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <div className={styles.imgUpload}>
               {resume ? (
                 <>
-                  <span>{resume.name}</span>
+                  <span>{resume.name}</span> 
                   <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButtons}>
                   <i> <MdDelete /></i>
                   </button>
@@ -236,7 +247,7 @@ const ContactForm = () => {
                     onClick={() => triggerFileUpload("resumeUpload")}
                     className={styles.downloadIcon}
                   >
-                    <img src={downloadIcon} alt="Upload Resume" />
+                    <img style={{position:'relative', top:'10px'}}  src={downloadIcon} alt="Upload Resume" />
                   </button>
                   <p className="uploadFile">{btnText}</p>
                 </div>
@@ -267,7 +278,7 @@ const ContactForm = () => {
                     onClick={() => triggerFileUpload("portfolioUpload")}
                     className={styles.downloadIcon}
                   >
-                    <img src={downloadIcon} alt="Upload Portfolio" />
+                    <img style={{position:'relative', top:'10px'}} src={downloadIcon} alt="Upload Portfolio" />
                   </button>
                   <p className="uploadFile">{btnText}</p>
                 </div>
@@ -285,6 +296,7 @@ const ContactForm = () => {
             {submitButtonTitle}
           </button>
         </form>
+        </div>
       </div>
       <ToastContainer />
     </div>
@@ -294,24 +306,29 @@ const ContactForm = () => {
 export default ContactForm;
 
 
+
+/* ***************************
+ Tarun code Added In Above   
+ ************************** */
+
+
+
+
 // import { useContext, useState } from "react";
 // import axios from "axios";
-// // import { toast } from "react-toastify";
-// // import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 // import styles from "./ContactForm.module.css";
 // import { ContactUs2Context } from "../../store/ContactUs2Context";
 // import downloadIcon from "../../assets/downloadIcon.png";
 // import { LanguageContext } from "../LanguageContext/LanguageContext";
 // import { MdDelete } from "react-icons/md";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
-
+// // import { useNavigate } from "react-router-dom";
 
 // const ContactForm = () => {
 //   const { contactUs2ContextDetails, loading, error } = useContext(ContactUs2Context);
 //   const { language } = useContext(LanguageContext);
-
+//   // const navigate  = useNavigate()
 //   if (loading) return <p>Loading...</p>;
 //   if (error) return <p>Error loading data</p>;
 
@@ -338,12 +355,13 @@ export default ContactForm;
 //   const [selectedJobRole, setSelectedJobRole] = useState(null);
 //   const [selectedExperience, setSelectedExperience] = useState(null);
 //   const [formData, setFormData] = useState({
-//     name: "",
+//     fullNameInEng: "",
 //     email: "",
-//     phone: "",
-//     jobTitle: "",
-//     coverLetter: "",
+//     phoneNo: "",
+//     jobTitleInEng: "",
+//     coverLetterInEng: "",
 //   });
+ 
 
 //   const handleFileUpload = (e, setter) => {
 //     setter(e.target.files[0]);
@@ -369,27 +387,35 @@ export default ContactForm;
 //     setFormData({ ...formData, [e.target.id]: e.target.value });
 //   };
 
+//   const scrollToTop = () => {
+//     window.scrollTo({ top: 1000, behavior: "smooth" });
+//   };
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 
 //     const payload = new FormData();
-//     payload.append("name", formData.name);
+//     payload.append("fullNameInEng", formData.fullNameInEng);
 //     payload.append("email", formData.email);
-//     payload.append("phone", formData.phone);
-//     payload.append("jobTitle", formData.jobTitle);
-//     payload.append("coverLetter", formData.coverLetter);
-//     payload.append("jobRole", jobRoleCategories[selectedJobRole]);
-//     payload.append("experience", experienceCategories[selectedExperience]);
-//     // if (resume) payload.append("resume", resume);
-//     // if (portfolio) payload.append("portfolio", portfolio);
+//     payload.append("phoneNo", formData.phoneNo);
+//     payload.append("maflamWorldAsInEng", jobRoleCategories[selectedJobRole]);
+//     payload.append("jobTitleInEng", formData.jobTitleInEng);
+//     payload.append("experienceInEng", experienceCategories[selectedExperience]);
+//     payload.append("coverLetterInEng", formData.coverLetterInEng);
+
+//     // Include files if present
+//     if (resume) payload.append("resume", resume);
+//     if (portfolio) payload.append("portfolio", portfolio);
 
 //     try {
-//       await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
-//       toast.success("Form submitted successfully!");
+//      const res = await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
+//       // toast.success("Form submitted successfully!");
+//       toast.success(res.data.message);
+//       setTimeout(() => {
+//         scrollToTop();
+//       }, 2000);
 //     } catch (err) {
-//       // toast.error("Failed to submit form. Please try again.");
-//       const errorMessage = err.response?.data?.message || err.message;
-//       toast.err(`Error: ${errorMessage}`);
+//       const errorMessage = err.res?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
 //     }
 //   };
 
@@ -401,15 +427,16 @@ export default ContactForm;
 //         <h2 className={styles.title}>{title}</h2>
 //         <form className={styles.contactForm} onSubmit={handleSubmit}>
 //           <div className={styles.inputGroup}>
-//             <label htmlFor="name">
+//             <label htmlFor="fullNameInEng">
 //               {fullNameTitle} <span>*</span>
 //             </label>
-//             <input
+//             <input autoFocus
 //               type="text"
-//               id="name"
+//               required
+//               id="fullNameInEng"
 //               maxLength={50}
 //               placeholder="Full Name"
-//               value={formData.name}
+//               value={formData.fullNameInEng}
 //               onChange={handleInputChange}
 //             />
 //           </div>
@@ -418,9 +445,10 @@ export default ContactForm;
 //             <label htmlFor="email">
 //               {emailTitle} <span>*</span>
 //             </label>
-//             <input
+//             <input 
 //               type="email"
 //               id="email"
+//               required
 //               placeholder={emailPlaceholder}
 //               value={formData.email}
 //               onChange={handleInputChange}
@@ -428,16 +456,17 @@ export default ContactForm;
 //           </div>
 
 //           <div className={styles.inputGroup}>
-//             <label htmlFor="phone">
+//             <label htmlFor="phoneNo">
 //               {phoneTitle} <span>*</span>
 //             </label>
 //             <input
 //               type="text"
-//               id="phone"
+//               id="phoneNo"
+//               required
 //               maxLength={16}
 //               placeholder={phonePlaceholder}
 //               onInput={handlePhoneInput}
-//               value={formData.phone}
+//               value={formData.phoneNo}
 //               onChange={handleInputChange}
 //             />
 //           </div>
@@ -449,6 +478,7 @@ export default ContactForm;
 //                 <button
 //                   key={index}
 //                   type="button"
+//                   required
 //                   className={`${styles.radioButton} ${selectedJobRole === index ? styles.selected : ""}`}
 //                   onClick={() => handleSelect(index, setSelectedJobRole)}
 //                 >
@@ -459,15 +489,16 @@ export default ContactForm;
 //           </div>
 
 //           <div className={styles.inputGroup}>
-//             <label htmlFor="jobTitle">
+//             <label htmlFor="jobTitleInEng">
 //               {currentJobTitle} <span>*</span>
 //             </label>
 //             <input
 //               type="text"
-//               id="jobTitle"
+//               id="jobTitleInEng"
+//               required
 //               maxLength={60}
 //               placeholder="Answer"
-//               value={formData.jobTitle}
+//               value={formData.jobTitleInEng}
 //               onChange={handleInputChange}
 //             />
 //           </div>
@@ -489,13 +520,14 @@ export default ContactForm;
 //           </div>
 
 //           <div className={styles.inputGroup}>
-//             <label htmlFor="coverLetter">
+//             <label htmlFor="coverLetterInEng">
 //               {coverLetterTitle} <span>*</span>
 //             </label>
 //             <textarea
-//               id="coverLetter"
+//               id="coverLetterInEng"
+//               required
 //               placeholder={coverLetterPlaceholder}
-//               value={formData.coverLetter}
+//               value={formData.coverLetterInEng}
 //               onChange={handleInputChange}
 //             />
 //           </div>
@@ -508,12 +540,12 @@ export default ContactForm;
 //               {resume ? (
 //                 <>
 //                   <span>{resume.name}</span>
-//                   <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButton}>
-//                     <MdDelete />
+//                   <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButtons}>
+//                   <i> <MdDelete /></i>
 //                   </button>
 //                 </>
 //               ) : (
-//                 <div className={styles.btnstyles}>
+//                 <div className={styles.btnstyless}>
 //                   <button
 //                     type="button"
 //                     onClick={() => triggerFileUpload("resumeUpload")}
@@ -539,12 +571,12 @@ export default ContactForm;
 //               {portfolio ? (
 //                 <>
 //                   <span>{portfolio.name}</span>
-//                   <button type="button" onClick={() => handleDeleteFile(setPortfolio)} className={styles.deleteButton}>
-//                     <MdDelete />
+//                   <button type="button" onClick={() => handleDeleteFile(setPortfolio)} className={styles.deleteButtons}>
+//                   <i> <MdDelete /></i>
 //                   </button>
 //                 </>
 //               ) : (
-//                 <div className={styles.btnstyles}>
+//                 <div className={styles.btnstyless}>
 //                   <button
 //                     type="button"
 //                     onClick={() => triggerFileUpload("portfolioUpload")}
@@ -564,7 +596,9 @@ export default ContactForm;
 //             </div>
 //           </div>
 
-//           <button type="submit" className={styles.submitButton}>{submitButtonTitle}</button>
+//           <button type="submit" className={styles.submitButton}>
+//             {submitButtonTitle}
+//           </button>
 //         </form>
 //       </div>
 //       <ToastContainer />
@@ -574,563 +608,283 @@ export default ContactForm;
 
 // export default ContactForm;
 
-// import { useContext, useState } from "react";
-// import styles from "./ContactForm.module.css";
-// import { ContactUs2Context } from "../../store/ContactUs2Context";
-// import downloadIcon from "../../assets/downloadIcon.png"; // Ensure this path is correct
-// import { LanguageContext } from "../LanguageContext/LanguageContext";
-// import { MdDelete } from "react-icons/md";
 
-// const ContactForm = () => {
-//   const { contactUs2ContextDetails, loading, error } = useContext(ContactUs2Context);
-
-//   if (loading) return <p>Loading...</p>; // Handle loading state
-//   if (error) return <p>Error loading data</p>; // Handle error state
-
-//   // Fetch data from the context
-//   const contactDetailsSec3 = contactUs2ContextDetails?.contactDetails2Sec3 || [];
-//   const title = contactDetailsSec3[0]?.title || "";
-//   const fullNameTitle = contactDetailsSec3[1]?.title || "Full Name";
-//   const emailTitle = contactDetailsSec3[2]?.title || "Email";
-//   const emailPlaceholder = contactDetailsSec3[2]?.description || "adi.abed@gmail.com";
-//   const phoneTitle = contactDetailsSec3[3]?.title || "Phone Number";
-//   const phonePlaceholder = contactDetailsSec3[3]?.description || "966-354-2011";
-//   const jobRoleTitle = contactDetailsSec3[4]?.title || "I Would Like to Join the world of Maflam as:";
-//   const jobRoleCategories = contactDetailsSec3[4]?.category || [];
-//   const currentJobTitle = contactDetailsSec3[5]?.title || "Current Job Title";
-//   const experienceTitle = contactDetailsSec3[6]?.title || "Years of experience";
-//   const experienceCategories = contactDetailsSec3[6]?.category || [];
-//   const coverLetterTitle = contactDetailsSec3[7]?.title || "Cover Letter";
-//   const coverLetterPlaceholder = contactDetailsSec3[7]?.description || "Write...";
-//   const resumeTitle = contactDetailsSec3[8]?.title || "Resume";
-//   const portfolioTitle = contactDetailsSec3[9]?.title || "Portfolio";
-//   const submitButtonTitle = contactDetailsSec3[10]?.title || "Send";
-
-//   const [resume, setResume] = useState(null);
-//   const [portfolio, setPortfolio] = useState(null);
-//   const [selectedJobRole, setSelectedJobRole] = useState(null);
-//   const [selectedExperience, setSelectedExperience] = useState(null);
-
-//   const handleFileUpload = (e, setter) => {
-//     setter(e.target.files[0]);
-//   };
-
-//   const handleDeleteFile = (setter) => {
-//     setter(null); // Clear the selected file
-//   };
-
-//   const handlePhoneInput = (e) => {
-//     e.target.value = e.target.value.replace(/\D/g, ""); // Allow only numeric input
-//   };
-
-//   const handleSelect = (index, setter) => {
-//     setter((prev) => (prev === index ? null : index));
-//   };
-
-//   const triggerFileUpload = (id) => {
-//     document.getElementById(id).click();
-//   };
-
-//   const { language } = useContext(LanguageContext);
-//   const btnText = language === "en" ? "Upload file" : "تحميل الملف";
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.formContainer}>
-//         <h2 className={styles.title}>{title}</h2>
-//         <form className={styles.contactForm}>
-//           {/* Full Name */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="name">
-//               {fullNameTitle} <span>*</span>
-//             </label>
-//             <input type="text" maxLength={50} id="name" placeholder="Full Name" />
-//           </div>
-
-//           {/* Email */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="email">
-//               {emailTitle} <span>*</span>
-//             </label>
-//             <input type="email" id="email" placeholder={emailPlaceholder} />
-//           </div>
-
-//           {/* Phone Number */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="phone">
-//               {phoneTitle} <span>*</span>
-//             </label>
-//             <input
-//               type="text"
-//               id="phone"
-//               maxLength={16}
-//               placeholder={phonePlaceholder}
-//               onInput={handlePhoneInput}
-//             />
-//           </div>
-
-//           {/* Job Role Options */}
-//           <div className={styles.inputGroup}>
-//             <label>
-//               {jobRoleTitle} <span>*</span>
-//             </label>
-//             <div className={styles.radioGroup}>
-//               {jobRoleCategories.map((role, index) => (
-//                 <button
-//                   key={index}
-//                   type="button"
-//                   className={`${styles.radioButton} ${
-//                     selectedJobRole === index ? styles.selected : ""
-//                   }`}
-//                   onClick={() => handleSelect(index, setSelectedJobRole)}
-//                 >
-//                   {role}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Current Job Title */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="jobTitle">
-//               {currentJobTitle} <span>*</span>
-//             </label>
-//             <input type="text"  required  maxLength ={60} id="jobTitle" placeholder="Answer" />
-//           </div>
-
-//           {/* Years of Experience */}
-//           <div className={styles.inputGroup}>
-//             <label>{experienceTitle}</label>
-//             <div className={styles.radioGroup}>
-//               {experienceCategories.map((exp, index) => (
-//                 <button
-//                   key={index}
-//                   type="button"
-//                   className={`${styles.radioButton} ${
-//                     selectedExperience === index ? styles.selected : ""
-//                   }`}
-//                   onClick={() => handleSelect(index, setSelectedExperience)}
-//                 >
-//                   {exp}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Cover Letter */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="coverLetter">
-//               {coverLetterTitle} <span>*</span>
-//             </label>
-//             <textarea id="coverLetter" placeholder={coverLetterPlaceholder} />
-//           </div>
-
-//           {/* Resume Upload */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="resumeUpload">
-//               {resumeTitle} <span>*</span>
-//             </label>
-//             <div className={styles.imgUpload}>
-//               {resume ? (
-//                 <>
-//                   <span>{resume.name}</span>
-//                   <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButton}>
-//                   <MdDelete />
-//                   </button>
-//                 </>
-//               ) : ( 
-//                 <div className={styles.btnstyles}>
-//                 <button
-//                   type="button"
-//                   onClick={() => triggerFileUpload("resumeUpload")}
-//                   className={styles.downloadIcon}
-//                 >
-//                   <img src={downloadIcon} alt="Upload Resume" />
-               
-//                 </button>
-//                     <p className="uploadFile">{btnText}</p>
-//                     </div>
-//               )}
-//               <input
-//                 type="file"
-//                 id="resumeUpload"
-//                 style={{ display: "none" }}
-//                 onChange={(e) => handleFileUpload(e, setResume)}
-//               />
-//             </div>
-//           </div>
-
-//           {/* Portfolio Upload */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="portfolioUpload">{portfolioTitle}</label>
-//             <div className={styles.imgUpload}>
-//               {portfolio ? (
-//                 <>
-//                   <span>{portfolio.name}</span>
-//                   <button type="button" onClick={() => handleDeleteFile(setPortfolio)} className={styles.deleteButton}>
-//                   <MdDelete />
-//                   </button>
-//                 </>
-//               ) : (
-//                 <div className={styles.btnstyles}>
-//                 <button
-//                   type="button"
-//                   onClick={() => triggerFileUpload("portfolioUpload")}
-//                   className={styles.downloadIcon}
-//                 >
-//                   <img src={downloadIcon} alt="Upload Portfolio" />
-           
-//                 </button>
-//                 <p className={styles.uploadFile}>{btnText}</p>
-//                 </div>
-//               )}
-//               <input
-//                 type="file"
-//                 id="portfolioUpload"
-//                 style={{ display: "none" }}
-//                 onChange={(e) => handleFileUpload(e, setPortfolio)}
-//               />
-//             </div>
-//           </div>
-
-//           {/* Submit Button */}
-//           <button className={styles.submitButton} type="submit">
-//             {submitButtonTitle}
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ContactForm;
+// // import { useContext, useState } from "react";
+// // import axios from "axios";
+// // // import { toast } from "react-toastify";
+// // // import "react-toastify/dist/ReactToastify.css";
+// // import styles from "./ContactForm.module.css";
+// // import { ContactUs2Context } from "../../store/ContactUs2Context";
+// // import downloadIcon from "../../assets/downloadIcon.png";
+// // import { LanguageContext } from "../LanguageContext/LanguageContext";
+// // import { MdDelete } from "react-icons/md";
+// // import { ToastContainer, toast } from 'react-toastify';
+// // import 'react-toastify/dist/ReactToastify.css';
 
 
-// import { useContext, useState } from "react";
-// import styles from "./ContactForm.module.css";
-// import { ContactUs2Context } from "../../store/ContactUs2Context";
-// import downloadIcon from "../../assets/downloadIcon.png"; // Ensure this path is correct
-// import { LanguageContext } from "../LanguageContext/LanguageContext";
 
-// const ContactForm = () => {
-//   const { contactUs2ContextDetails, loading, error } =
-//     useContext(ContactUs2Context);
+// // const ContactForm = () => {
+// //   const { contactUs2ContextDetails, loading, error } = useContext(ContactUs2Context);
+// //   const { language } = useContext(LanguageContext);
 
-//   if (loading) return <p>Loading...</p>; // Handle loading state
-//   if (error) return <p>Error loading data</p>; // Handle error state
+// //   if (loading) return <p>Loading...</p>;
+// //   if (error) return <p>Error loading data</p>;
 
-//   // Fetch data from the context
-//   const contactDetailsSec3 =
-//     contactUs2ContextDetails?.contactDetails2Sec3 || [];
-//   const title = contactDetailsSec3[0]?.title || "";
-//   const fullNameTitle = contactDetailsSec3[1]?.title || "Full Name";
-//   const emailTitle = contactDetailsSec3[2]?.title || "Email";
-//   const emailPlaceholder =
-//     contactDetailsSec3[2]?.description || "adi.abed@gmail.com";
-//   const phoneTitle = contactDetailsSec3[3]?.title || "Phone Number";
-//   const phonePlaceholder = contactDetailsSec3[3]?.description || "966-354-2011";
-//   const jobRoleTitle =
-//     contactDetailsSec3[4]?.title ||
-//     "I Would Like to Join the world of Maflam as:";
-//   const jobRoleCategories = contactDetailsSec3[4]?.category || [];
-//   const currentJobTitle = contactDetailsSec3[5]?.title || "Current Job Title";
-//   const experienceTitle = contactDetailsSec3[6]?.title || "Years of experience";
-//   const experienceCategories = contactDetailsSec3[6]?.category || [];
-//   const coverLetterTitle = contactDetailsSec3[7]?.title || "Cover Letter";
-//   const coverLetterPlaceholder =
-//     contactDetailsSec3[7]?.description || "Write...";
-//   const resumeTitle = contactDetailsSec3[8]?.title || "Resume";
-//   const portfolioTitle = contactDetailsSec3[9]?.title || "Portfolio";
-//   const submitButtonTitle = contactDetailsSec3[10]?.title || "Send";
+// //   const contactDetailsSec3 = contactUs2ContextDetails?.contactDetails2Sec3 || [];
+// //   const title = contactDetailsSec3[0]?.title || "";
+// //   const fullNameTitle = contactDetailsSec3[1]?.title || "Full Name";
+// //   const emailTitle = contactDetailsSec3[2]?.title || "Email";
+// //   const emailPlaceholder = contactDetailsSec3[2]?.description || "adi.abed@gmail.com";
+// //   const phoneTitle = contactDetailsSec3[3]?.title || "Phone Number";
+// //   const phonePlaceholder = contactDetailsSec3[3]?.description || "966-354-2011";
+// //   const jobRoleTitle = contactDetailsSec3[4]?.title || "I Would Like to Join the world of Maflam as:";
+// //   const jobRoleCategories = contactDetailsSec3[4]?.category || [];
+// //   const currentJobTitle = contactDetailsSec3[5]?.title || "Current Job Title";
+// //   const experienceTitle = contactDetailsSec3[6]?.title || "Years of experience";
+// //   const experienceCategories = contactDetailsSec3[6]?.category || [];
+// //   const coverLetterTitle = contactDetailsSec3[7]?.title || "Cover Letter";
+// //   const coverLetterPlaceholder = contactDetailsSec3[7]?.description || "Write...";
+// //   const resumeTitle = contactDetailsSec3[8]?.title || "Resume";
+// //   const portfolioTitle = contactDetailsSec3[9]?.title || "Portfolio";
+// //   const submitButtonTitle = contactDetailsSec3[10]?.title || "Send";
 
-//   const [resume, setResume] = useState(null);
-//   const [portfolio, setPortfolio] = useState(null);
-//   const [selectedJobRole, setSelectedJobRole] = useState(null);
-//   const [selectedExperience, setSelectedExperience] = useState(null);
+// //   const [resume, setResume] = useState(null);
+// //   const [portfolio, setPortfolio] = useState(null);
+// //   const [selectedJobRole, setSelectedJobRole] = useState(null);
+// //   const [selectedExperience, setSelectedExperience] = useState(null);
+// //   const [formData, setFormData] = useState({
+// //     name: "",
+// //     email: "",
+// //     phone: "",
+// //     jobTitle: "",
+// //     coverLetter: "",
+// //   });
 
-//   const handleFileUpload = (e, setter) => {
-//     setter(e.target.files[0]);
-//   };
+// //   const handleFileUpload = (e, setter) => {
+// //     setter(e.target.files[0]);
+// //   };
 
-//   const handlePhoneInput = (e) => {
-//     e.target.value = e.target.value.replace(/\D/g, ""); // Allow only numeric input
-//   };
+// //   const handleDeleteFile = (setter) => {
+// //     setter(null);
+// //   };
 
-//   const handleSelect = (index, setter) => {
-//     setter((prev) => (prev === index ? null : index));
-//   };
+// //   const handlePhoneInput = (e) => {
+// //     e.target.value = e.target.value.replace(/\D/g, "");
+// //   };
 
-//   const triggerFileUpload = (id) => {
-//     document.getElementById(id).click();
-//   };
-//   const { language, direction, toggleLanguage } = useContext(LanguageContext);
-//   const btnText = language === "en" ? "Upload file" : "تحميل الملف";
+// //   const handleSelect = (index, setter) => {
+// //     setter((prev) => (prev === index ? null : index));
+// //   };
 
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.formContainer}>
-//         <h2 className={styles.title}>{title}</h2>
-//         <form className={styles.contactForm}>
-//           {/* Full Name */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="name">
-//               {fullNameTitle} <span>*</span>
-//             </label>
-//             <input type="text" maxLength={50} id="name" placeholder="Full Name" />
-//           </div>
+// //   const triggerFileUpload = (id) => {
+// //     document.getElementById(id).click();
+// //   };
 
-//           {/* Email */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="email">
-//               {emailTitle} <span>*</span>
-//             </label>
-//             <input type="email" id="email" placeholder={emailPlaceholder} />
-//           </div>
+// //   const handleInputChange = (e) => {
+// //     setFormData({ ...formData, [e.target.id]: e.target.value });
+// //   };
 
-//           {/* Phone Number */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="phone">
-//               {phoneTitle} <span>*</span>
-//             </label>
-//             <input
-//               type="text"
-//               id="phone"
-//               maxLength={16}
-//               placeholder={phonePlaceholder}
-//               onInput={handlePhoneInput}
-//             />
-//           </div>
+// //   const handleSubmit = async (e) => {
+// //     e.preventDefault();
 
-//           {/* Job Role Options */}
-//           <div className={styles.inputGroup}>
-//             <label>
-//               {jobRoleTitle} <span>*</span>
-//             </label>
-//             <div className={styles.radioGroup}>
-//               {jobRoleCategories.map((role, index) => (
-//                 <button
-//                   key={index}
-//                   type="button"
-//                   className={`${styles.radioButton} ${
-//                     selectedJobRole === index ? styles.selected : ""
-//                   }`}
-//                   onClick={() => handleSelect(index, setSelectedJobRole)}
-//                 >
-//                   {role}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
+// //     const payload = new FormData();
+// //     payload.append("name", formData.name);
+// //     payload.append("email", formData.email);
+// //     payload.append("phone", formData.phone);
+// //     payload.append("jobTitle", formData.jobTitle);
+// //     payload.append("coverLetter", formData.coverLetter);
+// //     payload.append("jobRole", jobRoleCategories[selectedJobRole]);
+// //     payload.append("experience", experienceCategories[selectedExperience]);
+// //     // if (resume) payload.append("resume", resume);
+// //     // if (portfolio) payload.append("portfolio", portfolio);
 
-//           {/* Current Job Title */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="jobTitle">
-//               {currentJobTitle} <span>*</span>
-//             </label>
-//             <input type="text" id="jobTitle" placeholder="Answer" />
-//           </div>
+// //     try {
+// //       await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
+// //       toast.success("Form submitted successfully!");
+// //     } catch (err) {
+// //       // toast.error("Failed to submit form. Please try again.");
+// //       const errorMessage = err.response?.data?.message || err.message;
+// //       toast.err(`Error: ${errorMessage}`);
+// //     }
+// //   };
 
-//           {/* Years of Experience */}
-//           <div className={styles.inputGroup}>
-//             <label>{experienceTitle}</label>
-//             <div className={styles.radioGroup}>
-//               {experienceCategories.map((exp, index) => (
-//                 <button
-//                   key={index}
-//                   type="button"
-//                   className={`${styles.radioButton} ${
-//                     selectedExperience === index ? styles.selected : ""
-//                   }`}
-//                   onClick={() => handleSelect(index, setSelectedExperience)}
-//                 >
-//                   {exp}
-//                 </button>
-//               ))}
-//             </div>
-//           </div>
+// //   const btnText = language === "en" ? "Upload file" : "تحميل الملف";
 
-//           {/* Cover Letter */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="coverLetter">
-//               {coverLetterTitle} <span>*</span>
-//             </label>
-//             <textarea id="coverLetter" placeholder={coverLetterPlaceholder} />
-//           </div>
+// //   return (
+// //     <div className={styles.container}>
+// //       <div className={styles.formContainer}>
+// //         <h2 className={styles.title}>{title}</h2>
+// //         <form className={styles.contactForm} onSubmit={handleSubmit}>
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="name">
+// //               {fullNameTitle} <span>*</span>
+// //             </label>
+// //             <input
+// //               type="text"
+// //               id="name"
+// //               maxLength={50}
+// //               placeholder="Full Name"
+// //               value={formData.name}
+// //               onChange={handleInputChange}
+// //             />
+// //           </div>
 
-//           {/* Resume Upload Button */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="resumeUpload">
-//               {resumeTitle} <span>*</span>
-//             </label>
-//             <div className={styles.imgUpload}>
-//               <button
-//                 type="button"
-//                 onClick={() => triggerFileUpload("resumeUpload")}
-//                 className={styles.downloadIcon}
-//               >
-//                 <img src={downloadIcon} alt="Upload Resume" />
-//               </button>
-//               <p className="uploadFile">{btnText}</p>
-//               <input
-//                 type="file"
-//                 id="resumeUpload"
-//                 // style={{ display: "none" }}
-//                 onChange={(e) => handleFileUpload(e, setResume)}
-//               />
-//             </div>
-//           </div>
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="email">
+// //               {emailTitle} <span>*</span>
+// //             </label>
+// //             <input
+// //               type="email"
+// //               id="email"
+// //               placeholder={emailPlaceholder}
+// //               value={formData.email}
+// //               onChange={handleInputChange}
+// //             />
+// //           </div>
 
-//           {/* Portfolio Upload Button */}
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="phone">
+// //               {phoneTitle} <span>*</span>
+// //             </label>
+// //             <input
+// //               type="text"
+// //               id="phone"
+// //               maxLength={16}
+// //               placeholder={phonePlaceholder}
+// //               onInput={handlePhoneInput}
+// //               value={formData.phone}
+// //               onChange={handleInputChange}
+// //             />
+// //           </div>
 
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="portfolioUpload">{portfolioTitle}</label>
-//             <div className={styles.imgUpload}>
-//               <button
-//                 type="button"
-//                 onClick={() => triggerFileUpload("portfolioUpload")}
-//                 className={styles.downloadIcon}
-//               >
-//                 <img src={downloadIcon} alt="Upload Portfolio" />
-//               </button>
-//               <p className="uploadFile">{btnText}</p>
-//             </div>
-//             <input
-//               type="file"
-//               id="portfolioUpload"
-//               // style={{ display: "none" }}
-//               onChange={(e) => handleFileUpload(e, setPortfolio)}
-//             />
-//           </div>
+// //           <div className={styles.inputGroup}>
+// //             <label>{jobRoleTitle} <span>*</span></label>
+// //             <div className={styles.radioGroup}>
+// //               {jobRoleCategories.map((role, index) => (
+// //                 <button
+// //                   key={index}
+// //                   type="button"
+// //                   className={`${styles.radioButton} ${selectedJobRole === index ? styles.selected : ""}`}
+// //                   onClick={() => handleSelect(index, setSelectedJobRole)}
+// //                 >
+// //                   {role}
+// //                 </button>
+// //               ))}
+// //             </div>
+// //           </div>
 
-//           {/* Submit Button */}
-//           <button className={styles.submitButton} type="submit">
-//             {submitButtonTitle}
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="jobTitle">
+// //               {currentJobTitle} <span>*</span>
+// //             </label>
+// //             <input
+// //               type="text"
+// //               id="jobTitle"
+// //               maxLength={60}
+// //               placeholder="Answer"
+// //               value={formData.jobTitle}
+// //               onChange={handleInputChange}
+// //             />
+// //           </div>
 
-// export default ContactForm;
+// //           <div className={styles.inputGroup}>
+// //             <label>{experienceTitle}</label>
+// //             <div className={styles.radioGroup}>
+// //               {experienceCategories.map((exp, index) => (
+// //                 <button
+// //                   key={index}
+// //                   type="button"
+// //                   className={`${styles.radioButton} ${selectedExperience === index ? styles.selected : ""}`}
+// //                   onClick={() => handleSelect(index, setSelectedExperience)}
+// //                 >
+// //                   {exp}
+// //                 </button>
+// //               ))}
+// //             </div>
+// //           </div>
 
-// import { useRef, useState } from "react";
-// import styles from "./ContactForm.module.css";
-// import { assests } from "../../assets/assests";
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="coverLetter">
+// //               {coverLetterTitle} <span>*</span>
+// //             </label>
+// //             <textarea
+// //               id="coverLetter"
+// //               placeholder={coverLetterPlaceholder}
+// //               value={formData.coverLetter}
+// //               onChange={handleInputChange}
+// //             />
+// //           </div>
 
-// const ContactForm = () => {
-//   const handleFileUpload = (e, setter) => {
-//     setter(e.target.files[0]);
-//   };
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="resumeUpload">
+// //               {resumeTitle} <span>*</span>
+// //             </label>
+// //             <div className={styles.imgUpload}>
+// //               {resume ? (
+// //                 <>
+// //                   <span>{resume.name}</span>
+// //                   <button type="button" onClick={() => handleDeleteFile(setResume)} className={styles.deleteButton}>
+// //                     <MdDelete />
+// //                   </button>
+// //                 </>
+// //               ) : (
+// //                 <div className={styles.btnstyles}>
+// //                   <button
+// //                     type="button"
+// //                     onClick={() => triggerFileUpload("resumeUpload")}
+// //                     className={styles.downloadIcon}
+// //                   >
+// //                     <img src={downloadIcon} alt="Upload Resume" />
+// //                   </button>
+// //                   <p className="uploadFile">{btnText}</p>
+// //                 </div>
+// //               )}
+// //               <input
+// //                 type="file"
+// //                 id="resumeUpload"
+// //                 style={{ display: "none" }}
+// //                 onChange={(e) => handleFileUpload(e, setResume)}
+// //               />
+// //             </div>
+// //           </div>
 
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.formContainer}>
-//         <h2 className={styles.title}>Apply to Become Part of a Movie World.</h2>
-//         <form className={styles.contactForm}>
-//           {/* Full Name */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="name">
-//               Full Name <span>*</span>
-//             </label>
-//             <input type="text" id="name" placeholder="Full Name" />
-//           </div>
+// //           <div className={styles.inputGroup}>
+// //             <label htmlFor="portfolioUpload">{portfolioTitle}</label>
+// //             <div className={styles.imgUpload}>
+// //               {portfolio ? (
+// //                 <>
+// //                   <span>{portfolio.name}</span>
+// //                   <button type="button" onClick={() => handleDeleteFile(setPortfolio)} className={styles.deleteButton}>
+// //                     <MdDelete />
+// //                   </button>
+// //                 </>
+// //               ) : (
+// //                 <div className={styles.btnstyles}>
+// //                   <button
+// //                     type="button"
+// //                     onClick={() => triggerFileUpload("portfolioUpload")}
+// //                     className={styles.downloadIcon}
+// //                   >
+// //                     <img src={downloadIcon} alt="Upload Portfolio" />
+// //                   </button>
+// //                   <p className="uploadFile">{btnText}</p>
+// //                 </div>
+// //               )}
+// //               <input
+// //                 type="file"
+// //                 id="portfolioUpload"
+// //                 style={{ display: "none" }}
+// //                 onChange={(e) => handleFileUpload(e, setPortfolio)}
+// //               />
+// //             </div>
+// //           </div>
 
-//           {/* Email */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="email">
-//               Email <span>*</span>
-//             </label>
-//             <input type="email" id="email" placeholder="adi.abed@gmail.com" />
-//           </div>
+// //           <button type="submit" className={styles.submitButton}>{submitButtonTitle}</button>
+// //         </form>
+// //       </div>
+// //       <ToastContainer />
+// //     </div>
+// //   );
+// // };
 
-//           {/* Phone Number */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="phone">
-//               Phone Number <span>*</span>
-//             </label>
-//             <input type="text" id="phone" placeholder="966-354-2011" />
-//           </div>
-
-//           {/* Job Role Options */}
-//           <div className={styles.inputGroup}>
-//             <label>
-//               I Would Like to Join the World of Maflam as: <span>*</span>
-//             </label>
-//             <div className={styles.radioGroup}>
-//               <button type="button" className={styles.radioButton}>
-//                 Workshop and course trainer
-//               </button>
-//               <button type="button" className={styles.radioButton}>
-//                 Employee
-//               </button>
-//               <button type="button" className={styles.radioButton}>
-//                 Maflam show guest
-//               </button>
-//             </div>
-//           </div>
-
-//           {/* Current Job Title */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="jobTitle">
-//               Current Job Title <span>*</span>
-//             </label>
-//             <input type="text" id="jobTitle" placeholder="Answer" />
-//           </div>
-
-//           {/* Years of Experience */}
-//           <div className={styles.inputGroup}>
-//             <label>Years of Experience</label>
-//             <div className={styles.radioGroup}>
-//               <button type="button" className={styles.radioButton}>
-//                 0 to 2
-//               </button>
-//               <button type="button" className={styles.radioButton}>
-//                 3 to 5
-//               </button>
-//               <button type="button" className={styles.radioButton}>
-//                 6 to 10
-//               </button>
-//               <button type="button" className={styles.radioButton}>
-//                 Over 10
-//               </button>
-//             </div>
-//           </div>
-
-//           {/* Cover Letter */}
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="coverLetter">
-//               Cover Letter <span>*</span>
-//             </label>
-//             <textarea id="coverLetter" placeholder="Write..." />
-//           </div>
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="resume">
-//               Resume <span>*</span>
-//             </label>
-//             <input
-//               type="file"
-//               id="resume"
-//               onChange={(e) => handleFileUpload(e, setResume)}
-//             />
-//           </div>
-//           <div className={styles.inputGroup}>
-//             <label htmlFor="portfolio">Portfolio</label>
-//             <input
-//               type="file"
-//               id="portfolio"
-//               onChange={(e) => handleFileUpload(e, setPortfolio)}
-//             />
-//           </div>
-
-//           {/* Submit Button */}
-//           <button className={styles.submitButton} type="submit">
-//             Send
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ContactForm;
+// // export default ContactForm;

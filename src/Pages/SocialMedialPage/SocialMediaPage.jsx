@@ -144,6 +144,7 @@ export default function SocialMediaPage() {
             <SocialMediaPageProvider>
               <Navbar />
               <SocialMediaHeroPage />
+<div className={styles.bagroundcolorsocil}>
               <OSPCarousel />
               <ShowsPodcast />
               <YouTubeChannel />
@@ -151,6 +152,7 @@ export default function SocialMediaPage() {
               <BTSCarousel />
               <FilmProduction />
               <JoinUs />
+              </div>
               <Footer />
             </SocialMediaPageProvider>
           </AboutusPageProvider>
