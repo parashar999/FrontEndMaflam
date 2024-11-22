@@ -154,7 +154,8 @@ function BlogContainer() {
     />
   );
 
-  // Use the patched blogData
+  // Use the patched 
+  const blogtitle1 = homeScreenDetails?.blogTitle?.title || [];
   const blogData = homeScreenDetails?.blogData || [];
   const primaryBlog = blogData[0] || {}; // Main blog
   const continueReading = blogData[1] || {}; // Continue reading section
@@ -171,7 +172,7 @@ function BlogContainer() {
           }}
           to="/blogs"
         >
-          {primaryBlog.title || "Default Blog Title"}
+          {blogtitle1 || "Default Blog Title"}
         </Link>
 
         {/* Blog Image and Content */}
