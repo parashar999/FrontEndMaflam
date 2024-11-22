@@ -11,11 +11,13 @@ const Carousel = ({ itemWidth, itemHeight }) => {
   if (error) return <p>Error loading data</p>;
 
   // Fetching success stories data from context
+  const successTitle = pricingPageContextDetails?.getPricingCourse1DetailsSec2?.title || [];
+
   const successStories = pricingPageContextDetails?.repeatedSuccessStories || [];
 
   return (
     <div className={styles.carouselcontainer}>
-      <h2>Our Success Stories</h2>
+      <h2>{successTitle}</h2>
       
       {/* Using Carou for carousel functionality */}
       <Carou

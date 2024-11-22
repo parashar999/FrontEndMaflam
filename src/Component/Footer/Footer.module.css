@@ -60,6 +60,8 @@
     font-size: 17px;
     font-style: normal;
     margin-bottom: 20px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
     font-weight: 700;
     line-height: 94.1%; /* 15.997px */
 }
