@@ -9,7 +9,7 @@
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error loading data</p>;
 
-    // const coursesData = homeScreenDetails?.coursesData || [];
+    // const coursestitle = homeScreenDetails?.specializedCoursesDataTitle?.title || [];
     const coursesData = [...(homeScreenDetails?.coursesData || [])].reverse();
     const viewAllCoursesTitle = homeScreenDetails?.viewAllCourses?.title || "View All Courses";
 
