@@ -35,7 +35,7 @@
     color: white;
 text-align: center;
 margin-top: 20px;
-margin-bottom: 60px;
+margin-bottom: 40px;
     
 }
 .CardContainer{
@@ -46,27 +46,30 @@ margin-bottom: 60px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 0px;
+ 
 }
 
 .titless{
+    padding-top: 20px;
     display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
     gap: 18px;
 }
 
 .titless p{
+    width: auto;
+    display: inline;
+    padding: 0px;
     font-size: 17px;
-    margin-left: 250px !important;
-
-    padding-left: 0px !important;
-    padding-right: 0px !important;
     color: #5AFFFF;
+    font-weight: 700;
 }
 
 .imagagelogo h5{
     color: #EBF5F4;
     font-family: "Noto Kufi Arabic";
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 149%;
@@ -106,6 +109,11 @@ margin-bottom: 60px;
 
 @media (max-width : 768px)
 {
+    .bgcontainer h1
+    {
+            font-size: x-large;
+    }
+
     .bgcontainer
     {
         width: auto;

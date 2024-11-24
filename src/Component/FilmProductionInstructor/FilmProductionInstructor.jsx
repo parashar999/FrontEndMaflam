@@ -45,11 +45,11 @@ const FilmProductionInstructor = () => {
             <h5 className={styles.toggle}>About the Instructor</h5>
           )}
 
-          <hr className={styles.line} />
+          <hr style={{opacity:'0.4'}} className={styles.line} />
         </div>
 
-        {loading && <p>Loading instructor data...</p>}
-        {error && <p>Error loading instructor data: {error.message}</p>}
+        {loading && <p style={{fontSize:'16px'}}>Loading instructor data...</p>}
+        {error && <p style={{fontSize:'16px'}} >Error loading instructor data: {error.message}</p>}
 
         {isOpen && instructorData && (
           <div className={styles.instructorContent}>
@@ -69,12 +69,12 @@ const FilmProductionInstructor = () => {
             {Array.isArray(instructorData.description) &&
             instructorData.description.length > 0 ? (
               instructorData.description.map((detail, index) => (
-                <p key={index} className={styles.paragraph}>
+                <p key={index} className={styles.paragraph} style={{fontSize:'16px'}}>
                   {detail}
                 </p>
               ))
             ) : (
-              <p>No description available.</p>
+              <p style={{fontSize:'16px'}} >No description available.</p>
             )}
           </div>
         )}

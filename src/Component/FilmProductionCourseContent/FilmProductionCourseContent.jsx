@@ -28,14 +28,14 @@ const FilmProductionCourseContent = () => {
           <div 
             onClick={toggleContent} 
             className={styles.toggleButton} 
-            style={{ cursor: 'pointer', color: '#39FFFb' }} 
+            style={{ cursor: 'pointer', color: '#39FFFb' ,fontSize:'36px', marginLeft:'10px', marginRight:'10px' }} 
           >
             {isOpen ? '-' : '+'}
           </div>
           <h5 className={styles.toggle}>
             {lessonData[0]?.LessonTitle || 'Course Content'}
           </h5>
-          <hr className={styles.line} />
+          <hr style={{opacity:'0.4'}} className={styles.line} />
         </div>
         {isOpen && (
           <div>
@@ -64,17 +64,17 @@ const QuestionItem = ({ question, objective, timeStamp }) => {
   return (
     <div className={styles.questionItem}>
       <div className={styles.questionHeader} onClick={toggleContent}>
-        <div className={styles.toggleButton} style={{ cursor: 'pointer', color: '#39FFFb' }}>
+        <div className={styles.toggleButton} style={{ cursor: 'pointer', color: '#39FFFb' , fontSize:'16px', marginLeft:'10px', marginRight:'10px' }}>
           {isOpen ? '-' : '+'}
         </div>
-        <h6 className={styles.question}>{question}</h6>
+        <h6 style={{fontSize:'16px', fontWeight:'700', color:'#5AFFFF', marginBottom:'0px', fontFamily:'Noto Kufi Arabic'}} className={styles.question}>{question}</h6>
       </div>
       {isOpen && (
         <div className={styles.mainAnsTab}>
-          <p className={styles.answer}>
+          <p style={{display:'inline', width:'auto', padding:'0px'}}  className={styles.answer}>
             {/* <strong>Objective:</strong> */}
              {objective}</p>
-          <p className={styles.answer}>
+          <p style={{display:'inline', width:'auto', padding:'0px'}}  className={styles.answer}>
             {/* <strong>Time to Spent</strong> */}
              {timeStamp}</p>
         </div>

@@ -1,7 +1,10 @@
 .maincontainer {
     position: relative;
-    display: inline-block;
+    display: flex;
     width: 100%; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center; 
   }
   .image {
@@ -36,49 +39,32 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 17px;
+    font-weight: 700;
     color: #061c2b;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Noto Kufi Arabic";
     cursor: pointer;
     border: none;
     /* margin-top: -10px; */
     margin-bottom: 5px; 
     bottom: 50px;
   }
-  
-
-
-  
-  /* Responsive styling for text overlay */
-  @media (max-width: 768px) {
-    .textOverlay {
-      font-size: 2rem; /* Smaller font size on medium screens */
-      margin-top: 120px;
-      text-align: center;
-      padding-left: 300px;
-      padding-right: 300px;
-    }
-    .subscribeButton {
-        padding: 16px 24px; /* Smaller padding on medium screens */
-        font-size: 16px;
-      }
-  }
-  
-  @media (max-width: 480px) {
-    .textOverlay {
-      font-size: 1.5rem; /* Even smaller font size for mobile screens */
-      margin-top: 50px;
-      padding: 5px;
-      text-align: center;
-      padding-left: 350px;
-      padding-right: 350px;
-    }
-    .subscribeButton {
-        padding: 12px 20px; /* Smaller padding for mobile screens */
-        font-size: 15px;
+  @media (max-width:1600px)
+  {
+      .subscribeButton
+      {
         margin-top: 20px;
+        zoom: 0.8;
       }
   }
-  
-  
-  
- 
+
+  @media (max-width:1250px)
+  {
+    .subscribeButton
+    {
+      zoom: 0.7;
+      margin-top: 80px;
+    }
+  }
+
+
+

@@ -41,6 +41,7 @@
   font-family: "Noto Kufi Arabic";
   font-size: 36px;
   font-style: normal;
+  margin-bottom: 20px;
   font-weight: 700;
   line-height: 160%;
   width: 100%;
@@ -96,6 +97,7 @@
   padding-top: 100px;                               
   height: 555px;
   width: 415px;
+  overflow: hidden;
 }
 
 
@@ -106,7 +108,7 @@
   width: 460px;
   height: 100%;
   filter: blur(40px);
-  /* background: var(--Neutral-Website-Bakground---Dark, black); */
+  background: var(--Neutral-Website-Bakground---Dark, black);
   opacity: 0.8;
   z-index: 1; /* Make sure overlay is above the video */
 }
@@ -117,7 +119,7 @@
   width: 460px;
   height: 100%;
   filter: blur(40px);
-  /* background: var(--Neutral-Website-Bakground---Dark, black); */
+  background: var(--Neutral-Website-Bakground---Dark, black);
   opacity: 0.9;
   z-index: 1; /* Make sure overlay is above the video */
 }
@@ -139,7 +141,7 @@
   bottom: 0px;
 }
 
-.card:hover p
+/* .card:hover p
 {
   z-index: 1000;
   font-size: 36px;
@@ -150,8 +152,8 @@
   line-height: 1.2;
   width: 489px;
   bottom: 60px;
-}
-.card videobook{
+} */
+/* .card videobook{
   width: 100%;
   height: 555px;
 
@@ -169,7 +171,7 @@
 {
   height: 729px;
   width: 489px;
-}
+} */
 
 .card h2 {
   font-size: 17px;
@@ -252,49 +254,40 @@ max-width: 800px;
 {
   .carouselcontainer
   {
+    zoom: 0.7;
+  }
+
+  .carouselcontainer h2
+  {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: x-large;
+  }
+  .carousel
+  {
+    padding: 0px;
+  }
+}
+
+@media (max-width:1600px)
+{
+  .carouselcontainer
+  {
     zoom: 0.8;
   }
 }
 
-@media (max-width:1024)
+@media (max-width:1250px)
 {
-    .carouselcontainer
-    {
-      padding: 20px;
-      zoom: 0.7;
-    }
+  .carouselcontainer
+  {
+    zoom: 0.7;
+  }
 }
-
-@media (max-width:1100px)
+@media (max-width:768px)
 {
-    .carousel
-    {
-      max-width: 415px;
-
-    }
-    .card
-    {
-      left: -15px;
-      height: 800px;
-      justify-content: center;
-      align-items: center;
-    }
-    .overlay
-    {
-      display: none;
-    }
-    .roverlay
-    {
-      display: none;
-    }
-    .card p
-    {
-      z-index: 1000;
-      font-size: 24px;
-      display: block;
-      width: 100%;
-      padding: 10px;
-      font-weight: 200;
-      line-height: 1.2;
-    }
+  .carouselcontainer
+  {
+    zoom: 0.6;
+  }
 }
