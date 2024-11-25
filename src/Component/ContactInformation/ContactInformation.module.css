@@ -1,9 +1,12 @@
+
+
+
 .contactContainer {
   padding: 30px 50px; /* Reduced padding to prevent overflow */
   border-radius: 10px;
   width: 90%;
-  max-width: 1200px;
-
+  max-width: 1400px;
+ 
   margin: 50px auto; /* Center horizontally */
   background: rgba(22, 38, 50, 0.75);
   backdrop-filter: blur(50px);
@@ -11,6 +14,124 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Center content vertically */
+  padding-bottom: 50px;
+}
+
+.heading {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  width: 100%;
+  max-width: 600px; /* Limits heading width */
+}
+.contactContainer h2
+{
+  padding-top: 20px;
+}
+
+.maincontainer {
+  border-radius: 10px;
+  margin-top: -300px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  min-height: 800px !important;
+
+  width: 100vw;
+
+  max-width: 1980px;
+  margin: auto;
+}
+
+
+.contactSection {
+  width: 100%;
+  max-width: 961px; /* Limits content width */
+  border-radius: 8px;
+  padding-top: 30px;
+
+}
+
+.contactSection h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.contactSection p {
+  color: var(--Primary-Primary-50, #DDE5EA); 
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+.hrline
+{
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+}
+.contactSection a {
+  color: #5AFFFF;
+  text-decoration: none;
+}
+
+.contactSection a:hover {
+  text-decoration: underline;
+}
+
+.contactSection:not(:last-child) {
+  border-bottom: none; /* Removes bottom border to avoid duplication */
+}
+
+.blueText {
+  color: #5AFFFF;
+}
+
+@media (max-width:1600px){
+  .contactContainer
+  {
+    zoom: 0.8;
+  }
+}
+
+
+@media (max-width:1250px){
+  .contactContainer
+  {
+    zoom: 0.7;
+  }
+}
+
+
+
+/* ***************************
+ Tarun code Added In Above   
+ ************************** */
+
+/* .contactContainer {
+  padding: 30px 50px; 
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 50px auto; 
+  background: rgba(22, 38, 50, 0.75);
+  backdrop-filter: blur(50px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .heading {
@@ -22,50 +143,9 @@
   border-bottom: 1px solid #2a5972;
   padding-bottom: 10px;
   width: 100%;
-  max-width: 600px; /* Limits heading width */
+  max-width: 600px;
 }
 
-/* .maincontainer{
-  background-image: url("../../assets/contactInformation.png") !important;
-
-
-  height: 1185px;
-
-  margin-top:-300px ;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #030b11;
-
-  min-height: 800px !important; 
-
-  width: 100vw;
-
- 
-  max-width: 1980px;
-  background-position: center;
-  margin: auto;
-
-} */
-
-/* .maincontainer {
-  background-image: 
-    linear-gradient(to bottom, rgba(1, 0, 0, 0.8), rgba(8, 9, 0, 0) 50%),
-    url("../../assets/contactInformation.png") !important;
-  
-  height: 1185px;
-
-  margin-top: -300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #030b11;
-
-  min-height: 800px !important;
-
-  width: 100vw;
-
-  max-width: 1980px;
-  margin: auto;
-} */
 .maincontainer {
   background-image: 
     linear-gradient(to bottom, rgba(0, 0, 0, 13.8), rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
@@ -89,10 +169,10 @@
 
 .contactSection {
   width: 100%;
-  max-width: 800px; /* Limits content width */
+  max-width: 800px; 
   margin-bottom: 20px;
   padding: 20px;
-  background-color: rgba(22, 38, 50, 0.85); /* Background for each section */
+  background-color: rgba(22, 38, 50, 0.85); 
   border-radius: 8px;
 }
 
@@ -119,9 +199,9 @@
 }
 
 .contactSection:not(:last-child) {
-  border-bottom: none; /* Removes bottom border to avoid duplication */
+  border-bottom: none; 
 }
 
 .blueText {
   color: #5AFFFF;
-}
+} */

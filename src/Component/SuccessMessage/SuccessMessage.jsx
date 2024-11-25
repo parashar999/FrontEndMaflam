@@ -27,7 +27,7 @@ function SuccessMessage() {
             <p>Together, we will turn your passion for films into reality.</p>
             <button  className={styles.btn}> 
             <a href="https://learn.maflam.com/login/index.php"  >
-            Go To LMS Dashboard
+            Go To Dashboard
           </a>
             </button>
            

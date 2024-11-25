@@ -22,7 +22,7 @@
     max-width: 1660px;
     width: 100%;
     position: relative;
-    background: linear-gradient(130deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),no-repeat center center;
+    /* background: linear-gradient(130deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),no-repeat center center; */
   }
   
 

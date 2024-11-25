@@ -94,13 +94,15 @@ height: 451px;
     display: flex;
  justify-content:start ;
     align-items: center;
-    gap: 20px;
+   
 }
 
 .mores p {
     color: var(--Accent-Accent-400---Main, #39FFFB);
     font-family: "Noto Kufi Arabic";
     font-size: 17px;
+    padding-left: 0px !important;
+    padding-right:0px !important ;
     font-style: normal;
     font-weight: 700;
     line-height: 94.1%; /* 15.997px */
@@ -112,9 +114,12 @@ height: 451px;
     margin-top: 10px;
     width: 30px;
     height: 30px;
+    /* margin-right: 350px !important;  */
+    margin-left: 300px !important; 
     text-underline-offset: none;
     cursor: pointer;
 }
+
 
 
 @media (max-width: 768px) {

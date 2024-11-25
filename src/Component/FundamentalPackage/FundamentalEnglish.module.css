@@ -28,13 +28,14 @@
   width: 100%;
   text-align: left;
   margin:50px;
+  padding-left: 0px !important;
   padding-left:50px ;
   position: relative;
   margin-bottom: 30px;
 }
 
 .content p {
-  width: 620px;
+  width: 720px;
   margin-inline-start: 100px;
   color: #FFF;
   font-size: 36px;

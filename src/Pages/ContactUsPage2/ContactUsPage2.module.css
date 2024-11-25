@@ -1,5 +1,45 @@
+
 .contact2{
     /* background-image: url("../../assets/cntct.png");  */
+    width: 100vw;
+    max-width: 1980px;
+    background-position: center;
+    margin: auto;
+    border: 30px;
+}
+
+.container{
+    width:100vw;
+    max-width: 1980px;
+    margin: auto;
+    background: url("../../assets/ContactInfoBg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+.bottombg
+{
+    width: 100vw;
+    max-width: 1920px;
+    margin: auto;
+    padding-top: 50px;
+    background: url("../../assets/JoinUsNewsGrad.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    gap: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ***************************
+ Tarun code Added In Above   
+ ************************** */
+
+
+/* .contact2{
+   
     background-image: url("../../assets/contactform2.png");
      background-position: center;
     background-repeat: no-repeat;
@@ -14,4 +54,4 @@
     border: 30px;
    
 
-}
+} */
