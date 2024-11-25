@@ -1,59 +1,58 @@
 .parentfundamental
 {
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .title{
+  margin-top: 250px;
   color: #fff;
-  position: absolute;
+
   text-align: center;
   width: 100%;
-  font-size: 38px;
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 125px;
 }
 .Fundamental {
   /* background-color: #030b11; */
   height: auto;
   width: 100vw;
-  max-width: 1500px; /* Set a max-width for the container */
-  margin: 0 auto; /* Center the Fundamental container */
-  margin-top: 125px;
-  margin-bottom: 100px;
-}
-
-.secondcontainer {
+  padding: 50px;
+  max-height: 482px;
   display: flex;
-  flex-direction: column;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  max-width: 1400px;
+  background-image: url("../../assets/PodcastArBg.png"); /* Set a max-width for the container */
+  background-size: 100% 100%;   /* Ensure the image covers the element */
+  background-position: 0 100%;  /* This will flip the image vertically */
+  background-repeat: no-repeat;
+  margin: 0 auto; /* Center the Fundamental container */
+  margin-bottom: 200px;
 }
-
 .content {
-  width: 100%;
-  text-align: left;
-  margin:50px;
-  padding-left:50px ;
+  text-align: start;
   position: relative;
+  margin:auto;
+  max-width: 474px;
+  border-radius: 20px;  
   margin-bottom: 30px;
 }
 
 .content p {
-  width: 620px;
+  max-width: 474px;
   color: #FFFFFF;
   line-height: 45px;
-  text-align: left;
-  padding-left: 0px !important;
-padding-top: 100px;
-padding-bottom: 50px;
+  /* text-align: left; */
   font-size: 17px;
-  /* font-weight: 700; */
-  
+  font-weight: 400;
+  line-height: 160%;
 }
 
 .subscribe {
-  background-image: url("../../assets/bgpodcast.png");
+  
   background-position: center;
   background-size: cover;
   position: relative;
@@ -65,44 +64,29 @@ padding-bottom: 50px;
   border-radius: 20px;
   position: relative;
   opacity: 1;
-  height: 450px;
+  height: 400px;
 }
 .imgcontainer  {
-  width: 549px;
-    position: absolute;
-    right: 500px;
-    top: 0px;
-    z-index: 1;
-    height: auto;
-    width: 650px;
+  width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
-.ctn {
-  padding-right: 0px !important;
-  height: auto;
-  margin-left: 50px;
+.imgcontainer img
+{
+    width: 100%;  
+}
 
-  
+.ctn {
+  height: auto;
 }
-.item {
-  display: flex;
-  flex-direction: row;
-}
-.checkico {
-  margin-right: 10px;
-  margin-left: 10px;
-  color: rgb(46, 202, 202);
-  font-size: 25px;
-  position: relative;
-  top: 10px;
-}
+
+
 .ctn p {
   font-size: 15px;
   color: #fff;
-  padding-bottom: 20px;
-  padding-right: 0px !important;
   font-weight: 300;
-  width: 35%; 
 }
 
 .ctn img{
@@ -110,33 +94,13 @@ padding-bottom: 50px;
   width: auto;
 }
 .ctn h6 {
-  padding-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 20px;
   color: #fff;
-  font-weight: 600;
-  width: 50%; 
+  font-weight: 400;
   color: #39fffb;
 }
-.checkicobuttun {
-  position: relative;
-  box-shadow: 0px 10px 30px rgba(90, 255, 234, 0.3);
-  border-radius: 64px;
-  background-color: #39fffb;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 7px;
-  box-sizing: border-box;
-  text-align: right;
-  font-size: 24px;
-  color: #000;
-  font-family: 'Noto Kufi Arabic';
-  font-weight: 500;
-  border: none;
-  margin: 10px;
-}
 .item b {
   margin-right: 2px;
   color: aqua;
@@ -149,95 +113,37 @@ padding-bottom: 50px;
   padding-left: 3px;
 }
 
-@media (max-width:1500px)
+@media (max-width:1600px)
 {
-  .Fundamental
-  {
-    zoom: 0.9;
-  }
-}
-
-@media (max-width:1350px)
-{
-  .Fundamental
-  {
-    zoom: 0.8;
-  }
-}
-@media (max-width:1280px)
-{
-  .secondcontainer
-  {
-    zoom: 0.9;
-  }
-  .content
-  {
-    zoom: 0.8;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .imgcontainer
-  {
-    position: relative;
-  }
-  .content p
-  {
-    width: auto;
-  }
-  .subscribe
-  {
-    padding-left: 0px;
-    position: relative;
-    top: -250px;
-  }
-
-  .content p{
-    font-size: xx-large;
-    line-height: 75px;
-
-}
-}
-@media (max-width:768px)
-{
-  .content
-  {
-    padding-left: 0px;
-  }
-  .Fundamental
-  {
-    margin-bottom: 0px;
-  }
-    .secondcontainer
+    .title
     {
-      zoom:0.7;
+      zoom: 0.8;
+    }
+    .parentfundamental
+    {
+      zoom: 0.8;
     }
 }
 
-@media (max-width:542px)
+@media (max-width: 1250px)
 {
-
-  .content p{
-    font-size: x-large;
-    line-height: 75px;
-
-}
-  .subscribe
+  .title, .parentfundamental
   {
-    font-size: 10px;
+    zoom: 0.7;
   }
-
-  .imgcontainer{
-    left: 20px;    
+  .Fundamental
+  {
+    max-height: 1500px;
+    background-size: cover;
+    flex-direction: column-reverse;
+    border-radius: 20px;
   }
-}
-.checkico
-{
-  top: 25px !;
-}
-p b
-{
-    position: relative;
-    top: 12px;
+  .title
+  {
+    padding-bottom: 50px;
+  }
+  .imgcontainer
+  {
+    width: 100%;
+  }
 }
