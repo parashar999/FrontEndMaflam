@@ -1,11 +1,9 @@
 .coursedetailsheader {
     width: 100%;
-    background-image: url("../../assets/MaflamPricingHeroSectionBg.png");
     background-size: cover;
     background-position: center;
     max-width: 1920px;
     margin: auto;
-    background-color: black;
     margin-top: 60px;
 }
 
@@ -13,28 +11,33 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     gap: 80px;
 }
 
 .courseVideo {
     
-    margin-top: 100px;
+    margin-top: 200px;
     height: 790px;
-    width: 527px;
+    max-width: 527px;
   
 }
 
 /* .videofixed{
     height: 200px !important;
 } */
+
+.videofixed
+{
+    
+    background:#05121C;
+}
 .videocontent {
     border-radius:20px ;
     position: relative;
     top: -20px;
     padding: 40px;
     width: 100%;
-    background-color: #030B11;
+    background:#05121C;
     margin-top: 0px;
     overflow: hidden;
 }
@@ -61,7 +64,14 @@
 .subcribebtn {
     display: block;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     height: 50px;
+    font-size: 17px;
+    padding: 30px;
+    font-weight: 700;
     border-radius: 64px;
     margin-bottom: 10px;
     background-color: #39FFFb;
@@ -76,12 +86,19 @@
 
 .addtowishlist {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     height: 50px;
     border-radius: 64px;
+    font-size: 17px;
+    padding: 25px;
+    font-weight: 700;
     color: #39FFFb;
     border: 1px solid #39FFFb;
     background: none;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .addtowishlist:hover {
@@ -98,21 +115,30 @@
     margin-top: 250px;
 }
 
+.headerText p
+{
+    padding: 0px;
+}
+
 .headerText h6 {
     font-size: 42px;
     font-weight: 700;
     line-height: 50px;
     text-align: start;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom:50px;
 }
 
-.headerText p {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 39.6px;
-    text-align: start;
-    color: white;
+.headerText p
+{
+    color: var(--Accent-Accent-50, #F6FFFF);
+
+/* Subheadline/Subheadline 2 */
+font-family: "Noto Kufi Arabic";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 39.6px */
 }
 
 .lessonsprice {
@@ -133,9 +159,13 @@
 .riyals,
 .lessons,
 .time {
-    background: linear-gradient(174.79deg, #030B11 17.67%, rgba(3, 11, 17, 0.5) 72.22%, rgba(3, 11, 17, 0) 90.55%);
-    padding: 5px;
-    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--Primary-Primary-400, #061C2B);
 }
 
 /* Collapsible section styling */
@@ -146,15 +176,22 @@
 }
 
 .collapsible {
-    border: 1px solid gray;
-    min-width: 100%;
-    border-radius: 10px;
-    color: white;
-    box-sizing: border-box;
-    padding-left: 10px;
+    border-radius: 20px;
+    background: transparent lightgray 50% / cover no-repeat;
+    border: 2px solid var(--Neutral-Neutral-900, #222B2B);
     padding-right: 10px;
-    margin-top: 65px;
-   
+    padding: 36px;
+    margin-top: 25px;  
+}
+.answer
+{
+    color: var(--Accent-Accent-50, #F6FFFF);
+    font-family: "Noto Kufi Arabic";
+    font-size: 16px !important;
+    margin-top:10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
 }
 
 .header {
@@ -176,7 +213,7 @@
 .toggleButton {
     margin-right: 10px;
     color: #39FFFb;
-    font-size: 25px;
+    font-size: 36px;
 }
 
 .toggle {
@@ -188,47 +225,28 @@
     color: white;
 }
 
-.answer {
-    color: white;
-    font-size: 12.5px !important;
-    margin-bottom: 5px;
-    text-align: center;
-    padding-right: 20px !important;
-    line-height: 160%;
-    padding-left: 10px !important;
-}
 
-@media (max-width:1600px)
+@media(max-width:1600px)
 {
     .videoTheory
     {
-        zoom:0.8;
+        zoom: 0.8;
     }
 }
-@media (max-width:1250px)
-{
 
-
-    .headerText
-    {
-        margin-top: 0px;
-    }
-    .videoTheory
-    {
-        flex-direction: column-reverse;
-        zoom:0.8;
-    }
-}
-@media (max-width:768px)
+@media(max-width:1250px)
 {
     .videoTheory
     {
-        flex-direction: column-reverse;
-        max-width: 100%;
         zoom:0.7;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
     }
-    .collapsible
+    .courseVideo
     {
-        max-width: 100vw;
+        margin: 20px;
     }
 }

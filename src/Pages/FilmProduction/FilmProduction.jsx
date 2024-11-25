@@ -4,14 +4,13 @@ import Footer from "../../Component/Footer/Footer";
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import FundamentalFilmProduction from "../../Component/FundamentalFilmProduction/FundamentalFilmProduction";
 import FilmProductionInstructor from "../../Component/FilmProductionInstructor/FilmProductionInstructor";
-import FilmProductionCourseContent from "../../Component/FilmProductionCourseContent/FilmProductionCourseContent";
+import styles from "./FilmProduction.module.css"
 import SubscribeFundamentalPackage from "../../Component/SubscribeFundamentalPackage/SubscribeFundamentalPackage";
 import {
   FilmProductionProvider,
   FilmProductionContext,
 } from "../../store/FilmProductionContext";
 import JoinUs from "../../Component/JoinUs/JoinUs";
-import "./FilmProduction.css";
 // import { AboutusPageProvider } from "../../store/AboutUsPageContext";
 import {
   AboutusPageContext,
@@ -59,25 +58,28 @@ function FilmProduction() {
   return (
     <div>
      
-      <div className="elements">
+      
         <LanguageProvider>
       
           <FilmProductionProvider>
             <AboutusPageProvider>
           
             <Navbar />
+            <div className={styles.elements}>
               <FundamentalFilmProduction />
-              <FilmProductionInstructor />
-              <FilmProductionCourseContent />
-              {/* <SubscribeFundamentalPackage /> */}
+          
+              <SubscribeFundamentalPackage /> 
+              
+              <div className={styles.bottombg}>
               <JoinUs />
               <Footer />
-             
+              </div>
+              </div>
             </AboutusPageProvider>
           </FilmProductionProvider>
         
         </LanguageProvider>
-      </div>
+     
     </div>
   );
 }

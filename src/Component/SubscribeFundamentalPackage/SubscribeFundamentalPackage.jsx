@@ -1,19 +1,21 @@
-
-
-
-import React from 'react';
+import React, { useContext } from "react";
+import { LanguageContext } from "../LanguageContext/LanguageContext"; // Import LanguageContext
 import styles from './SubscribeFundamentalPackage.module.css';
-import subscribefundamentalpackage from '../../assets/subscribefundamentalpackage.png';
+import img1 from "../../assets/AdvCompBg.png";
+import img2 from "../../assets/AdvCompAr.png";
 
 function SubscribeFundamentalPackage() {
+  const { direction } = useContext(LanguageContext); // Get the direction from the context
+
   return (
     <>
       <div className={styles.maincontainer}>
-        <img src={subscribefundamentalpackage} alt="Video" className={styles.image} />
-        <div className={styles.textOverlay}>Subscribe To The Full Filmmaking Fundamentals Package
-        </div>
+        <img 
+          src={direction === "rtl" ? img2 : img1} // Switch image based on the direction
+          alt="Video" 
+          className={styles.image} 
+        />
         <button className={styles.subscribeButton}>Subscribe</button>
-
       </div>
     </>
   );

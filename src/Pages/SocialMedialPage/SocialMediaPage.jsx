@@ -106,6 +106,7 @@ import BTSCarousel from "../../Component/BTSCarousel/BTSCarousel";
 import ShowsPodcast from "../../Component/ShowsPodcast/ShowsPodcast";
 import { SocialMediaPageContext, SocialMediaPageProvider } from "../../store/SocilaMediaPageContext";
 import { useContext, useEffect } from "react";
+import SubscribeFundamentalPackage from "../../Component/SubscribeFundamentalPackage/SubscribeFundamentalPackage";
 
 export default function SocialMediaPage() {
   // const { homeScreenDetails, loading: homeLoading } =
@@ -137,27 +138,29 @@ export default function SocialMediaPage() {
   }, [socialMediaPageDetails]);
 
   return (
-    <div className={styles.bgContainer}>
+ 
       <LanguageProvider>
         <HomePageProvider>
           <AboutusPageProvider>
             <SocialMediaPageProvider>
               <Navbar />
+              <div className={styles.bgContainer}>
               <SocialMediaHeroPage />
-<div className={styles.bagroundcolorsocil}>
               <OSPCarousel />
               <ShowsPodcast />
               <YouTubeChannel />
               <EducationaPost />
               <BTSCarousel />
-              <FilmProduction />
+              <SubscribeFundamentalPackage/>
+              <div className={styles.bottombg}>
               <JoinUs />
-              </div>
               <Footer />
+              </div>
+              </div>
             </SocialMediaPageProvider>
           </AboutusPageProvider>
         </HomePageProvider>
       </LanguageProvider>
-    </div>
+    
   );
 }

@@ -75,8 +75,8 @@ const BlogHero = () => {
                 <p className={styles.categorybox}>
                   Category
                 </p>
-                <h3 className={styles.title}>{post.title}</h3>
-                <a
+                <h3 style={{fontSize:"20px"}} className={styles.title}>{post.title}</h3>
+                <a style={{fontSize:"17px"}}
                   onClick={() => handleContinueReading(post.id)}
                   className={styles.readMore}
                 >
