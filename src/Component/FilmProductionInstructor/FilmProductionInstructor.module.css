@@ -3,10 +3,9 @@
   width: 100%;
   max-width: 1397px;
   margin: auto;
-  padding-top: 20px;
   justify-content: baseline;
   align-items: baseline;
-  padding: 10px;
+  margin-top: 20px;
 }
 
 .header {
@@ -37,7 +36,7 @@
   margin-right: 10px;
   color: #39FFFb;
   
-  font-size: 28px;
+  font-size: 36px;
   font-weight: bold;
 
 }
@@ -65,12 +64,14 @@
 .collapsibleLtr {
   border: 1px solid white;
   display: inline-block;
-  width: 768px; 
-  padding: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 100%;
+  max-width: 768px; 
+  padding: 36px;
   border-radius: 10px;
-  background-image: url("../../assets/aboutinstbg.png");
+  
+  border-radius: 20px;
+border: 1px solid #000;
+background: linear-gradient(0deg, rgba(10, 23, 31, 0.70) 0%, rgba(10, 23, 31, 0.70) 100%), url("../../assets/aboutinstbg.png") lightgray 50% / cover no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,32 +81,3 @@
 
 
 
-@media (max-width:1600px)
-{
-  .maincontainer
-  {
-    zoom: 0.8;
-  }
-}
-
-@media (max-width:1250px)
-{
-
-}
-
-@media (max-width:768px)
-{
-  .collapsibleLtr
-  {
-    max-width: 500px;
-  }
-  .maincontainer
-  {
-    zoom: 0.7;
-    max-width: 780px;
-  }
-  .collapsibleLtr
-  {
-    max-width: 100%;
-  }
-}

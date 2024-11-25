@@ -12,6 +12,7 @@
     text-align: center;
     margin-top: -50px;
     z-index: 999;
+    
   }
   
   .headingSection h1 {
@@ -39,6 +40,8 @@
     /* margin: 0 auto; */
     width: 480px;
     max-width: 100vw;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
   
   .underline {
@@ -78,6 +81,8 @@
     max-width: 646px;
     text-align: center;
     backdrop-filter: blur(10px);
+    padding-left: 80px;
+    padding-right: 80px;
   }
   
   .card h3 {
@@ -113,6 +118,9 @@
     text-align: start;
     font-weight: 300;
     margin:auto;
+    padding-top: 20px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
     /* line-height: 160%;  */
   /*  
     text-align: start;
