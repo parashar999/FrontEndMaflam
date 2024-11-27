@@ -1,14 +1,10 @@
 import React from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import BlogHeader from "../../Component/BlogHeader/BlogHeader";
-import Footer from "../../Component/Footer/Footer";
+import { BlogHeader} from "../../Component";
 
 const BlogDetails = () => {
   return (
     <div>
-      <Navbar></Navbar>
       <BlogHeader></BlogHeader>
-      <Footer></Footer>
     </div>
   );
 };

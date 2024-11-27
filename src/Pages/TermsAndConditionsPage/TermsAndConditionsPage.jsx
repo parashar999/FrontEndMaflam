@@ -1,20 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import Footer from "../../Component/Footer/Footer";
-import TermsAndConditions from "../../Component/TermsAndCondition/TermsAndConditions";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-import {
+import {TermsAndCondition } from "../../Component";
+import { 
+  LanguageProvider,
   HomePageContext,
   HomePageProvider,
-} from "../../store/HomePageContext.jsx";
-import {
-  AboutusPageContext,
-  AboutusPageProvider,
-} from "../../store/AboutUsPageContext.jsx";
-import {
   TermsConditionProvider,
   TermsConditionContext,
-} from "../../store/TermsConditionContext.jsx";
+} from "../../store";
 
 const TermsAndConditionsPage = () => {
   const {
@@ -49,9 +41,7 @@ const TermsAndConditionsPage = () => {
       <LanguageProvider>
         <HomePageProvider>
           <TermsConditionProvider>
-            <Navbar></Navbar>
-            <TermsAndConditions></TermsAndConditions>
-            <Footer></Footer>
+            <TermsAndCondition></TermsAndCondition>
           </TermsConditionProvider>
         </HomePageProvider>
       </LanguageProvider>

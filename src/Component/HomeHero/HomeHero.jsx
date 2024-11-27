@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import stylesArabic from "./HomeHero.module.css";
 import styles from "./HomeHero_arabic.module.css";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
+import vid from "../../assets/file.mp4";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 
 const HomeHero = () => {
@@ -28,7 +29,7 @@ const HomeHero = () => {
         {videoUrl && (
           <video
             className={stylesSelected.backgroundVideo}
-            src={videoUrl}
+            src={vid}
             autoPlay
             muted
             loop
@@ -53,3 +54,5 @@ const HomeHero = () => {
 };
 
 export default HomeHero;
+
+

@@ -1,16 +1,13 @@
 import React from 'react'
-import Navbar from '../../Component/Navbar/Navbar'
-import Footer from '../../Component/Footer/Footer'
-import { LanguageProvider } from '../../Component/LanguageContext/LanguageContext'
-import MyProfilePersonalInfo from '../../Component/MyProfilePersonalInfo/MyProfilePersonalInfo'
+import { MyProfilePersonalInfo } from '../../Component';
+import { LanguageProvider } from '../../store'
+
 
 function PersonalInformation() {
   return (
     <div>
       <LanguageProvider >
-        <Navbar />
-        <MyProfilePersonalInfo />
-        <Footer />        
+        <MyProfilePersonalInfo />  
      </LanguageProvider>
 
 

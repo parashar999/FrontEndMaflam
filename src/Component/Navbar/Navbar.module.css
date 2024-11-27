@@ -145,7 +145,6 @@
   font-weight: 700;
 }
 
-
 .dropdown {
     position: relative;
     display: flex;
@@ -156,9 +155,6 @@
     z-index: 10;
     height: 100%;
 }
-
-
-
 .submenu {
   border-radius: 10px;
 background: rgba(26, 34, 40, 0.60);

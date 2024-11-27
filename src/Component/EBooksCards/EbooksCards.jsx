@@ -1,12 +1,12 @@
 
 import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./EbooksCards.module.css";
+import styles from "./EBooksCards.module.css";
 import { EbookPageContext } from "../../store/ebookPageContext";
 import Popup from '../Popup/Popup'; 
 import auth from "../../Auth/Auth";
 
-const EbooksCards = () => {
+const EBooksCards = () => {
   const { ebookPageContextDetails, setEbookPageContextDetails, loading, error } = useContext(EbookPageContext);
   const [displayCount, setDisplayCount] = useState(8);
   const [isPopupOpen, setIsPopupOpen] = useState(false); 
@@ -122,4 +122,4 @@ const EbooksCards = () => {
   );
 };
 
-export default EbooksCards;
+export default EBooksCards;

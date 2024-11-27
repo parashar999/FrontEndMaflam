@@ -1,23 +1,15 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from '../../Component/Navbar/Navbar'
-import Footer from '../../Component/Footer/Footer'
-import { LanguageProvider } from '../../Component/LanguageContext/LanguageContext'
-import PageNotFound from "../../Component/PageNotFound/PageNotFound";
+import { PageNotFound} from '../../Component';
+import { LanguageProvider } from '../../store'
+
 
 function PageNotFoundPage() {
 
   return (
     <div>
-      <LanguageProvider >
-
-
-        <Navbar />
+      <LanguageProvider >  
         <PageNotFound />
-        <Footer />    
-
      </LanguageProvider>
-
-
     </div>
   )
 }

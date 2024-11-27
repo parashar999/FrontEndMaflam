@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../../Component/Navbar/Navbar";
-import Footer from "../../Component/Footer/Footer";
+
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 
 const BlogEjsPage = () => {
@@ -32,9 +31,7 @@ const BlogEjsPage = () => {
   return (
     <div>
       <LanguageProvider> 
-            <Navbar/>
       <div dangerouslySetInnerHTML={{ __html: blogData }} />
-      <Footer/>
       </LanguageProvider>
  
     </div>

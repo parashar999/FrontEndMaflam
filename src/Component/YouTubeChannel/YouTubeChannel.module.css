@@ -1,122 +1,101 @@
-.imagagelogo{
+.imagagelogo {
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
 }
 
-.card{
+.card {
     width: 679px;
-    height: auto;
     margin: 10px;
 }
-.card iframe{
-    width: 679px;
+
+.card iframe {
+    width: 100%; /* Ensures iframe width matches card width */
     height: 500px;
     margin: 10px;
 }
 
-.bgcontainer{
+.bgcontainer {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-   width: 100vw;
-   max-width: 1920px;
-   margin: auto;
+    max-width: 1920px;
+    margin: auto;
     color: white;
     margin-bottom: 100px;
 }
 
-.bgcontainer h1{ 
-   
+.bgcontainer h1 {
     color: white;
-text-align: center;
-margin-top: 20px;
-margin-bottom: 40px;
-    
+    text-align: center;
+    margin: 20px 0 40px;
 }
-.CardContainer{
+
+.CardContainer {
     max-width: 1400px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
- 
+    align-items: center;
 }
 
-.titless{
-    padding-top: 20px;
+.titless {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
     gap: 18px;
+    align-items: flex-start;
+    padding-top: 20px;
 }
 
-.titless p{
-    width: auto;
-    display: inline;
-    padding: 0px;
+.titless p {
     font-size: 17px;
     color: #5AFFFF;
     font-weight: 700;
 }
 
-.imagagelogo h5{
+.imagagelogo h5 {
     color: #EBF5F4;
     font-family: "Noto Kufi Arabic";
     font-size: 24px;
-    font-style: normal;
     font-weight: 400;
     line-height: 149%;
 }
-.cardImage
-{
+
+.cardImage {
     width: 100%;
 }
-.logoImage
-{
+
+.logoImage {
     height: 200px;
     width: auto;
 }
-.logoimg
-{
+
+.logoimg {
     height: auto;
 }
-@media (max-width : 1600px)
-{
-    .bgcontainer
-    {
+
+/* Responsive Styles */
+@media (max-width: 1600px) {
+    .bgcontainer {
         zoom: 0.9;
     }
 }
-@media (max-width : 1250px)
-{
-    .bgcontainer h1
-    {
+
+@media (max-width: 1250px) {
+    .bgcontainer h1 {
         zoom: 0.4;
     }
-    .CardContainer
-    {
+    .CardContainer {
         flex-direction: column;
     }
-
 }
 
-@media (max-width : 768px)
-{
-    .bgcontainer h1
-    {
-            font-size: x-large;
+@media (max-width: 768px) {
+    .bgcontainer h1 {
+        font-size: x-large;
     }
-
-    .bgcontainer
-    {
-        width: auto;
+    .bgcontainer {
         zoom: 0.4;
     }
 }

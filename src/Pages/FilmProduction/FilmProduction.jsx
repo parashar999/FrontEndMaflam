@@ -1,22 +1,19 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import Footer from "../../Component/Footer/Footer";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-import FundamentalFilmProduction from "../../Component/FundamentalFilmProduction/FundamentalFilmProduction";
-import FilmProductionInstructor from "../../Component/FilmProductionInstructor/FilmProductionInstructor";
-import styles from "./FilmProduction.module.css"
-import SubscribeFundamentalPackage from "../../Component/SubscribeFundamentalPackage/SubscribeFundamentalPackage";
-import {
+import { 
+  FundamentalFilmProduction, 
+  JoinUs, 
+  SubscribeFundamentalPackage 
+} from "../../Component";
+
+import { 
+  LanguageProvider,
   FilmProductionProvider,
   FilmProductionContext,
-} from "../../store/FilmProductionContext";
-import JoinUs from "../../Component/JoinUs/JoinUs";
-// import { AboutusPageProvider } from "../../store/AboutUsPageContext";
-import {
   AboutusPageContext,
   AboutusPageProvider,
-} from "../../store/AboutUsPageContext";
-import { PricingPageContext, PricingPageContextProvider } from "../../store/PricingPageContext";
+} from "../../store";
+
+import styles from "./FilmProduction.module.css"
 
 function FilmProduction() {
   const {
@@ -63,17 +60,9 @@ function FilmProduction() {
       
           <FilmProductionProvider>
             <AboutusPageProvider>
-          
-            <Navbar />
+
             <div className={styles.elements}>
-              <FundamentalFilmProduction />
-          
-              <SubscribeFundamentalPackage /> 
-              
-              <div className={styles.bottombg}>
-              <JoinUs />
-              <Footer />
-              </div>
+              <FundamentalFilmProduction /> 
               </div>
             </AboutusPageProvider>
           </FilmProductionProvider>

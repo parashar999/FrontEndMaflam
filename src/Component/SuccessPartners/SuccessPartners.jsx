@@ -46,7 +46,7 @@ import { useContext } from "react";
 import styles from "./SuccessPartners.module.css";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import OurSuccessStory from "../OurSuccessStory/OurSuccessStory";
-// import CarouselCommunity from "../Community/CarouselCommunity.jsx";
+// import Community from "../Community/Community.jsx";
 
 const SuccessPartners = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
@@ -62,7 +62,7 @@ const SuccessPartners = () => {
     <div>
       <div className={styles.success}>
         <OurSuccessStory />
-        {/* <CarouselCommunity></CarouselCommunity> */}
+        {/* <Community></Community> */}
       </div>
       <div className={styles.rverlay}></div>
       <div className={styles.successPartnersSection}>

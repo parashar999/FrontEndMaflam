@@ -1,15 +1,23 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import BlogHero from "../../Component/BlogHero/BlogHero";
-import LatestInsights from "../../Component/LatestInsights/LatestInsights";
-import JoinUs from "../../Component/JoinUs/JoinUs.jsx";
-import Footer from "../../Component/Footer/Footer.jsx";
-import PopularResources from "../../Component/PopularResources/PopularResources.jsx";
+
+import {
+  Navbar,
+  BlogHero,
+  LatestInsights,
+  JoinUs,
+  Footer,
+  BlogPostHero1,
+} from "../../Component";
+
+import { 
+  BlogsPageContent, 
+  BlogsPageContentProvider, 
+  LanguageProvider, 
+  AboutusPageContext, 
+  AboutusPageProvider 
+} from "../../store"; 
+
 import styles from "./Blogs.module.css";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext.jsx";
-import { AboutusPageContext, AboutusPageProvider } from "../../store/AboutUsPageContext.jsx";
-import BlogPostHero1 from "../../Component/BlogPostHero1/BlogPostHero1.jsx";
-import { BlogsPageContent, BlogsPageContentProvider } from "../../store/BlogsPageContent.jsx";
 
 const Blogs = () => {
   const { aboutusScreenDetails, loading: aboutLoading, error: aboutError } =
@@ -38,7 +46,6 @@ const Blogs = () => {
       <LanguageProvider>
         <AboutusPageProvider>
           <BlogsPageContentProvider>
-            <Navbar />
             <div className={styles.topbg}>
             <BlogPostHero1 />
             <BlogHero/>
@@ -46,8 +53,6 @@ const Blogs = () => {
             </div>
             <div className={styles.container}>
               {/* <PopularResources /> */}
-              <JoinUs />
-            <Footer />
             </div>
           </BlogsPageContentProvider>
         </AboutusPageProvider>

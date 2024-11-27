@@ -1,12 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import Footer from "../../Component/Footer/Footer";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-import SignUp from "../../Component/SignUp/SignUp";
-import {
+import {SignUp } from "../../Component";
+
+import { 
+  LanguageProvider,
   SingupPageContext,
   SingupPageContextProvider,
-} from "../../store/SingupPageContext";
+} from "../../store";
 
 const SignUpPage = () => {
   // const{ singupPageContextDetails, loading, error } = useContext(SingupPageContext);
@@ -24,11 +23,8 @@ const SignUpPage = () => {
     <div>
       <LanguageProvider>
         <SingupPageContextProvider>
-          <Navbar></Navbar>
           <SignUp></SignUp>
         </SingupPageContextProvider>
-
-        <Footer></Footer>
       </LanguageProvider>
     </div>
   );

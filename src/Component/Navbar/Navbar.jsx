@@ -3,19 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
-import { FaPhoneAlt } from "react-icons/fa";
-import { GrGroup } from "react-icons/gr";
-import { MdLiveTv } from "react-icons/md";
-import { BiBorderLeft, BiSolidMoviePlay } from "react-icons/bi";
-import { MdInsertPhoto } from "react-icons/md";
-import { PiDiscDuotone } from "react-icons/pi";
-import { ImVideoCamera } from "react-icons/im";
-import { BiSolidMovie } from "react-icons/bi";
-import { RiMovie2Line } from "react-icons/ri";
-import { PiSuitcaseSimpleFill } from "react-icons/pi";
-import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import { TfiMobile } from "react-icons/tfi";
-import { BiSolidBookAlt } from "react-icons/bi";
+
 import { assests } from "../../assets/assests";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
@@ -103,14 +91,14 @@ const Navbar = () => {
               <div key={index} className={styles.dropdown}>
                 {item.hasDropdown ? (
                   <>
-                    <a
+                    <Link
                       style={{
                         height: "100%",
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
                       }}
-                      href="#"
+                      to="#"
                       onClick={() => toggleDropdown(item.name)}
                       className={
                         openDropdown === item.name ? styles.activeLink : ""
@@ -128,14 +116,15 @@ const Navbar = () => {
                       >
                         &#8595;
                       </span>
-                    </a>
+                    </Link>
                     {openDropdown === item.name && (
                       <div className={styles.submenu}>
                         {item.dropdownItems?.map((subItem, subIndex) => (
-                          <a
-                            href={subItem.href}
+                          <Link
+                            to={'R2/R3'+subItem.href}
                             key={subIndex}
                             className={styles.dropdownitems}
+                            onClick={()=>{setOpenDropdown(null)}}
                           >
                             &nbsp;&nbsp;
                             <img
@@ -148,22 +137,22 @@ const Navbar = () => {
                               alt=""
                             />
                             {subItem.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </>
                 ) : (
-                  <a href={item.href}>{item.name}</a>
+                  <Link to={'/R2/R3'+item.href}>{item.name}</Link>
                 )}
               </div>
             ))}
           </div>
           <div className={styles.searchContainer}>
             <input type="text" placeholder={placeHolderTitle} />
-            <a href="/filmproduction">
+            <Link to="/filmproduction">
               <img src={assests.Magnifine} alt="Search Icon" />
-            </a>
+            </Link>
           </div>
           <div className={styles.rightLinks}>
             {user ? (
@@ -203,26 +192,24 @@ const Navbar = () => {
             ) : (
               <>
                 {navItems1.find((item) => item.createAccount) && (
-                  <a
-                    href="#signup"
+                  <Link
+                    to="/signup"
                     className={`${styles.signupButton} ${styles.navButton}`}
-                    onClick={() => navigate("/signUp")}
                   >
                     {
                       navItems1.find((item) => item.createAccount).createAccount
                         .name
                     }
-                  </a>
+                  </Link>
                 )}
                 {navItems1.find((item) => item.logIn) && (
-                  <a
-                    href=""
+                  <Link
+                    to="/login"
                     className={`${styles.loginButton} ${styles.navButton}`}
-                    onClick={() => navigate("/login")}
                   >
                     <span style={{ marginLeft: "20px" }}>{arrow}</span>
                     {navItems1.find((item) => item.logIn).logIn.name}
-                  </a>
+                  </Link>
                 )}
               </>
             )}

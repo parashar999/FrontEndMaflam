@@ -1,17 +1,14 @@
 import React, { useContext, useEffect,useRef } from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import Footer from "../../Component/Footer/Footer";
-import EbooksCards from "../../Component/EBooksCards/EbooksCards";
-import JoinUs from "../../Component/JoinUs/JoinUs";
+import {  EBooksCards, JoinUs } from "../../Component";
+
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-import {
-  AboutusPageContext,
-  AboutusPageProvider,
-} from "../../store/AboutUsPageContext";
-import {
-  EbookPageContext,
-  EbookPageContextProvider,
-} from "../../store/ebookPageContext";
+import { 
+  AboutusPageContext, 
+  AboutusPageProvider, 
+  EbookPageContext, 
+  EbookPageContextProvider 
+} from "../../store";  // Importing from store/index.js
+
 
 const Ebooks = () => {
   const {
@@ -61,12 +58,9 @@ const Ebooks = () => {
       <LanguageProvider>
         <AboutusPageProvider>
           <EbookPageContextProvider>
-            <Navbar></Navbar>
             <div ref={contactInfoRef}>
-            <EbooksCards></EbooksCards>
+            <EBooksCards></EBooksCards>
             </div>
-            <JoinUs></JoinUs>
-            <Footer></Footer>
           </EbookPageContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>

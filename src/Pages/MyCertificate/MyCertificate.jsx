@@ -1,9 +1,6 @@
 import React from 'react'
-import Navbar from '../../Component/Navbar/Navbar'
-import Footer from '../../Component/Footer/Footer'
-import { LanguageProvider } from '../../Component/LanguageContext/LanguageContext'
-import MyProfileCertificate from '../../Component/MyProfileCertificate/MyProfileCertificate'
-
+import { Navbar, Footer, MyProfileCertificate } from '../../Component';
+import { LanguageProvider } from '../../store'
 function MyCertificate() {
   return (
     <div>

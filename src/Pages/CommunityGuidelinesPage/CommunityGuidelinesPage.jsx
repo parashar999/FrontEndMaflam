@@ -1,16 +1,14 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "../../Component/Navbar/Navbar";
-import Footer from "../../Component/Footer/Footer";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-import {
-  HomePageContext,
-  HomePageProvider,
-} from "../../store/HomePageContext.jsx";
-import {
-  CommunityGuidelinesContext,
-  CommunityGuidelinesProvider,
-} from "../../store/CommunityGuidelinesPageContext.jsx";
-import CommunityGuidelines from "../../Component/CommunityGuidelines/CommunityGuidelines.jsx";
+import {  CommunityGuidelines} from "../../Component";
+import { 
+  LanguageProvider,
+  HomePageContext, 
+  HomePageProvider, 
+  CommunityGuidelinesContext, 
+  CommunityGuidelinesProvider 
+} from "../../store";
+
+
 
 const CommunityGuidelinesPage = () => {
   const {
@@ -18,12 +16,6 @@ const CommunityGuidelinesPage = () => {
     loading: homeLoading,
     error: homeError,
   } = useContext(HomePageContext);
-
-  // useEffect(() => {
-  //   if (homeScreenDetails) {
-  //     console.log("Home Screen Details:", homeScreenDetails);
-  //   }
-  // }, [homeScreenDetails]);
 
   const {
     CommunityGuidelinesDetails,
@@ -42,9 +34,7 @@ const CommunityGuidelinesPage = () => {
       <LanguageProvider>
         <HomePageProvider>
           <CommunityGuidelinesProvider>
-            <Navbar></Navbar>
             <CommunityGuidelines></CommunityGuidelines>
-            <Footer></Footer>
           </CommunityGuidelinesProvider>
         </HomePageProvider>
       </LanguageProvider>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import FooterLogo from '../../assets/footerLogo.svg';
 import styles from "./Footer.module.css";
 import axios from "axios";
@@ -86,7 +87,7 @@ const Footer = () => {
               <ul>
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a href={link.href}>{link.text}</a>
+                    <Link to={link.href}>{link.text}</Link>
                   </li>
                 ))}
               </ul>
@@ -103,19 +104,19 @@ const Footer = () => {
         </div>
         <ul className={styles.footerLinks}>
           <li>
-            <a href="/purchaseCancellation">{purchasePolicy}</a>
+            <Link to="/purchaseCancellation">{purchasePolicy}</Link>
           </li>
           <li>
-            <a href="/contentrequired">{helpCenter}</a>
+            <Link to="/contentrequired">{helpCenter}</Link>
           </li>
           <li>
-            <a href="/CommunityGuidelines">{Community}</a>
+            <Link to="/CommunityGuidelines">{Community}</Link>
           </li>
           <li>
-            <a href="/privacypolicy">{PrivacyPolicy}</a>
+            <Link to="/privacypolicy">{PrivacyPolicy}</Link>
           </li>
           <li>
-            <a href="/terms&condition">{termsandcondition}</a>
+            <Link to="/terms&condition">{termsandcondition}</Link>
           </li>
         </ul>
    

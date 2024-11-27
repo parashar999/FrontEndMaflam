@@ -1,23 +1,23 @@
-  import PricingPage from "../../Component/PricingPage/PricingPage";
-import Fundamental from "../../Component/FundamentalPackage/Fundamental";
-import Footer from "../../Component/Footer/Footer";
-import Navbar from "../../Component/Navbar/Navbar";
-import Carousel from "../../Component/CarouselCard/Carousel";
-import VariousCourse from "../../Component/VariousCourse/VariousCourse";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
-import { HomePageContext, HomePageProvider } from "../../store/HomePageContext";
-import MaflanContent from "../../Component/MaflanContent/MaflanContent";
-import JoinUs from "../../Component/JoinUs/JoinUs";
-import styles from "./pricing.module.css"
-import bggradient from "../../assets/PricingPageVector.png"
-import {
+import { 
+  PricingPage, 
+  FundamentalPackage, 
+  CarouselCard, 
+  VariousCourse, 
+  JoinUs, 
+  MaflamContent
+} from "../../Component";
+
+import { LanguageProvider ,
+  HomePageContext,
+  HomePageProvider ,
   AboutusPageContext,
   AboutusPageProvider,
-} from "../../store/AboutUsPageContext";
-import {
   PricingPageContext,
   PricingPageContextProvider,
-} from "../../store/PricingPageContext";
+} from "../../store";
+
+import styles from "./Pricing.module.css"
+
 import { useContext, useEffect,useRef } from "react";
 
 function Pricing() {
@@ -82,19 +82,14 @@ function Pricing() {
           <HomePageProvider>
             <AboutusPageProvider>
               <PricingPageContextProvider>
-                <Navbar></Navbar>
                 <PricingPage></PricingPage>
-                <Fundamental></Fundamental>
+                <FundamentalPackage></FundamentalPackage>
                 <div className={styles.CarouselGradient}>
                 <div ref={contactInfoRef}>
                 <VariousCourse></VariousCourse>
                 </div>
-                <Carousel></Carousel>
-                <MaflanContent />
-                <JoinUs />
-                </div>
-                <Footer></Footer>
-                
+                <CarouselCard></CarouselCard>
+                </div>   
               </PricingPageContextProvider>
             </AboutusPageProvider>
           </HomePageProvider>

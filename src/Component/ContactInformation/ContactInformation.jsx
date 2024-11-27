@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./ContactInformation.module.css";
 import { ContactUsContext } from "../../store/ContactUsContext";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
-import MaflanContent from "../MaflanContent/MaflanContent";
+import maflamContent from "../maflamContent/maflamContent";
 
 const ContactInformation = () => {
   const { contactUsContextDetails, loading, error } = useContext(ContactUsContext);
@@ -135,7 +135,7 @@ const ContactInformation = () => {
             </p>
           </div>
         </div>
-        <MaflanContent />
+        <maflamContent />
       </div>
     </>
   );
@@ -157,7 +157,7 @@ export default ContactInformation;
 // import styles from "./ContactInformation.module.css";
 // import { ContactUsContext } from "../../store/ContactUsContext";
 // import FocusLock from 'react-focus-lock';
-// import MaflanContent from "../MaflanContent/MaflanContent";
+// import maflamContent from "../maflamContent/maflamContent";
 // import JoinUs from "../JoinUs/JoinUs";
 // const ContactInformation = () => {
 //   const { contactUsContextDetails, loading, error } = useContext(ContactUsContext);
@@ -212,7 +212,7 @@ export default ContactInformation;
           
 //         </div>
 //       </div>
-//       <MaflanContent />
+//       <maflamContent />
     
 //       </div>
 
