@@ -125,7 +125,9 @@ const ContactForm = () => {
             <label htmlFor="fullNameInEng">
               {fullNameTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
-            <input autoFocus
+            <input 
+              style={{backgroundColor:'rgb(26, 55, 75)'}}
+              autoFocus
               type="text"
               required
               id="fullNameInEng"
@@ -141,6 +143,7 @@ const ContactForm = () => {
               {emailTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input 
+            style={{backgroundColor:'rgb(26, 55, 75)'}}
               type="email"
               id="email"
               required
@@ -155,6 +158,7 @@ const ContactForm = () => {
               {phoneTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input
+            style={{backgroundColor:'rgb(26, 55, 75)'}}
               type="text"
               id="phoneNo"
               required
@@ -188,6 +192,7 @@ const ContactForm = () => {
               {currentJobTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <input
+            style={{backgroundColor:'rgb(26, 55, 75)'}}
               type="text"
               id="jobTitleInEng"
               required
@@ -219,6 +224,7 @@ const ContactForm = () => {
               {coverLetterTitle} <span style={{position:'relative', top:'-12px'}}>< RequiredAsteriskIcon/></span>
             </label>
             <textarea
+              style={{backgroundColor:'rgb(26, 55, 75)'}}
               id="coverLetterInEng"
               required
               placeholder={coverLetterPlaceholder}

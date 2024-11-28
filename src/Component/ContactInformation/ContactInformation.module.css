@@ -6,7 +6,6 @@
   border-radius: 10px;
   width: 90%;
   max-width: 1400px;
- 
   margin: 50px auto; /* Center horizontally */
   background: rgba(22, 38, 50, 0.75);
   backdrop-filter: blur(50px);
@@ -37,12 +36,7 @@
   margin-top: -300px;
   background-position: center;
   background-repeat: no-repeat;
-
-
-  min-height: 800px !important;
-
   width: 100vw;
-
   max-width: 1980px;
   margin: auto;
 }

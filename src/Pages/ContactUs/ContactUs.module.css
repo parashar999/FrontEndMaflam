@@ -4,55 +4,29 @@
     width:100vw;
     max-width: 1980px;
     margin: auto;
-    background: url("../../assets/ContactInfoBg.png");
+    background: url("../../assets/Backgrounds/ContactPageBg.png");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 60px;
 }
 
-.contactContainer
+
+.formcontainer
 {
-    max-width: 1400px;
+    position: relative;
+    z-index: 10;
 }
-
-.contactContainer h2, .contactSection
-{
-    max-width: 961px;
-}
-
 .bottombg
 {
-    width: 100vw;
-    max-width: 1920px;
-    margin: auto;
-    padding-top: 50px;
-    background: url("../../assets/JoinUsNewsGrad.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
+    z-index: 0;
+    position: absolute;
+    bottom: 0px;
+    height: 500px;
+    background-position: top;
+    width: 100%;
+    background: url('../../assets/Backgrounds/ContactUSBottomGrad.png');
+    background-size: cover;
+   
 }
-
-
-
-/* ***************************
- Tarun code Added In Above   
- ************************** */   
-
-
-/*.container{
-    width:100vw;
-    max-width: 1920px;
-    margin: auto;
-    height: 1182px;
- 
-    background-position: center;
-}
-
-.contactContainer
-{
-    max-width: 1400px;
-}
-
-.contactContainer h2, .contactSection
-{
-    max-width: 961px;
-} */

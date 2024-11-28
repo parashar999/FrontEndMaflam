@@ -215,6 +215,7 @@ line-height: 160%;
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease-in-out; 
   background: linear-gradient(320deg, #091D2C 17.15%, #173434 104.84%);
+  background-size: cover;
 }
 .card:hover{
   transform:  translateY(-30px);

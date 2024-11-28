@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Routes } from "react-router-dom"; // Import Routes and Route
 import {
   HeroContact,
@@ -16,16 +16,23 @@ import {
   ContactUs3ContextProvider,
   ContactUs2Context
 } from "../../store"; 
+import 
+{
+  Loader
+} from "../../utilities"
+
 
 const ContactUS = () => {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <div>
       <LanguageProvider>
         <AboutusPageProvider>
           <ContactUsContextProvider>
+          <Loader isLoading={isLoading} timeout={500} />
             <div className={styles.container}>
               <HeroContact />
-           
+           <div className={styles.formcontainer}>
               <Routes> {/* Wrap the routes inside Routes component */}
                 {/* Define routes for different sections */}
                 <Route path="" element={<ContactInformation/> } />
@@ -33,10 +40,11 @@ const ContactUS = () => {
               <Route path="form2" element={<ContactUs3ContextProvider> <ContactForm2/> </ContactUs3ContextProvider> } />
               <Route path="*" element={<ContactInformation/> } />
               </Routes>
-              <div id="form_container">
+              
+              
               </div>
+ 
               <div className={styles.bottombg}>
-                <JoinUs />
               </div>
             </div>
           </ContactUsContextProvider>

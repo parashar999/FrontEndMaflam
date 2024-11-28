@@ -15,7 +15,6 @@ const useScrollPosition = (storageKey, timeout = 0) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [storageKey]); // Runs whenever the `storageKey` changes
-  
 
   // Restore scroll position when the component mounts
   useEffect(() => {
