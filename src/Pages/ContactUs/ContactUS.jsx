@@ -28,9 +28,10 @@ const ContactUS = () => {
            
               <Routes> {/* Wrap the routes inside Routes component */}
                 {/* Define routes for different sections */}
-                <Route path="" element={<ContactUs2ContextProvider><ContactForm /></ContactUs2ContextProvider>} />
-              <Route path="form" element={<ContactInformation/> } />
+                <Route path="" element={<ContactInformation/> } />
+                <Route path="form" element={<ContactUs2ContextProvider><ContactForm /></ContactUs2ContextProvider>} />
               <Route path="form2" element={<ContactUs3ContextProvider> <ContactForm2/> </ContactUs3ContextProvider> } />
+              <Route path="*" element={<ContactInformation/> } />
               </Routes>
               <div id="form_container">
               </div>

@@ -122,7 +122,7 @@ const Navbar = () => {
                       <div className={styles.submenu}>
                         {item.dropdownItems?.map((subItem, subIndex) => (
                           <Link
-                            to={'R2/R3'+subItem.href}
+                            to={subItem.href}
                             key={subIndex}
                             className={styles.dropdownitems}
                             onClick={()=>{setOpenDropdown(null)}}
@@ -144,7 +144,7 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <Link to={'/R2/R3/aboutus#aboutusoffers'}>{item.name}</Link>
+                  <Link to={item.href}>{item.name}</Link>
                 )}
               </div>
             ))}

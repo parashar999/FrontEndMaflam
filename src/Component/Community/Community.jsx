@@ -4,7 +4,7 @@
 import React, { useContext } from "react";
 import stylesSelected from "./Community.module.css";
 import { HomePageContext } from "../../store/HomePageContext";
-import Carou from "./../../Component/Carou/Carou.jsx";
+import { StandardCarousel } from "../../utilities";
 
 const Community = () => {
   const { homeScreenDetails } = useContext(HomePageContext);
@@ -29,7 +29,7 @@ const Community = () => {
   return (
     <div className={stylesSelected.carouselWrapper}>
       <h2>{communityTitle}</h2>
-      <Carou
+      <StandardCarousel
         itemWidth={619}
         itemHeight={417}
         items={videoItems}

@@ -27,4 +27,3 @@ export { default as SignUpPage } from './SignUpPage';
 export { default as SocialMediaPage } from './SocialMediaPage';
 export { default as SuccessMessagePage } from './SuccessMessagePage';
 export { default as TermsAndConditionsPage } from './TermsAndConditionsPage';
-

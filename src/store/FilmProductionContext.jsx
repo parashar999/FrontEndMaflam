@@ -19,7 +19,6 @@ export const FilmProductionProvider = ({ children }) => {
         `https://backend.maflam.com/maflam/get-courses-by-id?lang=${langParam}&&_id=${courseId}`
       );
       // console.log("API Response: for filmproduction ", response.data);
-
       setFilmproductionScreenDetails(response.data);
       setLoading(false);
     } catch (err) {

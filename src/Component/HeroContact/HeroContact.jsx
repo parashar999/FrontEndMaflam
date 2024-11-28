@@ -23,7 +23,7 @@ const HeroContact = () => {
         <div className={styles.cardsContainer}>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <Link to="#form_container">{title}</Link>
+              <Link to="*#form_container">{title}</Link>
             </div>
           </div>
           <div className={styles.card}>

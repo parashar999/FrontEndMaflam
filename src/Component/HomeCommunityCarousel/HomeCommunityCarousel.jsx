@@ -2,7 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from "react";
 import styles from "./HomeCommunityCarousel.module.css";
 import { HomePageContext } from "../../store/HomePageContext";
 import { Link } from "react-router-dom";
-import Carou from "../CarouQuad/CarouQuad"; // Assuming Carou component is in the same folder
+import {FourElementsCarousel} from "../../utilities" 
 
 const HomeCommunityCarousel = ({ itemWidth, itemHeight, items }) => {
   const { homeScreenDetails } = useContext(HomePageContext);
@@ -14,7 +14,7 @@ const HomeCommunityCarousel = ({ itemWidth, itemHeight, items }) => {
       <div className={styles.carouselcontainer}>
  
         <Link to="/socialmedia">{maflamShowsDataTitle.title}</Link>
-        <Carou
+        <FourElementsCarousel
           itemWidth={itemWidth}
           itemHeight={itemHeight}
           items={maflamShowsData.map((item) => ({

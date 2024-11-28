@@ -29,7 +29,7 @@ export default function Route3() {
           <div>
             <Routes>
               <Route path="aboutus/*" element={<AboutUs />} />
-              <Route path="prc" element={<PricingPageContextProvider><Pricing /></PricingPageContextProvider>} />
+              <Route path="prc/*" element={<PricingPageContextProvider><Pricing /></PricingPageContextProvider>} />
               <Route path="contact/*" element={<ContactUsContextProvider><ContactUs /></ContactUsContextProvider>} />
               <Route path="*" element={<PageNotFoundPage/>}/>
             </Routes>

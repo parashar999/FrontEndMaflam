@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './CarouselQuad.css';
 import Al from '../../assets/CarouselLeftArrow.png';
 import Ar from '../../assets/Ar.png';
 
-const CarouQuad = ({ 
+const FourElementsCarousel= ({ 
   itemWidth, 
   itemHeight, 
   items = [], 
@@ -89,4 +88,4 @@ const CarouQuad = ({
   );
 };
 
-export default CarouQuad;
+export default FourElementsCarousel;

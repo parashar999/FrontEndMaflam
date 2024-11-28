@@ -1,5 +1,9 @@
 import React, { useContext, useEffect,useState } from "react";
 import { useLocation } from "react-router-dom";
+import
+{
+  useScrollPosition
+} from "../../hooks"
 import {
   Filmmaker,
   JoinUs,
@@ -7,8 +11,13 @@ import {
   MaflamImageOffer,
   MaflamInstructors,
   MaflamContent,
-  OurVisionData
+  OurVisionData,
 } from "../../Component";
+import
+{
+  Loader
+} from '../../utilities'
+
 import {
   LanguageProvider,
   HomePageContext,
@@ -17,11 +26,15 @@ import {
   AboutusPageProvider,
 } from "../../store"
 
+
+
 import styles from "./AboutUs.module.css";
-import { PacmanLoader } from "react-spinners";
+
 
 export default function AboutUs() {
  
+  useScrollPosition("AboutUs", 2000);
+
   const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
@@ -42,18 +55,7 @@ export default function AboutUs() {
     handleScroll(); // Call it on mount if there's a hash
   }, [location]); // Runs whenever the location changes
 
-  const [isLoading, setIsLoading] = useState(true); // Start with the loader visible
-
-  useEffect(() => {
-    // Simulate a loading process (e.g., 3 seconds delay)
-    const timer = setTimeout(() => {
-      setIsLoading(false); // Hide the loader after 3 seconds
-    }, 1000);
-
-    // Cleanup the timer if the component is unmounted before the timeout
-    return () => clearTimeout(timer);
-  }, []);
-
+  const [isLoading,setIsLoading]=useState(true)
 
   const {
     homeScreenDetails,
@@ -72,13 +74,8 @@ export default function AboutUs() {
       <HomePageProvider>
         <AboutusPageProvider>
           <div id="aboutushead" className={styles.container}>
-          <div style={{display:!isLoading?"none":"flex", position:'fixed', top:'0px', height:'100vh', width:'100vw', margin:'auto',justifyContent:'center',alignItems:'center', margin:'auto',zIndex:'100', backgroundColor:'black', opacity:'0.99'}} className="loader">
-        <PacmanLoader
-  color="#39FFFB"
-  size={200}
-  speedMultiplier={2}
-/>
-        </div>
+    
+          <Loader isLoading={isLoading} timeout={1000} />
             <div className={styles.AboutUsbg}>
               <Filmmaker />
               <OurVisionData />

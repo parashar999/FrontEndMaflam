@@ -1,16 +1,18 @@
 import React, { useContext, useEffect } from "react";
-import { 
-  FundamentalFilmProduction, 
-  JoinUs, 
-  SubscribeFundamentalPackage 
+import {
+  FundamentalFilmProduction,
+  JoinUs,
+  SubscribeFundamentalPackage
 } from "../../Component";
 
-import { 
+import {
   LanguageProvider,
   FilmProductionProvider,
   FilmProductionContext,
   AboutusPageContext,
   AboutusPageProvider,
+  PricingPageContext,
+  PricingPageContextProvider
 } from "../../store";
 
 import styles from "./FilmProduction.module.css"
@@ -38,7 +40,7 @@ function FilmProduction() {
   } = useContext(AboutusPageContext);
 
 
-  
+
   // const {
   //   pricingPageContextDetails,
   //   loading: pricingLoading,
@@ -54,21 +56,16 @@ function FilmProduction() {
 
   return (
     <div>
-     
-      
-        <LanguageProvider>
-      
-          <FilmProductionProvider>
-            <AboutusPageProvider>
+      <LanguageProvider>
+        <FilmProductionProvider>
+          <AboutusPageProvider>
 
             <div className={styles.elements}>
-              <FundamentalFilmProduction /> 
-              </div>
-            </AboutusPageProvider>
-          </FilmProductionProvider>
-        
-        </LanguageProvider>
-     
+              <FundamentalFilmProduction />
+            </div>
+          </AboutusPageProvider>
+        </FilmProductionProvider>
+      </LanguageProvider>
     </div>
   );
 }

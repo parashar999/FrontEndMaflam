@@ -15,6 +15,7 @@ const FundamentalFilmProduction = () => {
   const { filmproductionScreenDetails, loading, error } = useContext(
     FilmProductionContext
   );
+  console.log(filmproductionScreenDetails);
   // const {
   //   pricingPageContextDetails,
   //   loading: pricingLoading,

@@ -14,7 +14,8 @@ const VariousCourse = () => {
   const buttonTitle = pricingPageContextDetails?.getPricingCourse1DetailsSecButton?.title || "Buy now";
 
   const handleCourseClick = (courseId) => {
-    navigate(`/filmproduction/${courseId}`);
+    console.log(courseId);
+    navigate(`/R2/R4/filmproduction/${courseId}`);
   };
 
   return (

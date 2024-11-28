@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./HomeScreenCarousel.module.css";
 import { HomePageContext } from "../../store/HomePageContext"; // Import the context
 import { Link } from "react-router-dom";
-import Carou from "../Carou/Carou"; // Import the Carou component
+import { StandardCarousel } from "../../utilities";
 
 const HomeScreenCarousel = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext); // Access the context
@@ -49,7 +49,7 @@ const HomeScreenCarousel = () => {
       </h2>
 
       {/* Use Carou Component to handle the image carousel */}
-      <Carou
+      <StandardCarousel
         itemWidth={390} // Adjust the width of the image items
         itemHeight={670} // Adjust the height of the image items
         items={items} // Pass the image items
