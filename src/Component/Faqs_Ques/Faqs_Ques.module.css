@@ -65,6 +65,7 @@
   font-size: 16px;
   color: #ccc;
   padding: 10px 0;
+  padding: 0px;
   transition: max-height 0.3s ease-in-out;
   overflow: hidden;
 }

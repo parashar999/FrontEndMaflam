@@ -84,13 +84,15 @@
   color: rgb(46, 202, 202);
   font-size: 28px;
   position: relative;
-  top: 10px;
+  top: 5px;
 }
 .ctn p {
   font-size: 24px;
   font-style: normal;
   color: var(--Accent-Accent-50, #F6FFFF);
   font-weight: 400; 
+  padding-left:0px;
+  padding-right: 0px;
   line-height: 180%; /* 43.2px */
 }
 .checkicobuttun {

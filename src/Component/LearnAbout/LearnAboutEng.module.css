@@ -22,6 +22,7 @@
   background-image: url('../../assets/AboutBackground.png');
   background-size: contain;
   background-position: center;
+  background-size: 80%;
   background-repeat: no-repeat;
 }
 .mainConatiner h1{
@@ -110,7 +111,12 @@ color: #EBF5F4;
   padding: 40px;
   margin-top: 80px;
   margin-bottom: 40px;
-  opacity: 0.6;
+  opacity: 1;
+}
+.firstcard
+{
+  transform: translateY(-20px);
+  scale: 1.1;
 }
 .firstcard h4 , .secondcard h4{
   color: var(--Accent-Accent-50, #F6FFFF);
@@ -142,12 +148,6 @@ text-align: left;
 padding: 30px 25px 0px 25px;
 }
 
-.firstcard:hover , .secondcard:hover
-{
-  transform: scale(1.12) translateY(-20px);
-  opacity: 1;
-}
-
 .firstcard p, .secondcard p{
   display: flex;
   width: 100%;
@@ -162,6 +162,7 @@ padding: 30px 25px 0px 25px;
   margin: 10px;
   font-size: 12px;
 }
+
 .firstcard h2{
   color: var(--Accent-Accent-400---Main, #39FFFB);
   text-align: left;
@@ -239,7 +240,7 @@ height: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 40px;
+
   margin-top: 0px;
   align-items: start;
 }
@@ -285,13 +286,13 @@ padding: 0px 25px;
 }
 .secondcard .rigthclick{
  
-  color: #fff;
+  color: #00FFFF ;
   width: 20px;
   height: 20px;
 }
 .secondcard .rigthcheck{
   background: #030b11;
-  color: #fff;
+  color: white;
   border-radius: 20px;
   padding: 2px 10px;
   border: none;

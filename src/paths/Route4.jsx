@@ -5,6 +5,7 @@ import { SubscribeFundamentalPackage } from "../Component";
 import {
     FilmProduction,
     SocialMediaPage,
+    PageNotFoundPage
 } from "../Pages";
 
 
@@ -28,6 +29,7 @@ export default function Route4() {
                         <Routes>
                             <Route path="filmproduction/:courseId" element={<FilmProductionProvider><AboutusPageProvider><FilmProduction /></AboutusPageProvider></FilmProductionProvider>} />
                             <Route path="socialmedia" element={<AboutusPageProvider><SocialMediaPageProvider><SocialMediaPage /></SocialMediaPageProvider></AboutusPageProvider>} />
+                            <Route path="*" element={<PageNotFoundPage/>}/>
                         </Routes>
                         <SubscribeFundamentalPackage/>
                     </div>

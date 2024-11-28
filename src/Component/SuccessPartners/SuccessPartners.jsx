@@ -61,8 +61,8 @@ const SuccessPartners = () => {
   return (
     <div>
       <div className={styles.success}>
-        <OurSuccessStory />
-        {/* <Community></Community> */}
+        {/* <OurSuccessStory />
+        <Community></Community> */}
       </div>
       <div className={styles.rverlay}></div>
       <div className={styles.successPartnersSection}>

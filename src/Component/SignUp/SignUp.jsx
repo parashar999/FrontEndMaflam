@@ -190,7 +190,7 @@ const SignUp = () => {
       </div>
           
 
-          <div className={stylesSelected.dobWrapper}>
+          <div style={{display:'none'}} className={stylesSelected.dobWrapper}>
             <label htmlFor="dob">{dobLabel}</label>
             <div className={stylesSelected.dobInputs}>
               <div className={stylesSelected.dobInputsitem}>

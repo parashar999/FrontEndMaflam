@@ -1,17 +1,13 @@
 // Library Imports
 import { Navigate, Route, Routes } from "react-router-dom";
-import React from "react";
+import React,{useRef} from "react";
+
 
 // Page Imports
 import {
-  AboutUs,
   Home,
   BlogDetails,
-  ContactUs,
-  Ebooks,
-  Blogs,
   TermsAndConditionsPage,
-  Pricing,
   FaqPage,
   Checkouts,
   PricingDetails,
@@ -21,9 +17,7 @@ import {
   CommunityGuidelinesPage,
   MyCertificate,
   PersonalInformation,
-  FilmProduction,
   MyCousesPages,
-  SocialMediaPage,
   EbookTwo,
   MyWishlist,
   PageNotFoundPage,
@@ -44,16 +38,12 @@ import {
   AboutusPageProvider,
   CheckoutPaymentContextProvider,
   CommunityGuidelinesProvider,
-  ContactUsContextProvider,
   EbookPageContextProvider,
-  FilmProductionProvider,
   HomePageProvider,
   LoginPageContextProvider,
-  PricingPageContextProvider,
   PrivacyPolicyProvider,
   PurchaseCancellationProvider,
   SingupPageContextProvider,
-  SocialMediaPageProvider,
   TermsConditionProvider,
 } from './store';
 
@@ -64,23 +54,23 @@ import auth from "./Auth/Auth.js";
 import "./App.css";
 import { Navbar ,Footer} from "./Component/index.js";
 import Route2 from "./paths/Route2.jsx";
-
 const userDetails = auth.getAuthData();
 const PrivateRoute = ({ children }) => {
   return userDetails ? children : <Navigate to="/login" />;
 };
-const App = () => {
+
+import { useEffect ,useState} from "react";
+
+const App = () => { 
   return (
     <LanguageProvider>
       <Navbar/>
+        
       <Routes>
         
         //Route2
         <Route path="/R2/*" element={<Route2/>} />
-
-
-
-
+         
         // Route1  
         <Route path="/checkout/:paymentId" element={<CheckoutPaymentContextProvider><Checkouts /></CheckoutPaymentContextProvider>} />
         <Route path="/login" element={<LoginPageContextProvider><LoginPage /></LoginPageContextProvider>} />
@@ -106,6 +96,7 @@ const App = () => {
         <Route path="/CommunityGuidelines" element={<HomePageProvider><CommunityGuidelinesProvider><CommunityGuidelinesPage /></CommunityGuidelinesProvider></HomePageProvider>} />
         <Route path="/privacypolicy" element={<HomePageProvider><PrivacyPolicyProvider><PrivacyPolicyPage /></PrivacyPolicyProvider></HomePageProvider>} />
         <Route path="/mywishlist" element={<HomePageProvider><EbookPageContextProvider><AboutusPageProvider><MyWishlist /></AboutusPageProvider></EbookPageContextProvider></HomePageProvider>} />
+        <Route path="/*" element={<PageNotFoundPage/>}/>
       </Routes>
       <Footer/>
     </LanguageProvider>

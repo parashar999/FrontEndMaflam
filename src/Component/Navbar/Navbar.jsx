@@ -9,6 +9,7 @@ import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
 import loginarrow from "../../assets/Arrow.png";
 import auth from "../../Auth/Auth.js";
+import { ScaleLoader } from "react-spinners";
 
 const Navbar = () => {
   const userDetails = auth.getAuthData();
@@ -143,7 +144,7 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <Link to={'/R2/R3'+item.href}>{item.name}</Link>
+                  <Link to={'/R2/R3/aboutus#aboutusoffers'}>{item.name}</Link>
                 )}
               </div>
             ))}
@@ -154,7 +155,7 @@ const Navbar = () => {
               <img src={assests.Magnifine} alt="Search Icon" />
             </Link>
           </div>
-          <div className={styles.rightLinks}>
+          <div  className={styles.rightLinks}>
             {user ? (
               <div className={styles.profileContainer}>
                 <div className={styles.profile} onClick={toggleProfileMenu}>
@@ -203,13 +204,17 @@ const Navbar = () => {
                   </Link>
                 )}
                 {navItems1.find((item) => item.logIn) && (
+                  <span style={{display:'flex', flexDirection:'row-reverse', paddingRight:'10px'}}>
+                    <span style={{ marginLeft: "10px", transform:language=='ar'?"":'scaleX(-1)' }}>{arrow}</span>
                   <Link
                     to="/login"
                     className={`${styles.loginButton} ${styles.navButton}`}
                   >
-                    <span style={{ marginLeft: "20px" }}>{arrow}</span>
+                    
                     {navItems1.find((item) => item.logIn).logIn.name}
-                  </Link>
+                    </Link>
+                    
+                  </span>
                 )}
               </>
             )}

@@ -23,17 +23,17 @@ const HeroContact = () => {
         <div className={styles.cardsContainer}>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <Link to="">{title}</Link>
+              <Link to="#form_container">{title}</Link>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <Link to="form"> {title1}</Link>
+              <Link to="form#form_container"> {title1}</Link>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <Link to="form2">{title2}</Link>
+              <Link to="form2#form_container">{title2}</Link>
             </div>
           </div>
         </div>

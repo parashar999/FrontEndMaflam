@@ -148,7 +148,7 @@ function LearnAbout() {
             <button className={stylesSelected.subscribebutton}>
               {packageData[4]?.buttonText || "Subscribe"}
             </button>
-            <div className={stylesSelected.buttondiv}>
+            <div style={{paddingTop:'20px'}} className={stylesSelected.buttondiv}>
               {renderCourseCategory(packageData[3]?.nameOfCourseCategory || [])}
             </div>
           </div>
@@ -165,7 +165,7 @@ function LearnAbout() {
               <span className={stylesSelected.currencyText}>{currencyText}</span>
             </p>
 
-            <div className={stylesSelected.buttondiv}>
+            <div  className={stylesSelected.buttondiv}>
               {renderCourseCategory(packageData[8]?.nameOfCourseCategory || [])}
             </div>
           </div>

@@ -6,6 +6,7 @@ import './Route2.css'
 import {
   Ebooks,
   Blogs,
+  PageNotFoundPage
 } from "../Pages";
 
 
@@ -31,6 +32,7 @@ export default function Route2() {
               <Route path="R4/*" element={<Route4 />} />
               <Route path="ebooks" element={<AboutusPageProvider><EbookPageContextProvider><Ebooks /></EbookPageContextProvider></AboutusPageProvider>} />
               <Route path="blogs" element={<AboutusPageProvider><Blogs /></AboutusPageProvider>} />
+              <Route path="*" element={<PageNotFoundPage/>}/>
             </Routes>
             <div className="JoinUsContainer">
               <JoinUs />
