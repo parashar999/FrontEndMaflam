@@ -22,7 +22,7 @@ const CommunityGuidelines = () => {
       <div className={styles.container}>
         {terms.map((term, index) => (
           <div key={index}>
-            <h1 className={styles.title}>{term.title}</h1>
+            <h1  className={styles.title}>{term.title}</h1>
 
             {term.description?.map((desc, idx) => (
               <p key={idx} className={styles.description}>{desc}</p>

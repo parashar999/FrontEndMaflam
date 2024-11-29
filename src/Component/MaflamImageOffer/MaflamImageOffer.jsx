@@ -34,7 +34,7 @@ const MaflamImageOffer = () => {
           <div className={styles.offerCard} key={index}>
             <img src={offer.imageUrl} alt={offer.title} className={styles.offerImage} />
             <div className={styles.offerTitle}>
-              <p>{offer.title}</p>
+              <p >{offer.title}</p>
             </div>
           </div>
         ))}

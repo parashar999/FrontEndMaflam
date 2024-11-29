@@ -22,8 +22,8 @@ const BlogHero = () => {
   };
 
   return (
-    <div className={styles.blogDetails}>
-      <h2>Heading Here</h2>
+    <div style={{direction:'rtl'}} className={styles.blogDetails}>
+      <h2> أحدث المقالات  </h2>
       <div className={styles.heroSection}>
         <div className={styles.featuredBlog}>
           <div className={styles.featuredContent}>
@@ -32,9 +32,7 @@ const BlogHero = () => {
               alt="Featured Blog"
               className={styles.featuredImage}
             />
-            <p style={{ paddingLeft: "20px", paddingRight: "20px" }} className={styles.categorybox}>
-              Category
-            </p>
+
             <h2 className={styles.featuredTitle}>
               {formattedBlogDataforheader[0].title}
             </h2>
@@ -51,7 +49,7 @@ const BlogHero = () => {
                 style={{
                   color: "white",
                   fontWeight: "700",
-                  transform: direction === "rtl" ? "none" : "scaleX(-1)",
+            
                   display: "inline-block",
                 }}
               >
@@ -72,9 +70,7 @@ const BlogHero = () => {
                 className={styles.blogImage}
               />
               <div className={styles.blogContent}>
-                <p className={styles.categorybox}>
-                  Category
-                </p>
+
                 <h3 style={{fontSize:"20px"}} className={styles.title}>{post.title}</h3>
                 <a style={{fontSize:"17px"}}
                   onClick={() => handleContinueReading(post.id)}
@@ -87,7 +83,6 @@ const BlogHero = () => {
                       fontWeight: "700",
                       marginLeft:"10px",
                       marginRight:"10px",
-                      transform: direction === "rtl" ? "none" : "scaleX(-1)",
                       display: "inline-block",
                     }}
                   >

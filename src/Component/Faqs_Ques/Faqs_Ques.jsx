@@ -7,7 +7,7 @@ const Faqs_Ques = () => {
   const [openTitleIndices, setOpenTitleIndices] = useState([]);
   const [openQuestionIndices, setOpenQuestionIndices] = useState([]);
   const { faqScreenDetails, loading, error } = useContext(FaqPageContext);
-  const { language } = useContext(LanguageContext); 
+  const { language, direction } = useContext(LanguageContext); 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
@@ -63,7 +63,7 @@ const Faqs_Ques = () => {
   return (
     <div className={styles.mainContainers}>
       <div className={styles.faqContainer}>
-        <h1 className={styles.title}>{faqDataTitle || "FAQ"}</h1>
+        <h1 className={styles.title}>{direction === "rtl" ? "الأسئلة الشائعة" : "FAQ"}</h1>
         {faqData.map((section, sectionIndex) => {
           const faqs = isArabic ? section.faqInArb : section.faqInEng;
 

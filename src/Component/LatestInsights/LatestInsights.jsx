@@ -32,9 +32,9 @@ const LatestInsights = () => {
   };
 
   return (
-    <section className={styles.insightsSection}>
+    <section style={{direction:'rtl'}} className={styles.insightsSection}>
       <hr style={{ opacity: "0.2" }} />
-      <h2 className={styles.heading}>Latest Insights from Maflam</h2>
+      <h2 className={styles.heading}>المقالات الأكثر شيوعًا </h2>
       <div className={styles.insightsContainer}>
         {/* Render otherBlogDataforbody data */}
         {otherBlogDataforbody.slice(0, visibleCount).map((blog, index) => (
@@ -45,7 +45,7 @@ const LatestInsights = () => {
               className={styles.insightImage}
             />
             <div className={styles.cardContent}>
-              <h4>Category</h4>
+             
               <p className={styles.title}>{blog.title}</p>
               <a href="/blogDetails" className={styles.readMore}>
                 {blog.btnTitle}{" "}
@@ -53,7 +53,6 @@ const LatestInsights = () => {
                   style={{
                     color: "white",
                     fontWeight: "700",
-                    transform: isRTL ? "none" : "scaleX(-1)",
                     display: "inline-block",
                   }}
                 >
@@ -81,7 +80,7 @@ const LatestInsights = () => {
             fontWeight: "700",
           }}
         >
-          {showAll ? "Show Less" : `Load more (${otherBlogDataforbody.length - visibleCount})`}
+          {showAll ? "Show Less" : ` تحميل المزيد  (${otherBlogDataforbody.length - visibleCount})`}
         </button>
       )}
     </section>

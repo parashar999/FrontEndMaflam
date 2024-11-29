@@ -9,12 +9,13 @@ import { useNavigate } from "react-router-dom";
 import { PricingPageContext } from "../../store/PricingPageContext";
 import FilmProductionInstructor from "../FilmProductionInstructor/FilmProductionInstructor";
 import FilmProductionCourseContent from "../../Component/FilmProductionCourseContent/FilmProductionCourseContent";
-
+import { LanguageContext } from "../LanguageContext/LanguageContext";
 const FundamentalFilmProduction = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { filmproductionScreenDetails, loading, error } = useContext(
     FilmProductionContext
   );
+  const { direction } = useContext(LanguageContext);
   console.log(filmproductionScreenDetails);
   // const {
   //   pricingPageContextDetails,
@@ -116,7 +117,9 @@ const FundamentalFilmProduction = () => {
                   >
                     {isOpen ? "-" : "+"}
                   </div>
-                  <h5 className={styles.toggle}>{learningTitle}</h5>
+                  <h5 style={{marginLeft:'5px'}} className={styles.toggle}>
+                  {direction === "rtl" ? "ماذا ستتعلم": "What you will learn"}
+                  </h5>
                   <hr  style={{opacity:'0.4'}} className={styles.line} />
                 </div>
                 {isOpen && (

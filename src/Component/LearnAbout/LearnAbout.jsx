@@ -125,10 +125,10 @@ function LearnAbout() {
         <h1>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Subtitle"}</h2>
         <p>
-          {packageData[1]?.description?.substring(0, 39) || "Default description"}
+          {packageData[1]?.description?.substring(0, 40) || "Default description"}
           &nbsp;
           <span className={stylesSelected.para1}>
-            {packageData[1]?.description?.substring(39) || ""}
+            {packageData[1]?.description?.substring(40) || ""}
           </span>
         </p>
 
@@ -171,7 +171,7 @@ function LearnAbout() {
           </div>
         </div>
 
-        <p className={stylesSelected.para}>
+        <p style={{width:'100%'}} className={stylesSelected.para}>
           {packageData[9]?.description || "Default description"}&nbsp;
           <Link to={"/terms&condition"} className={stylesSelected.link}>
             {termsText}

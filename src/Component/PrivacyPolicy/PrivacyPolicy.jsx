@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
         <h1 className={styles.title}>{terms[0].title}</h1>
 
         {terms[0].description?.map((desc, index) => (
-          <p key={index} className={styles.description}>
+          <p style={{paddingLeft:'0px', paddingRight:'0px'}} key={index} className={styles.description}>
             {desc}
           </p>
         ))}

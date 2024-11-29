@@ -31,8 +31,8 @@ const CarouselCard = ({ itemWidth, itemHeight }) => {
             <div className={styles.card}>
               <h2>{story.title}</h2>
               <span className={styles.contentimg}>
-                <img src={assests.caraImg} alt="Carousel" />
-                <p>{story.description}</p>
+            
+              
               </span>
             </div>
           ),

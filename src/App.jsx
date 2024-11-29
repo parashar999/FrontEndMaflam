@@ -88,7 +88,7 @@ const App = () => {
         <Route path="/mycertificate" element={<MyCertificate />} />
         <Route path="/ebooktwo" element={<EbookTwo />} />
         <Route path="/blogDetails/:id" element={<BlogEjsPage />} />
-        <Route path="/terms&condition" element={<TermsAndConditionsPage />} />
+        <Route path="/terms&condition" element={<HomePageProvider> <TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} />
         <Route path="/terms&condition" element={<HomePageProvider><TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />

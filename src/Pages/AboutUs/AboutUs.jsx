@@ -14,10 +14,7 @@ import
 {
   Loader
 } from '../../utilities'
-import
-{
-  useScrollToTopWithDelay
-} from  '../../hooks'
+
 import {
   LanguageProvider,
   HomePageContext,
@@ -26,7 +23,10 @@ import {
   AboutusPageProvider,
 } from "../../store"
 
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 
 import styles from "./AboutUs.module.css";
 

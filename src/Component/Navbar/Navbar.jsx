@@ -84,7 +84,7 @@ const Navbar = () => {
       <nav
         className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       >
-        <Link to="/">
+        <Link  onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false)}} to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </Link>
         <div className={styles.menuelements}>
@@ -126,7 +126,7 @@ const Navbar = () => {
                             to={subItem.href}
                             key={subIndex}
                             className={styles.dropdownitems}
-                            onClick={()=>{setOpenDropdown(null)}}
+                            onClick={()=>{setOpenDropdown(null); setIsHamburgerOpen(false)}}
                           >
                             &nbsp;&nbsp;
                             <img
@@ -145,7 +145,7 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <Link to={item.href}>{item.name}</Link>
+                  <Link to={item.href} onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; console.log(item.name)}} >{item.name}</Link>
                 )}
               </div>
             ))}

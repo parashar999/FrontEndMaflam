@@ -71,7 +71,6 @@
   
   border-radius: 20px;
 border: 1px solid #000;
-background: linear-gradient(0deg, rgba(10, 23, 31, 0.70) 0%, rgba(10, 23, 31, 0.70) 100%), url("../../assets/aboutinstbg.png") lightgray 50% / cover no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

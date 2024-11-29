@@ -60,6 +60,7 @@ flex-shrink: 0;
 .cards {
   padding-top: 50px;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   gap: 50px;
   margin-top:80px;

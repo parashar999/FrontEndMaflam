@@ -21,14 +21,14 @@ const HeroContact = () => {
         <h1 className={styles.title}>{contactDetailsSec1.title}</h1>
         <p className={styles.description}>{contactDetailsSec1.description}</p>
         <div className={styles.cardsContainer}>
-          <div  className={styles.card}>
+        <div className={styles.card}>
             <div className={styles.cardText}>
-              <Link to="*#form_container">{title}</Link>
+              <Link to="*#form_container"> {title1}</Link>
             </div>
           </div>
-          <div className={styles.card}>
+          <div  className={styles.card}>
             <div className={styles.cardText}>
-              <Link to="form#form_container"> {title1}</Link>
+              <Link to="form#form_container">{title}</Link>
             </div>
           </div>
           <div className={styles.card}>

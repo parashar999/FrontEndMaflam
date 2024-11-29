@@ -47,7 +47,7 @@ const VariousCourse = () => {
               <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', paddingRight: '10px', paddingLeft: '10px' }}>
                 {course.instructors.map((instructor, index) => (
                   <div key={index} style={{ display: 'flex', alignItems: 'center', marginTop: '15px' }}>
-                    <img src={instructor.photoUrl} alt={instructor.name} style={{ width: '40px', height: '40px', borderRadius: '20px', marginRight: '10px', marginLeft:'10px' }} />
+                    <img src={course.banner} alt={instructor.photoUrl} style={{ width: '40px', height: '40px', borderRadius: '20px', marginRight: '10px', marginLeft:'10px' }} />
                     <p>{instructor.name}</p>
                   </div>
                 ))}
@@ -62,7 +62,7 @@ const VariousCourse = () => {
                   <div className={styles.footerblocks}>
                   <span className={styles.price}>{course.price}</span>
                   &nbsp;
-                  <span className={styles.para}>{course.para}</span>
+                  <span className={styles.para}></span>
                   </div>
                  
                   <span className={styles.line}>|</span>

@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react";
 import styles from "./OSPCarousel.module.css";
 import { SocialMediaPageContext } from "../../store/SocilaMediaPageContext";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../LanguageContext/LanguageContext"; 
 
 import Carou from "./Carou"; // Import the Carou component
 
 const OSPCarousel = () => {
   const { socialMediaPageDetails, loading, error } = useContext(SocialMediaPageContext);
+  const { direction } = useContext(LanguageContext);
 
   if (loading) return <p>Loading...</p>; // Handle loading state
   if (error) return <p>Error loading data</p>; // Handle error state
@@ -26,7 +28,7 @@ const OSPCarousel = () => {
           <img  style={{height:'729px', width:'100%'}} src={imageObj.image} alt={`OSP Image ${index + 1}`} className={styles.videobook} />
           <p className={styles.description}>{description}</p>
           <span style={{display:'block', display:'flex', flexDirection:'row',gap:'15px', justifyContent:'center' ,fontSize:'14px', color:'#5AFFFF', width:'100%', textAlign:'center', alignItems:'center'}}>
-            For more episodes  
+          {direction === "rtl" ? "للمزيد من الحلقات" : "For More Episodes"}
             <Link to="/osp">
             <svg width="25" height="25" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="33" height="33" rx="16.5" fill="#39FFFB"/>

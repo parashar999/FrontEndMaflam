@@ -1,6 +1,7 @@
 import React, { useContext, useEffect,useRef } from "react";
 import {  EBooksCards, JoinUs } from "../../Component";
 
+
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import { 
   AboutusPageContext, 
@@ -13,6 +14,8 @@ import
 {
   useScrollToTopWithDelay
 } from  '../../hooks'
+
+import "./Ebooks.css"
 const Ebooks = () => {
   useScrollToTopWithDelay(500);
   const {
@@ -62,9 +65,12 @@ const Ebooks = () => {
       <LanguageProvider>
         <AboutusPageProvider>
           <EbookPageContextProvider>
-            <div ref={contactInfoRef}>
+            <div className="parent">
             <EBooksCards></EBooksCards>
-            </div>
+  
+           
+
+              </div>
           </EbookPageContextProvider>
         </AboutusPageProvider>
       </LanguageProvider>

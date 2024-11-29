@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../LanguageContext/LanguageContext"; // Import LanguageContext
 import styles from './SubscribeFundamentalPackage.module.css';
+import {Link} from "react-router-dom"
 import img1 from "../../assets/AdvCompBg.png";
 import img2 from "../../assets/AdvCompAr.png";
 
@@ -15,7 +16,11 @@ function SubscribeFundamentalPackage() {
           alt="Video" 
           className={styles.image} 
         />
-        <button className={styles.subscribeButton}>Subscribe</button>
+        <Link to={"/R2/R3/prc"}>
+        <button className={styles.subscribeButton}>
+            {direction === "rtl" ? "اشترك الآن" : "Subscribe"}
+          </button>
+          </Link>
       </div>
     </>
   );

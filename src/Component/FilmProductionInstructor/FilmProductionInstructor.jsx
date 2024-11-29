@@ -25,7 +25,7 @@ const FilmProductionInstructor = () => {
   // console.log("Instructor Title:", instructorTitle);
 
   return (
-    <div className={styles.maincontainer}>
+    <div style={{ background: ` linear-gradient(0deg, rgba(10, 23, 31, 0.70) 0%, rgba(10, 23, 31, 0.70) 100%), url(${instructorData.photoUrl}) lightgray 50% / cover no-repeat` }} className={styles.maincontainer}>
       <div className={styles.collapsibleLtr}>
         <div className={styles.header}>
           <div
@@ -42,7 +42,7 @@ const FilmProductionInstructor = () => {
               <h5 key={index}>{lesson.name}</h5>
             ))
           ) : (
-            <h5 className={styles.toggle}>About the Instructor</h5>
+            <h5 className={styles.toggle}>{direction === "rtl" ? "عن المدرب" : "About the Instructor"}</h5>
           )}
 
           <hr style={{opacity:'0.4'}} className={styles.line} />
@@ -52,17 +52,10 @@ const FilmProductionInstructor = () => {
         {error && <p style={{fontSize:'16px'}} >Error loading instructor data: {error.message}</p>}
 
         {isOpen && instructorData && (
-          <div className={styles.instructorContent}>
+          <div  className={styles.instructorContent}>
             {/* Display instructor name and photo */}
             {instructorData.name && (
               <h6 className={styles.instructorName}>{instructorData.name}</h6>
-            )}
-            {instructorData.photoUrl && (
-              <img
-                src={instructorData.photoUrl}
-                alt={instructorData.name}
-                className={styles.instructorPhoto}
-              />
             )}
 
             {/* Display each description item */}
