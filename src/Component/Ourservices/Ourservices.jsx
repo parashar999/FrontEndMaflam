@@ -34,7 +34,7 @@ function Ourservices() {
       <div className={stylesSelected.OurservicesContainer}>
         <div className={stylesSelected.text}>
           <div className={stylesSelected.ourservicesvector}>
-            <p>{title1}</p>
+            <p style={{marginLeft:'10px', marginRight:'10px'}}>{title1}</p>
           </div>
 
           <div className={stylesSelected.text2}>

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 
 }
 
@@ -12,7 +12,7 @@
   align-items: center;
   width: 100%;
   max-width: 1920px;
-  height: 1545px;
+  
   background: linear-gradient(0deg, rgba(3, 11, 17, 0.00) 70.45%, #030B11 92.6%), linear-gradient(180deg, rgba(3, 11, 17, 0.00) 82.34%, #030B11 93.29%), url(<path-to-image>) lightgray 50% / cover no-repeat;
   background: black url("../../assets/viewCoursebg.png") center / cover;
 }

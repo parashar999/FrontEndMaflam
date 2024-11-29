@@ -144,11 +144,18 @@ line-height: 160%; */
   {
     zoom: 0.7;
   }
+  
   .cards h3, .cards p
   {
       font-size: smaller;
   }
 
+    .card
+    {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  
   .cards p
   {
     max-width: 100%;

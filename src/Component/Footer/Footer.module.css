@@ -7,13 +7,13 @@
     background-size: cover;
     color: #fff;
     padding: 40px 0;
-    width: 100vw;
+    width: 100%;
     max-width: 1920px;
     font-size: 14px;
     margin: auto;
 }
 .footerHr{
-    width: 100vw;
+    width: 100%;
     max-width: 1379px;
     margin: auto;
 }
@@ -32,6 +32,7 @@
 .footerColumns {
     display: flex;
     width: 900px;
+    max-width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
   
@@ -100,6 +101,7 @@
     padding: 20px 0;
     align-items: baseline;
     width: 900px;
+    max-width: 100%;
     justify-content: space-between;
     /* border-top: 1px solid #333; */
 }
@@ -108,7 +110,7 @@
     display: flex;
     flex-direction: row;
     max-width: 1379px;
-    width: 100vw;
+    width: 100%;
     margin: auto;
     margin-top: 10px;
     gap: 6px;

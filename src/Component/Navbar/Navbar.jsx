@@ -145,7 +145,7 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <Link to={item.href} onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; console.log(item.name)}} >{item.name}</Link>
+                  <Link to={item.href} onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; }} >{item.name}</Link>
                 )}
               </div>
             ))}
@@ -195,7 +195,9 @@ const Navbar = () => {
               <>
                 {navItems1.find((item) => item.createAccount) && (
                   <Link
+                    
                     to="/signup"
+                    onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; }}
                     className={`${styles.signupButton} ${styles.navButton}`}
                   >
                     {
@@ -209,6 +211,7 @@ const Navbar = () => {
                     <span style={{ marginLeft: "10px", transform:language=='ar'?"":'scaleX(-1)' }}>{arrow}</span>
                   <Link
                     to="/login"
+                    onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; }}
                     className={`${styles.loginButton} ${styles.navButton}`}
                   >
                     

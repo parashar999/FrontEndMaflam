@@ -253,7 +253,7 @@ opacity: 0.4;
 @media screen and (max-width: 768px) {
   .loginBox {
     zoom: 0.7;
-    padding: 2rem 1.5rem; 
+    padding: 60px; 
     margin: 1.5rem;
     margin-top: 150px;
     
@@ -278,7 +278,7 @@ opacity: 0.4;
 
 @media screen and (max-width: 480px) {
   .loginBox {
-    padding: 1.5rem 1rem; 
+    padding: 60px;
     margin: 1rem;
     margin-top: 150px;
     max-width: 90%; 

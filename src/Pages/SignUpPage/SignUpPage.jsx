@@ -10,6 +10,9 @@ import {
   SingupPageContextProvider,
 } from "../../store";
 
+
+
+
 const SignUpPage = () => {
   useScrollToTopWithDelay(500);
   // const{ singupPageContextDetails, loading, error } = useContext(SingupPageContext);

@@ -36,7 +36,8 @@ const ContactInformation = () => {
       <div className={styles.maincontainer}>
         <div className={styles.bgimage}></div>
         <div className={styles.contactContainer}>
-          <h2 className={styles.heading}>{title}</h2>
+          <h2  className={styles.heading}>{title}</h2>
+          <div style={{width:'100%', overflow:'hidden', display:'flex', justifyContent:'center'}}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="963"
@@ -52,6 +53,7 @@ const ContactInformation = () => {
               strokeLinecap="round"
             />
           </svg>
+          </div>
           <div className={styles.contactSection}>
             <h3>{emailTitle}</h3>
             {emailCategory.map((item, index) => (

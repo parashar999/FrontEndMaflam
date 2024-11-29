@@ -11,7 +11,10 @@ import { PrivacyPolicy} from "../../Component";
 
 
 
+
+
 const PrivacyPolicyPage = () => {
+   useScrollToTopWithDelay(500);
   const {
     homeScreenDetails,
     loading: homeLoading,

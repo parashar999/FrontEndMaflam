@@ -15,8 +15,12 @@ import {
   TermsConditionProvider,
   TermsConditionContext,
 } from "../../store/TermsConditionContext.jsx";
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 const TermsAndConditionsPage = () => {
+  useScrollToTopWithDelay(500);
   const {
     homeScreenDetails,
     loading: homeLoading,

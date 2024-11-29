@@ -80,7 +80,7 @@ const Footer = () => {
             className={styles.footerLogo}
           />
            <ul style={{paddingTop:'20px', paddingBottom:'0px'}}>
-              <li  style={{marginBottom:'0px'}} className={styles.socialIcons}>
+              <li  style={{marginBottom:'0px', display:'flex', flexDirection:'row', justifyContent:'center'}} className={styles.socialIcons}>
                 <a href="#" aria-label="LinkedIn">
                   <svg
                     width="33"
@@ -170,7 +170,7 @@ const Footer = () => {
                 </a>
               </li>
 
-              <li style={{marginBottom:'0px'}} className={styles.socialIcons}>
+              <li style={{marginBottom:'0px', display:'flex', flexDirection:'row', justifyContent:'center'}} className={styles.socialIcons}>
                 <a href="#" aria-label="Whatsapp">
                   <svg
                     width="33"

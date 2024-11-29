@@ -117,9 +117,23 @@ const ContactForm = () => {
       <div className={styles.formContainer}>
         <div className={styles.formcontact}>
         <h2 className={styles.title}>{title}</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" width="963" height="3" viewBox="0 0 963 3" fill="none">
-  <path opacity="0.1" d="M1 2L962 1.00008" stroke="#F1F2FA" stroke-width="2" stroke-linecap="round"/>
-</svg>
+        <div style={{width:'100%', overflow:'hidden', display:'flex', justifyContent:'center'}}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="963"
+            height="3"
+            viewBox="0 0 963 3"
+            fill="none"
+          >
+            <path
+              opacity="0.1"
+              d="M1 2L962 1.00008"
+              stroke="#F1F2FA"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+          </div>
         <form className={styles.contactForm} onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label htmlFor="fullNameInEng">

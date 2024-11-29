@@ -3,7 +3,10 @@
 .Home{
   border: 1px solid #000;
   background: #030B11;
-
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  overflow: hidden;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 

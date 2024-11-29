@@ -237,6 +237,10 @@ max-width: 1000px;
 
 @media (max-width:1100px)
 {
+  .carouselcontainer
+  {
+    zoom: 0.6;
+  }
     .carousel
     {
       max-width: 415px;

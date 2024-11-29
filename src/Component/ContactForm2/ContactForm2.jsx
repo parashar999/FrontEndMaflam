@@ -232,7 +232,23 @@ const ContactForm2 = () => {
     <div className={styles.container}>
       {/* <h2 className={styles.title}>Apply for Maflam Training Program</h2> */}
       <h2 className={styles.title}>{title}</h2>
-      {/* <hr style={{ width: "100%", color: "#F1F2FA", height: "0.1px" }} /> */}
+                <div style={{width:'100%', overflow:'hidden', display:'flex', justifyContent:'center'}}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="963"
+            height="3"
+            viewBox="0 0 963 3"
+            fill="none"
+          >
+            <path
+              opacity="0.1"
+              d="M1 2L962 1.00008"
+              stroke="#F1F2FA"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+          </div>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <label htmlFor="fullNameInEng">

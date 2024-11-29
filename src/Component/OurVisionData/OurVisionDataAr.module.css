@@ -157,6 +157,11 @@
     {
         font-size: smaller;
     }
+    .card
+    {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
     .cards p
     {
       max-width: 100%;

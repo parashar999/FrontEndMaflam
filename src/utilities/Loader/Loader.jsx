@@ -32,7 +32,7 @@ const Loader = ({ isLoading, timeout = 5000 }) => {
       }}
       className="loader"
     >
-      <PacmanLoader color="#39FFFB" size={200} speedMultiplier={2} />
+      <PacmanLoader color="#39FFFB" size={100} speedMultiplier={2} />
     </div>
   );
 };
