@@ -13,7 +13,7 @@ const HomeCommunityCarousel = ({ itemWidth, itemHeight, items }) => {
     <div className={styles.parent}>
       <div className={styles.carouselcontainer}>
  
-        <Link to="/socialmedia">{maflamShowsDataTitle.title}</Link>
+        <Link to="R2/R4/socialmedia">{maflamShowsDataTitle.title}</Link>
         <FourElementsCarousel
           itemWidth={itemWidth}
           itemHeight={itemHeight}

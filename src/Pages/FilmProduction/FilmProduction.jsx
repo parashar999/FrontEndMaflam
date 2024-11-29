@@ -14,10 +14,14 @@ import {
   PricingPageContext,
   PricingPageContextProvider
 } from "../../store";
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 import styles from "./FilmProduction.module.css"
 
 function FilmProduction() {
+  useScrollToTopWithDelay(1000);
   const {
     filmproductionScreenDetails,
     loading: filmproductionLoading,

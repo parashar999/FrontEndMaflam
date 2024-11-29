@@ -100,7 +100,7 @@ function FundamentalPackage() {
   const price = homeScreenDetails?.priceDetail?.price || "2,200 SAR";
 
   const handleSubscribe = () => {
-    navigate("/prc");
+    navigate("/R2/R3/prc");
   };
 
   return (

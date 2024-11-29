@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   const placeHolderTitle =
-    language === "ar" ? "ابحث عن دورات تدريبية...|" : "Search for courses...!";
+    language === "ar" ? "ابحث عن دورات تدريبية..." : "Search for courses...";
 
   const arrow =
     language === "ar" ? (
@@ -74,6 +74,7 @@ const Navbar = () => {
     setUser(null);
     navigate("/login");
   };
+  
 
   return (
     <div
@@ -92,7 +93,7 @@ const Navbar = () => {
               <div key={index} className={styles.dropdown}>
                 {item.hasDropdown ? (
                   <>
-                    <Link
+                    <h1
                       style={{
                         height: "100%",
                         display: "flex",
@@ -117,7 +118,7 @@ const Navbar = () => {
                       >
                         &#8595;
                       </span>
-                    </Link>
+                    </h1>
                     {openDropdown === item.name && (
                       <div className={styles.submenu}>
                         {item.dropdownItems?.map((subItem, subIndex) => (

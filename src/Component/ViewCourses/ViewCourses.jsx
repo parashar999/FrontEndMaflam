@@ -2,6 +2,7 @@
   import styles from "./ViewCourses.module.css";
   import { HomePageContext } from "../../store/HomePageContext.jsx";
   import { useNavigate } from "react-router-dom";
+  import { Link } from "react-router-dom";
 
   function  ViewCourses() {
     const { homeScreenDetails, loading, error } = useContext(HomePageContext);
@@ -13,11 +14,11 @@
     const coursesData = [...(homeScreenDetails?.coursesData || [])].reverse();
     const viewAllCoursesTitle = homeScreenDetails?.viewAllCourses?.title || "View All Courses";
 
-    console.log(coursesData,"vieww")
+    console.log(coursesData,"view")
 
 
       const Courses = ()=>{
-        navigate("/prc")
+        navigate("R2/R3/prc#topofcontainer")
       }
 
     const getCardClassName = (index) => {
@@ -41,7 +42,7 @@
                 color: "white",
               }}
             >
-            <a href="/filmproduction/672c5bb6a7c24e51d0db091e">   {course.name}</a>
+            <Link to="/R2/R3/prc">   {course.name}</Link>
             </div>
           ))}
         </div>

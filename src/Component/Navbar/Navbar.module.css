@@ -65,6 +65,23 @@
   transition: 0.3s ease;
 }
 
+.dropdown h1
+{
+  
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: 0.3s ease;
+  
+}
+.dropdown h1:hover
+{
+  cursor: pointer;  
+  color: #0ccac4;
+}
+
+
 .gappss a {padding-left: 10px;
 }
 .leftLinks a:hover , .langbtn:hover , .leftlinks:hover img{

@@ -37,7 +37,7 @@ import
 const Home = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
-  useScrollPosition("HomePage", 8000);
+  useScrollPosition("HomePage", 3900);
 
   const [isLoading, setIsLoading] = useState(true); // Start with the loader visible
 

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 
 const BlogEjsPage = () => {
@@ -11,6 +14,7 @@ const BlogEjsPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    useScrollToTopWithDelay(500);
     const fetchBlogData = async () => {
       try {
         const response = await axios.get(`https://backend.maflam.com/maflam/get-blogs?lang=0&&_id=${id}`);

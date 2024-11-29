@@ -14,7 +14,7 @@ const navigate = useNavigate()
   const videoRefs = useRef([]);
 
   const handleCourseClick = (courseId) => {
-    navigate(`/filmproduction/${courseId}`);
+    navigate(`R2/R4/filmproduction/${courseId}`);
   };
 
   useEffect(() => {
@@ -62,7 +62,7 @@ const navigate = useNavigate()
         <div className={styles.coursesGrid}>
           {specializedCoursesData.map((course, index) => (
             <div key={index} className={styles.coursesCard}>
-              <Link to="/prc">
+              <Link to="R2/R3/prc">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={course.videoUrl}

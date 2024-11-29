@@ -1,9 +1,6 @@
 import React, { useContext, useEffect,useState } from "react";
 import { useLocation } from "react-router-dom";
-import
-{
-  useScrollPosition
-} from "../../hooks"
+
 import {
   Filmmaker,
   JoinUs,
@@ -17,7 +14,10 @@ import
 {
   Loader
 } from '../../utilities'
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 import {
   LanguageProvider,
   HomePageContext,
@@ -32,29 +32,8 @@ import styles from "./AboutUs.module.css";
 
 
 export default function AboutUs() {
- 
-  useScrollPosition("AboutUs", 2000);
 
-  const location = useLocation();
-  useEffect(() => {
-    const handleScroll = () => {
-      if (location.hash) {
-        const target = document.querySelector(location.hash);
-        if (target) {
-          // Scroll to the element immediately
-          target.scrollIntoView({ behavior: "smooth" });
-
-          // Delayed action: Scroll or trigger another behavior
-          setTimeout(() => {
-            console.log("Triggered after 1 second:", location.hash);
-            setTimeout(() => (target.style.backgroundColor = ""), 2000); // Reset style after 2s
-          }, 2100);
-        }
-      }
-    };
-    handleScroll(); // Call it on mount if there's a hash
-  }, [location]); // Runs whenever the location changes
-
+  useScrollToTopWithDelay(500);
   const [isLoading,setIsLoading]=useState(true)
 
   const {
@@ -81,7 +60,6 @@ export default function AboutUs() {
               <OurVisionData />
               {/* <Filmmaker /> */}
             </div>
-            <div id="aboutusoffers"></div>
             <MaflamImageOffer />
             </div>
             <MaflamInstructors />

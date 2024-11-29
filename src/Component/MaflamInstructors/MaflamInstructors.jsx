@@ -60,7 +60,7 @@ const MaflamInstructors = () => {
                 className={styles.instructorImage}
               />
               <p>
-                <Link to="/prc"> {instructor.title}</Link>
+                <Link to="R2/R3/prc"> {instructor.title}</Link>
               </p>
             </div>
           ))}

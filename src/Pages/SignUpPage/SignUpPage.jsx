@@ -1,6 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import {SignUp } from "../../Component";
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 import { 
   LanguageProvider,
   SingupPageContext,
@@ -8,6 +11,7 @@ import {
 } from "../../store";
 
 const SignUpPage = () => {
+  useScrollToTopWithDelay(500);
   // const{ singupPageContextDetails, loading, error } = useContext(SingupPageContext);
   const { singupPageContextDetails, loading, error } =
     useContext(SingupPageContext);

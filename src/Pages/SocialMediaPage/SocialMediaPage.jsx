@@ -93,7 +93,10 @@ import {
   SubscribeFundamentalPackage,
 } from "../../Component";
 
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 import styles from "./SocialMediaPage.module.css";
 import {
   LanguageProvider,
@@ -113,6 +116,7 @@ export default function SocialMediaPage() {
   //     console.log("Home Screen Details:", homeScreenDetails);
   //   }
   // }, [homeScreenDetails]);
+  useScrollToTopWithDelay(1000);
 
   const { aboutusScreenDetails, loading: aboutLoading } =
     useContext(AboutusPageContext);

@@ -20,9 +20,13 @@ import
 {
   Loader
 } from "../../utilities"
-
+import
+{
+  useScrollToElementWithDelay
+} from '../../hooks'
 
 const ContactUS = () => {
+  useScrollToElementWithDelay('formhere',1000)
   const [isLoading, setIsLoading] = useState(true);
   return (
     <div>
@@ -32,7 +36,7 @@ const ContactUS = () => {
           <Loader isLoading={isLoading} timeout={500} />
             <div className={styles.container}>
               <HeroContact />
-           <div className={styles.formcontainer}>
+           <div id="formhere" className={styles.formcontainer}>
               <Routes> {/* Wrap the routes inside Routes component */}
                 {/* Define routes for different sections */}
                 <Route path="" element={<ContactInformation/> } />

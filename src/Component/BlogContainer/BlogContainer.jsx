@@ -41,7 +41,7 @@ function BlogContainer() {
             textAlign: "center",
             display: "block",
           }}
-          to="/blogs"
+          to="/R2/blogs"
         >
           {blogtitle1 || "Default Blog Title"}
         </Link>

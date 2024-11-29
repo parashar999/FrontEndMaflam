@@ -7,6 +7,11 @@ import {
   MaflamContent
 } from "../../Component";
 
+import
+{
+  useScrollToElementWithDelay
+} from "../../hooks";
+
 import { LanguageProvider ,
   HomePageContext,
   HomePageProvider ,
@@ -57,24 +62,7 @@ function Pricing() {
     }
   }, [pricingPageContextDetails]);
 
-  
-  // Create a reference for the ContactInformation component
-  const contactInfoRef = useRef(null);
-
-  // Scroll to the ContactInformation component after the page loads
-  useEffect(() => {
-    // Delay the scroll to allow the page to fully load
-    setTimeout(() => {
-      if (contactInfoRef.current) {
-        // Use window.scrollTo to scroll to the element
-        contactInfoRef.current.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 500); // 500ms delay to ensure the page is loaded
-
-    // Cleanup the timeout to avoid memory leaks
-    return () => clearTimeout();
-  }, []);
-
+  useScrollToElementWithDelay("CourseContainer",1200)
   return (
     <>
       <div>
@@ -84,8 +72,8 @@ function Pricing() {
               <PricingPageContextProvider>
                 <PricingPage></PricingPage>
                 <FundamentalPackage></FundamentalPackage>
-                <div className={styles.CarouselGradient}>
-                <div ref={contactInfoRef}>
+                <div  className={styles.CarouselGradient}>
+                <div id="CourseContainer" >
                 <VariousCourse></VariousCourse>
                 </div>
                 <CarouselCard></CarouselCard>

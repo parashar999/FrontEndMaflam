@@ -43,7 +43,7 @@ const HomeScreenCarousel = () => {
   return (
     <div className={styles.carouselcontainer}>
       <h2 style={{ marginBottom: "150px" }}>
-        <Link className={styles.linking} to="/ebooks">
+        <Link className={styles.linking} to="/R2/ebooks">
           {eBookletData.title || "Ebook Title"}
         </Link>
       </h2>

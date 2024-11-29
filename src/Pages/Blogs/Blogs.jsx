@@ -9,6 +9,11 @@ import {
   BlogPostHero1,
 } from "../../Component";
 
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
+
 import { 
   BlogsPageContent, 
   BlogsPageContentProvider, 
@@ -20,6 +25,8 @@ import {
 import styles from "./Blogs.module.css";
 
 const Blogs = () => {
+  
+  useScrollToTopWithDelay(500)
   const { aboutusScreenDetails, loading: aboutLoading, error: aboutError } =
     useContext(AboutusPageContext);
 

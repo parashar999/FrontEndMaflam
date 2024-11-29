@@ -9,8 +9,12 @@ import {
   EbookPageContextProvider 
 } from "../../store";  // Importing from store/index.js
 
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 const Ebooks = () => {
+  useScrollToTopWithDelay(500);
   const {
     aboutusScreenDetails,
     loading: aboutLoading,
