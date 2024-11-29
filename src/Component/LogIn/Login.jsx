@@ -40,7 +40,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const isEmail = emailOrPhone.includes("@");
-
+    console.log(document.referrer);
     try {
       const response = await axios.post(
         "https://backend.maflam.com/maflam/sign-in",
@@ -53,10 +53,11 @@ const Login = () => {
       toast.success(response.data.message);
       auth.login(response.data);
       // console.log(response.data)
-
+     
       setTimeout(() => {
-        navigate("/");
-      }, 2000);
+        
+        window.location.href="https://maflam.web.app";
+      }, 5000);
       // navigate("/");
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
@@ -75,7 +76,8 @@ const Login = () => {
       auth.login(response.data);
       // navigate("/");
       setTimeout(() => {
-        navigate("/");
+        console.log(document.referrer);
+        window.location.href="https://maflam.web.app";
       }, 2000);
     } catch (error) {
       console.error("Google Login Error:", error);

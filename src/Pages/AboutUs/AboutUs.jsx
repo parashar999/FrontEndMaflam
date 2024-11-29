@@ -75,7 +75,7 @@ export default function AboutUs() {
         <AboutusPageProvider>
           <div id="aboutushead" className={styles.container}>
     
-          <Loader isLoading={isLoading} timeout={1000} />
+       
             <div className={styles.AboutUsbg}>
               <Filmmaker />
               <OurVisionData />
