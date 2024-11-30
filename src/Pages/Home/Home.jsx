@@ -51,7 +51,9 @@ const Home = () => {
           <ViewCourses />
           <CourseCategories />
           <FundamentalPackage />
+          <div id="ourservices">
           <Ourservices />
+          </div>
           <SuccessPartners />
           <LearnAbout />
           <MaflamInstructors />

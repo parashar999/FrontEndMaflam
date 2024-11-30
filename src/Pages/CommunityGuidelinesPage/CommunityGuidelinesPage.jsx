@@ -8,7 +8,10 @@ import {
   CommunityGuidelinesProvider 
 } from "../../store";
 
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 
 const CommunityGuidelinesPage = () => {
   const {
@@ -16,6 +19,7 @@ const CommunityGuidelinesPage = () => {
     loading: homeLoading,
     error: homeError,
   } = useContext(HomePageContext);
+  useScrollToTopWithDelay(500);
 
   const {
     CommunityGuidelinesDetails,

@@ -159,7 +159,7 @@ const Navbar = () => {
           <div  className={styles.rightLinks}>
             {user ? (
               <div className={styles.profileContainer}>
-                <div className={styles.profile} onClick={toggleProfileMenu}>
+                <div className={styles.profile} onClick={()=>{toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false) ;}}>
                   <img
                     src={userDetails.userPhoto}
                     alt="Profile"
@@ -172,7 +172,7 @@ const Navbar = () => {
                 {isProfileMenuOpen && (
                   <div className={styles.profileMenu}>
                     <ul>
-                      {profileMenuItems.map((item, index) => (
+                      {profileMenuItems.filter((item)=>item.name!="My Profile" && item.name!="My Certificates" && item.name!="My Subscriptions" && item.name!="الملف الشخصي الخاص بي" && item.name!="شهاداتي" && item.name!="اشتراكاتي").map((item, index) => (
                         <li key={index}>
                           <img
                             src={item.icon}
@@ -183,7 +183,7 @@ const Navbar = () => {
                           {item.name === "Log out" || item.name === "تسجيل الخروج" ? (
                             <span onClick={handleLogoutClick}>{item.name}</span>
                           ) : (
-                            <Link to={item.href || "#"} >{item.name}</Link>
+                            <Link to={item.href || "#"} onClick={()=>{toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false) ; }}  >{item.name}</Link>
                           )}
                         </li>
                       ))}

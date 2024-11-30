@@ -38,7 +38,7 @@ line-height: 130%;
   justify-content: center;
   align-items: center;
   margin-top: 80px;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
 }    
 

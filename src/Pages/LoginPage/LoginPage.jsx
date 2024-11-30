@@ -4,11 +4,15 @@ import { LanguageProvider ,
   LoginPageContext,
   LoginPageContextProvider,
 } from "../../store";
+import
+{
+  useScrollToTopWithDelay
+} from "../../hooks"
 
 const LoginPage = () => {
   const { loginPageContexttDetails, loading, error } =
     useContext(LoginPageContext);
-
+    useScrollToTopWithDelay(500);
   // useEffect(() => {
   //   if (loginPageContexttDetails) {
   //     console.log("Login Screen Details:", loginPageContexttDetails);

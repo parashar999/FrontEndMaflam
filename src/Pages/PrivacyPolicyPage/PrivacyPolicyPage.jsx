@@ -9,7 +9,10 @@ import {
 } from "../../store";
 import { PrivacyPolicy} from "../../Component";
 
-
+import
+{
+  useScrollToTopWithDelay
+} from "../../hooks"
 
 
 

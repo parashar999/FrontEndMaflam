@@ -102,7 +102,7 @@ import stylesSelected from "./LearnAboutEng.module.css";
 
 function LearnAbout() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-  const { language } = useContext(LanguageContext);
+  const { language, direction } = useContext(LanguageContext);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
@@ -125,10 +125,12 @@ function LearnAbout() {
         <h1>{packageData[0]?.title || "Default Title"}</h1>
         <h2>{packageData[1]?.title || "Default Subtitle"}</h2>
         <p>
-          {packageData[1]?.description?.substring(0, 40) || "Default description"}
+          {direction=="rtl"? packageData[1]?.description?.substring(0, 18) :packageData[1]?.description?.substring(0, 40)}
+        
           &nbsp;
           <span className={stylesSelected.para1}>
-            {packageData[1]?.description?.substring(40) || ""}
+          {direction=="rtl"? packageData[1]?.description?.substring(19) :packageData[1]?.description?.substring(41)}
+          
           </span>
         </p>
 

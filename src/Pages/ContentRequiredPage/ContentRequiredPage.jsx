@@ -3,9 +3,12 @@ import { ContentRequired} from "../../Component";
 
 import { LanguageProvider } from "../../store"
 
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 function ContentRequiredPage() {
-
+  useScrollToTopWithDelay(800);
   return (
     <div>
       <LanguageProvider >

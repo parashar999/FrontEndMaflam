@@ -7,7 +7,10 @@ import {
   PurchaseCancellationContext,
   PurchaseCancellationProvider,
 } from "../../store";
-
+import
+{
+  useScrollToTopWithDelay
+} from  '../../hooks'
 
 const PurchaseCancellationPage = () => {
   const {
@@ -15,7 +18,7 @@ const PurchaseCancellationPage = () => {
     loading: homeLoading,
     error: homeError,
   } = useContext(HomePageContext);
-
+  useScrollToTopWithDelay(500);
   // useEffect(() => {
   //   if (homeScreenDetails) {
   //     console.log("Home Screen Details:", homeScreenDetails);

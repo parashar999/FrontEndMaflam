@@ -22,6 +22,8 @@ const Loader = ({ isLoading, timeout = 5000 }) => {
       style={{
         display: "flex",
         position: "fixed",
+        top:"0px",
+        left:"0px",
         height: "100vh",
         width: "100vw",
         justifyContent: "center",
