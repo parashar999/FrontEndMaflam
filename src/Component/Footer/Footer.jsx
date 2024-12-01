@@ -42,8 +42,8 @@ const Footer = () => {
     language === "ar" ? "سياسة الشراء" : " Terms and Conditions";
   const copyrighttext =
     language === "ar"
-      ? "جميع الحقوق محفوظة © مفلم 2023"
-      : " All rights reserved © Maflam 2023";
+      ? "جميع الحقوق محفوظة © مفلم 2024"
+      : " All rights reserved © Maflam 2024";
 
   useEffect(() => {
     // Call the API when the component loads or when language changes

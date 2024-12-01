@@ -1,0 +1,45 @@
+{
+  "mesage": "details fetch successfully",
+  "getPricingCourse1DetailsSec1": {
+    "videotitle": "نبذة عن الدورة"
+  },
+  "isfree":"false",
+  "formattedCourseData": {
+    "id": "string",
+    "courseId": "string",
+    "title": "string",
+    "description": "string",
+    "whatyoulearn": "string",
+    "price": "string",
+    "lecturecount": "string",
+    "promoPhoto": "string",
+    "promoVideo": "string",
+    "banner": "string",
+    "lessions": [
+      {
+        "SectionTitle1": "string",
+        "Lessons": [
+          {
+            "lesson_name": "string",
+            "timing": "string"
+          }
+        ]
+      }
+    ],
+    "promoVedio": "string",
+    "estimatedLearningTime": "string",
+    "instructors": [
+      {
+        "name": "string",
+        "photoUrl": "string",
+        "description": [
+          "string"
+        ]
+      }
+    ]
+  },
+  "getPricingCourse1DetailsSecButton": {
+    "SubscribeBtn": "اشتر الآن",
+    "Addtowhishlist": "أضف إلى المفضلة"
+  }
+}

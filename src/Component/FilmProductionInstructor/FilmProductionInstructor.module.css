@@ -6,6 +6,7 @@
   justify-content: baseline;
   align-items: baseline;
   margin-top: 20px;
+  border-radius: 25px;
 }
 
 .header {
@@ -52,7 +53,10 @@
   font-size: 20px;
   margin: 10px 0; 
 }
-
+.instructorName 
+{
+  font-size: 28px !important;
+}
 .paragraph {
   font-size: 16px;
   color: white;
