@@ -9,16 +9,37 @@ const CourseCategories = () => {
   // Assuming homeScreenDetails contains an array called "specializedCoursesData"
   const specializedCoursesData = homeScreenDetails?.specializedCoursesData || [];
   const specializedCoursesDataTitle = homeScreenDetails?.specializedCoursesDataTitle || {};
-const navigate = useNavigate()
+  const navigate = useNavigate();
+
   // Initialize refs for each video only once
   const videoRefs = useRef([]);
+
+  // Define a predefined order for the 9 courses by their `_id`
+  const predefinedOrder = {
+    "672c62b61f099bf569d0f8eb": 1,
+    "672c5ee7da73549420503e9c": 2,
+    "672c6953bd321f82ce18327a": 3,
+    "672c5bb6a7c24e51d0db091e": 4,
+    "672c609ae90c3d8357705c73": 5,
+    "672c6420b3e5c110514f52f9": 6,
+    "672c6cb662d002aa55e9229c": 7,
+    "672c73b06191fae5fb669530": 8,
+    "672c6ec66bea317c7bb13078": 9
+  };
+
+  // Sort the courses based on the predefined order
+  const sortedCourses = [...specializedCoursesData].sort((a, b) => {
+    const indexA = predefinedOrder[a._id] || Number.MAX_SAFE_INTEGER; // Default to end if not in the predefinedOrder
+    const indexB = predefinedOrder[b._id] || Number.MAX_SAFE_INTEGER;
+    return indexA - indexB;
+  });
 
   const handleCourseClick = (courseId) => {
     navigate(`R2/R4/filmproduction/${courseId}`);
   };
 
   useEffect(() => {
-    videoRefs.current = videoRefs.current.slice(0, specializedCoursesData.length);
+    videoRefs.current = videoRefs.current.slice(0, sortedCourses.length);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -45,7 +66,7 @@ const navigate = useNavigate()
         if (videoRef) observer.unobserve(videoRef);
       });
     };
-  }, [specializedCoursesData]);
+  }, [sortedCourses]);
 
   if (loading) {
     return <p>Loading...</p>;
@@ -60,21 +81,21 @@ const navigate = useNavigate()
       <div className={styles.coursesContainer}>
         <h2>{specializedCoursesDataTitle.title}</h2>
         <div className={styles.coursesGrid}>
-          {specializedCoursesData.map((course, index) => (
+          {sortedCourses.map((course, index) => (
             <div key={index} className={styles.coursesCard}>
               <Link to="R2/R3/prc">
                 <video
+                  muted
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={course.videoUrl}
                   loop
-                  
                   className={styles.coursesImage}
                 />
               </Link>
-              <div style={{ position: 'absolute', bottom: '10px', zIndex: '10' }}>
-                <p onClick={() => handleCourseClick(course._id)}><Link  >{course.name}</Link></p>
-
-                {/* <button className={styles.btns}  onClick={() => handleCourseClick(course._id)}  > <p>  {course.title}</p></button> */}
+              <div style={{ position: "absolute", bottom: "10px", zIndex: "10" }}>
+                <p onClick={() => handleCourseClick(course._id)}>
+                  <Link>{course.name}</Link>
+                </p>
               </div>
               <div className={styles.overlay}></div>
             </div>

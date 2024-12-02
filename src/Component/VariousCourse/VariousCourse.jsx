@@ -3,9 +3,6 @@ import styles from "./VariousCourse.module.css";
 import { PricingPageContext } from "../../store/PricingPageContext";
 import { useNavigate } from "react-router-dom";
 
-
-
-
 const VariousCourse = () => {
   const { pricingPageContextDetails, loading, error } = useContext(PricingPageContext);
   const navigate = useNavigate();
@@ -16,6 +13,28 @@ const VariousCourse = () => {
   const courses = pricingPageContextDetails?.formattedCourseData || [];
   const buttonTitle = pricingPageContextDetails?.getPricingCourse1DetailsSecButton?.title || "Buy now";
 
+  // Define a predefined order for the 11 courses by their `_id`
+  const predefinedOrder = {
+    "672c62b61f099bf569d0f8eb": 1,
+    "672c5ee7da73549420503e9c": 2,
+    "672c6953bd321f82ce18327a": 3,
+    "672c5bb6a7c24e51d0db091e": 4,
+    "672c609ae90c3d8357705c73": 5,
+    "672c6420b3e5c110514f52f9": 6,
+    "672c6cb662d002aa55e9229c": 7,
+    "672c73b06191fae5fb669530": 8,
+    "672c6ec66bea317c7bb13078": 9,
+    "672c7f444f6f4724a95a8e1e":10,
+    "672c76cc9a9df20599166ca0":11
+  };
+
+  // Sort the courses based on the predefined order
+  const sortedCourses = [...courses].sort((a, b) => {
+    const indexA = predefinedOrder[a._id] || Number.MAX_SAFE_INTEGER; // Items not in the predefinedOrder are moved to the end
+    const indexB = predefinedOrder[b._id] || Number.MAX_SAFE_INTEGER;
+    return indexA - indexB;
+  });
+
   const handleCourseClick = (courseId) => {
     console.log(courseId);
     navigate(`/R2/R4/filmproduction/${courseId}`);
@@ -23,61 +42,93 @@ const VariousCourse = () => {
 
   return (
     <div className={styles.maincontainer}>
-      <div className={styles.container} >
+      <div className={styles.container}>
         <h2>{pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title || "Or, choose from our various courses"}</h2>
         <div className={styles.cardsContainer}>
-          {courses.map((course) => (
+          {sortedCourses.map((course) => (
             <div key={course.courseId} className={styles.card}>
-              {/* <video src={course.promoVedio}  loop playsInline controls alt={course.title} className={styles.cardImage} /> */}
+              {/* Video or image based on the presence of promoVedio */}
               {course.promoVedio ? (
-  <video 
-    src={course.promoVedio} 
-    loop 
-    playsInline 
-    controls 
-    alt={course.title} 
-    className={styles.cardImage} 
-  />
-) : (
-  <img 
-    src={course.promoPhoto || ""} 
-    alt={course.title} 
-    className={styles.cardImage} 
-  />
-)}
+                <video 
+                  src={course.promoVedio} 
+                  loop 
+                  playsInline 
+                  controls 
+                  alt={course.title} 
+                  className={styles.cardImage} 
+                />
+              ) : (
+                <img 
+                  src={course.promoPhoto || ""} 
+                  alt={course.title} 
+                  className={styles.cardImage} 
+                />
+              )}
 
-              
-              <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', paddingRight: '10px', paddingLeft: '10px' }}>
+              {/* Instructors Section */}
+              <div 
+                style={{ 
+                  display: "flex", 
+                  flexDirection: "row", 
+                  flexWrap: "wrap", 
+                  alignItems: "center", 
+                  paddingRight: "10px", 
+                  paddingLeft: "10px" 
+                }}
+              >
                 {course.instructors.map((instructor, index) => (
-                  <div key={index} style={{ display: 'flex', alignItems: 'center', marginTop: '15px' }}>
-                    <img src={course.banner} alt={instructor.photoUrl} style={{ width: '40px', height: '40px', borderRadius: '20px', marginRight: '10px', marginLeft:'10px' }} />
+                  <div 
+                    key={index} 
+                    style={{ 
+                      display: "flex", 
+                      alignItems: "center", 
+                      marginTop: "15px" 
+                    }}
+                  >
+                    <img 
+                      src={course.banner} 
+                      alt={instructor.photoUrl} 
+                      style={{ 
+                        width: "40px", 
+                        height: "40px", 
+                        borderRadius: "20px", 
+                        marginRight: "10px", 
+                        marginLeft: "10px" 
+                      }} 
+                    />
                     <p>{instructor.name}</p>
                   </div>
                 ))}
               </div>
               
+              {/* Card Content */}
               <div className={styles.cardContent}>
                 <h3 className={styles.title}>{course.title}</h3>
                 <p className={styles.description}>{course.description.split(" ").slice(0, 23).join(" ")}...</p>
-                <hr style={{ color: '#39FFFB', opacity:'0.3', strokeWidth:'0.5px' }} />
+                <hr 
+                  style={{ 
+                    color: "#39FFFB", 
+                    opacity: "0.3", 
+                    strokeWidth: "0.5px" 
+                  }} 
+                />
                 <div className={styles.footer}>
-                <div className={styles.footerblocks}>
                   <div className={styles.footerblocks}>
-                  <span className={styles.price}>{course.price}</span>
-                  &nbsp;
-                  <span className={styles.para}></span>
-                  </div>
-                 
-                  <span className={styles.line}>|</span>
-                  <div className={styles.footerblocks}>
-                  &nbsp;
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-  <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433284 8.00043 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761205C12.6136 0.258658 11.3132 0 10 0ZM10 18C8.41775 18 6.87103 17.5308 5.55544 16.6518C4.23985 15.7727 3.21447 14.5233 2.60897 13.0615C2.00347 11.5997 1.84504 9.99112 2.15372 8.43928C2.4624 6.88743 3.22433 5.46197 4.34315 4.34314C5.46197 3.22433 6.88743 2.4624 8.43928 2.15372C9.99113 1.84504 11.5997 2.00346 13.0615 2.60896C14.5233 3.21446 15.7727 4.23984 16.6518 5.55544C17.5308 6.87103 18 8.41775 18 10C18 12.1217 17.1571 14.1566 15.6569 15.6569C14.1566 17.1571 12.1217 18 10 18Z" fill="#39FFFB"/>
-  <path d="M14 9H11V6C11 5.73478 10.8946 5.48043 10.7071 5.29289C10.5196 5.10536 10.2652 5 10 5C9.73478 5 9.48043 5.10536 9.29289 5.29289C9.10536 5.48043 9 5.73478 9 6V10C9 10.2652 9.10536 10.5196 9.29289 10.7071C9.48043 10.8946 9.73478 11 10 11H14C14.2652 11 14.5196 10.8946 14.7071 10.7071C14.8946 10.5196 15 10.2652 15 10C15 9.73478 14.8946 9.48043 14.7071 9.29289C14.5196 9.10536 14.2652 9 14 9Z" fill="#39FFFB"/>
-</svg>
-                  &nbsp;
-                  <p style={{fontSize:'14px'}}>{course.estimatedLearningTime?.time}</p>
-                  </div>
+                    <div className={styles.footerblocks}>
+                      <span className={styles.price}>{course.price}</span>
+                      &nbsp;
+                      <span className={styles.para}></span>
+                    </div>
+                    <span className={styles.line}>|</span>
+                    <div className={styles.footerblocks}>
+                      &nbsp;
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="..." fill="#39FFFB"/>
+                        <path d="..." fill="#39FFFB"/>
+                      </svg>
+                      &nbsp;
+                      <p style={{ fontSize: "14px" }}>{course.estimatedLearningTime?.time}</p>
+                    </div>
                   </div>
                   <button
                     className={styles.buyNow}
@@ -96,6 +147,7 @@ const VariousCourse = () => {
 };
 
 export default VariousCourse;
+
 
 
 // import { useContext } from "react";
