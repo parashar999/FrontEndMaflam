@@ -7,195 +7,103 @@
   "formattedCourseData": {
       "id": "672c6cb662d002aa55e9229c",
       "courseId": "26",
-      "title":"أساسيات Adobe Premiere Pro",
-      "description":"  تستهدف هذه الدورة الأشخاص الذين يرغبون في تعلم أساسيات برنامج Adobe Premiere Pro لعمل مونتاج احترافي لأفلامهم. يعد هذا البرنامج أحد الأدوات الأساسية في عالم صناعة الأفلام، ويعتبر ضروريًا لكل مونتير يتطلع إلى إتقان فن المونتاج. ستقوم الدورة بشرح كيفية التعامل مع واجهة البرنامج وأدواته المتنوعة، مما يمكنك من إنشاء مقاطع فيديو سلسة وجذابة.",
-      "whatyoulearn":"في هذه الدورة، ستتعلم أساسيات مونتاج الفيديو باستخدام برنامج Adobe Premiere Pro، وكيفية الانتقال بين المشاهد بشكل سلس وإضافة المؤثرات البصرية والجرافيك. ستتعرف أيضًا على تقنيات تصحيح الألوان وتطبيق هندسة الصوت، بالإضافة إلى تنفيذ أنيميشن بسيط ومتقدم. كما ستفهم التقنيات العامة للمونتاج وكيفية استخراج الفيلم بجودة عالية. أهم النقاط التي ستتعلمها تشمل أساليب المونتاج السينمائي، كيفية اختيار الانتقالات بفاعلية، مونتاج الصوت وتنسيقه، تقنيات تصحيح الألوان، إضافة الرسومات والجرافيك، استخدام المؤثرات في الانتقال بين المشاهد، وإنهاء الفيديو واستخراجه بجودة عالية.",
-      "price":"متاح فقط ضمن الباقة الكاملة",
-      "lecturecount":"٣٩ درس",
+      "title":"Fundamentals of Adobe Premiere Pro",
+"description":"This course is designed for individuals looking to learn the basics of Adobe Premiere Pro for professional video editing. This software is a fundamental tool in the film industry, essential for any editor aiming to master the art of editing. The course will guide you through navigating the program's interface and its various tools, enabling you to create smooth and engaging videos.",
+"whatyoulearn":"In this course, you will learn the fundamentals of video editing using Adobe Premiere Pro, covering a range of essential skills such as cinematic editing techniques, seamless scene transitions, and the integration of visual effects and graphics. You will also gain proficiency in color correction and audio editing, including mixing techniques. The course will introduce both basic and advanced animation methods to enhance your projects. Additionally, you'll gain a solid understanding of various editing techniques and learn how to export your film in high quality, ensuring a professional final product.",
+"price":"X Riyals",
+      "lecturecount":"39 Lessons",
       "promoPhoto": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
       "promoVideo": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/Premiere/1.+Basic+System+Requirements+of+Premiere+Pro+-+%D9%85%D8%AA%D8%B7%D9%84%D8%A8%D8%A7%D8%AA+%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85+%D8%A7%D9%84%D8%A7%D9%94%D8%B3%D8%A7%D8%B3%D9%8A%D8%A9+%D9%84%D8%A7%D9%94%D8%AF%D9%88%D8%A8%D9%8A+%D8%A8%D8%B1%D9%8A%D9%85%D9%8A%D8%B1+%D8%A8%D8%B1%D9%88.mp4",
       "banner": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
       "lessions": [
         {
-          "SectionTitle1": "",
+          "SectionTitle1": "Introduction to Adobe Premiere Pro",
           "Lessons": [
-            {
-              "lesson_name": "متطلبات النظام الأساسية لأدوبي بريمير برو",
-              "timing": "١:٣٢"
-            },
-            {
-              "lesson_name": "تحميل برنامج أدوبي بريمير برو من موقع أدوبي",
-              "timing": "٠:٤١"
-            },
-            {
-              "lesson_name": "صناعة الفيديو الأول لك على أدوبي بريمير برو",
-              "timing": "٤:٠١"
-            },
-            {
-              "lesson_name": "إضافة الصور والنصوص",
-              "timing": "٢:٣٦"
-            },
-            {
-              "lesson_name": "إضافة الانتقالات",
-              "timing": "٣:٠٢"
-            },
-            {
-              "lesson_name": "كيفية إعادة ربط الوسائط المفقودة",
-              "timing": "١:٥٩"
-            },
-            {
-              "lesson_name": "معاينة ايقونات الوسائط داخل لوحة المشروع + تنظيم عرض ايقونات الوسائط الخاصة بك",
-              "timing": "٤:٠٧"
-            },
-            {
-              "lesson_name": "إجراء عمليات البحث + انشاء صناديق بحث",
-              "timing": "٤:١٤"
-            },
-            {
-              "lesson_name": "تحرير مقابلة الفيلم الوثائقي مع اللقطات الثانوية",
-              "timing": "٢:١٥"
-            },
-            {
-              "lesson_name": "الخطوة الاخيرة + تنظيم مشروعك",
-              "timing": "٢:١٧"
-            },
-            {
-              "lesson_name": "العمل داخل نافذة العرض + التشغيل + التأشير",
-              "timing": "٣:٤٠"
-            },
-            {
-              "lesson_name": "إجراء عمليات التبديل فوق مسار محدد",
-              "timing": "٤:٤٢"
-            },
-            {
-              "lesson_name": "إجراء الإدراج والتحرير والنقل - الإدراج عن طريق مفتاح التعديل",
-              "timing": "٣:٠١"
-            },
-            {
-              "lesson_name": "طرق متعددة لصناعة تسلسل جديد",
-              "timing": "٥:١٥"
-            },
-            {
-              "lesson_name": "الكشف عن المقاطع المكررة والإطارات المكررة",
-              "timing": "٢:٣٧"
-            },
-            {
-              "lesson_name": "إجراء الإدراج وتعديل اللقطات المدرجة",
-              "timing": "٤:١٤"
-            },
-            {
-              "lesson_name": "مزامنة الصوت",
-              "timing": "٢:٤٢"
-            },
-            {
-              "lesson_name": "ملاحة الجدول الزمني تقنيات الاختيار",
-              "timing": "٤:١٥"
-            },
-            {
-              "lesson_name": "إعادة قص المقاطع من المخطط الزمني في شاشة المصدر",
-              "timing": "١:٣٦"
-            },
-            {
-              "lesson_name": "مونتاج الفراغات الصغيرة في المقابلة",
-              "timing": "٢:٤٨"
-            },
-            {
-              "lesson_name": "طريقة المونتاج باستخدام تقنية الاستبدال",
-              "timing": "٣:٢٠"
-            },
-            {
-              "lesson_name": "كيفية استخدام أداة ريبل للتحرير",
-              "timing": "٧:٣٧"
-            },
-            {
-              "lesson_name": "تغيير محتوى نسبي للمقطع باستخدام أدوات سليب وسلايد - الموضوع",
-              "timing": "٤:١٣"
-            },
-            {
-              "lesson_name": "تجميد الفيديو الى صورة عن طريق أداة تثبيت الإطار",
-              "timing": "٥:٤١"
-            },
-            {
-              "lesson_name": "تغيير السرعة باستخدام أداة",
-              "timing": "٢:٤٧"
-            },
-            {
-              "lesson_name": "تغيير السرعة باستخدام لوحة",
-              "timing": "٥:٤٦"
-            },
-            {
-              "lesson_name": "ضبط الصوت - الهندسة الصوتية للمقطع الصوتي والهندسة الصوتية للمسار الصوتي",
-              "timing": "٦:٢٣"
-            },
-            {
-              "lesson_name": "بدء التعامل مع مساحة عمل الجرافيك",
-              "timing": "٢:٢٢"
-            },
-            {
-              "lesson_name": "إضافة جرافيك للبريمير",
-              "timing": "٧:٤٢"
-            },
-            {
-              "lesson_name": "تعديل الجرافيك في البريمير",
-              "timing": "١٣:٤١"
-            },
-            {
-              "lesson_name": "عمل أنيميشن بسيط في البريمير",
-              "timing": "٦:٤٨"
-            },
-            {
-              "lesson_name": "عمل أنيميشن متقدم في البريمير",
-              "timing": "٦:٤٧"
-            },
-            {
-              "lesson_name": "عمل ماستر جرافيك في برنامج بريمير",
-              "timing": "٣:٤٥"
-            },
-            {
-              "lesson_name": "استخدام القوالب الجاهزة في بريمير",
-              "timing": "٧:١٩"
-            },
-            {
-              "lesson_name": "الهاندلز وخصائص الكليبات في بريمير",
-              "timing": "٣:٤٠"
-            },
-            {
-              "lesson_name": "الإنتقالات ونافذة الإفكت كنترول",
-              "timing": "٦:٤٣"
-            },
-            {
-              "lesson_name": "الإنتقالات الجاهزة في برنامج بريمير",
-              "timing": "٨:٢١"
-            },
-            {
-              "lesson_name": "صناعة إنتقال مخصص في بريمير",
-              "timing": "٥:٤٠"
-            },
-            {
-              "lesson_name": "انتقال مخصص بواسطة الكلر مات",
-              "timing": "٧:٢١"
-            },
-            {
-              "lesson_name": "كيفية استخدام أداة تصحيح الألوان (HSL Seconadry)",
-              "timing": "١٤:٥٣"
-            },
-            {
-              "lesson_name": "الخطوة الخامسة صقل وتقنية المونتاج الخام الخاص بك",
-              "timing": "٣:٣٨"
-            },
-            {
-              "lesson_name": "الخطوة السابعة الطابع اللوني",
-              "timing": "٢:٥٦"
-            }
+            { "lesson_name": "Basic System Requirements for Adobe Premiere Pro", "timing": "1:32" },
+            { "lesson_name": "Downloading Adobe Premiere Pro from the Adobe Website", "timing": "0:41" },
+            { "lesson_name": "Creating Your First Video in Adobe Premiere Pro", "timing": "4:01" },
+            { "lesson_name": "Adding Images and Text", "timing": "2:36" },
+            { "lesson_name": "Adding Transitions", "timing": "3:02" },
+            { "lesson_name": "How to Relink Missing Media", "timing": "1:59" }
+          ]
+        },
+        {
+          "SectionTitle1": "Media Organization and Management",
+          "Lessons": [
+            { "lesson_name": "Previewing Media Icons in the Project Panel + Organizing Your Media Icons", "timing": "4:07" },
+            { "lesson_name": "Conducting Searches + Creating Search Boxes", "timing": "4:14" },
+            { "lesson_name": "The Final Step + Organizing Your Project", "timing": "2:17" }
+          ]
+        },
+        {
+          "SectionTitle1": "Editing Basics",
+          "Lessons": [
+            { "lesson_name": "Working in the Program Monitor + Playback + Marking", "timing": "3:40" },
+            { "lesson_name": "Performing Switches Over a Defined Track", "timing": "4:42" },
+            { "lesson_name": "Inserting, Editing, and Moving Clips - Insert with the Edit Key", "timing": "3:01" },
+            { "lesson_name": "Multiple Ways to Create a New Sequence", "timing": "5:15" },
+            { "lesson_name": "Identifying Duplicate Clips and Frames", "timing": "2:37" },
+            { "lesson_name": "Inserting and Modifying Inserted Clips", "timing": "4:14" },
+            { "lesson_name": "Syncing Audio", "timing": "2:42" },
+            { "lesson_name": "Timeline Navigation and Selection Techniques", "timing": "4:15" },
+            { "lesson_name": "Trimming Clips from the Timeline in the Source Monitor", "timing": "1:36" }
+          ]
+        },
+        {
+          "SectionTitle1": "Advanced Editing Techniques",
+          "Lessons": [
+            { "lesson_name": "Editing Small Gaps in the Interview", "timing": "2:48" },
+            { "lesson_name": "Editing Using the Replace Technique", "timing": "3:20" },
+            { "lesson_name": "Using the Ripple Edit Tool", "timing": "7:37" },
+            { "lesson_name": "Changing Relative Clip Content Using Slip and Slide Tools", "timing": "4:13" },
+            { "lesson_name": "Freezing Video to a Frame Using the Frame Hold Tool", "timing": "5:41" },
+            { "lesson_name": "Adjusting Speed Using the Tool", "timing": "2:47" },
+            { "lesson_name": "Adjusting Speed Using the Panel", "timing": "5:46" }
+          ]
+        },
+        {
+          "SectionTitle1": "Audio Editing",
+          "Lessons": [
+            { "lesson_name": "Audio Adjustment - Audio Engineering for Clips and Audio Tracks", "timing": "6:23" }
+          ]
+        },
+        {
+          "SectionTitle1": "Graphics and Animation",
+          "Lessons": [
+            { "lesson_name": "Starting to Work with the Graphics Workspace", "timing": "2:22" },
+            { "lesson_name": "Adding Graphics in Premiere", "timing": "7:42" },
+            { "lesson_name": "Editing Graphics in Premiere", "timing": "13:41" },
+            { "lesson_name": "Creating Basic Animation in Premiere", "timing": "6:48" },
+            { "lesson_name": "Creating Advanced Animation in Premiere", "timing": "6:47" },
+            { "lesson_name": "Creating Master Graphics in Premiere", "timing": "3:45" },
+            { "lesson_name": "Using Pre-Made Templates in Premiere", "timing": "7:19" }
+          ]
+        },
+        {
+          "SectionTitle1": "Transitions and Effects",
+          "Lessons": [
+            { "lesson_name": "Handles and Clip Properties in Premiere", "timing": "3:40" },
+            { "lesson_name": "Transitions and Effect Control Window", "timing": "6:43" },
+            { "lesson_name": "Pre-Made Transitions in Premiere", "timing": "8:21" },
+            { "lesson_name": "Creating Custom Transitions in Premiere", "timing": "5:40" },
+            { "lesson_name": "Custom Transition Using Color Matting", "timing": "7:21" }
+          ]
+        },
+        {
+          "SectionTitle1": "Color Correction and Grading",
+          "Lessons": [
+            { "lesson_name": "How to Use the Color Correction Tool (HSL Secondary)", "timing": "14:53" },
+            { "lesson_name": "Step Five: Refining Your Raw Edit Technique", "timing": "3:38" },
+            { "lesson_name": "Step Seven: Color Grading", "timing": "2:56" }
           ]
         }
       ],
        
     
-      "estimatedLearningTime": " ٣ ساعات و٣ دقائق",
+      "estimatedLearningTime":"3 Hours and 39 Minutes",
       "instructors": [
           {
-              "name": "أصيل رضوان",
+              "name": "",
               "photoUrl": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle39.png",
               "description": [
                 "For Post Production courses courses we have to remove the instructors section and the , Adobe Pro , Devinci , Vegas Pro"
@@ -204,7 +112,7 @@
       ]
   },
   "getPricingCourse1DetailsSecButton": {
-      "SubscribeBtn": "اشتر الآن",
-      "Addtowhishlist":"أضف إلى المفضلة"
+      "SubscribeBtn": "NA",
+      "Addtowhishlist":"Add to Wishlist"
   }
 }

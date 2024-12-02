@@ -3,6 +3,9 @@ import styles from "./VariousCourse.module.css";
 import { PricingPageContext } from "../../store/PricingPageContext";
 import { useNavigate } from "react-router-dom";
 
+
+
+
 const VariousCourse = () => {
   const { pricingPageContextDetails, loading, error } = useContext(PricingPageContext);
   const navigate = useNavigate();

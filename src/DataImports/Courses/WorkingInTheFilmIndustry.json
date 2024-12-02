@@ -7,65 +7,66 @@
   "formattedCourseData": {
     "id": "672c7f444f6f4724a95a8e1e",
     "courseId": "30",
-    "title": " العمل في صناعة الأفلام",
-    "description": " تستهدف هذه الدورة الأشخاص الراغبين في العمل في صناعة الأفلام وتطوير مهاراتهم لتصبح صانعي أفلام محترفين. ستتعلم فيها أساسيات المهنة، بما في ذلك كيفية تنظيم عملك بشكل فعّال والتواصل مع الآخرين في الفريق. كما ستكتسب مهارات مهمة للتعامل مع التحديات والانتقادات، مما يساعدك على الانطلاق بثقة في عالم السينما. تهدف الدورة إلى توفير الأدوات والمعرفة اللازمة لبناء مستقبل مهني ناجح في صناعة الأفلام.",
-    "whatyoulearn": "في هذه الدورة، ستكتشف جميع الجوانب المهمة لمهنة صناعة الأفلام التي تؤهلك لتصبح صانع أفلام محترف وذو مسؤولية. ستتعلم كيفية إدارة وقتك بفعالية، وما هي الأدوات والموارد التي ينبغي عليك أخذها معك إلى موقع التصوير. ستتعرف أيضًا على كيفية تحديد قيمتك المهنية، وأساليب التعامل مع الانتقادات، بالإضافة إلى كيفية التفاعل بشكل إيجابي مع فريق العمل. كما ستتعلم استراتيجيات للحصول على فرصك الأولى في هذا المجال.",
-    "price": "x  ريال",
-    "lecturecount":"٢٠ درس" ,
+    "title":"Working in the Film Industry",
+    "description":"This course is designed for individuals aspiring to work in the film industry and enhance their skills to become professional filmmakers. You will learn the fundamentals of the profession, including how to organize your work effectively and communicate with team members. You will also acquire essential skills for handling challenges and criticism, enabling you to confidently navigate the world of cinema. The course aims to provide the tools and knowledge needed to build a successful career in filmmaking.",
+    "whatyoulearn":" In this course, you will explore all the key aspects of a filmmaking career that prepare you to become a responsible and professional filmmaker. You will learn how to manage your time efficiently, what tools and resources to bring to a film set, and how to determine your professional value. You will also understand how to effectively handle criticism and positively interact with your team. Additionally, you will learn strategies to secure your first opportunities in the industry.",
+  "price": " x Riyals",
+    "lecturecount": "20 Lessons",
     "promoPhoto": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle42.png",
     "promoVideo": "",
     "banner": "string",
     "lessions": [
       {
-        "SectionTitle1": "حياة صناع الأفلام",
+        "SectionTitle1": "Life of Filmmakers",
         "Lessons": [
-          { "lesson_name": "حياة صانع", "timing": "٤:٤١" },
-          { "lesson_name": "ساعات العمل", "timing": "٣:١٢" },
-          { "lesson_name": "التوازن بين العمل والبيت", "timing": "٢:٢٥" },
-          { "lesson_name": "إدارة أوقات الفراغ", "timing": "٣:١٤" },
-          { "lesson_name": "التعامل مع النقد", "timing": "١:٥٢" },
-          { "lesson_name": "كيف تهرب", "timing": "٢:٤٤" }
+          { "lesson_name": "Life of a Filmmaker", "timing": "4:41" },
+          { "lesson_name": "Working Hours", "timing": "3:12" },
+          { "lesson_name": "Work-Life Balance", "timing": "2:25" },
+          { "lesson_name": "Managing Free Time", "timing": "3:14" },
+          { "lesson_name": "Handling Criticism", "timing": "1:52" },
+          { "lesson_name": "How to Escape", "timing": "2:44" }
         ]
       },
       {
-        "SectionTitle1": "استقطاب المشاريع",
+        "SectionTitle1": "Project Acquisition",
         "Lessons": [
-          { "lesson_name": "كيف تحدد اسعارك", "timing": "٣:١٧" },
-          { "lesson_name": "الانخراط في سوق العمل", "timing": "٣:٤٠" },
-          { "lesson_name": "الحصول على المشاريع", "timing": "٤:٠٠" },
-          { "lesson_name": "فن بناء العلاقات", "timing": "٢:١٦" }
+          { "lesson_name": "How to Set Your Prices", "timing": "3:17" },
+          { "lesson_name": "Engaging in the Job Market", "timing": "3:40" },
+          { "lesson_name": "Securing Projects", "timing": "4:00" },
+          { "lesson_name": "The Art of Building Relationships", "timing": "2:16" }
         ]
       },
       {
-        "SectionTitle1": "المهنية",
+        "SectionTitle1": "Professionalism",
         "Lessons": [
-          { "lesson_name": "ايش تجيب على السيت", "timing": "٦:٠٩" },
-          { "lesson_name": "ايش تسوي ليلة التصوير", "timing": "٢:٢٩" },
-          { "lesson_name": "يوم التصوير", "timing": "١:٥٥" },
-          { "lesson_name": "إيتيكت السيت", "timing": "٥:٠٩" },
-          { "lesson_name": "التعامل مع أجهزة الووكي توكي", "timing": "٥:٥٨" },
-          { "lesson_name": "العمل مع الآخرين", "timing": "٥:٢١" },
-          { "lesson_name": "التعامل مع الناس المشكلجية", "timing": "١:٥٧" },
-          { "lesson_name": "خلي السيت مقفل", "timing": "٣:٠٨" },
-          { "lesson_name": "نهاية يوم التصوير", "timing": "٤:٠٢" },
-          { "lesson_name": "ضبط سلوكك", "timing": "٣:٢٣" }
+          { "lesson_name": "What to Bring to the Set", "timing": "6:09" },
+          { "lesson_name": "What to Do on Shoot Night", "timing": "2:29" },
+          { "lesson_name": "Shoot Day", "timing": "1:55" },
+          { "lesson_name": "Set Etiquette", "timing": "5:09" },
+          { "lesson_name": "Working with Walkie-Talkies", "timing": "5:58" },
+          { "lesson_name": "Collaborating with Others", "timing": "5:21" },
+          { "lesson_name": "Dealing with Difficult People", "timing": "1:57" },
+          { "lesson_name": "Keep the Set Closed", "timing": "3:08" },
+          { "lesson_name": "End of Shoot Day", "timing": "4:02" },
+          { "lesson_name": "Managing Your Behavior", "timing": "3:23" }
         ]
       }
     ],
     "promoVedio": "string",
-    "estimatedLearningTime": "١ ساعة ٢٧ دقيقة",
+   "estimatedLearningTime": "1 hour 27 minutes",
     "instructors": [
       {
-        "name": "عدي عابد",
+        "name": "Oday Abid",
         "photoUrl": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle42.png",
-        "description": ["بدأ عُدّي مسيرته المهنة في الإخراج عام ٢٠١١، بعدما قرر ترك وظيفته الأساسية لمطاردة شغفه في إنشاء المحتوى، أسس عُدّي شركته للإنتاج 77 Films ليتولى معها العديد من المسؤوليات مثل كتابة السيناريو والإخراج والإنتاج.",
-          "وخلال مسيرته المهنية، أخرج عُدّي أكثر من ٦ برامج تلفزيونية، و موسمين من المسلسل الكوميدي العيلة، والذي عُرض خلال شهر رمضان على قناة SBC، كما أخرج أيضًأ أكثر من ١٢٠ إعلانًا تجاريًا وفيديوهات إعلانية للشركات."
+        "description": [
+          "Oday began his directing career in 2011, after leaving his primary job to pursue his passion for content creation. He founded his production company, 77 Films, where he took on various roles including screenwriting, directing, and producing.",
+"Throughout his career, Oday has directed over six television programs and two seasons of the comedy series Al3aila, which aired during Ramadan on SBC Channel. He has also directed more than 120 commercials and promotional videos for companies."
         ]
       }
     ]
   },
   "getPricingCourse1DetailsSecButton": {
-    "SubscribeBtn": "اشتر الآن",
-    "Addtowhishlist": "أضف إلى المفضلة"
+    "SubscribeBtn": "Subscribe",
+    "Addtowhishlist": "Add To Wishlist"
   }
 }

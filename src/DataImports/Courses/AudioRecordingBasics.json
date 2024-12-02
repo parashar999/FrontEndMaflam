@@ -11,210 +11,91 @@
   "formattedCourseData": {
       "id": "672c609ae90c3d8357705c73",
       "courseId": "22",
-      "title":"أساسيات تسجيل الصوت",
-      "description": "تستهدف هذه الدورة المهتمين بدخول عالم هندسة الصوت والذين يسعون لفهم دور الصوت في تعزيز تجربة المشاهد. ستركز الدورة على أهمية الأصوات المحيطة وكيفية تسجيلها بشكل واضح ونقي. من خلال تقنيات ومعدات الهندسة الصوتية، ستتعلم كيفية دمج الأصوات بفاعلية في المشاهد، مما يسهم في تعزيز السرد وإضافة عمق للأعمال السينمائية.",
-      "whatyoulearn": "في هذه الدورة، ستتعلم دور مهندس الصوت وأهمية الصوت في تعزيز الصورة السينمائية، وستكتسب معرفة شاملة حول الأدوات والأجهزة التي يستخدمها مهندس الصوت. كما ستتعلم كيفية تحليل النص بشكل دقيق لتجنب الأخطاء أثناء التصوير. سنستعرض أيضًا التحديات التي قد يواجهها مهندس الصوت وطرق التعامل معها بفعالية، بالإضافة إلى أهم النقاط التي ستتعلمها مثل دور مهندس الصوت في صناعة الأفلام، مهام فريق الصوت، أنواع المايكات واستخداماتها، جهاز التسجيل وكيفية عمله، وكيفية معالجة الصدى في الغرف.",
-      "price": "٥٥٠ ر.س",
-      "lecturecount":"٤٠ درس",
+      "title":"Fundamentals of Sound Recording",
+      "description": "This course targets individuals interested in entering the field of sound engineering and aims to enhance their understanding of how sound enriches the viewer's experience. It will focus on the significance of ambient sounds and how to record them clearly and cleanly. Through the exploration of sound engineering techniques and equipment, you will learn how to effectively integrate sounds into scenes, thereby enhancing storytelling and adding depth to cinematic works.",
+     "whatyoulearn":"In this course, you will explore the essential role of the sound engineer and the significant impact sound has on enhancing the cinematic experience. You will gain a thorough understanding of the tools and equipment used by sound engineers and learn how to analyze scripts to prevent mistakes during filming. The course will also cover the challenges sound engineers often face and provide effective strategies to overcome them. Key topics include the responsibilities of the sound team, different types of microphones and their uses, how recording devices operate, and techniques for managing echo in recording environments.",
+      "price": "x SAR",
+      "lecturecount":"40 Lessons",
       "promoPhoto": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
       "promoVideo": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/Acting/7.1.945_Kaled_Acting_%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9_V01.mp4",
       "banner": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
-      "lessions":[
-          {
-            "SectionTitle1": "مقدمة",
-            "Lessons": [
-              {
-                "lesson_name": "أهمية الصوت في صناعة الأفلام",
-                "timing": "٢:٣٨"
-              },
-              {
-                "lesson_name": "دور مهندس الصوت في صناعة الأفلام",
-                "timing": "١:٤٧"
-              },
-              {
-                "lesson_name": "مهام فريق الصوت",
-                "timing": "١:٠٢"
-              },
-              {
-                "lesson_name": "أساسيات الصوت",
-                "timing": "١:٢٩"
-              },
-              {
-                "lesson_name": "شرائح صوت المشهد",
-                "timing": "١:٣٢"
-              }
-            ]
-          },
-          {
-            "SectionTitle1": "الجانب التقني",
-            "Lessons": [
-              {
-                "lesson_name": "المعدات الأساسية لتسجيل الصوت",
-                "timing": "١:٤٤"
-              },
-              {
-                "lesson_name": "أنواع المايكات",
-                "timing": "٠:٣٩"
-              },
-              {
-                "lesson_name": "الميكروفون الديناميكي",
-                "timing": "١:٣٧"
-              },
-              {
-                "lesson_name": "الميكروفون المكثف الكوندنسر",
-                "timing": "١:٤٩"
-              },
-              {
-                "lesson_name": "الميكروفون الشريطي الريبون",
-                "timing": "٠:٥١"
-              },
-              {
-                "lesson_name": "نمط التقاط الميكروفونات",
-                "timing": "٢:٠٠"
-              },
-              {
-                "lesson_name": "رحلة الصوت مع الممثل للفيلم",
-                "timing": "١:٠١"
-              },
-              {
-                "lesson_name": "عناصر الميكروفونات اللاسلكية",
-                "timing": "٣:٣٣"
-              },
-              {
-                "lesson_name": "تسجيل الصوت على الكاميرا مباشرة السنجل سيستم",
-                "timing": "٣:٣٤"
-              },
-              {
-                "lesson_name": "تسجيل الصوت على مكسر بسيط (الدبل سيستم)",
-                "timing": "٥:٣٠"
-              },
-              {
-                "lesson_name": "مداخل جهاز التسجيل",
-                "timing": "٢:١٩"
-              },
-              {
-                "lesson_name": "جهاز التسجيل",
-                "timing": "١:١٣"
-              },
-              {
-                "lesson_name": "إعداد مستوى التضخيم وتفادي تشوه الصوت",
-                "timing": "٢:٠٥"
-              },
-              {
-                "lesson_name": "اللفت والرايت مكس",
-                "timing": "٤:٣٤"
-              },
-              {
-                "lesson_name": "البري فيدر والبوست فيدر",
-                "timing": "٠:٥٢"
-              },
-              {
-                "lesson_name": "مخارج جهاز التسجيل",
-                "timing": "١:٥٤"
-              },
-              {
-                "lesson_name": "الهيدفون مكس",
-                "timing": "٥:١٥"
-              },
-              {
-                "lesson_name": "إعداد مكس العميل",
-                "timing": "٢:٠٣"
-              },
-              {
-                "lesson_name": "إرسال الصوت للكاميرا  السكراتش أوديو",
-                "timing": "٢:٠٧"
-              },
-              {
-                "lesson_name": "طريقة إعداد الهيدفون رواتينج",
-                "timing": "٢:٣٠"
-              }
-            ]
-          },
-          {
-            "SectionTitle1": "التحضير",
-            "Lessons": [
-              {
-                "lesson_name": "تفريغ النص",
-                "timing": "٣:٠٨"
-              },
-              {
-                "lesson_name": "كيف ترتب الشنطة",
-                "timing": "٦:١٣"
-              }
-            ]
-          },
-          {
-            "SectionTitle1": "التسجيل",
-            "Lessons": [
-              {
-                "lesson_name": "اتيكيت اللاف مايك",
-                "timing": "١:٥٠"
-              },
-              {
-                "lesson_name": "طريقة تركيب اللاف مايك",
-                "timing": "١١:٣٤"
-              },
-              {
-                "lesson_name": "التعامل مع ارتداد الصوت",
-                "timing": "٦:١٢"
-              },
-              {
-                "lesson_name": "مقابل لشخصين",
-                "timing": "٤:٥٤"
-              },
-              {
-                "lesson_name": "البوم أوبريتر",
-                "timing": "٤:٤٥"
-              },
-              {
-                "lesson_name": "استخدام البوم من الأسفل",
-                "timing": "١:٥٠"
-              },
-              {
-                "lesson_name": "إخفاء المايك في بيئة التصوير",
-                "timing": "٣:١٢"
-              },
-              {
-                "lesson_name": "تركيب المايك في السيارة",
-                "timing": "٣:٣٩"
-              },
-              {
-                "lesson_name": "نصائح لتسجيل الصوت الخارجي",
-                "timing": "٣:١٥"
-              },
-              {
-                "lesson_name": "الكيابل والوصلات",
-                "timing": "٢:٥٧"
-              },
-              {
-                "lesson_name": "تقرير الصوت",
-                "timing": "٣:٢٨"
-              },
-              {
-                "lesson_name": "كماليات الصوت",
-                "timing": "٢:٣٧"
-              },
-              {
-                "lesson_name": "نصائح تساعدك في الموقع",
-                "timing": "١:٥٣"
-              }
-            ]
-          }
-        ],
+      "lessions": [
+        {
+          "SectionTitle1": "Introduction",
+          "Lessons": [
+            { "lesson_name": "The Importance of Sound in Filmmaking", "timing": "2:38" },
+            { "lesson_name": "The Role of the Sound Engineer in Filmmaking", "timing": "1:47" },
+            { "lesson_name": "Responsibilities of the Sound Team", "timing": "1:02" },
+            { "lesson_name": "Basics of Sound", "timing": "1:29" },
+            { "lesson_name": "Sound Layers in Scenes", "timing": "1:32" }
+          ]
+        },
+        {
+          "SectionTitle1": "Technical Side",
+          "Lessons": [
+            { "lesson_name": "Essential Equipment for Sound Recording", "timing": "1:44" },
+            { "lesson_name": "Types of Microphones", "timing": "0:39" },
+            { "lesson_name": "Dynamic Microphone", "timing": "1:37" },
+            { "lesson_name": "Condenser Microphone", "timing": "1:49" },
+            { "lesson_name": "Ribbon Microphone", "timing": "0:51" },
+            { "lesson_name": "Microphone Pickup Patterns", "timing": "2:00" },
+            { "lesson_name": "Sound Journey with the Actor", "timing": "1:01" },
+            { "lesson_name": "Elements of Wireless Microphones", "timing": "3:33" },
+            { "lesson_name": "Direct Audio Recording on Camera (Single System)", "timing": "3:34" },
+            { "lesson_name": "Recording Audio on a Simple Mixer (Double System)", "timing": "5:30" },
+            { "lesson_name": "Inputs of the Recording Device", "timing": "2:19" },
+            { "lesson_name": "The Recording Device", "timing": "1:13" },
+            { "lesson_name": "Setting Gain Levels and Avoiding Sound Distortion", "timing": "2:05" },
+            { "lesson_name": "Left and Right Mix", "timing": "4:34" },
+            { "lesson_name": "Pre-Fader and Post-Fader", "timing": "0:52" },
+            { "lesson_name": "Outputs of the Recording Device", "timing": "1:54" },
+            { "lesson_name": "Headphone Mix", "timing": "5:15" },
+            { "lesson_name": "Setting Up the Client Mix", "timing": "2:03" },
+            { "lesson_name": "Sending Audio to Camera (Scratch Audio)", "timing": "2:07" },
+            { "lesson_name": "How to Set Up Headphone Routing", "timing": "2:30" }
+          ]
+        },
+        {
+          "SectionTitle1": "Preparation",
+          "Lessons": [
+            { "lesson_name": "Script Breakdown", "timing": "3:08" },
+            { "lesson_name": "How to Organize Your Bag", "timing": "6:13" }
+          ]
+        },
+        {
+          "SectionTitle1": "Recording",
+          "Lessons": [
+            { "lesson_name": "Etiquette of the Lav Mic", "timing": "1:50" },
+            { "lesson_name": "How to Attach the Lav Mic", "timing": "11:34" },
+            { "lesson_name": "Managing Sound Reflections", "timing": "6:12" },
+            { "lesson_name": "Interviewing Two People", "timing": "4:54" },
+            { "lesson_name": "Boom Operator", "timing": "4:45" },
+            { "lesson_name": "Using the Boom from Below", "timing": "1:50" },
+            { "lesson_name": "Hiding the Mic in the Shooting Environment", "timing": "3:12" },
+            { "lesson_name": "Installing the Mic in a Car", "timing": "3:39" },
+            { "lesson_name": "Tips for Recording Outdoor Sound", "timing": "3:15" },
+            { "lesson_name": "Cables and Connectors", "timing": "2:57" },
+            { "lesson_name": "Sound Report", "timing": "3:28" },
+            { "lesson_name": "Sound Accessories", "timing": "2:37" },
+            { "lesson_name": "Helpful Tips for the Set", "timing": "1:53" }
+          ]
+        }
+      ],
       "promoVedio": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/Acting/7.1.945_Kaled_Acting_%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9_V01.mp4",
-      "estimatedLearningTime": "٣ ساعات و ٣٠ دقيقة",
+      "estimatedLearningTime": "1 hour and 56 minutes",
       "instructors": [
           {
-              "name": "أصيل رضوان",
+              "name": "Aseel Radwan",
               "photoUrl": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle39.png",
               "description": [
-                "مهندس صوت، بدأ مشواره في العمل منذ عام ٢٠١٦، ليعمل في العديد من المسلسلات التليفزيونية الشهيرة مثل تكي، العيلة، سكة سفر٢، وغيرها. عمل أصيل أيضًا في البرامج التليفزيونية، ليتولى هندسة الصوت العديد من البرامج الشهيرة مثل سين لأحمد الشقيري، وورشة إنعاش، وشجعان، كما شارك في أفلام قصيرة مثل خوخ، لعبة الحياة، ١٢:٠٠."
+                  "Aseel is a sound engineer who began his career in 2016, working on several popular TV series, including \"Takki,\" \"Al3aila,\" and \"Sikkat Safar 2.\" He has also worked on various television programs, overseeing sound engineering for shows like \"Seen\" with Ahmad Al-Shuqairi, \"Warshat En3ash,\" and \"Braves\". Additionally, Aseel has contributed to short films such as \"Khawkh,\" \"The Game of Life,\" and \"12:00.\""
+
               ]
           }
       ]
   },
   "getPricingCourse1DetailsSecButton": {
-      "SubscribeBtn": "اشتر الآن",
-      "Addtowhishlist":"أضف إلى المفضلة"
+      "SubscribeBtn":"Subscribe",
+      "Addtowhishlist":"Add To WishList"
   }
 }

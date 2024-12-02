@@ -117,12 +117,12 @@ const FundamentalFilmProduction = () => {
   const buttonData =course?.getPricingCourse1DetailsSecButton || {};
   const learningTitle =course?.formattedCourseData?.whatyoulearn ||
     "What you will learn";
-
+console.log(course.formattedCourseData.estimatedLearningTime)
 console.log(course)
 
   return (
     <>
-      <div style={{direction:'rtl'}} className={styles.coursedetailsheader}>
+      <div  className={styles.coursedetailsheader}>
         <div className={styles.videoTheory}>
           <div className={styles.headerText}>
             <h6>{courseImg.title || "Fundamentals of Film Production"}</h6>
@@ -171,7 +171,7 @@ console.log(course)
                     {isOpen ? "-" : "+"}
                   </div>
                   <h5 style={{marginLeft:'5px'}} className={styles.toggle}>
-                  ماذا ستتعلم
+                  {direction === "rtl" ? "ماذا ستتعلم": "What you will learn"}
                   </h5>
                   <hr  style={{opacity:'0.4'}} className={styles.line} />
                 </div>

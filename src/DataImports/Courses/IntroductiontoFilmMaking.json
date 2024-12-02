@@ -7,40 +7,41 @@
   "formattedCourseData": {
     "id": "29",
     "courseId": "672c76cc9a9df20599166ca0",
-    "title": " مقدمة عن صناعة الأفلام",
-    "description": " تستهدف هذه الدورة الأشخاص الذين يرغبون في دخول عالم صناعة الأفلام وفهم أسس التخطيط والإعداد للفيلم. ستتعلم في هذه الدورة أفضل الطرق لبدء التخطيط والتحضير، بالإضافة إلى مراحل صناعة الفيلم وتقسيماتها وفقًا لمعايير صناعة الأفلام العالمية. كما ستتعرف على منصة مَفلَم وكيفية الوصول إلى جميع الموارد والأدوات اللازمة بسهولة، مما يمكّنك من تحويل أفكارك الإبداعية إلى واقع ملموس في عالم السينما.",
-    "whatyoulearn": " في هذه الدورة، ستتعلم كيفية التخطيط والتحضير للفيلم بطرق فعّالة ومنظمة، من مرحلة ما قبل الإنتاج إلى ما بعد الإنتاج، مع التركيز على أهمية كل مرحلة لتحقيق رؤية العمل الفني. ستكتسب نظرة شاملة حول كيفية وضع خطة مفصلة، بدءًا من كتابة السيناريو إلى إدارة الفريق الفني. بالإضافة إلى ذلك، ستتعرف على منصة مَفلَم وكيفية استخدامها للوصول إلى الموارد الضرورية لصناعة الفيلم،",
-    "price": " ٧٥٠  ر.س",
-    "lecturecount": "٥ دروس",
+    "title": "Introduction to Filmmaking",
+"description":"This course targets individuals looking to enter the world of filmmaking and understand the foundations of planning and preparation for a film. You will learn the best methods to start planning and preparing, as well as the various stages of filmmaking based on global industry standards. Additionally, you'll explore the Maflam platform and how to easily access all the necessary resources and tools, enabling you to turn your creative ideas into reality in the cinematic world." ,
+"whatyoulearn":"In this course, you will learn how to effectively and systematically plan and prepare for a film, from pre-production to post-production, emphasizing the importance of each stage in achieving your artistic vision. You will gain a comprehensive understanding of how to create a detailed plan, starting from scriptwriting to managing the production team. Additionally, you will explore the MAFLAM platform and how to utilize it to access essential filmmaking resources.",
+"price": " x Riyals",
+    "lecturecount": "5 Lessons",
     "promoPhoto": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle42.png",
     "promoVideo": "",
     "banner": "string",
     "lessions": [
       {
-        "SectionTitle1": "",
+        "SectionTitle1": "Introduction to Filmmaking",
         "Lessons": [
-          { "lesson_name": "أهمية صناعة الأفلام", "timing": "٣:٥٩" },
-          { "lesson_name": "مراحل الفيلم", "timing": "٢:٤٩" },
-          { "lesson_name": "أقسام فريق العمل", "timing": "٣:٢٠" },
-          { "lesson_name": "فهم التنظيم الهرمي لفريق الإنتاج", "timing": "٢:٣٩" },
-          { "lesson_name": "عن منصة مفلم", "timing": "١:٣٩" }
+          { "lesson_name": "Importance of Filmmaking", "timing": "3:59" },
+          { "lesson_name": "Stages of Filmmaking", "timing": "2:49" },
+          { "lesson_name": "Production Team Sections", "timing": "3:20" },
+          { "lesson_name": "Understanding the Hierarchical Organization of the Production Team", "timing": "2:39" },
+          { "lesson_name": "About Maflam’s Platform", "timing": "1:39" }
         ]
       }
     ],
     "promoVedio": "string",
-    "estimatedLearningTime": "١٤ دقيقة",
+    "estimatedLearningTime": "14 Minutes",
     "instructors": [
       {
-        "name": "عدي عابد",
+        "name": "Oday Abid",
         "photoUrl": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle42.png",
         "description": [
-         "بدأ عُدّي مسيرته المهنة في الإخراج عام ٢٠١١، بعدما قرر ترك وظيفته الأساسية لمطاردة شغفه في إنشاء المحتوى، أسس عُدّي شركته للإنتاج 77 Films ليتولى معها العديد من المسؤوليات مثل كتابة السيناريو والإخراج والإنتاج. وخلال مسيرته المهنية، أخرج عُدّي أكثر من ٦ برامج تلفزيونية، و موسمين من المسلسل الكوميدي العيلة، والذي عُرض خلال شهر رمضان على قناة SBC، كما أخرج أيضًأ أكثر من ١٢٠ إعلانًا تجاريًا وفيديوهات إعلانية للشركات."
+          "Oday began his directing career in 2011, after leaving his primary job to pursue his passion for content creation. He founded his production company, 77 Films, where he took on various roles including screenwriting, directing, and producing.",
+"Throughout his career, Oday has directed over six television programs and two seasons of the comedy series Al3aila, which aired during Ramadan on SBC Channel. He has also directed more than 120 commercials and promotional videos for companies."
         ]
       }
     ]
   },
   "getPricingCourse1DetailsSecButton": {
-    "SubscribeBtn": "اشتر الآن",
-    "Addtowhishlist": "أضف إلى المفضلة"
+    "SubscribeBtn": "Subscribe",
+    "Addtowhishlist": "Add To Wishlist"
   }
 }

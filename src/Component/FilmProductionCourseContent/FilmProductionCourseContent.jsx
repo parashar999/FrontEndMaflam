@@ -111,7 +111,7 @@ const FilmProductionCourseContent = () => {
             {isOpen ? '-' : '+'}
           </div>
           <h5 className={styles.toggle}>
-            {lessonData[0]?.LessonTitle || 'الدروس'}
+          {direction === "rtl" ? 'الدروس':"Lessons"}
           </h5>
           <hr style={{ opacity: '0.4' }} className={styles.line} />
         </div>
@@ -163,7 +163,7 @@ const QuestionItem = ({ question, lessons }) => {
         <div className={styles.mainAnsTab}>
           <ul style={{ width: '100%', color: 'white'}}>
             {lessons.map((lesson, index) => (
-              <li style={{ width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' , fontWeight:'400' }} key={index}>
+              <li style={{ width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', paddingLeft:'20px', paddingRight:'10px' , fontWeight:'400' }} key={index}>
                 <span><strong>{lesson.lesson_name}</strong> </span>
                 <span>{lesson.timing}</span>
               </li>

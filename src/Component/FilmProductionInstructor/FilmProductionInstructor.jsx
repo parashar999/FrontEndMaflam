@@ -118,7 +118,7 @@ const instructorTitle =
               <h5 key={index}>{lesson.name}</h5>
             ))
           ) : (
-            <h5 className={styles.toggle}>عن المدرب</h5>
+            <h5 className={styles.toggle}>{direction === "rtl" ? "عن المدرب" : "About the Instructor"}</h5>
           )}
 
           <hr style={{opacity:'0.4'}} className={styles.line} />
