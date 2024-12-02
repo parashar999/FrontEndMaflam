@@ -20,7 +20,7 @@ const RequiredAsteriskIcon = () => (
 const ContactForm2 = () => {
   const { ContactUs3ContextDetails, loading, error } =
     useContext(ContactUs3Context);
-  const { language } = useContext(LanguageContext);
+  const { language, direction } = useContext(LanguageContext);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
@@ -820,7 +820,7 @@ const ContactForm2 = () => {
               }
               className={styles.input}
               // placeholder={TrainingPlaceholder}
-              placeholder="Day"
+              placeholder={direction=="rtl"?"اليوم":"Day"}
             />
 
             <input 
@@ -844,7 +844,8 @@ const ContactForm2 = () => {
               }
               className={styles.input}
               // placeholder={TrainingPlaceholder1}
-                 placeholder="Month"
+                 
+              placeholder={direction=="rtl"?"الشهر":"Month"}
             />
             <input 
               style={{
@@ -865,7 +866,7 @@ const ContactForm2 = () => {
               }
               className={styles.input}
               // placeholder={TrainingPlaceholder2}
-                 placeholder="Year"
+              placeholder={direction=="rtl"?"السنة":"Year"}
             />
           </div>
         </div>

@@ -56,9 +56,18 @@ const ContactInformation = () => {
           </div>
           <div className={styles.contactSection}>
             <h3>{emailTitle}</h3>
-            {emailCategory.map((item, index) => (
+            {
+              /*            {emailCategory.map((item, index) => (
               <p key={index}>{item}</p>
-            ))}
+            ))}*/
+            }
+            
+                {direction=="ltr"? <span><p>For inquiries related to Maflam services <span style={{color:'#5AFFFF'}}> Info@maflam.com </span></p>
+                <p>For technical support for the platform  <span style={{color:'#5AFFFF'}}> support@maflam.com </span></p></span>: <span><p> للاستفسارات المتعلقة بخدمات مَفلَم <span style={{color:'#5AFFFF'}}> Info@maflam.com </span></p>
+                <p>للدعم الفني لمنصة مَفلَم<span style={{color:'#5AFFFF'}}> support@maflam.com </span></p></span> }
+
+            
+
           </div>
 
           <div className={styles.contactSection}>
@@ -95,7 +104,7 @@ const ContactInformation = () => {
               </svg>
             </div>
             <h3>{contactNumberTitle}</h3>
-            <p>{contactNumberDescription}</p>
+            <p style={{color:"rgb(90, 255, 255)", direction:"ltr", alignItems:'start' , display:'inline'}} >{contactNumberDescription}</p>
           </div>
 
           <div className={styles.contactSection}>
@@ -133,7 +142,7 @@ const ContactInformation = () => {
             </div>
             <h3>{locationTitle}</h3>
             <p>
-              <span className={styles.blueText}>{locationDescription}</span>
+              <span className={styles.blueText}> <a href="https://maps.app.goo.gl/stUysFNg4J4ioDfZ7"> {locationDescription} </a></span>
             </p>
           </div>
         </div>

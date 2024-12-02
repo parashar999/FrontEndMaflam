@@ -81,7 +81,7 @@ const Footer = () => {
           />
            <ul style={{paddingTop:'20px', paddingBottom:'0px'}}>
               <li  style={{marginBottom:'0px', display:'flex', flexDirection:'row', justifyContent:'center'}} className={styles.socialIcons}>
-                <a href="#" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/%D9%85%D9%8E%D9%81%D9%84%D9%8E%D9%85/" aria-label="LinkedIn">
                   <svg
                     width="33"
                     height="33"
@@ -105,7 +105,7 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                <a href="#" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@maflam.com" aria-label="TikTok">
                   <svg
                     width="33"
                     height="33"
@@ -133,7 +133,7 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                <a href="#" aria-label="Instagram">
+                <a href="https://www.instagram.com/maflam.com_/profilecard/?igsh=MThidXJubTVwNWFrZQ%3D%3D" aria-label="Instagram">
                   <svg
                     width="33"
                     height="33"
@@ -203,7 +203,7 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                <a href="#" aria-label="YouTube">
+                <a href="https://www.youtube.com/@maflamcom" aria-label="YouTube">
                   <svg
                     width="33"
                     height="33"

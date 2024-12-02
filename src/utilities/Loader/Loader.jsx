@@ -1,6 +1,6 @@
 // Loader.js
 import React, { useState, useEffect } from "react";
-import PacmanLoader from "react-spinners/PacmanLoader";
+import { RotatingLines } from "react-loader-spinner";
 
 const Loader = ({ isLoading, timeout = 5000 }) => {
   const [showLoader, setShowLoader] = useState(isLoading);
@@ -29,12 +29,18 @@ const Loader = ({ isLoading, timeout = 5000 }) => {
         justifyContent: "center",
         alignItems: "center",
         zIndex: 100,
-        backgroundColor: "black",
+        backgroundColor: "white",
         opacity: 0.99,
       }}
       className="loader"
     >
-      <PacmanLoader color="#39FFFB" size={100} speedMultiplier={2} />
+      <RotatingLines
+      strokeColor="grey"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="96"
+      visible={true}
+    />
     </div>
   );
 };
