@@ -45,6 +45,7 @@ import {
   PurchaseCancellationProvider,
   SingupPageContextProvider,
   TermsConditionProvider,
+  LastPageProvider
 } from './store';
 
 
@@ -63,6 +64,7 @@ import { useEffect ,useState} from "react";
 
 const App = () => { 
   return (
+    <LastPageProvider>
     <LanguageProvider>
       <Navbar/>
         
@@ -100,6 +102,7 @@ const App = () => {
       </Routes>
       <Footer/>
     </LanguageProvider>
+    </LastPageProvider>
   );
 };
 

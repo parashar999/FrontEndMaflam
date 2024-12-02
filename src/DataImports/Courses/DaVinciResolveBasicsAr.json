@@ -17,7 +17,7 @@
     "banner": "string",
     "lessions": [
     {
-      "SectionTitle1": "",
+      "SectionTitle1": "أساسيات DaVinci Resolve",
       "Lessons": [
         { "lesson_name": "المقدمة", "timing": "٠:٥٣" },
         { "lesson_name": "تنزيل برنامج الديفينشي", "timing": "٠:٥٧" },
@@ -116,7 +116,7 @@
     ]
   },
   "getPricingCourse1DetailsSecButton": {
-    "SubscribeBtn": "اشتر الآن",
+    "SubscribeBtn": "متاح فقط ضمن الباقة الكاملة",
     "Addtowhishlist": "أضف إلى المفضلة"
   }
 }

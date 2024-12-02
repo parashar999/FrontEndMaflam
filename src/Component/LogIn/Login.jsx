@@ -50,12 +50,12 @@ const Login = () => {
           password,
         }
       );
+   
       toast.success(response.data.message);
       auth.login(response.data);
       // console.log(response.data)
      
       setTimeout(() => {
-        
         window.location.href="https://maflam.web.app";
       }, 5000);
       // navigate("/");
@@ -67,6 +67,7 @@ const Login = () => {
 
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
+
       const response = await axios.post(
         "https://backend.maflam.com/maflam/sign-in-with-google",
         { googleCredential: credentialResponse.credential }
@@ -76,7 +77,6 @@ const Login = () => {
       auth.login(response.data);
       // navigate("/");
       setTimeout(() => {
-        console.log(document.referrer);
         window.location.href="https://maflam.web.app";
       }, 2000);
     } catch (error) {

@@ -17,7 +17,7 @@
       "banner": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
       "lessions": [
         {
-          "SectionTitle1": "",
+          "SectionTitle1": "أساسيات Adobe Premiere Pro",
           "Lessons": [
             {
               "lesson_name": "متطلبات النظام الأساسية لأدوبي بريمير برو",
@@ -204,7 +204,7 @@
       ]
   },
   "getPricingCourse1DetailsSecButton": {
-      "SubscribeBtn": "اشتر الآن",
+      "SubscribeBtn": "متاح فقط ضمن الباقة الكاملة",
       "Addtowhishlist":"أضف إلى المفضلة"
   }
 }

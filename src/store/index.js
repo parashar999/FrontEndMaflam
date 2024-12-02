@@ -17,8 +17,10 @@ import {TermsConditionContext,TermsConditionProvider} from './TermsConditionCont
 import {LanguageContext, LanguageProvider } from './LanguageContext.jsx';
 import { BlogsPageContent,BlogsPageContentProvider } from './BlogsPageContent.jsx';
 import { FaqPageContext,FaqPageProvider } from './FaqPageContext.jsx';
-
+import { useLastPage, LastPageProvider } from './LastPageProvider.jsx';
 export {
+    useLastPage,
+    LastPageProvider,
     FaqPageContext,
     FaqPageProvider,
     LanguageContext,

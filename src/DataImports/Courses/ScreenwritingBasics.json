@@ -11,10 +11,10 @@
  "title": "Fundamentals of Screenwriting"    ,
   "description":"This course targets writers with vivid imaginations who aspire to bring their ideas and stories to the big screen. You will learn how to write a professional screenplay and understand the essential elements that producers seek in a successful script.",
   "whatyoulearn":"In this course, you will learn how to generate creative ideas and transform them into a fully developed story. You'll master the art of building a strong plot, creating complex characters, and defining the central conflict and purpose of your narrative. The course will guide you through writing a treatment, structuring your screenplay, understanding different types of dialogue, and planning your scenes. You'll also learn how to craft your ideas into a written screenplay, preparing it for the big screen. Additionally, you will have access to downloadable worksheets for practical exercises to refine your skills. Key topics include constructing a scene, types of characters, creating conflict and purpose, understanding treatments and their types, writing dialogue, crafting a screenplay's conclusion, and revising for production purposes.",
-      "price": "X Riyals",
+      "price": "750 SAR",
       "lecturecount": "54 Lessons",
       "promoPhoto": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
-      "promoVideo": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/Acting/7.1.945_Kaled_Acting_%D8%A7%D9%84%D9%85%D9%82%D8%AF%D9%85%D8%A9_V01.mp4",
+      "promoVideo": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/Writing/1.1.169_AFNAN_WRITING_%D9%85%D9%82%D8%AF%D9%85%D8%A9+%D8%AF%D9%88%D8%B1%D8%A9+%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8%D8%A9_V03.mp4",
       "banner": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/pricing12.png",
       "lessions":[
         {
@@ -99,14 +99,14 @@
             "name":"Afnan Linjawi",
               "photoUrl": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/Rectangle40.png",
               "description": [
-                  "Afnan Linjawi, a Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017. Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments. Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses."
+                   "A Screenwriter with a Master’s degree in Screenwriting from Falmouth University in the UK. Afnan has 10 years of experience in dramatic writing. She began her career writing plays before transitioning to screenwriting in 2017. Afnan has received several awards for her screenwriting, including the ScreenCraft Award for Short Films, the Shockis American Award for Feature Film Treatments, and the Discop Award for Series Treatments. Three of her short films have been produced, with some earning festival awards. She has also contributed to several television series and feature films. Additionally, Afnan has facilitated screenwriting workshops at In5 Media in Dubai and has developed curriculum for screenwriting courses."
 
               ]
           }
       ]
   },
   "getPricingCourse1DetailsSecButton": {
-    "SubscribeBtn": "Subscribe",
+    "SubscribeBtn": "Subscribe Now",
     "Addtowhishlist": "Add To Wishlist"
   }
 }

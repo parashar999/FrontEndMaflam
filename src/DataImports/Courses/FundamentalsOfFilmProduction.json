@@ -10,7 +10,7 @@
     "title": "Fundamentals of Film Production",
     "description":"This course targets aspiring filmmakers with leadership qualities and artistic sensibilities who seek to enhance their comprehensive production skills. Participants will learn how to effectively manage film projects from planning to distribution, focusing on both creative and commercial aspects.",
   "whatyoulearn":"In this course, you will learn the fundamentals of film production and the crucial role of producers in filmmaking. You will master the financial aspects of production, including effective planning, budgeting, and creating detailed schedules. The course will also help you develop the essential skills to oversee the film at every stage, work with distributors, and safeguard the film's intellectual property rights. Additionally, you will cover other important details of production and have access to downloadable files and worksheets for practical exercises to enhance your learning. Key topics include the definition of a producer and their responsibilities, preparing and finalizing budgets, managing daily production orders on set, understanding the role of distributors, and the importance of contracts and how to write them." ,
-   "price": "x Riyals",
+   "price": "650 SAR",
     "lecturecount": "62 Lessons",
     "promoPhoto": "string",
     "promoVideo": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/producing/2.1.650_Ayman_Producing_+%D9%85%D9%82%D8%AF%D9%85%D8%A9+%D8%A7%D9%84%D8%A7%D9%95%D9%86%D8%AA%D8%A7%D8%AC_V3.mp4",
@@ -124,7 +124,7 @@
     ]
   },
   "getPricingCourse1DetailsSecButton": {
-    "SubscribeBtn": "Subscribe",
+    "SubscribeBtn": "Subscribe Now",
     "Addtowhishlist": "Add To Wishlist"
   }
 }

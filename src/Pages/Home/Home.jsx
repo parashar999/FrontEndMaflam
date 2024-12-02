@@ -1,5 +1,4 @@
 import { useContext, useEffect , useState } from "react";
-
 import {
   HomeHero,
   LearnMaflam,
@@ -38,7 +37,6 @@ const Home = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
   useScrollPosition("HomePage", 3900);
-
   const [isLoading, setIsLoading] = useState(true); // Start with the loader visible
 
   return (
