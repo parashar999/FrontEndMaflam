@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './ContentRequired.module.css';
+import styles from './ContentRequired2.module.css';
 
-const ContentRequired = () => {
+const ContentRequired2 = () => {
   const navigate = useNavigate();
 
   // Function to handle the "Go Back" button
@@ -31,4 +31,4 @@ const ContentRequired = () => {
   );
 };
 
-export default ContentRequired;
+export default ContentRequired2;
