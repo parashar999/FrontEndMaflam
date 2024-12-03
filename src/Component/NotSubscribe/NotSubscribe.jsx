@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './NotSubscribe.module.css';
 import { LanguageContext } from '../LanguageContext/LanguageContext';
+import {Link} from 'react-router-dom';
 
 const ContentRequired = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ const ContentRequired = () => {
         </p>
         <div className={styles.buttonContainer}>
           <button className={styles.button} onClick={goBackHandler}> {direction=="ltr"?"Go Back": "عد إلى الوراء"}</button>
-          <button className={styles.button} onClick={contactSupportHandler}> { direction=="ltr" ? "Enroll Now" : "سجل الآن"}</button>
+          <button className={styles.button} >  <Link style={{textDecoration:'none' , color:'black'}}  to="/R2/R3/prc/*"> { direction=="ltr" ? "Enroll Now" : "سجل الآن"} </Link></button>
         </div>
       </div>
     </div>

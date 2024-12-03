@@ -2,41 +2,24 @@ import { useContext } from "react";
 import styles from "./VariousCourse.module.css";
 import { PricingPageContext } from "../../store/PricingPageContext";
 import { useNavigate } from "react-router-dom";
+import { BiDirections } from "react-icons/bi";
+import { LanguageContext } from "../LanguageContext/LanguageContext";
 
 const VariousCourse = () => {
   const { pricingPageContextDetails, loading, error } = useContext(PricingPageContext);
   const navigate = useNavigate();
-
+  const { direction } = useContext(LanguageContext);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
 
   const courses = pricingPageContextDetails?.formattedCourseData || [];
-  const buttonTitle = pricingPageContextDetails?.getPricingCourse1DetailsSecButton?.title || "Buy now";
+  const buttonTitle = direction === 'rtl' ? "اشترك الآن" : "Buy now";
+  const Currency = direction === "SAR";
+
 
   // Define a predefined order for the 11 courses by their `_id`
-  const predefinedOrder = {
-    "672c62b61f099bf569d0f8eb": 1,
-    "672c5ee7da73549420503e9c": 2,
-    "672c6953bd321f82ce18327a": 3,
-    "672c5bb6a7c24e51d0db091e": 4,
-    "672c609ae90c3d8357705c73": 5,
-    "672c6420b3e5c110514f52f9": 6,
-    "672c6cb662d002aa55e9229c": 7,
-    "672c73b06191fae5fb669530": 8,
-    "672c6ec66bea317c7bb13078": 9,
-    "672c7f444f6f4724a95a8e1e":10,
-    "672c76cc9a9df20599166ca0":11
-  };
-
-  // Sort the courses based on the predefined order
-  const sortedCourses = [...courses].sort((a, b) => {
-    const indexA = predefinedOrder[a._id] || Number.MAX_SAFE_INTEGER; // Items not in the predefinedOrder are moved to the end
-    const indexB = predefinedOrder[b._id] || Number.MAX_SAFE_INTEGER;
-    return indexA - indexB;
-  });
 
   const handleCourseClick = (courseId) => {
-    console.log(courseId);
     navigate(`/R2/R4/filmproduction/${courseId}`);
   };
 
@@ -45,27 +28,16 @@ const VariousCourse = () => {
       <div className={styles.container}>
         <h2>{pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title || "Or, choose from our various courses"}</h2>
         <div className={styles.cardsContainer}>
-          {sortedCourses.map((course) => (
+          {courses.map((course) => (
             <div key={course.courseId} className={styles.card}>
-              {/* Video or image based on the presence of promoVedio */}
-              {course.promoVedio ? (
-                <video 
-                  src={course.promoVedio} 
-                  loop 
-                  playsInline 
-                  controls 
-                  alt={course.title} 
-                  className={styles.cardImage} 
-                />
-              ) : (
-                <img 
-                  src={course.promoPhoto || ""} 
-                  alt={course.title} 
-                  className={styles.cardImage} 
-                />
-              )}
+              <video 
+                src={course.promoVideo}
+                controls
+              >
+              </video>
+           
 
-              {/* Instructors Section */}
+     
               <div 
                 style={{ 
                   display: "flex", 
@@ -114,10 +86,10 @@ const VariousCourse = () => {
                 />
                 <div className={styles.footer}>
                   <div className={styles.footerblocks}>
-                    <div className={styles.footerblocks}>
+                    <div style={{display:'flex', flexDirection:'row', textAlign:'center', alignItems:'center', justifyContent:'center'}} className={styles.footerblocks}>
                       <span className={styles.price}>{course.price}</span>
                       &nbsp;
-                      <span className={styles.para}></span>
+                      <span className={styles.para}>SAR</span>
                     </div>
                     <span className={styles.line}>|</span>
                     <div className={styles.footerblocks}>
@@ -132,9 +104,9 @@ const VariousCourse = () => {
                   </div>
                   <button
                     className={styles.buyNow}
-                    onClick={() => handleCourseClick(course._id)}
+                    onClick={() => handleCourseClick(course.id)}
                   >
-                    {course.btnTitle}
+                    {buttonTitle}
                   </button>
                 </div>
               </div>
