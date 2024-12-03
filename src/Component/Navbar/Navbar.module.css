@@ -272,6 +272,9 @@ background: #18232C;
 
 .profileContainer {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .profileImage {
@@ -284,6 +287,7 @@ background: #18232C;
 .username {
   font-size: 17px;
   margin-left: 10px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
@@ -294,7 +298,7 @@ background: #18232C;
   background: rgba(26, 34, 40, 0.9);
   position: absolute;
   top: 60px;
-  right: -70px;
+ 
   position: absolute;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: var(--Accent-Accent-50, #F6FFFF);
@@ -449,5 +453,17 @@ background: #18232C;
   .navbar
   {
     top: 0px;
+  }
+  .profileContainer
+  {
+    flex-direction: column;
+  }
+  .profile
+  {
+    flex-direction: column;
+  }
+  .profileMenu
+  {
+    top: 150px;
   }
 }

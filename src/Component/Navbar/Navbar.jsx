@@ -74,7 +74,7 @@ const Navbar = () => {
     setUser(null);
     navigate("/login");
   };
-  
+
 
   return (
     <div
@@ -84,7 +84,7 @@ const Navbar = () => {
       <nav
         className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       >
-        <Link  onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false)}} to="/">
+        <Link onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false) }} to="/">
           <img src={logo1} alt="Logo" className={styles.logo} />
         </Link>
         <div className={styles.menuelements}>
@@ -108,13 +108,12 @@ const Navbar = () => {
                     >
                       {item.name}
                       <span
-                        className={`${styles.arrow} ${
-                          openDropdown === item.name
+                        className={`${styles.arrow} ${openDropdown === item.name
                             ? language === "ar"
                               ? styles.rotate
                               : styles.rotate1
                             : ""
-                        }`}
+                          }`}
                       >
                         &#8595;
                       </span>
@@ -126,7 +125,7 @@ const Navbar = () => {
                             to={subItem.href}
                             key={subIndex}
                             className={styles.dropdownitems}
-                            onClick={()=>{setOpenDropdown(null); setIsHamburgerOpen(false)}}
+                            onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false) }}
                           >
                             &nbsp;&nbsp;
                             <img
@@ -145,7 +144,7 @@ const Navbar = () => {
                     )}
                   </>
                 ) : (
-                  <Link to={item.href} onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; }} >{item.name}</Link>
+                  <Link to={item.href} onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false); }} >{item.name}</Link>
                 )}
               </div>
             ))}
@@ -156,23 +155,49 @@ const Navbar = () => {
               <img src={assests.Magnifine} alt="Search Icon" />
             </Link>
           </div>
-          <div  className={styles.rightLinks}>
+          <div className={styles.rightLinks}>
             {user ? (
-              <div className={styles.profileContainer}>
-                <div className={styles.profile} onClick={()=>{toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false) ;}}>
+              <div  className={styles.profileContainer}>
+                <div className={styles.profile} onClick={() => { toggleProfileMenu(); setOpenDropdown(null);  }}>
                   <img
                     src={userDetails.userPhoto}
                     alt="Profile"
                     className={styles.profileImage}
                   />
-                  <span className={styles.username}>{`${
-                    userDetails.usernameInEng || userDetails.usernameInArb
-                  }`}</span>
+                  <span className={styles.username}>{`${userDetails.usernameInEng || userDetails.usernameInArb
+                    }`}</span>
+                  <span>
+
+                    {profileMenuItems.length > 0 && (
+                      <span key={0}>
+                        <img
+                          src={profileMenuItems[0].icon}
+                          alt={profileMenuItems[0].name}
+                          className={styles.subIcon}
+                        />
+                        &nbsp;
+                        {profileMenuItems[0].name === "Log out" || profileMenuItems[0].name === "تسجيل الخروج" ? (
+                          <span onClick={handleLogoutClick}>{profileMenuItems[0].name}</span>
+                        ) : (
+                          <Link
+                            to={profileMenuItems[0].href || "#"}
+                            onClick={() => {
+                              toggleProfileMenu();
+                              setOpenDropdown(null);
+                              setIsHamburgerOpen(false);
+                            }}
+                          >
+                            {profileMenuItems[0].name}
+                          </Link>
+                        )}
+                      </span>
+                    )}
+                  </span>
                 </div>
                 {isProfileMenuOpen && (
                   <div className={styles.profileMenu}>
                     <ul>
-                      {profileMenuItems.filter((item)=>item.name!="My Profile" && item.name!="My Certificates" && item.name!="My Subscriptions" && item.name!="الملف الشخصي الخاص بي" && item.name!="شهاداتي" && item.name!="اشتراكاتي").map((item, index) => (
+                      {profileMenuItems.slice(1,profileMenuItems.length).filter((item) => item.name != "My Profile" && item.name != "My Certificates" && item.name != "My Subscriptions" && item.name != "الملف الشخصي الخاص بي" && item.name != "شهاداتي" && item.name != "اشتراكاتي").map((item, index) => (
                         <li key={index}>
                           <img
                             src={item.icon}
@@ -183,7 +208,7 @@ const Navbar = () => {
                           {item.name === "Log out" || item.name === "تسجيل الخروج" ? (
                             <span onClick={handleLogoutClick}>{item.name}</span>
                           ) : (
-                            <Link to={item.href || "#"} onClick={()=>{toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false) ; }}  >{item.name}</Link>
+                            <Link to={item.href || "#"} onClick={() => { toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false); }}  >{item.name}</Link>
                           )}
                         </li>
                       ))}
@@ -195,9 +220,9 @@ const Navbar = () => {
               <>
                 {navItems1.find((item) => item.createAccount) && (
                   <Link
-                    
+
                     to="/signup"
-                    onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; }}
+                    onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false); }}
                     className={`${styles.signupButton} ${styles.navButton}`}
                   >
                     {
@@ -207,17 +232,17 @@ const Navbar = () => {
                   </Link>
                 )}
                 {navItems1.find((item) => item.logIn) && (
-                  <span style={{display:'flex', flexDirection:'row-reverse', paddingRight:'10px'}}>
-                    <span style={{ marginLeft: "10px", transform:language=='ar'?"":'scaleX(-1)' }}>{arrow}</span>
-                  <Link
-                    to="/login"
-                    onClick={()=>{ setOpenDropdown(null); setIsHamburgerOpen(false) ; }}
-                    className={`${styles.loginButton} ${styles.navButton}`}
-                  >
-                    
-                    {navItems1.find((item) => item.logIn).logIn.name}
+                  <span style={{ display: 'flex', flexDirection: 'row-reverse', paddingRight: '10px' }}>
+                    <span style={{ marginLeft: "10px", transform: language == 'ar' ? "" : 'scaleX(-1)' }}>{arrow}</span>
+                    <Link
+                      to="/login"
+                      onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false); }}
+                      className={`${styles.loginButton} ${styles.navButton}`}
+                    >
+
+                      {navItems1.find((item) => item.logIn).logIn.name}
                     </Link>
-                    
+
                   </span>
                 )}
               </>

@@ -1,3 +1,5 @@
+import NotSubscribe from './NotSubscribe';
+
 export { default as AboutInstructor } from './AboutInstructor';
 export { default as BlogHeader } from './BlogHeader';
 export { default as BlogHero } from './BlogHero';
@@ -82,3 +84,4 @@ export { default as WishlistArticle } from './WishlistArticle';
 export { default as WishlistEbookCard } from './WishlistEbookCard';
 export { default as WishlistSpecializedCourses } from './WishlistSpecializedCourses';
 export { default as YouTubeChannel } from './YouTubeChannel';
+export {default as NotSubscribe} from './NotSubscribe';

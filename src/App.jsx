@@ -27,6 +27,7 @@ import {
   ResetPasswordPage,
   SuccessMessagePage,
   FalioursMassagePage,
+  NoSubscriptionPage,
 } from "./Pages";
 
 //  Language Context Import
@@ -90,6 +91,7 @@ const App = () => {
         <Route path="/mycertificate" element={<MyCertificate />} />
         <Route path="/ebooktwo" element={<EbookTwo />} />
         <Route path="/blogDetails/:id" element={<BlogEjsPage />} />
+        <Route path="/NotSubscribedyet" element={<NoSubscriptionPage/>}/>
         <Route path="/terms&condition" element={<HomePageProvider> <TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} />
@@ -99,6 +101,7 @@ const App = () => {
         <Route path="/privacypolicy" element={<HomePageProvider><PrivacyPolicyProvider><PrivacyPolicyPage /></PrivacyPolicyProvider></HomePageProvider>} />
         <Route path="/mywishlist" element={<HomePageProvider><EbookPageContextProvider><AboutusPageProvider><MyWishlist /></AboutusPageProvider></EbookPageContextProvider></HomePageProvider>} />
         <Route path="/*" element={<PageNotFoundPage/>}/>
+        
       </Routes>
       <Footer/>
     </LanguageProvider>
