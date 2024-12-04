@@ -52,16 +52,16 @@
           </button>
         </div>
         <div className={styles.playButtonContainer}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="190" height="189" viewBox="0 0 190 189" fill="none">
+          {/* <svg xmlns="http://www.w3.org/2000/svg" width="190" height="189" viewBox="0 0 190 189" fill="none">
     <rect x="190" y="188.271" width="190" height="187.543" rx="93.7715" transform="rotate(-180 190 188.271)" fill="white" fill-opacity="0.2"/>
     <path d="M82.2246 63.6997L123.282 91.1755C125.65 92.7596 125.65 96.24 123.282 97.8241L82.2246 125.3C79.5669 127.079 76 125.174 76 121.976L76 67.024C76 63.826 79.5669 61.9211 82.2246 63.6997Z" stroke="#39FFFB" stroke-width="2.5"/>
-  </svg>
+  </svg> */}
         </div>
         <div className={styles.textContainer}>
-          <p className={styles.infoText}>
+          {/* <p className={styles.infoText}>
             {coursesData.find((course) => course.title)?.title ||
               "Explore the paths and choose the one that's right for you"}
-          </p>
+          </p> */}
         </div>
       </div>
       </div>

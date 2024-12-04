@@ -372,6 +372,99 @@ export const assests = {
     // icon : youtubeicon
 //        },
 // ] 
+
+export   const BundleCourseCard = [
+  {
+    id: 1,
+    title: "Fundamentals of Film Directing",
+    description:
+      "This course will focus on explaining the role of the director and how he implements his vision in the film. It will also cover how to prepare for the film, direct the actors, and deal with the work team, in addition to all the directing rules.",
+        
+    imageUrl: variousCourse1,
+  },
+  {
+    id: 2,
+    title: "Fundamentals of Film Production",
+    description:
+      "In this course, you will learn all the production details, starting from conducting a feasibility study for the film and determining the budget, contracting the work team, managing the filming location, and even entering the film into the editing room.",
+   
+    imageUrl: variousCourse2,
+  },
+  {
+    id: 3,
+    title: "Fundamentals of Screenwriting",
+    description:
+      "In this course, you will learn how to write a cinematic treatment for your story, build the scenario with all its elements, delve deeply into how to create exciting and deep characters, and understand the subject and message while writing the story.",
+    
+    imageUrl: Checkout,
+  },
+  {
+    id: 4,
+    title: "Fundamentals of Acting",
+    description:
+      "This course will focus on explaining the director's role and how to execute their vision in the film. It will also cover how to prepare for the film, direct actors, collaborate with the crew, and address all the directing principles.",
+   
+    imageUrl: variousCourse3,
+  },
+  {
+    id: 5,
+    title: "Fundamentals of Sound Recording",
+    description:
+      "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
+  
+    imageUrl: variousCourse4,
+  },
+  {
+    id: 6,
+    title: "Fundamentals of Cinematography",
+    description:
+      "In this course, you will learn all the production details, starting with conducting a feasibility study for the film and setting the budget, hiring the crew, managing the filming location, and all the way to the film's entry into the editing room.",
+    
+    imageUrl: variousCourse5,
+  },
+  
+];
+
+export const BundleExclusiveCourseCard = [
+ 
+  {
+    id: 1,
+    title: "Fundamentals of Editing in Vegas Pro",
+    description:"You will learn the main features of Vegas Pro in this course, including how to create a project file, split files, adjust the right segments, add effects and graphics, work with the audio and video tracks, and understand the general rules of editing",
+   
+    imageUrl: variousCourse2,
+  },
+  {
+    id: 2,
+    title: "Fundamentals of Editing in Davinci Resolve",
+    description:"In this course, you will learn how to use many functions of DaVinci Resolve, such as cutting, editing, merging, and coloring tracks, managing the media pool, and adding effects and graphics. You will also learn how to set up a project, adjust the audio track, and have full control over all the program's options.",
+    
+    imageUrl: Checkout,
+  },
+  {
+    id: 3,
+    title: "Fundamentals of Editing in Adobe Premiere Pro",
+    description:"In this course, you will master the use of Premiere, learning how to start a project and utilize all available tools and effects. You will also cover exporting files in different formats, adjusting color and sound sharpness, and other details of professional editing",
+   
+    imageUrl: variousCourse3,
+  },
+  {
+    id: 4,
+    title: "Working in Film Industry",
+    description:"In this course, you will learn all the details related to a career in filmmaking that can make you a professional and responsible filmmaker. You will learn how to organize your day, what to bring with you to the set, how to set your rates, how to handle criticism, how to work with the crew, and how to land your first projects.",
+  
+    imageUrl: variousCourse4,
+  },
+  {
+    id: 5,
+    title: "An Introduction to Filmmaking",
+    description:"In this course, you will learn the best ways to start planning and preparing for a film, the stages of filmmaking and their divisions based on the film industry. You will also get to know the Maflam platform and how to access everything easily",
+    
+    imageUrl: variousCourse5,
+  },
+  
+];
+
 export const youtubeChannel = [
   {
     title: "برنامج يقدمه مدير التصوير أسامة ربيحان، ليشرح بالتفصيل معدات التصوير المختلفة، وكيفية استخدامها بشكل يتناسب مع فيلمك.",

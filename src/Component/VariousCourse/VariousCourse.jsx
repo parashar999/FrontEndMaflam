@@ -87,7 +87,7 @@ const VariousCourse = () => {
                 <div className={styles.footer}>
                   <div className={styles.footerblocks}>
                     <div style={{display:'flex', flexDirection:'row', textAlign:'center', alignItems:'center', justifyContent:'center'}} className={styles.footerblocks}>
-                      <span className={styles.price}>{course.price}</span>
+                      <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":course.price}</span>
                       &nbsp;
                       <span className={styles.para}>SAR</span>
                     </div>

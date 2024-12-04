@@ -28,10 +28,12 @@ import {
   SuccessMessagePage,
   FalioursMassagePage,
   NoSubscriptionPage,
+  // BundlePage
 } from "./Pages";
 
 //  Language Context Import
 import { LanguageContext, LanguageProvider } from "./Component/LanguageContext/LanguageContext.jsx";
+import BundlePage from "./Pages/BundlePage/BundlePage.jsx";
 
 
 // Context and State Management Imports
@@ -96,6 +98,7 @@ const App = () => {
         <Route path="/NotSubscribedyet" element={<NoSubscriptionPage/>}/>
         <Route path="/terms&condition" element={<HomePageProvider> <TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/faqs" element={<FaqPage />} />
+        <Route path="/bundle" element={<BundlePage />} />
         <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} />
         <Route path="/terms&condition" element={<HomePageProvider><TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/purchaseCancellation" element={<HomePageProvider><PurchaseCancellationProvider><PurchaseCancellationPage /></PurchaseCancellationProvider></HomePageProvider>} />

@@ -34,7 +34,7 @@ import
 } from "../../hooks"
 
 const Home = () => {
-  const { homeScreenDetails, loading, error } = useContext(HomePageContext);
+  const { homeScreenDetails, loading, error     } = useContext(HomePageContext);
 
   useScrollPosition("HomePage", 3900);
   const [isLoading, setIsLoading] = useState(true); // Start with the loader visible

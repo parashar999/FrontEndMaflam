@@ -154,7 +154,7 @@ const FundamentalFilmProduction = () => {
                 // onClick={() => checkoutpage(courseDataId.id)}>
                 onClick={() => checkoutpage(courseDataId.id)}>
                 <FaShoppingCart style={{height:'24px',width:'24px'}} /> &nbsp;&nbsp;
-                <span style={{width:'100%' }}>{buttonData.title===0?buttonData.title:"Only Available With Bundle"}</span>
+                <span style={{width:'100%' }}>{courseDataId.price==="0"?"Only Available With Bundle":buttonData.title}</span>
               </button>
               <button className={styles.addtowishlist}>
                 <FaHeart style={{height:'24px',width:'24px'} }  />
