@@ -197,7 +197,7 @@ const Navbar = () => {
                 {isProfileMenuOpen && (
                   <div className={styles.profileMenu}>
                     <ul>
-                      {profileMenuItems.slice(1,profileMenuItems.length).filter((item) => item.name != "My Profile" && item.name != "My Certificates" && item.name != "My Subscriptions" && item.name != "الملف الشخصي الخاص بي" && item.name != "شهاداتي" && item.name != "اشتراكاتي").map((item, index) => (
+                      {profileMenuItems.slice(1,profileMenuItems.length).filter((item) =>  item.name != "My Certificates" && item.name != "My Subscriptions" && item.name != "شهاداتي" && item.name != "اشتراكاتي").map((item, index) => (
                         <li key={index}>
                           <img
                             src={item.icon}

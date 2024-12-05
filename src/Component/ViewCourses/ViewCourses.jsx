@@ -18,7 +18,7 @@
 
 
       const Courses = ()=>{
-        navigate("R2/R3/prc#topofcontainer")
+        navigate("R2/R3/prc/All")
       }
 
     const getCardClassName = (index) => {
@@ -42,7 +42,7 @@
                 color: "white",
               }}
             >
-            <Link to="/R2/R3/prc">   {course.name}</Link>
+            <Link to="/R2/R3/prc/all">   {course.name}</Link>
             </div>
           ))}
         </div>
