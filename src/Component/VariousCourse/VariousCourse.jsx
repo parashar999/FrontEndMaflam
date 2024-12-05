@@ -87,9 +87,48 @@ const VariousCourse = () => {
                 <div className={styles.footer}>
                   <div className={styles.footerblocks}>
                     <div style={{display:'flex', flexDirection:'row', textAlign:'center', alignItems:'center', justifyContent:'center'}} className={styles.footerblocks}>
-                      <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":course.price}</span>
-                      &nbsp;
-                      <span className={styles.para}>SAR</span>
+                    {/* <span className={styles.price}>
+  {course.price === "0" ? (
+    "Only Available With Bundle"
+  ) : (
+    <>
+      <p className={styles.newPrice}>
+        {`${(course.price / 2)}`} <span className={styles.discount} style={{lineHeight:"20%"}}>50% OFF Special Launch Offer</span>
+      </p>
+      <p className={styles.oldPrice}>${course.price}</p>
+    </>
+  )
+  }
+</span> */}
+<div className={styles.priceContainer}>
+<span className={styles.price}>
+  {course.price === "0" ? (
+    "Only Available With Bundle"
+  ) : (
+    <>
+      <div className={styles.display}>
+        
+      </div>
+      <div className={styles.oldprices}>
+      <p className={styles.oldPrice}><span className={styles.newprice}>{`${course.price} SAR`} </span>  &nbsp;<span className={styles.newpricess}>  {`${(course.price / 2)} SAR`}</span></p>
+      {/* <p className={styles.newPrice}>
+          {`${(course.price / 2)} SAR`}
+        </p> */}
+        <span className={styles.discount}>
+          50% OFF Special Launch Offer
+        </span>
+        
+      </div>
+   
+    </>
+  )}
+     </span>
+</div>
+
+
+                      {/* <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":course.price}</span>
+                      &nbsp; */}
+                      {/* <span className={styles.para}>SAR</span> */}
                     </div>
                     <span className={styles.line}>|</span>
                     <div className={styles.footerblocks}>
