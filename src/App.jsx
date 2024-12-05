@@ -74,10 +74,10 @@ const App = () => {
         
       <Routes>
         
-        //Route2
+      
         <Route path="/R2/*" element={<Route2/>} />
          
-        // Route1  
+       
         <Route path="/checkout/:paymentId" element={<CheckoutPaymentContextProvider><Checkouts /></CheckoutPaymentContextProvider>} />
         <Route path="/login" element={<LoginPageContextProvider><LoginPage /></LoginPageContextProvider>} />
         <Route path="/signUp" element={<SingupPageContextProvider><SignUpPage /></SingupPageContextProvider>} />

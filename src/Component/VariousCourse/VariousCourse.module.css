@@ -14,6 +14,80 @@
   margin-bottom: 50px;
 }
 
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #39fffb; 
+  
+}
+
+.display {
+  display: flex;
+}
+
+.discount {
+  margin-left: 0; /* Removed left margin to align properly */
+  line-height: 1.2; 
+  font-size: 1rem;
+  font-weight: bold;
+  color: #39fffb; /* Red for the discount label */
+  display: block; /* Ensures it’s on a new line */
+  margin-top: 0.2rem;
+  font-weight: bold;
+}
+
+.oldprices p {
+  font-size: 1rem;
+  color: #39fffb; /* Grey for the old price */
+
+  margin: 0; /* Removed top margin for proper alignment */
+}
+
+.newprice {
+  font-weight: bold;
+  text-decoration: line-through;
+}
+.newpricess {
+  font-weight: bold !important;
+ 
+}
+
+ /* price css  */
+ /* .price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.newPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5722; 
+}
+.display{ display: flex}
+
+.discount {
+  margin-left: 0.5rem;
+  line-height: 20% !important;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff0000; 
+}
+
+.oldPrice {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+  margin-top: 0.2rem;
+} */
+
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
