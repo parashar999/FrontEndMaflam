@@ -1,5 +1,5 @@
 
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, lazy } from "react";
 import styles from "./FundamentalFilmProduction.module.css";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { CiClock2 } from "react-icons/ci";
@@ -8,12 +8,14 @@ import auth from "../../Auth/Auth";
 import { useNavigate } from "react-router-dom";
 import FilmProductionInstructor from "../FilmProductionInstructor/FilmProductionInstructor";
 import FilmProductionCourseContent from "../../Component/FilmProductionCourseContent/FilmProductionCourseContent";
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext";
 
 const FundamentalFilmProduction = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { filmproductionScreenDetails, loading, error } = useContext(
     FilmProductionContext
   );
+  
   // const {
   //   pricingPageContextDetails,
   //   loading: pricingLoading,
@@ -26,6 +28,7 @@ const FundamentalFilmProduction = () => {
   const userDetails = auth.getAuthData();
   const navigate = useNavigate();
 
+ 
   const toggleContent = () => {
     setIsOpen(!isOpen);
   }
@@ -55,7 +58,7 @@ const FundamentalFilmProduction = () => {
   const learningTitle =
     filmproductionScreenDetails?.formattedCourseData?.descriptio ||
     "What you will learn";
-
+    const { direction } = useContext(LanguageContext);
   console.log("hello ", courseData);
   console.log("hello by id", courseDataId);
 
@@ -98,10 +101,14 @@ const FundamentalFilmProduction = () => {
     </clipPath>
   </defs>
 </svg>
-                {courseDataId.price
-                  ? `${courseDataId.price} ${courseDataId.para}`
-                  : "750 SAR"}
-              
+{direction === "rtl" 
+  ? (courseDataId.price === "٧٥٠" 
+      ? "متاح فقط ضمن الباقة الكاملة" 
+      : `${courseDataId.price} ${courseDataId.para}`) 
+  : (courseDataId.price === "0" 
+      ? "Available only with Bundle" 
+      : `${courseDataId.price ? `${courseDataId.price} ${courseDataId.para}` : "750 SAR"}`)}
+
               </div>
             </div>
             <div className={styles.maincontainer}>
@@ -114,7 +121,9 @@ const FundamentalFilmProduction = () => {
                   >
                     {isOpen ? "-" : "+"}
                   </div>
-                  <h5 className={styles.toggle}>{learningTitle}</h5>
+                  <h5 className={styles.toggle}>
+                  {direction === "rtl" ? "ماذا ستتعلم": "What you will learn"}
+                  </h5>
                   <hr  style={{opacity:'0.4'}} className={styles.line} />
                 </div>
                 {isOpen && (
@@ -135,13 +144,11 @@ const FundamentalFilmProduction = () => {
           <div className={styles.courseVideo}>
             {/* <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
             <div className={styles.videofixed}> <video src={courseImg.promoVideo } controls alt="Course Preview" /></div> */}
-            {courseImg.promoVideo ? (
+          
               <div className={styles.videofixed}>
-                <video src={courseImg.promoVideo} controls alt="Course Preview" />
+                <img src={courseImg.promoVideo?courseImg.promoVideo:courseImg.banner} controls alt="Course Preview" />
               </div>
-            ) : (
-              <img src={courseImg.promoPhoto || ""} alt="Course Preview" />
-            )}
+          
 
             <div className={styles.videocontent}>
               <p>
@@ -158,7 +165,9 @@ const FundamentalFilmProduction = () => {
               </button>
               <button className={styles.addtowishlist}>
                 <FaHeart style={{height:'24px',width:'24px'} }  />
-                <span style={{width:"100%"}}>Add to wishlist</span>
+                <span style={{width:'100%'}}>
+                {direction === "rtl" ? "قائمة المفضلات ": "Add to Wishlist"}
+                </span>
               </button>
             </div>
           </div>
