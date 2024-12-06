@@ -20,7 +20,8 @@ const ContentRequired = () => {
       <div className={styles.contentWrapper}>
         <h1 className={styles.title}>Content Required</h1>
         <p style={{maxWidth:'100%'}} className={styles.description}>
-        We’re working on the content you’re looking for! It will be available shortly. In the meantime, if you have any questions or need assistance, feel free to contact our support team by clicking on the 'Contact Support' button. Thank you for your patience and understanding!
+          We are sorry, but the content you are looking for is currently unavailable or missing.
+          Please check the link or try again later. If you need help, feel free to contact our support team.
         </p>
         <div className={styles.buttonContainer}>
           <button className={styles.button} onClick={goBackHandler}>Go Back</button>
