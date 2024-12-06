@@ -65,6 +65,7 @@ const PrivateRoute = ({ children }) => {
 
 import { useEffect ,useState} from "react";
 import ContentRequiredPage2 from "./Pages/ContentRequiredPage2/ContentRequiredPage2.jsx";
+import Checkouts2 from "./Pages/Checkouts2/index.js";
 
 const App = () => { 
   return (
@@ -77,7 +78,7 @@ const App = () => {
       
         <Route path="/R2/*" element={<Route2/>} />
          
-       
+        <Route path="/checkout2" element={<Checkouts2/>} />
         <Route path="/checkout/:paymentId" element={<CheckoutPaymentContextProvider><Checkouts /></CheckoutPaymentContextProvider>} />
         <Route path="/login" element={<LoginPageContextProvider><LoginPage /></LoginPageContextProvider>} />
         <Route path="/signUp" element={<SingupPageContextProvider><SignUpPage /></SingupPageContextProvider>} />
