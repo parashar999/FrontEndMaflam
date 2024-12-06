@@ -29,14 +29,14 @@ const VariousCourse = () => {
         <h2>{pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title || "Or, choose from our various courses"}</h2>
         <div className={styles.cardsContainer}>
           {courses.map((course) => (
-            <div key={course.courseId} className={styles.card}>
-              <video 
-                src={course.promoVideo}
-                controls
+            <div style={{overflow:'hidden'}} key={course.courseId} className={styles.card}>
+             <div  style={{height:'280px', overflow:'hidden'}}>
+              <img  style={{paddingTop:'40px', width:'100%'}}
+                src={course.promoVideo?course.promoVideo:course.banner}
               >
-              </video>
+              </img>
            
-
+              </div>
      
               <div 
                 style={{ 

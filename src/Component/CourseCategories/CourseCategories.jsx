@@ -8,6 +8,7 @@ const CourseCategories = () => {
 
   // Assuming homeScreenDetails contains an array called "specializedCoursesData"
   const specializedCoursesData = homeScreenDetails?.specializedCoursesData || [];
+  console.log(specializedCoursesData);
   const specializedCoursesDataTitle = homeScreenDetails?.specializedCoursesDataTitle || {};
   const navigate = useNavigate();
 
@@ -82,15 +83,9 @@ const CourseCategories = () => {
         <h2>{specializedCoursesDataTitle.title}</h2>
         <div className={styles.coursesGrid}>
           {sortedCourses.map((course, index) => (
-            <div key={index} className={styles.coursesCard}>
+            <div style={{overflow:'hidden',display:'flex', alignItems:'center', justifyContent:'center'}} key={index} className={styles.coursesCard}>
               <Link to="R2/R3/prc">
-                <video
-                  muted
-                  ref={(el) => (videoRefs.current[index] = el)}
-                  src={course.videoUrl}
-                  loop
-                  className={styles.coursesImage}
-                />
+                <img style={ {width:'145%', backgroundColor:'color', PaddingTop:'20px',  position:'relative', left:'-20px'}}  src={course.videoUrl} alt="" />
               </Link>
               <div style={{ position: "absolute", bottom: "10px", zIndex: "10" }}>
                 <p onClick={() => handleCourseClick(course._id)}>
