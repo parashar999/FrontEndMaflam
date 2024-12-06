@@ -45,7 +45,7 @@
 
 .oldprices p {
   font-size: 1rem;
-  color: #39fffb; /* Grey for the old price */
+  color: #39fffb; 
 
   margin: 0; /* Removed top margin for proper alignment */
 }

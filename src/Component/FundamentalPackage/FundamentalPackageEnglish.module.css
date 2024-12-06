@@ -118,6 +118,36 @@
   color: aqua;
   font-size: 25px;
 }
+mrpprice {
+  margin-top: 10px;
+  color: aqua;
+  font-weight: bold !important;
+  text-decoration: line-through !important;
+  color: red;
+
+}
+
+.lines1{
+  margin-top: 10px;
+  font-weight: bold !important;
+  text-decoration: line-through !important;
+  color: aqua;
+  font-size: 30px;
+}
+.mrpprice span{
+  font-weight: bold !important;
+  font-size: 70px
+  
+  ;
+ 
+
+}
+
+.price {
+  font-weight: bold;
+  color: black; /* Adjust this color as per your design */
+}
+
 
 .item span {
   margin-top: 10px;

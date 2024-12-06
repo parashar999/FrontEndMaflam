@@ -1,38 +1,27 @@
 
 // import { useContext, useEffect, useState } from "react";
 // import styles from "./PaymentForm2.module.css";
-// import { Link, useParams } from "react-router-dom";
-
+// import { Link } from "react-router-dom";
 // import axios from "axios";
 // import { ToastContainer, toast } from "react-toastify";
 // import auth from "../../Auth/Auth";
-
-
+// import "react-toastify/dist/ReactToastify.css";
+// import { cardDetails } from "../../assets/assests";
+// import { LanguageContext } from "../../store";
 
 // const PaymentForm2 = () => {
-
-
-
-
-
-  
-  
-
 //   const checkoutpage = async () => {
-//     const userdetails = auth.getAuthData();
-//     const token = userdetails?.token; // Ensure token is available
+//     const userDetails = auth.getAuthData();
+//     const token = userDetails?.token;
+
 //     const requestBody = {
-//       amount: 750,
-//       courseId: paymentID,
+//       amount: 2200,
+//       // courseId: "paymentID", // Replace with dynamic paymentID if applicable
 //       callback: "https://maflam.web.app/success",
-//       return :"https://maflam.web.app/success",
-//       // callback: "https://maflam.web.app/success",
-//       // return:  "https://maflam.web.app/success",
+//       return: "https://maflam.web.app/success",
 //       token,
-//       //  callback: "http://localhost:5173/success",
-//       // callback: `https://maflam.web.app/checkout/${courseId}`,
 //     };
-  
+
 //     try {
 //       const response = await axios.post(
 //         `https://backend.maflam.com/maflam/paymenttransction`,
@@ -43,13 +32,10 @@
 //           },
 //         }
 //       );
-  
-//       const data = response?.data;
-//       if (data) {
-//         // toast.success(data.message);
-//         // window.open(data.data?.redirect_url, "_blank"); // Ensure URL opens in a new tab
-//         window.location.href = data.data?.redirect_url;  
 
+//       const data = response?.data;
+//       if (data?.data?.redirect_url) {
+//         window.location.href = data.data.redirect_url;
 //       } else {
 //         throw new Error("Invalid response from server");
 //       }
@@ -60,21 +46,27 @@
 //     }
 //   };
 
+//   const {language} =useContext(LanguageContext)
 
-   
+//   const cardDetails = 
+//   language === "ar" ? "":"en";
 //   return (
 //     <div className={styles.maincontainer}>
 //       <div className={styles.container}>
 //         <div className={styles.card}>
-//           <img src={imageSrc} alt="Course" className={styles.image} />
-//           <h2 className={styles.price}> SAR 2200 </h2>
-//           <h3 className={styles.title}>Fundamental Fiml Produvtion </h3>
+//           <img
+//             src={cardDetails.imageSrc}
+//             alt="Course"
+//             className={styles.image}
+//           />
+//           <h2 className={styles.price}>{cardDetails.priceHead}</h2>
+//           <h3 className={styles.title}>{cardDetails.title}</h3>
 //           <hr />
 //           <div className={styles.paymentCard}>
-//             <p className={styles.titles}>{cardDetails[2]?.title || "Payment Methods"}</p>
-//             <img src={cardDetails[3]?.imageUrl} alt="Not Found" />
-//             <img src={cardDetails[4]?.imageUrl} alt="Visa" />
-//             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
+//             <p className={styles.titles}>{cardDetails.paymentTitle}</p>
+//             <img src={cardDetails.cardImg} alt="Visa" />
+//             <img src={cardDetails.cardImg1} alt="MasterCard" />
+//             <img src={cardDetails.cardImg2} alt="Mada" />
 //           </div>
 //           <hr />
 //           <button
@@ -82,20 +74,20 @@
 //             onClick={checkoutpage}
 //             className={styles.payBtn}
 //           >
-//             {cardDetails[12]?.title || "Pay Now"}
+//        {cardDetails.price}
 //           </button>
 //         </div>
 
 //         <div>
-//           <p className=  {styles.termconditions}> {termsDetails[0]?.title || ""} </p>
+//           {/* <p className={styles.termconditions}>{cardDetails.terms.fullText}</p> */}
 //         </div>
 //         <div>
-//           <p className={styles.termconditions1}>
-//             {termsDetails[1]?.title || ""}
-//             <Link to="/terms&condition"> Terms and Conditions </Link>
-//             {termsDetails[2]?.title || ""}
-//             <Link to="/privacy-policy"> Privacy Policy</Link>
-//           </p>
+//           {/* <p className={styles.termconditions1}>
+//             {cardDetails.terms.part1}
+//             <Link to="/terms&condition">Terms and Conditions</Link>
+//             {cardDetails.terms.part2}
+//             <Link to="/privacy-policy">Privacy Policy</Link>
+//           </p> */}
 //         </div>
 //       </div>
 //       <ToastContainer />
@@ -104,46 +96,104 @@
 // };
 
 // export default PaymentForm2;
-import { useContext, useEffect, useState } from "react";
+
+
+
+import { useContext } from "react";
 import styles from "./PaymentForm2.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../Auth/Auth";
 import "react-toastify/dist/ReactToastify.css";
-import { cardDetails } from "../../assets/assests";
-
-// const cardDetails = {
-//   title: "Fundamentals of Acting",
-//   paymentTitle: "Payment by credit or debit card",
-//   images: {
-//     visa: "visa-card-url", // Replace with actual URL
-//     masterCard: "mastercard-card-url", // Replace with actual URL
-//     mada: "mada-card-url", // Replace with actual URL
-//   },
-//   price: "SAR 750.00",
-//   imageSrc: "course-image-url", // Replace with actual URL
-//   terms: {
-//     fullText:
-//       "Your subscription will automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for.",
-//     part1: "By clicking the 'Pay' button above, you agree to the ",
-//     part2: " and acknowledge that you have read our ",
-//   },
-// };
+import { LanguageContext } from "../../store";
+import Checkout   from "../../assets/Checkout.png"
+import  Visa from "../../assets/Visa.png"
+import MasterCard  from "../../assets/MasterCard.png"
+import  Mada  from "../../assets/Mada.png"
 
 const PaymentForm2 = () => {
+  const { language } = useContext(LanguageContext);
+
+  const cardDetails = {
+    en: {
+      title: "Subscribe To The Full Filmmaking Fundamentals Package",
+      paymentTitle: "Payment by credit or debit card",
+      cardImg: Visa,
+      cardImg1: MasterCard,
+      cardImg2: Mada,
+      priceHead: "2200 SAR",
+      price: "Pay SAR 2200",
+      imageSrc: Checkout,
+      termcondition1: "By clicking the 'Pay' button above, you agree to the ",
+      termcondition2: " and acknowledge that you have read our .",
+    },
+    ar: {
+      title: "اشترك في حزمة أساسيات صناعة الأفلام الكاملة",
+      paymentTitle: "الدفع بواسطة بطاقة الائتمان أو بطاقة الخصم",
+      cardImg: Visa,
+      cardImg1: MasterCard,
+      cardImg2: Mada,
+      priceHead: "SAR 2200",
+      price: "إدفع SAR 2200",
+      imageSrc: Checkout,
+      termcondition1: "بالنقر على زر 'إدفع' أعلاه، فإنك توافق على ",
+      termcondition2: "وتقر بأنك قد قرأت .",
+    },
+  };
+  const localizedDetails = cardDetails[language === "en" ? "en" : "ar"];
+
+
+  // const checkoutPage = async () => {
+  //   const userDetails = auth.getAuthData();
+  //   const token = userDetails?.token;
+
+  //   const requestBody = {
+  //     amount: 2200,
+  //     callback: "https://maflam.web.app/success",
+  //     return: "https://maflam.web.app/success",
+  //     token,
+  //   };
+
+  //   try {
+  //     const response = await axios.post(
+  //       `https://backend.maflam.com/maflam/paymenttransction`,
+  //       requestBody,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${token}`,
+  //         },
+  //       }
+  //     );
+
+  //     const data = response?.data;
+  //     if (data?.data?.redirect_url) {
+  //       window.location.href = data.data.redirect_url;
+  //     } else {
+  //       throw new Error("Invalid response from server");
+  //     }
+  //   } catch (err) {
+  //     console.error("Checkout Error:", err);
+  //     const errorMessage = err.response?.data?.message || err.message;
+  //     toast.error(`Error: ${errorMessage}`);
+  //   }
+  // };
+  
   const checkoutpage = async () => {
-    const userDetails = auth.getAuthData();
-    const token = userDetails?.token;
-
+    const userdetails = auth.getAuthData();
+    const token = userdetails?.token; // Ensure token is available
     const requestBody = {
-      amount: 750,
-      courseId: "paymentID", // Replace with dynamic paymentID if applicable
+      amount: 2200,
+      courseId: "673c7b865b27b048813c59cc",
       callback: "https://maflam.web.app/success",
-      return: "https://maflam.web.app/success",
+      return :"https://maflam.web.app/success",
+      // callback: "https://maflam.web.app/success",
+      // return:  "https://maflam.web.app/success",
       token,
+      //  callback: "http://localhost:5173/success",
+      // callback: `https://maflam.web.app/checkout/${courseId}`,
     };
-
+  
     try {
       const response = await axios.post(
         `https://backend.maflam.com/maflam/paymenttransction`,
@@ -154,10 +204,13 @@ const PaymentForm2 = () => {
           },
         }
       );
-
+  
       const data = response?.data;
-      if (data?.data?.redirect_url) {
-        window.location.href = data.data.redirect_url;
+      if (data) {
+        // toast.success(data.message);
+        // window.open(data.data?.redirect_url, "_blank"); // Ensure URL opens in a new tab
+        window.location.href = data.data?.redirect_url;  
+
       } else {
         throw new Error("Invalid response from server");
       }
@@ -167,26 +220,24 @@ const PaymentForm2 = () => {
       toast.error(`Error: ${errorMessage}`);
     }
   };
-  
-
 
   return (
     <div className={styles.maincontainer}>
       <div className={styles.container}>
         <div className={styles.card}>
           <img
-            src={cardDetails.imageSrc}
+            src={localizedDetails.imageSrc}
             alt="Course"
             className={styles.image}
           />
-          <h2 className={styles.price}>{cardDetails.price}</h2>
-          <h3 className={styles.title}>{cardDetails.title}</h3>
+          <h2 className={styles.price}>{localizedDetails.priceHead}</h2>
+          <h3 className={styles.title}>{localizedDetails.title}</h3>
           <hr />
           <div className={styles.paymentCard}>
-            <p className={styles.titles}>{cardDetails.paymentTitle}</p>
-            <img src={cardDetails.cardImg} alt="Visa" />
-            <img src={cardDetails.cardImg1} alt="MasterCard" />
-            <img src={cardDetails.cardImg2} alt="Mada" />
+            <p className={styles.titles}>{localizedDetails.paymentTitle}</p>
+            <img src={localizedDetails.cardImg} alt="Visa" />
+            <img src={localizedDetails.cardImg1} alt="MasterCard" />
+            <img src={localizedDetails.cardImg2} alt="Mada" />
           </div>
           <hr />
           <button
@@ -194,21 +245,17 @@ const PaymentForm2 = () => {
             onClick={checkoutpage}
             className={styles.payBtn}
           >
-            Pay Now
+            {localizedDetails.price}
           </button>
         </div>
-
-        <div>
-          {/* <p className={styles.termconditions}>{cardDetails.terms.fullText}</p> */}
-        </div>
-        <div>
-          {/* <p className={styles.termconditions1}>
-            {cardDetails.terms.part1}
+        {/* <div>
+          <p className={styles.termconditions}>
+            {localizedDetails.termcondition1}
             <Link to="/terms&condition">Terms and Conditions</Link>
-            {cardDetails.terms.part2}
+            {localizedDetails.termcondition2}
             <Link to="/privacy-policy">Privacy Policy</Link>
-          </p> */}
-        </div>
+          </p>
+        </div> */}
       </div>
       <ToastContainer />
     </div>
