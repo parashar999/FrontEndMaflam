@@ -113,9 +113,8 @@ const VariousCourse = () => {
 </div> */}
 
 
-                      <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":course.price}</span>
-                      &nbsp;
-                      <span className={styles.para}>SAR</span>
+                      <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":`${course.price}`}</span>
+                      &nbsp;<span className={styles.para}>{course.price!=="0"&&"SAR"}</span>
                     </div>
                     <span className={styles.line}>|</span>
                     <div className={styles.footerblocks}>
