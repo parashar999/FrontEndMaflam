@@ -42,7 +42,7 @@
                 color: "white",
               }}
             >
-            <Link to="/R2/R3/prc/all">   {course.name}</Link>
+            <Link to="/R2/R3/prc/All">   {course.name}</Link>
             </div>
           ))}
         </div>

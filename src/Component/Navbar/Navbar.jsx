@@ -151,7 +151,7 @@ const Navbar = () => {
           </div>
           <div className={styles.searchContainer}>
             <input type="text" placeholder={placeHolderTitle} />
-            <Link to="/filmproduction">
+            <Link to="/R2/R3/prc/All">
               <img src={assests.Magnifine} alt="Search Icon" />
             </Link>
           </div>
