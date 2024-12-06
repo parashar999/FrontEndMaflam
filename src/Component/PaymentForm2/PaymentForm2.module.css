@@ -16,6 +16,18 @@
     
   }
   
+  .coupon{
+    display: flex;
+    flex-direction: column;
+ 
+  } 
+  .coupon label {
+    margin-top: 20px;
+
+      font-size: 24px;
+      margin-bottom: 5px;
+      display: block;
+    }
   .card {
     width: 100%;
     max-width: 600px;
