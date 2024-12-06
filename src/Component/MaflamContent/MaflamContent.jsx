@@ -29,7 +29,7 @@ const MaflamContent = () => {
 
           <div className={styles.serachoption}>
             <button className={styles.button} onClick={handleScrollToTop}>
-              <Link to="/R2/R3/prc">{aboutUsDetails1[1]?.title || ''}</Link>
+              <Link to="/R2/R3/prc/All">{aboutUsDetails1[1]?.title || ''}</Link>
             </button>
           </div>
         </div>

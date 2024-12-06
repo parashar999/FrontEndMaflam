@@ -74,7 +74,7 @@ function Pricing() {
                 <FundamentalPackage></FundamentalPackage>
                 <div  className={styles.CarouselGradient}>
                 <div id="CourseContainer" >
-                <VariousCourse></VariousCourse>
+                <VariousCourse></VariousCourse> 
                 </div>
                 <CarouselCard></CarouselCard>
                 </div>   
