@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Navbar from "../../Component/Navbar/Navbar";
 import Footer from "../../Component/Footer/Footer";
 import {TermsAndCondition} from "../../Component";
-import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
+// import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 import {
   HomePageContext,
   HomePageProvider,
@@ -19,6 +19,7 @@ import
 {
   useScrollToTopWithDelay
 } from  '../../hooks'
+import { LanguageProvider } from "../../store/LanguageContext.jsx";
 const TermsAndConditionsPage = () => {
   useScrollToTopWithDelay(500);
   const {
