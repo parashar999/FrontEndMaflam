@@ -16,7 +16,7 @@ function SubscribeFundamentalPackage() {
           alt="Video" 
           className={styles.image} 
         />
-        <Link to={"/R2/R3/prc"}>
+        <Link to={"/R2/R3/prc/All"}>
         <button className={styles.subscribeButton}>
             {direction === "rtl" ? "اشترك الآن" : "Subscribe"}
           </button>
