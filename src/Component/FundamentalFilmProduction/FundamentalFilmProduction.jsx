@@ -34,15 +34,29 @@ const FundamentalFilmProduction = () => {
   }
 
 
-
   const checkoutpage = (paymentId) => {
-    // console.log("Button was clicked");
     if (userDetails) {
-      navigate(`/checkout/${paymentId}`);
+      if (courseData.price === "0") {
+        // Navigate to /checkout2 for "Only Available With Bundle"
+        navigate("/checkout2");
+      } else {
+        // Navigate to /checkout/${paymentId} otherwise
+        navigate(`/checkout/${paymentId}`);
+      }
     } else {
+      // Redirect to login if the user is not logged in
       navigate("/login");
     }
   };
+
+  // const checkoutpage = (paymentId) => {
+  //   // console.log("Button was clicked");
+  //   if (userDetails) {
+  //     navigate(`/checkout/${paymentId}`);
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data: {error.message}</p>;
@@ -155,7 +169,7 @@ const FundamentalFilmProduction = () => {
             <div className={styles.videofixed}> <video src={courseImg.promoVideo } controls alt="Course Preview" /></div> */}
           
               <div className={styles.videofixed}>
-                <img src={courseImg.promoVideo?courseImg.promoVideo:courseImg.banner} controls alt="Course Preview" />
+                <img src={courseImg.promoVideo?courseImg.promoVideo:courseImg.banner}  alt="Course Preview" />
               </div>
           
 
