@@ -29,14 +29,14 @@ const VariousCourse = () => {
         <h2>{pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title || "Or, choose from our various courses"}</h2>
         <div className={styles.cardsContainer}>
           {courses.map((course) => (
-            <div key={course.courseId} className={styles.card}>
-              <video 
-                src={course.promoVideo}
-                controls
+            <div style={{overflow:'hidden'}} key={course.courseId} className={styles.card}>
+             <div  style={{height:'280px', overflow:'hidden'}}>
+              <img  style={{paddingTop:'40px', width:'100%'}}
+                src={course.promoVideo?course.promoVideo:course.banner}
               >
-              </video>
+              </img>
            
-
+              </div>
      
               <div 
                 style={{ 
@@ -87,7 +87,33 @@ const VariousCourse = () => {
                 <div className={styles.footer}>
                   <div className={styles.footerblocks}>
                     <div style={{display:'flex', flexDirection:'row', textAlign:'center', alignItems:'center', justifyContent:'center'}} className={styles.footerblocks}>
-                      <span className={styles.price}>{course.price}</span>
+             
+{/* 
+<div className={styles.priceContainer}>
+<span className={styles.price}>
+  {course.price === "0" ? (
+    "Only Available With Bundle"
+  ) : (
+    <>
+      <div className={styles.display}>
+        
+      </div>
+      <div className={styles.oldprices}>
+      <p className={styles.oldPrice}><span className={styles.newprice}>{`${course.price} SAR`} </span>  &nbsp;<span className={styles.newpricess}>  {`${(course.price / 2)} SAR`}</span></p>
+     
+        <span className={styles.discount}>
+          50% OFF Special Launch Offer
+        </span>
+        
+      </div>
+   
+    </>
+  )}
+     </span>
+</div> */}
+
+
+                      <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":course.price}</span>
                       &nbsp;
                       <span className={styles.para}>SAR</span>
                     </div>
