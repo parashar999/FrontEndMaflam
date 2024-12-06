@@ -78,7 +78,7 @@ const App = () => {
       
         <Route path="/R2/*" element={<Route2/>} />
          
-        <Route path="/checkout2" element={<Checkouts2/>} />
+        <Route path="/checkout2" element={ <Checkouts2/>} />
         <Route path="/checkout/:paymentId" element={<CheckoutPaymentContextProvider><Checkouts /></CheckoutPaymentContextProvider>} />
         <Route path="/login" element={<LoginPageContextProvider><LoginPage /></LoginPageContextProvider>} />
         <Route path="/signUp" element={<SingupPageContextProvider><SignUpPage /></SingupPageContextProvider>} />

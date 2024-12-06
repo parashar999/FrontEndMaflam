@@ -1070,22 +1070,55 @@ export const articles =
 
 
 
-export const cardDetails = {
-  title: "Fundamentals of acting",
-  title2: "Payment by credit or debit card ",
-  cardImg: Visa,
-  cardImg1: MasterCard,
-  cardImg2: Mada,
-  priceHead: "750.00  SAR",
-  price: "SAR 750.00 إدفع ",
-  imageSrc: Checkout,
-  para: "Checkout تواصل معنا",
+// export const cardDetails = {
+//   title: "Subscribe To The Full Filmmaking Fundamentals Package",
+//   title2: "Payment by credit or debit card",
+//   cardImg: Visa,
+//   cardImg1: MasterCard,
+//   cardImg2: Mada,
+//   priceHead: "2200 SAR",
+//   price: "Pay SAR 2200",
+//   imageSrc: Checkout,
+//   para: "Contact Us for Checkout",
+//   termcondition:
+//     "Your subscription will automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for.",
+//   termcondition1: "By clicking the 'Pay' button above, you agree to the ",
+//   termcondition2: " and acknowledge that you have read our .",
+// };
 
-  termcondition: 
-    "Your subscription wil  l automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for ",
-  termcondition1: "By clicking the 'Pay' button above, you agree to the  ",
-  termcondition2: " and acknowledge that you have read our .",
+export const cardDetails = {
+  en: {
+    title: "Subscribe To The Full Filmmaking Fundamentals Package",
+    title2: "Payment by credit or debit card",
+    cardImg: Visa,
+    cardImg1: MasterCard,
+    cardImg2: Mada,
+    priceHead: "2200 SAR",
+    price: "Pay SAR 2200",
+    imageSrc: Checkout,
+    para: "Contact Us for Checkout",
+    termcondition:
+      "Your subscription will automatically renew each year. After the first year, you will be charged SAR 750 for each renewal until you cancel your subscription. You can cancel at any time on your account's subscription page or by submitting a support request. If you cancel, previous fees will not be refunded, but you can continue to use the service until the end of the period you have paid for.",
+    termcondition1: "By clicking the 'Pay' button above, you agree to the ",
+    termcondition2: " and acknowledge that you have read our .",
+  },
+  ar: {
+    title: "اشترك في حزمة أساسيات صناعة الأفلام الكاملة",
+    title2: "الدفع بواسطة بطاقة الائتمان أو بطاقة الخصم",
+    cardImg: Visa,
+    cardImg1: MasterCard,
+    cardImg2: Mada,
+    priceHead: "SAR 2200",
+    price: "إدفع SAR 2200",
+    imageSrc: Checkout,
+    para: "تواصل معنا لإتمام الدفع",
+    termcondition:
+      "سيتم تجديد اشتراكك تلقائيًا كل عام. بعد السنة الأولى، سيتم تحصيل مبلغ 750 ريال سعودي لكل تجديد حتى تقوم بإلغاء الاشتراك. يمكنك الإلغاء في أي وقت من صفحة اشتراك حسابك أو عن طريق إرسال طلب دعم. إذا قمت بالإلغاء، فلن يتم رد الرسوم السابقة، ولكن يمكنك الاستمرار في استخدام الخدمة حتى نهاية الفترة التي دفعت ثمنها.",
+    termcondition1: "بالنقر على زر 'إدفع' أعلاه، فإنك توافق على ",
+    termcondition2: "وتقر بأنك قد قرأت .",
+  },
 };
+
 export const ebooks = [
   {
     id: 1,

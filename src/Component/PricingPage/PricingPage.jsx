@@ -12,7 +12,7 @@ function PricingPage() {
   if (error) return <p>Error loading data</p>; // Handle error state
 
   // Fetching the title and description from the context API
-  const title = pricingPageContextDetails?.getPricingCourse1DetailsSec1?.title || "Invest in Yourself and Start Your Journey in Learning Filmmaking";
+  const title = pricingPageContextDetails?.getPricingCourse1DetailsSec1?.title || "and Start Your Journey in Learning Filmmaking";
   const description = pricingPageContextDetails?.getPricingCourse1DetailsSec1?.description || "Learn the technical and creative skills that will help you make a feature film from scratch.";
 
   return (

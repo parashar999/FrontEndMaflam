@@ -98,9 +98,10 @@ function FundamentalPackage() {
   const categories = sectionData?.category || [];
   const subscribeText = homeScreenDetails?.buttonTextDetail?.buttonText || "Subscribe";
   const price = homeScreenDetails?.priceDetail?.price || "2,200 SAR";
+  const mrp = homeScreenDetails?.mrpDetail?.mrp || "2,20m0 SAR";
 
   const handleSubscribe = () => {
-    navigate("/R2/R3/prc");
+    navigate("/checkout2");
   };
 
   return (
@@ -132,9 +133,20 @@ function FundamentalPackage() {
                 >
                   {subscribeText}
                 </button>
-                <p>
-                  <b>{price}</b>
-                </p>
+                {/* <p className={styles.mrpprice}>
+              <span className={styles.mrpprice}>  <b>{mrp }</b>SAR </span> &nbsp; &nbsp;
+                 
+              <b>{price}</b>
+                </p> */}
+               <p className={styles.lines }>
+ 
+               &nbsp;&nbsp;<b className= {styles.lines1}>&nbsp;{mrp}&nbsp;</b>
+
+  &nbsp;&nbsp;
+  <b className={styles.price}>{price}</b>
+</p>
+
+
               </div>
             </div>
           </div>
