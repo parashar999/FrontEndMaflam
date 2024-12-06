@@ -304,7 +304,7 @@ const PaymentForm = () => {
     const requestBody = {
       amount: 750,
       courseId: paymentID,
-      cponCode: coupon,
+      cuponCode: coupon,
       callback: "https://maflam.com/success",
       token,
     };
