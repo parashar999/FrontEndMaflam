@@ -62,6 +62,7 @@ const PrivateRoute = ({ children }) => {
 };
 
 import { useEffect ,useState} from "react";
+import ContentRequiredPage2 from "./Pages/ContentRequiredPage2/ContentRequiredPage2.jsx";
 
 const App = () => { 
   return (
@@ -81,6 +82,7 @@ const App = () => {
         <Route path="/" element={<HomePageProvider><Home /></HomePageProvider>} />
         <Route path="/pagenotfound" element={<PageNotFoundPage />} />
         <Route path="/contentrequired" element={<ContentRequiredPage />} />
+        <Route path="/contentrequired2" element={<ContentRequiredPage2 />} />
         <Route path="/reset" element={<ResetPasswordPage />} />
         <Route path="/success" element={<SuccessMessagePage />} />
         <Route path="/failuremessage" element={<FalioursMassagePage />} />
