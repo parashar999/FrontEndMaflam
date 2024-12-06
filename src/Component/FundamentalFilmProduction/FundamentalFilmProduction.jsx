@@ -56,8 +56,14 @@ const FundamentalFilmProduction = () => {
   const buttonData =
     filmproductionScreenDetails?.getPricingCourse1DetailsSecButton || {};
   const learningTitle =
-    filmproductionScreenDetails?.formattedCourseData?.descriptio ||
+    filmproductionScreenDetails?.formattedCourseData?.description ||
     "What you will learn";
+
+    const instructorData =
+    filmproductionScreenDetails?.formattedCourseData.instructors?.[1] || {};
+
+  console.log("hello ", instructorData);
+  // console.log("hello by id");
     const { direction } = useContext(LanguageContext);
   console.log("hello ", courseData);
   console.log("hello by id", courseDataId);
@@ -101,6 +107,9 @@ const FundamentalFilmProduction = () => {
     </clipPath>
   </defs>
 </svg>
+                  {courseDataId.price==="0" ? "Only Available With Bundle"
+                    :`${courseDataId.price}` }
+              
 {direction === "rtl" 
   ? (courseDataId.price === "٧٥٠" 
       ? "متاح فقط ضمن الباقة الكاملة" 
@@ -137,7 +146,7 @@ const FundamentalFilmProduction = () => {
               </div>
 
               {/* {course.isfree==="false"? <FilmProductionInstructor /> :null}; */}
-              <FilmProductionInstructor />
+          {courseDataId.price==="0"?null:<FilmProductionInstructor />} 
               <FilmProductionCourseContent />
             </div>
           </div>
