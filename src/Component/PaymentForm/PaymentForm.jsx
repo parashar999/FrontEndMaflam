@@ -278,7 +278,7 @@ import { CheckoutPaymentContext } from "../../store/CheckoutPaymentContext";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../Auth/Auth";
-
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 const PaymentForm = () => {
   const { checkoutPaymentContextDetails, loading, error } = useContext(
     CheckoutPaymentContext
@@ -339,13 +339,16 @@ const PaymentForm = () => {
   const imageSrc =
     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
     "/path/to/default-image.jpg";
-
+    const { direction } = useContext(LanguageContext);
   return (
     <div className={styles.maincontainer}>
       <div className={styles.container}>
         <div className={styles.card}>
           <img src={imageSrc} alt="Course" className={styles.image} />
-          <h2 className={styles.price}>SAR {cardDetails[0]?.title || "N/A"}</h2>
+          <h2 className={styles.price}>
+  {direction === "rtl" ? `${cardDetails[0]?.title} ر.س` : `${cardDetails[0]?.title} SAR`}
+</h2>
+
           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
           <hr />
           <div className={styles.paymentCard}>
