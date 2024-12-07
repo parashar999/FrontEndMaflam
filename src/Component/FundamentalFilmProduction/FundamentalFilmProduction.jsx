@@ -128,12 +128,12 @@ const FundamentalFilmProduction = () => {
                     :`${courseDataId.price}` } */}
               
 {direction === "rtl" 
-  ? (courseDataId.price === "٧٥٠" 
+  ? (courseDataId.price === "0" 
       ? "متاح فقط ضمن الباقة الكاملة" 
-      : `${courseDataId.price} ${courseDataId.para}`) 
+      : `${courseDataId.price} ريال `) 
   : (courseDataId.price === "0" 
-      ? "Only Available only with Bundle" 
-      : `${courseDataId.price ? ` ${courseDataId.para}` : "750 SAR"}`)}
+      ? "Only Available with Bundle" 
+      : `${courseDataId.price} SAR` )}
 
               </div>
             </div>
@@ -191,10 +191,10 @@ courseDataId.courseId === "26" || courseDataId.courseId=="29"||courseDataId.cour
     >
       <Link style={{textDecoration:'none', display:'block', width:'100%'}} to={"/R2/R3/prc/All"}>
       <span style={{ width: '100%' }}>
-        {courseDataId.price === "0"
-          ? "Only Available With Bundle"
-          : buttonData.title}
-      </span>
+  {courseDataId && courseDataId.price == "0"
+    ? (direction == "rtl" ? "متاح فقط ضمن الباقة الكاملة" : "Only Available With Bundle")
+    : buttonData?.title}
+</span>
       </Link>
     </button>
   ) : (
@@ -206,7 +206,7 @@ courseDataId.courseId === "26" || courseDataId.courseId=="29"||courseDataId.cour
       <FaShoppingCart style={{ height: '24px', width: '24px' }} /> &nbsp;&nbsp;
       <span style={{ width: '100%' }}>
         {courseDataId.price === "0"
-          ? "Only Available With Bundle"
+          ? ("Only Available With Bundle")
           : buttonData.title}
       </span>
     </button>

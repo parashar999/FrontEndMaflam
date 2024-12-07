@@ -374,10 +374,8 @@ const PaymentForm = () => {
       
         </div>
 
-        <div>
-          <p className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
-        </div>
-        <div>
+        <div style={{ margin:'20px', maxWidth:'600px', marginTop:'50px'}}>
+          <p style={{paddingBottom:'20px'}} className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
           <p className={styles.termconditions1}>
             {termsDetails[1]?.title || ""}
             <Link to="/terms&condition"> Terms and Conditions </Link>

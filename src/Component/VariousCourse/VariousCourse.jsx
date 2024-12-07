@@ -29,66 +29,66 @@ const VariousCourse = () => {
         <h2>{pricingPageContextDetails?.getPricingCourse1DetailsSec4?.title || "Or, choose from our various courses"}</h2>
         <div className={styles.cardsContainer}>
           {courses.map((course) => (
-            <div style={{overflow:'hidden'}} key={course.courseId} className={styles.card}>
-             <div  style={{height:'280px', overflow:'hidden'}}>
-              <img  style={{paddingTop:'40px', width:'100%'}}
-                src={course.promoVideo?course.promoVideo:course.banner}
-              >
-              </img>
-           
+            <div style={{ overflow: 'hidden' }} key={course.courseId} className={styles.card}>
+              <div style={{ height: '280px', overflow: 'hidden' }}>
+                <img style={{ paddingTop: '40px', width: '100%' }}
+                  src={course.promoVideo ? course.promoVideo : course.banner}
+                >
+                </img>
+
               </div>
-     
-              <div 
-                style={{ 
-                  display: "flex", 
-                  flexDirection: "row", 
-                  flexWrap: "wrap", 
-                  alignItems: "center", 
-                  paddingRight: "10px", 
-                  paddingLeft: "10px" 
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  paddingRight: "10px",
+                  paddingLeft: "10px"
                 }}
               >
                 {course.instructors.map((instructor, index) => (
-                  <div 
-                    key={index} 
-                    style={{ 
-                      display: "flex", 
-                      alignItems: "center", 
-                      marginTop: "15px" 
+                  <div
+                    key={index}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginTop: "15px"
                     }}
                   >
-                    <img 
-                      src={course.banner} 
-                      alt={instructor.photoUrl} 
-                      style={{ 
-                        width: "40px", 
-                        height: "40px", 
-                        borderRadius: "20px", 
-                        marginRight: "10px", 
-                        marginLeft: "10px" 
-                      }} 
+                    <img
+                      src={course.banner}
+                      alt={instructor.photoUrl}
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        marginLeft: "10px"
+                      }}
                     />
                     <p>{instructor.name}</p>
                   </div>
                 ))}
               </div>
-              
+
               {/* Card Content */}
               <div className={styles.cardContent}>
                 <h3 className={styles.title}>{course.title}</h3>
                 <p className={styles.description}>{course.description.split(" ").slice(0, 23).join(" ")}...</p>
-                <hr 
-                  style={{ 
-                    color: "#39FFFB", 
-                    opacity: "0.3", 
-                    strokeWidth: "0.5px" 
-                  }} 
+                <hr
+                  style={{
+                    color: "#39FFFB",
+                    opacity: "0.3",
+                    strokeWidth: "0.5px"
+                  }}
                 />
                 <div className={styles.footer}>
                   <div className={styles.footerblocks}>
-                    <div style={{display:'flex', flexDirection:'row', textAlign:'center', alignItems:'center', justifyContent:'center'}} className={styles.footerblocks}>
-             
-{/* 
+                    <div style={{ display: 'flex', flexDirection: 'row', textAlign: 'center', alignItems: 'center', justifyContent: 'center' }} className={styles.footerblocks}>
+
+                      {/* 
 <div className={styles.priceContainer}>
 <span className={styles.price}>
   {course.price === "0" ? (
@@ -113,15 +113,29 @@ const VariousCourse = () => {
 </div> */}
 
 
-                      <span className={styles.price}>{course.price==="0"?"Only Available With Bundle":`${course.price}`}</span>
-                      &nbsp;<span className={styles.para}>{course.price!=="0"&&"SAR"}</span>
+                      <span className={styles.price}>
+                        {direction === "rtl"
+                          ? (course.price === "0"
+                            ? "متاح فقط ضمن الباقة الكاملة"
+                            : <>
+                              {course.price} <span style={{color:'white'}}>ريال</span>
+                            </>
+                          )
+                          : (course.price === "0"
+                            ? "Only Available with Bundle"
+                            : <>
+                              {course.price} <span style={{color:'white'}}>SAR</span>
+                            </>)}
+                      </span>
+
+
                     </div>
                     <span className={styles.line}>|</span>
                     <div className={styles.footerblocks}>
                       &nbsp;
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="..." fill="#39FFFB"/>
-                        <path d="..." fill="#39FFFB"/>
+                        <path d="..." fill="#39FFFB" />
+                        <path d="..." fill="#39FFFB" />
                       </svg>
                       &nbsp;
                       <p style={{ fontSize: "14px" }}>{course.estimatedLearningTime?.time}</p>

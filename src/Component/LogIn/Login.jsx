@@ -56,7 +56,7 @@ const Login = () => {
       // console.log(response.data)
      
       setTimeout(() => {
-        window.location.href="https://maflam.com";
+        window.location.href="https://maflam.com/R2/R3/prc/All";
       }, 5000);
       // navigate("/");
     } catch (err) {
@@ -77,7 +77,7 @@ const Login = () => {
       auth.login(response.data);
       // navigate("/");
       setTimeout(() => {
-        window.location.href="https://maflam.com";
+        window.location.href="https://maflam.com/R2/R3/prc/All";
       }, 2000);
     } catch (error) {
       console.error("Google Login Error:", error);
