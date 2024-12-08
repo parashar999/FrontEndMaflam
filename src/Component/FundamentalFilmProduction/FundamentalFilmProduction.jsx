@@ -11,7 +11,8 @@ import FilmProductionCourseContent from "../../Component/FilmProductionCourseCon
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext";
 import { numberToArabicMap } from "./lessoncountarabic";
 import { lessonCountMap } from "./lessonCountMap";
-
+import {wwlMap} from "./wwlMap";
+import  {wwlMapAr} from "./wwlMapAr"
 const FundamentalFilmProduction = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { filmproductionScreenDetails, loading, error } = useContext(
@@ -156,7 +157,7 @@ const FundamentalFilmProduction = () => {
                   <div>
                     <p
                       className={styles.answer}>
-                     {courseDataId._id=="672c6953bd321f82ce18327a"? "":courseData} 
+                     {direction=="rtl"? wwlMapAr[courseDataId.courseId] : wwlMap[courseDataId.courseId]}
                     </p>
                   </div>
                 )}
@@ -178,8 +179,7 @@ const FundamentalFilmProduction = () => {
 
             <div className={styles.videocontent}>
               <p>
-                {filmproductionScreenDetails.getPricingCourse1DetailsSec1
-                  ?.description || "No summary available."}
+             {direction=="rtl"?"نبذة عن الدورة":"An Overview of the Course"}  
               </p>
               
               {
