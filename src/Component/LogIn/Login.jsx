@@ -9,9 +9,11 @@ import { ToastContainer, toast } from "react-toastify";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 import "react-toastify/dist/ReactToastify.css";
-
+import { useLastUrl } from "../../store/LastUrlContext.jsx";
 
 const Login = () => {
+  const lastUrl=useLastUrl();
+  console.log(lastUrl);
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -40,7 +42,6 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const isEmail = emailOrPhone.includes("@");
-    console.log(document.referrer);
     try {
       const response = await axios.post(
         "https://backend.maflam.com/maflam/sign-in",
@@ -56,7 +57,7 @@ const Login = () => {
       // console.log(response.data)
      
       setTimeout(() => {
-        window.location.href="https://maflam.com/R2/R3/prc/All";
+        window.location.href=lastUrl;
       }, 5000);
       // navigate("/");
     } catch (err) {
@@ -77,7 +78,7 @@ const Login = () => {
       auth.login(response.data);
       // navigate("/");
       setTimeout(() => {
-        window.location.href="https://maflam.com/R2/R3/prc/All";
+        window.location.href=lastUrl;
       }, 2000);
     } catch (error) {
       console.error("Google Login Error:", error);

@@ -156,7 +156,7 @@ const FundamentalFilmProduction = () => {
                   <div>
                     <p
                       className={styles.answer}>
-                      {courseData}
+                     {courseDataId._id=="672c6953bd321f82ce18327a"? "":courseData} 
                     </p>
                   </div>
                 )}

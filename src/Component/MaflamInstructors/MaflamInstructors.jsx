@@ -35,7 +35,20 @@ import { useContext } from "react";
 import styles from "./MaflamInstructors.module.css";
 import { HomePageContext } from "../../store/HomePageContext.jsx";
 import { Link } from "react-router-dom";
-
+const redirectionMap = {
+  "Afnan Linjawi": "/R2/R4/filmproduction/672c62b61f099bf569d0f8eb",
+  "Ayman Khoja": "/R2/R4/filmproduction/672c5ee7da73549420503e9c",
+  "Oday Abid": "/R2/R4/filmproduction/672c5bb6a7c24e51d0db091e",
+  "Khalid AlSudairy": "/R2/R4/filmproduction/672c6953bd321f82ce18327a",
+  "Aseel Radwan": "/R2/R4/filmproduction/672c609ae90c3d8357705c73",
+  "Khalid Yaslam": "/R2/R4/filmproduction/672c6420b3e5c110514f52f9",
+  "أفنان لنجاوي": "/R2/R4/filmproduction/672c62b61f099bf569d0f8eb",
+  "أيمن خوجة": "/R2/R4/filmproduction/672c5ee7da73549420503e9c",
+  "عدي عابد": "/R2/R4/filmproduction/672c5bb6a7c24e51d0db091e",
+  "خالد السديري": "/R2/R4/filmproduction/672c6953bd321f82ce18327a",
+  "أصيل رضوان": "/R2/R4/filmproduction/672c609ae90c3d8357705c73",
+  "خالد يسلم": "/R2/R4/filmproduction/672c6420b3e5c110514f52f9",
+};
 const MaflamInstructors = () => {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
 
@@ -60,7 +73,7 @@ const MaflamInstructors = () => {
                 className={styles.instructorImage}
               />
               <p>
-                <Link to="/R2/R3/prc/All"> {instructor.title}</Link>
+                <Link to={redirectionMap[instructor.title]}> {instructor.title}</Link>
               </p>
             </div>
           ))}

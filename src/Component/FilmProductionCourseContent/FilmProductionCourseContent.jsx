@@ -98,6 +98,10 @@ const FilmProductionCourseContent = () => {
 
   // Handle RTL/LTR direction
   const collapsibleClass = direction === 'rtl' ? styles.collapsibleRtl : styles.collapsibleLtr;
+  const coursenew = direction === "rtl" 
+  ? FundamentalsOfCinematographyAr 
+  : FundamentalsOfCinematography;
+
 
   return (
     <div className={styles.maincontainer}>
@@ -116,23 +120,50 @@ const FilmProductionCourseContent = () => {
           <hr style={{ opacity: '0.4' }} className={styles.line} />
         </div>
         {isOpen && (
-          <div>
-            {course.formattedCourseData.lessions.map((item, index) => (
-              <div key={index}>
-                {/* Section Title */}
-                <QuestionItem
-                  question={item.SectionTitle1}
-                  timeStamp={item.SpendToHrs}
-                  lessons={item.Lessons}
-                />
+  <div>
+ {direction === "rtl" && course.formattedCourseData._id === "672c5ee7da73549420503e9c" ? (
+      FundamentalsOfFilmProductionAr.lessions.map((item, index) => (
+        <div key={index}>
+          {/* Section Title */}
+          <QuestionItem
+            question={item.SectionTitle1}
+            timeStamp={item.SpendToHrs}
+            lessons={item.Lessons}
+          />
+          
+          {/* Mapping through Lectures/Lessons */}
+        </div>
+      ))
+    ) : course.formattedCourseData._id === "672c6953bd321f82ce18327a" ? (
+      coursenew.lessions.map((item, index) => (
+        <div key={index}>
+          {/* Section Title */}
+          <QuestionItem
+            question={item.SectionTitle1}
+            timeStamp={item.SpendToHrs}
+            lessons={item.Lessons}
+          />
+          
+          {/* Mapping through Lectures/Lessons */}
+        </div>
+      ))
+    ) : (
+      course.formattedCourseData.lessions.map((item, index) => (
+        <div key={index}>
+          {/* Section Title */}
+          <QuestionItem
+            question={item.SectionTitle1}
+            timeStamp={item.SpendToHrs}
+            lessons={item.Lessons}
+          />
+  
+          {/* Mapping through Lectures/Lessons */}
+        </div>
+      ))
+    )}
+  </div>
+)}
 
-                {/* Mapping through Lectures/Lessons */}
-
-              </div>
-            ))}
-
-          </div>
-        )}
       </div>
     </div>
   );
