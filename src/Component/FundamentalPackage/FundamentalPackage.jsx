@@ -96,7 +96,7 @@ function FundamentalPackage() {
   const title = sectionData?.title || "Subscribe To The Full Filmmaking Fundamentals Package";
   const imageUrl = sectionData?.imageUrl || "";
   const categories = sectionData?.category || [];
-  const subscribeText = "اشترك الآن" || "Subscribe";
+  const subscribeText = direction=="rtl"?"اشترك الآن":"Subscribe";
   const price = homeScreenDetails?.priceDetail?.price || "2,200 SAR";
   
 

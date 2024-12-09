@@ -13,7 +13,7 @@ const BlogHero = () => {
   if (error) return <p>Error loading data</p>;
 
   const { formattedBlogDataforheader = [] } = blogsPageContentDetails || {};
-
+  console.log(blogsPageContentDetails);
   if (!formattedBlogDataforheader.length) return <p>No blog data available</p>;
 
   // Function to handle "Continue Reading" button click

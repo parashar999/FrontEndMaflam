@@ -114,9 +114,7 @@ const EbooksCards = () => {
           </div>
         ))}
       </div>
-      <div className={styles.bottombg}>
-              
-              </div>
+
       {ebook && displayCount < ebook.length && (
         <button onClick={loadMoreItems} className={styles.loadMoreButton}>
           Load More ({displayCount}/{ebook.length})
