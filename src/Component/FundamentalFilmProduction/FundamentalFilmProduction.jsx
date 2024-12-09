@@ -33,21 +33,36 @@ const FundamentalFilmProduction = () => {
     setIsOpen(!isOpen);
   }
 
+const checkoutpage = (paymentId) => {
+  if (courseData.price === "0") {
+   
+    navigate("/checkout2");
+  } 
+  else if (userDetails) {
+    
+    navigate(`/checkout/${paymentId}`);
+  } else {
+   
+    navigate("/login");
+  }
+};
 
-  const checkoutpage = (paymentId) => {
-    if (userDetails) {
-      if (courseData.price === "0") {
-        // Navigate to /checkout2 for "Only Available With Bundle"
-        navigate("/checkout2");
-      } else {
-        // Navigate to /checkout/${paymentId} otherwise
-        navigate(`/checkout/${paymentId}`);
-      }
-    } else {
-      // Redirect to login if the user is not logged in
-      navigate("/login");
-    }
-  };
+
+  // const checkoutpage = (paymentId) => {
+  //   if (userDetails) {
+  //     if (courseData.price === "0") {
+  //       // Navigate to /checkout2 for "Only Available With Bundle"
+  //       navigate("/checkout2");
+  //     } 
+  //     else {
+  //       // Navigate to /checkout/${paymentId} otherwise
+  //       navigate(`/checkout/${paymentId}`);
+  //     }
+  //   } else {
+  //     // Redirect to login if the user is not logged in
+  //     navigate("/login");
+  //   }
+  // };
 
   // const checkoutpage = (paymentId) => {
   //   // console.log("Button was clicked");

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import  { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
@@ -10,7 +10,6 @@ import axios from "axios";
 import loginarrow from "../../assets/Arrow.png";
 import auth from "../../Auth/Auth.js";
 import { ScaleLoader } from "react-spinners";
-
 const Navbar = () => {
   const userDetails = auth.getAuthData();
   const [openDropdown, setOpenDropdown] = useState(null);
