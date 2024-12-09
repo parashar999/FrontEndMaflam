@@ -107,13 +107,13 @@ const FundamentalFilmProduction = () => {
     </clipPath>
   </defs>
 </svg>
-                  {/* {courseDataId.price==="0" ? "Only Available With Bundle"
-                    :`${courseDataId.price}` } */}
+                    {courseDataId.price==="0" ? ""
+                      :`${courseDataId.price}` }
               
 {direction === "rtl" 
-  ? (courseDataId.price === "٧٥٠" 
+  ? (courseDataId.price === "٠" 
       ? "متاح فقط ضمن الباقة الكاملة" 
-      : `${courseDataId.price} ${courseDataId.para}`) 
+      : ` ${courseDataId.para}`) 
   : (courseDataId.price === "0" 
       ? "Only Available only with Bundle" 
       : `${courseDataId.price ? ` ${courseDataId.para}` : "750 SAR"}`)}
