@@ -179,7 +179,7 @@ const Navbar = () => {
                           <span onClick={handleLogoutClick}>{profileMenuItems[0].name}</span>
                         ) : (
                           <Link
-                            to={profileMenuItems[0].href || "#"}
+                            to={"https://learn.maflam.com/login/index.php?lang=ar" || "#"}
                             onClick={() => {
                               toggleProfileMenu();
                               setOpenDropdown(null);

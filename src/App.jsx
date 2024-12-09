@@ -48,7 +48,6 @@ import {
   PurchaseCancellationProvider,
   SingupPageContextProvider,
   TermsConditionProvider,
-  LastPageProvider
 } from './store';
 
 
@@ -70,7 +69,7 @@ import SuccessTransaction from "./Component/SuccessTransaction/SuccessTransactio
 
 const App = () => { 
   return (
-    <LastPageProvider>
+
     <LanguageProvider>
       <Navbar/>
         
@@ -103,7 +102,7 @@ const App = () => {
         <Route path="/terms&condition" element={<HomePageProvider> <TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/bundle" element={<BundlePage />} />
-        <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} />
+        {/* <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} /> */}
         <Route path="/terms&condition" element={<HomePageProvider><TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/purchaseCancellation" element={<HomePageProvider><PurchaseCancellationProvider><PurchaseCancellationPage /></PurchaseCancellationProvider></HomePageProvider>} />
         <Route path="/CommunityGuidelines" element={<HomePageProvider><CommunityGuidelinesProvider><CommunityGuidelinesPage /></CommunityGuidelinesProvider></HomePageProvider>} />
@@ -114,7 +113,7 @@ const App = () => {
       </Routes>
       <Footer/>
     </LanguageProvider>
-    </LastPageProvider>
+
   );
 };
 
