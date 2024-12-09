@@ -125,8 +125,8 @@ const FundamentalFilmProduction = () => {
     </clipPath>
   </defs>
 </svg>
-                  {/* {courseDataId.price==="0" ? "Only Available With Bundle"
-                    :`${courseDataId.price}` } */}
+                    {courseDataId.price==="0" ? ""
+                      :`${courseDataId.price}` }
               
 {direction === "rtl" 
   ? (courseDataId.price === "0" 
