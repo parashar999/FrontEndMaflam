@@ -4,9 +4,9 @@
 import React, { useContext } from "react";
 import stylesSelected from "./Community.module.css";
 import { HomePageContext } from "../../store/HomePageContext";
-import { StandardCarousel } from "../../utilities";
+import Carou from "./Carou/Carou"
 
-const Community = () => {
+const CarouselCommunity = () => {
   const { homeScreenDetails } = useContext(HomePageContext);
   const communityTitle = homeScreenDetails?.maflamCommunityTitle?.title || "Community Stories";
   const communityData = homeScreenDetails?.maflamCommunityData || [];
@@ -29,7 +29,7 @@ const Community = () => {
   return (
     <div className={stylesSelected.carouselWrapper}>
       <h2>{communityTitle}</h2>
-      <StandardCarousel
+      <Carou
         itemWidth={619}
         itemHeight={417}
         items={videoItems}
@@ -40,8 +40,7 @@ const Community = () => {
   );
 };
 
-export default Community;
-
+export default CarouselCommunity;
 
 
 // import React, { useRef, useContext, useEffect, useState } from "react";

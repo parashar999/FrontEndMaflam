@@ -5,10 +5,12 @@ import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { CiClock2 } from "react-icons/ci";
 import { FilmProductionContext } from "../../store/FilmProductionContext";
 import auth from "../../Auth/Auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import FilmProductionInstructor from "../FilmProductionInstructor/FilmProductionInstructor";
 import FilmProductionCourseContent from "../../Component/FilmProductionCourseContent/FilmProductionCourseContent";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext";
+import { numberToArabicMap } from "./lessoncountarabic";
+import { lessonCountMap } from "./lessonCountMap";
 
 const FundamentalFilmProduction = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,15 +36,29 @@ const FundamentalFilmProduction = () => {
   }
 
 
-
   const checkoutpage = (paymentId) => {
-    // console.log("Button was clicked");
     if (userDetails) {
-      navigate(`/checkout/${paymentId}`);
+      if (courseData.price === "0") {
+        // Navigate to /checkout2 for "Only Available With Bundle"
+        navigate("/checkout2");
+      } else {
+        // Navigate to /checkout/${paymentId} otherwise
+        navigate(`/checkout/${paymentId}`);
+      }
     } else {
+      // Redirect to login if the user is not logged in
       navigate("/login");
     }
   };
+
+  // const checkoutpage = (paymentId) => {
+  //   // console.log("Button was clicked");
+  //   if (userDetails) {
+  //     navigate(`/checkout/${paymentId}`);
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data: {error.message}</p>;
@@ -52,6 +68,7 @@ const FundamentalFilmProduction = () => {
     filmproductionScreenDetails?.formattedCourseData || {};
   const courseData =
     filmproductionScreenDetails?.formattedCourseData?.description || {};
+   console.log(courseDataId);
   const courseImg = filmproductionScreenDetails?.formattedCourseData || {};
   const buttonData =
     filmproductionScreenDetails?.getPricingCourse1DetailsSecButton || {};
@@ -62,11 +79,10 @@ const FundamentalFilmProduction = () => {
     const instructorData =
     filmproductionScreenDetails?.formattedCourseData.instructors?.[1] || {};
 
-  console.log("hello ", instructorData);
+    const courseIdhere=courseDataId.courseId;
   // console.log("hello by id");
     const { direction } = useContext(LanguageContext);
-  console.log("hello ", courseData);
-  console.log("hello by id", courseDataId);
+
 
 
   return (
@@ -88,9 +104,10 @@ const FundamentalFilmProduction = () => {
 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
   <path d="M10.5 20C9.21772 20 7.97365 19.7488 6.80214 19.2533C5.67078 18.7748 4.65492 18.09 3.78268 17.2175C2.91043 16.3451 2.22539 15.3292 1.74687 14.1981C1.25118 13.0264 1 11.7823 1 10.5C1 9.21772 1.25118 7.97365 1.74666 6.80214C2.22518 5.67078 2.91 4.65492 3.78246 3.78268C4.65492 2.91043 5.67078 2.22539 6.80193 1.74687C7.97344 1.25118 9.21772 1 10.5 1C11.7823 1 13.0264 1.25118 14.1979 1.74666C15.3292 2.22518 16.3451 2.91 17.2173 3.78246C18.0896 4.65492 18.7746 5.67078 19.2531 6.80193C19.7486 7.97344 19.9998 9.21772 19.9998 10.4998C19.9998 11.7819 19.7486 13.0261 19.2531 14.1979C18.7746 15.3292 18.0898 16.3451 17.2173 17.2173C16.3449 18.0896 15.329 18.7746 14.1979 19.2531C13.0264 19.7486 11.7821 20 10.5 20ZM10.5 1.97314C9.34867 1.97314 8.23213 2.19856 7.18105 2.64294C6.16583 3.0723 5.25388 3.68736 4.47051 4.47051C3.68714 5.25366 3.0723 6.16562 2.64294 7.18105C2.19834 8.23191 1.97314 9.34867 1.97314 10.5C1.97314 11.6513 2.19856 12.7679 2.64294 13.8189C3.0723 14.8342 3.68736 15.7461 4.47051 16.5295C5.25366 17.3126 6.16562 17.9277 7.18105 18.3571C8.23191 18.8017 9.34867 19.0269 10.5 19.0269C11.6513 19.0269 12.7679 18.8014 13.8189 18.3571C14.8342 17.9277 15.7461 17.3126 16.5295 16.5295C17.3129 15.7463 17.9277 14.8344 18.3571 13.8189C18.8017 12.7681 19.0269 11.6513 19.0269 10.5C19.0269 9.34867 18.8014 8.23213 18.3571 7.18105C17.9277 6.16583 17.3126 5.25388 16.5295 4.47051C15.7463 3.68736 14.8344 3.0723 13.8189 2.64294C12.7681 2.19834 11.6513 1.97314 10.5 1.97314Z" fill="#5AFFFF" stroke="#5AFFFF"/>
   <path d="M9.22714 14.9998C9.03534 14.9998 8.84278 14.9544 8.66497 14.8621C8.25491 14.6495 8 14.2289 8 13.7647V7.23521C8 6.77094 8.25472 6.35041 8.66497 6.13777C9.07502 5.92513 9.56311 5.9607 9.93878 6.23021L14.4858 9.49494C14.8078 9.72603 15 10.1019 15 10.4999C15 10.898 14.8078 11.2737 14.4858 11.5049L9.93878 14.7697C9.72619 14.9224 9.47732 15 9.22714 15V14.9998ZM9.23016 6.86109C9.15287 6.86109 9.09014 6.88696 9.05707 6.90407C8.99679 6.93527 8.85658 7.03017 8.85658 7.23502V13.7645C8.85658 13.9693 8.99679 14.0642 9.05707 14.0954C9.11735 14.1266 9.27551 14.1865 9.44123 14.0675L13.9883 10.8027C14.0869 10.732 14.1434 10.6215 14.1434 10.4996C14.1434 10.3776 14.0869 10.2673 13.9883 10.1964L9.44123 6.93165C9.36659 6.87802 9.29346 6.86071 9.23016 6.86071V6.86109Z" fill="#5AFFFF" stroke="#5AFFFF" stroke-width="0.1"/>
-</svg>      {courseData.price
-                  ? `${courseData.price} ${courseData.para}`
-                  : "54 lessons"}
+</svg> 
+
+{direction=="ltr"?(`${lessonCountMap[courseDataId.courseId]} lessons`):(`${numberToArabicMap[lessonCountMap[courseIdhere]]} دروس`) }
+
                 
               </div>
 
@@ -111,12 +128,12 @@ const FundamentalFilmProduction = () => {
                       :`${courseDataId.price}` }
               
 {direction === "rtl" 
-  ? (courseDataId.price === "٠" 
+  ? (courseDataId.price === "0" 
       ? "متاح فقط ضمن الباقة الكاملة" 
-      : ` ${courseDataId.para}`) 
+      : `${courseDataId.price} ريال `) 
   : (courseDataId.price === "0" 
-      ? "Only Available only with Bundle" 
-      : `${courseDataId.price ? ` ${courseDataId.para}` : "750 SAR"}`)}
+      ? "Only Available with Bundle" 
+      : `${courseDataId.price} SAR` )}
 
               </div>
             </div>
@@ -139,7 +156,7 @@ const FundamentalFilmProduction = () => {
                   <div>
                     <p
                       className={styles.answer}>
-                      {courseData}
+                     {courseDataId._id=="672c6953bd321f82ce18327a"? "":courseData} 
                     </p>
                   </div>
                 )}
@@ -155,7 +172,7 @@ const FundamentalFilmProduction = () => {
             <div className={styles.videofixed}> <video src={courseImg.promoVideo } controls alt="Course Preview" /></div> */}
           
               <div className={styles.videofixed}>
-                <img src={courseImg.promoVideo?courseImg.promoVideo:courseImg.banner} controls alt="Course Preview" />
+                <img src={courseImg.promoVideo?courseImg.promoVideo:courseImg.banner}  alt="Course Preview" />
               </div>
           
 
@@ -164,14 +181,37 @@ const FundamentalFilmProduction = () => {
                 {filmproductionScreenDetails.getPricingCourse1DetailsSec1
                   ?.description || "No summary available."}
               </p>
-              <button
-                //  onClick={checkoutpage}
-                className={styles.subcribebtn}
-                // onClick={() => checkoutpage(courseDataId.id)}>
-                onClick={() => checkoutpage(courseDataId.id)}>
-                <FaShoppingCart style={{height:'24px',width:'24px'}} /> &nbsp;&nbsp;
-                <span style={{width:'100%' }}>{courseDataId.price==="0"?"Only Available With Bundle":buttonData.title}</span>
-              </button>
+              
+              {
+courseDataId.courseId === "26" || courseDataId.courseId=="29"||courseDataId.courseId === "30" || courseDataId.courseId=="27"|| courseDataId.courseId === "28" ? (
+    <button
+      // onClick={checkoutpage}
+      className={styles.subcribebtn}
+      // onClick={() => checkoutpage(courseDataId.id)}
+    >
+      <Link style={{textDecoration:'none', display:'block', width:'100%'}} to={"/R2/R3/prc/All"}>
+      <span style={{ width: '100%' }}>
+  {courseDataId && courseDataId.price == "0"
+    ? (direction == "rtl" ? "متاح فقط ضمن الباقة الكاملة" : "Only Available With Bundle")
+    : buttonData?.title}
+</span>
+      </Link>
+    </button>
+  ) : (
+    <button
+      // onClick={checkoutpage}
+      className={styles.subcribebtn}
+      onClick={() => checkoutpage(courseDataId.id)}
+    >
+      <FaShoppingCart style={{ height: '24px', width: '24px' }} /> &nbsp;&nbsp;
+      <span style={{ width: '100%' }}>
+        {courseDataId.price === "0"
+          ? ("Only Available With Bundle")
+          : buttonData.title}
+      </span>
+    </button>
+  )
+}
               <button className={styles.addtowishlist}>
                 <FaHeart style={{height:'24px',width:'24px'} }  />
                 <span style={{width:'100%'}}>

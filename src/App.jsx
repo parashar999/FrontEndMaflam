@@ -48,7 +48,6 @@ import {
   PurchaseCancellationProvider,
   SingupPageContextProvider,
   TermsConditionProvider,
-  LastPageProvider
 } from './store';
 
 
@@ -69,7 +68,7 @@ import Checkouts2 from "./Pages/Checkouts2/index.js";
 
 const App = () => { 
   return (
-    <LastPageProvider>
+
     <LanguageProvider>
       <Navbar/>
         
@@ -111,7 +110,7 @@ const App = () => {
       </Routes>
       <Footer/>
     </LanguageProvider>
-    </LastPageProvider>
+
   );
 };
 
