@@ -65,7 +65,9 @@ const PrivateRoute = ({ children }) => {
 import { useEffect ,useState} from "react";
 import ContentRequiredPage2 from "./Pages/ContentRequiredPage2/ContentRequiredPage2.jsx";
 import Checkouts2 from "./Pages/Checkouts2/index.js";
-import SuccessTransaction from "./Component/SuccessTransaction/SuccessTransaction.jsx";
+
+import SuccessMessage2 from "./Component/SuccessMessage2/SuccessMessage2.jsx";
+
 
 const App = () => { 
   return (
@@ -88,7 +90,8 @@ const App = () => {
         <Route path="/contentrequired2" element={<ContentRequiredPage2 />} />
         <Route path="/reset" element={<ResetPasswordPage />} />
         <Route path="/success" element={<SuccessMessagePage />} />
-        <Route path="/transactionsuccessfull" element={<SuccessTransaction/>}/>
+        <Route path="/success2" element={<SuccessMessage2/>} />
+       
 
         <Route path="/failuremessage" element={<FalioursMassagePage />} />
         <Route path="/personalinformation" element={<PrivateRoute><PersonalInformation /></PrivateRoute>} />
