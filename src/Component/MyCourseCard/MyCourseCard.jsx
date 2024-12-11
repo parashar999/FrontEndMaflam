@@ -1,10 +1,6 @@
-
-
-
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import styles from "./MyCourseCard.module.css"
+import styles from "./MyCourseCard.module.css";
 // import { crousel } from "../../assets/assets";
 import { useEffect, useState } from "react";
 import { VariousCard } from "../../assets/assests";
@@ -28,7 +24,7 @@ export default function MyCourseCard() {
       }
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -59,61 +55,65 @@ export default function MyCourseCard() {
     // <div className="container department ">
     //   <h1>You May Be Interested in the Following Courses</h1>
 
-
-    
     <div className={styles.maincontainer}>
+      <div className={styles.CertificatePageData}>
+        <header className={styles.profileHeader}>
+          <h1>My Courses</h1>
+        </header>
 
+        <nav>
+          <ul className={styles.profileTabs}>
+            <li className={styles.activeTab1}>
+              <a href="/personalInformation">Personal Information</a>
+            </li>
+            <li className={styles.activeTab}>
+              <Link to="/mycourses">My Transactions</Link>
+            </li>
+            {/* <li className={styles.activeTab1}><a href="/mycertificate">My Certificates</a></li>
+          <li className={styles.activeTab1}><a href="/mywishlist">My Wishlist</a></li> */}
+          </ul>
+          <hr className={styles.footerHr} />
+        </nav>
 
-<div className={styles.CertificatePageData}>
-      <header className={styles.profileHeader}>
-        <h1>My Courses</h1>
-      </header>
+        <MyCoursesFinishCourse></MyCoursesFinishCourse>
+        <div className={styles.container}>
+          {/* <h2>You May Be Interested in the Following Courses</h2> */}
 
-      <nav>
-        <ul className={styles.profileTabs}>
-          <li className={styles.activeTab1}><a href="/personalInformation">Personal Information</a></li>
-          <li className={styles.activeTab}><Link to="/mycourses">My Courses</Link></li>
-          <li className={styles.activeTab1}><a href="/mycertificate">My Certificates</a></li>
-          <li className={styles.activeTab1}><a href="/mywishlist">My Wishlist</a></li>
-        </ul>
-        <hr className={styles.footerHr} />
-      </nav>
-
-         <MyCoursesFinishCourse></MyCoursesFinishCourse>
-    <div className={styles.container}>
-      <h2>You May Be Interested in the Following Courses</h2>
-
-      <Carousel
-        responsive={responsive}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        infinite={true}
-        autoPlay={deviceType !== "mobile"} // Start autoplay only if not on mobile
-        autoPlaySpeed={1000}
-      >
-        {/* {VariousCard.map((items, index) => { */}
-              {VariousCard.map((course) => (
-                <div key={course.id} className={styles.card}>
-                  <img src={course.imageUrl} alt={course.title} className={styles.cardImage} />
-                  <div className={styles.cardContent}>
-                    <div className={styles.imageflex}>  <img src={course.image} alt="" />
-                    <p className={styles.instructor}>{course.instructor}</p></div>
-                    <h3 className={styles.title}>{course.title}</h3>
-                    <p className={styles.description}>{course.description}</p>
-                    <div className={styles.footer}>
-                      <p> {course.para}</p>
-                      <span>{course.price}</span>
-                      <img src={course.icon} alt="" />
-                      <p>{course.duration}</p>
-                      <button className={styles.buyNow}>Buy now</button>
-                    </div>
+          {/* <Carousel
+            responsive={responsive}
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            infinite={true}
+            autoPlay={deviceType !== "mobile"}
+            autoPlaySpeed={1000}
+          >
+            {VariousCard.map((course) => (
+              <div key={course.id} className={styles.card}>
+                <img
+                  src={course.imageUrl}
+                  alt={course.title}
+                  className={styles.cardImage}
+                />
+                <div className={styles.cardContent}>
+                  <div className={styles.imageflex}>
+                    {" "}
+                    <img src={course.image} alt="" />
+                    <p className={styles.instructor}>{course.instructor}</p>
+                  </div>
+                  <h3 className={styles.title}>{course.title}</h3>
+                  <p className={styles.description}>{course.description}</p>
+                  <div className={styles.footer}>
+                    <p> {course.para}</p>
+                    <span>{course.price}</span>
+                    <img src={course.icon} alt="" />
+                    <p>{course.duration}</p>
+                    <button className={styles.buyNow}>Buy now</button>
                   </div>
                 </div>
-              ))}
-        {/* })} */}
-        
-      </Carousel>
-    </div>
-   </div>
+              </div>
+            ))}
+          </Carousel> */}
+        </div>
+      </div>
     </div>
   );
 }
