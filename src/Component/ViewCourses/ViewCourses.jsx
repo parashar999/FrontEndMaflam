@@ -4,6 +4,25 @@
   import { useNavigate } from "react-router-dom";
   import { Link } from "react-router-dom";
 
+
+  const redirectionMap = {
+    "Scriptwriting": "/R2/R4/filmproduction/672c62b61f099bf569d0f8eb",
+    "Production": "/R2/R4/filmproduction/672c5ee7da73549420503e9c",
+    "Directing": "/R2/R4/filmproduction/672c6953bd321f82ce18327a",
+    "Cinematography": "/R2/R4/filmproduction/672c5bb6a7c24e51d0db091e",
+    "Sound Recording": "/R2/R4/filmproduction/672c609ae90c3d8357705c73",
+    "Acting": "/R2/R4/filmproduction/672c6420b3e5c110514f52f9",
+    "Editing": "/R2/R3/prc/Editing",
+    "كتابة السيناريو": "/R2/R4/filmproduction/672c62b61f099bf569d0f8eb",
+    "الإنتاج": "/R2/R4/filmproduction/672c5ee7da73549420503e9c",
+    "التصوير": "/R2/R4/filmproduction/672c6953bd321f82ce18327a",
+    "الإخراج": "/R2/R4/filmproduction/672c5bb6a7c24e51d0db091e",
+    "تسجيل الصوت": "/R2/R4/filmproduction/672c609ae90c3d8357705c73",
+    "التمثيل": "/R2/R4/filmproduction/672c6420b3e5c110514f52f9",
+    "المونتاج": "/R2/R3/prc/Editing",
+  };
+
+
   function  ViewCourses() {
     const { homeScreenDetails, loading, error } = useContext(HomePageContext);
   const navigate = useNavigate()
@@ -25,6 +44,8 @@
       return `${styles.courseCard} ${styles[`courseCard--${index + 1}`]}`;
     };
 
+
+
     return (
       <div className={styles.viewcoursecontainer}>
       <div className={styles.container}>
@@ -42,7 +63,7 @@
                 color: "white",
               }}
             >
-            <Link to="/R2/R3/prc/All">   {course.name}</Link>
+            <Link to={redirectionMap[course.name]}>   {course.name}</Link>
             </div>
           ))}
         </div>

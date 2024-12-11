@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import
-{
-  useScrollToTopWithDelay
-} from  '../../hooks'
+import useScrollToTopWithDelay from '../../hooks/useScrollToTopWithDelay'; // Ensure correct path
 import { LanguageProvider } from "../../Component/LanguageContext/LanguageContext";
 
 const BlogEjsPage = () => {
-  const { id } = useParams(); // Retrieve the blog ID from the URL
+  const { id } = useParams();
   const [blogData, setBlogData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Call the hook directly at the top level
+  useScrollToTopWithDelay(500);
+
   useEffect(() => {
-    useScrollToTopWithDelay(500);
     const fetchBlogData = async () => {
       try {
-        const response = await axios.get(`https://backend.maflam.com/maflam/get-blogs?lang=0&&_id=${id}`);
+        console.log("Fetching blog data for ID:", id);
+        const response = await axios.get(`https://backend.maflam.com/maflam/get-blogs?lang=0&_id=${id}`);
+        console.log("API Response:", response.data);
         setBlogData(response.data);
         setLoading(false);
       } catch (err) {
+        console.error("API Error:", err);
         setError("Error fetching blog data");
         setLoading(false);
       }
@@ -34,12 +36,10 @@ const BlogEjsPage = () => {
 
   return (
     <div>
-      <LanguageProvider> 
-      <div dangerouslySetInnerHTML={{ __html: blogData }} />
+      <LanguageProvider>
+        <div dangerouslySetInnerHTML={{ __html: blogData }} />
       </LanguageProvider>
- 
     </div>
-
   );
 };
 

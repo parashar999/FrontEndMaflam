@@ -86,9 +86,15 @@
   .inputGroupHalf div {
     width: 48%;
   }
+  .coupon{
+    display: flex;
+    flex-direction: column;
+
+  }
   
-  label {
-    font-size: 14px;
+ .coupon label {
+  margin-top: 20px;
+    font-size: 24px;
     margin-bottom: 5px;
     display: block;
   }
@@ -122,14 +128,14 @@
     font-family: Noto Kufi Arabic;
     font-weight: 400;
     font-size: 14px;
-    margin: 100px 450px  0px 450px;
+
   }
   .termconditions1{
     color: #39FFFB !important;
     font-family: Noto Kufi Arabic;
     font-weight: 400;
     font-size: 14px;
-    margin: 20px 450px  0px 450px;
+  
   }
 
   .termconditions1 a {
@@ -202,6 +208,11 @@ gap: 8px;
     .card {
       max-width: 100%;
       margin: 0 20px;
+    }
+
+    .container
+    {
+      zoom: 0.6;
     }
   }
   

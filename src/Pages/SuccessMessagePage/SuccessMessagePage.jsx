@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { LanguageProvider } from '../../store'
 import { SuccessMessage } from "../../Component";
 export default function SuccessMessagePage() {

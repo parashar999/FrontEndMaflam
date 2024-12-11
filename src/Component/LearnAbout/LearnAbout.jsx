@@ -146,10 +146,11 @@ function LearnAbout() {
               {packageData[5]?.price || "Default Price"}{" "}
               <span className={stylesSelected.currencyText}>{currencyText}</span>
             </p>
-
+            <Link style={{textDecoration:'none'}} to={"/R2/R3/prc/All"}>
             <button className={stylesSelected.subscribebutton}>
-              {packageData[4]?.buttonText || "Subscribe"}
+              {"اشترك الآن" || "Subscribe"}
             </button>
+            </Link>
             <div style={{paddingTop:'20px'}} className={stylesSelected.buttondiv}>
               {renderCourseCategory(packageData[3]?.nameOfCourseCategory || [])}
             </div>
@@ -174,7 +175,8 @@ function LearnAbout() {
         </div>
 
         <p style={{width:'100%'}} className={stylesSelected.para}>
-          {packageData[9]?.description || "Default description"}&nbsp;
+          {direction=="rtl"? packageData[9]?.description.slice(0,67) : packageData[9]?.description }
+          
           <Link to={"/terms&condition"} className={stylesSelected.link}>
             {termsText}
           </Link>

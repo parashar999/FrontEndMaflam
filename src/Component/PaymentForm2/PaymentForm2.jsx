@@ -99,7 +99,7 @@
 
 
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styles from "./PaymentForm2.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -179,11 +179,13 @@ const PaymentForm2 = () => {
   //   }
   // };
   
+  const [coupon, setCoupon] = useState("");
   const checkoutpage = async () => {
     const userdetails = auth.getAuthData();
     const token = userdetails?.token; // Ensure token is available
     const requestBody = {
       amount: 2200,
+      cuponCode: coupon,
       courseId: "673c7b865b27b048813c59cc",
       callback: "https://maflam.web.app/success",
       return :"https://maflam.web.app/success",
@@ -240,6 +242,16 @@ const PaymentForm2 = () => {
             <img src={localizedDetails.cardImg2} alt="Mada" />
           </div>
           <hr />
+          <div className={styles.coupon}>
+              <label>Enter Coupon Code</label>
+              <input
+                type="text"
+                placeholder="Enter Coupon Code"
+                name="coupon"
+                value={coupon}
+                onChange={(e) => setCoupon(e.target.value)} // Update coupon state
+              />
+            </div>
           <button
             type="button"
             onClick={checkoutpage}

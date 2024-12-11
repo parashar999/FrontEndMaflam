@@ -141,57 +141,315 @@
 // };
 
 // export default PaymentForm;
+// import { useContext, useEffect, useState } from "react";
+// import styles from "./PaymentForm.module.css";
+// import { Link, useParams } from "react-router-dom";
+// import { CheckoutPaymentContext } from "../../store/CheckoutPaymentContext";
+// import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+// import auth from "../../Auth/Auth";
+
+
+
+// const PaymentForm = () => {
+//   const { checkoutPaymentContextDetails, loading, error } = useContext(
+//     CheckoutPaymentContext
+//   );
+
+
+
+//   if (loading) return <p>Loading...</p>;
+//   if (error) return <p>Error loading data</p>;
+
+//   const [paymentID,setPaymentID] = useState(null)
+//   const { paymentId } = useParams();
+
+//   // Get a specific parameter
+//   useEffect(() => {
+//     setPaymentID(paymentId)
+//   }, [])
+
+//   if(!paymentID){
+//     return <p>Loading...</p>;
+//   }  
+  
+
+//   const checkoutpage = async () => {
+//     const userdetails = auth.getAuthData();
+//     const token = userdetails?.token; // Ensure token is available
+//     const requestBody = {
+//       amount: 750,
+//       courseId: paymentID,
+//       callback: "https://maflam.web.app/success",
+//       return :"https://maflam.web.app/success",
+//       // callback: "https://maflam.web.app/success",
+//       // return:  "https://maflam.web.app/success",
+//       token,
+//       //  callback: "http://localhost:5173/success",
+//       // callback: `https://maflam.web.app/checkout/${courseId}`,
+//     };
+  
+//     try {
+//       const response = await axios.post(
+//         `https://backend.maflam.com/maflam/paymenttransction`,
+//         requestBody,
+//         {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
+  
+//       const data = response?.data;
+//       if (data) {
+//         // toast.success(data.message);
+//         // window.open(data.data?.redirect_url, "_blank"); // Ensure URL opens in a new tab
+//         window.location.href = data.data?.redirect_url;  
+
+//       } else {
+//         throw new Error("Invalid response from server");
+//       }
+//     } catch (err) {
+//       console.error("Checkout Error:", err);
+//       const errorMessage = err.response?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
+//     }
+//   };
+
+//   const cardDetails = checkoutPaymentContextDetails?.maflamData1 || [];
+//   const termsDetails =
+//     checkoutPaymentContextDetails?.maflamPricingDetailsSec5 || [];
+//   const imageSrc =
+//     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
+//     "/path/to/default-image.jpg"; // Fallback image
+
+//     console.log("pricing _>>>>> " , cardDetails)
+
+//   return (
+//     <div className={styles.maincontainer}>
+//       <div className={styles.container}>
+//         <div className={styles.card}>
+//           <img src={imageSrc} alt="Course" className={styles.image} />
+//           <h2 className={styles.price}> SAR {cardDetails[0]?.title || "N/A"} </h2>
+//           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
+//           <hr />
+//           <div className={styles.paymentCard}>
+//             <p className={styles.titles}>{cardDetails[2]?.title || "Payment Methods"}</p>
+//             <img src={cardDetails[3]?.imageUrl} alt="Not Found" />
+//             <img src={cardDetails[4]?.imageUrl} alt="Visa" />
+//             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
+//           </div>
+//           <hr />
+//           <button
+//             type="button"
+//             onClick={checkoutpage}
+//             className={styles.payBtn}
+//           >
+//             {cardDetails[12]?.title || "Pay Now"}
+//           </button>
+//         </div>
+
+//         <div>
+//           <p className=  {styles.termconditions}> {termsDetails[0]?.title || ""} </p>
+//         </div>
+//         <div>
+//           <p className={styles.termconditions1}>
+//             {termsDetails[1]?.title || ""}
+//             <Link to="/terms&condition"> Terms and Conditions </Link>
+//             {termsDetails[2]?.title || ""}
+//             <Link to="/privacy-policy"> Privacy Policy</Link>
+//           </p>
+//         </div>
+//       </div>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
+
+// export default PaymentForm;
+
+
+//  ***************** commet old Code it main code ***************
+
+// import { useContext, useEffect, useState } from "react";
+// import styles from "./PaymentForm.module.css";
+// import { Link, useNavigate, useParams } from "react-router-dom";
+// import { CheckoutPaymentContext } from "../../store/CheckoutPaymentContext";
+// import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+// import auth from "../../Auth/Auth";
+
+// const PaymentForm = () => {
+//   const { checkoutPaymentContextDetails, loading, error } = useContext(
+//     CheckoutPaymentContext
+//   );
+//  const  navigate =useNavigate()
+//   const [coupon, setCoupon] = useState("");
+//   const [paymentID, setPaymentID] = useState(null);
+//   const { paymentId } = useParams();
+
+//   useEffect(() => {
+//     setPaymentID(paymentId);
+//   }, []);
+
+//   if (loading) return <p>Loading...</p>;
+//   if (error) return <p>Error loading data</p>;
+//   if (!paymentID) return <p>Loading...</p>;
+
+//   const checkoutpage = async (e) => {
+//     e.preventDefault(); // Prevent default form submission
+//     const userdetails = auth.getAuthData();
+//     const token = userdetails?.token;
+
+//     const requestBody = {
+//       amount: 750,
+//       courseId: paymentID,
+//       cuponCode: coupon,
+//       callback: "https://maflam.com/success",
+// return: "https://maflam.com/success",
+//       token,
+//     };
+
+//     try {
+//       const response = await axios.post(
+//         `https://backend.maflam.com/maflam/paymenttransction`,
+//         requestBody,
+//         {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
+
+//       console.log("payment Check Response " ,response.data)
+//       const data = response?.data;
+//       if (data) {
+//         window.location.href = data.data?.redirect_url;
+//         // const redirectUrl = data.data?.redirect_url;
+//         // navigate(redirectUrl); 
+//       } else {
+//         throw new Error("Invalid response from server");
+//       }
+//     } catch (err) {
+//       console.error("Checkout Error:", err);
+//       const errorMessage = err.response?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
+//     }
+//   };
+
+//   const cardDetails = checkoutPaymentContextDetails?.maflamData1 || [];
+//   const termsDetails =
+//     checkoutPaymentContextDetails?.maflamPricingDetailsSec5 || [];
+//   const imageSrc =
+//     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
+//     "/path/to/default-image.jpg";
+
+//   return (
+//     <div className={styles.maincontainer}>
+//       <div className={styles.container}>
+//         <div className={styles.card}>
+//           <img src={imageSrc} alt="Course" className={styles.image} />
+//           <h2 className={styles.price}>SAR {cardDetails[0]?.title || "N/A"}</h2>
+//           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
+//           <hr />
+//           <div className={styles.paymentCard}>
+//             <p className={styles.titles}>
+//               {cardDetails[2]?.title || "Payment Methods"}
+//             </p>
+//             <img src={cardDetails[3]?.imageUrl} alt="Not Found" />
+//             <img src={cardDetails[4]?.imageUrl} alt="Visa" />
+//             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
+//           </div>
+//           <hr />
+        
+//             <div className={styles.coupon}>
+//               <label>Enter Coupon Code</label>
+//               <input
+//                 type="text"
+//                 placeholder="Enter Coupon Code "
+//                 name="coupon"
+//                 value={coupon}
+//                 onChange={(e) => setCoupon(e.target.value)} // Update coupon state
+//               />
+//             </div>
+//             <button type="submit" className={styles.payBtn} onClick={checkoutpage}>
+//               {cardDetails[12]?.title || "Pay Now"}
+//             </button>
+      
+//         </div>
+
+//         <div>
+//           <p className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
+//         </div>
+//         <div>
+//           <p className={styles.termconditions1}>
+//             {termsDetails[1]?.title || ""}
+//             <Link to="/terms&condition"> Terms and Conditions </Link>
+//             {termsDetails[2]?.title || ""}
+//             <Link to="/privacy-policy"> Privacy Policy</Link>
+//           </p>
+//         </div>
+//       </div>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
+
+// export default PaymentForm;
+
+//  ***************** commet old Code it main code ***************
+
 import { useContext, useEffect, useState } from "react";
 import styles from "./PaymentForm.module.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { CheckoutPaymentContext } from "../../store/CheckoutPaymentContext";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../Auth/Auth";
-
-
-
+import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 const PaymentForm = () => {
   const { checkoutPaymentContextDetails, loading, error } = useContext(
     CheckoutPaymentContext
   );
+  const navigate = useNavigate();
+  const [coupon, setCoupon] = useState("");
+  const [paymentID, setPaymentID] = useState(null);
+  const { paymentId } = useParams();
 
-
+  useEffect(() => {
+    setPaymentID(paymentId);
+  }, []);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading data</p>;
+  if (!paymentID) return <p>Loading...</p>;
 
-  const [paymentID,setPaymentID] = useState(null)
-  const { paymentId } = useParams();
+  const savePaymentData = (paymentData) => {
+    const authData = auth.getAuthData() || {};
+    authData.paymentData = paymentData; // Add or update payment data
+    auth.login(authData); // Save updated auth data back to localStorage
+  };
 
-  // Get a specific parameter
-  useEffect(() => {
-    setPaymentID(paymentId)
-  }, [])
-
-  if(!paymentID){
-    return <p>Loading...</p>;
-  }  
-  
-
-  const checkoutpage = async () => {
+  const checkoutpage = async (e) => {
+    e.preventDefault();
     const userdetails = auth.getAuthData();
-    const token = userdetails?.token; // Ensure token is available
+    const token = userdetails?.token;
+
     const requestBody = {
       amount: 750,
       courseId: paymentID,
-      callback: "https://maflam.web.app/success",
-      return :"https://maflam.web.app/success",
-      // callback: "https://maflam.web.app/success",
-      // return:  "https://maflam.web.app/success",
+      cuponCode: coupon,
+      callback: "https://maflam.com/success2",
+      return: "https://maflam.com/success2",
       token,
-      //  callback: "http://localhost:5173/success",
-      // callback: `https://maflam.web.app/checkout/${courseId}`,
     };
-  
+
     try {
       const response = await axios.post(
         `https://backend.maflam.com/maflam/paymenttransction`,
+
+        // `https://backend.maflam.com/maflam/payment-transction-staging-mode`,
+
         requestBody,
         {
           headers: {
@@ -199,13 +457,18 @@ const PaymentForm = () => {
           },
         }
       );
-  
-      const data = response?.data;
-      if (data) {
-        // toast.success(data.message);
-        // window.open(data.data?.redirect_url, "_blank"); // Ensure URL opens in a new tab
-        window.location.href = data.data?.redirect_url;  
 
+      const data = response?.data;
+      const transId = response.data.data?.tran_ref??"null"
+      localStorage.setItem("tran_ref", transId);
+      console.log(transId,"payment")
+     
+
+      if (data) {
+        savePaymentData(data); // Store payment data
+        window.location.href = data.data?.redirect_url;
+//         const redirectUrl = data.data?.redirect_url;
+//  navigate(redirectUrl); 
       } else {
         throw new Error("Invalid response from server");
       }
@@ -221,36 +484,48 @@ const PaymentForm = () => {
     checkoutPaymentContextDetails?.maflamPricingDetailsSec5 || [];
   const imageSrc =
     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
-    "/path/to/default-image.jpg"; // Fallback image
-
-    console.log("pricing _>>>>> " , cardDetails)
-
+    "/path/to/default-image.jpg";
+    const { direction } = useContext(LanguageContext);
   return (
     <div className={styles.maincontainer}>
       <div className={styles.container}>
         <div className={styles.card}>
           <img src={imageSrc} alt="Course" className={styles.image} />
-          <h2 className={styles.price}> SAR {cardDetails[0]?.title || "N/A"} </h2>
+          <h2 className={styles.price}>
+  {direction === "rtl" ? `${cardDetails[0]?.title} ر.س` : `${cardDetails[0]?.title} SAR`}
+</h2>
+
           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
           <hr />
           <div className={styles.paymentCard}>
-            <p className={styles.titles}>{cardDetails[2]?.title || "Payment Methods"}</p>
+            <p className={styles.titles}>
+              {cardDetails[2]?.title || "Payment Methods"}
+            </p>
             <img src={cardDetails[3]?.imageUrl} alt="Not Found" />
             <img src={cardDetails[4]?.imageUrl} alt="Visa" />
             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
           </div>
           <hr />
+          <div className={styles.coupon}>
+            <label>Enter Coupon Code</label>
+            <input
+              type="text"
+              placeholder="Enter Coupon Code "
+              name="coupon"
+              value={coupon}
+              onChange={(e) => setCoupon(e.target.value)}
+            />
+          </div>
           <button
-            type="button"
-            onClick={checkoutpage}
+            type="submit"
             className={styles.payBtn}
+            onClick={checkoutpage}
           >
             {cardDetails[12]?.title || "Pay Now"}
           </button>
         </div>
-
         <div>
-          <p className=  {styles.termconditions}> {termsDetails[0]?.title || ""} </p>
+          <p className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
         </div>
         <div>
           <p className={styles.termconditions1}>

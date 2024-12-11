@@ -84,7 +84,7 @@ import { useNavigate } from "react-router-dom";
 
 function FundamentalPackage() {
   const { homeScreenDetails, loading, error } = useContext(HomePageContext);
-  const { language } = useContext(LanguageContext);
+  const { direction,language } = useContext(LanguageContext);
   const navigate = useNavigate();
   const stylesSelected = language === "ar" ? stylesArabic : styles;
 
@@ -96,9 +96,9 @@ function FundamentalPackage() {
   const title = sectionData?.title || "Subscribe To The Full Filmmaking Fundamentals Package";
   const imageUrl = sectionData?.imageUrl || "";
   const categories = sectionData?.category || [];
-  const subscribeText = homeScreenDetails?.buttonTextDetail?.buttonText || "Subscribe";
+  const subscribeText = direction=="rtl"?"اشترك الآن":"Subscribe";
   const price = homeScreenDetails?.priceDetail?.price || "2,200 SAR";
-  const mrp = homeScreenDetails?.mrpDetail?.mrp || "2,20m0 SAR";
+  
 
   const handleSubscribe = () => {
     navigate("/checkout2");
@@ -140,7 +140,7 @@ function FundamentalPackage() {
                 </p> */}
                <p className={styles.lines }>
  
-               &nbsp;&nbsp;<b className= {styles.lines1}>&nbsp;{mrp}&nbsp;</b>
+               &nbsp;&nbsp;<b className= {styles.lines1}>&nbsp;{direction=="rtl"?"٦٤٠٠ ريال":"6400 SAR"}&nbsp;</b>
 
   &nbsp;&nbsp;
   <b className={styles.price}>{price}</b>

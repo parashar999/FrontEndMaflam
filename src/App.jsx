@@ -48,7 +48,6 @@ import {
   PurchaseCancellationProvider,
   SingupPageContextProvider,
   TermsConditionProvider,
-  LastPageProvider
 } from './store';
 
 
@@ -67,9 +66,12 @@ import { useEffect ,useState} from "react";
 import ContentRequiredPage2 from "./Pages/ContentRequiredPage2/ContentRequiredPage2.jsx";
 import Checkouts2 from "./Pages/Checkouts2/index.js";
 
+import SuccessMessage2 from "./Component/SuccessMessage2/SuccessMessage2.jsx";
+
+
 const App = () => { 
   return (
-    <LastPageProvider>
+
     <LanguageProvider>
       <Navbar/>
         
@@ -88,6 +90,9 @@ const App = () => {
         <Route path="/contentrequired2" element={<ContentRequiredPage2 />} />
         <Route path="/reset" element={<ResetPasswordPage />} />
         <Route path="/success" element={<SuccessMessagePage />} />
+        <Route path="/success2" element={<SuccessMessage2/>} />
+       
+
         <Route path="/failuremessage" element={<FalioursMassagePage />} />
         <Route path="/personalinformation" element={<PrivateRoute><PersonalInformation /></PrivateRoute>} />
         <Route path="/paymentgateway" element={<PaymentGateWayApi />} />
@@ -100,7 +105,7 @@ const App = () => {
         <Route path="/terms&condition" element={<HomePageProvider> <TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/faqs" element={<FaqPage />} />
         <Route path="/bundle" element={<BundlePage />} />
-        <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} />
+        {/* <Route path="/blogDetails" element={<HomePageProvider><AboutusPageProvider><BlogDetails /></AboutusPageProvider></HomePageProvider>} /> */}
         <Route path="/terms&condition" element={<HomePageProvider><TermsConditionProvider><TermsAndConditionsPage /></TermsConditionProvider></HomePageProvider>} />
         <Route path="/purchaseCancellation" element={<HomePageProvider><PurchaseCancellationProvider><PurchaseCancellationPage /></PurchaseCancellationProvider></HomePageProvider>} />
         <Route path="/CommunityGuidelines" element={<HomePageProvider><CommunityGuidelinesProvider><CommunityGuidelinesPage /></CommunityGuidelinesProvider></HomePageProvider>} />
@@ -111,7 +116,7 @@ const App = () => {
       </Routes>
       <Footer/>
     </LanguageProvider>
-    </LastPageProvider>
+
   );
 };
 

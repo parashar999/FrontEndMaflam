@@ -15,68 +15,94 @@
     "promoPhoto": "string",
     "promoVideo": "https://maflamlmsnew.s3.me-central-1.amazonaws.com/marketingphotos/course+teasers/producing/2.1.650_Ayman_Producing_+%D9%85%D9%82%D8%AF%D9%85%D8%A9+%D8%A7%D9%84%D8%A7%D9%95%D9%86%D8%AA%D8%A7%D8%AC_V3.mp4",
     "banner": "string",
-  "lessions": [
-    {
-      "SectionTitle1": "المقدمة",
-      "Lessons": [
-        { "lesson_name": "أهمية الصوت في صناعة الأفلام", "timing": "٢:٣٨" },
-        { "lesson_name": "دور مهندس الصوت في صناعة الأفلام", "timing": "١:٤٧" },
-        { "lesson_name": "مهام فريق الصوت", "timing": "١:٠٢" },
-        { "lesson_name": "أساسيات الصوت", "timing": "١:٢٩" },
-        { "lesson_name": "شرائح صوت المشهد", "timing": "١:٣٢" }
-      ]
-    },
-    {
-      "SectionTitle1": "الجانب التقني",
-      "Lessons": [
-        { "lesson_name": "المعدات الأساسية لتسجيل الصوت", "timing": "١:٤٤" },
-        { "lesson_name": "أنواع المايكات", "timing": "٠:٣٩" },
-        { "lesson_name": "الميكروفون الديناميكي", "timing": "١:٣٧" },
-        { "lesson_name": "الميكروفون المكثف الكوندنسر", "timing": "١:٤٩" },
-        { "lesson_name": "الميكروفون الشريطي الريبون", "timing": "٠:٥١" },
-        { "lesson_name": "نمط التقاط الميكروفونات", "timing": "٢:٠٠" },
-        { "lesson_name": "رحلة الصوت مع الممثل للفيلم", "timing": "١:٠١" },
-        { "lesson_name": "عناصر الميكروفونات اللاسلكية", "timing": "٣:٣٣" },
-        { "lesson_name": "تسجيل الصوت على الكاميرا مباشرة السنجل سيستم", "timing": "٣:٣٤" },
-        { "lesson_name": "تسجيل الصوت على مكسر بسيط (الدبل سيستم)", "timing": "٥:٣٠" },
-        { "lesson_name": "مدخل جهاز التسجيل", "timing": "٢:١٩" },
-        { "lesson_name": "جهاز التسجيل", "timing": "١:١٣" },
-        { "lesson_name": "إعداد مستوى التضخيم وتفادي تشوه الصوت", "timing": "٢:٠٥" },
-        { "lesson_name": "اللفت والرايت مكس", "timing": "٤:٣٤" },
-        { "lesson_name": "البري فيدر والبوست فيدر", "timing": "٠:٥٢" },
-        { "lesson_name": "مخارج جهاز التسجيل", "timing": "١:٥٤" },
-        { "lesson_name": "الهيدفون مكس", "timing": "٥:١٥" },
-        { "lesson_name": "إعداد مكس العميل", "timing": "٢:٠٣" },
-        { "lesson_name": "إرسال الصوت للكاميرا \\ السكراتش أوديو", "timing": "٢:٠٧" },
-        { "lesson_name": "طريقة إعداد الهيدفون رواتينج", "timing": "٢:٣٠" }
-      ]
-    },
-    {
-      "SectionTitle1": "التحضير",
-      "Lessons": [
-        { "lesson_name": "تفريغ النص", "timing": "٣:٠٨" },
-        { "lesson_name": "كيف ترتب الشنطة", "timing": "٦:١٣" }
-      ]
-    },
-    {
-      "SectionTitle1": "التسجيل",
-      "Lessons": [
-        { "lesson_name": "اتيكيت اللاف مايك", "timing": "١:٥٠" },
-        { "lesson_name": "طريقة تركيب اللاف مايك", "timing": "١١:٣٤" },
-        { "lesson_name": "التعامل مع ارتداد الصوت", "timing": "٦:١٢" },
-        { "lesson_name": "مقابل لشخصين", "timing": "٤:٥٤" },
-        { "lesson_name": "البوم أوبريتر", "timing": "٤:٤٥" },
-        { "lesson_name": "استخدام البوم من الأسفل", "timing": "١:٥٠" },
-        { "lesson_name": "إخفاء المايك في بيئة التصوير", "timing": "٣:١٢" },
-        { "lesson_name": "تركيب المايك في السيارة", "timing": "٣:٣٩" },
-        { "lesson_name": "نصائح لتسجيل الصوت الخارجي", "timing": "٣:١٥" },
-        { "lesson_name": "الكيابل والوصلات", "timing": "٢:٥٧" },
-        { "lesson_name": "تقرير الصوت", "timing": "٣:٢٨" },
-        { "lesson_name": "كماليات الصوت", "timing": "٢:٣٧" },
-        { "lesson_name": "نصائح تساعدك في الموقع", "timing": "١:٥٣" }
-      ]
-    }
-  ],
+"lessions": [
+  {
+    "SectionTitle1": "المقدمة",
+    "Lessons": [
+      { "lesson_name": "مقدمة الإنتاج", "timing": "١:٢٠" },
+      { "lesson_name": "من هو المنتج", "timing": "٢:٣٨" },
+      { "lesson_name": "أنواع المنتجين", "timing": "٥:٣٨" },
+      { "lesson_name": "مراحل الإنتاج الرئيسية", "timing": "٣:٢٨" },
+      { "lesson_name": "كيف تكون منتجاً متميزاً", "timing": "٤:٢٠" },
+      { "lesson_name": "فريق العمل وأدوارهم", "timing": "١٠:٢٧" }
+    ]
+  },
+  {
+    "SectionTitle1": "مرحلة التطوير",
+    "Lessons": [
+      { "lesson_name": "مقدمة مرحلة التطوير", "timing": "٠:٣٨" },
+      { "lesson_name": "فكرة الفيلم", "timing": "١:٤٩" },
+      { "lesson_name": "تطوير السيناريو واختيار المواضيع", "timing": "٢:٠٨" },
+      { "lesson_name": "التعامل مع المبدعين", "timing": "٣:٥٧" },
+      { "lesson_name": "الجدول الزمني للفيلم", "timing": "٢:١٠" },
+      { "lesson_name": "الميزانية الأولية", "timing": "٥:٥٠" },
+      { "lesson_name": "ملف الفيلم (ليتش دك)", "timing": "٣:٠١" },
+      { "lesson_name": "مثال لملف الفيلم", "timing": "٤:٤٩" },
+      { "lesson_name": "جهات التمويل", "timing": "٢:٥٨" }
+    ]
+  },
+  {
+    "SectionTitle1": "التحضير",
+    "Lessons": [
+      { "lesson_name": "مقدمة مرحلة التحضير", "timing": "١:١٠" },
+      { "lesson_name": "الجدول الزمني للتصوير", "timing": "٥:٢١" },
+      { "lesson_name": "تلوين السيناريو", "timing": "٤:٢١" },
+      { "lesson_name": "الميزانية التفصيلية", "timing": "٨:١١" },
+      { "lesson_name": "مثال للميزانية الختامية", "timing": "١١:٠٧" },
+      { "lesson_name": "الحصول على جودة جيدة بموارد محدودة", "timing": "٤:٤٤" },
+      { "lesson_name": "لائحة التواصل للفريق والممثلين", "timing": "٢:٥٦" },
+      { "lesson_name": "فن المفاوضات", "timing": "٥:٥٢" },
+      { "lesson_name": "العقود", "timing": "٥:٠٠" },
+      { "lesson_name": "اتفاقية عدم الممانعة", "timing": "٣:١٨" },
+      { "lesson_name": "حقوق الملكية", "timing": "٣:٥٦" },
+      { "lesson_name": "اجتماعات التحضير", "timing": "٣:٢٦" },
+      { "lesson_name": "الإعاشة", "timing": "٤:٢٥" },
+      { "lesson_name": "المواصلات والإقامة", "timing": "٢:٠٧" },
+      { "lesson_name": "جدول التصوير", "timing": "٦:٣٩" },
+      { "lesson_name": "الكول شييت", "timing": "٩:١٢" },
+      { "lesson_name": "الرحلات الاستكشافية", "timing": "٤:٤٢" }
+    ]
+  },
+  {
+    "SectionTitle1": "الإنتاج",
+    "Lessons": [
+      { "lesson_name": "مقدمة مرحلة الإنتاج", "timing": "١:١٠" },
+      { "lesson_name": "السلامة", "timing": "٢:٥٤" },
+      { "lesson_name": "البحث عن المشاكل لحلها", "timing": "٢:٣١" },
+      { "lesson_name": "الالتزام بالجدول الزمني", "timing": "٢:١٨" },
+      { "lesson_name": "صناعة المحتوى التسويقي", "timing": "٢:٤١" },
+      { "lesson_name": "إدارة ملفات التصوير", "timing": "١:٥٣" },
+      { "lesson_name": "التواصل مع الموزعين", "timing": "١:٥١" },
+      { "lesson_name": "بروتوكولات موقع التصوير", "timing": "٣:١٠" }
+    ]
+  },
+  {
+    "SectionTitle1": "المونتاج",
+    "Lessons": [
+      { "lesson_name": "مقدمة قسم المونتاج", "timing": "١:٢٥" },
+      { "lesson_name": "فريق عمل المونتاج", "timing": "٤:٠٦" },
+      { "lesson_name": "خط سير عمل المونتاج", "timing": "٢:٥٧" },
+      { "lesson_name": "الجدول الزمني لمرحلة الإنتاج للفيلم", "timing": "٣:٠٨" },
+      { "lesson_name": "الآراء والملاحظات على نسخ الفيلم", "timing": "٢:٠٨" },
+      { "lesson_name": "العمل على فيديوهات تسويقية للفيلم", "timing": "٢:١٤" },
+      { "lesson_name": "الشارة", "timing": "٣:٢٥" },
+      { "lesson_name": "ملفات التصدير", "timing": "١:١٥" }
+    ]
+  },
+  {
+    "SectionTitle1": "التسويق والتوزيع",
+    "Lessons": [
+      { "lesson_name": "مقدمة التسويق والتوزيع", "timing": "١:٠٤" },
+      { "lesson_name": "التسويق للفيلم", "timing": "٣:٥٠" },
+      { "lesson_name": "التسويق لصناعة الفيلم والتفاعل مع الجمهور", "timing": "٢:٢٧" },
+      { "lesson_name": "IMDb", "timing": "١:٣٢" },
+      { "lesson_name": "مراحل التوزيع", "timing": "٢:٥٤" },
+      { "lesson_name": "رخصة توزيع الفيلم", "timing": "٣:٢١" },
+      { "lesson_name": "دائرة مهرجانات الأفلام المحلية والدولية", "timing": "٣:٥٤" }
+    ]
+  }
+]
+,
     "promoVedio": "string",
     "estimatedLearningTime": "٣ ساعات و٣٠ دقيقة",
     "instructors": [
