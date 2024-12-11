@@ -172,14 +172,14 @@ function MyProfilePersonalInfo() {
             <Link to="/personalinfo">Personal Information</Link>
           </li>
           <li>
-            <Link to="/mycourses">My Courses</Link>
+            <Link to="/mycourses">My Transactions</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/mycertificate">My Certificates</Link>
           </li>
           <li>
             <Link to="/mywishlist">My Wishlist</Link>
-          </li>
+          </li> */}
         </ul>
         <hr className={styles.footerHr} />
       </nav>
