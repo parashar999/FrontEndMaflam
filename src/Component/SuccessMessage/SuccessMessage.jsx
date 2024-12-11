@@ -39,15 +39,16 @@ function SuccessMessage() {
 
 export default SuccessMessage;
 
-
 // import React from "react";
 // import styles from "./SuccessMessage.module.css";
 // import successtickmark from "../../assets/successtickmark.png";
-// import auth from "../../Auth/Auth";
-// import { Link } from "react-router-dom";
+// import { useResponseData } from "../../store/ResponseDataContext";
+// // import { useResponseData } from "../../path-to/ResponseDataContext";
+
+
 
 // function SuccessMessage() {
-//   const paymentData = auth.getAuthData()?.paymentData;
+//   const { responseData } = useResponseData(); // Access data from context
 
 //   return (
 //     <div className={styles.maincontainer}>
@@ -57,8 +58,8 @@ export default SuccessMessage;
 //         </header>
 //         <form className={styles.form}>
 //           <h2>You have successfully enrolled in the course.</h2>
-//           <p>Transaction ID: {paymentData?.transactionId || "N/A"}</p>
-//           <p>Status: {paymentData?.status || "N/A"}</p>
+//           <p>Transaction ID: {responseData?.tran_ref || "N/A"}</p>
+//           <p>Status: {responseData?.status || "N/A"}</p>
 //           <p>Welcome to the Maflam’s family!</p>
 //           <p>Get ready to learn and grow with top experts in the film industry.</p>
 //           <p>Together, we will turn your passion for films into reality.</p>
@@ -72,4 +73,3 @@ export default SuccessMessage;
 // }
 
 // export default SuccessMessage;
-
