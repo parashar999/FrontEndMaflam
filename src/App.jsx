@@ -67,6 +67,7 @@ import ContentRequiredPage2 from "./Pages/ContentRequiredPage2/ContentRequiredPa
 import Checkouts2 from "./Pages/Checkouts2/index.js";
 
 import SuccessMessage2 from "./Component/SuccessMessage2/SuccessMessage2.jsx";
+import TransationReciept from "./Component/TransationReciept/TransationReciept.jsx";
 
 
 const App = () => { 
@@ -91,7 +92,7 @@ const App = () => {
         <Route path="/reset" element={<ResetPasswordPage />} />
         <Route path="/success" element={<SuccessMessagePage />} />
         <Route path="/success2" element={<SuccessMessage2/>} />
-       
+        <Route path="/transaction" element={<TransationReciept/>} />
 
         <Route path="/failuremessage" element={<FalioursMassagePage />} />
         <Route path="/personalinformation" element={<PrivateRoute><PersonalInformation /></PrivateRoute>} />
