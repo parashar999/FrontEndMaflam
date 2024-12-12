@@ -110,6 +110,7 @@ const TransationReciept = () => {
                  
                   <th>Currency</th>
                   <th>Name</th>
+                  <th> Invoice Link</th>
                   <th> Transaction Date</th>
                   <th>Status</th>
                   <th>Transaction ID</th>
@@ -122,6 +123,7 @@ const TransationReciept = () => {
                     <td>{transaction?.cartAmount || 'N/A'}</td>
                    
                     <td>{transaction?.cartCurrency|| 'N/A'}</td>
+                    <td>{transaction?.cartId?.nameInEng || 'N/A'}</td>
                     <td>{transaction?.cartId?.nameInEng || 'N/A'}</td>
                     <td>{transaction?.paymentResult?.transactionTime || 'N/A'}</td>
                     <td>{transaction?.paymentResult?.responseMessage || 'N/A'}</td>
