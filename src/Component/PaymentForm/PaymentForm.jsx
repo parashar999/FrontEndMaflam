@@ -415,7 +415,8 @@ const PaymentForm = () => {
   const [coupon, setCoupon] = useState("");
   const [paymentID, setPaymentID] = useState(null);
   const { paymentId } = useParams();
-
+  const {direction}= useContext(LanguageContext);
+  const coupuntext = direction=="rtl"? "أدخل كود الخصم، إذا كان لديك" : "Enter the discount code if you have one" ;
   useEffect(() => {
     setPaymentID(paymentId);
   }, []);
@@ -485,7 +486,7 @@ const PaymentForm = () => {
   const imageSrc =
     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
     "/path/to/default-image.jpg";
-    const { direction } = useContext(LanguageContext);
+
   return (
     <div className={styles.maincontainer}>
       <div className={styles.container}>
@@ -507,32 +508,27 @@ const PaymentForm = () => {
           </div>
           <hr />
           <div className={styles.coupon}>
-            <label>Enter Coupon Code</label>
-            <input
-              type="text"
-              placeholder="Enter Coupon Code "
-              name="coupon"
-              value={coupon}
-              onChange={(e) => setCoupon(e.target.value)}
-            />
-          </div>
-          <button
-            type="submit"
-            className={styles.payBtn}
-            onClick={checkoutpage}
-          >
-            {cardDetails[12]?.title || "Pay Now"}
-          </button>
+              <label> { coupuntext}</label>
+              <input
+                type="text"
+                placeholder={coupuntext}
+                name="coupon"
+                value={coupon}
+                onChange={(e) => setCoupon(e.target.value)} // Update coupon state
+              />
+            </div>
+          <button type="submit" className={styles.payBtn} onClick={checkoutpage}>
+              { direction=="ltr"? ` PAY ${cardDetails[0]?.title} SAR ` :` دفع ${cardDetails[0]?.title} ر.س ` }
+            </button>
         </div>
-        <div>
-          <p className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
-        </div>
-        <div>
+
+        <div style={{ margin:'20px', maxWidth:'600px', marginTop:'50px'}}>
+          <p style={{paddingBottom:'20px'}} className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
           <p className={styles.termconditions1}>
             {termsDetails[1]?.title || ""}
-            <Link to="/terms&condition"> Terms and Conditions </Link>
+            <Link to="/terms&condition"> {direction=="rtl"?"الشروط والأحكام": "Terms and Conditions"} </Link>
             {termsDetails[2]?.title || ""}
-            <Link to="/privacy-policy"> Privacy Policy</Link>
+            <Link to="/privacy-policy">  {direction=="rtl"?"سياسة الخصوصية" :"Privacy Policy"}</Link>
           </p>
         </div>
       </div>

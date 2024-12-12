@@ -34,7 +34,7 @@ export default function Route2() {
               <Route path="blogs" element={<AboutusPageProvider><Blogs /></AboutusPageProvider>} />
               <Route path="*" element={<PageNotFoundPage/>}/>
             </Routes>
-            <div className="JoinUsContainer">
+            <div className="JoinUsContainer" id="JoinNow">
               <JoinUs />
             </div>
           </div>

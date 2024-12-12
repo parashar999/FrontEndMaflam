@@ -24,7 +24,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `https://backend.maflam.com/maflam/paymenttransction`,
+//         `http://localhost:3001/maflam/paymenttransction`,
 //         requestBody,
 //         {
 //           headers: {
@@ -112,8 +112,9 @@ import  Visa from "../../assets/Visa.png"
 import MasterCard  from "../../assets/MasterCard.png"
 import  Mada  from "../../assets/Mada.png"
 
+
 const PaymentForm2 = () => {
-  const { language } = useContext(LanguageContext);
+  const {direction, language } = useContext(LanguageContext);
 
   const cardDetails = {
     en: {
@@ -123,27 +124,26 @@ const PaymentForm2 = () => {
       cardImg1: MasterCard,
       cardImg2: Mada,
       priceHead: "2200 SAR",
-      price: "Pay SAR 2200",
+      price: "Pay 2200 SAR",
       imageSrc: Checkout,
       termcondition1: "By clicking the 'Pay' button above, you agree to the ",
       termcondition2: " and acknowledge that you have read our .",
     },
     ar: {
-      title: "اشترك في حزمة أساسيات صناعة الأفلام الكاملة",
+      title: "اشترك في باقة  أساسيات صناعة الأفلام الكاملة",
       paymentTitle: "الدفع بواسطة بطاقة الائتمان أو بطاقة الخصم",
       cardImg: Visa,
       cardImg1: MasterCard,
       cardImg2: Mada,
-      priceHead: "SAR 2200",
-      price: "إدفع SAR 2200",
+      priceHead: "٢٢٠٠ ريال ",
+      price: "دفع ٢٢٠٠ ر.س",
       imageSrc: Checkout,
       termcondition1: "بالنقر على زر 'إدفع' أعلاه، فإنك توافق على ",
       termcondition2: "وتقر بأنك قد قرأت .",
     },
   };
   const localizedDetails = cardDetails[language === "en" ? "en" : "ar"];
-
-
+  const coupuntext = direction=="rtl"? "أدخل كود الخصم، إذا كان لديك" : "Enter the discount code if you have one" ;
   // const checkoutPage = async () => {
   //   const userDetails = auth.getAuthData();
   //   const token = userDetails?.token;
@@ -157,7 +157,7 @@ const PaymentForm2 = () => {
 
   //   try {
   //     const response = await axios.post(
-  //       `https://backend.maflam.com/maflam/paymenttransction`,
+  //       `http://localhost:3001/maflam/paymenttransction`,
   //       requestBody,
   //       {
   //         headers: {
@@ -198,7 +198,7 @@ const PaymentForm2 = () => {
   
     try {
       const response = await axios.post(
-        `https://backend.maflam.com/maflam/paymenttransction`,
+        `http://localhost:3001/maflam/paymenttransction`,
         requestBody,
         {
           headers: {
@@ -243,10 +243,10 @@ const PaymentForm2 = () => {
           </div>
           <hr />
           <div className={styles.coupon}>
-              <label>Enter Coupon Code</label>
+              <label>{coupuntext}</label>
               <input
                 type="text"
-                placeholder="Enter Coupon Code"
+                placeholder={coupuntext}
                 name="coupon"
                 value={coupon}
                 onChange={(e) => setCoupon(e.target.value)} // Update coupon state

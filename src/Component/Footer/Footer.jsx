@@ -18,7 +18,7 @@ const Footer = () => {
     // Fetch footer data based on the selected language
     // axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
     axios
-      .get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
+      .get(`http://localhost:3001/maflam/fetch-footerdata?lang=${lang}`)
       // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
 
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')
@@ -32,14 +32,14 @@ const Footer = () => {
   };
 
   const purchasePolicy =
-    language === "ar" ? "شروط الاستخدام" : "Purchase Policy";
+    language === "ar" ? "سياسة الشراء" : "Purchase Policy";
   const helpCenter = language === "ar" ? "سياسة الخصوصية" : " Help Center";
   const Community =
-    language === "ar" ? "مركز المساعدة" : "Community Guidelines";
+    language === "ar" ? "مبادئ مجتمع مَفلَم": "Community Guidelines";
   const PrivacyPolicy =
-    language === "ar" ? "مبادئ مجتمع مفلم" : "Privacy Policy";
+    language === "ar" ? "سياسة الخصوصية" :"Privacy Policy";
   const termsandcondition =
-    language === "ar" ? "سياسة الشراء" : " Terms and Conditions";
+    language === "ar" ? "الشروط والأحكام" : " Terms and Conditions";
   const copyrighttext =
     language === "ar"
       ? "جميع الحقوق محفوظة © مفلم 2024"
@@ -105,7 +105,7 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                <a href="https://www.tiktok.com/@maflam.com" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@maflam.com_" aria-label="TikTok">
                   <svg
                     width="33"
                     height="33"
@@ -171,7 +171,7 @@ const Footer = () => {
               </li>
 
               <li style={{marginBottom:'0px', display:'flex', flexDirection:'row', justifyContent:'center'}} className={styles.socialIcons}>
-                <a href="#" aria-label="Whatsapp">
+                <a href="https://wa.me/966530909467" aria-label="Whatsapp">
                   <svg
                     width="33"
                     height="33"
@@ -231,7 +231,7 @@ const Footer = () => {
                   </svg>
                 </a>
 
-                <a href="#" aria-label="Threads">
+                <Link to="/R2/R3/contact/*" aria-label="Threads">
                 <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="0.000244141" width="33" height="33" rx="16.5" fill="#39FFFB"/>
 <g clip-path="url(#clip0_12658_2571)">
@@ -244,7 +244,7 @@ const Footer = () => {
 </defs>
 </svg>
 
-                </a>
+                </Link>
               </li>
             </ul>
         </div>
@@ -274,9 +274,8 @@ const Footer = () => {
           <li>
             <Link to="/purchaseCancellation">{purchasePolicy}</Link>
           </li>
-          <li>
-            <Link to="/contentrequired">{helpCenter}</Link>
-          </li>
+
+
           <li>
             <Link to="/CommunityGuidelines">{Community}</Link>
           </li>

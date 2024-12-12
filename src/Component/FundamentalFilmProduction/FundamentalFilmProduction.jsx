@@ -140,8 +140,7 @@ const checkoutpage = (paymentId) => {
     </clipPath>
   </defs>
 </svg>
-                    {courseDataId.price==="0" ? ""
-                      :`${courseDataId.price}` }
+                  
               
 {direction === "rtl" 
   ? (courseDataId.price === "0" 
