@@ -106,28 +106,36 @@ const TransationReciept = () => {
               <thead className={styles.colorsfield}>
                 <tr>
                   <th>Index</th>
+                  <th> Course Name</th>
+                  <th>Transaction ID</th>
                   <th>Amount</th>
                  
                   <th>Currency</th>
-                  <th>Name</th>
-                  <th> Invoice Link</th>
-                  <th> Transaction Date</th>
                   <th>Status</th>
-                  <th>Transaction ID</th>
+             
+                  <th> Transaction Date</th>
+                  {/* <th> Download Invoice </th> */}
+                 
+                
                 </tr>
               </thead>
               <tbody>
                 {paginatedTransactions.map((transaction, index) => (
                   <tr key={transaction._id}>
                     <td>{(currentPage - 1) * rowsPerPage + index + 1}</td>
-                    <td>{transaction?.cartAmount || 'N/A'}</td>
-                   
-                    <td>{transaction?.cartCurrency|| 'N/A'}</td>
                     <td>{transaction?.cartId?.nameInEng || 'N/A'}</td>
-                    <td>{transaction?.cartId?.nameInEng || 'N/A'}</td>
-                    <td>{transaction?.paymentResult?.transactionTime || 'N/A'}</td>
-                    <td>{transaction?.paymentResult?.responseMessage || 'N/A'}</td>
                     <td>{transaction?.tranRef || 'N/A'}</td>
+                    <td>{transaction?.cartAmount || 'N/A'}</td>
+                    <td>{transaction?.cartCurrency|| 'N/A'}</td>
+
+                    <td>{transaction?.paymentResult?.responseMessage || 'N/A'}</td>
+                   
+                    
+                    
+                   
+                    <td>{transaction?.paymentResult?.transactionTime || 'N/A'}</td>
+                    
+                
                   </tr>
                 ))}
               </tbody>
