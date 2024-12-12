@@ -169,10 +169,10 @@ function MyProfilePersonalInfo() {
       <nav>
         <ul className={styles.profileTabs}>
           <li className={styles.activeTab}>
-            <Link to="/personalinfo">Personal Information</Link>
+            <Link to="/personalInformation">Personal Information</Link>
           </li>
           <li>
-            <Link to="/mycourses">My Transactions</Link>
+            <Link to="/transaction">My Transactions</Link>
           </li>
           {/* <li>
             <Link to="/mycertificate">My Certificates</Link>
