@@ -10,7 +10,7 @@ import auth from '../../Auth/Auth';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable'; // Import the plugin
 import logo from "../../assets/logo1.png";
-import { toWords } from 'number-to-words';
+// import { toWords } from 'number-to-words';
 
 const TransationReciept = () => {
   const [transactions, setTransactions] = useState([]);
@@ -71,7 +71,13 @@ const TransationReciept = () => {
 
     // Add content to the PDF
     doc.setFontSize(20);
-    doc.text('Tax Invoice', 105, 20, { align: 'center' });
+    // doc.text('Tax Invoice', 105, 20, { align: 'center' });
+    const arabicText = "فاتورة ضريبية مبسطة";
+    const x = 105;
+    const y = 20;
+    
+    // For RTL, you can manually adjust the X-coordinate or use a helper function.
+    doc.text(arabicText.split("").reverse().join(""), x, y, { align: 'center' });
 
     doc.setFontSize(12);
     doc.addImage(logo, 'PNG', 85, 25, 40, 20); // x=85, y=25, width=40, height=20
@@ -79,7 +85,7 @@ const TransationReciept = () => {
     doc.text(`Address: Olaya Tower, AlMuhammadiyah District, Jeddah, Saudi Arabia`, 105, 50, { align: 'center' });
     doc.text('Phone: +966 53 090 8467', 105, 60, { align: 'center' });
     doc.text(`Email: Info@maflam.com`, 105, 70, { align: 'center' });
-    doc.text(`VAT Number: Placeholder VAT Number`, 105, 80, { align: 'center' });
+    doc.text(`VAT Number: 300553484700003`, 105, 80, { align: 'center' });
 
     doc.text(`Bill To: ${transaction?.customerDetails?.name || 'N/A'}`, 20, 100);
     doc.text(`Address: ${transaction?.customerDetails?.street1 || 'N/A'}`, 20, 110);
@@ -143,14 +149,14 @@ const TransationReciept = () => {
     //   20,
     //   doc.lastAutoTable.finalY + 40
     // );
-    const totalAmountInWords = totalAmount !== 'N/A' ? toWords(parseFloat(totalAmount)) : 'N/A';
+//     const totalAmountInWords = totalAmount !== 'N/A' ? toWords(parseFloat(totalAmount)) : 'N/A';
 
-// Add to the PDF
-doc.text(
-  `Total Amount in Words: ${totalAmountInWords}`,
-  20,
-  doc.lastAutoTable.finalY + 40
-);
+// // Add to the PDF
+// doc.text(
+//   `Total Amount in Words: ${totalAmountInWords}`,
+//   20,
+//   doc.lastAutoTable.finalY + 40
+// );
 
     doc.save(`Receipt_${transaction.tranRef}.pdf`);
   };
