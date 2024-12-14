@@ -1,101 +1,4 @@
 
-// import { useContext, useEffect, useState } from "react";
-// import styles from "./PaymentForm2.module.css";
-// import { Link } from "react-router-dom";
-// import axios from "axios";
-// import { ToastContainer, toast } from "react-toastify";
-// import auth from "../../Auth/Auth";
-// import "react-toastify/dist/ReactToastify.css";
-// import { cardDetails } from "../../assets/assests";
-// import { LanguageContext } from "../../store";
-
-// const PaymentForm2 = () => {
-//   const checkoutpage = async () => {
-//     const userDetails = auth.getAuthData();
-//     const token = userDetails?.token;
-
-//     const requestBody = {
-//       amount: 2200,
-//       // courseId: "paymentID", // Replace with dynamic paymentID if applicable
-//       callback: "https://maflam.web.app/success",
-//       return: "https://maflam.web.app/success",
-//       token,
-//     };
-
-//     try {
-//       const response = await axios.post(
-//         `http://localhost:3001/maflam/paymenttransction`,
-//         requestBody,
-//         {
-//           headers: {
-//             Authorization: `Bearer ${token}`,
-//           },
-//         }
-//       );
-
-//       const data = response?.data;
-//       if (data?.data?.redirect_url) {
-//         window.location.href = data.data.redirect_url;
-//       } else {
-//         throw new Error("Invalid response from server");
-//       }
-//     } catch (err) {
-//       console.error("Checkout Error:", err);
-//       const errorMessage = err.response?.data?.message || err.message;
-//       toast.error(`Error: ${errorMessage}`);
-//     }
-//   };
-
-//   const {language} =useContext(LanguageContext)
-
-//   const cardDetails = 
-//   language === "ar" ? "":"en";
-//   return (
-//     <div className={styles.maincontainer}>
-//       <div className={styles.container}>
-//         <div className={styles.card}>
-//           <img
-//             src={cardDetails.imageSrc}
-//             alt="Course"
-//             className={styles.image}
-//           />
-//           <h2 className={styles.price}>{cardDetails.priceHead}</h2>
-//           <h3 className={styles.title}>{cardDetails.title}</h3>
-//           <hr />
-//           <div className={styles.paymentCard}>
-//             <p className={styles.titles}>{cardDetails.paymentTitle}</p>
-//             <img src={cardDetails.cardImg} alt="Visa" />
-//             <img src={cardDetails.cardImg1} alt="MasterCard" />
-//             <img src={cardDetails.cardImg2} alt="Mada" />
-//           </div>
-//           <hr />
-//           <button
-//             type="button"
-//             onClick={checkoutpage}
-//             className={styles.payBtn}
-//           >
-//        {cardDetails.price}
-//           </button>
-//         </div>
-
-//         <div>
-//           {/* <p className={styles.termconditions}>{cardDetails.terms.fullText}</p> */}
-//         </div>
-//         <div>
-//           {/* <p className={styles.termconditions1}>
-//             {cardDetails.terms.part1}
-//             <Link to="/terms&condition">Terms and Conditions</Link>
-//             {cardDetails.terms.part2}
-//             <Link to="/privacy-policy">Privacy Policy</Link>
-//           </p> */}
-//         </div>
-//       </div>
-//       <ToastContainer />
-//     </div>
-//   );
-// };
-
-// export default PaymentForm2;
 
 
 
@@ -198,7 +101,7 @@ const PaymentForm2 = () => {
   
     try {
       const response = await axios.post(
-        `http://localhost:3001/maflam/paymenttransction`,
+        `https://backend.maflam.com/maflam/paymenttransction`,
         requestBody,
         {
           headers: {
@@ -275,3 +178,102 @@ const PaymentForm2 = () => {
 };
 
 export default PaymentForm2;
+
+
+// import { useContext, useEffect, useState } from "react";
+// import styles from "./PaymentForm2.module.css";
+// import { Link } from "react-router-dom";
+// import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+// import auth from "../../Auth/Auth";
+// import "react-toastify/dist/ReactToastify.css";
+// import { cardDetails } from "../../assets/assests";
+// import { LanguageContext } from "../../store";
+
+// const PaymentForm2 = () => {
+//   const checkoutpage = async () => {
+//     const userDetails = auth.getAuthData();
+//     const token = userDetails?.token;
+
+//     const requestBody = {
+//       amount: 2200,
+//       // courseId: "paymentID", // Replace with dynamic paymentID if applicable
+//       callback: "https://maflam.web.app/success",
+//       return: "https://maflam.web.app/success",
+//       token,
+//     };
+
+//     try {
+//       const response = await axios.post(
+//         `http://localhost:3001/maflam/paymenttransction`,
+//         requestBody,
+//         {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
+
+//       const data = response?.data;
+//       if (data?.data?.redirect_url) {
+//         window.location.href = data.data.redirect_url;
+//       } else {
+//         throw new Error("Invalid response from server");
+//       }
+//     } catch (err) {
+//       console.error("Checkout Error:", err);
+//       const errorMessage = err.response?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
+//     }
+//   };
+
+//   const {language} =useContext(LanguageContext)
+
+//   const cardDetails = 
+//   language === "ar" ? "":"en";
+//   return (
+//     <div className={styles.maincontainer}>
+//       <div className={styles.container}>
+//         <div className={styles.card}>
+//           <img
+//             src={cardDetails.imageSrc}
+//             alt="Course"
+//             className={styles.image}
+//           />
+//           <h2 className={styles.price}>{cardDetails.priceHead}</h2>
+//           <h3 className={styles.title}>{cardDetails.title}</h3>
+//           <hr />
+//           <div className={styles.paymentCard}>
+//             <p className={styles.titles}>{cardDetails.paymentTitle}</p>
+//             <img src={cardDetails.cardImg} alt="Visa" />
+//             <img src={cardDetails.cardImg1} alt="MasterCard" />
+//             <img src={cardDetails.cardImg2} alt="Mada" />
+//           </div>
+//           <hr />
+//           <button
+//             type="button"
+//             onClick={checkoutpage}
+//             className={styles.payBtn}
+//           >
+//        {cardDetails.price}
+//           </button>
+//         </div>
+
+//         <div>
+//           {/* <p className={styles.termconditions}>{cardDetails.terms.fullText}</p> */}
+//         </div>
+//         <div>
+//           {/* <p className={styles.termconditions1}>
+//             {cardDetails.terms.part1}
+//             <Link to="/terms&condition">Terms and Conditions</Link>
+//             {cardDetails.terms.part2}
+//             <Link to="/privacy-policy">Privacy Policy</Link>
+//           </p> */}
+//         </div>
+//       </div>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
+
+// export default PaymentForm2;
