@@ -16,6 +16,11 @@
     position: relative;
     font-family: "Noto Kufi Arabic";
   }
+  .downloadBtn{
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
   
   .tableheader {
     display: flex;
