@@ -42,7 +42,7 @@
   border-radius: 5px;
 }
 .paymentOptions p{
-  font-size: 20px;
+  font-size: 30px;
 
 }
 .dirrection{
@@ -60,17 +60,21 @@
  
   display: flex;
 }
-.paymentOptions label {
+.direction label {
 
 max-width:  400px;
 display: flex;
-font-size: 30px;
+font-size: 15px !important; 
   margin: 5px 0;
   font-size: 14px;
 }
 
 .paymentOptions  {
   margin-top: 20px;
+}
+.direction input[type="radio"] {
+  margin-top: -10px; /* Removes default margin */
+  accent-color: #007bff; /* Customize the radio button color */
 }
 /* new css */
 .paymentCard img {
