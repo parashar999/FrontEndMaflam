@@ -33,7 +33,41 @@
   margin-bottom: 20px;
   padding-right: 30px;
 }
+/* new css  */
+.paymentOptions {
+  margin: 20px 0;
+  
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.paymentOptions p{
+  font-size: 20px;
 
+}
+.dirrection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0px;
+
+
+}
+.dirrection input {
+  margin-left: 100px;
+}
+.paymentOptions label {
+
+max-width:  400px;
+ 
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.paymentOptions  {
+  margin-top: 20px;
+}
+/* new css */
 .paymentCard img {
   height: 20px;
   width: 35px;
