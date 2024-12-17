@@ -226,12 +226,12 @@ courseDataId.courseId === "26" || courseDataId.courseId=="29"||courseDataId.cour
     </button>
   )
 }
-              <button className={styles.addtowishlist}>
-                <FaHeart style={{height:'24px',width:'24px'} }  />
-                <span style={{width:'100%'}}>
-                {direction === "rtl" ? "قائمة المفضلات ": "Add to Wishlist"}
-                </span>
-              </button>
+                <button className={styles.addtowishlist}>
+                  <FaHeart style={{height:'24px',width:'24px'} }  />
+                  <span style={{width:'100%'}}>
+                  {direction === "rtl" ? "قائمة المفضلات ": "Add to Wishlist"}
+                  </span>
+                </button>
             </div>
           </div>
         </div>

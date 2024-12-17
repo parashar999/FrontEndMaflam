@@ -398,6 +398,150 @@
 // export default PaymentForm;
 
 //  ***************** commet old Code it main code ***************
+// DATE 16 original code below testing code ########################
+
+// import { useContext, useEffect, useState } from "react";
+// import styles from "./PaymentForm.module.css";
+// import { Link, useNavigate, useParams } from "react-router-dom";
+// import { CheckoutPaymentContext } from "../../store/CheckoutPaymentContext";
+// import axios from "axios";
+// import { ToastContainer, toast } from "react-toastify";
+// import auth from "../../Auth/Auth";
+// import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
+// const PaymentForm = () => {
+//   const { checkoutPaymentContextDetails, loading, error } = useContext(
+//     CheckoutPaymentContext
+//   );
+//   const navigate = useNavigate();
+//   const [coupon, setCoupon] = useState("");
+//   const [paymentID, setPaymentID] = useState(null);
+//   const { paymentId } = useParams();
+//   const {direction}= useContext(LanguageContext);
+//   const coupuntext = direction=="rtl"? "أدخل كود الخصم، إذا كان لديك" : "Enter the discount code if you have one" ;
+//   useEffect(() => {
+//     setPaymentID(paymentId);
+//   }, []);
+
+//   if (loading) return <p>Loading...</p>;
+//   if (error) return <p>Error loading data</p>;
+//   if (!paymentID) return <p>Loading...</p>;
+
+//   const savePaymentData = (paymentData) => {
+//     const authData = auth.getAuthData() || {};
+//     authData.paymentData = paymentData; // Add or update payment data
+//     auth.login(authData); // Save updated auth data back to localStorage
+//   };
+
+//   const checkoutpage = async (e) => {
+//     e.preventDefault();
+//     const userdetails = auth.getAuthData();
+//     const token = userdetails?.token;
+
+//     const requestBody = {
+//       amount: 750,
+//       courseId: paymentID,
+//       cuponCode: coupon,
+//       callback: "https://maflam.com/success2",
+//       return: "https://maflam.com/success2",
+//       token,
+//     };
+
+//     try {
+//       const response = await axios.post(
+//         `https://backend.maflam.com/maflam/paymenttransction`,
+
+//         // `https://backend.maflam.com/maflam/payment-transction-staging-mode`,
+
+//         requestBody,
+//         {
+//           headers: {
+//             Authorization: `Bearer ${token}`,
+//           },
+//         }
+//       );
+
+//       const data = response?.data;
+//       const transId = response.data.data?.tran_ref??"null"
+//       localStorage.setItem("tran_ref", transId);
+//       console.log(transId,"payment")
+     
+
+//       if (data) {
+//         savePaymentData(data); // Store payment data
+//         window.location.href = data.data?.redirect_url;
+// //         const redirectUrl = data.data?.redirect_url;
+// //  navigate(redirectUrl); 
+//       } else {
+//         throw new Error("Invalid response from server");
+//       }
+//     } catch (err) {
+//       console.error("Checkout Error:", err);
+//       const errorMessage = err.response?.data?.message || err.message;
+//       toast.error(`Error: ${errorMessage}`);
+//     }
+//   };
+
+//   const cardDetails = checkoutPaymentContextDetails?.maflamData1 || [];
+//   const termsDetails =
+//     checkoutPaymentContextDetails?.maflamPricingDetailsSec5 || [];
+//   const imageSrc =
+//     checkoutPaymentContextDetails?.getMaflamPricingDetailsSec10?.imageUrl ||
+//     "/path/to/default-image.jpg";
+
+//   return (
+//     <div className={styles.maincontainer}>
+//       <div className={styles.container}>
+//         <div className={styles.card}>
+//           <img src={imageSrc} alt="Course" className={styles.image} />
+//           <h2 className={styles.price}>
+//   {direction === "rtl" ? `${cardDetails[0]?.title} ر.س` : `${cardDetails[0]?.title} SAR`}
+// </h2>
+
+//           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
+//           <hr />
+//           <div className={styles.paymentCard}>
+//             <p className={styles.titles}>
+//               {cardDetails[2]?.title || "Payment Methods"}
+//             </p>
+//             <img src={cardDetails[3]?.imageUrl} alt="Not Found" />
+//             <img src={cardDetails[4]?.imageUrl} alt="Visa" />
+//             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
+//           </div>
+//           <hr />
+//           <div className={styles.coupon}>
+//               <label> { coupuntext}</label>
+//               <input
+//                 type="text"
+//                 placeholder={coupuntext}
+//                 name="coupon"
+//                 value={coupon}
+//                 onChange={(e) => setCoupon(e.target.value)} // Update coupon state
+//               />
+//             </div>
+//           <button type="submit" className={styles.payBtn} onClick={checkoutpage}>
+//               { direction=="ltr"? ` PAY ${cardDetails[0]?.title} SAR ` :` دفع ${cardDetails[0]?.title} ر.س ` }
+//             </button>
+//         </div>
+
+//         <div style={{ margin:'20px', maxWidth:'600px', marginTop:'50px'}}>
+//           <p style={{paddingBottom:'20px'}} className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
+//           <p className={styles.termconditions1}>
+//             {termsDetails[1]?.title || ""}
+//             <Link to="/terms&condition"> {direction=="rtl"?"الشروط والأحكام": "Terms and Conditions"} </Link>
+//             {termsDetails[2]?.title || ""}
+//             <Link to="/privacy-policy">  {direction=="rtl"?"سياسة الخصوصية" :"Privacy Policy"}</Link>
+//           </p>
+//         </div>
+//       </div>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
+
+// export default PaymentForm;
+// // DATE 16 original code below testing code ########################
+
+
 
 import { useContext, useEffect, useState } from "react";
 import styles from "./PaymentForm.module.css";
@@ -407,6 +551,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../Auth/Auth";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
+
 const PaymentForm = () => {
   const { checkoutPaymentContextDetails, loading, error } = useContext(
     CheckoutPaymentContext
@@ -414,9 +559,12 @@ const PaymentForm = () => {
   const navigate = useNavigate();
   const [coupon, setCoupon] = useState("");
   const [paymentID, setPaymentID] = useState(null);
+  const [paymentType, setPaymentType] = useState("full"); // Default: Full Payment
   const { paymentId } = useParams();
-  const {direction}= useContext(LanguageContext);
-  const coupuntext = direction=="rtl"? "أدخل كود الخصم، إذا كان لديك" : "Enter the discount code if you have one" ;
+  const { direction } = useContext(LanguageContext);
+
+  const couponText = direction === "rtl" ? "أدخل كود الخصم، إذا كان لديك" : "Enter the discount code if you have one";
+
   useEffect(() => {
     setPaymentID(paymentId);
   }, []);
@@ -440,36 +588,32 @@ const PaymentForm = () => {
       amount: 750,
       courseId: paymentID,
       cuponCode: coupon,
+      paymentType, // Full or EMI
       callback: "https://maflam.com/success2",
       return: "https://maflam.com/success2",
       token,
     };
 
     try {
-      const response = await axios.post(
-        `https://backend.maflam.com/maflam/paymenttransction`,
+      const url =
+        paymentType === "emi"
+          ? "https://backend.maflam.com/maflam/create-session"
+          : "https://backend.maflam.com/maflam/paymenttransction";
 
-        // `https://backend.maflam.com/maflam/payment-transction-staging-mode`,
-
-        requestBody,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.post(url, requestBody, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
 
       const data = response?.data;
-      const transId = response.data.data?.tran_ref??"null"
+      const transId = response.data.data?.tran_ref || "null";
       localStorage.setItem("tran_ref", transId);
-      console.log(transId,"payment")
-     
+      console.log(transId, "payment");
 
       if (data) {
         savePaymentData(data); // Store payment data
         window.location.href = data.data?.redirect_url;
-//         const redirectUrl = data.data?.redirect_url;
-//  navigate(redirectUrl); 
       } else {
         throw new Error("Invalid response from server");
       }
@@ -493,9 +637,10 @@ const PaymentForm = () => {
         <div className={styles.card}>
           <img src={imageSrc} alt="Course" className={styles.image} />
           <h2 className={styles.price}>
-  {direction === "rtl" ? `${cardDetails[0]?.title} ر.س` : `${cardDetails[0]?.title} SAR`}
-</h2>
-
+            {direction === "rtl"
+              ? `${cardDetails[0]?.title} ر.س`
+              : `${cardDetails[0]?.title} SAR`}
+          </h2>
           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
           <hr />
           <div className={styles.paymentCard}>
@@ -507,28 +652,76 @@ const PaymentForm = () => {
             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
           </div>
           <hr />
+        
           <div className={styles.coupon}>
-              <label> { coupuntext}</label>
-              <input
-                type="text"
-                placeholder={coupuntext}
-                name="coupon"
-                value={coupon}
-                onChange={(e) => setCoupon(e.target.value)} // Update coupon state
-              />
-            </div>
-          <button type="submit" className={styles.payBtn} onClick={checkoutpage}>
-              { direction=="ltr"? ` PAY ${cardDetails[0]?.title} SAR ` :` دفع ${cardDetails[0]?.title} ر.س ` }
-            </button>
+            <label>{couponText}</label>
+            <input
+              type="text"
+              placeholder={couponText}
+              name="coupon"
+              value={coupon}
+              onChange={(e) => setCoupon(e.target.value)} // Update coupon state
+            />
+          </div>
+          <button
+            type="submit"
+            className={styles.payBtn}
+            onClick={checkoutpage}
+          >
+            {direction === "ltr"
+              ? `PAY ${cardDetails[0]?.title} SAR`
+              : `دفع ${cardDetails[0]?.title} ر.س`}
+          </button>
+          <div className={styles.paymentOptions}>
+            <p>{direction === "rtl" ? "اختر طريقة الدفع" : "Choose Payment Method"}</p>
+           <div className={styles.dirrection}>
+           <label>
+           
+           {direction === "rtl" ? "دفع كامل" : "Payment By Credit OR debit Card  "}
+         </label>
+         <input
+             type="radio"
+             name="paymentType"
+             value="full"
+             checked={paymentType === "full"}
+             onChange={() => setPaymentType("full")}
+           />
+           </div>
+           <div className={styles.dirrection}>
+           <label>
+             
+             {direction === "rtl" ? "الدفع بالتقسيط" : "Pay Later/EMI"}
+           </label>
+           <input
+               type="radio"
+               name="paymentType"
+               value="emi"
+               onChange={() => setPaymentType("emi")}
+             />
+           </div>
+          </div>
         </div>
+        
 
-        <div style={{ margin:'20px', maxWidth:'600px', marginTop:'50px'}}>
-          <p style={{paddingBottom:'20px'}} className={styles.termconditions}>{termsDetails[0]?.title || ""}</p>
+        <div
+          style={{ margin: "20px", maxWidth: "600px", marginTop: "50px" }}
+        >
+          <p style={{ paddingBottom: "20px" }} className={styles.termconditions}>
+            {termsDetails[0]?.title || ""}
+          </p>
           <p className={styles.termconditions1}>
             {termsDetails[1]?.title || ""}
-            <Link to="/terms&condition"> {direction=="rtl"?"الشروط والأحكام": "Terms and Conditions"} </Link>
+            <Link to="/terms&condition">
+              {" "}
+              {direction === "rtl" ? "الشروط والأحكام" : "Terms and Conditions"}{" "}
+            </Link>
             {termsDetails[2]?.title || ""}
-            <Link to="/privacy-policy">  {direction=="rtl"?"سياسة الخصوصية" :"Privacy Policy"}</Link>
+            <Link to="/privacy-policy">
+              {" "}
+              {direction === "rtl"
+                ? "سياسة الخصوصية"
+                : "Privacy Policy"}
+            </Link>
           </p>
         </div>
       </div>
