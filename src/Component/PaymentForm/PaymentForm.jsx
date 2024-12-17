@@ -611,9 +611,9 @@ const PaymentForm = () => {
       if (data) {
         savePaymentData(data); // Store payment data
         if (paymentType === "PAY_LATER") {
-          toast.success("Session created successful ")
-          // window.location.href =data.response.configuration.available_products.installments[0].
-          // web_url??"null";
+          // toast.success("Session created successful ")
+          window.location.href =data.response.configuration.available_products.installments[0].
+          web_url??"null";
         } else {
           window.location.href = data.data?.redirect_url;
         }
