@@ -540,9 +540,6 @@
 
 // export default PaymentForm;
 // // DATE 16 original code below testing code ########################
-
-
-
 import { useContext, useEffect, useState } from "react";
 import styles from "./PaymentForm.module.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -559,11 +556,13 @@ const PaymentForm = () => {
   const navigate = useNavigate();
   const [coupon, setCoupon] = useState("");
   const [paymentID, setPaymentID] = useState(null);
-  const [paymentType, setPaymentType] = useState("full"); // Default: Full Payment
+  const [paymentType, setPaymentType] = useState("full"); // Default to "full"
   const { paymentId } = useParams();
   const { direction } = useContext(LanguageContext);
-
-  const couponText = direction === "rtl" ? "أدخل كود الخصم، إذا كان لديك" : "Enter the discount code if you have one";
+  const coupuntext =
+    direction === "rtl"
+      ? "أدخل كود الخصم، إذا كان لديك"
+      : "Enter the discount code if you have one";
 
   useEffect(() => {
     setPaymentID(paymentId);
@@ -588,32 +587,36 @@ const PaymentForm = () => {
       amount: 750,
       courseId: paymentID,
       cuponCode: coupon,
-      paymentType, // Full or EMI
+      callbackTabby : "https://maflam.com/success3",
       callback: "https://maflam.com/success2",
       return: "https://maflam.com/success2",
       token,
+      paymentType: paymentType === "PAY_LATER" ? "PAY_LATER" : "CARD", // Include payment type
     };
 
     try {
-      const url =
-        paymentType === "emi"
+      const apiUrl =
+        paymentType === "PAY_LATER"
           ? "https://backend.maflam.com/maflam/create-session"
           : "https://backend.maflam.com/maflam/paymenttransction";
 
-      const response = await axios.post(url, requestBody, {
+      const response = await axios.post(apiUrl, requestBody, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
 
       const data = response?.data;
-      const transId = response.data.data?.tran_ref || "null";
-      localStorage.setItem("tran_ref", transId);
-      console.log(transId, "payment");
-
+      // console.log("resss",data.response.configuration.available_products.installments[0].web_url)
       if (data) {
         savePaymentData(data); // Store payment data
-        window.location.href = data.data?.redirect_url;
+        if (paymentType === "PAY_LATER") {
+          toast.success("Session created successful ")
+          // window.location.href =data.response.configuration.available_products.installments[0].
+          // web_url??"null";
+        } else {
+          window.location.href = data.data?.redirect_url;
+        }
       } else {
         throw new Error("Invalid response from server");
       }
@@ -641,6 +644,7 @@ const PaymentForm = () => {
               ? `${cardDetails[0]?.title} ر.س`
               : `${cardDetails[0]?.title} SAR`}
           </h2>
+
           <h3 className={styles.title}>{cardDetails[1]?.title || "N/A"}</h3>
           <hr />
           <div className={styles.paymentCard}>
@@ -652,12 +656,40 @@ const PaymentForm = () => {
             <img src={cardDetails[5]?.imageUrl} alt="MasterCard" />
           </div>
           <hr />
-        
+          <div className={styles.paymentOptions}>
+            <p>{direction === "rtl" ? "اختر طريقة الدفع" : "Choose Payment Method"}</p>
+            <div className={styles.direction}>
+              <label>
+                {direction === "rtl"
+                  ? "دفع كامل"
+                  : "Payment By Credit OR Debit Card"}
+              </label>
+             
+              <input
+                type="radio"
+                name="paymentType"
+                value="full"
+                checked={paymentType === "full"}
+                onChange={() => setPaymentType("full")}
+              />
+            </div>
+            <div className={styles.direction}>
+              <label>
+                {direction === "rtl" ? "الدفع بالتقسيط" : "Pay Later/PAY_LATER"}
+              </label>
+              <input
+                type="radio"
+                name="paymentType"
+                value="PAY_LATER"
+                onChange={() => setPaymentType("PAY_LATER")}
+              />
+            </div>
+          </div>
           <div className={styles.coupon}>
-            <label>{couponText}</label>
+            <label>{coupuntext}</label>
             <input
               type="text"
-              placeholder={couponText}
+              placeholder={coupuntext}
               name="coupon"
               value={coupon}
               onChange={(e) => setCoupon(e.target.value)} // Update coupon state
@@ -672,55 +704,20 @@ const PaymentForm = () => {
               ? `PAY ${cardDetails[0]?.title} SAR`
               : `دفع ${cardDetails[0]?.title} ر.س`}
           </button>
-          <div className={styles.paymentOptions}>
-            <p>{direction === "rtl" ? "اختر طريقة الدفع" : "Choose Payment Method"}</p>
-           <div className={styles.dirrection}>
-           <label>
-           
-           {direction === "rtl" ? "دفع كامل" : "Payment By Credit OR debit Card  "}
-         </label>
-         <input
-             type="radio"
-             name="paymentType"
-             value="full"
-             checked={paymentType === "full"}
-             onChange={() => setPaymentType("full")}
-           />
-           </div>
-           <div className={styles.dirrection}>
-           <label>
-             
-             {direction === "rtl" ? "الدفع بالتقسيط" : "Pay Later/EMI"}
-           </label>
-           <input
-               type="radio"
-               name="paymentType"
-               value="emi"
-               onChange={() => setPaymentType("emi")}
-             />
-           </div>
-          </div>
         </div>
-        
 
-        <div
-          style={{ margin: "20px", maxWidth: "600px", marginTop: "50px" }}
-        >
+        <div style={{ margin: "20px", maxWidth: "600px", marginTop: "50px" }}>
           <p style={{ paddingBottom: "20px" }} className={styles.termconditions}>
             {termsDetails[0]?.title || ""}
           </p>
           <p className={styles.termconditions1}>
             {termsDetails[1]?.title || ""}
             <Link to="/terms&condition">
-              {" "}
-              {direction === "rtl" ? "الشروط والأحكام" : "Terms and Conditions"}{" "}
+              {direction === "rtl" ? "الشروط والأحكام" : "Terms and Conditions"}
             </Link>
             {termsDetails[2]?.title || ""}
             <Link to="/privacy-policy">
-              {" "}
-              {direction === "rtl"
-                ? "سياسة الخصوصية"
-                : "Privacy Policy"}
+              {direction === "rtl" ? "سياسة الخصوصية" : "Privacy Policy"}
             </Link>
           </p>
         </div>
