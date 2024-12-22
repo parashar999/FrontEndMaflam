@@ -16,7 +16,7 @@ export const EbookPageContextProvider = ({ children }) => {
     try {
       // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
       const response = await axios.get(
-        `https://backend.maflam.com/maflam/getEBooks?lang=${langParam}`
+        `http://localhost:3001/maflam/getEBooks?lang=${langParam}`
       );
       // console.log("API Response: ebooks  ", response.data);
 

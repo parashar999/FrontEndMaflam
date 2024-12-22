@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const baseApiUrl = "https://prominenttrades.in/maflam";
 
-const baseApiUrl = "https://backend.maflam.com/maflam";
+const baseApiUrl = "http://localhost:3001/maflam";
 
 function get(url) {
   return axios.get(baseApiUrl + url);

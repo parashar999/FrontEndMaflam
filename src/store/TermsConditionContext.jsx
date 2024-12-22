@@ -15,7 +15,7 @@ export const TermsConditionProvider = ({ children }) => {
     try {
       const response = await axios.get(
         // `https://prominenttrades.in/maflam/get-TermsAndCondition?lang=${langParam}`
-        `https://backend.maflam.com/maflam/get-TermsAndCondition?lang=${langParam}`
+        `http://localhost:3001/maflam/get-TermsAndCondition?lang=${langParam}`
       );
       // console.log("API Response for Terms and Conditions: ", response.data);
 

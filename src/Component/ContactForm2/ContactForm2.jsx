@@ -212,7 +212,7 @@ const ContactForm2 = () => {
 
     try {
       const res = await axios.post(
-        "https://backend.maflam.com/maflam/create-internship-form",
+        "http://localhost:3001/maflam/create-internship-form",
         payload
       );
       // toast.success("Form submitted successfully!");
@@ -1248,7 +1248,7 @@ export default ContactForm2;
 
 //     try {
 //       const res = await axios.post(
-//         "https://backend.maflam.com/maflam/create-internship-form",
+//         "http://localhost:3001/maflam/create-internship-form",
 //         payload
 //       );
 //       // toast.success("Form submitted successfully!");

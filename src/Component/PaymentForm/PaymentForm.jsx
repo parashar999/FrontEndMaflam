@@ -20,7 +20,7 @@
 //     // console.log("Checkout Page called")
 //     // console.log(token);
 //     const response = await axios.post(
-//       `https://backend.maflam.com/maflam/paymenttransction/${coursesId}`,
+//       `http://localhost:3001/maflam/paymenttransction/${coursesId}`,
 //       requestBody,
 //       {
 //         headers: {
@@ -191,7 +191,7 @@
   
 //     try {
 //       const response = await axios.post(
-//         `https://backend.maflam.com/maflam/paymenttransction`,
+//         `http://localhost:3001/maflam/paymenttransction`,
 //         requestBody,
 //         {
 //           headers: {
@@ -312,7 +312,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `https://backend.maflam.com/maflam/paymenttransction`,
+//         `http://localhost:3001/maflam/paymenttransction`,
 //         requestBody,
 //         {
 //           headers: {
@@ -448,9 +448,9 @@
 
 //     try {
 //       const response = await axios.post(
-//         `https://backend.maflam.com/maflam/paymenttransction`,
+//         `http://localhost:3001/maflam/paymenttransction`,
 
-//         // `https://backend.maflam.com/maflam/payment-transction-staging-mode`,
+//         // `http://localhost:3001/maflam/payment-transction-staging-mode`,
 
 //         requestBody,
 //         {
@@ -597,8 +597,8 @@ const PaymentForm = () => {
     try {
       const apiUrl =
         paymentType === "PAY_LATER"
-          ? "https://backend.maflam.com/maflam/create-session"
-          : "https://backend.maflam.com/maflam/paymenttransction";
+          ? "http://localhost:3001/maflam/create-session"
+          : "http://localhost:3001/maflam/paymenttransction";
 
       const response = await axios.post(apiUrl, requestBody, {
         headers: {
@@ -704,22 +704,6 @@ const PaymentForm = () => {
               ? `PAY ${cardDetails[0]?.title} SAR`
               : `دفع ${cardDetails[0]?.title} ر.س`}
           </button>
-        </div>
-
-        <div style={{ margin: "20px", maxWidth: "600px", marginTop: "50px" }}>
-          <p style={{ paddingBottom: "20px" }} className={styles.termconditions}>
-            {termsDetails[0]?.title || ""}
-          </p>
-          <p className={styles.termconditions1}>
-            {termsDetails[1]?.title || ""}
-            <Link to="/terms&condition">
-              {direction === "rtl" ? "الشروط والأحكام" : "Terms and Conditions"}
-            </Link>
-            {termsDetails[2]?.title || ""}
-            <Link to="/privacy-policy">
-              {direction === "rtl" ? "سياسة الخصوصية" : "Privacy Policy"}
-            </Link>
-          </p>
         </div>
       </div>
       <ToastContainer />

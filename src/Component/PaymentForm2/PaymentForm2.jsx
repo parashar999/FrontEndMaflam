@@ -101,7 +101,7 @@ const PaymentForm2 = () => {
   
     try {
       const response = await axios.post(
-        `https://backend.maflam.com/maflam/paymenttransction`,
+        `http://localhost:3001/maflam/paymenttransction`,
         requestBody,
         {
           headers: {

@@ -13,7 +13,7 @@ export const LoginPageContextProvider = ({ children }) => {
   const fetchLoginPageContextDetails = async (langParam) => {
     try {
       const response = await axios.get(
-        `https://backend.maflam.com/maflam/get-LogIn-Details?lang=${langParam}`
+        `http://localhost:3001/maflam/get-LogIn-Details?lang=${langParam}`
       );
       // console.log("API Response: login  ", response.data);
 

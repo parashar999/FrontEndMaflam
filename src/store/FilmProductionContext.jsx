@@ -21,11 +21,11 @@ export const FilmProductionProvider = ({ children }) => {
       if (idType === "_id") {
 
      
-        url = `https://backend.maflam.com/maflam/get-courses-by-id?lang=${langParam}&&_id=${idParam}&&insId=0`;
+        url = `http://localhost:3001/maflam/get-courses-by-id?lang=${langParam}&&_id=${idParam}&&insId=0`;
       } else if (idType === "insId")
       {
        
-        url = `https://backend.maflam.com/maflam/get-courses-by-id?lang=${langParam}&&_id=0&&insId=${idParam}`;
+        url = `http://localhost:3001/maflam/get-courses-by-id?lang=${langParam}&&_id=0&&insId=${idParam}`;
       }
 
       const response = await axios.get(url);

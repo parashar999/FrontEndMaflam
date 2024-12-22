@@ -43,7 +43,8 @@ const Carou = ({
           const nextIndex = (currentIndex + 1) % totalItems; // Get the next item (wrapping around)
           return [items[prevIndex], items[currentIndex], items[nextIndex]];
       }
-      return items.slice(currentIndex-1,currentIndex+2);
+      console.log(currentIndex+2-currentIndex);
+      return items.slice(currentIndex,currentIndex+2);
   };
 
   return (

@@ -18,7 +18,7 @@ const Footer = () => {
     // Fetch footer data based on the selected language
     // axios.get(`https://prominenttrades.in/maflam/fetch-footerdata?lang=${lang}`)
     axios
-      .get(`https://backend.maflam.com/maflam/fetch-footerdata?lang=${lang}`)
+      .get(`http://localhost:3001/maflam/fetch-footerdata?lang=${lang}`)
       // get(`http://192.168.1.39:3001/maflam/fetch-footerdata?lang=${lang}`)
 
       // axios.get('http://3.29.240.167:3001/maflam/fetch-footerdata?lang=${lang}')

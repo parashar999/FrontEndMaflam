@@ -11,21 +11,76 @@ import { LanguageContext } from "../../Component/LanguageContext/LanguageContext
 import "react-toastify/dist/ReactToastify.css";
 import { useLastUrl } from "../../store/LastUrlContext.jsx";
 
+// Moodle Web Service Configuration
+const MOODLE_BASE_URL = 'https://learn.maflam.com'; // Replace with your Moodle URL
+const MOODLE_TOKEN = '2a722fa95e3614ef3e297fb6154fd3e8'; // Replace with your Web Service token
+
+// Fetch User ID by Email
+async function getUserIdByEmail(email) {
+  try {
+    const response = await axios.post(`${MOODLE_BASE_URL}/webservice/rest/server.php`, null, {
+      params: {
+        wstoken: MOODLE_TOKEN,
+        wsfunction: 'core_user_get_users',
+        moodlewsrestformat: 'json',
+        'criteria[0][key]': 'email',
+        'criteria[0][value]': email
+      }
+    });
+    const users = response.data.users;
+    if (users && users.length > 0) {
+      return users[0].id;
+    } else {
+      console.error(`No user found with email: ${email}`);
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching user by email:', error.message);
+    return null;
+  }
+}
+
+// Fetch Courses for User
+async function getCoursesForUser(userId) {
+  try {
+    const response = await axios.post(`${MOODLE_BASE_URL}/webservice/rest/server.php`, null, {
+      params: {
+        wstoken: MOODLE_TOKEN,
+        wsfunction: 'core_enrol_get_users_courses',
+        moodlewsrestformat: 'json',
+        userid: userId,
+        returnusercount: 0 // This flag indicates not to return user count, only courses
+      }
+    });
+    return response.data.length; // Returning the course count directly
+  } catch (error) {
+    console.error('Error fetching courses for user:', error.message);
+    return 0; // Return 0 if there is an error
+  }
+}
+
+// Main Function to Fetch Courses by User Email
+async function fetchCourseCountByEmail(email) {
+  const userId = await getUserIdByEmail(email);
+  if (userId) {
+    const courseCount = await getCoursesForUser(userId);
+    console.log(`Course count for user with email ${email}: ${courseCount}`);
+    return courseCount;
+  }
+  return 0;
+}
+
 const Login = () => {
-  const lastUrl=useLastUrl();
+  const lastUrl = useLastUrl();
   console.log(lastUrl);
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const { language} = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
-  const signupText = language === "ar"?"انشئ حساب":"Create an Account";
-  const orText = language === "ar"? "أو":"or";
-  const {
-    loginPageContexttDetails,
-    loading,
-    error: apiError,
-  } = useContext(LoginPageContext);
+  const signupText = language === "ar" ? "انشئ حساب" : "Create an Account";
+  const orText = language === "ar" ? "أو" : "or";
+  const { loginPageContexttDetails, loading, error: apiError } = useContext(LoginPageContext);
 
   if (loading) return <p>Loading...</p>;
   if (apiError) return <p>Error loading data</p>;
@@ -44,22 +99,33 @@ const Login = () => {
     const isEmail = emailOrPhone.includes("@");
     try {
       const response = await axios.post(
-        "https://backend.maflam.com/maflam/sign-in",
+        "http://localhost:3001/maflam/sign-in",
         {
           phone: isEmail ? "" : emailOrPhone,
           emailId: isEmail ? emailOrPhone : "",
           password,
         }
       );
-   
+
       toast.success(response.data.message);
       auth.login(response.data);
-      // console.log(response.data)
-     
+
+      // After login success, fetch course count
+      const courseCount = await fetchCourseCountByEmail(emailOrPhone);
+      localStorage.setItem("courseCount", courseCount);
+      console.log("Course Count:", courseCount);
+
       setTimeout(() => {
-        window.location.href=lastUrl;
+
+        if (courseCount > 0) {
+          // If user has courses, redirect to courses page
+          window.location.href = "https://learn.maflam.com/my/courses.php?lang=ar";
+        } else {
+          // If user has no courses, redirect to default page
+          window.location.href = "http://localhost:5173/NotSubscribedyet";
+        }
       }, 5000);
-      // navigate("/");
+
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
       toast.error(`Error: ${errorMessage}`);
@@ -68,21 +134,23 @@ const Login = () => {
 
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
-
       const response = await axios.post(
-        "https://backend.maflam.com/maflam/sign-in-with-google",
+        "http://localhost:3001/maflam/sign-in-with-google",
         { googleCredential: credentialResponse.credential }
       );
 
       toast.success(response.data.message);
       auth.login(response.data);
-      // navigate("/");
+
+      // After Google login success, fetch course count
+      const courseCount = await fetchCourseCountByEmail(response.data.email);
+      console.log("Course Count:", courseCount);
+
       setTimeout(() => {
-        window.location.href=lastUrl;
+        window.location.href = lastUrl;
       }, 2000);
     } catch (error) {
       console.error("Google Login Error:", error);
-      // toast.error("Google Login failed. Please try again.");
       const errorMessage = error.response?.data?.message || error.message;
       toast.error(`Error: ${errorMessage}`);
     }
@@ -113,7 +181,7 @@ const Login = () => {
               value={emailOrPhone}
               onChange={(e) => setEmailOrPhone(e.target.value)}
             />
-            <label style={{marginTop:'15px'}} htmlFor="password">{passwordLabel}</label>
+            <label style={{ marginTop: '15px' }} htmlFor="password">{passwordLabel}</label>
             <div className={styles.passwordContainer}>
               <input
                 type={isPasswordVisible ? "text" : "password"}
@@ -124,7 +192,7 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-                            <div
+              <div
                 className={styles.eyeIcon}
                 onClick={togglePasswordVisibility}
                 role="button"
@@ -146,11 +214,11 @@ const Login = () => {
             </button>
           </form>
           <div className={styles.forgotpassword}>
-           <p>  <Link to="/reset">  {reset}</Link></p>
+            <p><Link to="/reset"> {reset}</Link></p>
           </div>
           <div className={styles.divider}>
             <hr className={styles.hrLine} />
-            <span style={{fontSize:'22px'}} >{orText}</span>
+            <span style={{ fontSize: '22px' }} >{orText}</span>
             <hr className={styles.hrLine} />
           </div>
           <div className={styles.socialLogin}>
@@ -160,9 +228,9 @@ const Login = () => {
               text={googleLoginText}
             />
           </div>
-          <div style={{width:'100%'}}>
+          <div style={{ width: '100%' }}>
             <a href="/signUp" className={styles.createAccount}>
-            {signupText}
+              {signupText}
             </a>
           </div>
         </div>
@@ -173,260 +241,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// import React, { useState } from "react";
-// import styles from "./Login.module.css";
-// import auth from "../../Auth/Auth.js";
-// import { useNavigate } from "react-router-dom";
-// import axios from "axios"; // Ensure axios is imported
-// import { assests } from "../../assets/assests.js";
-
-// const Login = () => {
-//   // State management for phone (or email) and password
-//   const [phone, setPhone] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-//   const [popupMessage, setPopupMessage] = useState("");
-//   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-//   const navigate = useNavigate();
-
-//   const handleSubmit = async (e) => {
-
-//     e.preventDefault();
-
-//     try {
-//       const response = await axios.post(
-//         "https://prominenttrades.in/maflam/sign-in",
-//         {
-//           phone,
-//           password,
-//         }
-//       );
-
-//       const data = response.data;
-//       console.log("API Response:", data);
-
-//       if (data) {
-//         auth.login(data);
-//         alert("Login Successfully");
-//         setPopupMessage("Login Successfully");
-//         setPhone("");
-//         setPassword("");
-//         navigate("/");
-//       } else {
-//         throw new Error("Invalid response from server");
-//       }
-//     } catch (err) {
-//       console.error("Login Error:", err);
-//       setError("Login failed. Please check your credentials.");
-//     }
-//   };
-
-//   const togglePasswordVisibility = () => {
-//     setIsPasswordVisible(!isPasswordVisible);
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.Subcontainer}>
-//         <div className={styles.loginBox}>
-//           <img src={assests.logo1} alt="resetlogo" className={styles.resetlogo} />
-//           <h1 className={styles.title}>Together to make your first movie</h1>
-//           <form className={styles.form} onSubmit={handleSubmit}>
-//             <label htmlFor="email">Email</label>
-//             <input
-//               type="text"
-//               placeholder="Email"
-//               className={styles.input}
-//               value={phone}
-//               onChange={(e) => setPhone(e.target.value)}
-//             />
-//             <label htmlFor="password">Password</label>
-//             <div className={styles.passwordContainer}> {/* Wrap password input and eye icon */}
-//               <input
-//                 type={isPasswordVisible ? "text" : "password"} // Toggle visibility
-//                 placeholder="Password"
-//                 className={styles.input}
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//               />
-//               <div
-//                 className={styles.eyeIcon}
-//                 onClick={togglePasswordVisibility}
-//                 role="button"
-//                 aria-label="Toggle password visibility"
-//               />
-//             </div>
-//             <div className={styles.rememberMeContainer}>
-//               <input
-//                 type="checkbox"
-//                 id="rememberMe"
-//                 className={styles.checkbox}
-//               />
-//               <label htmlFor="rememberMe" className={styles.checkboxLabel}>
-//                 Remember me
-//               </label>
-//             </div>
-//             <button type="submit" className={styles.loginButton}>
-//               Log in
-//             </button>
-//           </form>
-//           {error && <p className={styles.errorMessage}>{error}</p>}
-//           <a href="#" className={styles.forgotPassword}>
-//             Forgot password?
-//           </a>
-//           <div className={styles.divider}>
-//             <hr className={styles.hrLine} />
-//             <span>or</span>
-//             <hr className={styles.hrLine} />
-//           </div>
-//           <div className={styles.socialLogin}>
-//             <button className={styles.socialButton}>
-//               <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
-//               <span>&nbsp;Continue with Google</span>
-//             </button>
-//             <button className={styles.socialButton}>
-//               <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
-//               <span>&nbsp;&nbsp;&nbsp;&nbsp;Continue with Apple</span>
-//             </button>
-//             <button className={styles.socialButton}>
-//               <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
-//               <span>Continue with Facebook</span>
-//             </button>
-//           </div>
-//           <a href="#" className={styles.createAccount}>
-//             Create an account
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-// import React, { useState } from "react";
-// import styles from "./Login.module.css";
-// import auth from "../../Auth/Auth.js";
-// import { useNavigate } from "react-router-dom";
-// import axios from "axios"; // Ensure axios is imported
-// import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
-// import { assests } from "../../assets/assests.js";
-
-// const Login = () => {
-//   // State management for phone (or email) and password
-//   const [phone, setPhone] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-//   const [popupMessage, setPopupMessage] = useState("");
-//   const navigate = useNavigate();
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//       const response = await axios.post(
-//         "https://prominenttrades.in/maflam/sign-in",
-//         {
-//           phone,
-//           password,
-//         }
-//       );
-
-//       const data = response.data;
-//       console.log("API Response:", data);
-
-//       if (data) {
-//         auth.login(data);
-//         alert("Login Successfully");
-//         setPopupMessage("Login Successfully");
-//         setPhone("");
-//         setPassword("");
-//         navigate("/");
-//       } else {
-//         throw new Error("Invalid response from server");
-//       }
-//     } catch (err) {
-//       console.error("Login Error:", err);
-//       setError("Login failed. Please check your credentials.");
-//     }
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.Subcontainer}>
-//         <div className={styles.loginBox}>
-//         <img src={assests.logo1} alt="resetlogo" className={styles.resetlogo} />
-
-//           <h1 className={styles.title}>Together to make your first movie</h1>
-//           <form className={styles.form} onSubmit={handleSubmit}>
-//           <label htmlFor="email">Email</label>
-
-//             <input
-//               type="text"
-//               placeholder="Email"
-//               className={styles.input}
-//               value={phone}
-//               onChange={(e) => setPhone(e.target.value)}
-//             />
-//              <label htmlFor="password">Password</label>
-
-//             <input
-//               type="password"
-//               placeholder="Password"
-//               className={styles.input}
-//               value={password}
-
-//              id={styles.eyesymbol}
-
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-
-//             <div className={styles.rememberMeContainer}>
-//               <input
-//                 type="checkbox"
-//                 id="rememberMe"
-//                 className={styles.checkbox}
-//               />
-//               <label htmlFor="rememberMe" className={styles.checkboxLabel}>
-//                 Remember me
-//               </label>
-//             </div>
-//             <button type="submit" className={styles.loginButton}>
-//               Log in
-//             </button>
-//           </form>
-//           {error && <p className={styles.errorMessage}>{error}</p>}
-//           <a href="#" className={styles.forgotPassword}>
-//             Forgot password?
-//           </a>
-
-//           <div className={styles.divider}>
-//                 <hr className={styles.hrLine} />
-//                      <span>or</span>
-//                  <hr className={styles.hrLine} />
-//                  </div>
-
-//                  <div className={styles.socialLogin}>
-//                      <button className={styles.socialButton}>
-//                         <img src={assests.googlelogin} alt="Google" className={styles.socialIconImage} />
-//                         <span>&nbsp;Continue with Google</span>
-//                      </button>
-//                    <button className={styles.socialButton}>
-//                      <img src={assests.applelogin} alt="Apple" className={styles.socialIconImage} id={styles.applelogo} />
-//                        <span>&nbsp;&nbsp;&nbsp;&nbsp;Continue with Apple</span>
-//                    </button>
-//                    <button className={styles.socialButton}>
-//                     <img src={assests.Facebooklogin} alt="Facebook" className={styles.socialIconImage} />
-//                      <span>Continue with Facebook</span>
-//                        </button>
-//                        </div>
-//           <a href="#" className={styles.createAccount}>
-//             Create an account
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Login;

@@ -16,7 +16,7 @@ export const ContactUsContextProvider = ({ children }) => {
       // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
       //  const response = await axios.get(`http://192.168.1.39:3001/maflam/get-contact-details?lang=${langParam}`
       const response = await axios.get(
-        `https://backend.maflam.com/maflam/get-contact-details?lang=${langParam}`
+        `http://localhost:3001/maflam/get-contact-details?lang=${langParam}`
       );
       // console.log("API Response: contact  ", response.data);
 

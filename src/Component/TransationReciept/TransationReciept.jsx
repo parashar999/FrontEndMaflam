@@ -29,7 +29,7 @@ const TransationReciept = () => {
   const fetchTransactionData = async () => {
     try {
       const response = await axios.get(
-        'https://backend.maflam.com/maflam/get-user-transction-details',
+        'http://localhost:3001/maflam/get-user-transction-details',
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setTransactions(response.data || []);
@@ -282,7 +282,7 @@ export default TransationReciept;
 //   const fetchTransactionData = async () => {
 //     try {
 //       const response = await axios.get(
-//         'https://backend.maflam.com/maflam/get-user-transction-details',
+//         'http://localhost:3001/maflam/get-user-transction-details',
 //         { headers: { Authorization: `Bearer ${token}` } }
 //       );
 //       setTransactions(response.data || []);
@@ -455,7 +455,7 @@ export default TransationReciept;
 //   const fetchTransactionData = async () => {
 //     try {
 //       const response = await axios.get(
-//         'https://backend.maflam.com/maflam/get-user-transction-details',
+//         'http://localhost:3001/maflam/get-user-transction-details',
 //         { headers: { Authorization: `Bearer ${token}` } }
 //       );
 //       setTransactions(response.data || []);

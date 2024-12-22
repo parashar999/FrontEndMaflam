@@ -8,8 +8,8 @@
   const redirectionMap = {
     "Scriptwriting": "/R2/R4/filmproduction/672c62b61f099bf569d0f8eb",
     "Production": "/R2/R4/filmproduction/672c5ee7da73549420503e9c",
-    "Directing": "/R2/R4/filmproduction/672c6953bd321f82ce18327a",
-    "Cinematography": "/R2/R4/filmproduction/672c5bb6a7c24e51d0db091e",
+    "Directing": "/R2/R4/filmproduction/672c5bb6a7c24e51d0db091e",
+    "Cinematography": "/R2/R4/filmproduction/672c6953bd321f82ce18327a",
     "Sound Recording": "/R2/R4/filmproduction/672c609ae90c3d8357705c73",
     "Acting": "/R2/R4/filmproduction/672c6420b3e5c110514f52f9",
     "Editing": "/R2/R3/prc/Editing",

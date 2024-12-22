@@ -47,7 +47,7 @@ const JoinUs = () => {
     }
     try {
       const response = await axios.post(
-        "https://backend.maflam.com/maflam/create-newsletter",
+        "http://localhost:3001/maflam/create-newsletter",
         {
           emailId: email,
         }

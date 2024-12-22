@@ -11,17 +11,18 @@ const CarouselCommunity = () => {
   const communityTitle = homeScreenDetails?.maflamCommunityTitle?.title || "Community Stories";
   const communityData = homeScreenDetails?.maflamCommunityData || [];
 
-  const videoItems = communityData.map((story, index) => ({
-    id: index,
+  const videoItems = communityData.map((story) => ({
+  
     content: (
       <video
-        key={index}
+     
         src={story.videoUrl}
         loop
         playsInline
         muted
         controls
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "100%", height: "100%" , boxSizing:'border-box' }}
+
       />
     ),
   }));

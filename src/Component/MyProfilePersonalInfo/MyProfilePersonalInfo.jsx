@@ -113,7 +113,7 @@ function MyProfilePersonalInfo() {
 
     try {
       await axios.put(
-        "https://backend.maflam.com/maflam/update-profile",
+        "http://localhost:3001/maflam/update-profile",
         profileData,
         {
           headers: {
@@ -128,7 +128,7 @@ function MyProfilePersonalInfo() {
   };
   useEffect(() => {
     axios
-      .get("https://backend.maflam.com/maflam/get-user-details?lang=1", {
+      .get("http://localhost:3001/maflam/get-user-details?lang=1", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {

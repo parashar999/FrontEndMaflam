@@ -25,8 +25,8 @@ const ContentRequired = () => {
           {direction=="ltr"? " Get Started Today – Enroll in a Course Now...": "ابدأ اليوم – سجل في دورة الآن..."}
         </p>
         <div className={styles.buttonContainer}>
-          <button className={styles.button} onClick={goBackHandler}> {direction=="ltr"?"Go Back": "عد إلى الوراء"}</button>
-          <button className={styles.button} >  <Link style={{textDecoration:'none' , color:'black'}}  to="/R2/R3/prc/*"> { direction=="ltr" ? "Enroll Now" : "سجل الآن"} </Link></button>
+          <button className={styles.button} > <Link style={{textDecoration:'none' , color:'black'}}  to="/"> {direction=="ltr"?"Explore Maflam": "عد إلى الوراء"}</Link></button>
+          <button className={styles.button} >  <Link style={{textDecoration:'none' , color:'black'}}  to="/R2/R3/prc/All"> { direction=="ltr" ? "Enroll Now" : "سجل الآن"} </Link></button>
         </div>
       </div>
     </div>

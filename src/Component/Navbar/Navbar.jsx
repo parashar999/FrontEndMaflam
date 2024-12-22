@@ -45,7 +45,7 @@ const Navbar = () => {
 
   const FooterGetApi = (lang) => {
     axios
-      .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
+      .get(`http://localhost:3001/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data);
         console.log(response.data, "nav")
@@ -179,7 +179,11 @@ const Navbar = () => {
                           <span onClick={handleLogoutClick}>{profileMenuItems[0].name}</span>
                         ) : (
                           <Link
-                            to={"https://learn.maflam.com/login/index.php?lang=ar" || "#"}
+                          to={
+                            localStorage.getItem("courseCount") > 0
+                              ? "https://learn.maflam.com/my/courses.php?lang=ar"
+                              : "/NotSubscribedyet"
+                          }
                             onClick={() => {
                               toggleProfileMenu();
                               setOpenDropdown(null);
@@ -217,6 +221,7 @@ const Navbar = () => {
               </div>
             ) : (
               <>
+              {/*
                 {navItems1.find((item) => item.createAccount) && (
                   <Link
 
@@ -230,16 +235,17 @@ const Navbar = () => {
                     }
                   </Link>
                 )}
+                */}
                 {navItems1.find((item) => item.logIn) && (
-                  <span style={{ display: 'flex', flexDirection: 'row-reverse', paddingRight: '10px' }}>
-                    <span style={{ marginLeft: "10px", transform: language == 'ar' ? "" : 'scaleX(-1)' }}>{arrow}</span>
+                  <span style={{ display: 'flex', flexDirection: 'row-reverse', paddingLeft:'10px', paddingRight: '10px' }}>
+                    <span style={{ marginLeft: "10px",  transform: language == 'ar' ? "" : 'scaleX(-1)' }}>{arrow}</span>
                     <Link
                       to="/login"
                       onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false); }}
                       className={`${styles.loginButton} ${styles.navButton}`}
                     >
 
-                      {navItems1.find((item) => item.logIn).logIn.name}
+                      Sign In
                     </Link>
 
                   </span>

@@ -16,7 +16,7 @@ function ResetPassword() {
         </header>
         <form className={styles.form}>
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" placeholder='adi.abed@gmail.com' className={styles.input} />
+          <input type="email" id="email" name="email" placeholder='Youremail@gmail.com' className={styles.input} />
           <a href="#" className={styles.link}>Didn’t receive the message</a>
         </form>
       </div>

@@ -85,7 +85,7 @@ const CourseCategories = () => {
           {sortedCourses.map((course, index) => (
             <div style={{overflow:'hidden',display:'flex', alignItems:'center', justifyContent:'center'}} key={index} className={styles.coursesCard}>
               <Link to="R2/R3/prc">
-                <img style={ {width:'145%', backgroundColor:'color', PaddingTop:'20px',  position:'relative', left:'-20px'}}  src={course.videoUrl} alt="" />
+                <img style={ {width:'100%', backgroundColor:'color', backgroundPosition:'center',  position:'relative'}}  src={course.videoUrl} alt="" />
               </Link>
               <div style={{ position: "absolute", bottom: "10px", zIndex: "10" }}>
                 <p onClick={() => handleCourseClick(course._id)}>
