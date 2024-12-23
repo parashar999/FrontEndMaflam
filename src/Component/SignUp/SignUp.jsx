@@ -10,8 +10,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
-
+import PopUp from "../LogIn/PopUp.jsx"
+import { usePopupContext } from "./../LogIn/PopupContext.jsx";
 const SignUp = () => {
+  const { popupData, setPopupValues } = usePopupContext();
+  const [isErrorComponentVisible, setIsErrorComponentVisible] = useState(false);
   const { singupPageContextDetails, loading, error: apiError } = useContext(SingupPageContext);
   const { direction, language } = useContext(LanguageContext);
   const navigate = useNavigate();
@@ -132,21 +135,19 @@ const isConfirmed = window.confirm(message);
                 dateofBirth: formattedDOB,
             }
         );
-
-        toast.success(response.data.message || "Sign Up Successful!");
+        setPopupValues("Sign Up Successful");
+        setIsErrorComponentVisible(true);
         setUsername("");
         setEmailId("");
         setPassword("");
         setConfirmPassword("");
         setPhone("");
         setDateofBirth({ day: '', month: '', year: '' });
-
-        setTimeout(() => {
-            navigate("/login");
-        }, 2000);
     } catch (err) {
         const errorMessage = err.response?.data?.message || err.message;
-        toast.error(`Error: ${errorMessage}`);
+        setPopupValues(errorMessage);
+        setIsErrorComponentVisible(true);
+  
     }
 };
 
@@ -179,6 +180,25 @@ const isConfirmed = window.confirm(message);
   };
 
   return (
+<>
+    {isErrorComponentVisible && (
+      <div style={{position:'absolute', top:'0px', width:'100%', margin:'auto'}}><PopUp
+      titleEN={popupData.titleEN}
+      titleAR={popupData.titleAR}
+      descriptionEN={popupData.descriptionEN}
+      descriptionAR={popupData.descriptionAR}
+      buttonText1EN={popupData.buttonText1EN}
+      buttonText1AR={popupData.buttonText1AR}
+      buttonText2EN={popupData.buttonText2EN}
+      buttonText2AR={popupData.buttonText2AR}
+      linkText1EN={popupData.linkText1EN}
+      linkText1AR={popupData.linkText1AR}
+      linkText2EN={popupData.linkText2EN}
+      linkText2AR={popupData.linkText2AR}
+      button1Link={popupData.button1Link}
+      button2Link={popupData.button2Link}
+    /></div>     )}
+
     <div className={stylesSelected.container}>
       <div className={stylesSelected.formWrapper}>
         <img src={assests.logo1} alt="resetlogo" className={stylesSelected.resetlogo} />
@@ -286,6 +306,7 @@ const isConfirmed = window.confirm(message);
       </div>
       <ToastContainer />
     </div>
+    </>
   );
 };
 

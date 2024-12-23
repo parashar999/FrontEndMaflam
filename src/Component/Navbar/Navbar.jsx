@@ -3,13 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo1 from "../../assets/logo1.png";
 import navbarBackground from "../../assets/NavbarBackground.png";
-
+import PopUp from "../LogIn/PopUp.jsx";
 import { assests } from "../../assets/assests";
 import { LanguageContext } from "../LanguageContext/LanguageContext";
 import axios from "axios";
 import loginarrow from "../../assets/Arrow.png";
 import auth from "../../Auth/Auth.js";
 import { ScaleLoader } from "react-spinners";
+import { usePopupContext } from "../LogIn/PopupContext.jsx";
 const Navbar = () => {
   const userDetails = auth.getAuthData();
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -20,7 +21,8 @@ const Navbar = () => {
   const [profileMenuItems, setProfileMenuItems] = useState([]);
   const navigate = useNavigate();
   const { language, direction, toggleLanguage } = useContext(LanguageContext);
-
+  const [isErrorComponentVisible, setIsErrorComponentVisible] = useState(false);
+  const { popupData, setPopupValues } = usePopupContext();
   const toggleDropdown = (dropdownName) => {
     setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
   };
@@ -78,8 +80,26 @@ const Navbar = () => {
   return (
     <div
       className={styles.navmenu}
+      
       style={{ backgroundImage: `url(${navbarBackground})` }}
     >
+            {isErrorComponentVisible && (
+        <div style={{position:'absolute', top:'0px', width:'100%', margin:'auto'}}><PopUp
+        titleEN={popupData.titleEN}
+        titleAR={popupData.titleAR}
+        descriptionEN={popupData.descriptionEN}
+        descriptionAR={popupData.descriptionAR}
+        buttonText1EN={popupData.buttonText1EN}
+        buttonText1AR={popupData.buttonText1AR}
+        buttonText2EN={popupData.buttonText2EN}
+        buttonText2AR={popupData.buttonText2AR}
+        linkText1EN={popupData.linkText1EN}
+        linkText1AR={popupData.linkText1AR}
+        linkText2EN={popupData.linkText2EN}
+        linkText2AR={popupData.linkText2AR}
+        button1Link={popupData.button1Link}
+        button2Link={popupData.button2Link}
+      /></div>     )}
       <nav
         className={`${styles.navbar} ${isHamburgerOpen ? styles.active : ""}`}
       >
@@ -157,7 +177,8 @@ const Navbar = () => {
           <div className={styles.rightLinks}>
             {user ? (
               <div  className={styles.profileContainer}>
-                <div className={styles.profile} onClick={() => { toggleProfileMenu(); setOpenDropdown(null);  }}>
+                <div className={styles.profile}>
+                 <span style={{display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', textAlign:'center'}}  onClick={() => { toggleProfileMenu(); setOpenDropdown(null);  }}>
                   <img
                     src={userDetails.userPhoto}
                     alt="Profile"
@@ -165,11 +186,12 @@ const Navbar = () => {
                   />
                   <span className={styles.username}>{`${userDetails.usernameInEng || userDetails.usernameInArb
                     }`}</span>
+                 </span>
                   <span>
 
                     {profileMenuItems.length > 0 && (
                       <span key={0}>
-                        <img
+                        <img                      
                           src={profileMenuItems[0].icon}
                           alt={profileMenuItems[0].name}
                           className={styles.subIcon}
@@ -178,27 +200,32 @@ const Navbar = () => {
                         {profileMenuItems[0].name === "Log out" || profileMenuItems[0].name === "تسجيل الخروج" ? (
                           <span onClick={handleLogoutClick}>{profileMenuItems[0].name}</span>
                         ) : (
-                          <Link
-                          to={
+                          <a
+                          href={
                             localStorage.getItem("courseCount") > 0
                               ? "https://learn.maflam.com/my/courses.php?lang=ar"
-                              : "/NotSubscribedyet"
+                              : "#"
                           }
                             onClick={() => {
-                              toggleProfileMenu();
-                              setOpenDropdown(null);
+                              
+                              if (localStorage.getItem("courseCount") == 0) {
+                                setIsErrorComponentVisible(true);
+                                setPopupValues("NotASubscriber");
+                              }
+                         
                               setIsHamburgerOpen(false);
+                           
                             }}
                           >
                             {profileMenuItems[0].name}
-                          </Link>
+                          </a>
                         )}
                       </span>
                     )}
                   </span>
                 </div>
                 {isProfileMenuOpen && (
-                  <div className={styles.profileMenu}>
+                  <div className={styles.profileMenu}  onClick={() => { toggleProfileMenu(); setOpenDropdown(null);  }} >
                     <ul>
                       {profileMenuItems.slice(1,profileMenuItems.length).filter((item) =>  item.name != "My Certificates" && item.name != "My Subscriptions" && item.name != "شهاداتي" && item.name != "اشتراكاتي").map((item, index) => (
                         <li key={index}>
@@ -244,15 +271,16 @@ const Navbar = () => {
                       onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false); }}
                       className={`${styles.loginButton} ${styles.navButton}`}
                     >
-
                       Sign In
                     </Link>
-
+                    
                   </span>
+                  
                 )}
               </>
             )}
           </div>
+
         </div>
         <button className={styles.langbtn} onClick={toggleLanguage}>
           {language === "ar" ? "English" : "العربية"}
@@ -262,7 +290,9 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
+        
       </nav>
+
     </div>
   );
 };

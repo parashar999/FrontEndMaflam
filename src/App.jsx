@@ -1,7 +1,7 @@
 // Library Imports
 import { Navigate, Route, Routes } from "react-router-dom";
 import React,{useRef} from "react";
-
+import { PopupProvider } from "./Component/LogIn/PopupContext.jsx";
 
 // Page Imports
 import {
@@ -75,8 +75,9 @@ const App = () => {
   return (
 
     <LanguageProvider>
+          <PopupProvider>
       <Navbar/>
-        
+      </PopupProvider>
       <Routes>
         
       

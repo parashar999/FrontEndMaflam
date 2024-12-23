@@ -10,7 +10,8 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 import "react-toastify/dist/ReactToastify.css";
 import { useLastUrl } from "../../store/LastUrlContext.jsx";
-
+import PopUp from "./PopUp.jsx"
+import { usePopupContext } from "./PopupContext.jsx";
 // Moodle Web Service Configuration
 const MOODLE_BASE_URL = 'https://learn.maflam.com'; // Replace with your Moodle URL
 const MOODLE_TOKEN = '2a722fa95e3614ef3e297fb6154fd3e8'; // Replace with your Web Service token
@@ -73,8 +74,10 @@ async function fetchCourseCountByEmail(email) {
 const Login = () => {
   const lastUrl = useLastUrl();
   console.log(lastUrl);
+  const { popupData, setPopupValues } = usePopupContext();
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [isErrorComponentVisible, setIsErrorComponentVisible] = useState(false);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
@@ -84,7 +87,7 @@ const Login = () => {
 
   if (loading) return <p>Loading...</p>;
   if (apiError) return <p>Error loading data</p>;
-
+ 
   const loginData = loginPageContexttDetails?.loginData || [];
   const title = loginData[0]?.title || "Together to make your first movie";
   const emailLabel = loginData[1]?.title || "Email or Phone";
@@ -93,7 +96,7 @@ const Login = () => {
   const loginButtonLabel = loginData[4]?.title || "Log in";
   const reset = loginData[5]?.title || "Forget Password";
   const googleLoginText = loginData[7]?.title || "Continue with Google";
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const isEmail = emailOrPhone.includes("@");
@@ -107,7 +110,6 @@ const Login = () => {
         }
       );
 
-      toast.success(response.data.message);
       auth.login(response.data);
 
       // After login success, fetch course count
@@ -118,17 +120,21 @@ const Login = () => {
       setTimeout(() => {
 
         if (courseCount > 0) {
-          // If user has courses, redirect to courses page
-          window.location.href = "https://learn.maflam.com/my/courses.php?lang=ar";
+          setPopupValues("userExists");
+          setIsErrorComponentVisible(true);
         } else {
-          // If user has no courses, redirect to default page
-          window.location.href = "http://localhost:5173/NotSubscribedyet";
+                setPopupValues("NotASubscriber");
+                setIsErrorComponentVisible(true);
         }
-      }, 5000);
+      }, 500);
+ 
 
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
-      toast.error(`Error: ${errorMessage}`);
+      console.log(errorMessage);
+      setPopupValues(errorMessage);
+      setIsErrorComponentVisible(true);
+
     }
   };
 
@@ -152,7 +158,7 @@ const Login = () => {
     } catch (error) {
       console.error("Google Login Error:", error);
       const errorMessage = error.response?.data?.message || error.message;
-      toast.error(`Error: ${errorMessage}`);
+      
     }
   };
 
@@ -161,6 +167,26 @@ const Login = () => {
   };
 
   return (
+    <>
+              {isErrorComponentVisible && (
+        <div style={{position:'absolute', top:"0px"}}><PopUp
+        titleEN={popupData.titleEN}
+        titleAR={popupData.titleAR}
+        descriptionEN={popupData.descriptionEN}
+        descriptionAR={popupData.descriptionAR}
+        buttonText1EN={popupData.buttonText1EN}
+        buttonText1AR={popupData.buttonText1AR}
+        buttonText2EN={popupData.buttonText2EN}
+        buttonText2AR={popupData.buttonText2AR}
+        linkText1EN={popupData.linkText1EN}
+        linkText1AR={popupData.linkText1AR}
+        linkText2EN={popupData.linkText2EN}
+        linkText2AR={popupData.linkText2AR}
+        button1Link={popupData.button1Link}
+        button2Link={popupData.button2Link}
+      /></div>
+        
+      )}
     <div className={styles.container}>
       <div className={styles.Subcontainer}>
         <div className={styles.loginBox}>
@@ -228,6 +254,7 @@ const Login = () => {
               text={googleLoginText}
             />
           </div>
+
           <div style={{ width: '100%' }}>
             <a href="/signUp" className={styles.createAccount}>
               {signupText}
@@ -237,6 +264,7 @@ const Login = () => {
       </div>
       <ToastContainer />
     </div>
+    </>
   );
 };
 

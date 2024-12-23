@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import {Login } from "../../Component";
+import { PopupProvider } from "../../Component/LogIn/PopupContext";
 import { LanguageProvider ,
   LoginPageContext,
   LoginPageContextProvider,
@@ -23,7 +24,9 @@ const LoginPage = () => {
     <div>
       <LanguageProvider>
         <LoginPageContextProvider>
+          <PopupProvider>
           <Login></Login>
+          </PopupProvider>
         </LoginPageContextProvider>
       </LanguageProvider>
     </div>

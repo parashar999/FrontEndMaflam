@@ -1,0 +1,154 @@
+/* Page Container */
+.pageContainer {
+    /* width: 100%;
+    min-height: 100vh;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background: transparent;
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 100%;
+    width: 100vw;
+    min-height: 900px;
+    z-index: 10000;
+    pointer-events: all;
+    position: relative;
+  }
+  
+  .contentWrapper {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    min-width: 600px;
+    max-width: 700px;
+    backdrop-filter: blur(2px);
+    background-color: #ffffff15;
+    backdrop-filter: blur(100px);
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .button {
+    background-color: #39FFFb; 
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 62px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #1a8f8f; 
+  }
+  
+  @media  (max-width: 1250px) {
+    .pageContainer {
+      padding: 20px;
+    }
+  
+    .contentWrapper {
+      zoom: 0.8;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .button {
+      padding: 10px 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .pageContainer {
+      padding: 20px;
+    }
+  
+    .contentWrapper {
+      zoom: 0.7;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .button {
+      padding: 10px 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 24px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  
+    .button {
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Close Button */
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10001; /* Ensure it's above the content */
+    transition: color 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    color: #ff0000; /* Red color on hover */
+  }
+  

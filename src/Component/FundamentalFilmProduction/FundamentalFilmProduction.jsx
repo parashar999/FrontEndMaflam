@@ -203,7 +203,7 @@ courseDataId.courseId === "26" || courseDataId.courseId=="29"||courseDataId.cour
       className={styles.subcribebtn}
       // onClick={() => checkoutpage(courseDataId.id)}
     >
-      <Link style={{textDecoration:'none', display:'block', width:'100%'}} to={"/R2/R3/prc/All"}>
+      <Link style={{textDecoration:'none', display:'block', width:'100%'}} to={"/checkout2"}>
       <span style={{ width: '100%' }}>
   {courseDataId && courseDataId.price == "0"
     ? (direction == "rtl" ? "متاح فقط ضمن الباقة الكاملة" : "Only Available With Bundle")

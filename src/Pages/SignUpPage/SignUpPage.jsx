@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import {SignUp } from "../../Component";
+import { PopupProvider } from "../../Component/LogIn/PopupContext";
 import
 {
   useScrollToTopWithDelay
@@ -30,7 +31,9 @@ const SignUpPage = () => {
     <div>
       <LanguageProvider>
         <SingupPageContextProvider>
+        <PopupProvider>
           <SignUp></SignUp>
+          </PopupProvider>
         </SingupPageContextProvider>
       </LanguageProvider>
     </div>
