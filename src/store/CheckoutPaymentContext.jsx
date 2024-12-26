@@ -16,7 +16,7 @@
 //     try {
 //       // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
 //       const response = await axios.get(
-//         `http://localhost:3001/maflam/get-maflam-pricing-details?lang=${langParam}`
+//         `https://backend.maflam.com/maflam/get-maflam-pricing-details?lang=${langParam}`
 //       );
 //       // console.log("API Response: checkout  ", response.data);
 
@@ -64,7 +64,7 @@ export const CheckoutPaymentContextProvider = ({ children }) => {
     try {
       // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
       const response = await axios.get(
-        `http://localhost:3001/maflam/get-maflam-pricing-details?lang=${langParam}&&_id=${paymentId}`
+        `https://backend.maflam.com/maflam/get-maflam-pricing-details?lang=${langParam}&&_id=${paymentId}`
       );
       // console.log("API Response: checkout  ", response.data);
 

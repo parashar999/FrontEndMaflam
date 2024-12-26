@@ -34,9 +34,9 @@ export const PopupProvider = ({ children }) => {
           buttonText1AR: 'استكشاف مافلام',
           buttonText2EN: 'Create an Account',
           buttonText2AR: 'إنشاء حساب',
-          linkText1EN: 'http://localhost:5173/',
+          linkText1EN: 'https://maflam.com/',
           linkText1AR: '/signUp',
-          linkText2EN: 'http://localhost:5173/signUp',
+          linkText2EN: 'https://maflam.com/signUp',
           linkText2AR: '/signUp',
           button1Link: '/signUp',
           button2Link: '/signUp'
@@ -52,9 +52,9 @@ export const PopupProvider = ({ children }) => {
           buttonText1AR: 'حاول مرة أخرى',
           buttonText2EN: 'Forgot Password?',
           buttonText2AR: 'هل نسيت كلمة المرور؟',
-          linkText1EN: 'http://localhost:5173/login',
+          linkText1EN: 'https://maflam.com/login',
           linkText1AR: '/login',
-          linkText2EN: 'http://localhost:5173/reset',
+          linkText2EN: 'https://maflam.com/reset',
           linkText2AR: '/reset',
           button1Link: '/login',
           button2Link: '/reset'
@@ -88,9 +88,9 @@ export const PopupProvider = ({ children }) => {
           buttonText1AR: 'استكشاف مافلام',
           buttonText2EN: 'Buy Now',
           buttonText2AR: 'اشترِ الآن',
-          linkText1EN: 'http://localhost:5173/',
+          linkText1EN: 'https://maflam.com/',
           linkText1AR: '/dashboard',
-          linkText2EN: 'http://localhost:5173/R2/R3/prc/All',
+          linkText2EN: 'https://maflam.com/R2/R3/prc/All',
           linkText2AR: '/buyCourses',
           button1Link: '/dashboard',
           button2Link: '/buyCourses'
@@ -106,9 +106,9 @@ export const PopupProvider = ({ children }) => {
             buttonText1AR: 'إنشاء حساب جديد',
             buttonText2EN: 'Login',
             buttonText2AR: 'تسجيل الدخول',
-            linkText1EN: 'http://localhost:5173/signUp',
+            linkText1EN: 'https://maflam.com/signUp',
             linkText1AR: '/signUp',
-            linkText2EN: 'http://localhost:5173/login',
+            linkText2EN: 'https://maflam.com/login',
             linkText2AR: '/login',
             button1Link: '/signUp',
             button2Link: '/login'
@@ -124,14 +124,33 @@ export const PopupProvider = ({ children }) => {
               buttonText1AR: 'تسجيل الدخول',
               buttonText2EN: 'Explore and Buy Courses',
               buttonText2AR: 'استكشاف وشراء الدورات التدريبية',
-              linkText1EN: 'http://localhost:5173/login',
+              linkText1EN: 'https://maflam.com/login',
               linkText1AR: '/dashboard',
-              linkText2EN: 'http://localhost:5173/courses',
+              linkText2EN: 'https://maflam.com/courses',
               linkText2AR: '/courses',
               button1Link: '/dashboard',
               button2Link: '/courses'
             });
             break;
+
+            case 'canteditProfile':
+              setPopupData({
+                  titleEN: 'Profile Access Restricted',
+                  titleAR: 'تم تقييد الوصول إلى الملف الشخصي',
+                  descriptionEN: 'You should have at least one active course to access your profile.',
+                  descriptionAR: 'يجب أن يكون لديك دورة تدريبية نشطة واحدة على الأقل للوصول إلى ملفك الشخصي.',
+                  buttonText1EN: 'Buy Now',
+                  buttonText1AR: 'اشتر الآن',
+                  buttonText2EN: 'Go Back',
+                  buttonText2AR: 'رجوع',
+                  linkText1EN: 'https://maflam.com/R2/R3/prc/All',
+                  linkText1AR: '/courses',
+                  linkText2EN: 'https://maflam.com/dashboard',
+                  linkText2AR: '/dashboard',
+                  button1Link: '/courses',
+                  button2Link: '/dashboard'
+              });
+              break;
           
       default:
         setPopupData({
@@ -143,9 +162,9 @@ export const PopupProvider = ({ children }) => {
           buttonText1AR: 'الرجوع',
           buttonText2EN: 'Contact Us',
           buttonText2AR: 'اتصل بنا',
-          linkText1EN: 'http://localhost:5173/login',
+          linkText1EN: 'https://maflam.com/login',
           linkText1AR: '/login',
-          linkText2EN: 'http://localhost:5173/R2/R3/contact/*',
+          linkText2EN: 'https://maflam.com/R2/R3/contact/*',
           linkText2AR: '/contact',
           button1Link: '/login',
           button2Link: '/contact'

@@ -16,7 +16,7 @@ export const PricingPageContextProvider = ({ children }) => {
   const fetchPricingPageContextDetails = async (langParam, categoryParam) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/maflam/get-pricing-course-category?lang=${langParam}&&category=${categoryParam}&&_id=672c6953bd321f82ce18327a&&insId=0
+        `https://backend.maflam.com/maflam/get-pricing-course-category?lang=${langParam}&&category=${categoryParam}&&_id=672c6953bd321f82ce18327a&&insId=0
         `
       );
       setPricingPageContextDetails(response.data);
@@ -64,7 +64,7 @@ export const PricingPageContextProvider = ({ children }) => {
 //     try {
 //       // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
 //       const response = await axios.get(
-//         `http://localhost:3001/maflam/get-pricing-course-category?lang=${langParam}&&category=All`
+//         `https://backend.maflam.com/maflam/get-pricing-course-category?lang=${langParam}&&category=All`
 //       );
 //       // console.log("API Response: pricing  ", response.data);
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import stylesSelected from "./SignUp.module.css";
 import pweye from "../../assets/PWeye.png"
+import GoogleLogo from '../../assets/GoogleLogo.png'
 
 import { assests } from "../../assets/assests.js";
 import { SingupPageContext } from "../../store/SingupPageContext.jsx";
@@ -12,6 +13,7 @@ import { GoogleLogin, googleLogout } from '@react-oauth/google';
 import { LanguageContext } from "../../Component/LanguageContext/LanguageContext.jsx";
 import PopUp from "../LogIn/PopUp.jsx"
 import { usePopupContext } from "./../LogIn/PopupContext.jsx";
+import { BsDisplay } from "react-icons/bs";
 const SignUp = () => {
   const { popupData, setPopupValues } = usePopupContext();
   const [isErrorComponentVisible, setIsErrorComponentVisible] = useState(false);
@@ -125,7 +127,7 @@ const isConfirmed = window.confirm(message);
 
     try {
         const response = await axios.post(
-            "http://localhost:3001/maflam/sign-up",
+            "https://backend.maflam.com/maflam/sign-up",
             {
                 usernameInEng,
                 emailId,
@@ -155,17 +157,17 @@ const isConfirmed = window.confirm(message);
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/maflam/sign-up-with-google",
+        "https://backend.maflam.com/maflam/sign-up-with-google",
         { googleCredential: credentialResponse.credential }
       );
-
-      toast.success(response.data.message || "Google Sign Up Successful!");
+      setPopupValues("Sign Up Successful");
+      setIsErrorComponentVisible(true);
       // navigate("/login");
-      setTimeout(() => {
-        navigate("/login");
-      }, 2000);
     } catch (err) {
+      console.log(err.response);
       const errorMessage = err.response?.data?.message || err.message;
+      setPopupValues(errorMessage);
+      setIsErrorComponentVisible(true);
       toast.error(`Error: ${errorMessage}`);
     }
   };
@@ -286,18 +288,22 @@ const isConfirmed = window.confirm(message);
           <hr className={stylesSelected.hrLine} />
         </div>
 
-         <div className={stylesSelected.socialLogin}>
+         <div style={{opacity:'0'}} className={stylesSelected.socialLogin}>
           <GoogleLogin
             onSuccess={handleGoogleLoginSuccess}
             onError={handleGoogleLoginError}
             render={({ onClick }) => (
               <button onClick={onClick} className={stylesSelected.socialButton}>
-                <img src={assests.googlelogin} alt="Google"  className={stylesSelected.socialIconImage} />
+                <img src={GoogleLogo} alt="Google"  className={stylesSelected.socialIconImage} />
                 <span style={{width:'100%', textAlign:'center'}}>  {googleLoginText} </span>
               </button>
             )}
           />
         </div> 
+        <button  style={{position:'relative', top:'-40px', backgroundColor:'#BBFFFF', pointerEvents:'none', display:'flex', gap:'10px', flexDirection:'row',maxWidth:'330px'}} className={stylesSelected.socialButton}>
+                <img src={GoogleLogo} alt="Google"  className={stylesSelected.socialIconImage} />
+                <span>  {googleLoginText} </span>
+              </button>
         <div className={stylesSelected.signInLink}>
           <span>{signInPrompt}</span>
           &nbsp;

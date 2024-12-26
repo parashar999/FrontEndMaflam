@@ -14,15 +14,13 @@ const CarouselCommunity = () => {
   const videoItems = communityData.map((story) => ({
   
     content: (
-      <video
-     
+      <video 
         src={story.videoUrl}
         loop
         playsInline
         muted
         controls
         style={{ width: "100%", height: "100%" , boxSizing:'border-box' }}
-
       />
     ),
   }));

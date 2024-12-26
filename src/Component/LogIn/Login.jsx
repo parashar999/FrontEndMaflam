@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useLastUrl } from "../../store/LastUrlContext.jsx";
 import PopUp from "./PopUp.jsx"
 import { usePopupContext } from "./PopupContext.jsx";
+import GoogleLogo from "../../assets/GoogleLogin.png"
 // Moodle Web Service Configuration
 const MOODLE_BASE_URL = 'https://learn.maflam.com'; // Replace with your Moodle URL
 const MOODLE_TOKEN = '2a722fa95e3614ef3e297fb6154fd3e8'; // Replace with your Web Service token
@@ -87,7 +88,7 @@ const Login = () => {
 
   if (loading) return <p>Loading...</p>;
   if (apiError) return <p>Error loading data</p>;
- 
+
   const loginData = loginPageContexttDetails?.loginData || [];
   const title = loginData[0]?.title || "Together to make your first movie";
   const emailLabel = loginData[1]?.title || "Email or Phone";
@@ -96,13 +97,13 @@ const Login = () => {
   const loginButtonLabel = loginData[4]?.title || "Log in";
   const reset = loginData[5]?.title || "Forget Password";
   const googleLoginText = loginData[7]?.title || "Continue with Google";
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const isEmail = emailOrPhone.includes("@");
     try {
       const response = await axios.post(
-        "http://localhost:3001/maflam/sign-in",
+        "https://backend.maflam.com/maflam/sign-in",
         {
           phone: isEmail ? "" : emailOrPhone,
           emailId: isEmail ? emailOrPhone : "",
@@ -117,17 +118,17 @@ const Login = () => {
       localStorage.setItem("courseCount", courseCount);
       console.log("Course Count:", courseCount);
 
-      setTimeout(() => {
+    
 
         if (courseCount > 0) {
           setPopupValues("userExists");
           setIsErrorComponentVisible(true);
         } else {
-                setPopupValues("NotASubscriber");
-                setIsErrorComponentVisible(true);
+          setPopupValues("NotASubscriber");
+          setIsErrorComponentVisible(true);
         }
-      }, 500);
- 
+      
+
 
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.message;
@@ -141,24 +142,33 @@ const Login = () => {
   const handleGoogleLoginSuccess = async (credentialResponse) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/maflam/sign-in-with-google",
+        "https://backend.maflam.com/maflam/sign-in-with-google",
         { googleCredential: credentialResponse.credential }
       );
-
-      toast.success(response.data.message);
       auth.login(response.data);
-
+      console.log(response.data);
       // After Google login success, fetch course count
-      const courseCount = await fetchCourseCountByEmail(response.data.email);
+      const courseCount = await fetchCourseCountByEmail(response.data.useremail);
+      localStorage.setItem("courseCount", courseCount);
       console.log("Course Count:", courseCount);
 
-      setTimeout(() => {
-        window.location.href = lastUrl;
-      }, 2000);
+
+
+
+        if (courseCount > 0) {
+          setPopupValues("userExists");
+          setIsErrorComponentVisible(true);
+        } else {
+          setPopupValues("NotASubscriber");
+          setIsErrorComponentVisible(true);
+        }
+
+
     } catch (error) {
-      console.error("Google Login Error:", error);
-      const errorMessage = error.response?.data?.message || error.message;
-      
+      const errorMessage = error.response?.data?.message || err.message;
+      console.log(errorMessage);
+      setPopupValues(errorMessage);
+      setIsErrorComponentVisible(true);
     }
   };
 
@@ -168,102 +178,105 @@ const Login = () => {
 
   return (
     <>
-              {isErrorComponentVisible && (
-        <div style={{position:'absolute', top:"0px"}}><PopUp
-        titleEN={popupData.titleEN}
-        titleAR={popupData.titleAR}
-        descriptionEN={popupData.descriptionEN}
-        descriptionAR={popupData.descriptionAR}
-        buttonText1EN={popupData.buttonText1EN}
-        buttonText1AR={popupData.buttonText1AR}
-        buttonText2EN={popupData.buttonText2EN}
-        buttonText2AR={popupData.buttonText2AR}
-        linkText1EN={popupData.linkText1EN}
-        linkText1AR={popupData.linkText1AR}
-        linkText2EN={popupData.linkText2EN}
-        linkText2AR={popupData.linkText2AR}
-        button1Link={popupData.button1Link}
-        button2Link={popupData.button2Link}
-      /></div>
-        
-      )}
-    <div className={styles.container}>
-      <div className={styles.Subcontainer}>
-        <div className={styles.loginBox}>
-          <img
-            src={assests.logo1}
-            alt="resetlogo"
-            className={styles.resetlogo}
-          />
-          <h1 className={styles.title}>{title}</h1>
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <label htmlFor="email">{emailLabel}</label>
-            <input
-              type="text"
-              required
-              maxLength={40}
-              placeholder={emailLabel}
-              className={styles.input}
-              value={emailOrPhone}
-              onChange={(e) => setEmailOrPhone(e.target.value)}
-            />
-            <label style={{ marginTop: '15px' }} htmlFor="password">{passwordLabel}</label>
-            <div className={styles.passwordContainer}>
-              <input
-                type={isPasswordVisible ? "text" : "password"}
-                placeholder={passwordLabel}
-                className={styles.input}
-                required
-                maxLength={20}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <div
-                className={styles.eyeIcon}
-                onClick={togglePasswordVisibility}
-                role="button"
-                aria-label="Toggle password visibility"
-              />
-            </div>
-            <div className={styles.rememberMeContainer}>
-              <input
-                type="checkbox"
-                id="rememberMe"
-                className={styles.checkbox}
-              />
-              <label htmlFor="rememberMe" className={styles.checkboxLabel}>
-                {rememberMeLabel}
-              </label>
-            </div>
-            <button type="submit" className={styles.loginButton}>
-              {loginButtonLabel}
-            </button>
-          </form>
-          <div className={styles.forgotpassword}>
-            <p><Link to="/reset"> {reset}</Link></p>
-          </div>
-          <div className={styles.divider}>
-            <hr className={styles.hrLine} />
-            <span style={{ fontSize: '22px' }} >{orText}</span>
-            <hr className={styles.hrLine} />
-          </div>
-          <div className={styles.socialLogin}>
-            <GoogleLogin
-              onSuccess={handleGoogleLoginSuccess}
-              onError={() => toast.error("Google Login failed.")}
-              text={googleLoginText}
-            />
-          </div>
+      {isErrorComponentVisible && (
+        <div style={{ position: 'absolute', top: "0px" }}><PopUp
+          titleEN={popupData.titleEN}
+          titleAR={popupData.titleAR}
+          descriptionEN={popupData.descriptionEN}
+          descriptionAR={popupData.descriptionAR}
+          buttonText1EN={popupData.buttonText1EN}
+          buttonText1AR={popupData.buttonText1AR}
+          buttonText2EN={popupData.buttonText2EN}
+          buttonText2AR={popupData.buttonText2AR}
+          linkText1EN={popupData.linkText1EN}
+          linkText1AR={popupData.linkText1AR}
+          linkText2EN={popupData.linkText2EN}
+          linkText2AR={popupData.linkText2AR}
+          button1Link={popupData.button1Link}
+          button2Link={popupData.button2Link}
+        /></div>
 
-          <div style={{ width: '100%' }}>
-            <a href="/signUp" className={styles.createAccount}>
-              {signupText}
-            </a>
+      )}
+      <div className={styles.container}>
+        <div className={styles.Subcontainer}>
+          <div className={styles.loginBox}>
+            <img
+              src={assests.logo1}
+              alt="resetlogo"
+              className={styles.resetlogo}
+            />
+            <h1 className={styles.title}>{title}</h1>
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <label htmlFor="email">{emailLabel}</label>
+              <input
+                type="text"
+                required
+                maxLength={40}
+                placeholder={emailLabel}
+                className={styles.input}
+                value={emailOrPhone}
+                onChange={(e) => setEmailOrPhone(e.target.value)}
+              />
+              <label style={{ marginTop: '15px' }} htmlFor="password">{passwordLabel}</label>
+              <div className={styles.passwordContainer}>
+                <input
+                  type={isPasswordVisible ? "text" : "password"}
+                  placeholder={passwordLabel}
+                  className={styles.input}
+                  required
+                  maxLength={20}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div
+                  className={styles.eyeIcon}
+                  onClick={togglePasswordVisibility}
+                  role="button"
+                  aria-label="Toggle password visibility"
+                />
+              </div>
+              <div className={styles.rememberMeContainer}>
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                  className={styles.checkbox}
+                />
+                <label htmlFor="rememberMe" className={styles.checkboxLabel}>
+                  {rememberMeLabel}
+                </label>
+              </div>
+              <button type="submit" className={styles.loginButton}>
+                {loginButtonLabel}
+              </button>
+            </form>
+            <div className={styles.forgotpassword}>
+              <p><Link to="/reset"> {reset}</Link></p>
+            </div>
+            <div className={styles.divider}>
+              <hr className={styles.hrLine} />
+              <span style={{ fontSize: '22px' }} >{orText}</span>
+              <hr className={styles.hrLine} />
+            </div>
+            <div style={{opacity:'0'}} className={styles.socialLogin}>
+              <GoogleLogin
+                onSuccess={handleGoogleLoginSuccess}
+                onError={() => toast.error("Google Login failed.")}
+                text={googleLoginText}
+              />
+            </div>
+        <button  style={{position:'relative', top:'-40px', backgroundColor:'#BBFFFF', pointerEvents:'none', display:'flex', gap:'10px', flexDirection:'row',maxWidth:'330px'}} className={styles.socialButton}>
+                <img src={GoogleLogo} alt="Google"  className={styles.socialIconImage} />
+                <span>  {googleLoginText} </span>
+              </button>
+            <div style={{ width: '100%' }}>
+              <a href="/signUp" className={styles.createAccount}>
+                {signupText}
+              </a>
+            </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
-    </div>
     </>
   );
 };

@@ -19,7 +19,7 @@ export const SocialMediaPageProvider = ({ children }) => {
   const fetchSocialMediaPageDetails = async (langParam) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/maflam/get-socialMedia-page-details?lang=${langParam}`
+        `https://backend.maflam.com/maflam/get-socialMedia-page-details?lang=${langParam}`
       );
 
       setSocialMediaPageDetails(response.data);
@@ -64,7 +64,7 @@ export const SocialMediaPageProvider = ({ children }) => {
 //     try {
 //       const response = await axios.get(
 //         // `https://prominenttrades.in/maflam/get-TermsAndCondition?lang=${langParam}`
-//         `http://localhost:3001/maflam/get-socialMedia-page-details?lang=${langParam}`
+//         `https://backend.maflam.com/maflam/get-socialMedia-page-details?lang=${langParam}`
 //       );
 //       // console.log("API Response for Terms and Conditions: ", response.data);
 

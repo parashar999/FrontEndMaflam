@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FaTimes } from "react-icons/fa";
 import styles from "./MyProfilePersonalInfo.module.css";
 import { assests } from "../../assets/assests.js";
 import { Link } from "react-router-dom";
 import auth from "../../Auth/Auth.js";
 import axios from "axios";
+import { LanguageContext } from "../LanguageContext/LanguageContext.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function MyProfilePersonalInfo() {
   const userDetails = auth.getAuthData();
   const token = userDetails?.token;
-
+  const {direction} = useContext(LanguageContext);
   const [userImage, setUserImage] = useState("default-image-url.png");
   const [formData, setFormData] = useState({
     name: "",
@@ -112,8 +113,8 @@ function MyProfilePersonalInfo() {
     };
 
     try {
-      await axios.put(
-        "http://localhost:3001/maflam/update-profile",
+      const response = await axios.put(
+        "https://backend.maflam.com/maflam/update-profile",
         profileData,
         {
           headers: {
@@ -128,7 +129,7 @@ function MyProfilePersonalInfo() {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:3001/maflam/get-user-details?lang=1", {
+      .get("https://backend.maflam.com/maflam/get-user-details?lang=1", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
@@ -162,238 +163,159 @@ function MyProfilePersonalInfo() {
   }, [token]);
 
   return (
+
     <div className={styles.profileContainer}>
-      <header className={styles.profileHeader}>
-        <h1>My Profile</h1>
-      </header>
-      <nav>
-        <ul className={styles.profileTabs}>
-          <li className={styles.activeTab}>
-            <Link to="/personalInformation">Personal Information</Link>
-          </li>
-          <li>
-            <Link to="/transaction">My Transactions</Link>
-          </li>
-          {/* <li>
-            <Link to="/mycertificate">My Certificates</Link>
-          </li>
-          <li>
-            <Link to="/mywishlist">My Wishlist</Link>
-          </li> */}
-        </ul>
-        <hr className={styles.footerHr} />
-      </nav>
+  <header className={styles.profileHeader}></header>
+  <nav>
+    <ul className={styles.profileTabs}>
+      <li className={styles.activeTab}>
+        <Link to="/personalInformation">{direction === "rtl" ? "المعلومات الشخصية" : "Personal Information"}</Link>
+      </li>
+      <li>
+        <Link to="/transaction">{direction === "rtl" ? "معاملاتي" : "My Transactions"}</Link>
+      </li>
+      {/* <li>
+        <Link to="/mycertificate">{direction === "rtl" ? "شهاداتي" : "My Certificates"}</Link>
+      </li>
+      <li>
+        <Link to="/mywishlist">{direction === "rtl" ? "قائمة رغباتي" : "My Wishlist"}</Link>
+      </li> */}
+    </ul>
+    <hr className={styles.footerHr} />
+  </nav>
 
-      <form onSubmit={handleSubmit} className={styles.profileForm}>
-        <div className={styles.imageUploadContainer}>
-          <h2> Personal Information</h2>
-          <div className={styles.imagePreview}>
-            <img src={userImage} alt="User" />
-            <div className={styles.editIconContainer}>
-              <input
-                type="file"
-                accept="image/*"
-                id="image-upload"
-                className={styles.fileInput}
-                onChange={handleImageChange}
-              />
-              <label htmlFor="image-upload" className={styles.editIconLabel}>
-                <img
-                  src={assests.editicon}
-                  alt="Edit"
-                  className={styles.editIcon}
-                />
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Name</label>
+  <form onSubmit={handleSubmit} className={styles.profileForm}>
+    <div style={{display: 'flex', flexDirection: 'column', maxWidth: '200px', gap: '10px', color: '#BBFFFF'}} className={styles.imageUploadContainer}>
+      <div className={styles.imagePreview}>
+        <img src={userImage} alt="User" />
+        <div className={styles.editIconContainer}>
           <input
-            type="text"
-            name="name"
-            placeholder="name"
-            value={formData.name}
-            onChange={handleChange}
+            type="file"
+            accept="image/*"
+            id="image-upload"
+            className={styles.fileInput}
+            onChange={handleImageChange}
           />
         </div>
-
-        <div className={styles.formGroup}>
-          <label>Gender</label>
-          <div className={styles.genderContainer}>
-            <div
-              className={`${styles.genderBox} ${
-                formData.gender === "male" ? styles.active : ""
-              }`}
-              onClick={() => handleGenderSelect("male")}
-            >
-              Male
-            </div>
-            <div
-              className={`${styles.genderBox} ${
-                formData.gender === "female" ? styles.active : ""
-              }`}
-              onClick={() => handleGenderSelect("female")}
-            >
-              Female
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Date of Birth</label>
-          <div className={styles.dobGroup}>
-            <select
-              name="dobDay"
-              value={formData.dobDay}
-              onChange={handleChange}
-            >
-              <option value="">Day</option>
-              {Array.from({ length: 31 }, (_, i) => (
-                <option key={i} value={i + 1}>
-                  {i + 1}
-                </option>
-              ))}
-            </select>
-            <select
-              name="dobMonth"
-              value={formData.dobMonth}
-              onChange={handleChange}
-            >
-              <option value="">Month</option>
-              {Array.from({ length: 12 }, (_, i) => (
-                <option key={i} value={i + 1}>
-                  {i + 1}
-                </option>
-              ))}
-            </select>
-            <select
-              name="dobYear"
-              value={formData.dobYear}
-              onChange={handleChange}
-            >
-              <option value="">Year</option>
-              {Array.from({ length: 101 }, (_, i) => (
-                <option key={i} value={2023 - i}>
-                  {2023 - i}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Profession</label>
-          <select
-            name="profession"
-            value={formData.profession}
-            onChange={handleChange}
-          >
-            <option value="">Select Profession</option>
-            <option value="student">Student</option>
-            <option value="engineer">Engineer</option>
-            <option value="teacher">Teacher</option>
-            <option value="developer">Developer</option>
-          </select>
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="email"
-            value={formData.emailId}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Phone Number</label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="phone number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Link to business/website/social media accounts</label>
-          <div className={styles.linksGroup}>
-            {formData.links.map((link, index) => (
-              <input
-                key={index}
-                type="text"
-                placeholder="https://maflam.com"
-                value={link}
-                onChange={(e) => handleLinkChange(index, e)}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Skills</label>
-          <div className={styles.skillsContainer}>
-            <select
-              name="skills"
-              value={formData.skills}
-              onChange={handleSkillChange}
-            >
-              <option value="">Select Skill</option>
-              <option value="JavaScript">JavaScript</option>
-              <option value="React">React</option>
-              <option value="Python">Python</option>
-            </select>
-            <select
-              name="skillLevel"
-              value={formData.skillLevel}
-              onChange={handleSkillChange}
-            >
-              <option value="">Select Level</option>
-              <option value="Beginner">Beginner</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Expert">Expert</option>
-            </select>
-          </div>
-        </div>
-
-        <div className={styles.skillPreviewContainer}>
-          {formData.skillPreviews.map((skill, index) => (
-            <div key={index} className={styles.skillPreview}>
-              {skill.name} ({skill.parent})
-              <FaTimes
-                className={styles.closeIcon}
-                onClick={() => handleSkillRemove(skill)}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.formGroup}>
-          <label>Interested in Learning</label>
-          <select
-            name="interestedInLearning"
-            value={formData.interestedInLearning}
-            onChange={handleChange}
-          >
-            <option value="">Select Topic</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Web Development">Web Development</option>
-            <option value="Machine Learning">Machine Learning</option>
-            <option value="Cybersecurity">Cybersecurity</option>
-          </select>
-        </div>
-
-        <button type="submit" className={styles.submitButton}>
-          Save changes
-        </button>
-      </form>
+      </div>
+      <label style={{width: '100%', textAlign: 'center'}} htmlFor="image-upload" className={styles.editIconLabel}>
+        {direction === "rtl" ? "تغيير صورة الملف الشخصي" : "Change Profile Image"}
+      </label>
     </div>
-  );
-}
 
+    <div className={styles.formGroup}>
+      <label>{direction === "rtl" ? "الاسم" : "Name"}</label>
+      <input
+        type="text"
+        name="name"
+        placeholder={direction === "rtl" ? "الاسم" : "name"}
+        value={formData.name}
+        onChange={handleChange}
+      />
+    </div>
+
+    <div className={styles.formGroup}>
+      <label>{direction === "rtl" ? "الجنس" : "Gender"}</label>
+      <div className={styles.genderContainer}>
+        <div
+          className={`${styles.genderBox} ${formData.gender === "male" ? styles.active : ""}`}
+          onClick={() => handleGenderSelect("male")}
+        >
+          {direction === "rtl" ? "ذكر" : "Male"}
+        </div>
+        <div
+          className={`${styles.genderBox} ${formData.gender === "female" ? styles.active : ""}`}
+          onClick={() => handleGenderSelect("female")}
+        >
+          {direction === "rtl" ? "أنثى" : "Female"}
+        </div>
+      </div>
+    </div>
+
+    <div className={styles.formGroup}>
+      <label>{direction === "rtl" ? "تاريخ الميلاد" : "Date of Birth"}</label>
+      <div className={styles.dobGroup}>
+        <select
+          name="dobDay"
+          value={formData.dobDay}
+          onChange={handleChange}
+        >
+          <option value="">{direction === "rtl" ? "اليوم" : "Day"}</option>
+          {Array.from({ length: 31 }, (_, i) => (
+            <option key={i} value={i + 1}>
+              {i + 1}
+            </option>
+          ))}
+        </select>
+        <select
+          name="dobMonth"
+          value={formData.dobMonth}
+          onChange={handleChange}
+        >
+          <option value="">{direction === "rtl" ? "الشهر" : "Month"}</option>
+          {Array.from({ length: 12 }, (_, i) => (
+            <option key={i} value={i + 1}>
+              {i + 1}
+            </option>
+          ))}
+        </select>
+        <select
+          name="dobYear"
+          value={formData.dobYear}
+          onChange={handleChange}
+        >
+          <option value="">{direction === "rtl" ? "السنة" : "Year"}</option>
+          {Array.from({ length: 101 }, (_, i) => (
+            <option key={i} value={2023 - i}>
+              {2023 - i}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <div className={styles.formGroup}>
+      <label>{direction === "rtl" ? "البريد الإلكتروني" : "Email"}</label>
+      <input
+        type="email"
+        name="email"
+        placeholder={direction === "rtl" ? "البريد الإلكتروني" : "email"}
+        value={formData.emailId}
+        onChange={handleChange}
+      />
+    </div>
+
+    <div className={styles.formGroup}>
+      <label>{direction === "rtl" ? "رقم الهاتف" : "Phone Number"}</label>
+      <input
+        type="tel"
+        name="phone"
+        placeholder={direction === "rtl" ? "رقم الهاتف" : "phone number"}
+        value={formData.phone}
+        onChange={handleChange}
+      />
+    </div>
+
+    <div className={styles.formGroup}>
+      <label>{direction === "rtl" ? "رابط الحسابات التجارية/الموقع/وسائل التواصل الاجتماعي" : "Link to business/website/social media accounts"}</label>
+      <div className={styles.linksGroup}>
+        {formData.links.map((link, index) => (
+          <input
+            key={index}
+            type="text"
+            placeholder={direction === "rtl" ? "https://maflam.com" : "https://maflam.com"}
+            value={link}
+            onChange={(e) => handleLinkChange(index, e)}
+          />
+        ))}
+      </div>
+    </div>
+
+    <button type="submit" className={styles.submitButton}>
+      {direction === "rtl" ? "حفظ التغييرات" : "Save changes"}
+    </button>
+  </form>
+</div>
+
+  );};
 export default MyProfilePersonalInfo;

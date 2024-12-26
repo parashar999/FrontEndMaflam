@@ -19,9 +19,9 @@ export const BlogsPageContentProvider = ({ children }) => {
       //     // 40.172.19.83
       //     //   `http://3.29.25.216:3001/maflam/get-Aboutus-screen-details?lang=${langParam}`
       //   );
-      // const response = await axios.get(`http://localhost:3001/maflam/get-maflam-blogs-details?lang=${langParam}`
+      // const response = await axios.get(`https://backend.maflam.com/maflam/get-maflam-blogs-details?lang=${langParam}`
       const response = await axios.get(
-        `http://localhost:3001/maflam/get-maflam-blogs-details-new?lang=${langParam}`
+        `https://backend.maflam.com/maflam/get-maflam-blogs-details-new?lang=${langParam}`
         // const response = await axios.get(`http://192.168.1.39:3001/maflam/get-AboutUs-Details?lang=${langParam}`
         // 40.172.19.83
       );
@@ -41,7 +41,7 @@ export const BlogsPageContentProvider = ({ children }) => {
   //     //     // 40.172.19.83
   //     //     //   `http://3.29.25.216:3001/maflam/get-Aboutus-screen-details?lang=${langParam}`
   //     //   );
-  //     const response = await axios.get(`http://localhost:3001/maflam/get-blogs?lang=${langParam}&&_id=${Id}`
+  //     const response = await axios.get(`https://backend.maflam.com/maflam/get-blogs?lang=${langParam}&&_id=${Id}`
   //     // const response = await axios.get(`http://192.168.1.39:3001/maflam/get-AboutUs-Details?lang=${langParam}`
   //         // 40.172.19.83
   //       );

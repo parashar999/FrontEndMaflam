@@ -98,7 +98,7 @@ const ContactForm = () => {
     if (portfolio) payload.append("portfolio", portfolio);
 
     try {
-     const res = await axios.post("http://localhost:3001/maflam/create-job-form", payload);
+     const res = await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
       // toast.success("Form submitted successfully!");
       toast.success(res.data.message);
       setTimeout(() => {
@@ -427,7 +427,7 @@ export default ContactForm;
 //     if (portfolio) payload.append("portfolio", portfolio);
 
 //     try {
-//      const res = await axios.post("http://localhost:3001/maflam/create-job-form", payload);
+//      const res = await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
 //       // toast.success("Form submitted successfully!");
 //       toast.success(res.data.message);
 //       setTimeout(() => {
@@ -719,7 +719,7 @@ export default ContactForm;
 // //     // if (portfolio) payload.append("portfolio", portfolio);
 
 // //     try {
-// //       await axios.post("http://localhost:3001/maflam/create-job-form", payload);
+// //       await axios.post("https://backend.maflam.com/maflam/create-job-form", payload);
 // //       toast.success("Form submitted successfully!");
 // //     } catch (err) {
 // //       // toast.error("Failed to submit form. Please try again.");

@@ -49,7 +49,7 @@ console.log("id---->>>>" ,ID)
         console.log("token---->>>", token)
         const response = await Promise.race([
           axios.get(
-            `http://localhost:3001/maflam/validate-transction-details?tranRef=${ID}`,
+            `https://backend.maflam.com/maflam/validate-transction-details?tranRef=${ID}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -140,7 +140,7 @@ export default SuccessMessage2;
 //           // Combine the API call with the timeout logic
 //           const response = await Promise.race([
 //             axios.post(
-//               `http://localhost:3001/maflam/validateTransction?tranRef=${ID}`,
+//               `https://backend.maflam.com/maflam/validateTransction?tranRef=${ID}`,
 //               {},
 //               {
 //                 headers: {
@@ -233,7 +233,7 @@ export default SuccessMessage2;
 //         // Make an API call with a timeout mechanism
 //         const response = await Promise.race([
 //           axios.get(
-//             `http://localhost:3001/maflam/validateTransction?tranRef=${ID}`,
+//             `https://backend.maflam.com/maflam/validateTransction?tranRef=${ID}`,
 //             {}, // Empty body since this is a POST request
 //             {
 //               headers: {

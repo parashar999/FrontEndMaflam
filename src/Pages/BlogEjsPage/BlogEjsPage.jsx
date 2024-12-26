@@ -17,7 +17,7 @@ const BlogEjsPage = () => {
     const fetchBlogData = async () => {
       try {
         console.log("Fetching blog data for ID:", id);
-        const response = await axios.get(`http://localhost:3001/maflam/get-blogs?lang=0&_id=${id}`);
+        const response = await axios.get(`https://backend.maflam.com/maflam/get-blogs?lang=0&_id=${id}`);
         console.log("API Response:", response.data);
         setBlogData(response.data);
         setLoading(false);

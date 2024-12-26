@@ -17,7 +17,7 @@ export const SingupPageContextProvider = ({ children }) => {
     try {
       // const response = await axios.get(`http://192.168.1.39:3001/maflam/getEBooks?lang=${langParam}`
       const response = await axios.get(
-        `http://localhost:3001/maflam/get-SignUp-Details?lang=${langParam}`
+        `https://backend.maflam.com/maflam/get-SignUp-Details?lang=${langParam}`
       );
       // console.log("API Response: login  ", response.data);
 
