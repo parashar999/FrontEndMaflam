@@ -11,6 +11,10 @@ import loginarrow from "../../assets/Arrow.png";
 import auth from "../../Auth/Auth.js";
 import { ScaleLoader } from "react-spinners";
 import { usePopupContext } from "../LogIn/PopupContext.jsx";
+
+
+
+
 const Navbar = () => {
   const userDetails = auth.getAuthData();
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -47,7 +51,7 @@ const Navbar = () => {
 
   const FooterGetApi = (lang) => {
     axios
-      .get(`http://localhost:3001/maflam/fetch-nav-item?lang=${lang}`)
+      .get(`https://backend.maflam.com/maflam/fetch-nav-item?lang=${lang}`)
       .then((response) => {
         setNavItems1(response.data);
         console.log(response.data, "nav")
@@ -207,8 +211,9 @@ const Navbar = () => {
                               : "#"
                           }
                             onClick={() => {
-                              
+                              console.log(localStorage.getItem("courseCount"));
                               if (localStorage.getItem("courseCount") == 0) {
+                                console.log("It's zero");
                                 setIsErrorComponentVisible(true);
                                 setPopupValues("NotASubscriber");
                               }
@@ -238,14 +243,25 @@ const Navbar = () => {
                           {item.name === "Log out" || item.name === "تسجيل الخروج" ? (
                             <span onClick={handleLogoutClick}>{item.name}</span>
                           ) : (
-                            <Link to={item.href || "#"} onClick={() => { toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false); }}  >{item.name}</Link>
+
+
+
+                            <a href={localStorage.getItem("courseCount") > 0
+                              ? "https://learn.maflam.com/user/profile.php"
+                              : "#"} onClick={() => {                           
+                                if (localStorage.getItem("courseCount") == 0) {
+                                  console.log("It's zero");
+                                  setIsErrorComponentVisible(true);
+                                  setPopupValues("canteditProfile");
+                                }
+                           toggleProfileMenu(); setOpenDropdown(null); setIsHamburgerOpen(false); }}  >{item.name}</a>
                           )}
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
-              </div>
+              </div>                 
             ) : (
               <>
               {/*
@@ -271,7 +287,7 @@ const Navbar = () => {
                       onClick={() => { setOpenDropdown(null); setIsHamburgerOpen(false); }}
                       className={`${styles.loginButton} ${styles.navButton}`}
                     >
-                      Sign In
+                      {direction=="rtl"?"تسجيل الدخول":"Sign In"}
                     </Link>
                     
                   </span>

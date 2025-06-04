@@ -60,7 +60,7 @@ const PaymentForm2 = () => {
 
   //   try {
   //     const response = await axios.post(
-  //       `http://localhost:3001/maflam/paymenttransction`,
+  //       `https://backend.maflam.com/maflam/paymenttransction`,
   //       requestBody,
   //       {
   //         headers: {
@@ -95,13 +95,13 @@ const PaymentForm2 = () => {
       // callback: "https://maflam.web.app/success",
       // return:  "https://maflam.web.app/success",
       token,
-      //  callback: "http://localhost:5173/success",
+      //  callback: "https://maflam.com/success",
       // callback: `https://maflam.web.app/checkout/${courseId}`,
     };
   
     try {
       const response = await axios.post(
-        `http://localhost:3001/maflam/paymenttransction`,
+        `https://backend.maflam.com/maflam/paymenttransction`,
         requestBody,
         {
           headers: {
@@ -205,7 +205,7 @@ export default PaymentForm2;
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3001/maflam/paymenttransction`,
+//         `https://backend.maflam.com/maflam/paymenttransction`,
 //         requestBody,
 //         {
 //           headers: {

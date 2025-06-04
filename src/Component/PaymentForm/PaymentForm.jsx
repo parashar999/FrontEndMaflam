@@ -20,7 +20,7 @@
 //     // console.log("Checkout Page called")
 //     // console.log(token);
 //     const response = await axios.post(
-//       `http://localhost:3001/maflam/paymenttransction/${coursesId}`,
+//       `https://backend.maflam.com/maflam/paymenttransction/${coursesId}`,
 //       requestBody,
 //       {
 //         headers: {
@@ -185,13 +185,13 @@
 //       // callback: "https://maflam.web.app/success",
 //       // return:  "https://maflam.web.app/success",
 //       token,
-//       //  callback: "http://localhost:5173/success",
+//       //  callback: "https://maflam.com/success",
 //       // callback: `https://maflam.web.app/checkout/${courseId}`,
 //     };
   
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3001/maflam/paymenttransction`,
+//         `https://backend.maflam.com/maflam/paymenttransction`,
 //         requestBody,
 //         {
 //           headers: {
@@ -312,7 +312,7 @@
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3001/maflam/paymenttransction`,
+//         `https://backend.maflam.com/maflam/paymenttransction`,
 //         requestBody,
 //         {
 //           headers: {
@@ -448,9 +448,9 @@
 
 //     try {
 //       const response = await axios.post(
-//         `http://localhost:3001/maflam/paymenttransction`,
+//         `https://backend.maflam.com/maflam/paymenttransction`,
 
-//         // `http://localhost:3001/maflam/payment-transction-staging-mode`,
+//         // `https://backend.maflam.com/maflam/payment-transction-staging-mode`,
 
 //         requestBody,
 //         {
@@ -597,8 +597,8 @@ const PaymentForm = () => {
     try {
       const apiUrl =
         paymentType === "PAY_LATER"
-          ? "http://localhost:3001/maflam/create-session"
-          : "http://localhost:3001/maflam/paymenttransction";
+          ? "https://backend.maflam.com/maflam/create-session"
+          : "https://backend.maflam.com/maflam/paymenttransction";
 
       const response = await axios.post(apiUrl, requestBody, {
         headers: {

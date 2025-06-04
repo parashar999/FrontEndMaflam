@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from './PopUp.module.css';
+import { LanguageContext } from '../LanguageContext/LanguageContext';
 
 const PopUp = ({
   titleEN,
@@ -14,10 +15,10 @@ const PopUp = ({
   linkText1AR,
   linkText2EN,
   linkText2AR,
-  direction = 'ltr', // Optional: Direction for text alignment
+
 }) => {
   const [isVisible, setIsVisible] = useState(true); // Internal state to control visibility
-
+    const {direction}=useContext(LanguageContext);
   // Optional: Re-show popup if component is re-rendered (ensures fresh state)
   useEffect(() => {
     setIsVisible(true); // Reset visibility on re-render
@@ -37,13 +38,11 @@ const PopUp = ({
     <div className={styles.pageContainer}>
       <div className={styles.contentWrapper}>
         {/* Close Button */}
-        {
-          titleEN !== "Welcome Back!" ? (
+       
             <button className={styles.closeButton} onClick={handleClose}>
               ×
             </button>
-          ) : null
-        }
+        
 
         {/* Title */}
         <h1 className={styles.title}>
@@ -66,7 +65,7 @@ const PopUp = ({
             </a>
           </button>
 
-          {titleEN !== 'Sign Up Successful!' ? (
+          {(titleEN !== 'Sign Up Successful!' && titleEN!="Profile Access Restricted") ? (
   <button className={styles.button}>
     <a
       style={{ textDecoration: 'none', color: 'black' }}

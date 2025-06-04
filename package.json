@@ -16,6 +16,7 @@
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
     "legacy": "^0.0.3",
+    "node-fetch": "^3.3.2",
     "number-to-words": "^1.2.4",
     "peer": "^1.0.2",
     "react": "^18.3.1",
